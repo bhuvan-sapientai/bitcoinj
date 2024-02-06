@@ -1953,925 +1953,17 @@ methods:
     priority: "LOW"
     modelFingerprint: "FDA9A09D18EA36902322EAC165FC53BB"
     problemWasSolvedByProver: false
-    truncated: false
-    inputParameters:
-    - type: "CONSTRUCTOR"
-      modelFingerprint: "E629BD992D32C0A5B8C377377CEEF978"
-      index: 1
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.core.BlockChain"
-          parameters:
-          - name: "network"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.base.Network"
-              uuid: "<init>_network1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "wallet"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.wallet.Wallet"
-              uuid: "<init>_wallet1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "blockStore"
-            value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.store.BlockStore"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.store.BlockStore"
-              uuid: "<init>_blockStore1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-          propertiesMap:
-            versionTally:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "org.bitcoinj.utils.VersionTally"
-                parameters:
-                - name: "params"
-                  value:
-                    sapientType: "MOCK"
-                    valueType: "org.bitcoinj.core.NetworkParameters"
-                    uuid: "<init>_networkParameters1"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: true
-              suggestedContent: !<new>
-                target: "org.bitcoinj.utils.VersionTally"
-                parameters:
-                - name: "params"
-                  value:
-                    sapientType: "UNKNOWN"
-                    valueType: "org.bitcoinj.core.NetworkParameters"
-                    uuid: "<init>_networkParameters1"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: true
-              valueType: "org.bitcoinj.utils.VersionTally"
-              uuid: "<init>_versionTally1"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            chainHead:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "org.bitcoinj.core.StoredBlock"
-                parameters:
-                - name: "header"
-                  value:
-                    sapientType: "MOCK"
-                    valueType: "org.bitcoinj.core.Block"
-                    uuid: "<init>_block1"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "chainWork"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 0
-                    valueType: "java.math.BigInteger"
-                    uuid: "<init>_storedBlock1-chainWork"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "height"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: -1
-                    suggestedContent: !<regular>
-                      value: -1
-                    valueType: "int"
-                    uuid: "<init>_int1"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
-              suggestedContent: !<new>
-                target: "org.bitcoinj.core.StoredBlock"
-                parameters:
-                - name: "header"
-                  value:
-                    sapientType: "UNKNOWN"
-                    valueType: "org.bitcoinj.core.Block"
-                    uuid: "<init>_block1"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "chainWork"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "java.math.BigInteger"
-                    uuid: "<init>_storedBlock1-chainWork"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "height"
-                  value:
-                    sapientType: "BASIC"
-                    suggestedContent: !<regular>
-                      value: -1
-                    valueType: "int"
-                    uuid: "<init>_int1"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
-              valueType: "org.bitcoinj.core.StoredBlock"
-              uuid: "<init>_storedBlock1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.core.BlockChain"
-          parameters:
-          - name: "network"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.base.Network"
-              uuid: "<init>_network1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "wallet"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.wallet.Wallet"
-              uuid: "<init>_wallet1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "blockStore"
-            value:
-              sapientType: "UNKNOWN"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.store.BlockStore"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.store.BlockStore"
-              uuid: "<init>_blockStore1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-          propertiesMap:
-            versionTally:
-              sapientType: "OBJECT"
-              suggestedContent: !<new>
-                target: "org.bitcoinj.utils.VersionTally"
-                parameters:
-                - name: "params"
-                  value:
-                    sapientType: "UNKNOWN"
-                    valueType: "org.bitcoinj.core.NetworkParameters"
-                    uuid: "<init>_networkParameters1"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: true
-              valueType: "org.bitcoinj.utils.VersionTally"
-              uuid: "<init>_versionTally1"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            chainHead:
-              sapientType: "UNKNOWN"
-              suggestedContent: !<new>
-                target: "org.bitcoinj.core.StoredBlock"
-                parameters:
-                - name: "header"
-                  value:
-                    sapientType: "UNKNOWN"
-                    valueType: "org.bitcoinj.core.Block"
-                    uuid: "<init>_block1"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "chainWork"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "java.math.BigInteger"
-                    uuid: "<init>_storedBlock1-chainWork"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "height"
-                  value:
-                    sapientType: "BASIC"
-                    suggestedContent: !<regular>
-                      value: -1
-                    valueType: "int"
-                    uuid: "<init>_int1"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
-              valueType: "org.bitcoinj.core.StoredBlock"
-              uuid: "<init>_storedBlock1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        valueType: "org.bitcoinj.core.BlockChain"
-        uuid: "target"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INPUT"
-      name: "height"
-      modelFingerprint: "667C2513E4BAAE08C18D3BCAB7F20CB6"
-      index: 2
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "BASIC"
-        content: !<regular>
-          value: -1
-        suggestedContent: !<regular>
-          value: -1
-        valueType: "int"
-        uuid: "rollbackBlockStore_int1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "NetworkParameters"
-      modelFingerprint: "A7C0BDDF05E6EFE02EB4F8BA87B413C1"
-      index: 3
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.core.NetworkParameters"
-        uuid: "org.bitcoinj.core.NetworkParameters"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.core.NetworkParameters"
-        name: "of"
-        parameters:
-        - name: "network"
-          value:
-            sapientType: "MOCK"
-            valueType: "org.bitcoinj.base.Network"
-            uuid: "<init>_network1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "of(Network): NetworkParameters"
-        returnValue:
-          sapientType: "MOCK"
-          valueType: "org.bitcoinj.core.NetworkParameters"
-          uuid: "<init>_networkParameters1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Threading"
-      modelFingerprint: "114F245051FBCB76AE10117A3C625071"
-      index: 4
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "REAL"
-        valueType: "org.bitcoinj.utils.Threading"
-        uuid: "org.bitcoinj.utils.Threading"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.utils.Threading"
-        name: "lock"
-        parameters:
-        - name: "clazz"
-          value:
-            sapientType: "CLASS"
-            content: !<regular>
-              value: "org.bitcoinj.core.AbstractBlockChain"
-            valueType: "java.lang.Class"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "lock(Class): ReentrantLock"
-        returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.utils.Threading"
-            method: "lock"
-            methodParameters:
-            - value:
-                sapientType: "CLASS"
-                content: !<regular>
-                  value: "org.bitcoinj.core.AbstractBlockChain"
-                valueType: "java.lang.Class"
-                fixed: true
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.utils.Threading"
-            method: "lock"
-            methodParameters:
-            - value:
-                sapientType: "CLASS"
-                content: !<regular>
-                  value: "org.bitcoinj.core.AbstractBlockChain"
-                valueType: "java.lang.Class"
-                fixed: true
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          valueType: "java.util.concurrent.locks.ReentrantLock"
-          uuid: "<init>_reentrantLock1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "blockStore"
-      modelFingerprint: "18E710A43DD6054189AA5B8897671003"
-      index: 5
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.store.BlockStore"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.store.BlockStore"
-        uuid: "<init>_blockStore1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "blockStore"
-        name: "getChainHead"
-        parameters: []
-        throwsExceptions:
-        - "org.bitcoinj.store.BlockStoreException"
-        signature: "getChainHead(): StoredBlock throws org.bitcoinj.store.BlockStoreException"
-        returnValue:
-          sapientType: "OBJECT"
-          content: !<new>
-            target: "org.bitcoinj.core.StoredBlock"
-            parameters:
-            - name: "header"
-              value:
-                sapientType: "MOCK"
-                valueType: "org.bitcoinj.core.Block"
-                uuid: "<init>_block1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "chainWork"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "java.math.BigInteger"
-                uuid: "<init>_storedBlock1-chainWork"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "height"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: -1
-                suggestedContent: !<regular>
-                  value: -1
-                valueType: "int"
-                uuid: "<init>_int1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            privateConstructor: false
-            createdByTargetCode: false
-          suggestedContent: !<new>
-            target: "org.bitcoinj.core.StoredBlock"
-            parameters:
-            - name: "header"
-              value:
-                sapientType: "UNKNOWN"
-                valueType: "org.bitcoinj.core.Block"
-                uuid: "<init>_block1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "chainWork"
-              value:
-                sapientType: "BASIC"
-                valueType: "java.math.BigInteger"
-                uuid: "<init>_storedBlock1-chainWork"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "height"
-              value:
-                sapientType: "BASIC"
-                suggestedContent: !<regular>
-                  value: -1
-                valueType: "int"
-                uuid: "<init>_int1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            privateConstructor: false
-            createdByTargetCode: false
-          valueType: "org.bitcoinj.core.StoredBlock"
-          uuid: "<init>_storedBlock1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1025
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "FIELD"
-      name: "chainHead"
-      modelFingerprint: "90D289F3B4BBCE6CC36A0EFA16262776"
-      index: 6
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.core.StoredBlock"
-          parameters:
-          - name: "header"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.core.Block"
-              uuid: "<init>_block1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "chainWork"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "java.math.BigInteger"
-              uuid: "<init>_storedBlock1-chainWork"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "height"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -1
-              suggestedContent: !<regular>
-                value: -1
-              valueType: "int"
-              uuid: "<init>_int1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.core.StoredBlock"
-          parameters:
-          - name: "header"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.core.Block"
-              uuid: "<init>_block1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "chainWork"
-            value:
-              sapientType: "BASIC"
-              valueType: "java.math.BigInteger"
-              uuid: "<init>_storedBlock1-chainWork"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "height"
-            value:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: -1
-              valueType: "int"
-              uuid: "<init>_int1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        valueType: "org.bitcoinj.core.StoredBlock"
-        uuid: "<init>_storedBlock1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "this.chainHead"
-        name: "getHeight"
-        parameters: []
-        signature: "getHeight(): int"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: -1
-          suggestedContent: !<regular>
-            value: -1
-          valueType: "int"
-          uuid: "<init>_int1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "FIELD"
-      name: "chainHead"
-      modelFingerprint: "B54BFD0FB9A599457CCE6AF80BECA442"
-      index: 7
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.core.StoredBlock"
-          parameters:
-          - name: "header"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.core.Block"
-              uuid: "<init>_block1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "chainWork"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "java.math.BigInteger"
-              uuid: "<init>_storedBlock1-chainWork"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "height"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: -1
-              suggestedContent: !<regular>
-                value: -1
-              valueType: "int"
-              uuid: "<init>_int1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.core.StoredBlock"
-          parameters:
-          - name: "header"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.core.Block"
-              uuid: "<init>_block1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "chainWork"
-            value:
-              sapientType: "BASIC"
-              valueType: "java.math.BigInteger"
-              uuid: "<init>_storedBlock1-chainWork"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "height"
-            value:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: -1
-              valueType: "int"
-              uuid: "<init>_int1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        valueType: "org.bitcoinj.core.StoredBlock"
-        uuid: "<init>_storedBlock1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "this.chainHead"
-        name: "getHeader"
-        parameters: []
-        signature: "getHeader(): Block"
-        returnValue:
-          sapientType: "MOCK"
-          valueType: "org.bitcoinj.core.Block"
-          uuid: "<init>_block1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "FIELD"
-      name: "versionTally"
-      modelFingerprint: "FCE8FC8F9466AE4403E9E00B2021B5BA"
-      index: 8
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.utils.VersionTally"
-          parameters:
-          - name: "params"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.core.NetworkParameters"
-              uuid: "<init>_networkParameters1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
-        suggestedContent: !<new>
-          target: "org.bitcoinj.utils.VersionTally"
-          parameters:
-          - name: "params"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.core.NetworkParameters"
-              uuid: "<init>_networkParameters1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
-        valueType: "org.bitcoinj.utils.VersionTally"
-        uuid: "<init>_versionTally1"
-        fixed: true
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "this.versionTally"
-        name: "initialize"
-        parameters:
-        - name: "blockStore"
-          value:
-            sapientType: "MOCK"
-            suggestedContent: !<unknown_object>
-              target: "org.bitcoinj.store.BlockStore"
-              onlyPojoFunctions: false
-              builderPattern: false
-            valueType: "org.bitcoinj.store.BlockStore"
-            uuid: "<init>_blockStore1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "chainHead"
-          value:
-            sapientType: "OBJECT"
-            content: !<new>
-              target: "org.bitcoinj.core.StoredBlock"
-              parameters:
-              - name: "header"
-                value:
-                  sapientType: "MOCK"
-                  valueType: "org.bitcoinj.core.Block"
-                  uuid: "<init>_block1"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "chainWork"
-                value:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 0
-                  valueType: "java.math.BigInteger"
-                  uuid: "<init>_storedBlock1-chainWork"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "height"
-                value:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: -1
-                  suggestedContent: !<regular>
-                    value: -1
-                  valueType: "int"
-                  uuid: "<init>_int1"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              privateConstructor: false
-              createdByTargetCode: false
-            suggestedContent: !<new>
-              target: "org.bitcoinj.core.StoredBlock"
-              parameters:
-              - name: "header"
-                value:
-                  sapientType: "UNKNOWN"
-                  valueType: "org.bitcoinj.core.Block"
-                  uuid: "<init>_block1"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "chainWork"
-                value:
-                  sapientType: "BASIC"
-                  valueType: "java.math.BigInteger"
-                  uuid: "<init>_storedBlock1-chainWork"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "height"
-                value:
-                  sapientType: "BASIC"
-                  suggestedContent: !<regular>
-                    value: -1
-                  valueType: "int"
-                  uuid: "<init>_int1"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              privateConstructor: false
-              createdByTargetCode: false
-            valueType: "org.bitcoinj.core.StoredBlock"
-            uuid: "<init>_storedBlock1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        throwsExceptions:
-        - "org.bitcoinj.store.BlockStoreException"
-        signature: "initialize(BlockStore,StoredBlock): void throws org.bitcoinj.store.BlockStoreException"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "<init>_void2"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INTERNAL"
-      name: "internalMethod"
-      modelFingerprint: "F51B7D8272C76A2BC0354C63D6138490"
-      index: 7
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      methodExercised:
-        target: "target"
-        name: "getBestChainHeight"
-        parameters: []
-        signature: "getBestChainHeight(): int"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: 0
-          valueType: "int"
-          uuid: "rollbackBlockStore_int2"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 17
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Preconditions"
-      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
-      index: 10
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.Preconditions"
-        uuid: "org.bitcoinj.base.internal.Preconditions"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.Preconditions"
-        name: "checkArgument"
-        parameters:
-        - name: "expression"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: false
-            valueType: "boolean"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "messageSupplier"
-          value:
-            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-            valueType: "java.util.function.Supplier"
-            genericValueType: "java.lang.String"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "checkArgument(boolean,Supplier): void"
-        returnValue:
-          sapientType: "EXCEPTION"
-          content: !<new>
-            target: "java.lang.IllegalArgumentException"
-            parameters: []
-            privateConstructor: false
-            createdByTargetCode: false
-          suggestedContent: !<new>
-            target: "java.lang.IllegalArgumentException"
-            parameters: []
-            privateConstructor: false
-            createdByTargetCode: false
-          valueType: "java.lang.IllegalArgumentException"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "3E9C76AB51311DE97AE9C2294CD5E1D6"
-      index: 11
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "EXCEPTION"
-        content: !<new>
-          target: "java.lang.IllegalArgumentException"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "java.lang.IllegalArgumentException"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
-        valueType: "java.lang.IllegalArgumentException"
-        fixed: true
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
+    truncated: true
+    inputParameters: []
     uuid: "86b85864-54ef-3bde-b9e6-1827988cc0bf"
-    deleted: false
-    disabled: true
+    deleted: true
+    disabled: false
     ignoredBySystem: true
     failureReason:
       reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
       lineNumber: 200
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path1"
     pathIdForUser: "path2"
     testPathName: "rollbackBlockStoreWhenHeightLessThanOrEqualsToCurrentHeightThrowsIllegalArgumentException"
@@ -3797,13 +2889,13 @@ methods:
       filledByUser: false
     uuid: "1c0ebbf4-3510-3785-b5d3-8a5f306034af"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
       lineNumber: 200
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path3"
     testPathName: "rollbackBlockStoreWhenHeightGreaterThanCurrentHeightThrowsIllegalArgumentException"
@@ -4729,13 +3821,13 @@ methods:
       filledByUser: false
     uuid: "19f3e87d-98fe-36f9-8b92-1e25dba8ee3e"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
       lineNumber: 200
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "shouldVerifyTransactions"
     returnType: "boolean"
@@ -5543,7 +4635,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "3A21543F56248AC92654D6E439128AED"
-      index: 6
+      index: 8
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -6409,7 +5501,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "3021C1E995B586CC19DD3CF76049D4D6"
-      index: 8
+      index: 10
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -7265,7 +6357,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "3021C1E995B586CC19DD3CF76049D4D6"
-      index: 7
+      index: 9
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -8121,7 +7213,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "3021C1E995B586CC19DD3CF76049D4D6"
-      index: 7
+      index: 9
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -9022,7 +8114,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "68041019986276EDF5D420282D883A57"
-      index: 8
+      index: 10
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -11117,7 +10209,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "753659628F1B3F179A2EF0629F555437"
-      index: 11
+      index: 14
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -11134,13 +10226,13 @@ methods:
       filledByUser: false
     uuid: "1c33d6ee-bf19-3936-b61a-23cd45248a4b"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
       lineNumber: 200
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path4"
     pathIdForUser: "path2"
     testPathName: "add1WhenDefaultBranchThrowsRuntimeException"
@@ -12251,7 +11343,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "E426C1901120795D89F8B88067208BEF"
-      index: 10
+      index: 13
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -12292,13 +11384,13 @@ methods:
       filledByUser: false
     uuid: "57385201-103c-3106-8043-8e453c5dc535"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
       lineNumber: 200
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path3"
     pathIdForUser: "path3"
     testPathName: "add1WhenTargetSignumLessThanOrEqualsTo0ThrowsVerificationException"
@@ -13433,7 +12525,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "9606793B7D53BBC24073879ED9981B45"
-      index: 13
+      index: 16
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -13492,13 +12584,13 @@ methods:
       filledByUser: false
     uuid: "034756bd-26cd-3140-9ed9-cd738a025b57"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
       lineNumber: 200
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path4"
     testPathName: "add1WhenTargetSignumGreaterThan0ThrowsNullPointerException"
@@ -14734,7 +13826,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "1544C3243427A58A5AE91A88CC628F77"
-      index: 12
+      index: 15
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -14758,13 +13850,13 @@ methods:
       filledByUser: false
     uuid: "983cfd1c-b1a8-30ac-8498-acc23a4d8628"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
       lineNumber: 200
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path5"
     pathIdForUser: "path5"
     testPathName: "add1WhenDefaultBranchThrowsVerificationException"
@@ -15904,7 +14996,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "9606793B7D53BBC24073879ED9981B45"
-      index: 13
+      index: 16
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -15963,13 +15055,13 @@ methods:
       filledByUser: false
     uuid: "a8dfcca3-ca19-3318-8d26-cfcc99eba2e4"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
       lineNumber: 200
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path6"
     pathIdForUser: "path6"
     testPathName: "add1WhenTargetSignumLessThanOrEqualsTo0AndDefaultBranchThrowsRuntimeException"
@@ -17066,7 +16158,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "E426C1901120795D89F8B88067208BEF"
-      index: 12
+      index: 15
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -17107,10 +16199,10 @@ methods:
       filledByUser: false
     uuid: "01580886-8dfd-300c-b4f4-8c5d02e20498"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
       lineNumber: 200
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false

@@ -1,5 +1,5 @@
 ---
-modelFingerprint: "9E57D8C43FE533597309B76C67C90A65"
+modelFingerprint: "677798B67445553D7A04DA4F7C2C3BA3"
 methods:
 - method:
     name: "trackSuccess"
@@ -70,7 +70,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "REAL"
         valueType: "org.bitcoinj.base.internal.TimeUtils"
         uuid: "org.bitcoinj.base.internal.TimeUtils"
         fixed: false
@@ -229,7 +229,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "REAL"
         valueType: "org.bitcoinj.base.internal.TimeUtils"
         uuid: "org.bitcoinj.base.internal.TimeUtils"
         fixed: false
@@ -261,12 +261,12 @@ methods:
     - type: "STATIC"
       name: "TimeUtils"
       modelFingerprint: "395487F60C1C4BD4BBDD54A9D0F8C51F"
-      index: 2
+      index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "REAL"
         valueType: "org.bitcoinj.base.internal.TimeUtils"
         uuid: "org.bitcoinj.base.internal.TimeUtils"
         fixed: false
@@ -288,7 +288,7 @@ methods:
             method: "currentTime"
             methodParameters: []
           valueType: "java.time.Instant"
-          uuid: "trackSuccess_instant1"
+          uuid: "trackFailure_instant1"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -467,7 +467,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "258C3E847C51AE3DD76519880BA11442"
+    modelFingerprint: "887E25F2E9165523C32775DB0C608BF4"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -551,7 +551,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "85B5E03DC460116CFE85D925868ED46F"
+      modelFingerprint: "BF0D9013E2059E8B6A8478DCBD3C5E03"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -559,7 +559,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 1707139357296
+          value: 1707199561774
         valueType: "long"
         uuid: "getRetryTime_long1"
         fixed: false
@@ -762,7 +762,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "254F461026883E88C276ADC7430374A7"
+    modelFingerprint: "45FF96B49B4E1ED769CA2D29A2E83EC1"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -846,7 +846,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "D8192D1BEC890481C413BA0C4CAD94E1"
+      modelFingerprint: "3BD717A4D9F57C35E42DFC24C2E02962"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -854,9 +854,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "ExponentialBackoff retry=2024-02-05T13:22:37.311213Z backoff=2 ms"
+          value: "ExponentialBackoff retry=2024-02-06T06:06:01.804418Z backoff=2 ms"
         suggestedContent: !<regular>
-          value: "ExponentialBackoff retry=2024-02-05T13:22:37.311213Z backoff=2 ms"
+          value: "ExponentialBackoff retry=2024-02-06T06:06:01.804418Z backoff=2 ms"
         valueType: "java.lang.String"
         uuid: "toString_string1"
         fixed: false

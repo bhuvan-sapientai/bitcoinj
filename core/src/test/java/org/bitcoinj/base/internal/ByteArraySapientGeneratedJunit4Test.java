@@ -9,6 +9,10 @@ import static org.hamcrest.Matchers.equalTo;
 import static org.mockito.Mockito.mock;
 
 import org.junit.Ignore;
+import org.mockito.MockedStatic;
+
+import static org.mockito.Mockito.atLeast;
+import static org.mockito.Mockito.mockStatic;
 
 public class ByteArraySapientGeneratedJunit4Test {
 
@@ -34,14 +38,17 @@ public class ByteArraySapientGeneratedJunit4Test {
     @Test()
     public void formatHexTest() {
         //Arrange Statement(s)
-        byte[] byteArray = new byte[]{};
-        ByteArray target = new ByteArray(byteArray);
-
-        //Act Statement(s)
-        String result = target.formatHex();
-
-        //Assert statement(s)
-        assertThat(result, equalTo(""));
+        try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
+            byte[] byteArray = new byte[]{};
+            byteUtils.when(() -> ByteUtils.formatHex(byteArray)).thenReturn("return_of_formatHex1");
+            byte[] byteArray2 = new byte[]{};
+            ByteArray target = new ByteArray(byteArray2);
+            //Act Statement(s)
+            String result = target.formatHex();
+            //Assert statement(s)
+            assertThat(result, equalTo("return_of_formatHex1"));
+            byteUtils.verify(() -> ByteUtils.formatHex(byteArray), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${af5f6332-26a2-3749-8f9a-ac87ce6fe7cf}

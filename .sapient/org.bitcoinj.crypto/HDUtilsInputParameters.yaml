@@ -2539,6 +2539,8 @@ methods:
         sapientType: "ARRAY"
         content: !<array>
           values: {}
+        suggestedContent: !<array>
+          values: {}
         valueType: "byte[]"
         uuid: "hmacSha512_byte[]1"
         fixed: false
@@ -2588,6 +2590,8 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
+              values: {}
+            suggestedContent: !<array>
               values: {}
             valueType: "byte[]"
             uuid: "hmacSha512_byte[]1"
@@ -5167,7 +5171,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "7E34208310EED64E95AAFD4B0D7A1B14"
-    problemWasSolvedByProver: false
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
@@ -5284,10 +5288,8 @@ methods:
       filledByUser: false
     uuid: "1e091176-10ae-37fd-82c6-c52bb741e6af"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
-    failureReason:
-      reason: "UNKNOWN_REASON"
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false

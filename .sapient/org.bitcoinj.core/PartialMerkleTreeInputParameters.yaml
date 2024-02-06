@@ -875,12 +875,12 @@ methods:
       filledByUser: false
     uuid: "561174ec-e4d3-3952-bafc-b3a0e4e3d1f1"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "BITWISE_NOT_SUPPORTED"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path1"
     pathIdForUser: "path2"
     testPathName: "buildFromLeavesWhenBitListGetI"
@@ -1056,7 +1056,7 @@ methods:
             content: !<regular>
               value: 0
             valueType: "int"
-            uuid: "buildFromLeaves_int5"
+            uuid: "buildFromLeaves_int7"
             fixed: true
             equalsMethodPresent: false
             explicitCastNeeded: false
@@ -1202,12 +1202,12 @@ methods:
       filledByUser: false
     uuid: "a97a8812-5dd8-38c4-b2de-feda59df7534"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "BITWISE_NOT_SUPPORTED"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path3"
     testPathName: "buildFromLeavesWhenILessThanBitListSizeAndBitListGetI"
@@ -1253,13 +1253,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "MODERATE"
-    modelFingerprint: "B2AA0B650AD91D515C922E2D0C519BBD"
+    modelFingerprint: "3783CCDC68E56FBC2B5C3F93EC168E1B"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "includeBits"
-      modelFingerprint: "A75E7698398C620E3AF442AE372C27D5"
+      modelFingerprint: "0DD2EE0DB9595867A8E98697E92C212E"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1267,29 +1267,9 @@ methods:
       value:
         sapientType: "ARRAY"
         content: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          values: {}
         suggestedContent: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          values: {}
         valueType: "byte[]"
         uuid: "buildFromLeaves_byte[]1"
         fixed: false
@@ -1299,7 +1279,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "allLeafHashes"
-      modelFingerprint: "CE325DE82958DE6FFEFBFC3BD0752F6B"
+      modelFingerprint: "66627F706C08BD1AA9AC6BE058DDACBD"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -1311,27 +1291,9 @@ methods:
           parameters: []
           values:
           - sapientType: "MOCK"
-            suggestedContent: !<unknown_object>
-              target: "org.bitcoinj.base.Sha256Hash"
-              onlyPojoFunctions: false
-              builderPattern: false
             valueType: "org.bitcoinj.base.Sha256Hash"
-            uuid: "buildFromLeaves_list1-0"
+            uuid: "buildFromLeaves_list1Item0"
             fixed: false
-            collectionUuid: "buildFromLeaves_list1"
-            nameForMock: "true"
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-          - sapientType: "MOCK"
-            suggestedContent: !<unknown_object>
-              target: "org.bitcoinj.base.Sha256Hash"
-              onlyPojoFunctions: false
-              builderPattern: false
-            valueType: "org.bitcoinj.base.Sha256Hash"
-            uuid: "buildFromLeaves_list1-1"
-            fixed: false
-            collectionUuid: "buildFromLeaves_list1"
-            nameForMock: "true"
             equalsMethodPresent: false
             explicitCastNeeded: false
         suggestedContent: !<collection>
@@ -1339,27 +1301,9 @@ methods:
           parameters: []
           values:
           - sapientType: "MOCK"
-            suggestedContent: !<unknown_object>
-              target: "org.bitcoinj.base.Sha256Hash"
-              onlyPojoFunctions: false
-              builderPattern: false
             valueType: "org.bitcoinj.base.Sha256Hash"
-            uuid: "buildFromLeaves_list1-0"
+            uuid: "buildFromLeaves_list1Item0"
             fixed: false
-            collectionUuid: "buildFromLeaves_list1"
-            nameForMock: "true"
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-          - sapientType: "MOCK"
-            suggestedContent: !<unknown_object>
-              target: "org.bitcoinj.base.Sha256Hash"
-              onlyPojoFunctions: false
-              builderPattern: false
-            valueType: "org.bitcoinj.base.Sha256Hash"
-            uuid: "buildFromLeaves_list1-1"
-            fixed: false
-            collectionUuid: "buildFromLeaves_list1"
-            nameForMock: "true"
             equalsMethodPresent: false
             explicitCastNeeded: false
         valueType: "java.util.List"
@@ -1372,7 +1316,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "ByteUtils"
-      modelFingerprint: "87289B19B66A08EF320FA2B8733B02F8"
+      modelFingerprint: "1138DA34F0AD7023A27BCA24A0816211"
       index: 3
       ignored: false
       nestedInLoop: true
@@ -1392,29 +1336,9 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
-              values:
-                0:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 0
-                  suggestedContent: !<regular>
-                    value: 0
-                  valueType: "byte"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
+              values: {}
             suggestedContent: !<array>
-              values:
-                0:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 0
-                  suggestedContent: !<regular>
-                    value: 0
-                  valueType: "byte"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
+              values: {}
             valueType: "byte[]"
             uuid: "buildFromLeaves_byte[]1"
             fixed: false
@@ -1445,83 +1369,10 @@ methods:
         access: 9
       staticReadMethodForField: false
       filledByUser: false
-    - type: "STATIC"
-      name: "ByteUtils"
-      modelFingerprint: "707E663EB5D796484C16217BE7BF457A"
-      index: 4
-      ignored: false
-      nestedInLoop: true
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.ByteUtils"
-        uuid: "org.bitcoinj.base.internal.ByteUtils"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.ByteUtils"
-        name: "checkBitLE"
-        parameters:
-        - name: "data"
-          value:
-            sapientType: "ARRAY"
-            content: !<array>
-              values:
-                0:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 0
-                  suggestedContent: !<regular>
-                    value: 0
-                  valueType: "byte"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            suggestedContent: !<array>
-              values:
-                0:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 0
-                  suggestedContent: !<regular>
-                    value: 0
-                  valueType: "byte"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            valueType: "byte[]"
-            uuid: "buildFromLeaves_byte[]1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "index"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: 1
-            valueType: "int"
-            uuid: "traverseAndBuild_int7"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "checkBitLE(byte[],int): boolean"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: false
-          valueType: "boolean"
-          uuid: "traverseAndBuild_boolean2"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "left"
       modelFingerprint: "02232E6D25914A8F2136CA76A6906D1B"
-      index: 5
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -1557,8 +1408,8 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "right"
-      modelFingerprint: "85562276B527895A77AB79E2B8D9C0A9"
-      index: 6
+      modelFingerprint: "02232E6D25914A8F2136CA76A6906D1B"
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -1595,12 +1446,12 @@ methods:
     - type: "STATIC"
       name: "ByteUtils"
       modelFingerprint: "3D1A986E8809567ECDB69F607BEA2AC2"
-      index: 7
+      index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "REAL"
         valueType: "org.bitcoinj.base.internal.ByteUtils"
         uuid: "org.bitcoinj.base.internal.ByteUtils"
         fixed: false
@@ -1639,13 +1490,13 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "ByteUtils"
-      modelFingerprint: "B62D4417E196FED823E9A9B7C743F7B5"
-      index: 8
+      modelFingerprint: "3D1A986E8809567ECDB69F607BEA2AC2"
+      index: 7
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "REAL"
         valueType: "org.bitcoinj.base.internal.ByteUtils"
         uuid: "org.bitcoinj.base.internal.ByteUtils"
         fixed: false
@@ -1684,13 +1535,13 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "6A3930DAE0F3E31C3A017F351F88FD99"
-      index: 9
+      modelFingerprint: "27005788116DB12651590A8AA3F712DD"
+      index: 8
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "REAL"
         valueType: "org.bitcoinj.base.Sha256Hash"
         uuid: "org.bitcoinj.base.Sha256Hash"
         fixed: false
@@ -2317,8 +2168,8 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "7CBBE27D7B1DC2E3177D30C92E984E22"
-      index: 10
+      modelFingerprint: "8D2FA757492D463385BFAAFC6E6406CE"
+      index: 9
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -2923,69 +2774,7 @@ methods:
             explicitCastNeeded: false
         signature: "wrapReversed(byte[]): Sha256Hash"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.Sha256Hash"
-            method: "read"
-            methodParameters:
-            - name: "buf"
-              value:
-                sapientType: "OBJECT"
-                content: !<static_method_return>
-                  target: "java.nio.ByteBuffer"
-                  method: "allocateDirect"
-                  methodParameters:
-                  - name: "capacity"
-                    value:
-                      sapientType: "BASIC"
-                      content: !<regular>
-                        value: 0
-                      valueType: "int"
-                      uuid: "combineLeftRight_sha256Hash1-buf-capacity"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                suggestedContent: !<static_method_return>
-                  target: "java.nio.ByteBuffer"
-                  method: "allocateDirect"
-                  methodParameters:
-                  - name: "capacity"
-                    value:
-                      sapientType: "BASIC"
-                      valueType: "int"
-                      uuid: "combineLeftRight_sha256Hash1-buf-capacity"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                valueType: "java.nio.ByteBuffer"
-                uuid: "combineLeftRight_sha256Hash1-buf"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.base.Sha256Hash"
-            method: "read"
-            methodParameters:
-            - name: "buf"
-              value:
-                sapientType: "UNKNOWN"
-                suggestedContent: !<static_method_return>
-                  target: "java.nio.ByteBuffer"
-                  method: "allocateDirect"
-                  methodParameters:
-                  - name: "capacity"
-                    value:
-                      sapientType: "BASIC"
-                      valueType: "int"
-                      uuid: "combineLeftRight_sha256Hash1-buf-capacity"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                valueType: "java.nio.ByteBuffer"
-                uuid: "combineLeftRight_sha256Hash1-buf"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+          sapientType: "MOCK"
           valueType: "org.bitcoinj.base.Sha256Hash"
           uuid: "combineLeftRight_sha256Hash1"
           fixed: false
@@ -2996,8 +2785,8 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "91847453EB0D3F2CA307733FC6F147D3"
-      index: 11
+      modelFingerprint: "62E9701239F7885837CCBAAE4D204D2C"
+      index: 10
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -3010,7 +2799,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 2
+                value: 1
+              suggestedContent: !<regular>
+                value: 1
               valueType: "int"
               uuid: "buildFromLeaves_int11"
               fixed: false
@@ -3024,69 +2815,7 @@ methods:
                 collectionClass: "java.util.ArrayList"
                 parameters: []
                 values:
-                - sapientType: "OBJECT"
-                  content: !<static_method_return>
-                    target: "org.bitcoinj.base.Sha256Hash"
-                    method: "read"
-                    methodParameters:
-                    - name: "buf"
-                      value:
-                        sapientType: "OBJECT"
-                        content: !<static_method_return>
-                          target: "java.nio.ByteBuffer"
-                          method: "allocateDirect"
-                          methodParameters:
-                          - name: "capacity"
-                            value:
-                              sapientType: "BASIC"
-                              content: !<regular>
-                                value: 0
-                              valueType: "int"
-                              uuid: "combineLeftRight_sha256Hash1-buf-capacity"
-                              fixed: false
-                              equalsMethodPresent: false
-                              explicitCastNeeded: false
-                        suggestedContent: !<static_method_return>
-                          target: "java.nio.ByteBuffer"
-                          method: "allocateDirect"
-                          methodParameters:
-                          - name: "capacity"
-                            value:
-                              sapientType: "BASIC"
-                              valueType: "int"
-                              uuid: "combineLeftRight_sha256Hash1-buf-capacity"
-                              fixed: false
-                              equalsMethodPresent: false
-                              explicitCastNeeded: false
-                        valueType: "java.nio.ByteBuffer"
-                        uuid: "combineLeftRight_sha256Hash1-buf"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                  suggestedContent: !<static_method_return>
-                    target: "org.bitcoinj.base.Sha256Hash"
-                    method: "read"
-                    methodParameters:
-                    - name: "buf"
-                      value:
-                        sapientType: "UNKNOWN"
-                        suggestedContent: !<static_method_return>
-                          target: "java.nio.ByteBuffer"
-                          method: "allocateDirect"
-                          methodParameters:
-                          - name: "capacity"
-                            value:
-                              sapientType: "BASIC"
-                              valueType: "int"
-                              uuid: "combineLeftRight_sha256Hash1-buf-capacity"
-                              fixed: false
-                              equalsMethodPresent: false
-                              explicitCastNeeded: false
-                        valueType: "java.nio.ByteBuffer"
-                        uuid: "combineLeftRight_sha256Hash1-buf"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
+                - sapientType: "MOCK"
                   valueType: "org.bitcoinj.base.Sha256Hash"
                   uuid: "combineLeftRight_sha256Hash1"
                   fixed: false
@@ -3096,69 +2825,7 @@ methods:
                 collectionClass: "java.util.ArrayList"
                 parameters: []
                 values:
-                - sapientType: "OBJECT"
-                  content: !<static_method_return>
-                    target: "org.bitcoinj.base.Sha256Hash"
-                    method: "read"
-                    methodParameters:
-                    - name: "buf"
-                      value:
-                        sapientType: "OBJECT"
-                        content: !<static_method_return>
-                          target: "java.nio.ByteBuffer"
-                          method: "allocateDirect"
-                          methodParameters:
-                          - name: "capacity"
-                            value:
-                              sapientType: "BASIC"
-                              content: !<regular>
-                                value: 0
-                              valueType: "int"
-                              uuid: "combineLeftRight_sha256Hash1-buf-capacity"
-                              fixed: false
-                              equalsMethodPresent: false
-                              explicitCastNeeded: false
-                        suggestedContent: !<static_method_return>
-                          target: "java.nio.ByteBuffer"
-                          method: "allocateDirect"
-                          methodParameters:
-                          - name: "capacity"
-                            value:
-                              sapientType: "BASIC"
-                              valueType: "int"
-                              uuid: "combineLeftRight_sha256Hash1-buf-capacity"
-                              fixed: false
-                              equalsMethodPresent: false
-                              explicitCastNeeded: false
-                        valueType: "java.nio.ByteBuffer"
-                        uuid: "combineLeftRight_sha256Hash1-buf"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                  suggestedContent: !<static_method_return>
-                    target: "org.bitcoinj.base.Sha256Hash"
-                    method: "read"
-                    methodParameters:
-                    - name: "buf"
-                      value:
-                        sapientType: "UNKNOWN"
-                        suggestedContent: !<static_method_return>
-                          target: "java.nio.ByteBuffer"
-                          method: "allocateDirect"
-                          methodParameters:
-                          - name: "capacity"
-                            value:
-                              sapientType: "BASIC"
-                              valueType: "int"
-                              uuid: "combineLeftRight_sha256Hash1-buf-capacity"
-                              fixed: false
-                              equalsMethodPresent: false
-                              explicitCastNeeded: false
-                        valueType: "java.nio.ByteBuffer"
-                        uuid: "combineLeftRight_sha256Hash1-buf"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
+                - sapientType: "MOCK"
                   valueType: "org.bitcoinj.base.Sha256Hash"
                   uuid: "combineLeftRight_sha256Hash1"
                   fixed: false
@@ -3206,8 +2873,8 @@ methods:
           - name: "origTxCount"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 2
+              suggestedContent: !<regular>
+                value: 1
               valueType: "int"
               uuid: "buildFromLeaves_int11"
               fixed: false
@@ -3221,69 +2888,7 @@ methods:
                 collectionClass: "java.util.ArrayList"
                 parameters: []
                 values:
-                - sapientType: "OBJECT"
-                  content: !<static_method_return>
-                    target: "org.bitcoinj.base.Sha256Hash"
-                    method: "read"
-                    methodParameters:
-                    - name: "buf"
-                      value:
-                        sapientType: "OBJECT"
-                        content: !<static_method_return>
-                          target: "java.nio.ByteBuffer"
-                          method: "allocateDirect"
-                          methodParameters:
-                          - name: "capacity"
-                            value:
-                              sapientType: "BASIC"
-                              content: !<regular>
-                                value: 0
-                              valueType: "int"
-                              uuid: "combineLeftRight_sha256Hash1-buf-capacity"
-                              fixed: false
-                              equalsMethodPresent: false
-                              explicitCastNeeded: false
-                        suggestedContent: !<static_method_return>
-                          target: "java.nio.ByteBuffer"
-                          method: "allocateDirect"
-                          methodParameters:
-                          - name: "capacity"
-                            value:
-                              sapientType: "BASIC"
-                              valueType: "int"
-                              uuid: "combineLeftRight_sha256Hash1-buf-capacity"
-                              fixed: false
-                              equalsMethodPresent: false
-                              explicitCastNeeded: false
-                        valueType: "java.nio.ByteBuffer"
-                        uuid: "combineLeftRight_sha256Hash1-buf"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                  suggestedContent: !<static_method_return>
-                    target: "org.bitcoinj.base.Sha256Hash"
-                    method: "read"
-                    methodParameters:
-                    - name: "buf"
-                      value:
-                        sapientType: "UNKNOWN"
-                        suggestedContent: !<static_method_return>
-                          target: "java.nio.ByteBuffer"
-                          method: "allocateDirect"
-                          methodParameters:
-                          - name: "capacity"
-                            value:
-                              sapientType: "BASIC"
-                              valueType: "int"
-                              uuid: "combineLeftRight_sha256Hash1-buf-capacity"
-                              fixed: false
-                              equalsMethodPresent: false
-                              explicitCastNeeded: false
-                        valueType: "java.nio.ByteBuffer"
-                        uuid: "combineLeftRight_sha256Hash1-buf"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
+                - sapientType: "UNKNOWN"
                   valueType: "org.bitcoinj.base.Sha256Hash"
                   uuid: "combineLeftRight_sha256Hash1"
                   fixed: false
@@ -3324,13 +2929,12 @@ methods:
       filledByUser: false
     uuid: "e08b6546-fdb0-38fa-8eff-a86502e46a7d"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
-      reason: "METHOD_CALL_INSTRUCTION_INTERNAL_METHOD_RECURSIVE_CALL"
-    prover: "LLM"
+      reason: "BITWISE_NOT_SUPPORTED"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path4"
     pathIdForUser: "path6"
     testPathName: "buildFromLeavesWhenPPlus1NotLessThanGetTreeWidthHashesSizeHAndILessThanBitListSizeAndBitListNotGetI"
@@ -5014,12 +4618,12 @@ methods:
       filledByUser: false
     uuid: "b1a03d93-32c0-37a3-8670-be1824d3db5a"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "BITWISE_NOT_SUPPORTED"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "write"
     returnType: "java.nio.ByteBuffer"
@@ -5739,12 +5343,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "9C88120DAB6DEB8A3833FE4AE2DA2469"
+    modelFingerprint: "715230645D124B069C81E3630CFAFE7D"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "7C59BB74740C76038A38B2219A829773"
+      modelFingerprint: "B2882EDF85F53C4BBB446C2E2523F943"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -5758,9 +5362,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 1
+                value: 10
               suggestedContent: !<regular>
-                value: 1
+                value: 10
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -5911,6 +5515,75 @@ methods:
                   collectionUuid: "<init>_list1"
                   equalsMethodPresent: false
                   explicitCastNeeded: false
+                - sapientType: "OBJECT"
+                  content: !<static_method_return>
+                    target: "org.bitcoinj.base.Sha256Hash"
+                    method: "read"
+                    methodParameters:
+                    - name: "buf"
+                      value:
+                        sapientType: "OBJECT"
+                        content: !<static_method_return>
+                          target: "java.nio.ByteBuffer"
+                          method: "allocateDirect"
+                          methodParameters:
+                          - name: "capacity"
+                            value:
+                              sapientType: "BASIC"
+                              content: !<regular>
+                                value: 0
+                              valueType: "int"
+                              uuid: "<init>_list1-2-buf-capacity"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        suggestedContent: !<static_method_return>
+                          target: "java.nio.ByteBuffer"
+                          method: "allocateDirect"
+                          methodParameters:
+                          - name: "capacity"
+                            value:
+                              sapientType: "BASIC"
+                              valueType: "int"
+                              uuid: "<init>_list1-2-buf-capacity"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        valueType: "java.nio.ByteBuffer"
+                        uuid: "<init>_list1-2-buf"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                  suggestedContent: !<static_method_return>
+                    target: "org.bitcoinj.base.Sha256Hash"
+                    method: "read"
+                    methodParameters:
+                    - name: "buf"
+                      value:
+                        sapientType: "UNKNOWN"
+                        suggestedContent: !<static_method_return>
+                          target: "java.nio.ByteBuffer"
+                          method: "allocateDirect"
+                          methodParameters:
+                          - name: "capacity"
+                            value:
+                              sapientType: "BASIC"
+                              valueType: "int"
+                              uuid: "<init>_list1-2-buf-capacity"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        valueType: "java.nio.ByteBuffer"
+                        uuid: "<init>_list1-2-buf"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                  valueType: "org.bitcoinj.base.Sha256Hash"
+                  uuid: "<init>_list1-2"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               suggestedContent: !<collection>
                 collectionClass: "java.util.ArrayList"
                 parameters: []
@@ -6053,6 +5726,75 @@ methods:
                   collectionUuid: "<init>_list1"
                   equalsMethodPresent: false
                   explicitCastNeeded: false
+                - sapientType: "OBJECT"
+                  content: !<static_method_return>
+                    target: "org.bitcoinj.base.Sha256Hash"
+                    method: "read"
+                    methodParameters:
+                    - name: "buf"
+                      value:
+                        sapientType: "OBJECT"
+                        content: !<static_method_return>
+                          target: "java.nio.ByteBuffer"
+                          method: "allocateDirect"
+                          methodParameters:
+                          - name: "capacity"
+                            value:
+                              sapientType: "BASIC"
+                              content: !<regular>
+                                value: 0
+                              valueType: "int"
+                              uuid: "<init>_list1-2-buf-capacity"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        suggestedContent: !<static_method_return>
+                          target: "java.nio.ByteBuffer"
+                          method: "allocateDirect"
+                          methodParameters:
+                          - name: "capacity"
+                            value:
+                              sapientType: "BASIC"
+                              valueType: "int"
+                              uuid: "<init>_list1-2-buf-capacity"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        valueType: "java.nio.ByteBuffer"
+                        uuid: "<init>_list1-2-buf"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                  suggestedContent: !<static_method_return>
+                    target: "org.bitcoinj.base.Sha256Hash"
+                    method: "read"
+                    methodParameters:
+                    - name: "buf"
+                      value:
+                        sapientType: "UNKNOWN"
+                        suggestedContent: !<static_method_return>
+                          target: "java.nio.ByteBuffer"
+                          method: "allocateDirect"
+                          methodParameters:
+                          - name: "capacity"
+                            value:
+                              sapientType: "BASIC"
+                              valueType: "int"
+                              uuid: "<init>_list1-2-buf-capacity"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        valueType: "java.nio.ByteBuffer"
+                        uuid: "<init>_list1-2-buf"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                  valueType: "org.bitcoinj.base.Sha256Hash"
+                  uuid: "<init>_list1-2"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "org.bitcoinj.base.Sha256Hash"
               uuid: "<init>_list1"
@@ -6067,9 +5809,9 @@ methods:
                   0:
                     sapientType: "BASIC"
                     content: !<regular>
-                      value: 0
+                      value: 1
                     suggestedContent: !<regular>
-                      value: 0
+                      value: 1
                     valueType: "byte"
                     fixed: false
                     equalsMethodPresent: false
@@ -6077,24 +5819,14 @@ methods:
                   1:
                     sapientType: "BASIC"
                     content: !<regular>
-                      value: 1
+                      value: 0
                     suggestedContent: !<regular>
-                      value: 1
+                      value: 0
                     valueType: "byte"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
                   2:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 0
-                    suggestedContent: !<regular>
-                      value: 0
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  3:
                     sapientType: "BASIC"
                     content: !<regular>
                       value: 1
@@ -6109,9 +5841,9 @@ methods:
                   0:
                     sapientType: "BASIC"
                     content: !<regular>
-                      value: 0
+                      value: 1
                     suggestedContent: !<regular>
-                      value: 0
+                      value: 1
                     valueType: "byte"
                     fixed: false
                     equalsMethodPresent: false
@@ -6119,24 +5851,14 @@ methods:
                   1:
                     sapientType: "BASIC"
                     content: !<regular>
-                      value: 1
+                      value: 0
                     suggestedContent: !<regular>
-                      value: 1
+                      value: 0
                     valueType: "byte"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
                   2:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 0
-                    suggestedContent: !<regular>
-                      value: 0
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  3:
                     sapientType: "BASIC"
                     content: !<regular>
                       value: 1
@@ -6160,9 +5882,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 1
+                value: 10
               suggestedContent: !<regular>
-                value: 1
+                value: 10
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -6285,6 +6007,61 @@ methods:
                   collectionUuid: "<init>_list1"
                   equalsMethodPresent: false
                   explicitCastNeeded: false
+                - sapientType: "OBJECT"
+                  content: !<static_method_return>
+                    target: "org.bitcoinj.base.Sha256Hash"
+                    method: "read"
+                    methodParameters:
+                    - name: "buf"
+                      value:
+                        sapientType: "UNKNOWN"
+                        suggestedContent: !<static_method_return>
+                          target: "java.nio.ByteBuffer"
+                          method: "allocateDirect"
+                          methodParameters:
+                          - name: "capacity"
+                            value:
+                              sapientType: "BASIC"
+                              valueType: "int"
+                              uuid: "<init>_list1-2-buf-capacity"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        valueType: "java.nio.ByteBuffer"
+                        uuid: "<init>_list1-2-buf"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                  suggestedContent: !<static_method_return>
+                    target: "org.bitcoinj.base.Sha256Hash"
+                    method: "read"
+                    methodParameters:
+                    - name: "buf"
+                      value:
+                        sapientType: "UNKNOWN"
+                        suggestedContent: !<static_method_return>
+                          target: "java.nio.ByteBuffer"
+                          method: "allocateDirect"
+                          methodParameters:
+                          - name: "capacity"
+                            value:
+                              sapientType: "BASIC"
+                              valueType: "int"
+                              uuid: "<init>_list1-2-buf-capacity"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        valueType: "java.nio.ByteBuffer"
+                        uuid: "<init>_list1-2-buf"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                  valueType: "org.bitcoinj.base.Sha256Hash"
+                  uuid: "<init>_list1-2"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               suggestedContent: !<collection>
                 collectionClass: "java.util.ArrayList"
                 parameters: []
@@ -6399,6 +6176,61 @@ methods:
                   collectionUuid: "<init>_list1"
                   equalsMethodPresent: false
                   explicitCastNeeded: false
+                - sapientType: "OBJECT"
+                  content: !<static_method_return>
+                    target: "org.bitcoinj.base.Sha256Hash"
+                    method: "read"
+                    methodParameters:
+                    - name: "buf"
+                      value:
+                        sapientType: "UNKNOWN"
+                        suggestedContent: !<static_method_return>
+                          target: "java.nio.ByteBuffer"
+                          method: "allocateDirect"
+                          methodParameters:
+                          - name: "capacity"
+                            value:
+                              sapientType: "BASIC"
+                              valueType: "int"
+                              uuid: "<init>_list1-2-buf-capacity"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        valueType: "java.nio.ByteBuffer"
+                        uuid: "<init>_list1-2-buf"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                  suggestedContent: !<static_method_return>
+                    target: "org.bitcoinj.base.Sha256Hash"
+                    method: "read"
+                    methodParameters:
+                    - name: "buf"
+                      value:
+                        sapientType: "UNKNOWN"
+                        suggestedContent: !<static_method_return>
+                          target: "java.nio.ByteBuffer"
+                          method: "allocateDirect"
+                          methodParameters:
+                          - name: "capacity"
+                            value:
+                              sapientType: "BASIC"
+                              valueType: "int"
+                              uuid: "<init>_list1-2-buf-capacity"
+                              fixed: false
+                              equalsMethodPresent: false
+                              explicitCastNeeded: false
+                        valueType: "java.nio.ByteBuffer"
+                        uuid: "<init>_list1-2-buf"
+                        fixed: false
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                  valueType: "org.bitcoinj.base.Sha256Hash"
+                  uuid: "<init>_list1-2"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
               valueType: "java.util.List"
               genericValueType: "org.bitcoinj.base.Sha256Hash"
               uuid: "<init>_list1"
@@ -6413,9 +6245,9 @@ methods:
                   0:
                     sapientType: "BASIC"
                     content: !<regular>
-                      value: 0
+                      value: 1
                     suggestedContent: !<regular>
-                      value: 0
+                      value: 1
                     valueType: "byte"
                     fixed: false
                     equalsMethodPresent: false
@@ -6423,24 +6255,14 @@ methods:
                   1:
                     sapientType: "BASIC"
                     content: !<regular>
-                      value: 1
+                      value: 0
                     suggestedContent: !<regular>
-                      value: 1
+                      value: 0
                     valueType: "byte"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
                   2:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 0
-                    suggestedContent: !<regular>
-                      value: 0
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  3:
                     sapientType: "BASIC"
                     content: !<regular>
                       value: 1
@@ -6455,9 +6277,9 @@ methods:
                   0:
                     sapientType: "BASIC"
                     content: !<regular>
-                      value: 0
+                      value: 1
                     suggestedContent: !<regular>
-                      value: 0
+                      value: 1
                     valueType: "byte"
                     fixed: false
                     equalsMethodPresent: false
@@ -6465,24 +6287,14 @@ methods:
                   1:
                     sapientType: "BASIC"
                     content: !<regular>
-                      value: 1
+                      value: 0
                     suggestedContent: !<regular>
-                      value: 1
+                      value: 0
                     valueType: "byte"
                     fixed: false
                     equalsMethodPresent: false
                     explicitCastNeeded: false
                   2:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 0
-                    suggestedContent: !<regular>
-                      value: 0
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  3:
                     sapientType: "BASIC"
                     content: !<regular>
                       value: 1
@@ -6508,7 +6320,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "VarInt"
-      modelFingerprint: "4457E1706557DCB9CA186934C1E3665A"
+      modelFingerprint: "CF1E4259846B302B0909F0FED1C3AB5C"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -6528,7 +6340,7 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: 2
+              value: 3
             valueType: "long"
             originalValueType: "int"
             fixed: true
@@ -6549,7 +6361,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "VarInt"
-      modelFingerprint: "42D5A3943C9100A85E26696FD393DA58"
+      modelFingerprint: "CF1E4259846B302B0909F0FED1C3AB5C"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -6569,7 +6381,7 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: 4
+              value: 3
             valueType: "long"
             originalValueType: "int"
             fixed: true
@@ -6590,7 +6402,7 @@ methods:
       filledByUser: false
     - type: "INTERNAL"
       name: "internalMethod"
-      modelFingerprint: "E4AF5770BD1844B45149B4F258D05994"
+      modelFingerprint: "7D6FFC38746F209BD28E4DE32095282E"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -6609,7 +6421,7 @@ methods:
               - value:
                   sapientType: "BASIC"
                   content: !<regular>
-                    value: 74
+                    value: 105
                   valueType: "int"
                   uuid: "messageSize_int15"
                   fixed: true
@@ -6622,7 +6434,7 @@ methods:
               - value:
                   sapientType: "BASIC"
                   content: !<regular>
-                    value: 74
+                    value: 105
                   valueType: "int"
                   uuid: "messageSize_int15"
                   fixed: true
@@ -6816,7 +6628,7 @@ methods:
     - type: "STATIC"
       name: "VarInt"
       modelFingerprint: "4E5004D74314CB7D2EEEAAFD66952691"
-      index: 3
+      index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -6840,7 +6652,7 @@ methods:
               value: 0
             valueType: "long"
             originalValueType: "int"
-            uuid: "messageSize_long2"
+            uuid: "messageSize_long1"
             fixed: false
             equalsMethodPresent: false
             explicitCastNeeded: false
@@ -6852,7 +6664,7 @@ methods:
           suggestedContent: !<regular>
             value: 1
           valueType: "int"
-          uuid: "messageSize_int9"
+          uuid: "messageSize_int3"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -7047,7 +6859,7 @@ methods:
     - type: "STATIC"
       name: "VarInt"
       modelFingerprint: "4E5004D74314CB7D2EEEAAFD66952691"
-      index: 3
+      index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -7071,7 +6883,7 @@ methods:
               value: 0
             valueType: "long"
             originalValueType: "int"
-            uuid: "messageSize_long2"
+            uuid: "messageSize_long1"
             fixed: false
             equalsMethodPresent: false
             explicitCastNeeded: false
@@ -7083,7 +6895,7 @@ methods:
           suggestedContent: !<regular>
             value: 1
           valueType: "int"
-          uuid: "messageSize_int9"
+          uuid: "messageSize_int3"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -11354,7 +11166,7 @@ methods:
                   equalsMethodPresent: false
                   explicitCastNeeded: false
             valueType: "byte[]"
-            uuid: "<init>_byte[]2"
+            uuid: "<init>_byte[]1"
             fixed: false
             equalsMethodPresent: false
             explicitCastNeeded: false

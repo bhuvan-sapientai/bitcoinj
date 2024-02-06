@@ -160,9 +160,7 @@ public class DeterministicKeySapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         ECPoint eCPointMock = mock(ECPoint.class);
-        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
+        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
             hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
             List<ChildNumber> childNumberList = new ArrayList<>();
             byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
@@ -174,7 +172,6 @@ public class DeterministicKeySapientGeneratedJunit4Test {
             ChildNumber childNumber = ChildNumber.ZERO;
             //Assert statement(s)
             assertThat(result, equalTo(childNumber));
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
             hDPath.verify(() -> HDPath.M(anyList()));
             verify(childNumberPathMock).size();
         }
@@ -193,9 +190,7 @@ public class DeterministicKeySapientGeneratedJunit4Test {
         //Arrange Statement(s)
         ECPoint eCPointMock = mock(ECPoint.class);
         ChildNumber childNumberMock = mock(ChildNumber.class);
-        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
+        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
             hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
             List<ChildNumber> childNumberList = new ArrayList<>();
             byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
@@ -207,7 +202,6 @@ public class DeterministicKeySapientGeneratedJunit4Test {
             ChildNumber result = target.getChildNumber();
             //Assert statement(s)
             assertThat(result, equalTo(childNumberMock));
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
             hDPath.verify(() -> HDPath.M(anyList()));
             verify(childNumberPathMock, times(2)).size();
             verify(childNumberPathMock).get(0);
@@ -224,9 +218,7 @@ public class DeterministicKeySapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         ECPoint eCPointMock = mock(ECPoint.class);
-        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
+        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
             hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
             List<ChildNumber> childNumberList = new ArrayList<>();
             byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
@@ -237,7 +229,6 @@ public class DeterministicKeySapientGeneratedJunit4Test {
             byte[] byteResultArray = new byte[]{(byte) -76, (byte) 114, (byte) -94, (byte) 102, (byte) -48, (byte) -67, (byte) -119, (byte) -63, (byte) 55, (byte) 6, (byte) -92, (byte) 19, (byte) 44, (byte) -49, (byte) -79, (byte) 111, (byte) 124, (byte) 59, (byte) -97, (byte) -53};
             //Assert statement(s)
             assertThat(result, equalTo(byteResultArray));
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
             hDPath.verify(() -> HDPath.M(anyList()));
         }
     }
@@ -279,9 +270,7 @@ public class DeterministicKeySapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         ECPoint eCPointMock = mock(ECPoint.class);
-        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
+        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
             hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
             List<ChildNumber> childNumberList = new ArrayList<>();
             byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
@@ -294,7 +283,6 @@ public class DeterministicKeySapientGeneratedJunit4Test {
             byte[] byteResultArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
             //Assert statement(s)
             assertThat(result, equalTo(byteResultArray));
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
             hDPath.verify(() -> HDPath.M(anyList()));
             verify(target).getPrivKeyBytes();
         }
@@ -381,9 +369,7 @@ public class DeterministicKeySapientGeneratedJunit4Test {
         //Arrange Statement(s)
         HDPath hDPathMock = mock(HDPath.class);
         ECPoint eCPointMock = mock(ECPoint.class);
-        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
+        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
             hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
             hDPath.when(() -> HDPath.M(childNumberPathMock)).thenReturn(hDPathMock);
             List<ChildNumber> childNumberList = new ArrayList<>();
@@ -399,7 +385,6 @@ public class DeterministicKeySapientGeneratedJunit4Test {
             DeterministicKey deterministicKey = new DeterministicKey(childNumberPathMock, byteArray2, lazyECPoint2, (BigInteger) null, (DeterministicKey) null);
             //Assert statement(s)
             assertThat(result, equalTo(deterministicKey));
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
             hDPath.verify(() -> HDPath.M(anyList()));
             hDPath.verify(() -> HDPath.M(childNumberPathMock), atLeast(1));
             verify(target).isPubKeyOnly();
@@ -481,9 +466,11 @@ public class DeterministicKeySapientGeneratedJunit4Test {
     public void addChecksumTest() {
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{};
+
         //Act Statement(s)
         byte[] result = DeterministicKey.addChecksum(byteArray);
         byte[] byteResultArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0};
+
         //Assert statement(s)
         assertThat(result, equalTo(byteResultArray));
     }
@@ -500,9 +487,7 @@ public class DeterministicKeySapientGeneratedJunit4Test {
         ECPoint eCPointMock = mock(ECPoint.class);
         KeyCrypter keyCrypterMock = mock(KeyCrypter.class);
         AesKey aesKeyMock = mock(AesKey.class);
-        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
+        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
             hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
             List<ChildNumber> childNumberList = new ArrayList<>();
             byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
@@ -514,7 +499,6 @@ public class DeterministicKeySapientGeneratedJunit4Test {
             //Act Statement(s)
             target.encrypt(keyCrypterMock, aesKeyMock);
             //Assert statement(s)
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
             hDPath.verify(() -> HDPath.M(anyList()));
         }
     }
@@ -674,9 +658,7 @@ public class DeterministicKeySapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         ECPoint eCPointMock = mock(ECPoint.class);
-        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
+        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
             hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
             List<ChildNumber> childNumberList = new ArrayList<>();
             byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
@@ -686,7 +668,6 @@ public class DeterministicKeySapientGeneratedJunit4Test {
             boolean result = target.hasPrivKey();
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.FALSE));
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
             hDPath.verify(() -> HDPath.M(anyList()));
         }
     }
@@ -703,9 +684,7 @@ public class DeterministicKeySapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         ECPoint eCPointMock = mock(ECPoint.class);
-        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
+        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
             hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
             List<ChildNumber> childNumberList = new ArrayList<>();
             byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
@@ -715,7 +694,6 @@ public class DeterministicKeySapientGeneratedJunit4Test {
             byte[] result = target.getSecretBytes();
             //Assert statement(s)
             assertThat(result, is(nullValue()));
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
             hDPath.verify(() -> HDPath.M(anyList()));
         }
     }
@@ -762,9 +740,7 @@ public class DeterministicKeySapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         ECPoint eCPointMock = mock(ECPoint.class);
-        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
+        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
             hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
             List<ChildNumber> childNumberList = new ArrayList<>();
             byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
@@ -774,7 +750,6 @@ public class DeterministicKeySapientGeneratedJunit4Test {
             KeyCrypter result = target.getKeyCrypter();
             //Assert statement(s)
             assertThat(result, is(nullValue()));
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
             hDPath.verify(() -> HDPath.M(anyList()));
         }
     }
@@ -829,9 +804,7 @@ public class DeterministicKeySapientGeneratedJunit4Test {
         ECPoint eCPointMock = mock(ECPoint.class);
         Sha256Hash sha256HashMock = mock(Sha256Hash.class);
         AesKey aesKeyMock = mock(AesKey.class);
-        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
+        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
             hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
             List<ChildNumber> childNumberList = new ArrayList<>();
             byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
@@ -842,7 +815,6 @@ public class DeterministicKeySapientGeneratedJunit4Test {
             //Act Statement(s)
             target.sign(sha256HashMock, aesKeyMock);
             //Assert statement(s)
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
             hDPath.verify(() -> HDPath.M(anyList()));
             verify(target).isEncrypted();
         }
@@ -971,60 +943,6 @@ public class DeterministicKeySapientGeneratedJunit4Test {
         }
     }
 
-    //Sapient generated method id: ${4b0b9a81-8c26-349b-b5b5-6151f6ee2aaa}
-    @Ignore()
-    @Test()
-    public void sign1WhenPathIsEmptyThrowsNullPointerException() throws KeyCrypterException {
-        /* Branches:
-         * (isEncrypted()) : false
-         * (cursor != null) : true  #  inside findParentWithPrivKey method
-         * (cursor.priv != null) : true  #  inside findParentWithPrivKey method
-         * (cursor == null) : false  #  inside findOrDerivePrivateKey method
-         * (branch expression (line 190)) : false  #  inside <init> method
-         * (branch expression (line 73)) : false  #  inside <init> method
-         * (branch expression (line 77)) : false  #  inside <init> method
-         * (branch expression (line 78)) : false  #  inside <init> method
-         * (for-each(path)) : false  #  inside derivePrivateKeyDownwards method
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        HDPath hDPathMock = mock(HDPath.class);
-        HDPath hDPathMock2 = mock(HDPath.class);
-        ECPoint eCPointMock = mock(ECPoint.class);
-        Sha256Hash sha256HashMock = mock(Sha256Hash.class);
-        AesKey aesKeyMock = mock(AesKey.class);
-        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-             MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
-            hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
-            byte[] byteArray = new byte[]{(byte) 0};
-            byteUtils.when(() -> ByteUtils.bytesToBigInteger(byteArray)).thenReturn(null);
-            hDPath.when(() -> HDPath.M(hDPathMock2)).thenReturn(hDPathMock);
-            List<ChildNumber> childNumberList = new ArrayList<>();
-            byte[] byteArray2 = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
-            target = spy(new DeterministicKey(childNumberList, byteArray2, eCPointMock, false, (BigInteger) null, (DeterministicKey) null));
-            autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            doReturn(false).when(target).isEncrypted();
-            doReturn(0).when(hDPathMock).size();
-            List<ChildNumber> childNumberList2 = new ArrayList<>();
-            doReturn(childNumberList2).when(hDPathMock).subList(0, 0);
-            thrown.expect(NullPointerException.class);
-            //Act Statement(s)
-            target.sign(sha256HashMock, aesKeyMock);
-            //Assert statement(s)
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
-            hDPath.verify(() -> HDPath.M(anyList()));
-            byteUtils.verify(() -> ByteUtils.bytesToBigInteger(byteArray), atLeast(1));
-            hDPath.verify(() -> HDPath.M(hDPathMock2), atLeast(1));
-            verify(target).isEncrypted();
-            verify(hDPathMock).size();
-            verify(hDPathMock).subList(0, 0);
-        }
-    }
-
     //Sapient generated method id: ${dfb3ab03-6203-3e99-88f6-8c72bbb35178}
     @Ignore()
     @Test()
@@ -1050,9 +968,7 @@ public class DeterministicKeySapientGeneratedJunit4Test {
         Sha256Hash sha256HashMock = mock(Sha256Hash.class);
         AesKey aesKeyMock = mock(AesKey.class);
         try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
             hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
             byte[] byteArray = new byte[]{(byte) 0};
             byteUtils.when(() -> ByteUtils.bytesToBigInteger(byteArray)).thenReturn(null);
@@ -1069,7 +985,6 @@ public class DeterministicKeySapientGeneratedJunit4Test {
             //Act Statement(s)
             target.sign(sha256HashMock, aesKeyMock);
             //Assert statement(s)
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
             hDPath.verify(() -> HDPath.M(anyList()));
             byteUtils.verify(() -> ByteUtils.bytesToBigInteger(byteArray), atLeast(1));
             hDPath.verify(() -> HDPath.M(hDPathMock2), atLeast(1));
@@ -1142,72 +1057,6 @@ public class DeterministicKeySapientGeneratedJunit4Test {
         }
     }
 
-    //Sapient generated method id: ${903d151d-877c-316c-b0b4-49c6a71dc177}
-    @Ignore()
-    @Test()
-    public void sign1WhenDownCursorPubEqualsPubAndPrivateKeyIsNullThrowsECKeyMissingPrivateKeyException() throws KeyCrypterException {
-        /* Branches:
-         * (isEncrypted()) : false
-         * (cursor != null) : true  #  inside findParentWithPrivKey method
-         * (cursor.priv != null) : true  #  inside findParentWithPrivKey method
-         * (cursor == null) : false  #  inside findOrDerivePrivateKey method
-         * (branch expression (line 190)) : false  #  inside <init> method
-         * (branch expression (line 73)) : false  #  inside <init> method
-         * (branch expression (line 77)) : false  #  inside <init> method
-         * (branch expression (line 78)) : false  #  inside <init> method
-         * (for-each(path)) : true  #  inside derivePrivateKeyDownwards method
-         * (!downCursor.pub.equals(pub)) : false  #  inside derivePrivateKeyDownwards method
-         * (privateKey == null) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        HDPath hDPathMock = mock(HDPath.class);
-        HDPath hDPathMock2 = mock(HDPath.class);
-        DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
-        ChildNumber childNumberMock = mock(ChildNumber.class);
-        LazyECPoint publicAsPointMock = mock(LazyECPoint.class);
-        LazyECPoint lazyECPointMock = mock(LazyECPoint.class);
-        ECPoint eCPointMock = mock(ECPoint.class);
-        Sha256Hash sha256HashMock = mock(Sha256Hash.class);
-        AesKey aesKeyMock = mock(AesKey.class);
-        try (MockedStatic<HDKeyDerivation> hDKeyDerivation = mockStatic(HDKeyDerivation.class);
-             MockedStatic<HDPath> hDPath = mockStatic(HDPath.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-             MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
-            hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
-            byte[] byteArray = new byte[]{(byte) 0};
-            byteUtils.when(() -> ByteUtils.bytesToBigInteger(byteArray)).thenReturn(null);
-            hDPath.when(() -> HDPath.M(hDPathMock2)).thenReturn(hDPathMock);
-            hDKeyDerivation.when(() -> HDKeyDerivation.deriveChildKey((DeterministicKey) any(), eq(childNumberMock))).thenReturn(deterministicKeyMock);
-            doReturn(lazyECPointMock).when(publicAsPointMock).compress();
-            List<ChildNumber> childNumberList = new ArrayList<>();
-            byte[] byteArray2 = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
-            target = spy(new DeterministicKey(childNumberList, byteArray2, eCPointMock, false, (BigInteger) null, (DeterministicKey) null));
-            autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            doReturn(false).when(target).isEncrypted();
-            doReturn(0).when(hDPathMock).size();
-            List<ChildNumber> childNumberList2 = new ArrayList<>();
-            childNumberList2.add(childNumberMock);
-            doReturn(childNumberList2).when(hDPathMock).subList(0, 0);
-            thrown.expect(ECKey.MissingPrivateKeyException.class);
-            //Act Statement(s)
-            target.sign(sha256HashMock, aesKeyMock);
-            //Assert statement(s)
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
-            hDPath.verify(() -> HDPath.M(anyList()));
-            byteUtils.verify(() -> ByteUtils.bytesToBigInteger(byteArray), atLeast(1));
-            hDPath.verify(() -> HDPath.M(hDPathMock2), atLeast(1));
-            hDKeyDerivation.verify(() -> HDKeyDerivation.deriveChildKey((DeterministicKey) any(), eq(childNumberMock)));
-            verify(publicAsPointMock).compress();
-            verify(target).isEncrypted();
-            verify(hDPathMock).size();
-            verify(hDPathMock).subList(0, 0);
-        }
-    }
-
     //Sapient generated method id: ${5457b0ea-612c-3305-a5d3-508db22e94b3}
     @Ignore()
     @Test()
@@ -1241,9 +1090,7 @@ public class DeterministicKeySapientGeneratedJunit4Test {
         AesKey aesKeyMock = mock(AesKey.class);
         try (MockedStatic<HDKeyDerivation> hDKeyDerivation = mockStatic(HDKeyDerivation.class);
              MockedStatic<HDPath> hDPath = mockStatic(HDPath.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
             hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
             byte[] byteArray = new byte[]{(byte) 0};
             byteUtils.when(() -> ByteUtils.bytesToBigInteger(byteArray)).thenReturn(null);
@@ -1264,7 +1111,6 @@ public class DeterministicKeySapientGeneratedJunit4Test {
             ECKey.ECDSASignature result = target.sign(sha256HashMock, aesKeyMock);
             //Assert statement(s)
             assertThat(result, equalTo(eCKeyECDSASignatureMock));
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
             hDPath.verify(() -> HDPath.M(anyList()));
             byteUtils.verify(() -> ByteUtils.bytesToBigInteger(byteArray), atLeast(1));
             hDPath.verify(() -> HDPath.M(hDPathMock2), atLeast(1));
@@ -1570,13 +1416,13 @@ public class DeterministicKeySapientGeneratedJunit4Test {
         try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class);
              MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class);
              MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
-            byte[] byteArray = new byte[]{};
+            byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
             doReturn(byteArray).when(keyCrypterMock).decrypt(encryptedDataMock, aesKeyMock);
             hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
             byteUtils.when(() -> ByteUtils.bytesToBigInteger(byteArray)).thenReturn(null);
             eCKey.when(() -> ECKey.publicPointFromPrivate((BigInteger) null)).thenReturn(eCPointMock);
             List<ChildNumber> childNumberList = new ArrayList<>();
-            byte[] byteArray2 = new byte[]{};
+            byte[] byteArray2 = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
             target = spy(new DeterministicKey(childNumberList, byteArray2, eCPointMock2, false, (BigInteger) null, (DeterministicKey) null));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             byte[] byteArray3 = new byte[]{};
@@ -1585,7 +1431,7 @@ public class DeterministicKeySapientGeneratedJunit4Test {
             doReturn(Optional.of(instant)).when(target).creationTime();
             //Act Statement(s)
             DeterministicKey result = target.decrypt(keyCrypterMock, aesKeyMock);
-            byte[] byteArray4 = new byte[]{};
+            byte[] byteArray4 = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
             DeterministicKey deterministicKey = new DeterministicKey(childNumberPathMock, byteArray4, (BigInteger) null, (DeterministicKey) null);
             deterministicKey.setCreationTime(instant);
             //Assert statement(s)
@@ -1628,13 +1474,11 @@ public class DeterministicKeySapientGeneratedJunit4Test {
         AesKey aesKeyMock = mock(AesKey.class);
         ECPoint eCPointMock = mock(ECPoint.class);
         ECPoint eCPointMock2 = mock(ECPoint.class);
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-             MockedStatic<ECKey> eCKey = mockStatic(ECKey.class);
+        try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class);
              MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class);
              MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
             byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
             doReturn(byteArray).when(keyCrypterMock).decrypt(encryptedDataMock, aesKeyMock);
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
             hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
             byteUtils.when(() -> ByteUtils.bytesToBigInteger(byteArray)).thenReturn(null);
             eCKey.when(() -> ECKey.publicPointFromPrivate((BigInteger) null)).thenReturn(eCPointMock);
@@ -1652,7 +1496,6 @@ public class DeterministicKeySapientGeneratedJunit4Test {
             //Assert statement(s)
             assertThat(result, equalTo(deterministicKey));
             verify(keyCrypterMock).decrypt(encryptedDataMock, aesKeyMock);
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
             hDPath.verify(() -> HDPath.M(anyList()));
             byteUtils.verify(() -> ByteUtils.bytesToBigInteger(byteArray), atLeast(1));
             eCKey.verify(() -> ECKey.publicPointFromPrivate((BigInteger) null), atLeast(1));
@@ -1674,9 +1517,7 @@ public class DeterministicKeySapientGeneratedJunit4Test {
         //Arrange Statement(s)
         ECPoint eCPointMock = mock(ECPoint.class);
         AesKey aesKeyMock = mock(AesKey.class);
-        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
+        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
             hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
             List<ChildNumber> childNumberList = new ArrayList<>();
             byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
@@ -1688,7 +1529,6 @@ public class DeterministicKeySapientGeneratedJunit4Test {
             //Act Statement(s)
             target.decrypt(aesKeyMock);
             //Assert statement(s)
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
             hDPath.verify(() -> HDPath.M(anyList()));
         }
     }
@@ -1705,9 +1545,7 @@ public class DeterministicKeySapientGeneratedJunit4Test {
         ECPoint eCPointMock = mock(ECPoint.class);
         DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
         try (MockedStatic<HDKeyDerivation> hDKeyDerivation = mockStatic(HDKeyDerivation.class);
-             MockedStatic<HDPath> hDPath = mockStatic(HDPath.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
+             MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
             hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
             List<ChildNumber> childNumberList = new ArrayList<>();
             byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
@@ -1718,7 +1556,6 @@ public class DeterministicKeySapientGeneratedJunit4Test {
             DeterministicKey result = target.derive(0);
             //Assert statement(s)
             assertThat(result, equalTo(deterministicKeyMock));
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
             hDPath.verify(() -> HDPath.M(anyList()));
             hDKeyDerivation.verify(() -> HDKeyDerivation.deriveChildKey(eq(target), (ChildNumber) any()));
         }
@@ -1739,9 +1576,8 @@ public class DeterministicKeySapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         ECPoint eCPointMock = mock(ECPoint.class);
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class, CALLS_REAL_METHODS);
              MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
             hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
             IllegalStateException illegalStateException = new IllegalStateException();
             preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenThrow(illegalStateException);
@@ -1753,9 +1589,8 @@ public class DeterministicKeySapientGeneratedJunit4Test {
             //Act Statement(s)
             target.getPrivKey();
             //Assert statement(s)
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
-            hDPath.verify(() -> HDPath.M(anyList()));
-            preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
+            hDPath.verify(() -> HDPath.M(anyList()), atLeast(1));
+            preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()), atLeast(1));
         }
     }
 
@@ -1867,55 +1702,6 @@ public class DeterministicKeySapientGeneratedJunit4Test {
         }
     }
 
-    //Sapient generated method id: ${52fce14d-1fc7-35c4-aa7f-ee3b76857388}
-    @Ignore()
-    @Test()
-    public void getPrivKeyWhenPathIsEmptyThrowsNullPointerException() {
-        /* Branches:
-         * (cursor != null) : true  #  inside findParentWithPrivKey method
-         * (cursor.priv != null) : true  #  inside findParentWithPrivKey method
-         * (cursor == null) : false  #  inside findOrDerivePrivateKey method
-         * (branch expression (line 190)) : false  #  inside <init> method
-         * (branch expression (line 73)) : false  #  inside <init> method
-         * (branch expression (line 77)) : false  #  inside <init> method
-         * (branch expression (line 78)) : false  #  inside <init> method
-         * (for-each(path)) : false  #  inside derivePrivateKeyDownwards method
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        HDPath hDPathMock = mock(HDPath.class);
-        HDPath hDPathMock2 = mock(HDPath.class);
-        ECPoint eCPointMock = mock(ECPoint.class);
-        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-             MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
-            hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
-            byte[] byteArray = new byte[]{(byte) 0};
-            byteUtils.when(() -> ByteUtils.bytesToBigInteger(byteArray)).thenReturn(null);
-            hDPath.when(() -> HDPath.M(hDPathMock2)).thenReturn(hDPathMock);
-            List<ChildNumber> childNumberList = new ArrayList<>();
-            byte[] byteArray2 = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
-            target = new DeterministicKey(childNumberList, byteArray2, eCPointMock, false, (BigInteger) null, (DeterministicKey) null);
-            autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            doReturn(0).when(hDPathMock).size();
-            List<ChildNumber> childNumberList2 = new ArrayList<>();
-            doReturn(childNumberList2).when(hDPathMock).subList(0, 0);
-            thrown.expect(NullPointerException.class);
-            //Act Statement(s)
-            target.getPrivKey();
-            //Assert statement(s)
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
-            hDPath.verify(() -> HDPath.M(anyList()));
-            byteUtils.verify(() -> ByteUtils.bytesToBigInteger(byteArray), atLeast(1));
-            hDPath.verify(() -> HDPath.M(hDPathMock2), atLeast(1));
-            verify(hDPathMock).size();
-            verify(hDPathMock).subList(0, 0);
-        }
-    }
-
     //Sapient generated method id: ${b3f60b5e-8468-35b3-a413-8c911c105b9f}
     @Ignore()
     @Test()
@@ -1986,19 +1772,16 @@ public class DeterministicKeySapientGeneratedJunit4Test {
         DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
         ChildNumber childNumberMock = mock(ChildNumber.class);
         LazyECPoint publicAsPointMock = mock(LazyECPoint.class);
-        LazyECPoint lazyECPointMock = mock(LazyECPoint.class);
         ECPoint eCPointMock = mock(ECPoint.class);
         try (MockedStatic<HDKeyDerivation> hDKeyDerivation = mockStatic(HDKeyDerivation.class);
              MockedStatic<HDPath> hDPath = mockStatic(HDPath.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
             hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
             byte[] byteArray = new byte[]{(byte) 0};
             byteUtils.when(() -> ByteUtils.bytesToBigInteger(byteArray)).thenReturn(null);
             hDPath.when(() -> HDPath.M(hDPathMock2)).thenReturn(hDPathMock);
             hDKeyDerivation.when(() -> HDKeyDerivation.deriveChildKey((DeterministicKey) any(), eq(childNumberMock))).thenReturn(deterministicKeyMock);
-            doReturn(lazyECPointMock).when(publicAsPointMock).compress();
+            doReturn(pubMock).when(publicAsPointMock).compress();
             List<ChildNumber> childNumberList = new ArrayList<>();
             byte[] byteArray2 = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
             target = new DeterministicKey(childNumberList, byteArray2, eCPointMock, false, (BigInteger) null, (DeterministicKey) null);
@@ -2013,7 +1796,6 @@ public class DeterministicKeySapientGeneratedJunit4Test {
             //Act Statement(s)
             target.getPrivKey();
             //Assert statement(s)
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
             hDPath.verify(() -> HDPath.M(anyList()));
             byteUtils.verify(() -> ByteUtils.bytesToBigInteger(byteArray), atLeast(1));
             hDPath.verify(() -> HDPath.M(hDPathMock2), atLeast(1));
@@ -2051,11 +1833,10 @@ public class DeterministicKeySapientGeneratedJunit4Test {
         LazyECPoint publicAsPointMock = mock(LazyECPoint.class);
         LazyECPoint lazyECPointMock = mock(LazyECPoint.class);
         ECPoint eCPointMock = mock(ECPoint.class);
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class, CALLS_REAL_METHODS);
              MockedStatic<HDKeyDerivation> hDKeyDerivation = mockStatic(HDKeyDerivation.class);
              MockedStatic<HDPath> hDPath = mockStatic(HDPath.class);
              MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
             hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
             byte[] byteArray = new byte[]{(byte) 0};
             byteUtils.when(() -> ByteUtils.bytesToBigInteger(byteArray)).thenReturn(null);
@@ -2076,79 +1857,14 @@ public class DeterministicKeySapientGeneratedJunit4Test {
             //Act Statement(s)
             target.getPrivKey();
             //Assert statement(s)
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
-            hDPath.verify(() -> HDPath.M(anyList()));
+            hDPath.verify(() -> HDPath.M(anyList()), atLeast(1));
             byteUtils.verify(() -> ByteUtils.bytesToBigInteger(byteArray), atLeast(1));
             hDPath.verify(() -> HDPath.M(hDPathMock2), atLeast(1));
-            hDKeyDerivation.verify(() -> HDKeyDerivation.deriveChildKey((DeterministicKey) any(), eq(childNumberMock)));
-            verify(publicAsPointMock).compress();
-            preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
-            verify(hDPathMock).size();
-            verify(hDPathMock).subList(0, 0);
-        }
-    }
-
-    //Sapient generated method id: ${88336cd5-fcf4-328b-b71a-15f96c170c7d}
-    @Ignore()
-    @Test()
-    public void getPrivKeyWhenDownCursorPubEqualsPubAndKeyIsNullThrowsIllegalStateException() {
-        /* Branches:
-         * (cursor != null) : true  #  inside findParentWithPrivKey method
-         * (cursor.priv != null) : true  #  inside findParentWithPrivKey method
-         * (cursor == null) : false  #  inside findOrDerivePrivateKey method
-         * (branch expression (line 190)) : false  #  inside <init> method
-         * (branch expression (line 73)) : false  #  inside <init> method
-         * (branch expression (line 77)) : false  #  inside <init> method
-         * (branch expression (line 78)) : false  #  inside <init> method
-         * (for-each(path)) : true  #  inside derivePrivateKeyDownwards method
-         * (!downCursor.pub.equals(pub)) : false  #  inside derivePrivateKeyDownwards method
-         * (key != null) : false
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        HDPath hDPathMock = mock(HDPath.class);
-        HDPath hDPathMock2 = mock(HDPath.class);
-        DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
-        ChildNumber childNumberMock = mock(ChildNumber.class);
-        LazyECPoint publicAsPointMock = mock(LazyECPoint.class);
-        LazyECPoint lazyECPointMock = mock(LazyECPoint.class);
-        ECPoint eCPointMock = mock(ECPoint.class);
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-             MockedStatic<HDKeyDerivation> hDKeyDerivation = mockStatic(HDKeyDerivation.class);
-             MockedStatic<HDPath> hDPath = mockStatic(HDPath.class);
-             MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
-            hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
-            byte[] byteArray = new byte[]{(byte) 0};
-            byteUtils.when(() -> ByteUtils.bytesToBigInteger(byteArray)).thenReturn(null);
-            hDPath.when(() -> HDPath.M(hDPathMock2)).thenReturn(hDPathMock);
-            hDKeyDerivation.when(() -> HDKeyDerivation.deriveChildKey((DeterministicKey) any(), eq(childNumberMock))).thenReturn(deterministicKeyMock);
-            doReturn(lazyECPointMock).when(publicAsPointMock).compress();
-            IllegalStateException illegalStateException = new IllegalStateException();
-            preconditions.when(() -> Preconditions.checkState(eq(false), (Supplier) any())).thenThrow(illegalStateException);
-            List<ChildNumber> childNumberList = new ArrayList<>();
-            byte[] byteArray2 = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
-            target = new DeterministicKey(childNumberList, byteArray2, eCPointMock, false, (BigInteger) null, (DeterministicKey) null);
-            autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            doReturn(0).when(hDPathMock).size();
-            List<ChildNumber> childNumberList2 = new ArrayList<>();
-            childNumberList2.add(childNumberMock);
-            doReturn(childNumberList2).when(hDPathMock).subList(0, 0);
-            thrown.expect(IllegalStateException.class);
-            //Act Statement(s)
-            target.getPrivKey();
-            //Assert statement(s)
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
-            hDPath.verify(() -> HDPath.M(anyList()));
-            byteUtils.verify(() -> ByteUtils.bytesToBigInteger(byteArray), atLeast(1));
-            hDPath.verify(() -> HDPath.M(hDPathMock2), atLeast(1));
-            hDKeyDerivation.verify(() -> HDKeyDerivation.deriveChildKey((DeterministicKey) any(), eq(childNumberMock)));
-            verify(publicAsPointMock).compress();
-            preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()));
-            verify(hDPathMock).size();
-            verify(hDPathMock).subList(0, 0);
+            hDKeyDerivation.verify(() -> HDKeyDerivation.deriveChildKey((DeterministicKey) any(), eq(childNumberMock)), atLeast(1));
+            verify(publicAsPointMock, atLeast(1)).compress();
+            preconditions.verify(() -> Preconditions.checkState(eq(false), (Supplier) any()), atLeast(1));
+            verify(hDPathMock, atLeast(1)).size();
+            verify(hDPathMock, atLeast(1)).subList(0, 0);
         }
     }
 
@@ -2191,54 +1907,6 @@ public class DeterministicKeySapientGeneratedJunit4Test {
             verify(networkParametersMock).getBip32HeaderP2PKHpub();
             verify(target).getChildNumber();
             verify(childNumberMock).i();
-        }
-    }
-
-    //Sapient generated method id: ${6a83e29f-cac8-3d39-aae0-e03c99c0bf15}
-    @Ignore()
-    @Test()
-    public void serializeWhenNotPubAndSerPositionEquals78() {
-        /* Branches:
-         * (outputScriptType == ScriptType.P2PKH) : true  #  inside serialize method
-         * (pub) : false  #  inside serialize method
-         * (pub) : false  #  inside serialize method
-         * (ser.position() == 78) : true  #  inside serialize method
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        NetworkParameters networkParametersMock = mock(NetworkParameters.class);
-        Network networkMock = mock(Network.class);
-        ECPoint eCPointMock = mock(ECPoint.class);
-        ChildNumber childNumberMock = mock(ChildNumber.class);
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class, CALLS_REAL_METHODS);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class);
-             MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
-            hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParametersMock);
-            doReturn(0).when(networkParametersMock).getBip32HeaderP2PKHpriv();
-            List<ChildNumber> childNumberList = new ArrayList<>();
-            byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
-            target = spy(new DeterministicKey(childNumberList, byteArray, eCPointMock, false, (BigInteger) null, (DeterministicKey) null));
-            autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            doReturn(childNumberMock).when(target).getChildNumber();
-            doReturn(0).when(childNumberMock).i();
-            byte[] byteArray2 = new byte[]{};
-            doReturn(byteArray2).when(target).getPrivKeyBytes33();
-            //Act Statement(s)
-            byte[] result = target.serialize(networkMock, false);
-            byte[] byteResultArray = new byte[]{};
-            //Assert statement(s)
-            assertThat(result, equalTo(byteResultArray));
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
-            hDPath.verify(() -> HDPath.M(anyList()), atLeast(1));
-            networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-            verify(networkParametersMock, atLeast(1)).getBip32HeaderP2PKHpriv();
-            verify(target, atLeast(1)).getChildNumber();
-            verify(childNumberMock, atLeast(1)).i();
-            verify(target, atLeast(1)).getPrivKeyBytes33();
         }
     }
 
@@ -2355,54 +2023,6 @@ public class DeterministicKeySapientGeneratedJunit4Test {
         }
     }
 
-    //Sapient generated method id: ${9c2c703c-1811-3d09-8d9b-49371c2a0931}
-    @Ignore()
-    @Test()
-    public void serializePubB58WhenSerPositionEquals78() {
-        /* Branches:
-         * (outputScriptType == ScriptType.P2PKH) : true  #  inside serialize method
-         * (pub) : true  #  inside serialize method
-         * (pub) : true  #  inside serialize method
-         * (ser.position() == 78) : true  #  inside serialize method
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        NetworkParameters networkParametersMock = mock(NetworkParameters.class);
-        Network networkMock = mock(Network.class);
-        ECPoint eCPointMock = mock(ECPoint.class);
-        ChildNumber childNumberMock = mock(ChildNumber.class);
-        try (MockedStatic<DeterministicKey> deterministicKey = mockStatic(DeterministicKey.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class, CALLS_REAL_METHODS);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class);
-             MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
-            hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParametersMock);
-            doReturn(0).when(networkParametersMock).getBip32HeaderP2PKHpub();
-            byte[] byteArray = new byte[]{};
-            deterministicKey.when(() -> DeterministicKey.toBase58(byteArray)).thenReturn("return_of_toBase58");
-            List<ChildNumber> childNumberList = new ArrayList<>();
-            byte[] byteArray2 = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
-            target = spy(new DeterministicKey(childNumberList, byteArray2, eCPointMock, false, (BigInteger) null, (DeterministicKey) null));
-            autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            doReturn(childNumberMock).when(target).getChildNumber();
-            doReturn(0).when(childNumberMock).i();
-            //Act Statement(s)
-            String result = target.serializePubB58(networkMock, ScriptType.P2PKH);
-            //Assert statement(s)
-            assertThat(result, equalTo("return_of_toBase58"));
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
-            hDPath.verify(() -> HDPath.M(anyList()), atLeast(1));
-            networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-            verify(networkParametersMock, atLeast(1)).getBip32HeaderP2PKHpub();
-            deterministicKey.verify(() -> DeterministicKey.toBase58(byteArray), atLeast(1));
-            verify(target, atLeast(1)).getChildNumber();
-            verify(childNumberMock, atLeast(1)).i();
-        }
-    }
-
     //Sapient generated method id: ${c41d249c-c7a6-3137-9e43-53666f28382a}
     @Ignore()
     @Test()
@@ -2421,10 +2041,9 @@ public class DeterministicKeySapientGeneratedJunit4Test {
         Network networkMock = mock(Network.class);
         ECPoint eCPointMock = mock(ECPoint.class);
         ChildNumber childNumberMock = mock(ChildNumber.class);
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class, CALLS_REAL_METHODS);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class);
              MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
             hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
             networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParametersMock);
             doReturn(1).when(networkParametersMock).getBip32HeaderP2PKHpub();
@@ -2440,13 +2059,12 @@ public class DeterministicKeySapientGeneratedJunit4Test {
             //Act Statement(s)
             target.serializePubB58(networkMock, ScriptType.P2PKH);
             //Assert statement(s)
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
-            hDPath.verify(() -> HDPath.M(anyList()));
+            hDPath.verify(() -> HDPath.M(anyList()), atLeast(1));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-            verify(networkParametersMock).getBip32HeaderP2PKHpub();
+            verify(networkParametersMock, atLeast(1)).getBip32HeaderP2PKHpub();
             preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
-            verify(target).getChildNumber();
-            verify(childNumberMock).i();
+            verify(target, atLeast(1)).getChildNumber();
+            verify(childNumberMock, atLeast(1)).i();
         }
     }
 
@@ -2470,10 +2088,8 @@ public class DeterministicKeySapientGeneratedJunit4Test {
         ECPoint eCPointMock = mock(ECPoint.class);
         ChildNumber childNumberMock = mock(ChildNumber.class);
         try (MockedStatic<DeterministicKey> deterministicKey = mockStatic(DeterministicKey.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class, CALLS_REAL_METHODS);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class);
              MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
             hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
             networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParametersMock);
             doReturn(0).when(networkParametersMock).getBip32HeaderP2WPKHpub();
@@ -2489,13 +2105,12 @@ public class DeterministicKeySapientGeneratedJunit4Test {
             String result = target.serializePubB58(networkMock, ScriptType.P2PKH);
             //Assert statement(s)
             assertThat(result, equalTo("return_of_toBase58"));
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
-            hDPath.verify(() -> HDPath.M(anyList()), atLeast(1));
+            hDPath.verify(() -> HDPath.M(anyList()));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-            verify(networkParametersMock, atLeast(1)).getBip32HeaderP2WPKHpub();
+            verify(networkParametersMock).getBip32HeaderP2WPKHpub();
             deterministicKey.verify(() -> DeterministicKey.toBase58(byteArray), atLeast(1));
-            verify(target, atLeast(1)).getChildNumber();
-            verify(childNumberMock, atLeast(1)).i();
+            verify(target).getChildNumber();
+            verify(childNumberMock).i();
         }
     }
 
@@ -2511,10 +2126,8 @@ public class DeterministicKeySapientGeneratedJunit4Test {
         NetworkParameters paramsMock = mock(NetworkParameters.class);
         Network networkMock = mock(Network.class);
         ECPoint eCPointMock = mock(ECPoint.class);
-        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
             doReturn(networkMock).when(paramsMock).network();
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
             hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
             List<ChildNumber> childNumberList = new ArrayList<>();
             byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
@@ -2526,7 +2139,6 @@ public class DeterministicKeySapientGeneratedJunit4Test {
             //Assert statement(s)
             assertThat(result, equalTo("return_of_serializePubB58"));
             verify(paramsMock).network();
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
             hDPath.verify(() -> HDPath.M(anyList()));
             verify(target).serializePubB58(networkMock, ScriptType.P2PKH);
         }
@@ -2563,57 +2175,6 @@ public class DeterministicKeySapientGeneratedJunit4Test {
             //Assert statement(s)
             hDPath.verify(() -> HDPath.M(anyList()));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-        }
-    }
-
-    //Sapient generated method id: ${f1b10855-69fe-3b58-a2e3-8259482ae7c7}
-    @Ignore()
-    @Test()
-    public void serializePrivB58WhenSerPositionEquals78() {
-        /* Branches:
-         * (outputScriptType == ScriptType.P2PKH) : true  #  inside serialize method
-         * (pub) : false  #  inside serialize method
-         * (pub) : false  #  inside serialize method
-         * (ser.position() == 78) : true  #  inside serialize method
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        NetworkParameters networkParametersMock = mock(NetworkParameters.class);
-        Network networkMock = mock(Network.class);
-        ECPoint eCPointMock = mock(ECPoint.class);
-        ChildNumber childNumberMock = mock(ChildNumber.class);
-        try (MockedStatic<DeterministicKey> deterministicKey = mockStatic(DeterministicKey.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class, CALLS_REAL_METHODS);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class);
-             MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
-            hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParametersMock);
-            doReturn(0).when(networkParametersMock).getBip32HeaderP2PKHpriv();
-            byte[] byteArray = new byte[]{};
-            deterministicKey.when(() -> DeterministicKey.toBase58(byteArray)).thenReturn("return_of_toBase58");
-            List<ChildNumber> childNumberList = new ArrayList<>();
-            byte[] byteArray2 = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
-            target = spy(new DeterministicKey(childNumberList, byteArray2, eCPointMock, false, (BigInteger) null, (DeterministicKey) null));
-            autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            doReturn(childNumberMock).when(target).getChildNumber();
-            doReturn(0).when(childNumberMock).i();
-            byte[] byteArray3 = new byte[]{};
-            doReturn(byteArray3).when(target).getPrivKeyBytes33();
-            //Act Statement(s)
-            String result = target.serializePrivB58(networkMock, ScriptType.P2PKH);
-            //Assert statement(s)
-            assertThat(result, equalTo("return_of_toBase58"));
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
-            hDPath.verify(() -> HDPath.M(anyList()), atLeast(1));
-            networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-            verify(networkParametersMock, atLeast(1)).getBip32HeaderP2PKHpriv();
-            deterministicKey.verify(() -> DeterministicKey.toBase58(byteArray), atLeast(1));
-            verify(target, atLeast(1)).getChildNumber();
-            verify(childNumberMock, atLeast(1)).i();
-            verify(target, atLeast(1)).getPrivKeyBytes33();
         }
     }
 
@@ -2714,57 +2275,6 @@ public class DeterministicKeySapientGeneratedJunit4Test {
         }
     }
 
-    //Sapient generated method id: ${c358492a-48b1-3e62-8497-fa9bc96d53d1}
-    @Ignore()
-    @Test()
-    public void serializePrivB58WhenNotPubAndSerPositionNotEquals78ThrowsIllegalStateException() {
-        /* Branches:
-         * (outputScriptType == ScriptType.P2PKH) : false  #  inside serialize method
-         * (outputScriptType == ScriptType.P2WPKH) : true  #  inside serialize method
-         * (pub) : false  #  inside serialize method
-         * (pub) : false  #  inside serialize method
-         * (ser.position() == 78) : false  #  inside serialize method
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        NetworkParameters networkParametersMock = mock(NetworkParameters.class);
-        Network networkMock = mock(Network.class);
-        ECPoint eCPointMock = mock(ECPoint.class);
-        ChildNumber childNumberMock = mock(ChildNumber.class);
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class);
-             MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
-            hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParametersMock);
-            doReturn(0).when(networkParametersMock).getBip32HeaderP2WPKHpriv();
-            IllegalStateException illegalStateException = new IllegalStateException();
-            preconditions.when(() -> Preconditions.checkState(false)).thenThrow(illegalStateException);
-            List<ChildNumber> childNumberList = new ArrayList<>();
-            byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
-            target = spy(new DeterministicKey(childNumberList, byteArray, eCPointMock, false, (BigInteger) null, (DeterministicKey) null));
-            autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            doReturn(childNumberMock).when(target).getChildNumber();
-            doReturn(0).when(childNumberMock).i();
-            byte[] byteArray2 = new byte[]{};
-            doReturn(byteArray2).when(target).getPrivKeyBytes33();
-            thrown.expect(IllegalStateException.class);
-            //Act Statement(s)
-            target.serializePrivB58(networkMock, ScriptType.P2WPKH);
-            //Assert statement(s)
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
-            hDPath.verify(() -> HDPath.M(anyList()));
-            networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-            verify(networkParametersMock).getBip32HeaderP2WPKHpriv();
-            preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
-            verify(target).getChildNumber();
-            verify(childNumberMock).i();
-            verify(target).getPrivKeyBytes33();
-        }
-    }
-
     //Sapient generated method id: ${fbc8a622-9415-3e51-98c6-3f907b743939}
     @Ignore()
     @Test()
@@ -2777,10 +2287,8 @@ public class DeterministicKeySapientGeneratedJunit4Test {
         NetworkParameters paramsMock = mock(NetworkParameters.class);
         Network networkMock = mock(Network.class);
         ECPoint eCPointMock = mock(ECPoint.class);
-        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
             doReturn(networkMock).when(paramsMock).network();
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
             hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
             List<ChildNumber> childNumberList = new ArrayList<>();
             byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
@@ -2792,7 +2300,6 @@ public class DeterministicKeySapientGeneratedJunit4Test {
             //Assert statement(s)
             assertThat(result, equalTo("return_of_serializePrivB58"));
             verify(paramsMock).network();
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
             hDPath.verify(() -> HDPath.M(anyList()));
             verify(target).serializePrivB58(networkMock, ScriptType.P2PKH);
         }
@@ -2810,9 +2317,7 @@ public class DeterministicKeySapientGeneratedJunit4Test {
         ECPoint eCPointMock = mock(ECPoint.class);
         Network networkMock = mock(Network.class);
         try (MockedStatic<DeterministicKey> deterministicKey = mockStatic(DeterministicKey.class);
-             MockedStatic<HDPath> hDPath = mockStatic(HDPath.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
+             MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
             hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
             byte[] byteArray = new byte[]{};
             deterministicKey.when(() -> DeterministicKey.toBase58(byteArray)).thenReturn("return_of_toBase58");
@@ -2825,7 +2330,6 @@ public class DeterministicKeySapientGeneratedJunit4Test {
             String result = target.serializePubB58(networkMock);
             //Assert statement(s)
             assertThat(result, equalTo("return_of_toBase58"));
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
             hDPath.verify(() -> HDPath.M(anyList()));
             deterministicKey.verify(() -> DeterministicKey.toBase58(byteArray), atLeast(1));
             verify(target).serialize(networkMock, true);
@@ -2844,10 +2348,8 @@ public class DeterministicKeySapientGeneratedJunit4Test {
         NetworkParameters paramsMock = mock(NetworkParameters.class);
         Network networkMock = mock(Network.class);
         ECPoint eCPointMock = mock(ECPoint.class);
-        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
             doReturn(networkMock).when(paramsMock).network();
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
             hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
             List<ChildNumber> childNumberList = new ArrayList<>();
             byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
@@ -2859,7 +2361,6 @@ public class DeterministicKeySapientGeneratedJunit4Test {
             //Assert statement(s)
             assertThat(result, equalTo("return_of_serializePubB58"));
             verify(paramsMock).network();
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
             hDPath.verify(() -> HDPath.M(anyList()));
             verify(target).serializePubB58(networkMock);
         }
@@ -2877,9 +2378,7 @@ public class DeterministicKeySapientGeneratedJunit4Test {
         ECPoint eCPointMock = mock(ECPoint.class);
         Network networkMock = mock(Network.class);
         try (MockedStatic<DeterministicKey> deterministicKey = mockStatic(DeterministicKey.class);
-             MockedStatic<HDPath> hDPath = mockStatic(HDPath.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
+             MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
             hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
             byte[] byteArray = new byte[]{};
             deterministicKey.when(() -> DeterministicKey.toBase58(byteArray)).thenReturn("return_of_toBase58");
@@ -2892,7 +2391,6 @@ public class DeterministicKeySapientGeneratedJunit4Test {
             String result = target.serializePrivB58(networkMock);
             //Assert statement(s)
             assertThat(result, equalTo("return_of_toBase58"));
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
             hDPath.verify(() -> HDPath.M(anyList()));
             deterministicKey.verify(() -> DeterministicKey.toBase58(byteArray), atLeast(1));
             verify(target).serialize(networkMock, false);
@@ -2911,10 +2409,8 @@ public class DeterministicKeySapientGeneratedJunit4Test {
         NetworkParameters paramsMock = mock(NetworkParameters.class);
         Network networkMock = mock(Network.class);
         ECPoint eCPointMock = mock(ECPoint.class);
-        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
             doReturn(networkMock).when(paramsMock).network();
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
             hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
             List<ChildNumber> childNumberList = new ArrayList<>();
             byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
@@ -2926,7 +2422,6 @@ public class DeterministicKeySapientGeneratedJunit4Test {
             //Assert statement(s)
             assertThat(result, equalTo("return_of_serializePrivB58"));
             verify(paramsMock).network();
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
             hDPath.verify(() -> HDPath.M(anyList()));
             verify(target).serializePrivB58(networkMock);
         }
@@ -2938,8 +2433,10 @@ public class DeterministicKeySapientGeneratedJunit4Test {
     public void toBase58Test() {
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{};
+
         //Act Statement(s)
         String result = DeterministicKey.toBase58(byteArray);
+
         //Assert statement(s)
         assertThat(result, equalTo("1111"));
     }
@@ -3074,18 +2571,18 @@ public class DeterministicKeySapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         NetworkParameters networkParametersMock = mock(NetworkParameters.class);
-        Network networkMock = mock(Network.class);
-        DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
+        Network networkMock = mock(Network.class, "networkValue");
+        DeterministicKey deterministicKeyMock = mock(DeterministicKey.class, "parentValue");
         try (MockedStatic<DeterministicKey> deterministicKey = mockStatic(DeterministicKey.class, CALLS_REAL_METHODS);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
             networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParametersMock);
-            doReturn(2).when(networkParametersMock).getBip32HeaderP2PKHpub();
-            doReturn(2).when(networkParametersMock).getBip32HeaderP2WPKHpub();
-            doReturn(2).when(networkParametersMock).getBip32HeaderP2PKHpriv();
-            doReturn(2).when(networkParametersMock).getBip32HeaderP2WPKHpriv();
-            byte[] byteArray = new byte[]{};
-            deterministicKey.when(() -> DeterministicKey.toBase58(byteArray)).thenReturn("ABCD");
-            IllegalArgumentException illegalArgumentException = new IllegalArgumentException("Unknown header bytes: ABCD");
+            doReturn(789).when(networkParametersMock).getBip32HeaderP2PKHpub();
+            doReturn(456).when(networkParametersMock).getBip32HeaderP2WPKHpub();
+            doReturn(123).when(networkParametersMock).getBip32HeaderP2PKHpriv();
+            doReturn(101112).when(networkParametersMock).getBip32HeaderP2WPKHpriv();
+            byte[] byteArray = new byte[]{(byte) 0};
+            deterministicKey.when(() -> DeterministicKey.toBase58(byteArray)).thenReturn("stringValue");
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException("Unknown header bytes: stri");
             thrown.expect(IllegalArgumentException.class);
             thrown.expectMessage(illegalArgumentException.getMessage());
             //Act Statement(s)
@@ -3277,50 +2774,6 @@ public class DeterministicKeySapientGeneratedJunit4Test {
         }
     }
 
-    //Sapient generated method id: ${a74f9d94-7465-34ad-8ad8-04b9f955d291}
-    @Ignore()
-    @Test()
-    public void deserialize2WhenParentIsNullAndDepthLessThan1AndBufferHasRemainingThrowsIllegalArgumentException() {
-        /* Branches:
-         * (header == params.getBip32HeaderP2PKHpub()) : false
-         * (header == params.getBip32HeaderP2WPKHpub()) : true
-         * (header == params.getBip32HeaderP2PKHpriv()) : false
-         * (header == params.getBip32HeaderP2WPKHpriv()) : true
-         * (!(pub || priv)) : false
-         * (parent != null) : false
-         * (depth >= 1) : false
-         * (!buffer.hasRemaining()) : false
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        NetworkParameters networkParametersMock = mock(NetworkParameters.class);
-        Network networkMock = mock(Network.class);
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParametersMock);
-            doReturn(0).when(networkParametersMock).getBip32HeaderP2PKHpub();
-            doReturn(0).when(networkParametersMock).getBip32HeaderP2WPKHpub();
-            doReturn(0).when(networkParametersMock).getBip32HeaderP2PKHpriv();
-            doReturn(0).when(networkParametersMock).getBip32HeaderP2WPKHpriv();
-            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
-            thrown.expect(IllegalArgumentException.class);
-            byte[] byteArray = new byte[]{};
-            DeterministicKey deterministicKey = null;
-            //Act Statement(s)
-            DeterministicKey.deserialize(networkMock, byteArray, deterministicKey);
-            //Assert statement(s)
-            networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-            verify(networkParametersMock).getBip32HeaderP2PKHpub();
-            verify(networkParametersMock).getBip32HeaderP2WPKHpub();
-            verify(networkParametersMock).getBip32HeaderP2PKHpriv();
-            verify(networkParametersMock).getBip32HeaderP2WPKHpriv();
-            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-        }
-    }
-
     //Sapient generated method id: ${207c524e-4f54-3e6e-9a35-0cd48d73a51a}
     @Ignore()
     @Test()
@@ -3372,108 +2825,6 @@ public class DeterministicKeySapientGeneratedJunit4Test {
             verify(networkParametersMock).getBip32HeaderP2WPKHpub();
             verify(networkParametersMock).getBip32HeaderP2PKHpriv();
             verify(networkParametersMock).getBip32HeaderP2WPKHpriv();
-        }
-    }
-
-    //Sapient generated method id: ${598beb56-d73a-3c73-ae70-5102133b5f29}
-    @Ignore()
-    @Test()
-    public void deserialize2WhenPubAndParentIsNullAndDepthLessThan1AndBufferNotHasRemaining2ThrowsIllegalArgumentException() {
-        /* Branches:
-         * (header == params.getBip32HeaderP2PKHpub()) : false
-         * (header == params.getBip32HeaderP2WPKHpub()) : false
-         * (header == params.getBip32HeaderP2PKHpriv()) : false
-         * (header == params.getBip32HeaderP2WPKHpriv()) : true
-         * (!(pub || priv)) : true
-         * (pub) : true
-         * (parent != null) : false
-         * (depth >= 1) : false
-         * (!buffer.hasRemaining()) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        NetworkParameters networkParametersMock = mock(NetworkParameters.class);
-        Network networkMock = mock(Network.class);
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParametersMock);
-            doReturn(1).when(networkParametersMock).getBip32HeaderP2PKHpub();
-            doReturn(1).when(networkParametersMock).getBip32HeaderP2WPKHpub();
-            doReturn(1).when(networkParametersMock).getBip32HeaderP2PKHpriv();
-            doReturn(0).when(networkParametersMock).getBip32HeaderP2WPKHpriv();
-            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
-            thrown.expect(IllegalArgumentException.class);
-            byte[] byteArray = new byte[]{};
-            DeterministicKey deterministicKey = null;
-            //Act Statement(s)
-            DeterministicKey.deserialize(networkMock, byteArray, deterministicKey);
-            //Assert statement(s)
-            networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-            verify(networkParametersMock).getBip32HeaderP2PKHpub();
-            verify(networkParametersMock).getBip32HeaderP2WPKHpub();
-            verify(networkParametersMock).getBip32HeaderP2PKHpriv();
-            verify(networkParametersMock).getBip32HeaderP2WPKHpriv();
-            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-        }
-    }
-
-    //Sapient generated method id: ${af25b974-04f4-3f40-8f18-d5cff7670083}
-    @Ignore()
-    @Test()
-    public void deserialize2WhenPathSizeEqualsDepthAndBufferNotHasRemaining2ThrowsIllegalArgumentException() {
-        /* Branches:
-         * (header == params.getBip32HeaderP2PKHpub()) : false
-         * (header == params.getBip32HeaderP2WPKHpub()) : true
-         * (header == params.getBip32HeaderP2PKHpriv()) : false
-         * (header == params.getBip32HeaderP2WPKHpriv()) : true
-         * (!(pub || priv)) : false
-         * (parent != null) : true
-         * (parentFingerprint == 0) : false
-         * (parent.getFingerprint() != parentFingerprint) : false
-         * (path.size() != depth) : false
-         * (!buffer.hasRemaining()) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        DeterministicKey parentMock = mock(DeterministicKey.class);
-        HDPath hDPathMock = mock(HDPath.class);
-        HDPath hDPathMock2 = mock(HDPath.class);
-        NetworkParameters networkParametersMock = mock(NetworkParameters.class);
-        Network networkMock = mock(Network.class);
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            doReturn(1).when(parentMock).getFingerprint();
-            doReturn(hDPathMock).when(parentMock).getPath();
-            ChildNumber[] childNumberArray = new ChildNumber[]{};
-            doReturn(hDPathMock2).when(hDPathMock).extend((ChildNumber) any(), eq(childNumberArray));
-            doReturn(1).when(hDPathMock2).size();
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParametersMock);
-            doReturn(2).when(networkParametersMock).getBip32HeaderP2PKHpub();
-            doReturn(1).when(networkParametersMock).getBip32HeaderP2WPKHpub();
-            doReturn(2).when(networkParametersMock).getBip32HeaderP2PKHpriv();
-            doReturn(1).when(networkParametersMock).getBip32HeaderP2WPKHpriv();
-            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
-            thrown.expect(IllegalArgumentException.class);
-            byte[] byteArray = new byte[]{};
-            //Act Statement(s)
-            DeterministicKey.deserialize(networkMock, byteArray, parentMock);
-            //Assert statement(s)
-            verify(parentMock).getFingerprint();
-            verify(parentMock).getPath();
-            verify(hDPathMock).extend((ChildNumber) any(), eq(childNumberArray));
-            verify(hDPathMock2).size();
-            networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-            verify(networkParametersMock).getBip32HeaderP2PKHpub();
-            verify(networkParametersMock).getBip32HeaderP2WPKHpub();
-            verify(networkParametersMock).getBip32HeaderP2PKHpriv();
-            verify(networkParametersMock).getBip32HeaderP2WPKHpriv();
-            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
         }
     }
 
@@ -3568,9 +2919,7 @@ public class DeterministicKeySapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         ECPoint eCPointMock = mock(ECPoint.class);
-        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
+        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
             hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
             List<ChildNumber> childNumberList = new ArrayList<>();
             byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
@@ -3581,7 +2930,6 @@ public class DeterministicKeySapientGeneratedJunit4Test {
             Optional<Instant> instantOptional = Optional.empty();
             //Assert statement(s)
             assertThat(result, equalTo(instantOptional));
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
             hDPath.verify(() -> HDPath.M(anyList()));
         }
     }
@@ -3598,9 +2946,7 @@ public class DeterministicKeySapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         ECPoint eCPointMock = mock(ECPoint.class);
-        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
+        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
             hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
             List<ChildNumber> childNumberList = new ArrayList<>();
             byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
@@ -3610,7 +2956,6 @@ public class DeterministicKeySapientGeneratedJunit4Test {
             //Act Statement(s)
             target.setCreationTime(instant);
             //Assert statement(s)
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
             hDPath.verify(() -> HDPath.M(anyList()));
         }
     }
@@ -3627,9 +2972,7 @@ public class DeterministicKeySapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         ECPoint eCPointMock = mock(ECPoint.class);
-        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
+        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
             hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
             List<ChildNumber> childNumberList = new ArrayList<>();
             byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
@@ -3638,7 +2981,6 @@ public class DeterministicKeySapientGeneratedJunit4Test {
             //Act Statement(s)
             target.clearCreationTime();
             //Assert statement(s)
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
             hDPath.verify(() -> HDPath.M(anyList()));
         }
     }
@@ -3655,9 +2997,7 @@ public class DeterministicKeySapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         ECPoint eCPointMock = mock(ECPoint.class);
-        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
+        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
             hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
             List<ChildNumber> childNumberList = new ArrayList<>();
             byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
@@ -3667,7 +3007,6 @@ public class DeterministicKeySapientGeneratedJunit4Test {
             //Act Statement(s)
             target.setCreationTimeSeconds(1L);
             //Assert statement(s)
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
             hDPath.verify(() -> HDPath.M(anyList()));
             verify(target).setCreationTime((Instant) any());
         }
@@ -3686,9 +3025,7 @@ public class DeterministicKeySapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         ECPoint eCPointMock = mock(ECPoint.class);
-        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
+        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
             hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
             List<ChildNumber> childNumberList = new ArrayList<>();
             byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
@@ -3698,7 +3035,6 @@ public class DeterministicKeySapientGeneratedJunit4Test {
             //Act Statement(s)
             target.setCreationTimeSeconds(0L);
             //Assert statement(s)
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
             hDPath.verify(() -> HDPath.M(anyList()));
             verify(target).clearCreationTime();
         }
@@ -3717,9 +3053,7 @@ public class DeterministicKeySapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         ECPoint eCPointMock = mock(ECPoint.class);
-        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
+        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
             hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
             List<ChildNumber> childNumberList = new ArrayList<>();
             byte[] byteArray = new byte[]{};
@@ -3731,7 +3065,6 @@ public class DeterministicKeySapientGeneratedJunit4Test {
             //Act Statement(s)
             target.setCreationTimeSeconds(0L);
             //Assert statement(s)
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
             hDPath.verify(() -> HDPath.M(anyList()));
         }
     }
@@ -3783,16 +3116,11 @@ public class DeterministicKeySapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         ECPoint eCPointMock = mock(ECPoint.class);
-        try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class, CALLS_REAL_METHODS);
-             MockedStatic<HDPath> hDPath = mockStatic(HDPath.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
+        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
             hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
-            byte[] byteArray = new byte[]{};
-            byteUtils.when(() -> ByteUtils.formatHex(byteArray)).thenReturn("");
             List<ChildNumber> childNumberList = new ArrayList<>();
-            byte[] byteArray2 = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
-            target = spy(new DeterministicKey(childNumberList, byteArray2, eCPointMock, false, (BigInteger) null, (DeterministicKey) null));
+            byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
+            target = spy(new DeterministicKey(childNumberList, byteArray, eCPointMock, false, (BigInteger) null, (DeterministicKey) null));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doReturn("return_of_getPathAsString1").when(target).getPathAsString();
             Instant instant = (Instant) Instant.now();
@@ -3803,13 +3131,11 @@ public class DeterministicKeySapientGeneratedJunit4Test {
             String result = target.toString();
             //Assert statement(s)
             assertThat(result, equalTo("toString_moreObjects.ToStringHelper2"));
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
-            hDPath.verify(() -> HDPath.M(anyList()), atLeast(1));
-            byteUtils.verify(() -> ByteUtils.formatHex(byteArray), atLeast(1));
-            verify(target, atLeast(1)).getPathAsString();
-            verify(target, atLeast(1)).creationTime();
-            verify(target, atLeast(1)).isEncrypted();
-            verify(target, atLeast(1)).isPubKeyOnly();
+            hDPath.verify(() -> HDPath.M(anyList()));
+            verify(target).getPathAsString();
+            verify(target).creationTime();
+            verify(target).isEncrypted();
+            verify(target).isPubKeyOnly();
         }
     }
 
@@ -3852,46 +3178,6 @@ public class DeterministicKeySapientGeneratedJunit4Test {
         }
     }
 
-    //Sapient generated method id: ${a083f203-2072-363d-b6f3-21d883405eb5}
-    @Ignore()
-    @Test()
-    public void formatKeyWithAddressWhenNotIncludePrivateKeys() {
-        /* Branches:
-         * (comment != null) : true
-         * (includePrivateKeys) : false
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        ECPoint eCPointMock = mock(ECPoint.class);
-        Address addressMock = mock(Address.class, "formatKeyWithAddress_address1");
-        Network networkMock = mock(Network.class);
-        AesKey aesKeyMock = mock(AesKey.class);
-        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
-            hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
-            List<ChildNumber> childNumberList = new ArrayList<>();
-            byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
-            target = spy(new DeterministicKey(childNumberList, byteArray, eCPointMock, false, (BigInteger) null, (DeterministicKey) null));
-            autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            doReturn(addressMock).when(target).toAddress(ScriptType.P2PKH, networkMock);
-            byte[] byteArray2 = new byte[]{};
-            doReturn(byteArray2).when(target).getPubKeyHash();
-            doReturn("return_of_getPathAsString1").when(target).getPathAsString();
-            StringBuilder stringBuilder = new StringBuilder();
-            //Act Statement(s)
-            target.formatKeyWithAddress(false, aesKeyMock, stringBuilder, networkMock, ScriptType.P2PKH, "builderItem1");
-            //Assert statement(s)
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
-            hDPath.verify(() -> HDPath.M(anyList()));
-            verify(target).toAddress(ScriptType.P2PKH, networkMock);
-            verify(target).getPubKeyHash();
-            verify(target).getPathAsString();
-        }
-    }
-
     //Sapient generated method id: ${259a939d-4f14-3519-95b7-a716f1a53ce8}
     @Ignore()
     @Test()
@@ -3905,10 +3191,8 @@ public class DeterministicKeySapientGeneratedJunit4Test {
         Network networkMock = mock(Network.class);
         ECPoint eCPointMock = mock(ECPoint.class);
         AesKey aesKeyMock = mock(AesKey.class);
-        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+        try (MockedStatic<HDPath> hDPath = mockStatic(HDPath.class)) {
             doReturn(networkMock).when(paramsMock).network();
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
             hDPath.when(() -> HDPath.M(anyList())).thenReturn(childNumberPathMock);
             List<ChildNumber> childNumberList = new ArrayList<>();
             byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
@@ -3920,7 +3204,6 @@ public class DeterministicKeySapientGeneratedJunit4Test {
             target.formatKeyWithAddress(false, aesKeyMock, stringBuilder, paramsMock, ScriptType.P2PKH, "comment1");
             //Assert statement(s)
             verify(paramsMock).network();
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
             hDPath.verify(() -> HDPath.M(anyList()));
             verify(target).formatKeyWithAddress(false, aesKeyMock, stringBuilder, networkMock, ScriptType.P2PKH, "comment1");
         }

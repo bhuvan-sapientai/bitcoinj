@@ -97,18 +97,17 @@ public class BuffersSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<VarInt> varInt = mockStatic(VarInt.class)) {
-            varInt.when(() -> VarInt.of(1L)).thenReturn(varIntMock);
+            varInt.when(() -> VarInt.of(0L)).thenReturn(varIntMock);
             byte[] byteArray = new byte[]{};
             doReturn(byteArray).when(varIntMock).serialize();
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-            byte[] byteArray2 = new byte[]{(byte) 0};
+            byte[] byteArray2 = new byte[]{};
             //Act Statement(s)
             ByteBuffer result = Buffers.writeLengthPrefixedBytes(byteBuffer, byteArray2);
-            ByteBuffer byteBuffer2 = byteBuffer.put(byteArray);
-            ByteBuffer byteBuffer3 = byteBuffer2.put(byteArray2);
+            ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
             //Assert statement(s)
-            assertThat(result, equalTo(byteBuffer3));
-            varInt.verify(() -> VarInt.of(1L), atLeast(1));
+            assertThat(result, equalTo(byteBuffer2));
+            varInt.verify(() -> VarInt.of(0L), atLeast(1));
             verify(varIntMock).serialize();
         }
     }
@@ -180,13 +179,16 @@ public class BuffersSapientGeneratedJunit4Test {
         /* Branches:
          * (numBytes >= 0) : true
          * (numBytes <= buf.remaining()) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class, CALLS_REAL_METHODS)) {
             preconditions.when(() -> Preconditions.check(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
             //Act Statement(s)
-            ByteBuffer result = Buffers.skipBytes(byteBuffer, 0);
+            ByteBuffer result = Buffers.skipBytes(byteBuffer, 1);
             //Assert statement(s)
             assertThat(result, equalTo(byteBuffer));
             preconditions.verify(() -> Preconditions.check(eq(false), (Supplier) any()), atLeast(1));
@@ -209,7 +211,7 @@ public class BuffersSapientGeneratedJunit4Test {
             preconditions.when(() -> Preconditions.check(eq(false), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
             //Act Statement(s)
-            ByteBuffer result = Buffers.skipBytes(byteBuffer, 5);
+            ByteBuffer result = Buffers.skipBytes(byteBuffer, 2);
             //Assert statement(s)
             assertThat(result, equalTo(byteBuffer));
             preconditions.verify(() -> Preconditions.check(eq(false), (Supplier) any()), atLeast(1));

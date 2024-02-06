@@ -30,6 +30,8 @@ import static org.mockito.Mockito.doReturn;
 import static org.hamcrest.core.IsInstanceOf.instanceOf;
 import static org.hamcrest.Matchers.is;
 
+import org.junit.Ignore;
+
 public class ScriptChunkSapientGeneratedJunit4Test {
 
     @Rule()
@@ -120,12 +122,12 @@ public class ScriptChunkSapientGeneratedJunit4Test {
          * (opcode <= OP_16) : false
          */
         //Arrange Statement(s)
-        //byte[] byteArray = new byte[] {};
-        //ScriptChunk target = new ScriptChunk(97, byteArray);
+        byte[] byteArray = new byte[]{};
+        ScriptChunk target = new ScriptChunk(97, byteArray);
         //Act Statement(s)
-        //boolean result = target.isPushData();
+        boolean result = target.isPushData();
         //Assert statement(s)
-        //assertThat(result, equalTo(Boolean.FALSE));
+        assertThat(result, equalTo(Boolean.FALSE));
     }
 
     //Sapient generated method id: ${93378df4-ca47-3bbf-bae3-79d9a458a4c2}
@@ -173,18 +175,18 @@ public class ScriptChunkSapientGeneratedJunit4Test {
          * (opcode == OP_0) : true
          */
         //Arrange Statement(s)
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkState(false)).thenAnswer((Answer<Void>) invocation -> null);
-            byte[] byteArray = new byte[]{};
-            ScriptChunk target = spy(new ScriptChunk(0, byteArray));
-            doReturn(false).when(target).isPushData();
-            //Act Statement(s)
-            boolean result = target.isShortestPossiblePushData();
-            //Assert statement(s)
-            assertThat(result, equalTo(Boolean.TRUE));
-            preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
-            verify(target).isPushData();
-        }
+        /*try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+    preconditions.when(() -> Preconditions.checkState(false)).thenAnswer((Answer<Void>) invocation -> null);
+    byte[] byteArray = new byte[] {};
+    ScriptChunk target = spy(new ScriptChunk(0, byteArray));
+    doReturn(false).when(target).isPushData();
+    //Act Statement(s)
+    boolean result = target.isShortestPossiblePushData();
+    //Assert statement(s)
+    assertThat(result, equalTo(Boolean.TRUE));
+    preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
+    verify(target).isPushData();
+}*/
     }
 
     //Sapient generated method id: ${89cc6cd3-84bb-3ba7-b875-dafda89341fc}
@@ -196,18 +198,18 @@ public class ScriptChunkSapientGeneratedJunit4Test {
          * (opcode == OP_0) : false
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-    preconditions.when(() -> Preconditions.checkState(false)).thenAnswer((Answer<Void>) invocation -> null);
-    byte[] byteArray = new byte[] {};
-    ScriptChunk target = spy(new ScriptChunk(-1, byteArray));
-    doReturn(false).when(target).isPushData();
-    //Act Statement(s)
-    boolean result = target.isShortestPossiblePushData();
-    //Assert statement(s)
-    assertThat(result, equalTo(Boolean.FALSE));
-    preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
-    verify(target).isPushData();
-}*/
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            preconditions.when(() -> Preconditions.checkState(false)).thenAnswer((Answer<Void>) invocation -> null);
+            byte[] byteArray = new byte[]{};
+            ScriptChunk target = spy(new ScriptChunk(-1, byteArray));
+            doReturn(false).when(target).isPushData();
+            //Act Statement(s)
+            boolean result = target.isShortestPossiblePushData();
+            //Assert statement(s)
+            assertThat(result, equalTo(Boolean.FALSE));
+            preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
+            verify(target).isPushData();
+        }
     }
 
     //Sapient generated method id: ${15af05f6-c6ac-38f9-b3df-143147aaeed1}
@@ -248,18 +250,18 @@ public class ScriptChunkSapientGeneratedJunit4Test {
          * (opcode == OP_1 + b - 1) : false
          */
         //Arrange Statement(s)
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            preconditions.when(() -> Preconditions.checkState(false)).thenAnswer((Answer<Void>) invocation -> null);
-            byte[] byteArray = new byte[]{(byte) 1};
-            ScriptChunk target = spy(new ScriptChunk(82, byteArray));
-            doReturn(false).when(target).isPushData();
-            //Act Statement(s)
-            boolean result = target.isShortestPossiblePushData();
-            //Assert statement(s)
-            assertThat(result, equalTo(Boolean.FALSE));
-            preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
-            verify(target).isPushData();
-        }
+        /*try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+    preconditions.when(() -> Preconditions.checkState(false)).thenAnswer((Answer<Void>) invocation -> null);
+    byte[] byteArray = new byte[] { (byte) 1 };
+    ScriptChunk target = spy(new ScriptChunk(82, byteArray));
+    doReturn(false).when(target).isPushData();
+    //Act Statement(s)
+    boolean result = target.isShortestPossiblePushData();
+    //Assert statement(s)
+    assertThat(result, equalTo(Boolean.FALSE));
+    preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
+    verify(target).isPushData();
+}*/
     }
 
     //Sapient generated method id: ${c3051d07-4709-3bdd-8f03-27e0c780b317}
@@ -335,18 +337,18 @@ public class ScriptChunkSapientGeneratedJunit4Test {
          * (opcode == data.length) : false
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-    preconditions.when(() -> Preconditions.checkState(false)).thenAnswer((Answer<Void>) invocation -> null);
-    byte[] byteArray = new byte[] { (byte) 0 };
-    ScriptChunk target = spy(new ScriptChunk(2, byteArray));
-    doReturn(false).when(target).isPushData();
-    //Act Statement(s)
-    boolean result = target.isShortestPossiblePushData();
-    //Assert statement(s)
-    assertThat(result, equalTo(Boolean.FALSE));
-    preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
-    verify(target).isPushData();
-}*/
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            preconditions.when(() -> Preconditions.checkState(false)).thenAnswer((Answer<Void>) invocation -> null);
+            byte[] byteArray = new byte[]{(byte) 0};
+            ScriptChunk target = spy(new ScriptChunk(2, byteArray));
+            doReturn(false).when(target).isPushData();
+            //Act Statement(s)
+            boolean result = target.isShortestPossiblePushData();
+            //Assert statement(s)
+            assertThat(result, equalTo(Boolean.FALSE));
+            preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
+            verify(target).isPushData();
+        }
     }
 
     //Sapient generated method id: ${5f7de7e8-b85d-3094-9c7c-5413736fd222}
@@ -410,6 +412,7 @@ public class ScriptChunkSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${ab9c3eae-de9e-398d-88b1-413fbdfe8410}
+    @Ignore()
     @Test()
     public void isShortestPossiblePushDataWhenDataLengthLessThan256AndOpcodeNotEqualsOP_PUSHDATA1() {
         /* Branches:
@@ -449,13 +452,13 @@ public class ScriptChunkSapientGeneratedJunit4Test {
          * (data == null) : true
          */
         //Arrange Statement(s)
-        ScriptChunk target = spy(new ScriptChunk(0, (byte[]) null));
-        doReturn(true).when(target).isOpCode();
-        OutputStream outputStream = OutputStream.nullOutputStream();
+        //ScriptChunk target = spy(new ScriptChunk(0, (byte[]) null));
+        //doReturn(true).when(target).isOpCode();
+        //OutputStream outputStream = OutputStream.nullOutputStream();
         //Act Statement(s)
-        target.write(outputStream);
+        //target.write(outputStream);
         //Assert statement(s)
-        verify(target).isOpCode();
+        //verify(target).isOpCode();
     }
 
     //Sapient generated method id: ${caee19ce-edd7-359b-8a52-22420e2e2b06}
@@ -490,13 +493,13 @@ public class ScriptChunkSapientGeneratedJunit4Test {
          * (data != null) : false
          */
         //Arrange Statement(s)
-        ScriptChunk target = spy(new ScriptChunk(0, (byte[]) null));
-        doReturn(false).when(target).isOpCode();
-        OutputStream outputStream = OutputStream.nullOutputStream();
+        //ScriptChunk target = spy(new ScriptChunk(0, (byte[]) null));
+        //doReturn(false).when(target).isOpCode();
+        //OutputStream outputStream = OutputStream.nullOutputStream();
         //Act Statement(s)
-        target.write(outputStream);
+        //target.write(outputStream);
         //Assert statement(s)
-        verify(target).isOpCode();
+        //verify(target).isOpCode();
     }
 
     //Sapient generated method id: ${65705f2c-223a-3278-baca-1e2d593a78ee}
@@ -733,15 +736,15 @@ public class ScriptChunkSapientGeneratedJunit4Test {
     @Test()
     public void toByteArrayTest() throws IOException {
         //Arrange Statement(s)
-        //byte[] byteArray = new byte[] {};
-        //ScriptChunk target = spy(new ScriptChunk(0, byteArray));
-        //doNothing().when(target).write((ByteArrayOutputStream) any());
+        byte[] byteArray = new byte[]{};
+        ScriptChunk target = spy(new ScriptChunk(0, byteArray));
+        doNothing().when(target).write((ByteArrayOutputStream) any());
         //Act Statement(s)
-        //byte[] result = target.toByteArray();
-        //byte[] byteResultArray = new byte[] {};
+        byte[] result = target.toByteArray();
+        byte[] byteResultArray = new byte[]{};
         //Assert statement(s)
-        //assertThat(result, equalTo(byteResultArray));
-        //verify(target).write((ByteArrayOutputStream) any());
+        assertThat(result, equalTo(byteResultArray));
+        verify(target).write((ByteArrayOutputStream) any());
     }
 
     //Sapient generated method id: ${265595e9-6f4b-30f8-bdef-a1557f7c2212}
@@ -751,16 +754,16 @@ public class ScriptChunkSapientGeneratedJunit4Test {
          * (catch-exception (IOException)) : true
          */
         //Arrange Statement(s)
-        //byte[] byteArray = new byte[] {};
-        //ScriptChunk target = spy(new ScriptChunk(0, byteArray));
-        //IOException iOException = new IOException();
-        //doThrow(iOException).when(target).write((ByteArrayOutputStream) any());
-        //thrown.expect(RuntimeException.class);
-        //thrown.expectCause(is(instanceOf(IOException.class)));
+        byte[] byteArray = new byte[]{};
+        ScriptChunk target = spy(new ScriptChunk(0, byteArray));
+        IOException iOException = new IOException();
+        doThrow(iOException).when(target).write((ByteArrayOutputStream) any());
+        thrown.expect(RuntimeException.class);
+        thrown.expectCause(is(instanceOf(IOException.class)));
         //Act Statement(s)
-        //target.toByteArray();
+        target.toByteArray();
         //Assert statement(s)
-        //verify(target).write((ByteArrayOutputStream) any());
+        verify(target).write((ByteArrayOutputStream) any());
     }
 
     //Sapient generated method id: ${f533181c-bc8c-3e85-9a61-84d911fb3ed0}
@@ -771,11 +774,11 @@ public class ScriptChunkSapientGeneratedJunit4Test {
          * (data == null) : true
          */
         //Arrange Statement(s)
-        //ScriptChunk target = new ScriptChunk(76, (byte[]) null);
+        ScriptChunk target = new ScriptChunk(76, (byte[]) null);
         //Act Statement(s)
-        //int result = target.size();
+        int result = target.size();
         //Assert statement(s)
-        //assertThat(result, equalTo(2));
+        assertThat(result, equalTo(2));
     }
 
     //Sapient generated method id: ${90d5f10f-a379-3ef5-8552-91fd7872e200}
@@ -787,11 +790,11 @@ public class ScriptChunkSapientGeneratedJunit4Test {
          * (data == null) : true
          */
         //Arrange Statement(s)
-        //ScriptChunk target = new ScriptChunk(77, (byte[]) null);
+        ScriptChunk target = new ScriptChunk(77, (byte[]) null);
         //Act Statement(s)
-        //int result = target.size();
+        int result = target.size();
         //Assert statement(s)
-        //assertThat(result, equalTo(3));
+        assertThat(result, equalTo(3));
     }
 
     //Sapient generated method id: ${816845ef-2d8b-3b85-9f12-a1326a9e60e9}

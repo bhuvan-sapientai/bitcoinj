@@ -48,9 +48,9 @@ public class BtcAutoFormatSapientGeneratedJunit4Test {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
             btcFormat.when(() -> BtcFormat.prefixUnitsIndicator((DecimalFormat) null, 0)).thenAnswer((Answer<Void>) invocation -> null);
             Locale locale = new Locale("language1");
-            BtcAutoFormat target = new BtcAutoFormat(locale, BtcAutoFormat.Style.CODE, 8);
+            BtcAutoFormat target = new BtcAutoFormat(locale, BtcAutoFormat.Style.CODE, 0);
             //Act Statement(s)
-            int result = target.scale(new BigInteger("100000000"), 8);
+            int result = target.scale(new BigInteger("0"), 1);
             //Assert statement(s)
             assertThat(result, equalTo(0));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
@@ -252,7 +252,7 @@ public class BtcAutoFormatSapientGeneratedJunit4Test {
             IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
             Locale locale = new Locale("language1");
-            BtcAutoFormat target = new BtcAutoFormat(locale, BtcAutoFormat.Style.CODE, 2);
+            BtcAutoFormat target = new BtcAutoFormat(locale, BtcAutoFormat.Style.CODE, 0);
             //Act Statement(s)
             int result = target.scale();
             //Assert statement(s)
@@ -274,7 +274,7 @@ public class BtcAutoFormatSapientGeneratedJunit4Test {
             IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
             Locale locale = new Locale("language1");
-            BtcAutoFormat target = new BtcAutoFormat(locale, BtcAutoFormat.Style.CODE, 2);
+            BtcAutoFormat target = new BtcAutoFormat(locale, BtcAutoFormat.Style.CODE, 0);
             //Act Statement(s)
             int result = target.fractionPlaces();
             //Assert statement(s)

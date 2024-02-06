@@ -116,6 +116,7 @@ public class HDKeyDerivationSapientGeneratedJunit4Test {
         thrown.expectMessage(hDDerivationException.getMessage());
         byte[] byteArray = new byte[]{};
         byte[] byteArray2 = new byte[]{};
+
         //Act Statement(s)
         HDKeyDerivation.createMasterPrivKeyFromBytes(byteArray, byteArray2);
     }
@@ -179,6 +180,7 @@ public class HDKeyDerivationSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{};
         byte[] byteArray2 = new byte[]{};
+
         //Act Statement(s)
         DeterministicKey result = HDKeyDerivation.createMasterPubKeyFromBytes(byteArray, byteArray2);
         HDPath hDPath = HDPath.M();
@@ -186,6 +188,7 @@ public class HDKeyDerivationSapientGeneratedJunit4Test {
         ECCurve eCCurve = eCDomainParameters.getCurve();
         LazyECPoint lazyECPoint = new LazyECPoint(eCCurve, byteArray);
         DeterministicKey deterministicKey = new DeterministicKey(hDPath, byteArray2, lazyECPoint, (BigInteger) null, (DeterministicKey) null);
+
         //Assert statement(s)
         assertThat(result, equalTo(deterministicKey));
     }
@@ -357,10 +360,12 @@ public class HDKeyDerivationSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        DeterministicKey deterministicKeyMock = mock(DeterministicKey.class, "<DeterministicKey object>");
+        DeterministicKey deterministicKeyMock = mock(DeterministicKey.class, "exampleParentKey");
+
         //Act Statement(s)
-        Stream<DeterministicKey> result = HDKeyDerivation.generate(deterministicKeyMock, 0);
+        Stream<DeterministicKey> result = HDKeyDerivation.generate(deterministicKeyMock, 123);
         Stream stream = Stream.empty();
+
         //Assert statement(s)
         //TODO: Please implement equals method in Stream for verification to succeed or you need to adjust respective assertion statements
         assertThat(result, equalTo(stream));

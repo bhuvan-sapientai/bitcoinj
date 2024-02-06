@@ -2066,6 +2066,33 @@ methods:
           values:
             0:
               sapientType: "OBJECT"
+              content: !<new>
+                target: "org.bitcoinj.base.utils.Fiat"
+                parameters:
+                - name: "currencyCode"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "currencyCode1"
+                    valueType: "java.lang.String"
+                    uuid: "valueOf_string1"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "value"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 1
+                    suggestedContent: !<regular>
+                      value: 1
+                    valueType: "long"
+                    uuid: "divideAndRemainder_long2"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: true
+                createdByTargetCode: true
               suggestedContent: !<new>
                 target: "org.bitcoinj.base.utils.Fiat"
                 parameters:
@@ -2096,6 +2123,33 @@ methods:
               explicitCastNeeded: false
             1:
               sapientType: "OBJECT"
+              content: !<new>
+                target: "org.bitcoinj.base.utils.Fiat"
+                parameters:
+                - name: "currencyCode"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "currencyCode1"
+                    valueType: "java.lang.String"
+                    uuid: "valueOf_string1"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "value"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    suggestedContent: !<regular>
+                      value: 0
+                    valueType: "long"
+                    uuid: "divideAndRemainder_long3"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: true
+                createdByTargetCode: true
               suggestedContent: !<new>
                 target: "org.bitcoinj.base.utils.Fiat"
                 parameters:
@@ -4291,12 +4345,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "4C72131EA1519C405A1D1D2E300AC572"
+    modelFingerprint: "C8BEE09E47BC96C20DE615676EC66A11"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "STATIC_FACTORY_METHOD"
-      modelFingerprint: "0380DC3AE2ADFA517C6148B3D9CEE990"
+      modelFingerprint: "4C7B398F1166D2AD998F68EA99D17913"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -4311,9 +4365,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "USD"
+                value: "A"
               suggestedContent: !<regular>
-                value: "USD"
+                value: "A"
               valueType: "java.lang.String"
               uuid: "valueOf_string1"
               fixed: false
@@ -4323,9 +4377,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 1000
-              suggestedContent: !<regular>
-                value: 1000
+                value: 0
               valueType: "long"
               uuid: "valueOf_long1"
               fixed: false
@@ -4338,10 +4390,8 @@ methods:
           - name: "currencyCode"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "USD"
               suggestedContent: !<regular>
-                value: "USD"
+                value: "A"
               valueType: "java.lang.String"
               uuid: "valueOf_string1"
               fixed: false
@@ -4350,10 +4400,6 @@ methods:
           - name: "value"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 1000
-              suggestedContent: !<regular>
-                value: 1000
               valueType: "long"
               uuid: "valueOf_long1"
               fixed: false
@@ -4368,44 +4414,13 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "FRIENDLY_FORMAT"
-      modelFingerprint: "CE89EA7744BDF018D6BB8F71A3344E90"
+      modelFingerprint: "55778ABB67114B631CD939B05914EC3F"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<method_return_from_value>
-          target: "org.bitcoinj.base.utils.MonetaryFormat"
-          localVariableValue:
-            sapientType: "OBJECT"
-            content: !<static_field_return>
-              target: "org.bitcoinj.base.utils.MonetaryFormat"
-              fieldName: "FIAT"
-            suggestedContent: !<static_field_return>
-              target: "org.bitcoinj.base.utils.MonetaryFormat"
-              fieldName: "FIAT"
-            valueType: "org.bitcoinj.base.utils.MonetaryFormat"
-            uuid: "<clinit>_monetaryFormat1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-          methodParameters: []
-          methodName: "postfixCode"
-        suggestedContent: !<method_return_from_value>
-          target: "org.bitcoinj.base.utils.MonetaryFormat"
-          localVariableValue:
-            sapientType: "OBJECT"
-            suggestedContent: !<static_field_return>
-              target: "org.bitcoinj.base.utils.MonetaryFormat"
-              fieldName: "FIAT"
-            valueType: "org.bitcoinj.base.utils.MonetaryFormat"
-            uuid: "<clinit>_monetaryFormat1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-          methodParameters: []
-          methodName: "postfixCode"
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.base.utils.MonetaryFormat"
         uuid: "<clinit>_monetaryFormat2"
         fixed: false
@@ -4428,9 +4443,9 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: "USD"
+              value: "A"
             suggestedContent: !<regular>
-              value: "USD"
+              value: "A"
             valueType: "java.lang.String"
             uuid: "valueOf_string1"
             fixed: false
@@ -4467,6 +4482,34 @@ methods:
                 equalsMethodPresent: false
                 explicitCastNeeded: false
             methodName: "code"
+          suggestedContent: !<method_return_from_value>
+            target: "org.bitcoinj.base.utils.MonetaryFormat"
+            localVariableValue:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.base.utils.MonetaryFormat"
+              uuid: "<clinit>_monetaryFormat2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "int"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: "A"
+                valueType: "java.lang.String"
+                uuid: "valueOf_string1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "code"
           valueType: "org.bitcoinj.base.utils.MonetaryFormat"
           uuid: "toFriendlyString_monetaryFormat1"
           fixed: false
@@ -4476,7 +4519,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "C767C7D94AB111B83EF890528858E127"
+      modelFingerprint: "F7E1D56014329D9589B8E527FB78B9E5"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -4487,6 +4530,34 @@ methods:
           target: "org.bitcoinj.base.utils.MonetaryFormat"
           localVariableValue:
             sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.utils.MonetaryFormat"
+            uuid: "<clinit>_monetaryFormat2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          methodParameters:
+          - value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "int"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "A"
+              valueType: "java.lang.String"
+              uuid: "valueOf_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          methodName: "code"
+        suggestedContent: !<method_return_from_value>
+          target: "org.bitcoinj.base.utils.MonetaryFormat"
+          localVariableValue:
+            sapientType: "UNKNOWN"
             valueType: "org.bitcoinj.base.utils.MonetaryFormat"
             uuid: "<clinit>_monetaryFormat2"
             fixed: false
@@ -4530,10 +4601,8 @@ methods:
               - name: "currencyCode"
                 value:
                   sapientType: "BASIC"
-                  content: !<regular>
-                    value: "USD"
                   suggestedContent: !<regular>
-                    value: "USD"
+                    value: "A"
                   valueType: "java.lang.String"
                   uuid: "valueOf_string1"
                   fixed: false
@@ -4542,10 +4611,6 @@ methods:
               - name: "value"
                 value:
                   sapientType: "BASIC"
-                  content: !<regular>
-                    value: 1000
-                  suggestedContent: !<regular>
-                    value: 1000
                   valueType: "long"
                   uuid: "valueOf_long1"
                   fixed: false
@@ -4591,57 +4656,10 @@ methods:
                     equalsMethodPresent: false
                     explicitCastNeeded: false
                 methodName: "code"
-              valueType: "org.bitcoinj.base.utils.MonetaryFormat"
-              uuid: "toFriendlyString_monetaryFormat1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            methodParameters:
-            - name: "monetary"
-              value:
-                sapientType: "THIS"
-                content: !<static_method_return>
-                  target: "org.bitcoinj.base.utils.Fiat"
-                  method: "valueOf"
-                  methodParameters:
-                  - name: "currencyCode"
-                    value:
-                      sapientType: "BASIC"
-                      content: !<regular>
-                        value: "USD"
-                      suggestedContent: !<regular>
-                        value: "USD"
-                      valueType: "java.lang.String"
-                      uuid: "valueOf_string1"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  - name: "value"
-                    value:
-                      sapientType: "BASIC"
-                      content: !<regular>
-                        value: 1000
-                      suggestedContent: !<regular>
-                        value: 1000
-                      valueType: "long"
-                      uuid: "valueOf_long1"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                valueType: "org.bitcoinj.base.utils.Fiat"
-                uuid: "targetClassObject"
-                fixed: true
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            methodName: "format"
-          suggestedContent: !<method_return_from_value>
-            target: "java.lang.CharSequence"
-            localVariableValue:
-              sapientType: "UNKNOWN"
-              content: !<method_return_from_value>
+              suggestedContent: !<method_return_from_value>
                 target: "org.bitcoinj.base.utils.MonetaryFormat"
                 localVariableValue:
-                  sapientType: "MOCK"
+                  sapientType: "UNKNOWN"
                   valueType: "org.bitcoinj.base.utils.MonetaryFormat"
                   uuid: "<clinit>_monetaryFormat2"
                   fixed: false
@@ -4682,10 +4700,8 @@ methods:
                   - name: "currencyCode"
                     value:
                       sapientType: "BASIC"
-                      content: !<regular>
-                        value: "USD"
                       suggestedContent: !<regular>
-                        value: "USD"
+                        value: "A"
                       valueType: "java.lang.String"
                       uuid: "valueOf_string1"
                       fixed: false
@@ -4694,10 +4710,75 @@ methods:
                   - name: "value"
                     value:
                       sapientType: "BASIC"
-                      content: !<regular>
-                        value: 1000
+                      valueType: "long"
+                      uuid: "valueOf_long1"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                valueType: "org.bitcoinj.base.utils.Fiat"
+                uuid: "targetClassObject"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "format"
+          suggestedContent: !<method_return_from_value>
+            target: "java.lang.CharSequence"
+            localVariableValue:
+              sapientType: "OBJECT"
+              suggestedContent: !<method_return_from_value>
+                target: "org.bitcoinj.base.utils.MonetaryFormat"
+                localVariableValue:
+                  sapientType: "UNKNOWN"
+                  valueType: "org.bitcoinj.base.utils.MonetaryFormat"
+                  uuid: "<clinit>_monetaryFormat2"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                methodParameters:
+                - value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "int"
+                    fixed: true
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "A"
+                    valueType: "java.lang.String"
+                    uuid: "valueOf_string1"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                methodName: "code"
+              valueType: "org.bitcoinj.base.utils.MonetaryFormat"
+              uuid: "toFriendlyString_monetaryFormat1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "monetary"
+              value:
+                sapientType: "THIS"
+                content: !<static_method_return>
+                  target: "org.bitcoinj.base.utils.Fiat"
+                  method: "valueOf"
+                  methodParameters:
+                  - name: "currencyCode"
+                    value:
+                      sapientType: "BASIC"
                       suggestedContent: !<regular>
-                        value: 1000
+                        value: "A"
+                      valueType: "java.lang.String"
+                      uuid: "valueOf_string1"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                  - name: "value"
+                    value:
+                      sapientType: "BASIC"
                       valueType: "long"
                       uuid: "valueOf_long1"
                       fixed: false
@@ -4741,7 +4822,6 @@ methods:
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -4759,12 +4839,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "706843A73994E6910A37965A227E98D5"
+    modelFingerprint: "8491E4F40CECFE1052FDA44F02D4F5B0"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "STATIC_FACTORY_METHOD"
-      modelFingerprint: "86EADF586A06C6E84B7D9E3D0F5AEE90"
+      modelFingerprint: "FB1AB540C87E77AECF19D3E2DB506FF4"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -4779,9 +4859,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "String"
+                value: "USD"
               suggestedContent: !<regular>
-                value: "String"
+                value: "USD"
               valueType: "java.lang.String"
               uuid: "valueOf_string1"
               fixed: false
@@ -4791,7 +4871,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 0
+                value: 100
+              suggestedContent: !<regular>
+                value: 100
               valueType: "long"
               uuid: "valueOf_long1"
               fixed: false
@@ -4805,9 +4887,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "String"
+                value: "USD"
               suggestedContent: !<regular>
-                value: "String"
+                value: "USD"
               valueType: "java.lang.String"
               uuid: "valueOf_string1"
               fixed: false
@@ -4816,6 +4898,10 @@ methods:
           - name: "value"
             value:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 100
+              suggestedContent: !<regular>
+                value: 100
               valueType: "long"
               uuid: "valueOf_long1"
               fixed: false
@@ -4830,7 +4916,7 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "PLAIN_FORMAT"
-      modelFingerprint: "212628D78132A03EDEF654E848824A7A"
+      modelFingerprint: "CAAA38DA4BC8D063D2660E26E85D0042"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -5061,9 +5147,9 @@ methods:
                 value:
                   sapientType: "BASIC"
                   content: !<regular>
-                    value: "String"
+                    value: "USD"
                   suggestedContent: !<regular>
-                    value: "String"
+                    value: "USD"
                   valueType: "java.lang.String"
                   uuid: "valueOf_string1"
                   fixed: false
@@ -5072,6 +5158,10 @@ methods:
               - name: "value"
                 value:
                   sapientType: "BASIC"
+                  content: !<regular>
+                    value: 100
+                  suggestedContent: !<regular>
+                    value: 100
                   valueType: "long"
                   uuid: "valueOf_long1"
                   fixed: false

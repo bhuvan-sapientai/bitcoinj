@@ -19,12 +19,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "25FBA2F499C96A08B59B63C0A882F0FD"
+    modelFingerprint: "231090E309D52C6581625651AB2108C2"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "8105AF7D80565F2AAEF4068DF1057C85"
+      modelFingerprint: "8FC92DD23909800C95986D6136EB69EB"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -36,153 +36,11 @@ methods:
           parameters:
           - name: "genesisBlock"
             value:
-              sapientType: "OBJECT"
-              content: !<new>
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.core.Block"
-                parameters:
-                - name: "version"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 0
-                    valueType: "long"
-                    uuid: "<init>_block1-version"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "arg1"
-                  value:
-                    sapientType: "MOCK"
-                    valueType: "org.bitcoinj.base.Sha256Hash"
-                    uuid: "<init>_block1-arg1"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "prevBlockHash"
-                  value:
-                    sapientType: "MOCK"
-                    valueType: "org.bitcoinj.base.Sha256Hash"
-                    uuid: "<init>_block1-prevBlockHash"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "merkleRoot"
-                  value:
-                    sapientType: "OBJECT"
-                    content: !<static_method_return>
-                      target: "java.time.Instant"
-                      method: "now"
-                      methodParameters: []
-                    suggestedContent: !<static_method_return>
-                      target: "java.time.Instant"
-                      method: "now"
-                      methodParameters: []
-                    valueType: "java.time.Instant"
-                    uuid: "<init>_block1-merkleRoot"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "time"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 0
-                    valueType: "long"
-                    uuid: "<init>_block1-time"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "difficultyTarget"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 0
-                    valueType: "long"
-                    uuid: "<init>_block1-difficultyTarget"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "arg6"
-                  value:
-                    sapientType: "COLLECTION"
-                    content: !<collection>
-                      parameters: []
-                      values: []
-                    suggestedContent: !<collection>
-                      parameters: []
-                      values: []
-                    valueType: "java.util.List"
-                    uuid: "<init>_block1-arg6"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
-              suggestedContent: !<new>
-                target: "org.bitcoinj.core.Block"
-                parameters:
-                - name: "version"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "long"
-                    uuid: "<init>_block1-version"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "arg1"
-                  value:
-                    sapientType: "UNKNOWN"
-                    valueType: "org.bitcoinj.base.Sha256Hash"
-                    uuid: "<init>_block1-arg1"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "prevBlockHash"
-                  value:
-                    sapientType: "UNKNOWN"
-                    valueType: "org.bitcoinj.base.Sha256Hash"
-                    uuid: "<init>_block1-prevBlockHash"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "merkleRoot"
-                  value:
-                    sapientType: "UNKNOWN"
-                    suggestedContent: !<static_method_return>
-                      target: "java.time.Instant"
-                      method: "now"
-                      methodParameters: []
-                    valueType: "java.time.Instant"
-                    uuid: "<init>_block1-merkleRoot"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "time"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "long"
-                    uuid: "<init>_block1-time"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "difficultyTarget"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "long"
-                    uuid: "<init>_block1-difficultyTarget"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "arg6"
-                  value:
-                    sapientType: "COLLECTION"
-                    valueType: "java.util.List"
-                    uuid: "<init>_block1-arg6"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.core.Block"
               uuid: "<init>_block1"
               fixed: false
@@ -195,153 +53,11 @@ methods:
           parameters:
           - name: "genesisBlock"
             value:
-              sapientType: "OBJECT"
-              content: !<new>
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.core.Block"
-                parameters:
-                - name: "version"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 0
-                    valueType: "long"
-                    uuid: "<init>_block1-version"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "arg1"
-                  value:
-                    sapientType: "MOCK"
-                    valueType: "org.bitcoinj.base.Sha256Hash"
-                    uuid: "<init>_block1-arg1"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "prevBlockHash"
-                  value:
-                    sapientType: "MOCK"
-                    valueType: "org.bitcoinj.base.Sha256Hash"
-                    uuid: "<init>_block1-prevBlockHash"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "merkleRoot"
-                  value:
-                    sapientType: "OBJECT"
-                    content: !<static_method_return>
-                      target: "java.time.Instant"
-                      method: "now"
-                      methodParameters: []
-                    suggestedContent: !<static_method_return>
-                      target: "java.time.Instant"
-                      method: "now"
-                      methodParameters: []
-                    valueType: "java.time.Instant"
-                    uuid: "<init>_block1-merkleRoot"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "time"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 0
-                    valueType: "long"
-                    uuid: "<init>_block1-time"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "difficultyTarget"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 0
-                    valueType: "long"
-                    uuid: "<init>_block1-difficultyTarget"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "arg6"
-                  value:
-                    sapientType: "COLLECTION"
-                    content: !<collection>
-                      parameters: []
-                      values: []
-                    suggestedContent: !<collection>
-                      parameters: []
-                      values: []
-                    valueType: "java.util.List"
-                    uuid: "<init>_block1-arg6"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
-              suggestedContent: !<new>
-                target: "org.bitcoinj.core.Block"
-                parameters:
-                - name: "version"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "long"
-                    uuid: "<init>_block1-version"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "arg1"
-                  value:
-                    sapientType: "UNKNOWN"
-                    valueType: "org.bitcoinj.base.Sha256Hash"
-                    uuid: "<init>_block1-arg1"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "prevBlockHash"
-                  value:
-                    sapientType: "UNKNOWN"
-                    valueType: "org.bitcoinj.base.Sha256Hash"
-                    uuid: "<init>_block1-prevBlockHash"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "merkleRoot"
-                  value:
-                    sapientType: "UNKNOWN"
-                    suggestedContent: !<static_method_return>
-                      target: "java.time.Instant"
-                      method: "now"
-                      methodParameters: []
-                    valueType: "java.time.Instant"
-                    uuid: "<init>_block1-merkleRoot"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "time"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "long"
-                    uuid: "<init>_block1-time"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "difficultyTarget"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "long"
-                    uuid: "<init>_block1-difficultyTarget"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "arg6"
-                  value:
-                    sapientType: "COLLECTION"
-                    valueType: "java.util.List"
-                    uuid: "<init>_block1-arg6"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.core.Block"
               uuid: "<init>_block1"
               fixed: false
@@ -358,7 +74,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "block"
-      modelFingerprint: "6AE24DEC888670A4FD092E72D5AB1E56"
+      modelFingerprint: "42F3245ED9D0E1E75EB3D187821211F8"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -406,7 +122,7 @@ methods:
           parameters:
           - name: "header"
             value:
-              sapientType: "MOCK"
+              sapientType: "UNKNOWN"
               suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.core.Block"
                 onlyPojoFunctions: false
@@ -444,7 +160,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "genesisBlock"
-      modelFingerprint: "01A96235767D3F24B321C52C20F496B2"
+      modelFingerprint: "EDDE8501C6F0423ED4DACE0D21184967"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -452,153 +168,11 @@ methods:
       idsTryCatchBlockSurrounding:
       - 1
       value:
-        sapientType: "OBJECT"
-        content: !<new>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.Block"
-          parameters:
-          - name: "version"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "long"
-              uuid: "<init>_block1-version"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "arg1"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.base.Sha256Hash"
-              uuid: "<init>_block1-arg1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "prevBlockHash"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.base.Sha256Hash"
-              uuid: "<init>_block1-prevBlockHash"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "merkleRoot"
-            value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "java.time.Instant"
-                method: "now"
-                methodParameters: []
-              suggestedContent: !<static_method_return>
-                target: "java.time.Instant"
-                method: "now"
-                methodParameters: []
-              valueType: "java.time.Instant"
-              uuid: "<init>_block1-merkleRoot"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "time"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "long"
-              uuid: "<init>_block1-time"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "difficultyTarget"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "long"
-              uuid: "<init>_block1-difficultyTarget"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "arg6"
-            value:
-              sapientType: "COLLECTION"
-              content: !<collection>
-                parameters: []
-                values: []
-              suggestedContent: !<collection>
-                parameters: []
-                values: []
-              valueType: "java.util.List"
-              uuid: "<init>_block1-arg6"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.core.Block"
-          parameters:
-          - name: "version"
-            value:
-              sapientType: "BASIC"
-              valueType: "long"
-              uuid: "<init>_block1-version"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "arg1"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.base.Sha256Hash"
-              uuid: "<init>_block1-arg1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "prevBlockHash"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.base.Sha256Hash"
-              uuid: "<init>_block1-prevBlockHash"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "merkleRoot"
-            value:
-              sapientType: "UNKNOWN"
-              suggestedContent: !<static_method_return>
-                target: "java.time.Instant"
-                method: "now"
-                methodParameters: []
-              valueType: "java.time.Instant"
-              uuid: "<init>_block1-merkleRoot"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "time"
-            value:
-              sapientType: "BASIC"
-              valueType: "long"
-              uuid: "<init>_block1-time"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "difficultyTarget"
-            value:
-              sapientType: "BASIC"
-              valueType: "long"
-              uuid: "<init>_block1-difficultyTarget"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "arg6"
-            value:
-              sapientType: "COLLECTION"
-              valueType: "java.util.List"
-              uuid: "<init>_block1-arg6"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.core.Block"
         uuid: "<init>_block1"
         fixed: false
@@ -625,7 +199,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "genesisHeader"
-      modelFingerprint: "134E833F0F2100EE9FF68366450D2717"
+      modelFingerprint: "27941F72C534C66A27C66995CFEECEE6"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -663,7 +237,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "13FFA3DA003BB95DAB5B8242226FFCF7"
+      modelFingerprint: "093923621BD05377325D6E7FCBB5633F"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -697,7 +271,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "0DB37EBDFF2389253E3EEFCC67E34701"
+      modelFingerprint: "093923621BD05377325D6E7FCBB5633F"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -719,69 +293,7 @@ methods:
         parameters: []
         signature: "getHash(): Sha256Hash"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.Sha256Hash"
-            method: "read"
-            methodParameters:
-            - name: "buf"
-              value:
-                sapientType: "OBJECT"
-                content: !<static_method_return>
-                  target: "java.nio.ByteBuffer"
-                  method: "allocateDirect"
-                  methodParameters:
-                  - name: "capacity"
-                    value:
-                      sapientType: "BASIC"
-                      content: !<regular>
-                        value: 0
-                      valueType: "int"
-                      uuid: "put_sha256Hash2-buf-capacity"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                suggestedContent: !<static_method_return>
-                  target: "java.nio.ByteBuffer"
-                  method: "allocateDirect"
-                  methodParameters:
-                  - name: "capacity"
-                    value:
-                      sapientType: "BASIC"
-                      valueType: "int"
-                      uuid: "put_sha256Hash2-buf-capacity"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                valueType: "java.nio.ByteBuffer"
-                uuid: "put_sha256Hash2-buf"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.base.Sha256Hash"
-            method: "read"
-            methodParameters:
-            - name: "buf"
-              value:
-                sapientType: "UNKNOWN"
-                suggestedContent: !<static_method_return>
-                  target: "java.nio.ByteBuffer"
-                  method: "allocateDirect"
-                  methodParameters:
-                  - name: "capacity"
-                    value:
-                      sapientType: "BASIC"
-                      valueType: "int"
-                      uuid: "put_sha256Hash2-buf-capacity"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                valueType: "java.nio.ByteBuffer"
-                uuid: "put_sha256Hash2-buf"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+          sapientType: "MOCK"
           valueType: "org.bitcoinj.base.Sha256Hash"
           uuid: "put_sha256Hash2"
           fixed: false
@@ -810,7 +322,6 @@ methods:
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -910,7 +421,7 @@ methods:
       idsTryCatchBlockSurrounding:
       - 1
       value:
-        sapientType: "UNKNOWN"
+        sapientType: "MOCK"
         suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.Block"
           onlyPojoFunctions: false
@@ -926,7 +437,7 @@ methods:
         parameters: []
         signature: "cloneAsHeader(): Block"
         returnValue:
-          sapientType: "UNKNOWN"
+          sapientType: "MOCK"
           suggestedContent: !<unknown_object>
             target: "org.bitcoinj.core.Block"
             onlyPojoFunctions: false
@@ -949,7 +460,7 @@ methods:
       idsTryCatchBlockSurrounding:
       - 1
       value:
-        sapientType: "UNKNOWN"
+        sapientType: "MOCK"
         suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.Block"
           onlyPojoFunctions: false
@@ -968,6 +479,8 @@ methods:
         signature: "getWork(): BigInteger throws org.bitcoinj.core.VerificationException"
         returnValue:
           sapientType: "BASIC"
+          content: !<regular>
+            value: 0
           valueType: "java.math.BigInteger"
           uuid: "<init>_bigInteger1"
           fixed: false
@@ -985,7 +498,7 @@ methods:
       idsTryCatchBlockSurrounding:
       - 1
       value:
-        sapientType: "UNKNOWN"
+        sapientType: "MOCK"
         suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.Block"
           onlyPojoFunctions: false
@@ -1001,7 +514,7 @@ methods:
         parameters: []
         signature: "getHash(): Sha256Hash"
         returnValue:
-          sapientType: "UNKNOWN"
+          sapientType: "MOCK"
           valueType: "org.bitcoinj.base.Sha256Hash"
           uuid: "put_sha256Hash1"
           fixed: false
@@ -1076,7 +589,7 @@ methods:
               valueType: "org.bitcoinj.core.Block"
               uuid: "<init>_block1"
               fixed: false
-              nameForMock: "{}"
+              nameForMock: "BigInteger"
               equalsMethodPresent: false
               explicitCastNeeded: false
           privateConstructor: false
@@ -1094,7 +607,7 @@ methods:
               valueType: "org.bitcoinj.core.Block"
               uuid: "<init>_block1"
               fixed: false
-              nameForMock: "{}"
+              nameForMock: "BigInteger"
               equalsMethodPresent: false
               explicitCastNeeded: false
           privateConstructor: false
@@ -1124,7 +637,7 @@ methods:
         valueType: "org.bitcoinj.core.Block"
         uuid: "<init>_block1"
         fixed: false
-        nameForMock: "{}"
+        nameForMock: "BigInteger"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -1394,12 +907,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "73BA2DE4399A0DA19ED3AF3FB239A5C4"
+    modelFingerprint: "1A2673460DF66AA8A2E97FA573341660"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "70C07830ECB610B92C19DE200A281A3C"
+      modelFingerprint: "8FC92DD23909800C95986D6136EB69EB"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1419,7 +932,6 @@ methods:
               valueType: "org.bitcoinj.core.Block"
               uuid: "<init>_block1"
               fixed: false
-              nameForMock: "<BigInteger>"
               equalsMethodPresent: false
               explicitCastNeeded: false
           privateConstructor: false
@@ -1429,7 +941,7 @@ methods:
           parameters:
           - name: "genesisBlock"
             value:
-              sapientType: "MOCK"
+              sapientType: "UNKNOWN"
               suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.core.Block"
                 onlyPojoFunctions: false
@@ -1437,7 +949,6 @@ methods:
               valueType: "org.bitcoinj.core.Block"
               uuid: "<init>_block1"
               fixed: false
-              nameForMock: "<BigInteger>"
               equalsMethodPresent: false
               explicitCastNeeded: false
           privateConstructor: false
@@ -1451,7 +962,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "chainHead"
-      modelFingerprint: "1DE2D5D676095A53A5119B7E229E834E"
+      modelFingerprint: "60E3BD77756A5C2CC934DB1D05B014BF"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -1499,7 +1010,7 @@ methods:
           parameters:
           - name: "header"
             value:
-              sapientType: "MOCK"
+              sapientType: "UNKNOWN"
               suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.core.Block"
                 onlyPojoFunctions: false
@@ -1537,7 +1048,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "genesisBlock"
-      modelFingerprint: "35E911A5DC596F8A5E423BFE0ED8823D"
+      modelFingerprint: "EDDE8501C6F0423ED4DACE0D21184967"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -1553,7 +1064,6 @@ methods:
         valueType: "org.bitcoinj.core.Block"
         uuid: "<init>_block1"
         fixed: false
-        nameForMock: "<BigInteger>"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -1577,7 +1087,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "genesisHeader"
-      modelFingerprint: "134E833F0F2100EE9FF68366450D2717"
+      modelFingerprint: "27941F72C534C66A27C66995CFEECEE6"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -1615,7 +1125,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "0DB37EBDFF2389253E3EEFCC67E34701"
+      modelFingerprint: "093923621BD05377325D6E7FCBB5633F"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -1639,69 +1149,7 @@ methods:
         parameters: []
         signature: "getHash(): Sha256Hash"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.Sha256Hash"
-            method: "read"
-            methodParameters:
-            - name: "buf"
-              value:
-                sapientType: "OBJECT"
-                content: !<static_method_return>
-                  target: "java.nio.ByteBuffer"
-                  method: "allocateDirect"
-                  methodParameters:
-                  - name: "capacity"
-                    value:
-                      sapientType: "BASIC"
-                      content: !<regular>
-                        value: 0
-                      valueType: "int"
-                      uuid: "put_sha256Hash1-buf-capacity"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                suggestedContent: !<static_method_return>
-                  target: "java.nio.ByteBuffer"
-                  method: "allocateDirect"
-                  methodParameters:
-                  - name: "capacity"
-                    value:
-                      sapientType: "BASIC"
-                      valueType: "int"
-                      uuid: "put_sha256Hash1-buf-capacity"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                valueType: "java.nio.ByteBuffer"
-                uuid: "put_sha256Hash1-buf"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.base.Sha256Hash"
-            method: "read"
-            methodParameters:
-            - name: "buf"
-              value:
-                sapientType: "UNKNOWN"
-                suggestedContent: !<static_method_return>
-                  target: "java.nio.ByteBuffer"
-                  method: "allocateDirect"
-                  methodParameters:
-                  - name: "capacity"
-                    value:
-                      sapientType: "BASIC"
-                      valueType: "int"
-                      uuid: "put_sha256Hash1-buf-capacity"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                valueType: "java.nio.ByteBuffer"
-                uuid: "put_sha256Hash1-buf"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+          sapientType: "MOCK"
           valueType: "org.bitcoinj.base.Sha256Hash"
           uuid: "put_sha256Hash1"
           fixed: false
@@ -1730,7 +1178,6 @@ methods:
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -1748,12 +1195,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "E2FEF8039909DB394A428AF325AA3631"
+    modelFingerprint: "F69D7BE37CC00EBD6E440F9E362CBC77"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "70C07830ECB610B92C19DE200A281A3C"
+      modelFingerprint: "8FC92DD23909800C95986D6136EB69EB"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1773,7 +1220,6 @@ methods:
               valueType: "org.bitcoinj.core.Block"
               uuid: "<init>_block1"
               fixed: false
-              nameForMock: "BigInteger"
               equalsMethodPresent: false
               explicitCastNeeded: false
           privateConstructor: false
@@ -1783,7 +1229,7 @@ methods:
           parameters:
           - name: "genesisBlock"
             value:
-              sapientType: "MOCK"
+              sapientType: "UNKNOWN"
               suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.core.Block"
                 onlyPojoFunctions: false
@@ -1791,7 +1237,6 @@ methods:
               valueType: "org.bitcoinj.core.Block"
               uuid: "<init>_block1"
               fixed: false
-              nameForMock: "BigInteger"
               equalsMethodPresent: false
               explicitCastNeeded: false
           privateConstructor: false
@@ -1805,7 +1250,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "genesisBlock"
-      modelFingerprint: "35E911A5DC596F8A5E423BFE0ED8823D"
+      modelFingerprint: "EDDE8501C6F0423ED4DACE0D21184967"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -1821,7 +1266,6 @@ methods:
         valueType: "org.bitcoinj.core.Block"
         uuid: "<init>_block1"
         fixed: false
-        nameForMock: "BigInteger"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -1845,7 +1289,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "genesisHeader"
-      modelFingerprint: "134E833F0F2100EE9FF68366450D2717"
+      modelFingerprint: "27941F72C534C66A27C66995CFEECEE6"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -1883,7 +1327,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "0DB37EBDFF2389253E3EEFCC67E34701"
+      modelFingerprint: "093923621BD05377325D6E7FCBB5633F"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -1907,69 +1351,7 @@ methods:
         parameters: []
         signature: "getHash(): Sha256Hash"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.Sha256Hash"
-            method: "read"
-            methodParameters:
-            - name: "buf"
-              value:
-                sapientType: "OBJECT"
-                content: !<static_method_return>
-                  target: "java.nio.ByteBuffer"
-                  method: "allocateDirect"
-                  methodParameters:
-                  - name: "capacity"
-                    value:
-                      sapientType: "BASIC"
-                      content: !<regular>
-                        value: 0
-                      valueType: "int"
-                      uuid: "put_sha256Hash1-buf-capacity"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                suggestedContent: !<static_method_return>
-                  target: "java.nio.ByteBuffer"
-                  method: "allocateDirect"
-                  methodParameters:
-                  - name: "capacity"
-                    value:
-                      sapientType: "BASIC"
-                      valueType: "int"
-                      uuid: "put_sha256Hash1-buf-capacity"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                valueType: "java.nio.ByteBuffer"
-                uuid: "put_sha256Hash1-buf"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.base.Sha256Hash"
-            method: "read"
-            methodParameters:
-            - name: "buf"
-              value:
-                sapientType: "UNKNOWN"
-                suggestedContent: !<static_method_return>
-                  target: "java.nio.ByteBuffer"
-                  method: "allocateDirect"
-                  methodParameters:
-                  - name: "capacity"
-                    value:
-                      sapientType: "BASIC"
-                      valueType: "int"
-                      uuid: "put_sha256Hash1-buf-capacity"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                valueType: "java.nio.ByteBuffer"
-                uuid: "put_sha256Hash1-buf"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+          sapientType: "MOCK"
           valueType: "org.bitcoinj.base.Sha256Hash"
           uuid: "put_sha256Hash1"
           fixed: false
@@ -1998,6 +1380,5 @@ methods:
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

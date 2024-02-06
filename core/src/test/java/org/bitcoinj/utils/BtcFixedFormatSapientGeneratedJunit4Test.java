@@ -100,9 +100,7 @@ public class BtcFixedFormatSapientGeneratedJunit4Test {
             btcFormat.when(() -> BtcFormat.prefixCode("code1", 0)).thenReturn("return_of_prefixCode1");
             Locale locale = new Locale("language1");
             List<Integer> integerList = new ArrayList<>();
-            integerList.add(3);
-            integerList.add(3);
-            BtcFixedFormat target = new BtcFixedFormat(locale, 2, 1, integerList);
+            BtcFixedFormat target = new BtcFixedFormat(locale, 0, 0, integerList);
             //Act Statement(s)
             String result = target.code();
             //Assert statement(s)
@@ -128,10 +126,7 @@ public class BtcFixedFormatSapientGeneratedJunit4Test {
             btcFormat.when(() -> BtcFormat.prefixSymbol("symbol1", 0)).thenReturn("return_of_prefixSymbol1");
             Locale locale = new Locale("language1");
             List<Integer> integerList = new ArrayList<>();
-            integerList.add(3);
-            integerList.add(3);
-            integerList.add(3);
-            BtcFixedFormat target = new BtcFixedFormat(locale, 0, 2, integerList);
+            BtcFixedFormat target = new BtcFixedFormat(locale, 0, 0, integerList);
             //Act Statement(s)
             String result = target.symbol();
             //Assert statement(s)
@@ -157,9 +152,7 @@ public class BtcFixedFormatSapientGeneratedJunit4Test {
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
             Locale locale = new Locale("language1");
             List<Integer> integerList = new ArrayList<>();
-            integerList.add(3);
-            integerList.add(3);
-            BtcFixedFormat target = new BtcFixedFormat(locale, 0, 2, integerList);
+            BtcFixedFormat target = new BtcFixedFormat(locale, 0, 0, integerList);
             //Act Statement(s)
             int[] result = target.fractionPlaceGroups();
             int[] intResultArray = new int[]{0, 1};

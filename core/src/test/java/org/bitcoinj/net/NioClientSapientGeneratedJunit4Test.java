@@ -27,7 +27,7 @@ public class NioClientSapientGeneratedJunit4Test {
     private final StreamConnection streamConnectionMock = mock(StreamConnection.class);
 
     //Sapient generated method id: ${561998f8-7691-38b6-b1d5-0712aa9b4d77}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ListenableCompletableFuture.whenComplete) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void closeConnectionTest() throws IOException {
         /**
@@ -47,7 +47,7 @@ public class NioClientSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${90b47dad-6d2c-3295-946b-afa0a749fd31}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (ListenableCompletableFuture.whenComplete) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void writeBytesTest() throws IOException {
         /**

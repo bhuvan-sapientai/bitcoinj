@@ -242,7 +242,7 @@ methods:
             value:
               sapientType: "MOCK"
               valueType: "org.bitcoinj.core.Block"
-              uuid: "initNewStore_block8"
+              uuid: "initNewStore_block6"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -252,7 +252,7 @@ methods:
               content: !<regular>
                 value: 0
               valueType: "java.math.BigInteger"
-              uuid: "initNewStore_bigInteger8"
+              uuid: "initNewStore_bigInteger6"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -298,7 +298,7 @@ methods:
           privateConstructor: false
           createdByTargetCode: true
         valueType: "org.bitcoinj.core.StoredBlock"
-        uuid: "initNewStore_storedBlock8"
+        uuid: "initNewStore_storedBlock6"
         fixed: true
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -621,7 +621,7 @@ methods:
             value:
               sapientType: "MOCK"
               valueType: "org.bitcoinj.core.Block"
-              uuid: "initNewStore_block8"
+              uuid: "initNewStore_block6"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -631,7 +631,7 @@ methods:
               content: !<regular>
                 value: 0
               valueType: "java.math.BigInteger"
-              uuid: "initNewStore_bigInteger8"
+              uuid: "initNewStore_bigInteger6"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -677,7 +677,7 @@ methods:
           privateConstructor: false
           createdByTargetCode: true
         valueType: "org.bitcoinj.core.StoredBlock"
-        uuid: "initNewStore_storedBlock8"
+        uuid: "initNewStore_storedBlock6"
         fixed: true
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -8554,6 +8554,8 @@ methods:
           sapientType: "ARRAY"
           content: !<array>
             values: {}
+          suggestedContent: !<array>
+            values: {}
           valueType: "byte[]"
           uuid: "setChainHead_byte[]1"
           fixed: false
@@ -8967,111 +8969,12 @@ methods:
           createdByTargetCode: false
           propertiesMap:
             randomAccessFile:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "java.io.RandomAccessFile"
-                parameters:
-                - name: "file"
-                  value:
-                    sapientType: "OBJECT"
-                    content: !<new>
-                      target: "java.io.File"
-                      parameters:
-                      - name: "pathname"
-                        value:
-                          sapientType: "BASIC"
-                          content: !<regular>
-                            value: "pathname1"
-                          valueType: "java.lang.String"
-                          uuid: "<init>_file1-pathname"
-                          fixed: false
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                      privateConstructor: false
-                      createdByTargetCode: false
-                    suggestedContent: !<new>
-                      target: "java.io.File"
-                      parameters:
-                      - name: "pathname"
-                        value:
-                          sapientType: "BASIC"
-                          valueType: "java.lang.String"
-                          uuid: "<init>_file1-pathname"
-                          fixed: false
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                      privateConstructor: false
-                      createdByTargetCode: false
-                    valueType: "java.io.File"
-                    uuid: "<init>_file1"
-                    fixed: false
-                    nameForMock: "<init>_file1"
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "mode"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "rw"
-                    valueType: "java.lang.String"
-                    fixed: true
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                thrownExceptions:
-                - "java.io.FileNotFoundException"
-                createdByTargetCode: true
-              suggestedContent: !<new>
-                target: "java.io.RandomAccessFile"
-                parameters:
-                - name: "file"
-                  value:
-                    sapientType: "UNKNOWN"
-                    suggestedContent: !<new>
-                      target: "java.io.File"
-                      parameters:
-                      - name: "pathname"
-                        value:
-                          sapientType: "BASIC"
-                          valueType: "java.lang.String"
-                          uuid: "<init>_file1-pathname"
-                          fixed: false
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                      privateConstructor: false
-                      createdByTargetCode: false
-                    valueType: "java.io.File"
-                    uuid: "<init>_file1"
-                    fixed: false
-                    nameForMock: "<init>_file1"
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                - name: "mode"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "rw"
-                    valueType: "java.lang.String"
-                    fixed: true
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                thrownExceptions:
-                - "java.io.FileNotFoundException"
-                createdByTargetCode: true
-              valueType: "java.io.RandomAccessFile"
-              uuid: "<init>_randomAccessFile50"
-              fixed: true
+              sapientType: "NULL"
+              fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
             fileLock:
               sapientType: "NULL"
-              suggestedContent: !<unknown_object>
-                target: "java.nio.channels.FileLock"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "java.nio.channels.FileLock"
-              uuid: "<init>_fileLock38"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -9594,7 +9497,7 @@ methods:
     - type: "STATIC"
       name: "Preconditions"
       modelFingerprint: "60A6CF81A4B62FC26CAD9062FF6E1448"
-      index: 5
+      index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -9622,7 +9525,7 @@ methods:
         returnValue:
           sapientType: "VOID"
           valueType: "void"
-          uuid: "setRingCursor_void9"
+          uuid: "<init>_void1"
           fixed: true
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -9730,7 +9633,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "org.bitcoinj.core.Block"
-          uuid: "initNewStore_block9"
+          uuid: "initNewStore_block7"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -9767,7 +9670,7 @@ methods:
           content: !<regular>
             value: 0
           valueType: "java.math.BigInteger"
-          uuid: "initNewStore_bigInteger9"
+          uuid: "initNewStore_bigInteger7"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -9795,7 +9698,7 @@ methods:
                 value:
                   sapientType: "MOCK"
                   valueType: "org.bitcoinj.core.Block"
-                  uuid: "initNewStore_block9"
+                  uuid: "initNewStore_block7"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -9805,7 +9708,7 @@ methods:
                   content: !<regular>
                     value: 0
                   valueType: "java.math.BigInteger"
-                  uuid: "initNewStore_bigInteger9"
+                  uuid: "initNewStore_bigInteger7"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -9851,7 +9754,7 @@ methods:
               privateConstructor: false
               createdByTargetCode: true
             valueType: "org.bitcoinj.core.StoredBlock"
-            uuid: "initNewStore_storedBlock9"
+            uuid: "initNewStore_storedBlock7"
             fixed: true
             equalsMethodPresent: false
             explicitCastNeeded: false
@@ -9861,7 +9764,7 @@ methods:
         returnValue:
           sapientType: "VOID"
           valueType: "void"
-          uuid: "initNewStore_void19"
+          uuid: "initNewStore_void15"
           fixed: true
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -9889,7 +9792,7 @@ methods:
                 value:
                   sapientType: "MOCK"
                   valueType: "org.bitcoinj.core.Block"
-                  uuid: "initNewStore_block9"
+                  uuid: "initNewStore_block7"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -9899,7 +9802,7 @@ methods:
                   content: !<regular>
                     value: 0
                   valueType: "java.math.BigInteger"
-                  uuid: "initNewStore_bigInteger9"
+                  uuid: "initNewStore_bigInteger7"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -9945,7 +9848,7 @@ methods:
               privateConstructor: false
               createdByTargetCode: true
             valueType: "org.bitcoinj.core.StoredBlock"
-            uuid: "initNewStore_storedBlock9"
+            uuid: "initNewStore_storedBlock7"
             fixed: true
             equalsMethodPresent: false
             explicitCastNeeded: false
@@ -9955,7 +9858,7 @@ methods:
         returnValue:
           sapientType: "VOID"
           valueType: "void"
-          uuid: "initNewStore_void20"
+          uuid: "initNewStore_void16"
           fixed: true
           equalsMethodPresent: false
           explicitCastNeeded: false

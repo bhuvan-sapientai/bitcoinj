@@ -124,23 +124,23 @@ public class FeeFilterMessageSapientGeneratedJunit4Test {
     @Test()
     public void getFeeRateTest() {
         //Arrange Statement(s)
-        //FeeFilterMessage target = FeeFilterMessage.of(feeRateMock);
+        FeeFilterMessage target = FeeFilterMessage.of(feeRateMock);
         //Act Statement(s)
-        //Coin result = target.getFeeRate();
+        Coin result = target.getFeeRate();
         //Assert statement(s)
-        //assertThat(result, equalTo(feeRateMock));
+        assertThat(result, equalTo(feeRateMock));
     }
 
     //Sapient generated method id: ${363d3698-f34c-39ad-914f-376a19498023}
     @Test()
     public void toStringTest() {
         //Arrange Statement(s)
-        //doReturn("A").when(feeRateMock).toFriendlyString();
-        //FeeFilterMessage target = FeeFilterMessage.of(feeRateMock);
+        doReturn("A").when(feeRateMock).toFriendlyString();
+        FeeFilterMessage target = FeeFilterMessage.of(feeRateMock);
         //Act Statement(s)
-        //String result = target.toString();
+        String result = target.toString();
         //Assert statement(s)
-        //assertThat(result, equalTo("feefilter: A/kB"));
-        //verify(feeRateMock).toFriendlyString();
+        assertThat(result, equalTo("feefilter: A/kB"));
+        verify(feeRateMock).toFriendlyString();
     }
 }

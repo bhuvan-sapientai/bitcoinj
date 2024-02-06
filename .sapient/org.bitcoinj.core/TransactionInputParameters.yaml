@@ -1637,13 +1637,13 @@ methods:
       filledByUser: false
     uuid: "98fe8058-8584-3703-a9c4-157a8a0a858c"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     variablesCouldNotBeIsolated: "tx"
     failureReason:
       reason: "BITWISE_NOT_SUPPORTED"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "getTxId"
     returnType: "org.bitcoinj.base.Sha256Hash"
@@ -11193,7 +11193,7 @@ methods:
     - type: "LOCAL_VARIABLE"
       name: "block"
       modelFingerprint: "48B98E0E9CA462B0B434A3E6A101B8DF"
-      index: 8
+      index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -11341,7 +11341,44 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "UNKNOWN"
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.StoredBlock"
+          parameters:
+          - name: "header"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.core.Block"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.core.Block"
+              uuid: "setBlockAppearance_block1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "chainWork"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "java.math.BigInteger"
+              uuid: "setBlockAppearance_storedBlock1-chainWork"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "height"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "int"
+              uuid: "setBlockAppearance_int2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
         suggestedContent: !<new>
           target: "org.bitcoinj.core.StoredBlock"
           parameters:
@@ -11386,7 +11423,7 @@ methods:
         parameters: []
         signature: "getHeader(): Block"
         returnValue:
-          sapientType: "UNKNOWN"
+          sapientType: "MOCK"
           suggestedContent: !<unknown_object>
             target: "org.bitcoinj.core.Block"
             onlyPojoFunctions: false
@@ -12058,7 +12095,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "51089459539E1DA30F5D77124308506C"
+    modelFingerprint: "BDC0379163BD64F1A0C22A75ABB13958"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -12157,7 +12194,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "LockTime"
-      modelFingerprint: "099378CB6E4F4BEF112B5BB26E144355"
+      modelFingerprint: "78BDAC74AE68AB3F750C0ECFF7F686FB"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -12178,34 +12215,15 @@ methods:
           sapientType: "OBJECT"
           content: !<static_method_return>
             target: "org.bitcoinj.core.LockTime"
-            method: "of"
-            methodParameters:
-            - name: "rawValue"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "long"
-                uuid: "<init>_lockTime1-rawValue"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+            method: "unset"
+            methodParameters: []
           suggestedContent: !<static_method_return>
             target: "org.bitcoinj.core.LockTime"
-            method: "of"
-            methodParameters:
-            - name: "rawValue"
-              value:
-                sapientType: "BASIC"
-                valueType: "long"
-                uuid: "<init>_lockTime1-rawValue"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+            method: "unset"
+            methodParameters: []
           valueType: "org.bitcoinj.core.LockTime"
           uuid: "<init>_lockTime1"
           fixed: false
-          nameForMock: "LockTime"
           equalsMethodPresent: false
           explicitCastNeeded: false
         access: 9
@@ -14238,7 +14256,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "30FBA7161CE970B109D38A0ECE19A159"
+    modelFingerprint: "A92F49E5190DB70A1A5B169D144A9A1C"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
@@ -14337,7 +14355,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "LockTime"
-      modelFingerprint: "78BDAC74AE68AB3F750C0ECFF7F686FB"
+      modelFingerprint: "099378CB6E4F4BEF112B5BB26E144355"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -14358,15 +14376,34 @@ methods:
           sapientType: "OBJECT"
           content: !<static_method_return>
             target: "org.bitcoinj.core.LockTime"
-            method: "unset"
-            methodParameters: []
+            method: "of"
+            methodParameters:
+            - name: "rawValue"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "long"
+                uuid: "<init>_lockTime1-rawValue"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           suggestedContent: !<static_method_return>
             target: "org.bitcoinj.core.LockTime"
-            method: "unset"
-            methodParameters: []
+            method: "of"
+            methodParameters:
+            - name: "rawValue"
+              value:
+                sapientType: "BASIC"
+                valueType: "long"
+                uuid: "<init>_lockTime1-rawValue"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           valueType: "org.bitcoinj.core.LockTime"
           uuid: "<init>_lockTime1"
           fixed: false
+          nameForMock: "LockTime"
           equalsMethodPresent: false
           explicitCastNeeded: false
         access: 9
@@ -14942,8 +14979,8 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "MODERATE"
-    modelFingerprint: "6A7CE22F9E4FDD8526B0F4D0FFDB11A6"
-    problemWasSolvedByProver: false
+    modelFingerprint: "641D807DD05AECD419C9F6108B6D2DD3"
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -15025,27 +15062,24 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "indent"
-      modelFingerprint: "3F8C4FCA5F7DF17B90DFF1FBFA70C2C5"
+      modelFingerprint: "C191C5CEBA6C6ABF962E312EAAA831FB"
       index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "BASIC"
-        content: !<unknown_object>
-          target: "java.lang.CharSequence"
-          onlyPojoFunctions: false
-          builderPattern: false
-        suggestedContent: !<unknown_object>
-          target: "java.lang.CharSequence"
-          onlyPojoFunctions: false
-          builderPattern: false
+        content: !<regular>
+          value: "toString_charSequence1"
+        suggestedContent: !<regular>
+          value: "toString_charSequence1"
         valueType: "java.lang.String"
         uuid: "toString_charSequence1"
         fixed: false
         nameForMock: "toString_charSequence1"
         equalsMethodPresent: false
         explicitCastNeeded: false
+        explicitCastForOverloadedMethods: "java.lang.CharSequence"
       staticReadMethodForField: false
       filledByUser: false
     - type: "STATIC"
@@ -15102,6 +15136,7 @@ methods:
           valueType: "org.bitcoinj.base.Sha256Hash"
           uuid: "toString_sha256Hash1"
           fixed: false
+          nameForMock: "toString_sha256Hash1"
           equalsMethodPresent: false
           explicitCastNeeded: false
         access: 1
@@ -15128,6 +15163,7 @@ methods:
           valueType: "org.bitcoinj.base.Sha256Hash"
           uuid: "toString_sha256Hash2"
           fixed: false
+          nameForMock: "toString_sha256Hash2"
           equalsMethodPresent: false
           explicitCastNeeded: false
         access: 1
@@ -15161,7 +15197,7 @@ methods:
       filledByUser: false
     - type: "INTERNAL"
       name: "internalMethod"
-      modelFingerprint: "A25C44DFBDF8B531FA072BA4C3EC8837"
+      modelFingerprint: "4936CC2D156ED3632E1692985FD22783"
       index: 9
       ignored: false
       nestedInLoop: false
@@ -15174,9 +15210,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: 2
+            value: 8
           suggestedContent: !<regular>
-            value: 2
+            value: 8
           valueType: "int"
           uuid: "toString_int2"
           fixed: false
@@ -15187,7 +15223,7 @@ methods:
       filledByUser: false
     - type: "INTERNAL"
       name: "internalMethod"
-      modelFingerprint: "119875679EC0FA9DA4C5469616C83774"
+      modelFingerprint: "C166FF880425E213F21CC8BDAC1E181B"
       index: 10
       ignored: false
       nestedInLoop: false
@@ -15200,9 +15236,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: 3
+            value: 9
           suggestedContent: !<regular>
-            value: 3
+            value: 9
           valueType: "int"
           uuid: "toString_int3"
           fixed: false
@@ -15402,7 +15438,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "B45D50E346B7EABC30F5A0D08E80E4CF"
-      index: 12
+      index: 16
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -15428,7 +15464,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "E0B2184C63C8EE374A68A41A224D3A38"
-      index: 13
+      index: 17
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -15454,7 +15490,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "D8C441B1F7FB9B66C8DD64ED4CACE6FA"
-      index: 14
+      index: 18
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -15480,7 +15516,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "519ED5F2D80250BF0D9835759EF5BFB0"
-      index: 15
+      index: 19
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -15506,7 +15542,7 @@ methods:
     - type: "LOCAL_VARIABLE"
       name: "fee"
       modelFingerprint: "4EB8C4785E56FB17C32EE7BFE4B4C6FB"
-      index: 16
+      index: 20
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -15637,7 +15673,7 @@ methods:
     - type: "LOCAL_VARIABLE"
       name: "fee"
       modelFingerprint: "4EB8C4785E56FB17C32EE7BFE4B4C6FB"
-      index: 16
+      index: 23
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -15673,7 +15709,7 @@ methods:
             onlyPojoFunctions: false
             builderPattern: false
           valueType: "org.bitcoinj.base.Coin"
-          uuid: "toString_coin2"
+          uuid: "toString_coin4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -15681,7 +15717,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "D784FFE24A930FEB65104C515DAD61CA"
+      modelFingerprint: "E811988EA39D5C267498417D197826C6"
       index: 24
       ignored: false
       nestedInLoop: false
@@ -15705,9 +15741,9 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: 3
+              value: 9
             suggestedContent: !<regular>
-              value: 3
+              value: 9
             valueType: "long"
             originalValueType: "int"
             uuid: "toString_long2"
@@ -15768,7 +15804,7 @@ methods:
     - type: "LOCAL_VARIABLE"
       name: "fee"
       modelFingerprint: "4EB8C4785E56FB17C32EE7BFE4B4C6FB"
-      index: 16
+      index: 26
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -15804,7 +15840,7 @@ methods:
             onlyPojoFunctions: false
             builderPattern: false
           valueType: "org.bitcoinj.base.Coin"
-          uuid: "toString_coin2"
+          uuid: "toString_coin6"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -15812,8 +15848,8 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "815425F5E19F33752169D8E6890BF1F3"
-      index: 20
+      modelFingerprint: "F63971F34B4486358BE3E496CAC49EC1"
+      index: 27
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -15824,7 +15860,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.base.Coin"
-        uuid: "toString_coin4"
+        uuid: "toString_coin6"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -15836,12 +15872,12 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: 2
+              value: 8
             suggestedContent: !<regular>
-              value: 2
+              value: 8
             valueType: "long"
             originalValueType: "int"
-            uuid: "toString_long2"
+            uuid: "toString_long3"
             fixed: false
             equalsMethodPresent: false
             explicitCastNeeded: false
@@ -15853,7 +15889,7 @@ methods:
             onlyPojoFunctions: false
             builderPattern: false
           valueType: "org.bitcoinj.base.Coin"
-          uuid: "toString_coin5"
+          uuid: "toString_coin7"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -15935,7 +15971,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "D74A934505854518854830E5414D064E"
+      modelFingerprint: "4CBFFBB5F5C787CEC35B220158C96BA9"
       index: 30
       ignored: false
       nestedInLoop: false
@@ -15944,14 +15980,14 @@ methods:
         sapientType: "BASIC"
         content: !<regular>
           value: "toString_charSequence1toString_sha256Hash1, wtxid toString_sha256Hash2\\\
-            ntoString_charSequence1weight: 8 wu, 3 virtual bytes, 2 bytes\\ntoString_charSequence1time\
+            ntoString_charSequence1weight: 8 wu, 9 virtual bytes, 8 bytes\\ntoString_charSequence1time\
             \ locked until toString_lockTime1 (estimated to be reached at A)\\ntoString_charSequence1has\
             \ relative lock time\\ntoString_charSequence1opts into full replace-by-fee\\\
             ntoString_charSequence1purpose: UNKNOWN\\ntoString_charSequence1coinbase\\\
             ntoString_charSequence1   fee  C/wu, D/vkB, E/kB  F\\n"
         suggestedContent: !<regular>
           value: "toString_charSequence1toString_sha256Hash1, wtxid toString_sha256Hash2\\\
-            ntoString_charSequence1weight: 8 wu, 3 virtual bytes, 2 bytes\\ntoString_charSequence1time\
+            ntoString_charSequence1weight: 8 wu, 9 virtual bytes, 8 bytes\\ntoString_charSequence1time\
             \ locked until toString_lockTime1 (estimated to be reached at A)\\ntoString_charSequence1has\
             \ relative lock time\\ntoString_charSequence1opts into full replace-by-fee\\\
             ntoString_charSequence1purpose: UNKNOWN\\ntoString_charSequence1coinbase\\\
@@ -15965,12 +16001,11 @@ methods:
       filledByUser: false
     uuid: "e3b70c71-7dcb-35ee-a4a5-bcd7f8ab379c"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
-    failureReason:
-      reason: "CLASS_TYPE_COULD_NOT_BE_MOCKED_AND_NEEDS_TO_STRING"
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path4"
     pathIdForUser: "path11"
     testPathName: "toString2WhenInputsIsEmptyAndOutputsIsEmptyAndFeeIsNull"
@@ -16279,7 +16314,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "MODERATE"
-    modelFingerprint: "1764721310DBF28ACA52829C0F8D8109"
+    modelFingerprint: "92FA8617C74571005D0346D44F889BFA"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
@@ -16471,7 +16506,7 @@ methods:
       filledByUser: false
     - type: "INTERNAL"
       name: "internalMethod"
-      modelFingerprint: "4506B31F3620AF160923485D3B1A0C38"
+      modelFingerprint: "2C93D789AD0CA43A5C1451582BDF0E3C"
       index: 8
       ignored: false
       nestedInLoop: false
@@ -16484,9 +16519,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: 2
+            value: 8
           suggestedContent: !<regular>
-            value: 2
+            value: 8
           valueType: "int"
           uuid: "toString_int1"
           fixed: false
@@ -16497,7 +16532,7 @@ methods:
       filledByUser: false
     - type: "INTERNAL"
       name: "internalMethod"
-      modelFingerprint: "4936CC2D156ED3632E1692985FD22783"
+      modelFingerprint: "A25C44DFBDF8B531FA072BA4C3EC8837"
       index: 9
       ignored: false
       nestedInLoop: false
@@ -16510,9 +16545,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: 8
+            value: 2
           suggestedContent: !<regular>
-            value: 8
+            value: 2
           valueType: "int"
           uuid: "toString_int2"
           fixed: false
@@ -16523,7 +16558,7 @@ methods:
       filledByUser: false
     - type: "INTERNAL"
       name: "internalMethod"
-      modelFingerprint: "C166FF880425E213F21CC8BDAC1E181B"
+      modelFingerprint: "119875679EC0FA9DA4C5469616C83774"
       index: 10
       ignored: false
       nestedInLoop: false
@@ -16536,9 +16571,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: 9
+            value: 3
           suggestedContent: !<regular>
-            value: 9
+            value: 3
           valueType: "int"
           uuid: "toString_int3"
           fixed: false
@@ -16886,7 +16921,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "815425F5E19F33752169D8E6890BF1F3"
+      modelFingerprint: "F63971F34B4486358BE3E496CAC49EC1"
       index: 21
       ignored: false
       nestedInLoop: false
@@ -16910,9 +16945,9 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: 2
+              value: 8
             suggestedContent: !<regular>
-              value: 2
+              value: 8
             valueType: "long"
             originalValueType: "int"
             uuid: "toString_long1"
@@ -17017,7 +17052,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "E811988EA39D5C267498417D197826C6"
+      modelFingerprint: "D784FFE24A930FEB65104C515DAD61CA"
       index: 24
       ignored: false
       nestedInLoop: false
@@ -17041,9 +17076,9 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: 9
+              value: 3
             suggestedContent: !<regular>
-              value: 9
+              value: 3
             valueType: "long"
             originalValueType: "int"
             uuid: "toString_long2"
@@ -17148,7 +17183,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "F63971F34B4486358BE3E496CAC49EC1"
+      modelFingerprint: "815425F5E19F33752169D8E6890BF1F3"
       index: 27
       ignored: false
       nestedInLoop: false
@@ -17172,9 +17207,9 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: 8
+              value: 2
             suggestedContent: !<regular>
-              value: 8
+              value: 2
             valueType: "long"
             originalValueType: "int"
             uuid: "toString_long3"
@@ -17271,7 +17306,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "2765C801BB87A9E5CB9F1A80BFFDA888"
+      modelFingerprint: "E341347997E6A90A9802A849F0AB2FF8"
       index: 30
       ignored: false
       nestedInLoop: false
@@ -17280,14 +17315,14 @@ methods:
         sapientType: "BASIC"
         content: !<regular>
           value: "toString_charSequence1toString_sha256Hash1, wtxid toString_sha256Hash2\\\
-            ntoString_charSequence1weight: 2 wu, 9 virtual bytes, 8 bytes\\ntoString_charSequence1time\
+            ntoString_charSequence1weight: 8 wu, 3 virtual bytes, 2 bytes\\ntoString_charSequence1time\
             \ locked until toString_lockTime1 (estimated to be reached at A)\\ntoString_charSequence1has\
             \ relative lock time\\ntoString_charSequence1opts into full replace-by-fee\\\
             ntoString_charSequence1purpose: UNKNOWN\\ntoString_charSequence1   INCOMPLETE:\
             \ No inputs!\\ntoString_charSequence1   fee  D/wu, F/vkB, G/kB  J\\n"
         suggestedContent: !<regular>
           value: "toString_charSequence1toString_sha256Hash1, wtxid toString_sha256Hash2\\\
-            ntoString_charSequence1weight: 2 wu, 9 virtual bytes, 8 bytes\\ntoString_charSequence1time\
+            ntoString_charSequence1weight: 8 wu, 3 virtual bytes, 2 bytes\\ntoString_charSequence1time\
             \ locked until toString_lockTime1 (estimated to be reached at A)\\ntoString_charSequence1has\
             \ relative lock time\\ntoString_charSequence1opts into full replace-by-fee\\\
             ntoString_charSequence1purpose: UNKNOWN\\ntoString_charSequence1   INCOMPLETE:\
@@ -18655,14 +18690,14 @@ methods:
       filledByUser: false
     uuid: "11928278-ed37-34b3-a179-c2077c8b9a58"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
       source: "input.setParent(this);"
       lineNumber: 883
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "addSignedInput"
     returnType: "org.bitcoinj.core.TransactionInput"
@@ -21889,12 +21924,12 @@ methods:
       filledByUser: false
     uuid: "1b6d75f8-462d-35e2-acf4-3142c16b9c1b"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "EXTERNAL_FIELD_WITHOUT_ACCESS"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "hashForWitnessSignature"
     returnType: "org.bitcoinj.base.Sha256Hash"
@@ -22117,7 +22152,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "1C6D54535A0650CF6B7BB05E704A9C4A"
-      index: 8
+      index: 7
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -22196,12 +22231,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "MODERATE"
-    modelFingerprint: "BF058673B044A32E4560F6D85EE04F3F"
+    modelFingerprint: "87FAC9B695CC2EFCDAF69981B4F4F1CD"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "7B391187F71CE0A1A6A9F1303516B19A"
+      modelFingerprint: "66CE061A9C420007ECBF5878EEE34839"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -22213,33 +22248,7 @@ methods:
           parameters:
           - name: "params"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "org.bitcoinj.core.NetworkParameters"
-                method: "fromID"
-                methodParameters:
-                - name: "id"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "id1"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_networkParameters1-id"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.core.NetworkParameters"
-                method: "fromID"
-                methodParameters:
-                - name: "id"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_networkParameters1-id"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+              sapientType: "MOCK"
               valueType: "org.bitcoinj.core.NetworkParameters"
               uuid: "<init>_networkParameters1"
               fixed: false
@@ -22252,33 +22261,7 @@ methods:
           parameters:
           - name: "params"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "org.bitcoinj.core.NetworkParameters"
-                method: "fromID"
-                methodParameters:
-                - name: "id"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "id1"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_networkParameters1-id"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.core.NetworkParameters"
-                method: "fromID"
-                methodParameters:
-                - name: "id"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_networkParameters1-id"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.core.NetworkParameters"
               uuid: "<init>_networkParameters1"
               fixed: false
@@ -22295,7 +22278,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "inputIndex"
-      modelFingerprint: "17997D7D1042E11619766A6CEF49F2DC"
+      modelFingerprint: "69F3AE0C8D04C713EB459A9C71D9C95D"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -22315,7 +22298,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "scriptCode"
-      modelFingerprint: "2B2242BFB124261FDFD5FF96C533BA3C"
+      modelFingerprint: "7D46E8D13BD6C8D1F5D9CCD3BC9A7E1A"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -22323,69 +22306,9 @@ methods:
       value:
         sapientType: "ARRAY"
         content: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 1
-              suggestedContent: !<regular>
-                value: 1
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            1:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 2
-              suggestedContent: !<regular>
-                value: 2
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            2:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 3
-              suggestedContent: !<regular>
-                value: 3
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          values: {}
         suggestedContent: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 1
-              suggestedContent: !<regular>
-                value: 1
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            1:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 2
-              suggestedContent: !<regular>
-                value: 2
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            2:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 3
-              suggestedContent: !<regular>
-                value: 3
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          values: {}
         valueType: "byte[]"
         uuid: "hashForWitnessSignature_byte[]1"
         fixed: false
@@ -22395,28 +22318,23 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "prevValue"
-      modelFingerprint: "EA4EBEAE07AA3CF62DEFA5B25072EBC5"
+      modelFingerprint: "575C74F06B1B1D3BE020D95D44A29224"
       index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.base.Coin"
-          onlyPojoFunctions: false
-          builderPattern: false
         valueType: "org.bitcoinj.base.Coin"
         uuid: "hashForWitnessSignature_coin1"
         fixed: false
-        nameForMock: "1000000"
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
     - type: "INPUT"
       name: "sigHashType"
-      modelFingerprint: "926E31586AB4D7871B10FA73A502A0A0"
+      modelFingerprint: "E2D9A753EAC9407575BDFEECD6414044"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -22424,9 +22342,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 1
-        suggestedContent: !<regular>
-          value: 1
+          value: 0
         valueType: "byte"
         uuid: "hashForWitnessSignature_byte1"
         fixed: false
@@ -22436,13 +22352,13 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "LockTime"
-      modelFingerprint: "78BDAC74AE68AB3F750C0ECFF7F686FB"
+      modelFingerprint: "17DF59009178159AE80C7ED7DB902FCB"
       index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "REAL"
         valueType: "org.bitcoinj.core.LockTime"
         uuid: "org.bitcoinj.core.LockTime"
         fixed: false
@@ -22481,7 +22397,7 @@ methods:
       idsTryCatchBlockSurrounding:
       - 12
       value:
-        sapientType: "MOCK"
+        sapientType: "REAL"
         valueType: "org.bitcoinj.base.Sha256Hash"
         uuid: "org.bitcoinj.base.Sha256Hash"
         fixed: false
@@ -23104,7 +23020,7 @@ methods:
       idsTryCatchBlockSurrounding:
       - 12
       value:
-        sapientType: "MOCK"
+        sapientType: "REAL"
         valueType: "org.bitcoinj.base.Sha256Hash"
         uuid: "org.bitcoinj.base.Sha256Hash"
         fixed: false
@@ -23719,7 +23635,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "10B5DFD277F3AC3A109D8B0AA7D405C5"
+      modelFingerprint: "3038E472CD12875D91E184DF06EAE579"
       index: 9
       ignored: false
       nestedInLoop: false
@@ -23727,7 +23643,7 @@ methods:
       idsTryCatchBlockSurrounding:
       - 12
       value:
-        sapientType: "MOCK"
+        sapientType: "REAL"
         valueType: "org.bitcoinj.base.Sha256Hash"
         uuid: "org.bitcoinj.base.Sha256Hash"
         fixed: false
@@ -24451,7 +24367,6 @@ methods:
     ignoredBySystem: false
     failureReason:
       reason: "BITWISE_NOT_SUPPORTED"
-    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -24580,7 +24495,7 @@ methods:
     - type: "STATIC"
       name: "VarInt"
       modelFingerprint: "BF62D1C960725D735411CB7A6B118FA4"
-      index: 5
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -24611,7 +24526,7 @@ methods:
           content: !<regular>
             value: 1
           valueType: "int"
-          uuid: "messageSize_int8"
+          uuid: "messageSize_int4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -24803,7 +24718,7 @@ methods:
     - type: "STATIC"
       name: "VarInt"
       modelFingerprint: "BF62D1C960725D735411CB7A6B118FA4"
-      index: 5
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -24834,7 +24749,7 @@ methods:
           content: !<regular>
             value: 1
           valueType: "int"
-          uuid: "messageSize_int9"
+          uuid: "messageSize_int5"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -30155,7 +30070,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "3A21543F56248AC92654D6E439128AED"
-      index: 4
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -30378,6 +30293,10 @@ methods:
         signature: "unset(): LockTime"
         returnValue:
           sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.core.LockTime"
+            method: "unset"
+            methodParameters: []
           suggestedContent: !<static_method_return>
             target: "org.bitcoinj.core.LockTime"
             method: "unset"
@@ -31403,7 +31322,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "94D740F4A2086DECD66E9DF6A230EA16"
+    modelFingerprint: "0799C76C792D9AA2879C41A93E39F0EA"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -31516,14 +31435,14 @@ methods:
         valueType: "org.bitcoinj.core.AbstractBlockChain"
         uuid: "estimateLockTime_abstractBlockChain1"
         fixed: false
-        nameForMock: "mockAbstractBlockChain"
+        nameForMock: "AbstractBlockChain"
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
     - type: "STATIC"
       name: "LockTime"
-      modelFingerprint: "78BDAC74AE68AB3F750C0ECFF7F686FB"
+      modelFingerprint: "099378CB6E4F4BEF112B5BB26E144355"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -31544,15 +31463,34 @@ methods:
           sapientType: "OBJECT"
           content: !<static_method_return>
             target: "org.bitcoinj.core.LockTime"
-            method: "unset"
-            methodParameters: []
+            method: "of"
+            methodParameters:
+            - name: "rawValue"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "long"
+                uuid: "<init>_lockTime1-rawValue"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           suggestedContent: !<static_method_return>
             target: "org.bitcoinj.core.LockTime"
-            method: "unset"
-            methodParameters: []
+            method: "of"
+            methodParameters:
+            - name: "rawValue"
+              value:
+                sapientType: "BASIC"
+                valueType: "long"
+                uuid: "<init>_lockTime1-rawValue"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           valueType: "org.bitcoinj.core.LockTime"
           uuid: "<init>_lockTime1"
           fixed: false
+          nameForMock: "LockTime"
           equalsMethodPresent: false
           explicitCastNeeded: false
         access: 9
@@ -31579,7 +31517,7 @@ methods:
             valueType: "org.bitcoinj.core.AbstractBlockChain"
             uuid: "estimateLockTime_abstractBlockChain1"
             fixed: false
-            nameForMock: "mockAbstractBlockChain"
+            nameForMock: "AbstractBlockChain"
             equalsMethodPresent: false
             explicitCastNeeded: false
         signature: "estimateUnlockTime(AbstractBlockChain): Instant"
@@ -31892,12 +31830,12 @@ methods:
       filledByUser: false
     uuid: "643f20a7-23a0-3bf8-b652-405708f718e7"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "EXTERNAL_FIELD_WITHOUT_ACCESS"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "verify"
     returnType: "void"

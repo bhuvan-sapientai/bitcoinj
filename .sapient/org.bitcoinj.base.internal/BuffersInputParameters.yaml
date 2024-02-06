@@ -484,6 +484,8 @@ methods:
           sapientType: "ARRAY"
           content: !<array>
             values: {}
+          suggestedContent: !<array>
+            values: {}
           valueType: "byte[]"
           uuid: "readLengthPrefixedBytes_byte[]1"
           fixed: false
@@ -502,6 +504,8 @@ methods:
       value:
         sapientType: "ARRAY"
         content: !<array>
+          values: {}
+        suggestedContent: !<array>
           values: {}
         valueType: "byte[]"
         uuid: "readLengthPrefixedBytes_byte[]1"
@@ -535,13 +539,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "65F180F601F6891DE0D5AE2146479141"
+    modelFingerprint: "87B2F5DA00E2462A8B8B7B480238BAB3"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "buf"
-      modelFingerprint: "CCC4F5E2F111BBF0D20E46EF5CA68BC3"
+      modelFingerprint: "1252C11318E77FDAA9B366ABFB220D79"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -583,7 +587,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "bytes"
-      modelFingerprint: "2178BB9D32EF508DD733BF6E0464925E"
+      modelFingerprint: "C94E77CCA72C9C31FF086AE1F31D16F8"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -591,25 +595,9 @@ methods:
       value:
         sapientType: "ARRAY"
         content: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          values: {}
         suggestedContent: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "byte"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          values: {}
         valueType: "byte[]"
         uuid: "writeLengthPrefixedBytes_byte[]1"
         fixed: false
@@ -619,7 +607,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "VarInt"
-      modelFingerprint: "8FC3094AD5C52B2F200A08749D0F2F11"
+      modelFingerprint: "08277EAD9E01B35BD27B3270FA755BC5"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -639,10 +627,13 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: 1
+              value: 0
+            suggestedContent: !<regular>
+              value: 0
             valueType: "long"
             originalValueType: "int"
-            fixed: true
+            uuid: "writeLengthPrefixedBytes_long1"
+            fixed: false
             equalsMethodPresent: false
             explicitCastNeeded: false
         signature: "of(long): VarInt"
@@ -661,7 +652,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "7A1D838253C8E45065E36C473F172F54"
+      modelFingerprint: "F23BEE8849FF71B8C54F2CCC2C149C7C"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -698,234 +689,39 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "D918478D856B6E9AE7196203BCF18012"
+      modelFingerprint: "7D316644F1B80F06BF95B6F66B39B36C"
       index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "OBJECT"
-        content: !<method_return_from_value>
+        content: !<static_method_return>
           target: "java.nio.ByteBuffer"
-          localVariableValue:
-            sapientType: "OBJECT"
-            content: !<method_return_from_value>
-              target: "java.nio.ByteBuffer"
-              localVariableValue:
-                sapientType: "OBJECT"
-                content: !<static_method_return>
-                  target: "java.nio.ByteBuffer"
-                  method: "allocateDirect"
-                  methodParameters:
-                  - name: "capacity"
-                    value:
-                      sapientType: "BASIC"
-                      content: !<regular>
-                        value: 0
-                      valueType: "int"
-                      uuid: "writeLengthPrefixedBytes_byteBuffer1-capacity"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                suggestedContent: !<static_method_return>
-                  target: "java.nio.ByteBuffer"
-                  method: "allocateDirect"
-                  methodParameters:
-                  - name: "capacity"
-                    value:
-                      sapientType: "BASIC"
-                      valueType: "int"
-                      uuid: "writeLengthPrefixedBytes_byteBuffer1-capacity"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                valueType: "java.nio.ByteBuffer"
-                uuid: "writeLengthPrefixedBytes_byteBuffer1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              methodParameters:
-              - name: "src"
-                value:
-                  sapientType: "ARRAY"
-                  content: !<array>
-                    values: {}
-                  suggestedContent: !<array>
-                    values: {}
-                  valueType: "byte[]"
-                  uuid: "writeLengthPrefixedBytes_byte[]2"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              methodName: "put"
-            suggestedContent: !<method_return_from_value>
-              target: "java.nio.ByteBuffer"
-              localVariableValue:
-                sapientType: "OBJECT"
-                content: !<static_method_return>
-                  target: "java.nio.ByteBuffer"
-                  method: "allocateDirect"
-                  methodParameters:
-                  - name: "capacity"
-                    value:
-                      sapientType: "BASIC"
-                      content: !<regular>
-                        value: 0
-                      valueType: "int"
-                      uuid: "writeLengthPrefixedBytes_byteBuffer1-capacity"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                suggestedContent: !<static_method_return>
-                  target: "java.nio.ByteBuffer"
-                  method: "allocateDirect"
-                  methodParameters:
-                  - name: "capacity"
-                    value:
-                      sapientType: "BASIC"
-                      valueType: "int"
-                      uuid: "writeLengthPrefixedBytes_byteBuffer1-capacity"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                valueType: "java.nio.ByteBuffer"
-                uuid: "writeLengthPrefixedBytes_byteBuffer1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              methodParameters:
-              - name: "src"
-                value:
-                  sapientType: "ARRAY"
-                  content: !<array>
-                    values: {}
-                  suggestedContent: !<array>
-                    values: {}
-                  valueType: "byte[]"
-                  uuid: "writeLengthPrefixedBytes_byte[]2"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              methodName: "put"
-            valueType: "java.nio.ByteBuffer"
-            uuid: "writeLengthPrefixedBytes_byteBuffer2"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
+          method: "allocateDirect"
           methodParameters:
-          - name: "src"
+          - name: "capacity"
             value:
-              sapientType: "ARRAY"
-              content: !<array>
-                values:
-                  0:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 0
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<array>
-                values:
-                  0:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 0
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              valueType: "byte[]"
-              uuid: "writeLengthPrefixedBytes_byte[]1"
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "int"
+              uuid: "writeLengthPrefixedBytes_byteBuffer3-capacity"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
-          methodName: "put"
-        suggestedContent: !<method_return_from_value>
+        suggestedContent: !<static_method_return>
           target: "java.nio.ByteBuffer"
-          localVariableValue:
-            sapientType: "OBJECT"
-            suggestedContent: !<method_return_from_value>
-              target: "java.nio.ByteBuffer"
-              localVariableValue:
-                sapientType: "OBJECT"
-                content: !<static_method_return>
-                  target: "java.nio.ByteBuffer"
-                  method: "allocateDirect"
-                  methodParameters:
-                  - name: "capacity"
-                    value:
-                      sapientType: "BASIC"
-                      content: !<regular>
-                        value: 0
-                      valueType: "int"
-                      uuid: "writeLengthPrefixedBytes_byteBuffer1-capacity"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                suggestedContent: !<static_method_return>
-                  target: "java.nio.ByteBuffer"
-                  method: "allocateDirect"
-                  methodParameters:
-                  - name: "capacity"
-                    value:
-                      sapientType: "BASIC"
-                      valueType: "int"
-                      uuid: "writeLengthPrefixedBytes_byteBuffer1-capacity"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                valueType: "java.nio.ByteBuffer"
-                uuid: "writeLengthPrefixedBytes_byteBuffer1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              methodParameters:
-              - name: "src"
-                value:
-                  sapientType: "ARRAY"
-                  content: !<array>
-                    values: {}
-                  suggestedContent: !<array>
-                    values: {}
-                  valueType: "byte[]"
-                  uuid: "writeLengthPrefixedBytes_byte[]2"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              methodName: "put"
-            valueType: "java.nio.ByteBuffer"
-            uuid: "writeLengthPrefixedBytes_byteBuffer2"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
+          method: "allocateDirect"
           methodParameters:
-          - name: "src"
+          - name: "capacity"
             value:
-              sapientType: "ARRAY"
-              content: !<array>
-                values:
-                  0:
-                    sapientType: "BASIC"
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<array>
-                values:
-                  0:
-                    sapientType: "BASIC"
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              valueType: "byte[]"
-              uuid: "writeLengthPrefixedBytes_byte[]1"
+              sapientType: "BASIC"
+              valueType: "int"
+              uuid: "writeLengthPrefixedBytes_byteBuffer3-capacity"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
-          methodName: "put"
         valueType: "java.nio.ByteBuffer"
         uuid: "writeLengthPrefixedBytes_byteBuffer3"
         fixed: false
@@ -938,8 +734,7 @@ methods:
     disabled: false
     ignoredBySystem: false
     failureReason:
-      reason: "REFLECTION_CALL_FAILURE"
-    prover: "LLM"
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -1062,6 +857,8 @@ methods:
           sapientType: "ARRAY"
           content: !<array>
             values: {}
+          suggestedContent: !<array>
+            values: {}
           valueType: "byte[]"
           uuid: "readLengthPrefixedString_byte[]1"
           fixed: false
@@ -1114,7 +911,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "7E8FF10FB8F1102AA994C09F8733FC2C"
+    modelFingerprint: "618EE4223708EAD2E19871B318F44321"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -1180,7 +977,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "VarInt"
-      modelFingerprint: "F1513CCB17BC1A4D6BFB05D845D22C53"
+      modelFingerprint: "08277EAD9E01B35BD27B3270FA755BC5"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -1225,7 +1022,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "7A1D838253C8E45065E36C473F172F54"
+      modelFingerprint: "F23BEE8849FF71B8C54F2CCC2C149C7C"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -1308,7 +1105,6 @@ methods:
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -1481,13 +1277,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "0441CBCE411FB967B35CBBFDAB37525E"
-    problemWasSolvedByProver: true
+    modelFingerprint: "ECEDEF02FFC799BE780DE6875119CC16"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "buf"
-      modelFingerprint: "D9502874ABE1CA67297A590F5B7E0FB1"
+      modelFingerprint: "E78EB9D5CB826E0A6A0C7C85F54F4F2A"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1529,7 +1325,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "numBytes"
-      modelFingerprint: "54725A08CA6E1C4D859739E89FA706CC"
+      modelFingerprint: "B2556DB1510453C7CD50E8EC221CE541"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -1537,9 +1333,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 0
+          value: 1
         suggestedContent: !<regular>
-          value: 0
+          value: 1
         valueType: "int"
         uuid: "skipBytes_int1"
         fixed: false
@@ -1634,7 +1430,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "D443FCA5982459A6B11BB072DD2161AA"
+      modelFingerprint: "7D316644F1B80F06BF95B6F66B39B36C"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -1678,7 +1474,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "LLM"
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -1688,13 +1485,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "4F4A0E11F3CD8CF5410BB8EE21F6D6D9"
+    modelFingerprint: "7394A28963EE78C549B5B45A9E061514"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "buf"
-      modelFingerprint: "D9502874ABE1CA67297A590F5B7E0FB1"
+      modelFingerprint: "E78EB9D5CB826E0A6A0C7C85F54F4F2A"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1736,7 +1533,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "numBytes"
-      modelFingerprint: "89BB655BCAD97B58B6EE668CBF47A215"
+      modelFingerprint: "52FF0CCCEF2F64EFB44CFEFE39AFDF77"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -1744,9 +1541,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 5
+          value: 2
         suggestedContent: !<regular>
-          value: 5
+          value: 2
         valueType: "int"
         uuid: "skipBytes_int1"
         fixed: false
@@ -1841,7 +1638,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "D443FCA5982459A6B11BB072DD2161AA"
+      modelFingerprint: "7D316644F1B80F06BF95B6F66B39B36C"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -1887,6 +1684,5 @@ methods:
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

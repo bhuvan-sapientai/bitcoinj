@@ -35,8 +35,10 @@ public class Base58SapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{};
+
         //Act Statement(s)
         String result = Base58.encode(byteArray);
+
         //Assert statement(s)
         assertThat(result, equalTo(""));
     }
@@ -61,8 +63,10 @@ public class Base58SapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{(byte) 0};
+
         //Act Statement(s)
         String result = Base58.encode(byteArray);
+
         //Assert statement(s)
         assertThat(result, equalTo("result1"));
     }
@@ -79,6 +83,7 @@ public class Base58SapientGeneratedJunit4Test {
         thrown.expect(IllegalArgumentException.class);
         thrown.expectMessage(illegalArgumentException.getMessage());
         byte[] byteArray = new byte[]{};
+
         //Act Statement(s)
         Base58.encodeChecked(256, byteArray);
     }
@@ -90,24 +95,17 @@ public class Base58SapientGeneratedJunit4Test {
         /* Branches:
          * (version < 0) : false
          * (version > 255) : false
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<Base58> base58 = mockStatic(Base58.class, CALLS_REAL_METHODS);
-             MockedStatic<Sha256Hash> sha256Hash = mockStatic(Sha256Hash.class)) {
-            byte[] byteArray = new byte[]{};
-            byte[] byteArray2 = new byte[]{(byte) 1, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
-            sha256Hash.when(() -> Sha256Hash.hashTwice(byteArray2, 0, 1)).thenReturn(byteArray);
-            base58.when(() -> Base58.encode(byteArray2)).thenReturn("return_of_encode1");
-            byte[] byteArray3 = new byte[]{};
+        try (MockedStatic<Base58> base58 = mockStatic(Base58.class, CALLS_REAL_METHODS)) {
+            byte[] byteArray = new byte[]{(byte) 1, (byte) -100, (byte) 18, (byte) -49, (byte) -36};
+            base58.when(() -> Base58.encode(byteArray)).thenReturn("return_of_encode1");
+            byte[] byteArray2 = new byte[]{};
             //Act Statement(s)
-            String result = Base58.encodeChecked(1, byteArray3);
+            String result = Base58.encodeChecked(1, byteArray2);
             //Assert statement(s)
             assertThat(result, equalTo("return_of_encode1"));
-            sha256Hash.verify(() -> Sha256Hash.hashTwice(byteArray2, 0, 1), atLeast(1));
-            base58.verify(() -> Base58.encode(byteArray2), atLeast(1));
+            base58.verify(() -> Base58.encode(byteArray), atLeast(1));
         }
     }
 
@@ -117,9 +115,11 @@ public class Base58SapientGeneratedJunit4Test {
         /* Branches:
          * (input.length() == 0) : true
          */
+
         //Act Statement(s)
         byte[] result = Base58.decode("");
         byte[] byteResultArray = new byte[]{};
+
         //Assert statement(s)
         assertThat(result, equalTo(byteResultArray));
     }
@@ -135,6 +135,7 @@ public class Base58SapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         thrown.expect(AddressFormatException.InvalidCharacter.class);
+
         //Act Statement(s)
         Base58.decode("\uFFFF");
     }
@@ -159,9 +160,11 @@ public class Base58SapientGeneratedJunit4Test {
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
+
         //Act Statement(s)
         byte[] result = Base58.decode("1A");
         byte[] byteResultArray = new byte[]{(byte) 0, (byte) 0};
+
         //Assert statement(s)
         assertThat(result, equalTo(byteResultArray));
     }
@@ -186,9 +189,11 @@ public class Base58SapientGeneratedJunit4Test {
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
+
         //Act Statement(s)
         byte[] result = Base58.decode("P");
         byte[] byteResultArray = new byte[]{};
+
         //Assert statement(s)
         assertThat(result, equalTo(byteResultArray));
     }

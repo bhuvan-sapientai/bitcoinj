@@ -40,144 +40,16 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "1D09506D2F1B6A29971CAE2EBA66F3CC"
-    problemWasSolvedByProver: false
-    truncated: false
-    inputParameters:
-    - type: "CONSTRUCTOR"
-      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
-      index: 1
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.wallet.DefaultCoinSelector"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.wallet.DefaultCoinSelector"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
-        valueType: "org.bitcoinj.wallet.DefaultCoinSelector"
-        uuid: "target"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INPUT"
-      name: "target"
-      modelFingerprint: "0F4C403D0FFAD03675730B50FC8B5C08"
-      index: 2
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<static_field_return>
-          target: "org.bitcoinj.base.BitcoinNetwork"
-          fieldName: "MAX_MONEY"
-        suggestedContent: !<static_field_return>
-          target: "org.bitcoinj.base.BitcoinNetwork"
-          fieldName: "MAX_MONEY"
-        valueType: "org.bitcoinj.base.Coin"
-        uuid: "select_coin2"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INPUT"
-      name: "candidates"
-      modelFingerprint: "7BF84FAC75FABC8169992A27AC68B960"
-      index: 3
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "COLLECTION"
-        content: !<collection>
-          parameters: []
-          values: []
-        suggestedContent: !<collection>
-          parameters: []
-          values: []
-        valueType: "java.util.List"
-        genericValueType: "org.bitcoinj.core.TransactionOutput"
-        uuid: "select_list1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "0F51EF7EDCF8C433EEE0696F16393C8A"
-      index: 4
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.wallet.CoinSelection"
-          parameters:
-          - name: "gathered"
-            value:
-              sapientType: "COLLECTION"
-              content: !<collection>
-                collectionClass: "java.util.ArrayList"
-                parameters: []
-                values: []
-              suggestedContent: !<collection>
-                collectionClass: "java.util.ArrayList"
-                parameters: []
-                values: []
-              valueType: "java.util.ArrayList"
-              genericValueType: "org.bitcoinj.core.TransactionOutput"
-              uuid: "select_arrayList1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
-        suggestedContent: !<new>
-          target: "org.bitcoinj.wallet.CoinSelection"
-          parameters:
-          - name: "gathered"
-            value:
-              sapientType: "COLLECTION"
-              suggestedContent: !<collection>
-                collectionClass: "java.util.ArrayList"
-                parameters: []
-                values: []
-              valueType: "java.util.ArrayList"
-              genericValueType: "org.bitcoinj.core.TransactionOutput"
-              uuid: "select_arrayList1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: true
-        valueType: "org.bitcoinj.wallet.CoinSelection"
-        uuid: "select_coinSelection1"
-        fixed: true
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
     uuid: "ac60cd75-b61f-3484-bd94-dd5676c31587"
-    deleted: false
-    disabled: true
+    deleted: true
+    disabled: false
     ignoredBySystem: true
-    failureReason:
-      reason: "EQUALS_METHOD_TODO_COMMENT"
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path1"
     pathIdForUser: "path3"
     testPathName: "selectWhenTotalGreaterThanOrEqualsToTargetValue"
@@ -186,7 +58,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "38FE1E5BFA2D0DFE49C74A5F25481B7B"
+    modelFingerprint: "B1023DED80CCF21C54EFBC16074368CC"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -217,7 +89,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "target"
-      modelFingerprint: "E1F74D26F043CC28D52EB4D4ADDE94A5"
+      modelFingerprint: "22AF3625FC43ABA7BA61A457CE03D96E"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -231,14 +103,13 @@ methods:
         valueType: "org.bitcoinj.base.Coin"
         uuid: "select_coin1"
         fixed: false
-        nameForMock: "1000000"
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
     - type: "INPUT"
       name: "candidates"
-      modelFingerprint: "54F22C5BB263C06E484991E9042FE59A"
+      modelFingerprint: "F6E7EE68784B14E4FB7BA11A4781F965"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -249,284 +120,22 @@ methods:
           collectionClass: "java.util.ArrayList"
           parameters: []
           values:
-          - sapientType: "OBJECT"
-            content: !<new>
-              target: "org.bitcoinj.core.TransactionOutput"
-              parameters:
-              - name: "parent"
-                value:
-                  sapientType: "MOCK"
-                  valueType: "org.bitcoinj.core.Transaction"
-                  uuid: "select_list1-0-parent"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "value"
-                value:
-                  sapientType: "MOCK"
-                  valueType: "org.bitcoinj.base.Coin"
-                  uuid: "select_list1-0-value"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "scriptBytes"
-                value:
-                  sapientType: "ARRAY"
-                  content: !<array>
-                    values: {}
-                  suggestedContent: !<array>
-                    values: {}
-                  valueType: "byte[]"
-                  uuid: "select_list1-0-scriptBytes"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              privateConstructor: false
-              createdByTargetCode: false
-            suggestedContent: !<new>
-              target: "org.bitcoinj.core.TransactionOutput"
-              parameters:
-              - name: "parent"
-                value:
-                  sapientType: "UNKNOWN"
-                  valueType: "org.bitcoinj.core.Transaction"
-                  uuid: "select_list1-0-parent"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "value"
-                value:
-                  sapientType: "UNKNOWN"
-                  valueType: "org.bitcoinj.base.Coin"
-                  uuid: "select_list1-0-value"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "scriptBytes"
-                value:
-                  sapientType: "ARRAY"
-                  valueType: "byte[]"
-                  uuid: "select_list1-0-scriptBytes"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              privateConstructor: false
-              createdByTargetCode: false
+          - sapientType: "MOCK"
             valueType: "org.bitcoinj.core.TransactionOutput"
-            uuid: "select_list1-0"
+            uuid: "select_object1"
             fixed: false
-            collectionUuid: "select_list1"
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-          - sapientType: "OBJECT"
-            content: !<new>
-              target: "org.bitcoinj.core.TransactionOutput"
-              parameters:
-              - name: "parent"
-                value:
-                  sapientType: "MOCK"
-                  valueType: "org.bitcoinj.core.Transaction"
-                  uuid: "select_list1-1-parent"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "value"
-                value:
-                  sapientType: "MOCK"
-                  valueType: "org.bitcoinj.base.Coin"
-                  uuid: "select_list1-1-value"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "scriptBytes"
-                value:
-                  sapientType: "ARRAY"
-                  content: !<array>
-                    values: {}
-                  suggestedContent: !<array>
-                    values: {}
-                  valueType: "byte[]"
-                  uuid: "select_list1-1-scriptBytes"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              privateConstructor: false
-              createdByTargetCode: false
-            suggestedContent: !<new>
-              target: "org.bitcoinj.core.TransactionOutput"
-              parameters:
-              - name: "parent"
-                value:
-                  sapientType: "UNKNOWN"
-                  valueType: "org.bitcoinj.core.Transaction"
-                  uuid: "select_list1-1-parent"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "value"
-                value:
-                  sapientType: "UNKNOWN"
-                  valueType: "org.bitcoinj.base.Coin"
-                  uuid: "select_list1-1-value"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "scriptBytes"
-                value:
-                  sapientType: "ARRAY"
-                  valueType: "byte[]"
-                  uuid: "select_list1-1-scriptBytes"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              privateConstructor: false
-              createdByTargetCode: false
-            valueType: "org.bitcoinj.core.TransactionOutput"
-            uuid: "select_list1-1"
-            fixed: false
-            collectionUuid: "select_list1"
+            collectionUuid: "select_arrayList2"
             equalsMethodPresent: false
             explicitCastNeeded: false
         suggestedContent: !<collection>
           collectionClass: "java.util.ArrayList"
           parameters: []
           values:
-          - sapientType: "OBJECT"
-            content: !<new>
-              target: "org.bitcoinj.core.TransactionOutput"
-              parameters:
-              - name: "parent"
-                value:
-                  sapientType: "MOCK"
-                  valueType: "org.bitcoinj.core.Transaction"
-                  uuid: "select_list1-0-parent"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "value"
-                value:
-                  sapientType: "MOCK"
-                  valueType: "org.bitcoinj.base.Coin"
-                  uuid: "select_list1-0-value"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "scriptBytes"
-                value:
-                  sapientType: "ARRAY"
-                  content: !<array>
-                    values: {}
-                  suggestedContent: !<array>
-                    values: {}
-                  valueType: "byte[]"
-                  uuid: "select_list1-0-scriptBytes"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              privateConstructor: false
-              createdByTargetCode: false
-            suggestedContent: !<new>
-              target: "org.bitcoinj.core.TransactionOutput"
-              parameters:
-              - name: "parent"
-                value:
-                  sapientType: "UNKNOWN"
-                  valueType: "org.bitcoinj.core.Transaction"
-                  uuid: "select_list1-0-parent"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "value"
-                value:
-                  sapientType: "UNKNOWN"
-                  valueType: "org.bitcoinj.base.Coin"
-                  uuid: "select_list1-0-value"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "scriptBytes"
-                value:
-                  sapientType: "ARRAY"
-                  valueType: "byte[]"
-                  uuid: "select_list1-0-scriptBytes"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              privateConstructor: false
-              createdByTargetCode: false
+          - sapientType: "MOCK"
             valueType: "org.bitcoinj.core.TransactionOutput"
-            uuid: "select_list1-0"
+            uuid: "select_object1"
             fixed: false
-            collectionUuid: "select_list1"
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-          - sapientType: "OBJECT"
-            content: !<new>
-              target: "org.bitcoinj.core.TransactionOutput"
-              parameters:
-              - name: "parent"
-                value:
-                  sapientType: "MOCK"
-                  valueType: "org.bitcoinj.core.Transaction"
-                  uuid: "select_list1-1-parent"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "value"
-                value:
-                  sapientType: "MOCK"
-                  valueType: "org.bitcoinj.base.Coin"
-                  uuid: "select_list1-1-value"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "scriptBytes"
-                value:
-                  sapientType: "ARRAY"
-                  content: !<array>
-                    values: {}
-                  suggestedContent: !<array>
-                    values: {}
-                  valueType: "byte[]"
-                  uuid: "select_list1-1-scriptBytes"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              privateConstructor: false
-              createdByTargetCode: false
-            suggestedContent: !<new>
-              target: "org.bitcoinj.core.TransactionOutput"
-              parameters:
-              - name: "parent"
-                value:
-                  sapientType: "UNKNOWN"
-                  valueType: "org.bitcoinj.core.Transaction"
-                  uuid: "select_list1-1-parent"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "value"
-                value:
-                  sapientType: "UNKNOWN"
-                  valueType: "org.bitcoinj.base.Coin"
-                  uuid: "select_list1-1-value"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "scriptBytes"
-                value:
-                  sapientType: "ARRAY"
-                  valueType: "byte[]"
-                  uuid: "select_list1-1-scriptBytes"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              privateConstructor: false
-              createdByTargetCode: false
-            valueType: "org.bitcoinj.core.TransactionOutput"
-            uuid: "select_list1-1"
-            fixed: false
-            collectionUuid: "select_list1"
+            collectionUuid: "select_arrayList2"
             equalsMethodPresent: false
             explicitCastNeeded: false
         valueType: "java.util.List"
@@ -599,7 +208,6 @@ methods:
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path3"
@@ -1696,13 +1304,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "F2F6617C344E265F4DB32BC509A17EA0"
+    modelFingerprint: "435F4A1451A79CCF7679B14E8B5F5B37"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "outputs"
-      modelFingerprint: "FCC1FE984543EB0E9B4A86EDA060594C"
+      modelFingerprint: "4CA4594DC516FA8BDB1C10E8B94C8D5F"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -1711,148 +1319,10 @@ methods:
         sapientType: "COLLECTION"
         content: !<collection>
           parameters: []
-          values:
-          - sapientType: "OBJECT"
-            content: !<new>
-              target: "org.bitcoinj.core.TransactionOutput"
-              parameters:
-              - name: "parent"
-                value:
-                  sapientType: "MOCK"
-                  valueType: "org.bitcoinj.core.Transaction"
-                  uuid: "sortOutputs_arrayList1-0-parent"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "value"
-                value:
-                  sapientType: "MOCK"
-                  valueType: "org.bitcoinj.base.Coin"
-                  uuid: "sortOutputs_arrayList1-0-value"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "scriptBytes"
-                value:
-                  sapientType: "ARRAY"
-                  content: !<array>
-                    values: {}
-                  suggestedContent: !<array>
-                    values: {}
-                  valueType: "byte[]"
-                  uuid: "sortOutputs_arrayList1-0-scriptBytes"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              privateConstructor: false
-              createdByTargetCode: false
-            suggestedContent: !<new>
-              target: "org.bitcoinj.core.TransactionOutput"
-              parameters:
-              - name: "parent"
-                value:
-                  sapientType: "UNKNOWN"
-                  valueType: "org.bitcoinj.core.Transaction"
-                  uuid: "sortOutputs_arrayList1-0-parent"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "value"
-                value:
-                  sapientType: "UNKNOWN"
-                  valueType: "org.bitcoinj.base.Coin"
-                  uuid: "sortOutputs_arrayList1-0-value"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "scriptBytes"
-                value:
-                  sapientType: "ARRAY"
-                  valueType: "byte[]"
-                  uuid: "sortOutputs_arrayList1-0-scriptBytes"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              privateConstructor: false
-              createdByTargetCode: false
-            valueType: "org.bitcoinj.core.TransactionOutput"
-            uuid: "sortOutputs_arrayList1-0"
-            fixed: false
-            collectionUuid: "sortOutputs_arrayList1"
-            equalsMethodPresent: false
-            explicitCastNeeded: false
+          values: []
         suggestedContent: !<collection>
           parameters: []
-          values:
-          - sapientType: "OBJECT"
-            content: !<new>
-              target: "org.bitcoinj.core.TransactionOutput"
-              parameters:
-              - name: "parent"
-                value:
-                  sapientType: "MOCK"
-                  valueType: "org.bitcoinj.core.Transaction"
-                  uuid: "sortOutputs_arrayList1-0-parent"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "value"
-                value:
-                  sapientType: "MOCK"
-                  valueType: "org.bitcoinj.base.Coin"
-                  uuid: "sortOutputs_arrayList1-0-value"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "scriptBytes"
-                value:
-                  sapientType: "ARRAY"
-                  content: !<array>
-                    values: {}
-                  suggestedContent: !<array>
-                    values: {}
-                  valueType: "byte[]"
-                  uuid: "sortOutputs_arrayList1-0-scriptBytes"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              privateConstructor: false
-              createdByTargetCode: false
-            suggestedContent: !<new>
-              target: "org.bitcoinj.core.TransactionOutput"
-              parameters:
-              - name: "parent"
-                value:
-                  sapientType: "UNKNOWN"
-                  valueType: "org.bitcoinj.core.Transaction"
-                  uuid: "sortOutputs_arrayList1-0-parent"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "value"
-                value:
-                  sapientType: "UNKNOWN"
-                  valueType: "org.bitcoinj.base.Coin"
-                  uuid: "sortOutputs_arrayList1-0-value"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "scriptBytes"
-                value:
-                  sapientType: "ARRAY"
-                  valueType: "byte[]"
-                  uuid: "sortOutputs_arrayList1-0-scriptBytes"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              privateConstructor: false
-              createdByTargetCode: false
-            valueType: "org.bitcoinj.core.TransactionOutput"
-            uuid: "sortOutputs_arrayList1-0"
-            fixed: false
-            collectionUuid: "sortOutputs_arrayList1"
-            equalsMethodPresent: false
-            explicitCastNeeded: false
+          values: []
         valueType: "java.util.ArrayList"
         genericValueType: "org.bitcoinj.core.TransactionOutput"
         uuid: "sortOutputs_arrayList1"
@@ -1881,7 +1351,6 @@ methods:
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:

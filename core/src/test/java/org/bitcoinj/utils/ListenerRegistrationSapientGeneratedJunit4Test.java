@@ -31,8 +31,10 @@ public class ListenerRegistrationSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         Object object = new Object();
         List<ListenerRegistration<Object>> anyList = new ArrayList<>();
+
         //Act Statement(s)
         boolean result = ListenerRegistration.removeFromList(object, anyList);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
         assertThat(anyList.size(), equalTo(0));
@@ -51,8 +53,10 @@ public class ListenerRegistrationSapientGeneratedJunit4Test {
         ListenerRegistration listenerRegistration = new ListenerRegistration(object2, (Executor) null);
         List<ListenerRegistration<Object>> anyList = new ArrayList<>();
         anyList.add(listenerRegistration);
+
         //Act Statement(s)
         boolean result = ListenerRegistration.removeFromList(object, anyList);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
     }

@@ -134,8 +134,10 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         MonetaryFormat target = new MonetaryFormat(true);
+
         //Act Statement(s)
         MonetaryFormat result = target.digits('0');
+
         //Assert statement(s)
         assertThat(result, equalTo(target));
     }
@@ -148,8 +150,10 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         MonetaryFormat target = new MonetaryFormat(true);
+
         //Act Statement(s)
         MonetaryFormat result = target.digits('A');
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -205,8 +209,10 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         MonetaryFormat target = new MonetaryFormat(true);
+
         //Act Statement(s)
         MonetaryFormat result = target.minDecimals(2);
+
         //Assert statement(s)
         assertThat(result, equalTo(target));
     }
@@ -219,8 +225,10 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         MonetaryFormat target = new MonetaryFormat(true);
+
         //Act Statement(s)
         MonetaryFormat result = target.minDecimals(1);
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -234,8 +242,10 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         MonetaryFormat target = new MonetaryFormat(true);
         int[] intArray = new int[]{1};
+
         //Act Statement(s)
         MonetaryFormat result = target.optionalDecimals(intArray);
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -287,8 +297,10 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         MonetaryFormat target = new MonetaryFormat(true);
+
         //Act Statement(s)
         MonetaryFormat result = target.shift(0);
+
         //Assert statement(s)
         assertThat(result, equalTo(target));
     }
@@ -301,8 +313,10 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         MonetaryFormat target = new MonetaryFormat(true);
+
         //Act Statement(s)
         MonetaryFormat result = target.shift(1);
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -315,8 +329,10 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         MonetaryFormat target = new MonetaryFormat(true);
+
         //Act Statement(s)
         MonetaryFormat result = target.roundingMode(RoundingMode.HALF_UP);
+
         //Assert statement(s)
         assertThat(result, equalTo(target));
     }
@@ -329,8 +345,10 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         MonetaryFormat target = new MonetaryFormat(true);
+
         //Act Statement(s)
         MonetaryFormat result = target.roundingMode(RoundingMode.UNNECESSARY);
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -343,8 +361,10 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         MonetaryFormat target = new MonetaryFormat(true);
+
         //Act Statement(s)
         MonetaryFormat result = target.noCode();
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -439,8 +459,10 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         MonetaryFormat target = new MonetaryFormat(true);
+
         //Act Statement(s)
         MonetaryFormat result = target.prefixCode();
+
         //Assert statement(s)
         assertThat(result, equalTo(target));
     }
@@ -453,8 +475,10 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         MonetaryFormat target = new MonetaryFormat(true);
+
         //Act Statement(s)
         MonetaryFormat result = target.postfixCode();
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -465,8 +489,10 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         MonetaryFormat target = new MonetaryFormat(true);
         Locale locale = new Locale("language1");
+
         //Act Statement(s)
         MonetaryFormat result = target.withLocale(locale);
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -565,8 +591,10 @@ public class MonetaryFormatSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         MonetaryFormat target = new MonetaryFormat(true);
+
         //Act Statement(s)
         String result = target.code();
+
         //Assert statement(s)
         assertThat(result, equalTo("\u20BF"));
     }

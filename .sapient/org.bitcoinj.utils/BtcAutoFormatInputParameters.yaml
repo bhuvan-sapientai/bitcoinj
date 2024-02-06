@@ -19,12 +19,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "B29215A5C2F26BA9B2A8BA3B83F2391B"
+    modelFingerprint: "0DB9B23F370BAAC2242B4C7CF9C7A5B0"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "5EFFE0B79324173A0FE403B616942552"
+      modelFingerprint: "A2C74584F200D0E48F3E162358C29420"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -75,8 +75,6 @@ methods:
               sapientType: "ENUM"
               content: !<regular>
                 value: "CODE"
-              suggestedContent: !<regular>
-                value: "CODE"
               valueType: "org.bitcoinj.utils.BtcAutoFormat$Style"
               uuid: "<init>_btcAutoFormat.Style1"
               fixed: false
@@ -86,9 +84,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 8
-              suggestedContent: !<regular>
-                value: 8
+                value: 0
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -101,22 +97,7 @@ methods:
           parameters:
           - name: "locale"
             value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "java.util.Locale"
-                parameters:
-                - name: "language"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "language1"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_locale1-language"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
+              sapientType: "UNKNOWN"
               suggestedContent: !<new>
                 target: "java.util.Locale"
                 parameters:
@@ -138,10 +119,6 @@ methods:
           - name: "style"
             value:
               sapientType: "ENUM"
-              content: !<regular>
-                value: "CODE"
-              suggestedContent: !<regular>
-                value: "CODE"
               valueType: "org.bitcoinj.utils.BtcAutoFormat$Style"
               uuid: "<init>_btcAutoFormat.Style1"
               fixed: false
@@ -150,10 +127,6 @@ methods:
           - name: "fractionPlaces"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 8
-              suggestedContent: !<regular>
-                value: 8
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -170,7 +143,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "satoshis"
-      modelFingerprint: "B0C43A36AD926747CDE3B4EBA4249ED1"
+      modelFingerprint: "699A41330AF0B963D9E309E2B61E202B"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -178,9 +151,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 100000000
-        suggestedContent: !<regular>
-          value: 100000000
+          value: 0
         valueType: "java.math.BigInteger"
         uuid: "scale_bigInteger1"
         fixed: false
@@ -190,7 +161,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "fractionPlaces"
-      modelFingerprint: "DC4AE32C0AA7C937B382CF8DC56DC810"
+      modelFingerprint: "D161200CDAA41AB99931C02915D71803"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -198,9 +169,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 8
+          value: 1
         suggestedContent: !<regular>
-          value: 8
+          value: 1
         valueType: "int"
         uuid: "scale_int1"
         fixed: false
@@ -333,8 +304,7 @@ methods:
     disabled: false
     ignoredBySystem: false
     failureReason:
-      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
-    prover: "LLM"
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -1199,7 +1169,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "158A76FAE4C1E5741587C22A6148B6F0"
-      index: 7
+      index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -2125,12 +2095,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "ABE72E19EFCC2918C786F2CCDBDD878B"
+    modelFingerprint: "E6D273E56EF3D4A6E4C1098AAB6ED563"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "31E1A65967AD2D46CB115F45590A979D"
+      modelFingerprint: "A2C74584F200D0E48F3E162358C29420"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2181,8 +2151,6 @@ methods:
               sapientType: "ENUM"
               content: !<regular>
                 value: "CODE"
-              suggestedContent: !<regular>
-                value: "CODE"
               valueType: "org.bitcoinj.utils.BtcAutoFormat$Style"
               uuid: "<init>_btcAutoFormat.Style1"
               fixed: false
@@ -2192,9 +2160,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 2
-              suggestedContent: !<regular>
-                value: 2
+                value: 0
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -2207,22 +2173,7 @@ methods:
           parameters:
           - name: "locale"
             value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "java.util.Locale"
-                parameters:
-                - name: "language"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "language1"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_locale1-language"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
+              sapientType: "UNKNOWN"
               suggestedContent: !<new>
                 target: "java.util.Locale"
                 parameters:
@@ -2244,10 +2195,6 @@ methods:
           - name: "style"
             value:
               sapientType: "ENUM"
-              content: !<regular>
-                value: "CODE"
-              suggestedContent: !<regular>
-                value: "CODE"
               valueType: "org.bitcoinj.utils.BtcAutoFormat$Style"
               uuid: "<init>_btcAutoFormat.Style1"
               fixed: false
@@ -2256,10 +2203,6 @@ methods:
           - name: "fractionPlaces"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 2
-              suggestedContent: !<regular>
-                value: 2
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -2351,8 +2294,7 @@ methods:
     disabled: false
     ignoredBySystem: false
     failureReason:
-      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
-    prover: "LLM"
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -2371,12 +2313,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "78800F118109D4358C9D7A793410681E"
+    modelFingerprint: "3210110C88F74406A7B7FF1AB2E0FA37"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "31E1A65967AD2D46CB115F45590A979D"
+      modelFingerprint: "A2C74584F200D0E48F3E162358C29420"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2427,8 +2369,6 @@ methods:
               sapientType: "ENUM"
               content: !<regular>
                 value: "CODE"
-              suggestedContent: !<regular>
-                value: "CODE"
               valueType: "org.bitcoinj.utils.BtcAutoFormat$Style"
               uuid: "<init>_btcAutoFormat.Style1"
               fixed: false
@@ -2438,9 +2378,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 2
-              suggestedContent: !<regular>
-                value: 2
+                value: 0
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -2453,22 +2391,7 @@ methods:
           parameters:
           - name: "locale"
             value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "java.util.Locale"
-                parameters:
-                - name: "language"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "language1"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_locale1-language"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
+              sapientType: "UNKNOWN"
               suggestedContent: !<new>
                 target: "java.util.Locale"
                 parameters:
@@ -2490,10 +2413,6 @@ methods:
           - name: "style"
             value:
               sapientType: "ENUM"
-              content: !<regular>
-                value: "CODE"
-              suggestedContent: !<regular>
-                value: "CODE"
               valueType: "org.bitcoinj.utils.BtcAutoFormat$Style"
               uuid: "<init>_btcAutoFormat.Style1"
               fixed: false
@@ -2502,10 +2421,6 @@ methods:
           - name: "fractionPlaces"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 2
-              suggestedContent: !<regular>
-                value: 2
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -2598,8 +2513,7 @@ methods:
     disabled: false
     ignoredBySystem: false
     failureReason:
-      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
-    prover: "LLM"
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -2752,12 +2666,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "182507B5B065BCE037D0E0B84DDFB648"
+    modelFingerprint: "3CD477E041B34C4169E64E9C3A9F448E"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "6EBD719D64457D5049275A1B6ADE0BC5"
+      modelFingerprint: "A2C74584F200D0E48F3E162358C29420"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2830,22 +2744,7 @@ methods:
           parameters:
           - name: "locale"
             value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "java.util.Locale"
-                parameters:
-                - name: "language"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "language1"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_locale1-language"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
+              sapientType: "UNKNOWN"
               suggestedContent: !<new>
                 target: "java.util.Locale"
                 parameters:
@@ -2995,7 +2894,6 @@ methods:
     disabled: false
     ignoredBySystem: false
     failureReason:
-      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
-    prover: "LLM"
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

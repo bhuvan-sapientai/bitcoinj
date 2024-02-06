@@ -42,7 +42,7 @@ methods:
           privateConstructor: false
           createdByTargetCode: false
         valueType: "java.lang.Object"
-        uuid: "removeFromList_object1"
+        uuid: "lambda$removeFromList$0_object2"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -115,12 +115,12 @@ methods:
       filledByUser: false
     uuid: "6e6e00e4-4c77-3886-a8b5-2711d0dd31a1"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "removeFromListWhenRListenerNotEqualsListener"
@@ -247,7 +247,42 @@ methods:
           collectionClass: "java.util.ArrayList"
           parameters: []
           values:
-          - sapientType: "UNKNOWN"
+          - sapientType: "OBJECT"
+            content: !<new>
+              target: "org.bitcoinj.utils.ListenerRegistration"
+              parameters:
+              - name: "listener"
+                value:
+                  sapientType: "OBJECT"
+                  content: !<new>
+                    target: "java.lang.Object"
+                    parameters: []
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  suggestedContent: !<new>
+                    target: "java.lang.Object"
+                    parameters: []
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  valueType: "java.lang.Object"
+                  uuid: "lambda$removeFromList$0_object2"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "executor"
+                value:
+                  sapientType: "NULL"
+                  suggestedContent: !<unknown_object>
+                    target: "java.util.concurrent.Executor"
+                    onlyPojoFunctions: false
+                    builderPattern: false
+                  valueType: "java.util.concurrent.Executor"
+                  uuid: "removeFromList_listenerRegistration1-executor"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: false
             suggestedContent: !<new>
               target: "org.bitcoinj.utils.ListenerRegistration"
               parameters:

@@ -28,7 +28,7 @@ public class DaemonThreadFactorySapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        DaemonThreadFactory target = new DaemonThreadFactory("BitcoinThread");
+        DaemonThreadFactory target = new DaemonThreadFactory("non_null_string_value");
         //TODO: Needs initialization with real value
         Runnable runnable = null;
 

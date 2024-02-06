@@ -24,8 +24,10 @@ public class ScriptTypeSapientGeneratedJunit4Test {
         /* Branches:
          * (branch expression (line 77)) : true
          */
+
         //Act Statement(s)
         ScriptType result = ScriptType.of("pkh");
+
         //Assert statement(s)
         assertThat(result, equalTo(ScriptType.P2PKH));
     }
@@ -36,9 +38,11 @@ public class ScriptTypeSapientGeneratedJunit4Test {
         /* Branches:
          * (branch expression (line 77)) : true
          */
+
         //Act Statement(s)
         Optional<ScriptType> result = ScriptType.find("pkh");
         Optional<ScriptType> scriptTypeOptional = Optional.of(ScriptType.P2PKH);
+
         //Assert statement(s)
         assertThat(result, equalTo(scriptTypeOptional));
     }
@@ -53,8 +57,10 @@ public class ScriptTypeSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         ScriptType target = ScriptType.valueOf("P2TR");
+
         //Act Statement(s)
         String result = target.id();
+
         //Assert statement(s)
         assertThat(result, is(nullValue()));
     }
@@ -69,8 +75,10 @@ public class ScriptTypeSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         ScriptType target = ScriptType.valueOf("P2TR");
+
         //Act Statement(s)
         int result = target.numericId();
+
         //Assert statement(s)
         assertThat(result, equalTo(0));
     }

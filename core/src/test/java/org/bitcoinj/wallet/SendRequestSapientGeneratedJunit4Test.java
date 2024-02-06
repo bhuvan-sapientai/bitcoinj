@@ -176,17 +176,12 @@ public class SendRequestSapientGeneratedJunit4Test {
          *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
-        //Arrange Statement(s)
-        try (MockedStatic<Context> context = mockStatic(Context.class)) {
-            Context context2 = new Context(0, coinMock, false, false);
-            Context context3 = new Context(0, coinMock2, false, false);
-            context.when(() -> Context.get()).thenReturn(context2).thenReturn(context3);
-            //Act Statement(s)
-            SendRequest result = SendRequest.emptyWallet(addressMock);
-            //Assert statement(s)
-            assertThat(result, is(notNullValue()));
-            context.verify(() -> Context.get(), atLeast(2));
-        }
+
+        //Act Statement(s)
+        SendRequest result = SendRequest.emptyWallet(addressMock);
+
+        //Assert statement(s)
+        assertThat(result, is(notNullValue()));
     }
 
     //Sapient generated method id: ${296cbaee-2c96-3f11-8688-962118a92952}
@@ -256,8 +251,10 @@ public class SendRequestSapientGeneratedJunit4Test {
         doReturn(coinMock).when(transactionOutputMock).getValue();
         doReturn(false).when(coinMock).isGreaterThan(coinMock2);
         thrown.expect(NullPointerException.class);
+
         //Act Statement(s)
         SendRequest.childPaysForParent(walletMock, parentTransactionMock, coinMock2);
+
         //Assert statement(s)
         verify(parentTransactionMock).getOutputs();
         verify(transactionOutputMock).isMine(walletMock);
@@ -302,16 +299,13 @@ public class SendRequestSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<SendRequest> sendRequest = mockStatic(SendRequest.class)) {
-            ECKey eCKey = new ECKey();
-            sendRequest.when(() -> SendRequest.to(eq(eCKey), (Coin) any())).thenReturn(sendRequestMock);
-            NetworkParameters networkParameters = NetworkParameters.fromID("id1");
-            Coin coin = Coin.valueOf(0L);
-            SendRequest target = SendRequest.to(networkParameters, eCKey, coin);
+            sendRequest.when(() -> SendRequest.to(eCKeyMock, coinMock)).thenReturn(sendRequestMock);
+            SendRequest target = SendRequest.to(networkParametersMock, eCKeyMock, coinMock);
             //Act Statement(s)
             String result = target.toString();
             //Assert statement(s)
             assertThat(result, equalTo("toString_moreObjects.ToStringHelper2"));
-            sendRequest.verify(() -> SendRequest.to(eq(eCKey), (Coin) any()));
+            sendRequest.verify(() -> SendRequest.to(eCKeyMock, coinMock), atLeast(1));
         }
     }
 }

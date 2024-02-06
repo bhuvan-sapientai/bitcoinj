@@ -207,7 +207,7 @@ public class ExchangeRateSapientGeneratedJunit4Test {
             //Assert statement(s)
             verify(coinMock).isPositive();
             verify(fiatMock).isPositive();
-            preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
+            preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(2));
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()), atLeast(2));
             coin.verify(() -> Coin.valueOf(0L), atLeast(1));
         }

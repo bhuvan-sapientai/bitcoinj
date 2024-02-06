@@ -110,6 +110,31 @@ public class RedeemDataSapientGeneratedJunit4Test {
         }
     }
 
+    //Sapient generated method id: ${9d1e8e57-907f-33a3-b30e-6041e5041e34}
+    @Test()
+    public void of1WhenScriptPatternIsP2PKRedeemScriptAndKeyIsNull() {
+        /* Branches:
+         * (ScriptPattern.isP2PKH(redeemScript)) : false
+         * (ScriptPattern.isP2WPKH(redeemScript)) : false
+         * (ScriptPattern.isP2PK(redeemScript)) : true
+         * (key != null) : false
+         */
+        //Arrange Statement(s)
+        try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class)) {
+            scriptPattern.when(() -> ScriptPattern.isP2PKH(scriptMock)).thenReturn(false);
+            scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock)).thenReturn(false);
+            scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(true);
+            ECKey eCKey = null;
+            //Act Statement(s)
+            RedeemData result = RedeemData.of(eCKey, scriptMock);
+            //Assert statement(s)
+            assertThat(result, is(nullValue()));
+            scriptPattern.verify(() -> ScriptPattern.isP2PKH(scriptMock), atLeast(1));
+            scriptPattern.verify(() -> ScriptPattern.isP2WPKH(scriptMock), atLeast(1));
+            scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock), atLeast(1));
+        }
+    }
+
     //Sapient generated method id: ${77e13cd6-1234-3825-a6d6-fbe955b16476}
     @Test()
     public void getFullKeyWhenKeyHasPrivKey() {

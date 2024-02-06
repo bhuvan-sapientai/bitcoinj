@@ -621,12 +621,12 @@ methods:
       filledByUser: false
     uuid: "09cfda40-14e9-30a4-b63c-301f9a5ffb85"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path3"
     pathIdForUser: "path3"
     testPathName: "createFromBitcoinUri2WhenRequestGetPaymentDetailsVersionNotEquals1ThrowsPaymentProtocolExceptionInvalidVersion"
@@ -900,12 +900,12 @@ methods:
       filledByUser: false
     uuid: "79a58b09-f32a-3df8-a746-34730b8e5683"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path4"
     pathIdForUser: "path4"
     testPathName: "createFromBitcoinUri2WhenRequestNotHasSerializedPaymentDetailsThrowsPaymentProtocolException"
@@ -1175,12 +1175,12 @@ methods:
       filledByUser: false
     uuid: "b28c31b2-af1b-30a3-9fd7-9151cf56be5c"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path5"
     pathIdForUser: "path5"
     testPathName: "createFromBitcoinUri2WhenPaymentDetailsIsNullThrowsPaymentProtocolException"
@@ -1586,12 +1586,12 @@ methods:
       filledByUser: false
     uuid: "a36e629e-f5ec-304a-9020-3bf91aaa6f55"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path12"
     pathIdForUser: "path6"
     testPathName: "createFromBitcoinUri2WhenParamsIsNullThrowsPaymentProtocolExceptionInvalidNetwork"
@@ -2161,12 +2161,12 @@ methods:
       filledByUser: false
     uuid: "f816a26e-5b4a-3650-af90-915c29d4516d"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path6"
     pathIdForUser: "path7"
     testPathName: "createFromBitcoinUri2WhenPaymentDetailsGetOutputsCountLessThan1ThrowsPaymentProtocolExceptionInvalidOutputs"
@@ -2693,12 +2693,12 @@ methods:
       filledByUser: false
     uuid: "5ecd038f-a7e6-3e7d-9356-99cc441c23ff"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path13"
     pathIdForUser: "path8"
     testPathName: "createFromBitcoinUri2WhenParamsIsNotNullAndPaymentDetailsGetOutputsCountLesThrowsPaymentProtocolExceptionInvalidOutputs"
@@ -3263,7 +3263,7 @@ methods:
             collectionClass: "java.util.ArrayList"
             parameters: []
             values:
-            - sapientType: "UNKNOWN"
+            - sapientType: "MOCK"
               suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.protobuf.payments.Protos$Output"
                 onlyPojoFunctions: false
@@ -3580,12 +3580,12 @@ methods:
       filledByUser: false
     uuid: "308cad9f-e2c9-3904-8234-4dca559ef837"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path11"
     pathIdForUser: "path11"
     testPathName: "createFromBitcoinUri2WhenDefaultBranch"
@@ -4893,7 +4893,7 @@ methods:
             collectionClass: "java.util.ArrayList"
             parameters: []
             values:
-            - sapientType: "UNKNOWN"
+            - sapientType: "MOCK"
               suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.protobuf.payments.Protos$Output"
                 onlyPojoFunctions: false
@@ -5332,12 +5332,12 @@ methods:
       filledByUser: false
     uuid: "eab0d039-06de-35a0-b48a-56d224a91762"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path9"
     pathIdForUser: "path18"
     testPathName: "createFromBitcoinUri2WhenPaymentDetailsGetOutputsListIsNotEmptyAndOutputHasAmountAndParamsNetworkNotExceedsMaxMoneyTota"
@@ -6209,12 +6209,12 @@ methods:
       filledByUser: false
     uuid: "c2b166ba-b05a-347b-97e8-8c349564654b"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path26"
     pathIdForUser: "path24"
     testPathName: "createFromBitcoinUri2WhenDefaultBranchAndDefaultBranch"
@@ -6778,7 +6778,7 @@ methods:
             collectionClass: "java.util.ArrayList"
             parameters: []
             values:
-            - sapientType: "UNKNOWN"
+            - sapientType: "MOCK"
               suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.protobuf.payments.Protos$Output"
                 onlyPojoFunctions: false
@@ -7206,12 +7206,12 @@ methods:
       filledByUser: false
     uuid: "aafea915-0ddc-3f61-ae65-60120b0eccca"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path24"
     pathIdForUser: "path26"
     testPathName: "createFromBitcoinUri2WhenParamsNetworkNotExceedsMaxMoneyTotalValueAndDefaultBranchAndDefaultBranch"
@@ -7746,7 +7746,7 @@ methods:
             collectionClass: "java.util.ArrayList"
             parameters: []
             values:
-            - sapientType: "UNKNOWN"
+            - sapientType: "MOCK"
               suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.protobuf.payments.Protos$Output"
                 onlyPojoFunctions: false
@@ -8085,12 +8085,12 @@ methods:
       filledByUser: false
     uuid: "fda5bfa5-7326-36ac-bf82-5f718b359f50"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "createFromUrl"
     returnType: "org.bitcoinj.utils.ListenableCompletableFuture"
@@ -8639,12 +8639,12 @@ methods:
       filledByUser: false
     uuid: "be0b42ce-3038-35c0-9843-c7420eee4954"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path3"
     pathIdForUser: "path3"
     testPathName: "createFromUrl2WhenRequestGetPaymentDetailsVersionNotEquals1ThrowsPaymentProtocolExceptionInvalidVersion"
@@ -8881,12 +8881,12 @@ methods:
       filledByUser: false
     uuid: "b717e653-d521-351f-92da-b2d75456ea54"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path4"
     pathIdForUser: "path4"
     testPathName: "createFromUrl2WhenRequestNotHasSerializedPaymentDetailsThrowsPaymentProtocolException"
@@ -9119,12 +9119,12 @@ methods:
       filledByUser: false
     uuid: "6a040022-e53d-31f7-914e-6cf4bed939d1"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path5"
     pathIdForUser: "path5"
     testPathName: "createFromUrl2WhenPaymentDetailsIsNullThrowsPaymentProtocolException"
@@ -9493,12 +9493,12 @@ methods:
       filledByUser: false
     uuid: "59a505a2-beaf-3791-878a-ed318adf93fb"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path12"
     pathIdForUser: "path6"
     testPathName: "createFromUrl2WhenParamsIsNullThrowsPaymentProtocolExceptionInvalidNetwork"
@@ -10031,12 +10031,12 @@ methods:
       filledByUser: false
     uuid: "3bfcb2ca-5603-3b3f-89bc-2bb023aaaf62"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path6"
     pathIdForUser: "path7"
     testPathName: "createFromUrl2WhenPaymentDetailsGetOutputsCountLessThan1ThrowsPaymentProtocolExceptionInvalidOutputs"
@@ -10526,12 +10526,12 @@ methods:
       filledByUser: false
     uuid: "209b0207-023f-361e-bc20-ed0f2a236734"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path13"
     pathIdForUser: "path8"
     testPathName: "createFromUrl2WhenParamsIsNotNullAndPaymentDetailsGetOutputsCountLessThan1ThrowsPaymentProtocolExceptionInvalidOutputs"
@@ -11059,7 +11059,7 @@ methods:
             collectionClass: "java.util.ArrayList"
             parameters: []
             values:
-            - sapientType: "UNKNOWN"
+            - sapientType: "MOCK"
               suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.protobuf.payments.Protos$Output"
                 onlyPojoFunctions: false
@@ -11376,12 +11376,12 @@ methods:
       filledByUser: false
     uuid: "586cdfc1-cf58-37f0-82e3-c859fcea7d91"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path11"
     pathIdForUser: "path11"
     testPathName: "createFromUrl2WhenDefaultBranch"
@@ -11465,13 +11465,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "MODERATE"
-    modelFingerprint: "FC3C84A42A57478DD6328435A3163F74"
+    modelFingerprint: "ABCC9E53E0734D6570E29E77B7C2EC23"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "url"
-      modelFingerprint: "43F9008284DE0933A7C285703C48145E"
+      modelFingerprint: "7F4BA9D5465079854277DB216BB226D8"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -11479,9 +11479,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "https://example.com/payment"
-        suggestedContent: !<regular>
-          value: "https://example.com/payment"
+          value: "url1"
         valueType: "java.lang.String"
         uuid: "createFromUrl_string1"
         fixed: false
@@ -11491,7 +11489,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "verifyPki"
-      modelFingerprint: "3A44F35E70F9E2B7A0130540AF2E7E07"
+      modelFingerprint: "477DDC426AD8C43C14C0B784B4877AAC"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -11511,21 +11509,13 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "trustStoreLoader"
-      modelFingerprint: "CA56A1DDA132034193FB79EEEAFDCDB4"
+      modelFingerprint: "3EAF4F3555C9462B7A330402C3C738F1"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "NULL"
-        content: !<unknown_object>
-          target: "org.bitcoinj.crypto.TrustStoreLoader"
-          onlyPojoFunctions: true
-          builderPattern: false
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.crypto.TrustStoreLoader"
-          onlyPojoFunctions: true
-          builderPattern: false
         valueType: "org.bitcoinj.crypto.TrustStoreLoader"
         uuid: "createFromUrl_trustStoreLoader1"
         fixed: true
@@ -11535,7 +11525,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Protos.PaymentRequest"
-      modelFingerprint: "C9075236C75AB41D2F6D7E8064024FD8"
+      modelFingerprint: "40094CAC1080041EFF20B7D86BD85E4A"
       index: 4
       ignored: false
       nestedInLoop: true
@@ -11580,7 +11570,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "request"
-      modelFingerprint: "16B5788AC4A44FE4BC9C8A75ABDF5084"
+      modelFingerprint: "9CDEE49038FE9E39C5647D223D3D7D93"
       index: 5
       ignored: false
       nestedInLoop: true
@@ -11619,7 +11609,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "request"
-      modelFingerprint: "44FFFF3EBE40DC92CF08A610D4D1E80A"
+      modelFingerprint: "3E9453CB45494102B4957F26227D137F"
       index: 6
       ignored: false
       nestedInLoop: true
@@ -11689,7 +11679,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "request"
-      modelFingerprint: "E68E54D90CC2FF2693CA32058EBA45E1"
+      modelFingerprint: "19D8A13EE05366778BA2E5455AD300E9"
       index: 8
       ignored: false
       nestedInLoop: true
@@ -11763,7 +11753,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "3B6CC9AC3A4FF4023A4CE763D584DB81"
+      modelFingerprint: "F2FB00B5BA4E0737CCA6D14A7BF5FA4A"
       index: 10
       ignored: false
       nestedInLoop: true
@@ -11798,7 +11788,7 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "paymentDetails"
-      modelFingerprint: "10B81A7FD3C4C606A5E049456B82D317"
+      modelFingerprint: "F14CA0B269C06B7923CA91785360CCBD"
       index: 11
       ignored: false
       nestedInLoop: true
@@ -11837,7 +11827,7 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "paymentDetails"
-      modelFingerprint: "3126AE230D6FD74DFC7EEC283BC6BFA6"
+      modelFingerprint: "A3E4D821B10E4F62A4737CBDDB66178A"
       index: 12
       ignored: false
       nestedInLoop: true
@@ -11874,7 +11864,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "PaymentProtocol"
-      modelFingerprint: "26D0DC875344A14B6D4130503AA445F6"
+      modelFingerprint: "047D81B8F1BE86E95ECF05BAC0B1F1B3"
       index: 13
       ignored: false
       nestedInLoop: true
@@ -11919,7 +11909,7 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "paymentDetails"
-      modelFingerprint: "EB20A82FD19B938D9E8634130D350A4C"
+      modelFingerprint: "565383F654FD564E870BC330A731BA00"
       index: 14
       ignored: false
       nestedInLoop: true
@@ -11958,7 +11948,7 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "paymentDetails"
-      modelFingerprint: "1704518D5A2FFFBBEDDCAFF1B56791EC"
+      modelFingerprint: "EF9F1AC1F57479BCA277501565B1B541"
       index: 15
       ignored: false
       nestedInLoop: true
@@ -12000,7 +11990,7 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "params"
-      modelFingerprint: "38794A5F1244ED214FA731D80555F99C"
+      modelFingerprint: "E45E1BBAAAE89FF0F0E8C129219E0D28"
       index: 16
       ignored: false
       nestedInLoop: true
@@ -12022,77 +12012,23 @@ methods:
         target: "this.params"
         name: "network"
         parameters: []
-        signature: "network(): Network"
+        signature: "network(): BitcoinNetwork"
         returnValue:
-          sapientType: "MOCK"
-          suggestedContent: !<unknown_object>
-            target: "org.bitcoinj.base.Network"
-            onlyPojoFunctions: false
-            builderPattern: false
-          valueType: "org.bitcoinj.base.Network"
-          uuid: "parsePaymentRequest_network1"
+          sapientType: "ENUM"
+          content: !<regular>
+            value: "MAINNET"
+          valueType: "org.bitcoinj.base.BitcoinNetwork"
+          uuid: "parsePaymentRequest_bitcoinNetwork1"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
         access: 1
       staticReadMethodForField: false
       filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      modelFingerprint: "0C36D719F981D68DB7E0311D62E9A501"
-      index: 17
-      ignored: false
-      nestedInLoop: true
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 270006
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.base.Network"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.base.Network"
-        uuid: "parsePaymentRequest_network1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.Network"
-        name: "exceedsMaxMoney"
-        parameters:
-        - name: "arg0"
-          value:
-            sapientType: "OBJECT"
-            content: !<static_field_return>
-              target: "org.bitcoinj.base.Coin"
-              fieldName: "ZERO"
-            suggestedContent: !<static_field_return>
-              target: "org.bitcoinj.base.Coin"
-              fieldName: "ZERO"
-            valueType: "org.bitcoinj.base.Coin"
-            uuid: "<init>_coin1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "exceedsMaxMoney(Coin): boolean"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: false
-          suggestedContent: !<regular>
-            value: false
-          valueType: "boolean"
-          uuid: "parsePaymentRequest_boolean4"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1025
-      staticReadMethodForField: false
-      filledByUser: false
     - type: "STATIC"
       name: "ListenableCompletableFuture"
       modelFingerprint: "510F141DBF0D0AFB8708C3BEB61B4F84"
-      index: 18
+      index: 17
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -12143,7 +12079,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "EF5A7C7F742870995118634770688A3B"
-      index: 19
+      index: 18
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -12163,7 +12099,6 @@ methods:
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path19"
@@ -14491,7 +14426,7 @@ methods:
             collectionClass: "java.util.ArrayList"
             parameters: []
             values:
-            - sapientType: "UNKNOWN"
+            - sapientType: "MOCK"
               suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.protobuf.payments.Protos$Output"
                 onlyPojoFunctions: false
@@ -14919,12 +14854,12 @@ methods:
       filledByUser: false
     uuid: "dda59e6e-a830-3f07-874a-51fdee82d559"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path24"
     pathIdForUser: "path26"
     testPathName: "createFromUrl2WhenParamsNetworkNotExceedsMaxMoneyTotalValueAndDefaultBranchAndDefaultBranch"
@@ -15422,7 +15357,7 @@ methods:
             collectionClass: "java.util.ArrayList"
             parameters: []
             values:
-            - sapientType: "UNKNOWN"
+            - sapientType: "MOCK"
               suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.protobuf.payments.Protos$Output"
                 onlyPojoFunctions: false
@@ -15761,12 +15696,12 @@ methods:
       filledByUser: false
     uuid: "e9959f10-7902-3931-bf3d-db50b344350a"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "getOutputs"
     returnType: "java.util.List"
@@ -16316,10 +16251,12 @@ methods:
     - type: "FIELD"
       name: "paymentDetails"
       modelFingerprint: "E0B27D80298C11E38895A6C8C12D1650"
-      index: 20
+      index: 11
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 270006
       value:
         sapientType: "MOCK"
         suggestedContent: !<unknown_object>
@@ -16370,7 +16307,7 @@ methods:
               explicitCastNeeded: false
           valueType: "java.util.List"
           genericValueType: "org.bitcoinj.protobuf.payments.Protos$Output"
-          uuid: "getOutputs_list1"
+          uuid: "parsePaymentRequest_list2"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -16380,10 +16317,12 @@ methods:
     - type: "LOCAL_VARIABLE"
       name: "output"
       modelFingerprint: "784C831E3A71BA6EA9383E884B47E62B"
-      index: 21
+      index: 12
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 270006
       value:
         sapientType: "MOCK"
         suggestedContent: !<unknown_object>
@@ -16391,7 +16330,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$Output"
-        uuid: "getOutputs_object1"
+        uuid: "parsePaymentRequest_object2"
         fixed: false
         collectionUuid: "parsePaymentRequest_list2"
         equalsMethodPresent: false
@@ -16408,7 +16347,7 @@ methods:
           suggestedContent: !<regular>
             value: true
           valueType: "boolean"
-          uuid: "getOutputs_boolean2"
+          uuid: "parsePaymentRequest_boolean14"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -16418,10 +16357,12 @@ methods:
     - type: "LOCAL_VARIABLE"
       name: "output"
       modelFingerprint: "987A2351B3C3036C6A85624CE5B07C6A"
-      index: 22
+      index: 13
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 270006
       value:
         sapientType: "MOCK"
         suggestedContent: !<unknown_object>
@@ -16429,7 +16370,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$Output"
-        uuid: "getOutputs_object1"
+        uuid: "parsePaymentRequest_object2"
         fixed: false
         collectionUuid: "parsePaymentRequest_list2"
         equalsMethodPresent: false
@@ -16444,7 +16385,7 @@ methods:
           content: !<regular>
             value: 0
           valueType: "long"
-          uuid: "getOutputs_long1"
+          uuid: "parsePaymentRequest_long2"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -16454,10 +16395,12 @@ methods:
     - type: "STATIC"
       name: "Coin"
       modelFingerprint: "1DF8CD6BBFAB34176928C414F92D5A5C"
-      index: 23
+      index: 14
       ignored: false
       nestedInLoop: true
       nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 270006
       value:
         sapientType: "MOCK"
         valueType: "org.bitcoinj.base.Coin"
@@ -16475,7 +16418,7 @@ methods:
             content: !<regular>
               value: 0
             valueType: "long"
-            uuid: "getOutputs_long1"
+            uuid: "parsePaymentRequest_long2"
             fixed: false
             equalsMethodPresent: false
             explicitCastNeeded: false
@@ -16483,7 +16426,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "org.bitcoinj.base.Coin"
-          uuid: "getOutputs_coin1"
+          uuid: "parsePaymentRequest_coin3"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -16653,10 +16596,6 @@ methods:
         signature: "getKeyStore(): KeyStore throws java.io.FileNotFoundException,java.security.KeyStoreException"
         returnValue:
           sapientType: "NULL"
-          content: !<unknown_object>
-            target: "java.security.KeyStore"
-            onlyPojoFunctions: false
-            builderPattern: false
           suggestedContent: !<unknown_object>
             target: "java.security.KeyStore"
             onlyPojoFunctions: false
@@ -16704,10 +16643,6 @@ methods:
         - name: "trustStore"
           value:
             sapientType: "NULL"
-            content: !<unknown_object>
-              target: "java.security.KeyStore"
-              onlyPojoFunctions: false
-              builderPattern: false
             suggestedContent: !<unknown_object>
               target: "java.security.KeyStore"
               onlyPojoFunctions: false
@@ -17006,6 +16941,8 @@ methods:
         returnValue:
           sapientType: "ARRAY"
           content: !<array>
+            values: {}
+          suggestedContent: !<array>
             values: {}
           valueType: "byte[]"
           uuid: "getOutputs_byte[]1"
@@ -17693,10 +17630,12 @@ methods:
     - type: "FIELD"
       name: "paymentDetails"
       modelFingerprint: "E0B27D80298C11E38895A6C8C12D1650"
-      index: 20
+      index: 11
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 270006
       value:
         sapientType: "MOCK"
         suggestedContent: !<unknown_object>
@@ -17747,7 +17686,7 @@ methods:
               explicitCastNeeded: false
           valueType: "java.util.List"
           genericValueType: "org.bitcoinj.protobuf.payments.Protos$Output"
-          uuid: "getOutputs_list1"
+          uuid: "parsePaymentRequest_list2"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -18036,10 +17975,6 @@ methods:
         signature: "getKeyStore(): KeyStore throws java.io.FileNotFoundException,java.security.KeyStoreException"
         returnValue:
           sapientType: "NULL"
-          content: !<unknown_object>
-            target: "java.security.KeyStore"
-            onlyPojoFunctions: false
-            builderPattern: false
           suggestedContent: !<unknown_object>
             target: "java.security.KeyStore"
             onlyPojoFunctions: false
@@ -18087,10 +18022,6 @@ methods:
         - name: "trustStore"
           value:
             sapientType: "NULL"
-            content: !<unknown_object>
-              target: "java.security.KeyStore"
-              onlyPojoFunctions: false
-              builderPattern: false
             suggestedContent: !<unknown_object>
               target: "java.security.KeyStore"
               onlyPojoFunctions: false
@@ -18314,6 +18245,8 @@ methods:
         returnValue:
           sapientType: "ARRAY"
           content: !<array>
+            values: {}
+          suggestedContent: !<array>
             values: {}
           valueType: "byte[]"
           uuid: "getOutputs_byte[]1"
@@ -18698,7 +18631,7 @@ methods:
           suggestedContent: !<regular>
             value: 1
           valueType: "int"
-          uuid: "parsePaymentRequest_int20"
+          uuid: "parsePaymentRequest_int9"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -18737,7 +18670,7 @@ methods:
           suggestedContent: !<regular>
             value: true
           valueType: "boolean"
-          uuid: "parsePaymentRequest_boolean24"
+          uuid: "parsePaymentRequest_boolean11"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -18768,7 +18701,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-          uuid: "parsePaymentRequest_protos.PaymentDetails.Builder7"
+          uuid: "parsePaymentRequest_protos.PaymentDetails.Builder4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -18803,7 +18736,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "com.google.protobuf.ByteString"
-          uuid: "parsePaymentRequest_byteString7"
+          uuid: "parsePaymentRequest_byteString4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -18821,7 +18754,7 @@ methods:
       value:
         sapientType: "MOCK"
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-        uuid: "parsePaymentRequest_protos.PaymentDetails.Builder7"
+        uuid: "parsePaymentRequest_protos.PaymentDetails.Builder4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -18833,7 +18766,7 @@ methods:
           value:
             sapientType: "MOCK"
             valueType: "com.google.protobuf.ByteString"
-            uuid: "parsePaymentRequest_byteString7"
+            uuid: "parsePaymentRequest_byteString4"
             fixed: false
             equalsMethodPresent: false
             explicitCastNeeded: false
@@ -18843,7 +18776,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-          uuid: "parsePaymentRequest_abstractMessageLite.Builder7"
+          uuid: "parsePaymentRequest_abstractMessageLite.Builder4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: true
@@ -18861,7 +18794,7 @@ methods:
       value:
         sapientType: "MOCK"
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-        uuid: "parsePaymentRequest_abstractMessageLite.Builder7"
+        uuid: "parsePaymentRequest_abstractMessageLite.Builder4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -18877,7 +18810,7 @@ methods:
             onlyPojoFunctions: false
             builderPattern: false
           valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-          uuid: "parsePaymentRequest_generatedMessageLite7"
+          uuid: "parsePaymentRequest_generatedMessageLite4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: true
@@ -18900,7 +18833,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-        uuid: "parsePaymentRequest_generatedMessageLite7"
+        uuid: "parsePaymentRequest_generatedMessageLite4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -18916,7 +18849,7 @@ methods:
           suggestedContent: !<regular>
             value: false
           valueType: "boolean"
-          uuid: "parsePaymentRequest_boolean25"
+          uuid: "parsePaymentRequest_boolean12"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -18955,7 +18888,7 @@ methods:
             method: "get"
             methodParameters: []
           valueType: "org.bitcoinj.params.MainNetParams"
-          uuid: "parsePaymentRequest_mainNetParams5"
+          uuid: "parsePaymentRequest_mainNetParams3"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -18978,7 +18911,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-        uuid: "parsePaymentRequest_generatedMessageLite7"
+        uuid: "parsePaymentRequest_generatedMessageLite4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -18994,7 +18927,7 @@ methods:
           suggestedContent: !<regular>
             value: 1
           valueType: "int"
-          uuid: "parsePaymentRequest_int21"
+          uuid: "parsePaymentRequest_int10"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -19017,7 +18950,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-        uuid: "parsePaymentRequest_generatedMessageLite7"
+        uuid: "parsePaymentRequest_generatedMessageLite4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -19060,7 +18993,7 @@ methods:
               explicitCastNeeded: false
           valueType: "java.util.List"
           genericValueType: "org.bitcoinj.protobuf.payments.Protos$Output"
-          uuid: "parsePaymentRequest_list3"
+          uuid: "parsePaymentRequest_list2"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -19083,7 +19016,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$Output"
-        uuid: "parsePaymentRequest_object3"
+        uuid: "parsePaymentRequest_object2"
         fixed: false
         collectionUuid: "parsePaymentRequest_list2"
         equalsMethodPresent: false
@@ -19100,7 +19033,7 @@ methods:
           suggestedContent: !<regular>
             value: true
           valueType: "boolean"
-          uuid: "parsePaymentRequest_boolean27"
+          uuid: "parsePaymentRequest_boolean14"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -19123,7 +19056,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$Output"
-        uuid: "parsePaymentRequest_object3"
+        uuid: "parsePaymentRequest_object2"
         fixed: false
         collectionUuid: "parsePaymentRequest_list2"
         equalsMethodPresent: false
@@ -19298,7 +19231,7 @@ methods:
           method: "get"
           methodParameters: []
         valueType: "org.bitcoinj.params.MainNetParams"
-        uuid: "parsePaymentRequest_mainNetParams5"
+        uuid: "parsePaymentRequest_mainNetParams3"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -19312,7 +19245,7 @@ methods:
           content: !<regular>
             value: "MAINNET"
           valueType: "org.bitcoinj.base.BitcoinNetwork"
-          uuid: "parsePaymentRequest_bitcoinNetwork2"
+          uuid: "parsePaymentRequest_bitcoinNetwork1"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -19511,14 +19444,14 @@ methods:
       filledByUser: false
     uuid: "c35b3640-8b1c-3b99-ae2a-582891843e3b"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
       source: "totalValue = totalValue.add(Coin.valueOf(output.getAmount()));"
       lineNumber: 425
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "getMemoWhenPaymentDetailsNotHasMemo"
@@ -19732,7 +19665,7 @@ methods:
           suggestedContent: !<regular>
             value: 1
           valueType: "int"
-          uuid: "parsePaymentRequest_int20"
+          uuid: "parsePaymentRequest_int9"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -19771,7 +19704,7 @@ methods:
           suggestedContent: !<regular>
             value: true
           valueType: "boolean"
-          uuid: "parsePaymentRequest_boolean24"
+          uuid: "parsePaymentRequest_boolean11"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -19802,7 +19735,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-          uuid: "parsePaymentRequest_protos.PaymentDetails.Builder7"
+          uuid: "parsePaymentRequest_protos.PaymentDetails.Builder4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -19837,7 +19770,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "com.google.protobuf.ByteString"
-          uuid: "parsePaymentRequest_byteString7"
+          uuid: "parsePaymentRequest_byteString4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -19855,7 +19788,7 @@ methods:
       value:
         sapientType: "MOCK"
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-        uuid: "parsePaymentRequest_protos.PaymentDetails.Builder7"
+        uuid: "parsePaymentRequest_protos.PaymentDetails.Builder4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -19867,7 +19800,7 @@ methods:
           value:
             sapientType: "MOCK"
             valueType: "com.google.protobuf.ByteString"
-            uuid: "parsePaymentRequest_byteString7"
+            uuid: "parsePaymentRequest_byteString4"
             fixed: false
             equalsMethodPresent: false
             explicitCastNeeded: false
@@ -19877,7 +19810,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-          uuid: "parsePaymentRequest_abstractMessageLite.Builder7"
+          uuid: "parsePaymentRequest_abstractMessageLite.Builder4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: true
@@ -19895,7 +19828,7 @@ methods:
       value:
         sapientType: "MOCK"
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-        uuid: "parsePaymentRequest_abstractMessageLite.Builder7"
+        uuid: "parsePaymentRequest_abstractMessageLite.Builder4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -19911,7 +19844,7 @@ methods:
             onlyPojoFunctions: false
             builderPattern: false
           valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-          uuid: "parsePaymentRequest_generatedMessageLite7"
+          uuid: "parsePaymentRequest_generatedMessageLite4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: true
@@ -19934,7 +19867,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-        uuid: "parsePaymentRequest_generatedMessageLite7"
+        uuid: "parsePaymentRequest_generatedMessageLite4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -19950,7 +19883,7 @@ methods:
           suggestedContent: !<regular>
             value: false
           valueType: "boolean"
-          uuid: "parsePaymentRequest_boolean25"
+          uuid: "parsePaymentRequest_boolean12"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -19989,7 +19922,7 @@ methods:
             method: "get"
             methodParameters: []
           valueType: "org.bitcoinj.params.MainNetParams"
-          uuid: "parsePaymentRequest_mainNetParams5"
+          uuid: "parsePaymentRequest_mainNetParams3"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -20012,7 +19945,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-        uuid: "parsePaymentRequest_generatedMessageLite7"
+        uuid: "parsePaymentRequest_generatedMessageLite4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -20028,7 +19961,7 @@ methods:
           suggestedContent: !<regular>
             value: 1
           valueType: "int"
-          uuid: "parsePaymentRequest_int21"
+          uuid: "parsePaymentRequest_int10"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -20051,7 +19984,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-        uuid: "parsePaymentRequest_generatedMessageLite7"
+        uuid: "parsePaymentRequest_generatedMessageLite4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -20094,7 +20027,7 @@ methods:
               explicitCastNeeded: false
           valueType: "java.util.List"
           genericValueType: "org.bitcoinj.protobuf.payments.Protos$Output"
-          uuid: "parsePaymentRequest_list3"
+          uuid: "parsePaymentRequest_list2"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -20117,7 +20050,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$Output"
-        uuid: "parsePaymentRequest_object3"
+        uuid: "parsePaymentRequest_object2"
         fixed: false
         collectionUuid: "parsePaymentRequest_list2"
         equalsMethodPresent: false
@@ -20134,7 +20067,7 @@ methods:
           suggestedContent: !<regular>
             value: true
           valueType: "boolean"
-          uuid: "parsePaymentRequest_boolean27"
+          uuid: "parsePaymentRequest_boolean14"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -20157,7 +20090,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$Output"
-        uuid: "parsePaymentRequest_object3"
+        uuid: "parsePaymentRequest_object2"
         fixed: false
         collectionUuid: "parsePaymentRequest_list2"
         equalsMethodPresent: false
@@ -20332,7 +20265,7 @@ methods:
           method: "get"
           methodParameters: []
         valueType: "org.bitcoinj.params.MainNetParams"
-        uuid: "parsePaymentRequest_mainNetParams5"
+        uuid: "parsePaymentRequest_mainNetParams3"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -20493,7 +20426,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "8EDA3F2AE365AC99A4FDAA03D44C0B66"
-      index: 18
+      index: 20
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -20508,14 +20441,14 @@ methods:
       filledByUser: false
     uuid: "1659e20e-cd61-3ee3-8e34-38ba781dbdbd"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
       source: "totalValue = totalValue.add(Coin.valueOf(output.getAmount()));"
       lineNumber: 425
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "getValue"
     returnType: "org.bitcoinj.base.Coin"
@@ -21380,7 +21313,7 @@ methods:
           content: !<regular>
             value: "MAINNET"
           valueType: "org.bitcoinj.base.BitcoinNetwork"
-          uuid: "parsePaymentRequest_bitcoinNetwork1"
+          uuid: "parsePaymentRequest_bitcoinNetwork2"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -21527,7 +21460,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "47F222D4A2555F901EFB68486D60517F"
-      index: 5
+      index: 20
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -21568,14 +21501,14 @@ methods:
       filledByUser: false
     uuid: "042a07c6-415f-3feb-9b50-b06f1fcd4b38"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
       source: "totalValue = totalValue.add(Coin.valueOf(output.getAmount()));"
       lineNumber: 425
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "getDate"
     returnType: "java.util.Date"
@@ -21796,7 +21729,7 @@ methods:
           suggestedContent: !<regular>
             value: 1
           valueType: "int"
-          uuid: "parsePaymentRequest_int20"
+          uuid: "parsePaymentRequest_int9"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -21835,7 +21768,7 @@ methods:
           suggestedContent: !<regular>
             value: true
           valueType: "boolean"
-          uuid: "parsePaymentRequest_boolean24"
+          uuid: "parsePaymentRequest_boolean11"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -21866,7 +21799,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-          uuid: "parsePaymentRequest_protos.PaymentDetails.Builder7"
+          uuid: "parsePaymentRequest_protos.PaymentDetails.Builder4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -21901,7 +21834,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "com.google.protobuf.ByteString"
-          uuid: "parsePaymentRequest_byteString7"
+          uuid: "parsePaymentRequest_byteString4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -21919,7 +21852,7 @@ methods:
       value:
         sapientType: "MOCK"
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-        uuid: "parsePaymentRequest_protos.PaymentDetails.Builder7"
+        uuid: "parsePaymentRequest_protos.PaymentDetails.Builder4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -21931,7 +21864,7 @@ methods:
           value:
             sapientType: "MOCK"
             valueType: "com.google.protobuf.ByteString"
-            uuid: "parsePaymentRequest_byteString7"
+            uuid: "parsePaymentRequest_byteString4"
             fixed: false
             equalsMethodPresent: false
             explicitCastNeeded: false
@@ -21941,7 +21874,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-          uuid: "parsePaymentRequest_abstractMessageLite.Builder7"
+          uuid: "parsePaymentRequest_abstractMessageLite.Builder4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: true
@@ -21959,7 +21892,7 @@ methods:
       value:
         sapientType: "MOCK"
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-        uuid: "parsePaymentRequest_abstractMessageLite.Builder7"
+        uuid: "parsePaymentRequest_abstractMessageLite.Builder4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -21975,7 +21908,7 @@ methods:
             onlyPojoFunctions: false
             builderPattern: false
           valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-          uuid: "parsePaymentRequest_generatedMessageLite7"
+          uuid: "parsePaymentRequest_generatedMessageLite4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: true
@@ -21998,7 +21931,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-        uuid: "parsePaymentRequest_generatedMessageLite7"
+        uuid: "parsePaymentRequest_generatedMessageLite4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -22014,7 +21947,7 @@ methods:
           suggestedContent: !<regular>
             value: false
           valueType: "boolean"
-          uuid: "parsePaymentRequest_boolean25"
+          uuid: "parsePaymentRequest_boolean12"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -22053,7 +21986,7 @@ methods:
             method: "get"
             methodParameters: []
           valueType: "org.bitcoinj.params.MainNetParams"
-          uuid: "parsePaymentRequest_mainNetParams5"
+          uuid: "parsePaymentRequest_mainNetParams3"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -22076,7 +22009,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-        uuid: "parsePaymentRequest_generatedMessageLite7"
+        uuid: "parsePaymentRequest_generatedMessageLite4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -22092,7 +22025,7 @@ methods:
           suggestedContent: !<regular>
             value: 1
           valueType: "int"
-          uuid: "parsePaymentRequest_int21"
+          uuid: "parsePaymentRequest_int10"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -22115,7 +22048,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-        uuid: "parsePaymentRequest_generatedMessageLite7"
+        uuid: "parsePaymentRequest_generatedMessageLite4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -22158,7 +22091,7 @@ methods:
               explicitCastNeeded: false
           valueType: "java.util.List"
           genericValueType: "org.bitcoinj.protobuf.payments.Protos$Output"
-          uuid: "parsePaymentRequest_list3"
+          uuid: "parsePaymentRequest_list2"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -22181,7 +22114,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$Output"
-        uuid: "parsePaymentRequest_object3"
+        uuid: "parsePaymentRequest_object2"
         fixed: false
         collectionUuid: "parsePaymentRequest_list2"
         equalsMethodPresent: false
@@ -22198,7 +22131,7 @@ methods:
           suggestedContent: !<regular>
             value: true
           valueType: "boolean"
-          uuid: "parsePaymentRequest_boolean27"
+          uuid: "parsePaymentRequest_boolean14"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -22221,7 +22154,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$Output"
-        uuid: "parsePaymentRequest_object3"
+        uuid: "parsePaymentRequest_object2"
         fixed: false
         collectionUuid: "parsePaymentRequest_list2"
         equalsMethodPresent: false
@@ -22396,7 +22329,7 @@ methods:
           method: "get"
           methodParameters: []
         valueType: "org.bitcoinj.params.MainNetParams"
-        uuid: "parsePaymentRequest_mainNetParams5"
+        uuid: "parsePaymentRequest_mainNetParams3"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -22520,7 +22453,7 @@ methods:
     - type: "FIELD"
       name: "paymentDetails"
       modelFingerprint: "78DA6310DAFB906ABCFCADD7F57D26D1"
-      index: 17
+      index: 19
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -22531,7 +22464,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-        uuid: "parsePaymentRequest_generatedMessageLite7"
+        uuid: "parsePaymentRequest_generatedMessageLite4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -22557,7 +22490,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "91A9CF80B8279C04A4748E7D32E7A398"
-      index: 18
+      index: 20
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -22582,14 +22515,14 @@ methods:
       filledByUser: false
     uuid: "32a264d3-e4bd-353f-a2bf-fe1cf1c16d84"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
       source: "totalValue = totalValue.add(Coin.valueOf(output.getAmount()));"
       lineNumber: 425
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "expires"
     returnType: "java.util.Optional"
@@ -23424,7 +23357,7 @@ methods:
           content: !<regular>
             value: "MAINNET"
           valueType: "org.bitcoinj.base.BitcoinNetwork"
-          uuid: "parsePaymentRequest_bitcoinNetwork1"
+          uuid: "parsePaymentRequest_bitcoinNetwork2"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -23880,7 +23813,7 @@ methods:
           suggestedContent: !<regular>
             value: 1
           valueType: "int"
-          uuid: "parsePaymentRequest_int20"
+          uuid: "parsePaymentRequest_int9"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -23919,7 +23852,7 @@ methods:
           suggestedContent: !<regular>
             value: true
           valueType: "boolean"
-          uuid: "parsePaymentRequest_boolean24"
+          uuid: "parsePaymentRequest_boolean11"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -23950,7 +23883,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-          uuid: "parsePaymentRequest_protos.PaymentDetails.Builder7"
+          uuid: "parsePaymentRequest_protos.PaymentDetails.Builder4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -23985,7 +23918,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "com.google.protobuf.ByteString"
-          uuid: "parsePaymentRequest_byteString7"
+          uuid: "parsePaymentRequest_byteString4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -24003,7 +23936,7 @@ methods:
       value:
         sapientType: "MOCK"
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-        uuid: "parsePaymentRequest_protos.PaymentDetails.Builder7"
+        uuid: "parsePaymentRequest_protos.PaymentDetails.Builder4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -24015,7 +23948,7 @@ methods:
           value:
             sapientType: "MOCK"
             valueType: "com.google.protobuf.ByteString"
-            uuid: "parsePaymentRequest_byteString7"
+            uuid: "parsePaymentRequest_byteString4"
             fixed: false
             equalsMethodPresent: false
             explicitCastNeeded: false
@@ -24025,7 +23958,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-          uuid: "parsePaymentRequest_abstractMessageLite.Builder7"
+          uuid: "parsePaymentRequest_abstractMessageLite.Builder4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: true
@@ -24043,7 +23976,7 @@ methods:
       value:
         sapientType: "MOCK"
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-        uuid: "parsePaymentRequest_abstractMessageLite.Builder7"
+        uuid: "parsePaymentRequest_abstractMessageLite.Builder4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -24059,7 +23992,7 @@ methods:
             onlyPojoFunctions: false
             builderPattern: false
           valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-          uuid: "parsePaymentRequest_generatedMessageLite7"
+          uuid: "parsePaymentRequest_generatedMessageLite4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: true
@@ -24082,7 +24015,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-        uuid: "parsePaymentRequest_generatedMessageLite7"
+        uuid: "parsePaymentRequest_generatedMessageLite4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -24098,7 +24031,7 @@ methods:
           suggestedContent: !<regular>
             value: false
           valueType: "boolean"
-          uuid: "parsePaymentRequest_boolean25"
+          uuid: "parsePaymentRequest_boolean12"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -24137,7 +24070,7 @@ methods:
             method: "get"
             methodParameters: []
           valueType: "org.bitcoinj.params.MainNetParams"
-          uuid: "parsePaymentRequest_mainNetParams5"
+          uuid: "parsePaymentRequest_mainNetParams3"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -24160,7 +24093,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-        uuid: "parsePaymentRequest_generatedMessageLite7"
+        uuid: "parsePaymentRequest_generatedMessageLite4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -24176,7 +24109,7 @@ methods:
           suggestedContent: !<regular>
             value: 1
           valueType: "int"
-          uuid: "parsePaymentRequest_int21"
+          uuid: "parsePaymentRequest_int10"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -24199,7 +24132,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-        uuid: "parsePaymentRequest_generatedMessageLite7"
+        uuid: "parsePaymentRequest_generatedMessageLite4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -24242,7 +24175,7 @@ methods:
               explicitCastNeeded: false
           valueType: "java.util.List"
           genericValueType: "org.bitcoinj.protobuf.payments.Protos$Output"
-          uuid: "parsePaymentRequest_list3"
+          uuid: "parsePaymentRequest_list2"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -24265,7 +24198,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$Output"
-        uuid: "parsePaymentRequest_object3"
+        uuid: "parsePaymentRequest_object2"
         fixed: false
         collectionUuid: "parsePaymentRequest_list2"
         equalsMethodPresent: false
@@ -24282,7 +24215,7 @@ methods:
           suggestedContent: !<regular>
             value: true
           valueType: "boolean"
-          uuid: "parsePaymentRequest_boolean27"
+          uuid: "parsePaymentRequest_boolean14"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -24305,7 +24238,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$Output"
-        uuid: "parsePaymentRequest_object3"
+        uuid: "parsePaymentRequest_object2"
         fixed: false
         collectionUuid: "parsePaymentRequest_list2"
         equalsMethodPresent: false
@@ -24480,7 +24413,7 @@ methods:
           method: "get"
           methodParameters: []
         valueType: "org.bitcoinj.params.MainNetParams"
-        uuid: "parsePaymentRequest_mainNetParams5"
+        uuid: "parsePaymentRequest_mainNetParams3"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -24641,7 +24574,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "502699733DF29F6569A22527878A8236"
-      index: 18
+      index: 20
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -24664,14 +24597,14 @@ methods:
       filledByUser: false
     uuid: "09bd9b1a-6122-3513-81fe-00c0d2fc317d"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
       source: "totalValue = totalValue.add(Coin.valueOf(output.getAmount()));"
       lineNumber: 425
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "getExpires"
     returnType: "java.util.Date"
@@ -25616,7 +25549,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "24047F2A00E24C6053D5CA552F57F67B"
-      index: 4
+      index: 19
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -25657,7 +25590,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "91A9CF80B8279C04A4748E7D32E7A398"
-      index: 5
+      index: 20
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -25682,14 +25615,14 @@ methods:
       filledByUser: false
     uuid: "b59526a4-3e3d-333a-98ad-bf2a33c3b484"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
       source: "totalValue = totalValue.add(Coin.valueOf(output.getAmount()));"
       lineNumber: 425
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "isExpired"
     returnType: "boolean"
@@ -26596,7 +26529,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "24047F2A00E24C6053D5CA552F57F67B"
-      index: 4
+      index: 19
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -26691,14 +26624,14 @@ methods:
       filledByUser: false
     uuid: "17995948-c48b-3508-848e-559f0c32880c"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
       source: "totalValue = totalValue.add(Coin.valueOf(output.getAmount()));"
       lineNumber: 425
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "isExpiredWhenExpiresMapTimeUtilsCurrentTimeIsAfterTimeNotOrElseFalse"
@@ -26912,7 +26845,7 @@ methods:
           suggestedContent: !<regular>
             value: 1
           valueType: "int"
-          uuid: "parsePaymentRequest_int20"
+          uuid: "parsePaymentRequest_int9"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -26951,7 +26884,7 @@ methods:
           suggestedContent: !<regular>
             value: true
           valueType: "boolean"
-          uuid: "parsePaymentRequest_boolean24"
+          uuid: "parsePaymentRequest_boolean11"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -26982,7 +26915,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-          uuid: "parsePaymentRequest_protos.PaymentDetails.Builder7"
+          uuid: "parsePaymentRequest_protos.PaymentDetails.Builder4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -27017,7 +26950,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "com.google.protobuf.ByteString"
-          uuid: "parsePaymentRequest_byteString7"
+          uuid: "parsePaymentRequest_byteString4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -27035,7 +26968,7 @@ methods:
       value:
         sapientType: "MOCK"
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-        uuid: "parsePaymentRequest_protos.PaymentDetails.Builder7"
+        uuid: "parsePaymentRequest_protos.PaymentDetails.Builder4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -27047,7 +26980,7 @@ methods:
           value:
             sapientType: "MOCK"
             valueType: "com.google.protobuf.ByteString"
-            uuid: "parsePaymentRequest_byteString7"
+            uuid: "parsePaymentRequest_byteString4"
             fixed: false
             equalsMethodPresent: false
             explicitCastNeeded: false
@@ -27057,7 +26990,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-          uuid: "parsePaymentRequest_abstractMessageLite.Builder7"
+          uuid: "parsePaymentRequest_abstractMessageLite.Builder4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: true
@@ -27075,7 +27008,7 @@ methods:
       value:
         sapientType: "MOCK"
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-        uuid: "parsePaymentRequest_abstractMessageLite.Builder7"
+        uuid: "parsePaymentRequest_abstractMessageLite.Builder4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -27091,7 +27024,7 @@ methods:
             onlyPojoFunctions: false
             builderPattern: false
           valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-          uuid: "parsePaymentRequest_generatedMessageLite7"
+          uuid: "parsePaymentRequest_generatedMessageLite4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: true
@@ -27114,7 +27047,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-        uuid: "parsePaymentRequest_generatedMessageLite7"
+        uuid: "parsePaymentRequest_generatedMessageLite4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -27130,7 +27063,7 @@ methods:
           suggestedContent: !<regular>
             value: false
           valueType: "boolean"
-          uuid: "parsePaymentRequest_boolean25"
+          uuid: "parsePaymentRequest_boolean12"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -27169,7 +27102,7 @@ methods:
             method: "get"
             methodParameters: []
           valueType: "org.bitcoinj.params.MainNetParams"
-          uuid: "parsePaymentRequest_mainNetParams5"
+          uuid: "parsePaymentRequest_mainNetParams3"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -27192,7 +27125,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-        uuid: "parsePaymentRequest_generatedMessageLite7"
+        uuid: "parsePaymentRequest_generatedMessageLite4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -27208,7 +27141,7 @@ methods:
           suggestedContent: !<regular>
             value: 1
           valueType: "int"
-          uuid: "parsePaymentRequest_int21"
+          uuid: "parsePaymentRequest_int10"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -27231,7 +27164,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-        uuid: "parsePaymentRequest_generatedMessageLite7"
+        uuid: "parsePaymentRequest_generatedMessageLite4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -27274,7 +27207,7 @@ methods:
               explicitCastNeeded: false
           valueType: "java.util.List"
           genericValueType: "org.bitcoinj.protobuf.payments.Protos$Output"
-          uuid: "parsePaymentRequest_list3"
+          uuid: "parsePaymentRequest_list2"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -27297,7 +27230,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$Output"
-        uuid: "parsePaymentRequest_object3"
+        uuid: "parsePaymentRequest_object2"
         fixed: false
         collectionUuid: "parsePaymentRequest_list2"
         equalsMethodPresent: false
@@ -27314,7 +27247,7 @@ methods:
           suggestedContent: !<regular>
             value: true
           valueType: "boolean"
-          uuid: "parsePaymentRequest_boolean27"
+          uuid: "parsePaymentRequest_boolean14"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -27337,7 +27270,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$Output"
-        uuid: "parsePaymentRequest_object3"
+        uuid: "parsePaymentRequest_object2"
         fixed: false
         collectionUuid: "parsePaymentRequest_list2"
         equalsMethodPresent: false
@@ -27512,7 +27445,7 @@ methods:
           method: "get"
           methodParameters: []
         valueType: "org.bitcoinj.params.MainNetParams"
-        uuid: "parsePaymentRequest_mainNetParams5"
+        uuid: "parsePaymentRequest_mainNetParams3"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -27636,7 +27569,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "24047F2A00E24C6053D5CA552F57F67B"
-      index: 17
+      index: 19
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -27733,14 +27666,14 @@ methods:
       filledByUser: false
     uuid: "9d0e3047-98b8-3eb0-9f2f-154bf4b1fe26"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
       source: "totalValue = totalValue.add(Coin.valueOf(output.getAmount()));"
       lineNumber: 425
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "getPaymentUrl"
     returnType: "java.lang.String"
@@ -27961,7 +27894,7 @@ methods:
           suggestedContent: !<regular>
             value: 1
           valueType: "int"
-          uuid: "parsePaymentRequest_int20"
+          uuid: "parsePaymentRequest_int9"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -28000,7 +27933,7 @@ methods:
           suggestedContent: !<regular>
             value: true
           valueType: "boolean"
-          uuid: "parsePaymentRequest_boolean24"
+          uuid: "parsePaymentRequest_boolean11"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -28031,7 +27964,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-          uuid: "parsePaymentRequest_protos.PaymentDetails.Builder7"
+          uuid: "parsePaymentRequest_protos.PaymentDetails.Builder4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -28066,7 +27999,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "com.google.protobuf.ByteString"
-          uuid: "parsePaymentRequest_byteString7"
+          uuid: "parsePaymentRequest_byteString4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -28084,7 +28017,7 @@ methods:
       value:
         sapientType: "MOCK"
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-        uuid: "parsePaymentRequest_protos.PaymentDetails.Builder7"
+        uuid: "parsePaymentRequest_protos.PaymentDetails.Builder4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -28096,7 +28029,7 @@ methods:
           value:
             sapientType: "MOCK"
             valueType: "com.google.protobuf.ByteString"
-            uuid: "parsePaymentRequest_byteString7"
+            uuid: "parsePaymentRequest_byteString4"
             fixed: false
             equalsMethodPresent: false
             explicitCastNeeded: false
@@ -28106,7 +28039,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-          uuid: "parsePaymentRequest_abstractMessageLite.Builder7"
+          uuid: "parsePaymentRequest_abstractMessageLite.Builder4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: true
@@ -28124,7 +28057,7 @@ methods:
       value:
         sapientType: "MOCK"
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-        uuid: "parsePaymentRequest_abstractMessageLite.Builder7"
+        uuid: "parsePaymentRequest_abstractMessageLite.Builder4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -28140,7 +28073,7 @@ methods:
             onlyPojoFunctions: false
             builderPattern: false
           valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-          uuid: "parsePaymentRequest_generatedMessageLite7"
+          uuid: "parsePaymentRequest_generatedMessageLite4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: true
@@ -28163,7 +28096,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-        uuid: "parsePaymentRequest_generatedMessageLite7"
+        uuid: "parsePaymentRequest_generatedMessageLite4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -28179,7 +28112,7 @@ methods:
           suggestedContent: !<regular>
             value: false
           valueType: "boolean"
-          uuid: "parsePaymentRequest_boolean25"
+          uuid: "parsePaymentRequest_boolean12"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -28218,7 +28151,7 @@ methods:
             method: "get"
             methodParameters: []
           valueType: "org.bitcoinj.params.MainNetParams"
-          uuid: "parsePaymentRequest_mainNetParams5"
+          uuid: "parsePaymentRequest_mainNetParams3"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -28241,7 +28174,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-        uuid: "parsePaymentRequest_generatedMessageLite7"
+        uuid: "parsePaymentRequest_generatedMessageLite4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -28257,7 +28190,7 @@ methods:
           suggestedContent: !<regular>
             value: 1
           valueType: "int"
-          uuid: "parsePaymentRequest_int21"
+          uuid: "parsePaymentRequest_int10"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -28280,7 +28213,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-        uuid: "parsePaymentRequest_generatedMessageLite7"
+        uuid: "parsePaymentRequest_generatedMessageLite4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -28323,7 +28256,7 @@ methods:
               explicitCastNeeded: false
           valueType: "java.util.List"
           genericValueType: "org.bitcoinj.protobuf.payments.Protos$Output"
-          uuid: "parsePaymentRequest_list3"
+          uuid: "parsePaymentRequest_list2"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -28346,7 +28279,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$Output"
-        uuid: "parsePaymentRequest_object3"
+        uuid: "parsePaymentRequest_object2"
         fixed: false
         collectionUuid: "parsePaymentRequest_list2"
         equalsMethodPresent: false
@@ -28363,7 +28296,7 @@ methods:
           suggestedContent: !<regular>
             value: true
           valueType: "boolean"
-          uuid: "parsePaymentRequest_boolean27"
+          uuid: "parsePaymentRequest_boolean14"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -28386,7 +28319,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$Output"
-        uuid: "parsePaymentRequest_object3"
+        uuid: "parsePaymentRequest_object2"
         fixed: false
         collectionUuid: "parsePaymentRequest_list2"
         equalsMethodPresent: false
@@ -28561,7 +28494,7 @@ methods:
           method: "get"
           methodParameters: []
         valueType: "org.bitcoinj.params.MainNetParams"
-        uuid: "parsePaymentRequest_mainNetParams5"
+        uuid: "parsePaymentRequest_mainNetParams3"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -28774,14 +28707,14 @@ methods:
       filledByUser: false
     uuid: "d05d52b3-90c7-3f41-8757-f1b20c8392e7"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
       source: "totalValue = totalValue.add(Coin.valueOf(output.getAmount()));"
       lineNumber: 425
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "getPaymentUrlWhenPaymentDetailsNotHasPaymentUrl"
@@ -28995,7 +28928,7 @@ methods:
           suggestedContent: !<regular>
             value: 1
           valueType: "int"
-          uuid: "parsePaymentRequest_int20"
+          uuid: "parsePaymentRequest_int9"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -29034,7 +28967,7 @@ methods:
           suggestedContent: !<regular>
             value: true
           valueType: "boolean"
-          uuid: "parsePaymentRequest_boolean24"
+          uuid: "parsePaymentRequest_boolean11"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -29065,7 +28998,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-          uuid: "parsePaymentRequest_protos.PaymentDetails.Builder7"
+          uuid: "parsePaymentRequest_protos.PaymentDetails.Builder4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -29100,7 +29033,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "com.google.protobuf.ByteString"
-          uuid: "parsePaymentRequest_byteString7"
+          uuid: "parsePaymentRequest_byteString4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -29118,7 +29051,7 @@ methods:
       value:
         sapientType: "MOCK"
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-        uuid: "parsePaymentRequest_protos.PaymentDetails.Builder7"
+        uuid: "parsePaymentRequest_protos.PaymentDetails.Builder4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -29130,7 +29063,7 @@ methods:
           value:
             sapientType: "MOCK"
             valueType: "com.google.protobuf.ByteString"
-            uuid: "parsePaymentRequest_byteString7"
+            uuid: "parsePaymentRequest_byteString4"
             fixed: false
             equalsMethodPresent: false
             explicitCastNeeded: false
@@ -29140,7 +29073,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-          uuid: "parsePaymentRequest_abstractMessageLite.Builder7"
+          uuid: "parsePaymentRequest_abstractMessageLite.Builder4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: true
@@ -29158,7 +29091,7 @@ methods:
       value:
         sapientType: "MOCK"
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-        uuid: "parsePaymentRequest_abstractMessageLite.Builder7"
+        uuid: "parsePaymentRequest_abstractMessageLite.Builder4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -29174,7 +29107,7 @@ methods:
             onlyPojoFunctions: false
             builderPattern: false
           valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-          uuid: "parsePaymentRequest_generatedMessageLite7"
+          uuid: "parsePaymentRequest_generatedMessageLite4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: true
@@ -29197,7 +29130,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-        uuid: "parsePaymentRequest_generatedMessageLite7"
+        uuid: "parsePaymentRequest_generatedMessageLite4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -29213,7 +29146,7 @@ methods:
           suggestedContent: !<regular>
             value: false
           valueType: "boolean"
-          uuid: "parsePaymentRequest_boolean25"
+          uuid: "parsePaymentRequest_boolean12"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -29252,7 +29185,7 @@ methods:
             method: "get"
             methodParameters: []
           valueType: "org.bitcoinj.params.MainNetParams"
-          uuid: "parsePaymentRequest_mainNetParams5"
+          uuid: "parsePaymentRequest_mainNetParams3"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -29275,7 +29208,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-        uuid: "parsePaymentRequest_generatedMessageLite7"
+        uuid: "parsePaymentRequest_generatedMessageLite4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -29291,7 +29224,7 @@ methods:
           suggestedContent: !<regular>
             value: 1
           valueType: "int"
-          uuid: "parsePaymentRequest_int21"
+          uuid: "parsePaymentRequest_int10"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -29314,7 +29247,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-        uuid: "parsePaymentRequest_generatedMessageLite7"
+        uuid: "parsePaymentRequest_generatedMessageLite4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -29357,7 +29290,7 @@ methods:
               explicitCastNeeded: false
           valueType: "java.util.List"
           genericValueType: "org.bitcoinj.protobuf.payments.Protos$Output"
-          uuid: "parsePaymentRequest_list3"
+          uuid: "parsePaymentRequest_list2"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -29380,7 +29313,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$Output"
-        uuid: "parsePaymentRequest_object3"
+        uuid: "parsePaymentRequest_object2"
         fixed: false
         collectionUuid: "parsePaymentRequest_list2"
         equalsMethodPresent: false
@@ -29397,7 +29330,7 @@ methods:
           suggestedContent: !<regular>
             value: true
           valueType: "boolean"
-          uuid: "parsePaymentRequest_boolean27"
+          uuid: "parsePaymentRequest_boolean14"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -29420,7 +29353,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$Output"
-        uuid: "parsePaymentRequest_object3"
+        uuid: "parsePaymentRequest_object2"
         fixed: false
         collectionUuid: "parsePaymentRequest_list2"
         equalsMethodPresent: false
@@ -29595,7 +29528,7 @@ methods:
           method: "get"
           methodParameters: []
         valueType: "org.bitcoinj.params.MainNetParams"
-        uuid: "parsePaymentRequest_mainNetParams5"
+        uuid: "parsePaymentRequest_mainNetParams3"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -29756,7 +29689,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "8EDA3F2AE365AC99A4FDAA03D44C0B66"
-      index: 18
+      index: 20
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -29771,14 +29704,14 @@ methods:
       filledByUser: false
     uuid: "c1c60ade-30ae-32fc-8306-294b6bd2cf93"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
       source: "totalValue = totalValue.add(Coin.valueOf(output.getAmount()));"
       lineNumber: 425
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "getMerchantData"
     returnType: "byte[]"
@@ -29999,7 +29932,7 @@ methods:
           suggestedContent: !<regular>
             value: 1
           valueType: "int"
-          uuid: "parsePaymentRequest_int20"
+          uuid: "parsePaymentRequest_int9"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -30038,7 +29971,7 @@ methods:
           suggestedContent: !<regular>
             value: true
           valueType: "boolean"
-          uuid: "parsePaymentRequest_boolean24"
+          uuid: "parsePaymentRequest_boolean11"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -30069,7 +30002,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-          uuid: "parsePaymentRequest_protos.PaymentDetails.Builder7"
+          uuid: "parsePaymentRequest_protos.PaymentDetails.Builder4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -30104,7 +30037,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "com.google.protobuf.ByteString"
-          uuid: "parsePaymentRequest_byteString7"
+          uuid: "parsePaymentRequest_byteString4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -30122,7 +30055,7 @@ methods:
       value:
         sapientType: "MOCK"
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-        uuid: "parsePaymentRequest_protos.PaymentDetails.Builder7"
+        uuid: "parsePaymentRequest_protos.PaymentDetails.Builder4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -30134,7 +30067,7 @@ methods:
           value:
             sapientType: "MOCK"
             valueType: "com.google.protobuf.ByteString"
-            uuid: "parsePaymentRequest_byteString7"
+            uuid: "parsePaymentRequest_byteString4"
             fixed: false
             equalsMethodPresent: false
             explicitCastNeeded: false
@@ -30144,7 +30077,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-          uuid: "parsePaymentRequest_abstractMessageLite.Builder7"
+          uuid: "parsePaymentRequest_abstractMessageLite.Builder4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: true
@@ -30162,7 +30095,7 @@ methods:
       value:
         sapientType: "MOCK"
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-        uuid: "parsePaymentRequest_abstractMessageLite.Builder7"
+        uuid: "parsePaymentRequest_abstractMessageLite.Builder4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -30178,7 +30111,7 @@ methods:
             onlyPojoFunctions: false
             builderPattern: false
           valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-          uuid: "parsePaymentRequest_generatedMessageLite7"
+          uuid: "parsePaymentRequest_generatedMessageLite4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: true
@@ -30201,7 +30134,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-        uuid: "parsePaymentRequest_generatedMessageLite7"
+        uuid: "parsePaymentRequest_generatedMessageLite4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -30217,7 +30150,7 @@ methods:
           suggestedContent: !<regular>
             value: false
           valueType: "boolean"
-          uuid: "parsePaymentRequest_boolean25"
+          uuid: "parsePaymentRequest_boolean12"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -30256,7 +30189,7 @@ methods:
             method: "get"
             methodParameters: []
           valueType: "org.bitcoinj.params.MainNetParams"
-          uuid: "parsePaymentRequest_mainNetParams5"
+          uuid: "parsePaymentRequest_mainNetParams3"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -30279,7 +30212,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-        uuid: "parsePaymentRequest_generatedMessageLite7"
+        uuid: "parsePaymentRequest_generatedMessageLite4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -30295,7 +30228,7 @@ methods:
           suggestedContent: !<regular>
             value: 1
           valueType: "int"
-          uuid: "parsePaymentRequest_int21"
+          uuid: "parsePaymentRequest_int10"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -30318,7 +30251,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-        uuid: "parsePaymentRequest_generatedMessageLite7"
+        uuid: "parsePaymentRequest_generatedMessageLite4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -30361,7 +30294,7 @@ methods:
               explicitCastNeeded: false
           valueType: "java.util.List"
           genericValueType: "org.bitcoinj.protobuf.payments.Protos$Output"
-          uuid: "parsePaymentRequest_list3"
+          uuid: "parsePaymentRequest_list2"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -30384,7 +30317,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$Output"
-        uuid: "parsePaymentRequest_object3"
+        uuid: "parsePaymentRequest_object2"
         fixed: false
         collectionUuid: "parsePaymentRequest_list2"
         equalsMethodPresent: false
@@ -30401,7 +30334,7 @@ methods:
           suggestedContent: !<regular>
             value: true
           valueType: "boolean"
-          uuid: "parsePaymentRequest_boolean27"
+          uuid: "parsePaymentRequest_boolean14"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -30424,7 +30357,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$Output"
-        uuid: "parsePaymentRequest_object3"
+        uuid: "parsePaymentRequest_object2"
         fixed: false
         collectionUuid: "parsePaymentRequest_list2"
         equalsMethodPresent: false
@@ -30599,7 +30532,7 @@ methods:
           method: "get"
           methodParameters: []
         valueType: "org.bitcoinj.params.MainNetParams"
-        uuid: "parsePaymentRequest_mainNetParams5"
+        uuid: "parsePaymentRequest_mainNetParams3"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -31073,7 +31006,7 @@ methods:
           suggestedContent: !<regular>
             value: 1
           valueType: "int"
-          uuid: "parsePaymentRequest_int20"
+          uuid: "parsePaymentRequest_int9"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -31112,7 +31045,7 @@ methods:
           suggestedContent: !<regular>
             value: true
           valueType: "boolean"
-          uuid: "parsePaymentRequest_boolean24"
+          uuid: "parsePaymentRequest_boolean11"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -31143,7 +31076,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-          uuid: "parsePaymentRequest_protos.PaymentDetails.Builder7"
+          uuid: "parsePaymentRequest_protos.PaymentDetails.Builder4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -31178,7 +31111,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "com.google.protobuf.ByteString"
-          uuid: "parsePaymentRequest_byteString7"
+          uuid: "parsePaymentRequest_byteString4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -31196,7 +31129,7 @@ methods:
       value:
         sapientType: "MOCK"
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-        uuid: "parsePaymentRequest_protos.PaymentDetails.Builder7"
+        uuid: "parsePaymentRequest_protos.PaymentDetails.Builder4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -31208,7 +31141,7 @@ methods:
           value:
             sapientType: "MOCK"
             valueType: "com.google.protobuf.ByteString"
-            uuid: "parsePaymentRequest_byteString7"
+            uuid: "parsePaymentRequest_byteString4"
             fixed: false
             equalsMethodPresent: false
             explicitCastNeeded: false
@@ -31218,7 +31151,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-          uuid: "parsePaymentRequest_abstractMessageLite.Builder7"
+          uuid: "parsePaymentRequest_abstractMessageLite.Builder4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: true
@@ -31236,7 +31169,7 @@ methods:
       value:
         sapientType: "MOCK"
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-        uuid: "parsePaymentRequest_abstractMessageLite.Builder7"
+        uuid: "parsePaymentRequest_abstractMessageLite.Builder4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -31252,7 +31185,7 @@ methods:
             onlyPojoFunctions: false
             builderPattern: false
           valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-          uuid: "parsePaymentRequest_generatedMessageLite7"
+          uuid: "parsePaymentRequest_generatedMessageLite4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: true
@@ -31275,7 +31208,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-        uuid: "parsePaymentRequest_generatedMessageLite7"
+        uuid: "parsePaymentRequest_generatedMessageLite4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -31291,7 +31224,7 @@ methods:
           suggestedContent: !<regular>
             value: false
           valueType: "boolean"
-          uuid: "parsePaymentRequest_boolean25"
+          uuid: "parsePaymentRequest_boolean12"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -31330,7 +31263,7 @@ methods:
             method: "get"
             methodParameters: []
           valueType: "org.bitcoinj.params.MainNetParams"
-          uuid: "parsePaymentRequest_mainNetParams5"
+          uuid: "parsePaymentRequest_mainNetParams3"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -31353,7 +31286,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-        uuid: "parsePaymentRequest_generatedMessageLite7"
+        uuid: "parsePaymentRequest_generatedMessageLite4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -31369,7 +31302,7 @@ methods:
           suggestedContent: !<regular>
             value: 1
           valueType: "int"
-          uuid: "parsePaymentRequest_int21"
+          uuid: "parsePaymentRequest_int10"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -31392,7 +31325,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-        uuid: "parsePaymentRequest_generatedMessageLite7"
+        uuid: "parsePaymentRequest_generatedMessageLite4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -31435,7 +31368,7 @@ methods:
               explicitCastNeeded: false
           valueType: "java.util.List"
           genericValueType: "org.bitcoinj.protobuf.payments.Protos$Output"
-          uuid: "parsePaymentRequest_list3"
+          uuid: "parsePaymentRequest_list2"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -31458,7 +31391,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$Output"
-        uuid: "parsePaymentRequest_object3"
+        uuid: "parsePaymentRequest_object2"
         fixed: false
         collectionUuid: "parsePaymentRequest_list2"
         equalsMethodPresent: false
@@ -31475,7 +31408,7 @@ methods:
           suggestedContent: !<regular>
             value: true
           valueType: "boolean"
-          uuid: "parsePaymentRequest_boolean27"
+          uuid: "parsePaymentRequest_boolean14"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -31498,7 +31431,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$Output"
-        uuid: "parsePaymentRequest_object3"
+        uuid: "parsePaymentRequest_object2"
         fixed: false
         collectionUuid: "parsePaymentRequest_list2"
         equalsMethodPresent: false
@@ -31673,7 +31606,7 @@ methods:
           method: "get"
           methodParameters: []
         valueType: "org.bitcoinj.params.MainNetParams"
-        uuid: "parsePaymentRequest_mainNetParams5"
+        uuid: "parsePaymentRequest_mainNetParams3"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -31834,7 +31767,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "553560DE290625CACCE02ADA89313494"
-      index: 18
+      index: 20
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -32077,7 +32010,7 @@ methods:
           suggestedContent: !<regular>
             value: 1
           valueType: "int"
-          uuid: "parsePaymentRequest_int22"
+          uuid: "parsePaymentRequest_int9"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -32116,7 +32049,7 @@ methods:
           suggestedContent: !<regular>
             value: true
           valueType: "boolean"
-          uuid: "parsePaymentRequest_boolean30"
+          uuid: "parsePaymentRequest_boolean11"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -32147,7 +32080,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-          uuid: "parsePaymentRequest_protos.PaymentDetails.Builder8"
+          uuid: "parsePaymentRequest_protos.PaymentDetails.Builder4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -32182,7 +32115,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "com.google.protobuf.ByteString"
-          uuid: "parsePaymentRequest_byteString8"
+          uuid: "parsePaymentRequest_byteString4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -32200,7 +32133,7 @@ methods:
       value:
         sapientType: "MOCK"
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-        uuid: "parsePaymentRequest_protos.PaymentDetails.Builder8"
+        uuid: "parsePaymentRequest_protos.PaymentDetails.Builder4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -32212,7 +32145,7 @@ methods:
           value:
             sapientType: "MOCK"
             valueType: "com.google.protobuf.ByteString"
-            uuid: "parsePaymentRequest_byteString8"
+            uuid: "parsePaymentRequest_byteString4"
             fixed: false
             equalsMethodPresent: false
             explicitCastNeeded: false
@@ -32222,7 +32155,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-          uuid: "parsePaymentRequest_abstractMessageLite.Builder8"
+          uuid: "parsePaymentRequest_abstractMessageLite.Builder4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: true
@@ -32240,7 +32173,7 @@ methods:
       value:
         sapientType: "MOCK"
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-        uuid: "parsePaymentRequest_abstractMessageLite.Builder8"
+        uuid: "parsePaymentRequest_abstractMessageLite.Builder4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -32256,7 +32189,7 @@ methods:
             onlyPojoFunctions: false
             builderPattern: false
           valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-          uuid: "parsePaymentRequest_generatedMessageLite8"
+          uuid: "parsePaymentRequest_generatedMessageLite4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: true
@@ -32279,7 +32212,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-        uuid: "parsePaymentRequest_generatedMessageLite8"
+        uuid: "parsePaymentRequest_generatedMessageLite4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -32295,7 +32228,7 @@ methods:
           suggestedContent: !<regular>
             value: false
           valueType: "boolean"
-          uuid: "parsePaymentRequest_boolean31"
+          uuid: "parsePaymentRequest_boolean12"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -32334,7 +32267,7 @@ methods:
             method: "get"
             methodParameters: []
           valueType: "org.bitcoinj.params.MainNetParams"
-          uuid: "parsePaymentRequest_mainNetParams6"
+          uuid: "parsePaymentRequest_mainNetParams3"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -32357,7 +32290,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-        uuid: "parsePaymentRequest_generatedMessageLite8"
+        uuid: "parsePaymentRequest_generatedMessageLite4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -32373,7 +32306,7 @@ methods:
           suggestedContent: !<regular>
             value: 1
           valueType: "int"
-          uuid: "parsePaymentRequest_int23"
+          uuid: "parsePaymentRequest_int10"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -32396,7 +32329,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-        uuid: "parsePaymentRequest_generatedMessageLite8"
+        uuid: "parsePaymentRequest_generatedMessageLite4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -32439,7 +32372,7 @@ methods:
               explicitCastNeeded: false
           valueType: "java.util.List"
           genericValueType: "org.bitcoinj.protobuf.payments.Protos$Output"
-          uuid: "parsePaymentRequest_list4"
+          uuid: "parsePaymentRequest_list2"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -32462,7 +32395,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$Output"
-        uuid: "parsePaymentRequest_object4"
+        uuid: "parsePaymentRequest_object2"
         fixed: false
         collectionUuid: "parsePaymentRequest_list2"
         equalsMethodPresent: false
@@ -32479,7 +32412,7 @@ methods:
           suggestedContent: !<regular>
             value: true
           valueType: "boolean"
-          uuid: "parsePaymentRequest_boolean33"
+          uuid: "parsePaymentRequest_boolean14"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -32502,7 +32435,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$Output"
-        uuid: "parsePaymentRequest_object4"
+        uuid: "parsePaymentRequest_object2"
         fixed: false
         collectionUuid: "parsePaymentRequest_list2"
         equalsMethodPresent: false
@@ -32517,7 +32450,7 @@ methods:
           content: !<regular>
             value: 0
           valueType: "long"
-          uuid: "parsePaymentRequest_long4"
+          uuid: "parsePaymentRequest_long2"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -32550,7 +32483,7 @@ methods:
             content: !<regular>
               value: 0
             valueType: "long"
-            uuid: "parsePaymentRequest_long4"
+            uuid: "parsePaymentRequest_long2"
             fixed: false
             equalsMethodPresent: false
             explicitCastNeeded: false
@@ -32558,7 +32491,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "org.bitcoinj.base.Coin"
-          uuid: "parsePaymentRequest_coin7"
+          uuid: "parsePaymentRequest_coin3"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -32595,7 +32528,7 @@ methods:
           value:
             sapientType: "MOCK"
             valueType: "org.bitcoinj.base.Coin"
-            uuid: "parsePaymentRequest_coin7"
+            uuid: "parsePaymentRequest_coin3"
             fixed: false
             equalsMethodPresent: false
             explicitCastNeeded: false
@@ -32650,7 +32583,7 @@ methods:
                 explicitCastNeeded: false
             methodName: "add"
           valueType: "org.bitcoinj.base.Coin"
-          uuid: "parsePaymentRequest_coin8"
+          uuid: "parsePaymentRequest_coin4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -32677,7 +32610,7 @@ methods:
           method: "get"
           methodParameters: []
         valueType: "org.bitcoinj.params.MainNetParams"
-        uuid: "parsePaymentRequest_mainNetParams6"
+        uuid: "parsePaymentRequest_mainNetParams3"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -32691,7 +32624,7 @@ methods:
           content: !<regular>
             value: "MAINNET"
           valueType: "org.bitcoinj.base.BitcoinNetwork"
-          uuid: "parsePaymentRequest_bitcoinNetwork3"
+          uuid: "parsePaymentRequest_bitcoinNetwork2"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -32801,12 +32734,10 @@ methods:
     - type: "FIELD"
       name: "paymentDetails"
       modelFingerprint: "E0B27D80298C11E38895A6C8C12D1650"
-      index: 11
+      index: 19
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 270006
       value:
         sapientType: "MOCK"
         suggestedContent: !<unknown_object>
@@ -32814,7 +32745,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-        uuid: "parsePaymentRequest_generatedMessageLite8"
+        uuid: "parsePaymentRequest_generatedMessageLite4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -32857,7 +32788,7 @@ methods:
               explicitCastNeeded: false
           valueType: "java.util.List"
           genericValueType: "org.bitcoinj.protobuf.payments.Protos$Output"
-          uuid: "parsePaymentRequest_list4"
+          uuid: "getSendRequest_list1"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -32867,12 +32798,10 @@ methods:
     - type: "LOCAL_VARIABLE"
       name: "output"
       modelFingerprint: "987A2351B3C3036C6A85624CE5B07C6A"
-      index: 13
+      index: 20
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 270006
       value:
         sapientType: "MOCK"
         suggestedContent: !<unknown_object>
@@ -32880,7 +32809,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$Output"
-        uuid: "parsePaymentRequest_object4"
+        uuid: "getSendRequest_object1"
         fixed: false
         collectionUuid: "getSendRequest_list1"
         equalsMethodPresent: false
@@ -32895,7 +32824,7 @@ methods:
           content: !<regular>
             value: 0
           valueType: "long"
-          uuid: "parsePaymentRequest_long4"
+          uuid: "getSendRequest_long1"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -32905,12 +32834,10 @@ methods:
     - type: "STATIC"
       name: "Coin"
       modelFingerprint: "1DF8CD6BBFAB34176928C414F92D5A5C"
-      index: 14
+      index: 21
       ignored: false
       nestedInLoop: true
       nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 270006
       value:
         sapientType: "MOCK"
         valueType: "org.bitcoinj.base.Coin"
@@ -32928,7 +32855,7 @@ methods:
             content: !<regular>
               value: 0
             valueType: "long"
-            uuid: "parsePaymentRequest_long4"
+            uuid: "getSendRequest_long1"
             fixed: false
             equalsMethodPresent: false
             explicitCastNeeded: false
@@ -32936,7 +32863,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "org.bitcoinj.base.Coin"
-          uuid: "parsePaymentRequest_coin7"
+          uuid: "getSendRequest_coin1"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -36925,7 +36852,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "4BA32AE3C427A6FDD5500319C87057A1"
-      index: 8
+      index: 23
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -38226,7 +38153,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "C26FF36FFF2D2895C219031184A85F23"
-      index: 8
+      index: 23
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -38549,7 +38476,7 @@ methods:
     - type: "STATIC"
       name: "Protos.PaymentACK"
       modelFingerprint: "FE429AFB1C6CB27F2FB5DC3B16C2F012"
-      index: 12
+      index: 27
       ignored: false
       nestedInLoop: true
       nestedInRecursion: false
@@ -38590,7 +38517,7 @@ methods:
     - type: "STATIC"
       name: "PaymentProtocol"
       modelFingerprint: "1A6B1F6C26A19CDD8E34A09F4B2AA005"
-      index: 13
+      index: 28
       ignored: false
       nestedInLoop: true
       nestedInRecursion: false
@@ -38627,7 +38554,7 @@ methods:
     - type: "STATIC"
       name: "ListenableCompletableFuture"
       modelFingerprint: "7A0AF3BE5C0FD15604AF4A4A0F91CC32"
-      index: 14
+      index: 29
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -38676,7 +38603,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "4697BBB4549D2577942ABBABF9AB0F82"
-      index: 15
+      index: 30
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -39758,7 +39685,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "C26FF36FFF2D2895C219031184A85F23"
-      index: 8
+      index: 23
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -39821,7 +39748,7 @@ methods:
     - type: "STATIC"
       name: "ListenableCompletableFuture"
       modelFingerprint: "FF5918E1921C07F2FB0922ED981E94A2"
-      index: 10
+      index: 25
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -39900,7 +39827,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "4697BBB4549D2577942ABBABF9AB0F82"
-      index: 11
+      index: 26
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -40968,7 +40895,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "AA368E8A44E219500C740B3D925F1DFE"
-      index: 8
+      index: 23
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -40980,6 +40907,8 @@ methods:
         returnValue:
           sapientType: "ARRAY"
           content: !<array>
+            values: {}
+          suggestedContent: !<array>
             values: {}
           valueType: "byte[]"
           uuid: "getPayment_byte[]1"
@@ -41121,7 +41050,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "97246FC9C16BFB759459634616FC7BFC"
-      index: 10
+      index: 25
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -42175,7 +42104,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "23EE5521FBD0393D8BC589E9E22019AE"
-      index: 8
+      index: 23
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -42398,10 +42327,6 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "NULL"
-        content: !<unknown_object>
-          target: "java.net.URL"
-          onlyPojoFunctions: false
-          builderPattern: false
         suggestedContent: !<unknown_object>
           target: "java.net.URL"
           onlyPojoFunctions: false
@@ -43639,7 +43564,7 @@ methods:
           suggestedContent: !<regular>
             value: 1
           valueType: "int"
-          uuid: "parsePaymentRequest_int20"
+          uuid: "parsePaymentRequest_int9"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -43678,7 +43603,7 @@ methods:
           suggestedContent: !<regular>
             value: true
           valueType: "boolean"
-          uuid: "parsePaymentRequest_boolean24"
+          uuid: "parsePaymentRequest_boolean11"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -43709,7 +43634,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-          uuid: "parsePaymentRequest_protos.PaymentDetails.Builder7"
+          uuid: "parsePaymentRequest_protos.PaymentDetails.Builder4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -43744,7 +43669,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "com.google.protobuf.ByteString"
-          uuid: "parsePaymentRequest_byteString7"
+          uuid: "parsePaymentRequest_byteString4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -43762,7 +43687,7 @@ methods:
       value:
         sapientType: "MOCK"
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-        uuid: "parsePaymentRequest_protos.PaymentDetails.Builder7"
+        uuid: "parsePaymentRequest_protos.PaymentDetails.Builder4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -43774,7 +43699,7 @@ methods:
           value:
             sapientType: "MOCK"
             valueType: "com.google.protobuf.ByteString"
-            uuid: "parsePaymentRequest_byteString7"
+            uuid: "parsePaymentRequest_byteString4"
             fixed: false
             equalsMethodPresent: false
             explicitCastNeeded: false
@@ -43784,7 +43709,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-          uuid: "parsePaymentRequest_abstractMessageLite.Builder7"
+          uuid: "parsePaymentRequest_abstractMessageLite.Builder4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: true
@@ -43802,7 +43727,7 @@ methods:
       value:
         sapientType: "MOCK"
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails$Builder"
-        uuid: "parsePaymentRequest_abstractMessageLite.Builder7"
+        uuid: "parsePaymentRequest_abstractMessageLite.Builder4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -43818,7 +43743,7 @@ methods:
             onlyPojoFunctions: false
             builderPattern: false
           valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-          uuid: "parsePaymentRequest_generatedMessageLite7"
+          uuid: "parsePaymentRequest_generatedMessageLite4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: true
@@ -43841,7 +43766,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-        uuid: "parsePaymentRequest_generatedMessageLite7"
+        uuid: "parsePaymentRequest_generatedMessageLite4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -43857,7 +43782,7 @@ methods:
           suggestedContent: !<regular>
             value: false
           valueType: "boolean"
-          uuid: "parsePaymentRequest_boolean25"
+          uuid: "parsePaymentRequest_boolean12"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -43896,7 +43821,7 @@ methods:
             method: "get"
             methodParameters: []
           valueType: "org.bitcoinj.params.MainNetParams"
-          uuid: "parsePaymentRequest_mainNetParams5"
+          uuid: "parsePaymentRequest_mainNetParams3"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -43919,7 +43844,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-        uuid: "parsePaymentRequest_generatedMessageLite7"
+        uuid: "parsePaymentRequest_generatedMessageLite4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -43935,7 +43860,7 @@ methods:
           suggestedContent: !<regular>
             value: 1
           valueType: "int"
-          uuid: "parsePaymentRequest_int21"
+          uuid: "parsePaymentRequest_int10"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -43958,7 +43883,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$PaymentDetails"
-        uuid: "parsePaymentRequest_generatedMessageLite7"
+        uuid: "parsePaymentRequest_generatedMessageLite4"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: true
@@ -44001,7 +43926,7 @@ methods:
               explicitCastNeeded: false
           valueType: "java.util.List"
           genericValueType: "org.bitcoinj.protobuf.payments.Protos$Output"
-          uuid: "parsePaymentRequest_list3"
+          uuid: "parsePaymentRequest_list2"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -44024,7 +43949,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$Output"
-        uuid: "parsePaymentRequest_object3"
+        uuid: "parsePaymentRequest_object2"
         fixed: false
         collectionUuid: "parsePaymentRequest_list2"
         equalsMethodPresent: false
@@ -44041,7 +43966,7 @@ methods:
           suggestedContent: !<regular>
             value: true
           valueType: "boolean"
-          uuid: "parsePaymentRequest_boolean27"
+          uuid: "parsePaymentRequest_boolean14"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -44064,7 +43989,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.protobuf.payments.Protos$Output"
-        uuid: "parsePaymentRequest_object3"
+        uuid: "parsePaymentRequest_object2"
         fixed: false
         collectionUuid: "parsePaymentRequest_list2"
         equalsMethodPresent: false
@@ -44239,7 +44164,7 @@ methods:
           method: "get"
           methodParameters: []
         valueType: "org.bitcoinj.params.MainNetParams"
-        uuid: "parsePaymentRequest_mainNetParams5"
+        uuid: "parsePaymentRequest_mainNetParams3"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false

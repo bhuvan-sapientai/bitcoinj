@@ -226,12 +226,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "4AA9BC6B5F407CD3EB8FECF0AE734B17"
-    problemWasSolvedByProver: true
+    modelFingerprint: "1DFA8E410133A72711DBEA637385C1C1"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "415208D481B18700A85B5BB9E28F0FF1"
+      modelFingerprint: "9C6F532079FF7348DE74601366213BCE"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -361,9 +361,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 100
-              suggestedContent: !<regular>
-                value: 100
+                value: 0
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -373,9 +371,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: true
+                value: false
               suggestedContent: !<regular>
-                value: true
+                value: false
               valueType: "boolean"
               uuid: "<init>_boolean1"
               fixed: false
@@ -423,9 +421,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa"
+                value: "solved_address_value"
               suggestedContent: !<regular>
-                value: "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa"
+                value: "solved_address_value"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -509,8 +507,6 @@ methods:
           - name: "index"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 0
               suggestedContent: !<regular>
                 value: 0
               valueType: "long"
@@ -555,10 +551,6 @@ methods:
           - name: "height"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 100
-              suggestedContent: !<regular>
-                value: 100
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -568,9 +560,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: true
+                value: false
               suggestedContent: !<regular>
-                value: true
+                value: false
               valueType: "boolean"
               uuid: "<init>_boolean1"
               fixed: false
@@ -618,9 +610,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa"
+                value: "solved_address_value"
               suggestedContent: !<regular>
-                value: "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa"
+                value: "solved_address_value"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -637,7 +629,7 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "value"
-      modelFingerprint: "A691B74D8E63B1C004135D61005AFD34"
+      modelFingerprint: "0C5369DDEE0C0BC40EA0C341C0E0B605"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -731,7 +723,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: "return_of_toFriendlyString1"
+            value: "solved_toFriendlyString_value"
+          suggestedContent: !<regular>
+            value: "solved_toFriendlyString_value"
           valueType: "java.lang.String"
           uuid: "toString_string1"
           fixed: false
@@ -742,7 +736,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "2F93A873355D606CE27689F004363CBF"
+      modelFingerprint: "D1F433D4EB9F8805FF391E82DAB508AB"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -750,7 +744,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "Stored TxOut of null (null:null)"
+          value: "result1"
         valueType: "java.lang.String"
         uuid: "toString_string2"
         fixed: false
@@ -762,6 +756,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

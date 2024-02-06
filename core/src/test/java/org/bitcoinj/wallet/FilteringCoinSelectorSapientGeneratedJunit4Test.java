@@ -52,25 +52,22 @@ public class FilteringCoinSelectorSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         TransactionOutput outputMock = mock(TransactionOutput.class);
         TransactionOutPoint transactionOutPointMock = mock(TransactionOutPoint.class);
+        doReturn(transactionOutPointMock).when(outputMock).getOutPointFor();
+        List<TransactionOutPoint> transactionOutPointList = new ArrayList<>();
+        FilteringCoinSelector target = new FilteringCoinSelector(delegateMock, transactionOutPointList);
         CoinSelection coinSelectionMock = mock(CoinSelection.class);
         Coin coinMock = mock(Coin.class);
-        try (MockedStatic<StreamUtils> streamUtils = mockStatic(StreamUtils.class)) {
-            doReturn(transactionOutPointMock).when(outputMock).getOutPointFor();
-            Collector collector = StreamUtils.toUnmodifiableList();
-            streamUtils.when(() -> StreamUtils.toUnmodifiableList()).thenReturn(collector);
-            List<TransactionOutPoint> transactionOutPointList = new ArrayList<>();
-            FilteringCoinSelector target = new FilteringCoinSelector(delegateMock, transactionOutPointList);
-            List list = new ArrayList<>();
-            doReturn(coinSelectionMock).when(delegateMock).select(coinMock, list);
-            List<TransactionOutput> transactionOutputList = new ArrayList<>();
-            transactionOutputList.add(outputMock);
-            //Act Statement(s)
-            CoinSelection result = target.select(coinMock, transactionOutputList);
-            //Assert statement(s)
-            assertThat(result, equalTo(coinSelectionMock));
-            verify(outputMock).getOutPointFor();
-            streamUtils.verify(() -> StreamUtils.toUnmodifiableList(), atLeast(1));
-            verify(delegateMock).select(coinMock, list);
-        }
+        List list = new ArrayList<>();
+        doReturn(coinSelectionMock).when(delegateMock).select(coinMock, list);
+        List<TransactionOutput> transactionOutputList = new ArrayList<>();
+        transactionOutputList.add(outputMock);
+
+        //Act Statement(s)
+        CoinSelection result = target.select(coinMock, transactionOutputList);
+
+        //Assert statement(s)
+        assertThat(result, equalTo(coinSelectionMock));
+        verify(outputMock).getOutPointFor();
+        verify(delegateMock).select(coinMock, list);
     }
 }

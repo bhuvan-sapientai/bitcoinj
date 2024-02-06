@@ -33,15 +33,9 @@ public class ExponentialBackoffSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class, CALLS_REAL_METHODS)) {
-            Instant instant = TimeUtils.currentTime();
-            timeUtils.when(() -> TimeUtils.currentTime()).thenReturn(instant);
-            ExponentialBackoff target = new ExponentialBackoff(exponentialBackoffParamsMock);
-            //Act Statement(s)
-            target.trackSuccess();
-            //Assert statement(s)
-            timeUtils.verify(() -> TimeUtils.currentTime(), atLeast(1));
-        }
+        ExponentialBackoff target = new ExponentialBackoff(exponentialBackoffParamsMock);
+        //Act Statement(s)
+        target.trackSuccess();
     }
 
     //Sapient generated method id: ${812e1600-1008-3380-8ccb-18e4f7bb25fb}
@@ -55,15 +49,9 @@ public class ExponentialBackoffSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class)) {
-            Instant instant = TimeUtils.currentTime();
-            timeUtils.when(() -> TimeUtils.currentTime()).thenReturn(instant);
-            ExponentialBackoff target = new ExponentialBackoff(exponentialBackoffParamsMock);
-            //Act Statement(s)
-            target.trackFailure();
-            //Assert statement(s)
-            timeUtils.verify(() -> TimeUtils.currentTime(), atLeast(1));
-        }
+        ExponentialBackoff target = new ExponentialBackoff(exponentialBackoffParamsMock);
+        //Act Statement(s)
+        target.trackFailure();
     }
 
     //Sapient generated method id: ${ccd040e4-311d-30d2-8f98-78ba3d2f5437}
@@ -95,7 +83,7 @@ public class ExponentialBackoffSapientGeneratedJunit4Test {
         //Act Statement(s)
         long result = target.getRetryTime();
         //Assert statement(s)
-        assertThat(result, equalTo(1707139357296L));
+        assertThat(result, equalTo(1707199561774L));
     }
 
     //Sapient generated method id: ${af5f6332-26a2-3749-8f9a-ac87ce6fe7cf}
@@ -129,6 +117,6 @@ public class ExponentialBackoffSapientGeneratedJunit4Test {
         //Act Statement(s)
         String result = target.toString();
         //Assert statement(s)
-        assertThat(result, equalTo("ExponentialBackoff retry=2024-02-05T13:22:37.311213Z backoff=2 ms"));
+        assertThat(result, equalTo("ExponentialBackoff retry=2024-02-06T06:06:01.804418Z backoff=2 ms"));
     }
 }

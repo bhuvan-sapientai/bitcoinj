@@ -262,9 +262,6 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
          * (data.length == 1) : true
          * (b >= 1) : true
          * (b <= 16) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         List<ScriptChunk> scriptChunkList = new ArrayList<>();
@@ -286,9 +283,6 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
          * (data.length == 1) : true
          * (b >= 1) : true
          * (b <= 16) : false
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         List<ScriptChunk> scriptChunkList = new ArrayList<>();
@@ -363,22 +357,17 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class)) {
-            List<ScriptChunk> scriptChunkList = new ArrayList<>();
-            doReturn(scriptChunkList).when(templateMock).chunks();
-            Instant instant = TimeUtils.currentTime();
-            timeUtils.when(() -> TimeUtils.currentTime()).thenReturn(instant);
-            ScriptBuilder target = new ScriptBuilder(templateMock);
-            RuntimeException runtimeException = new RuntimeException("Unimplemented");
-            thrown.expect(RuntimeException.class);
-            thrown.expectMessage(runtimeException.getMessage());
-            byte[] byteArray = new byte[]{};
-            //Act Statement(s)
-            target.data(0, byteArray);
-            //Assert statement(s)
-            verify(templateMock).chunks();
-            timeUtils.verify(() -> TimeUtils.currentTime(), atLeast(1));
-        }
+        List<ScriptChunk> scriptChunkList = new ArrayList<>();
+        doReturn(scriptChunkList).when(templateMock).chunks();
+        ScriptBuilder target = new ScriptBuilder(templateMock);
+        RuntimeException runtimeException = new RuntimeException("Unimplemented");
+        thrown.expect(RuntimeException.class);
+        thrown.expectMessage(runtimeException.getMessage());
+        byte[] byteArray = new byte[]{};
+        //Act Statement(s)
+        target.data(0, byteArray);
+        //Assert statement(s)
+        verify(templateMock).chunks();
     }
 
     //Sapient generated method id: ${15af010b-eb21-384b-8101-d4bbd5fb8766}
@@ -904,7 +893,8 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
         ECKey eCKeyMock15 = mock(ECKey.class);
         ECKey eCKeyMock16 = mock(ECKey.class);
         ECKey eCKeyMock17 = mock(ECKey.class);
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class, CALLS_REAL_METHODS)) {
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
             IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
             preconditions.when(() -> Preconditions.checkArgument(false)).thenThrow(illegalArgumentException);
             thrown.expect(IllegalArgumentException.class);
@@ -929,6 +919,7 @@ public class ScriptBuilderSapientGeneratedJunit4Test {
             //Act Statement(s)
             ScriptBuilder.createMultiSigOutputScript(1, eCKeyList);
             //Assert statement(s)
+            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(2));
             preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
         }
     }

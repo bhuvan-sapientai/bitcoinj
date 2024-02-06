@@ -19,7 +19,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "94577978480A3DF100A8AA11A33C35F4"
-    problemWasSolvedByProver: false
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
@@ -286,13 +286,11 @@ methods:
       filledByUser: false
     uuid: "e8a9027b-6eab-30be-82c4-f781d8c82d21"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
-    failureReason:
-      reason: "UNKNOWN_REASON"
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "createMasterPrivateKeyWhenSeedLengthNotGreaterThan8ThrowsIllegalArgumentException"
@@ -628,6 +626,8 @@ methods:
       value:
         sapientType: "ARRAY"
         content: !<array>
+          values: {}
+        suggestedContent: !<array>
           values: {}
         valueType: "byte[]"
         uuid: "createMasterPrivKeyFromBytes_byte[]2"
@@ -1051,14 +1051,14 @@ methods:
       filledByUser: false
     uuid: "8d5a29ba-71f9-3a0e-98b8-1293951e4e31"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_CALL_INSTRUCTION_CONSTRUCTION_FAILURE"
       source: "return new DeterministicKey(HDPath.m(), chainCode, priv, null);"
       lineNumber: 89
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "createMasterPubKeyFromBytes"
     returnType: "org.bitcoinj.crypto.DeterministicKey"
@@ -20299,7 +20299,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "AE76D64209857E67721772C50E62A5F4"
+    modelFingerprint: "46334FD7C8615A94A6CF2A31E4368721"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -20319,14 +20319,14 @@ methods:
         valueType: "org.bitcoinj.crypto.DeterministicKey"
         uuid: "generate_deterministicKey1"
         fixed: false
-        nameForMock: "<DeterministicKey object>"
+        nameForMock: "exampleParentKey"
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
     - type: "INPUT"
       name: "childNumber"
-      modelFingerprint: "9A64971B7CE93E88861706195FF4C4CF"
+      modelFingerprint: "A862DEC39AAE8DBE0AD9B629D37E8A04"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -20334,7 +20334,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: 0
+          value: 123
+        suggestedContent: !<regular>
+          value: 123
         valueType: "int"
         uuid: "generate_int1"
         fixed: false
@@ -20371,7 +20373,7 @@ methods:
     disabled: false
     ignoredBySystem: false
     failureReason:
-      reason: "METHOD_CALL_INSTRUCTION_CONSTRUCTION_UNFILLED_PARAMS"
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -22959,7 +22961,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "3AF5231C7327B5A8701EA59F447AE6A0"
-    problemWasSolvedByProver: false
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
@@ -23135,13 +23137,11 @@ methods:
       filledByUser: false
     uuid: "155cff45-4844-32cd-a54c-3fea1569cee0"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
-    failureReason:
-      reason: "UNKNOWN_REASON"
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "deriveChildKeyBytesFromPublicWhenChildNumberIsHardenedThrowsIllegalArgumentException"

@@ -30,6 +30,10 @@ public class CoinSelectionSapientGeneratedJunit4Test {
 
     private final Coin coinMock = mock(Coin.class, "10");
 
+    private final Coin coin2Mock = mock(Coin.class);
+
+    private final Transaction transactionMock = mock(Transaction.class);
+
     //Sapient generated method id: ${59671bab-6f05-338a-800c-34fb3c21b2b7}
     @Ignore()
     @Test()
@@ -39,15 +43,16 @@ public class CoinSelectionSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Coin coinMock = mock(Coin.class, "300");
-        TransactionOutput transactionOutputMock = mock(TransactionOutput.class, "100");
-        TransactionOutput transactionOutputMock2 = mock(TransactionOutput.class, "200");
+        Coin coin = Coin.valueOf(0L);
+        byte[] byteArray = new byte[]{};
+        TransactionOutput transactionOutput = new TransactionOutput(transactionMock, coin2Mock, byteArray);
         Collection<TransactionOutput> collection = new ArrayList<>();
-        collection.add(transactionOutputMock);
-        collection.add(transactionOutputMock2);
-        CoinSelection target = new CoinSelection(coinMock, collection);
+        collection.add(transactionOutput);
+        CoinSelection target = new CoinSelection(coin, collection);
+
         //Act Statement(s)
         Coin result = target.totalValue();
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -62,15 +67,15 @@ public class CoinSelectionSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Coin coin = Coin.valueOf(0L);
-        Transaction transactionMock = mock(Transaction.class);
-        Coin coin2Mock = mock(Coin.class);
         byte[] byteArray = new byte[]{};
         TransactionOutput transactionOutput = new TransactionOutput(transactionMock, coin2Mock, byteArray);
         Collection<TransactionOutput> collection = new ArrayList<>();
         collection.add(transactionOutput);
         CoinSelection target = new CoinSelection(coin, collection);
+
         //Act Statement(s)
         List<TransactionOutput> result = target.outputs();
+
         //Assert statement(s)
         assertThat(result.size(), equalTo(0));
     }

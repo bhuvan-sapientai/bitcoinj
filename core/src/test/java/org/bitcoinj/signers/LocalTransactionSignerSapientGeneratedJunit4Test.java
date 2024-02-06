@@ -82,13 +82,19 @@ public class LocalTransactionSignerSapientGeneratedJunit4Test {
 
     private final Transaction txMock = mock(Transaction.class);
 
+    private final RedeemData redeemDataMock = mock(RedeemData.class);
+
+    private final Script scriptMock4 = mock(Script.class);
+
     //Sapient generated method id: ${f340c579-9bbd-36cd-bf14-09059bcfa900}
     @Test()
     public void isReadyTest() {
         //Arrange Statement(s)
         LocalTransactionSigner target = new LocalTransactionSigner();
+
         //Act Statement(s)
         boolean result = target.isReady();
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
     }
@@ -108,8 +114,10 @@ public class LocalTransactionSignerSapientGeneratedJunit4Test {
         doReturn(null).when(transactionInputMock2).getConnectedOutput();
         LocalTransactionSigner target = new LocalTransactionSigner();
         TransactionSigner.ProposedTransaction transactionSignerProposedTransaction = new TransactionSigner.ProposedTransaction(txMock);
+
         //Act Statement(s)
         boolean result = target.signInputs(transactionSignerProposedTransaction, keyBagMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
         verify(txMock).getInputs();
@@ -140,8 +148,10 @@ public class LocalTransactionSignerSapientGeneratedJunit4Test {
         doReturn(transactionWitnessMock).when(transactionInputMock2).getWitness();
         LocalTransactionSigner target = new LocalTransactionSigner();
         TransactionSigner.ProposedTransaction transactionSignerProposedTransaction = new TransactionSigner.ProposedTransaction(txMock);
+
         //Act Statement(s)
         boolean result = target.signInputs(transactionSignerProposedTransaction, keyBagMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
         verify(txMock).getInputs();
@@ -182,49 +192,10 @@ public class LocalTransactionSignerSapientGeneratedJunit4Test {
         doReturn(transactionWitnessMock).when(transactionInputMock2).getWitness();
         LocalTransactionSigner target = new LocalTransactionSigner();
         TransactionSigner.ProposedTransaction transactionSignerProposedTransaction = new TransactionSigner.ProposedTransaction(txMock);
-        //Act Statement(s)
-        boolean result = target.signInputs(transactionSignerProposedTransaction, keyBagMock);
-        //Assert statement(s)
-        assertThat(result, equalTo(Boolean.TRUE));
-        verify(txMock).getInputs();
-        verify(txMock).getInput(0L);
-        verify(transactionInputMock2).getConnectedOutput();
-        verify(transactionOutputMock, times(2)).getScriptPubKey();
-        verify(transactionOutputMock).getValue();
-        verify(transactionInputMock2).getScriptSig();
-        verify(scriptMock3).correctlySpends(txMock, 0, transactionWitnessMock, coinMock, scriptMock2, scriptVerifyFlagSet);
-        verify(transactionInputMock2).getWitness();
-    }
 
-    //Sapient generated method id: ${70a6f544-4f41-3f2b-887a-fc1fdedcef09}
-    @Test()
-    public void signInputsWhenCaughtECKeyMissingPrivateKeyException() throws ScriptException {
-        /* Branches:
-         * (i < numInputs) : true
-         * (connectedOutput == null) : false
-         * (catch-exception (ECKey.MissingPrivateKeyException)) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        List<TransactionInput> transactionInputList = new ArrayList<>();
-        transactionInputList.add(transactionInputMock);
-        doReturn(transactionInputList).when(txMock).getInputs();
-        doReturn(transactionInputMock2).when(txMock).getInput(0L);
-        doReturn(transactionOutputMock).when(transactionInputMock2).getConnectedOutput();
-        doReturn(coinMock).when(transactionOutputMock).getValue();
-        doReturn(scriptMock, scriptMock2).when(transactionOutputMock).getScriptPubKey();
-        doReturn(scriptMock3).when(transactionInputMock2).getScriptSig();
-        EnumSet<Script.VerifyFlag> scriptVerifyFlagSet = EnumSet.noneOf(Script.VerifyFlag.class);
-        scriptVerifyFlagSet.add(Script.VerifyFlag.P2SH);
-        scriptVerifyFlagSet.add(Script.VerifyFlag.NULLDUMMY);
-        doNothing().when(scriptMock3).correctlySpends(txMock, 0, transactionWitnessMock, coinMock, scriptMock2, scriptVerifyFlagSet);
-        doReturn(transactionWitnessMock).when(transactionInputMock2).getWitness();
-        LocalTransactionSigner target = new LocalTransactionSigner();
-        TransactionSigner.ProposedTransaction transactionSignerProposedTransaction = new TransactionSigner.ProposedTransaction(txMock);
         //Act Statement(s)
         boolean result = target.signInputs(transactionSignerProposedTransaction, keyBagMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
         verify(txMock).getInputs();
@@ -267,7 +238,6 @@ public class LocalTransactionSignerSapientGeneratedJunit4Test {
         DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
         List list = new ArrayList<>();
         list.add(deterministicKeyMock);
-        Script scriptMock4 = mock(Script.class);
         RedeemData redeemData = RedeemData.of(list, scriptMock4);
         doReturn(redeemData).when(transactionInputMock2).getConnectedRedeemData(keyBagMock);
         HDPath hDPathMock = mock(HDPath.class);
@@ -275,8 +245,10 @@ public class LocalTransactionSignerSapientGeneratedJunit4Test {
         LocalTransactionSigner target = new LocalTransactionSigner();
         thrown.expect(NullPointerException.class);
         TransactionSigner.ProposedTransaction transactionSignerProposedTransaction = new TransactionSigner.ProposedTransaction(txMock);
+
         //Act Statement(s)
         target.signInputs(transactionSignerProposedTransaction, keyBagMock);
+
         //Assert statement(s)
         verify(txMock).getInputs();
         verify(txMock).getInput(0L);
@@ -310,13 +282,14 @@ public class LocalTransactionSignerSapientGeneratedJunit4Test {
         doReturn(scriptMock).when(transactionOutputMock).getScriptPubKey();
         ScriptException scriptExceptionMock = mock(ScriptException.class);
         doThrow(scriptExceptionMock).when(transactionInputMock2).getScriptSig();
-        RedeemData redeemDataMock = mock(RedeemData.class);
         doReturn(redeemDataMock).when(transactionInputMock2).getConnectedRedeemData(keyBagMock);
         doReturn(null).when(redeemDataMock).getFullKey();
         LocalTransactionSigner target = new LocalTransactionSigner();
         TransactionSigner.ProposedTransaction transactionSignerProposedTransaction = new TransactionSigner.ProposedTransaction(txMock);
+
         //Act Statement(s)
         boolean result = target.signInputs(transactionSignerProposedTransaction, keyBagMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
         verify(txMock).getInputs();
@@ -343,11 +316,39 @@ public class LocalTransactionSignerSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        List<TransactionInput> transactionInputList = new ArrayList<>();
+        transactionInputList.add(transactionInputMock);
+        doReturn(transactionInputList).when(txMock).getInputs();
+        doReturn(transactionInputMock2).when(txMock).getInput(0L);
+        doReturn(transactionOutputMock).when(transactionInputMock2).getConnectedOutput();
+        doReturn(coinMock).when(transactionOutputMock).getValue();
+        doReturn(scriptMock, scriptMock2).when(transactionOutputMock).getScriptPubKey();
+        EnumSet<Script.VerifyFlag> scriptVerifyFlagSet = EnumSet.noneOf(Script.VerifyFlag.class);
+        scriptVerifyFlagSet.add(Script.VerifyFlag.P2SH);
+        scriptVerifyFlagSet.add(Script.VerifyFlag.NULLDUMMY);
+        doNothing().when(scriptMock3).correctlySpends(txMock, 0, transactionWitnessMock, coinMock, scriptMock2, scriptVerifyFlagSet);
+        doReturn(transactionWitnessMock).when(transactionInputMock2).getWitness();
+        doReturn(redeemDataMock).when(transactionInputMock2).getConnectedRedeemData(keyBagMock);
+        ECKey eCKeyMock = mock(ECKey.class);
+        doReturn(eCKeyMock).when(redeemDataMock).getFullKey();
+        doReturn(scriptMock3, scriptMock4).when(transactionInputMock2).getScriptSig();
         LocalTransactionSigner target = new LocalTransactionSigner();
         thrown.expect(NullPointerException.class);
-        Transaction transactionMock = mock(Transaction.class);
-        TransactionSigner.ProposedTransaction transactionSignerProposedTransaction = new TransactionSigner.ProposedTransaction(transactionMock);
+        TransactionSigner.ProposedTransaction transactionSignerProposedTransaction = new TransactionSigner.ProposedTransaction(txMock);
+
         //Act Statement(s)
         target.signInputs(transactionSignerProposedTransaction, keyBagMock);
+
+        //Assert statement(s)
+        verify(txMock).getInputs();
+        verify(txMock).getInput(0L);
+        verify(transactionInputMock2).getConnectedOutput();
+        verify(transactionOutputMock, times(2)).getScriptPubKey();
+        verify(transactionOutputMock).getValue();
+        verify(transactionInputMock2, times(2)).getScriptSig();
+        verify(scriptMock3).correctlySpends(txMock, 0, transactionWitnessMock, coinMock, scriptMock2, scriptVerifyFlagSet);
+        verify(transactionInputMock2).getWitness();
+        verify(transactionInputMock2).getConnectedRedeemData(keyBagMock);
+        verify(redeemDataMock).getFullKey();
     }
 }

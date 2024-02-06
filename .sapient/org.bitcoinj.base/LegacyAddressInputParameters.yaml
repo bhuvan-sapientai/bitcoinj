@@ -54,6 +54,8 @@ methods:
         sapientType: "ARRAY"
         content: !<array>
           values: {}
+        suggestedContent: !<array>
+          values: {}
         valueType: "byte[]"
         uuid: "fromPubKeyHash_byte[]1"
         fixed: false
@@ -124,6 +126,8 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
+              values: {}
+            suggestedContent: !<array>
               values: {}
             valueType: "byte[]"
             uuid: "fromPubKeyHash_byte[]1"
@@ -1608,6 +1612,8 @@ methods:
         sapientType: "ARRAY"
         content: !<array>
           values: {}
+        suggestedContent: !<array>
+          values: {}
         valueType: "byte[]"
         uuid: "fromScriptHash_byte[]1"
         fixed: false
@@ -1678,6 +1684,8 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
+              values: {}
+            suggestedContent: !<array>
               values: {}
             valueType: "byte[]"
             uuid: "fromScriptHash_byte[]1"
@@ -3126,13 +3134,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "8D9A92742368F3FDD18549505CB6D736"
+    modelFingerprint: "E02F7A46D0BF0BB3A72AFD3436623AEA"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "base58"
-      modelFingerprint: "B62EFCC33AAFF241CE31CB876D5CCD2B"
+      modelFingerprint: "D7BAE30C5DD79A0EE2F51B888FFB6F7B"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -3140,9 +3148,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa"
+          value: "A"
         suggestedContent: !<regular>
-          value: "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa"
+          value: "A"
         valueType: "java.lang.String"
         uuid: "fromBase58_string1"
         fixed: false
@@ -3152,7 +3160,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "network"
-      modelFingerprint: "62D36D9D71CD6C8C1AEBB21D1EB5E1D6"
+      modelFingerprint: "B6E55541B0F91512F3A59D4AD0BB37A3"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -3166,14 +3174,13 @@ methods:
         valueType: "org.bitcoinj.base.Network"
         uuid: "fromBase58_network1"
         fixed: false
-        nameForMock: "MAINNET"
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
     - type: "STATIC"
       name: "Base58"
-      modelFingerprint: "63B0718960A7384DFA482073435A8EEA"
+      modelFingerprint: "A9DFEA51CE1AB5914B1C0B0C70AB087B"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -3193,9 +3200,9 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa"
+              value: "A"
             suggestedContent: !<regular>
-              value: "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa"
+              value: "A"
             valueType: "java.lang.String"
             uuid: "fromBase58_string1"
             fixed: false
@@ -3212,159 +3219,10 @@ methods:
                 sapientType: "BASIC"
                 content: !<regular>
                   value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              1:
-                sapientType: "BASIC"
-                content: !<regular>
+                suggestedContent: !<regular>
                   value: 0
                 valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              2:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              3:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              4:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              5:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              6:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              7:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              8:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              9:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              10:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              11:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              12:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              13:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              14:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              15:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              16:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              17:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              18:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              19:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
+                uuid: "fromBase58_byte1"
                 fixed: false
                 equalsMethodPresent: false
                 explicitCastNeeded: false
@@ -3374,159 +3232,10 @@ methods:
                 sapientType: "BASIC"
                 content: !<regular>
                   value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              1:
-                sapientType: "BASIC"
-                content: !<regular>
+                suggestedContent: !<regular>
                   value: 0
                 valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              2:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              3:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              4:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              5:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              6:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              7:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              8:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              9:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              10:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              11:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              12:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              13:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              14:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              15:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              16:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              17:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              18:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              19:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
+                uuid: "fromBase58_byte1"
                 fixed: false
                 equalsMethodPresent: false
                 explicitCastNeeded: false
@@ -3540,7 +3249,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "network"
-      modelFingerprint: "B3AB5DDBCE8773DCC42DA714E0B356E7"
+      modelFingerprint: "44C18DE9A50D0E1BD336903193622B89"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -3554,7 +3263,6 @@ methods:
         valueType: "org.bitcoinj.base.Network"
         uuid: "fromBase58_network1"
         fixed: false
-        nameForMock: "MAINNET"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -3565,9 +3273,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: 0
+            value: 2
           suggestedContent: !<regular>
-            value: 0
+            value: 2
           valueType: "int"
           uuid: "fromBase58_int3"
           fixed: false
@@ -3578,7 +3286,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "network"
-      modelFingerprint: "8D2C62436FF097CE241DC46031B36A06"
+      modelFingerprint: "F412579EBD5473CBC500791257639117"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -3592,7 +3300,6 @@ methods:
         valueType: "org.bitcoinj.base.Network"
         uuid: "fromBase58_network1"
         fixed: false
-        nameForMock: "MAINNET"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -3603,9 +3310,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: 5
+            value: 2
           suggestedContent: !<regular>
-            value: 5
+            value: 2
           valueType: "int"
           uuid: "fromBase58_int4"
           fixed: false
@@ -3616,7 +3323,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "84F2FD6A557D6A1BAD0630B9D2665D3D"
+      modelFingerprint: "F2658F857F2129DD19ED674650598F15"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -3630,9 +3337,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: -1
+                value: 1
               suggestedContent: !<regular>
-                value: -1
+                value: 1
               valueType: "int"
               uuid: "fromBase58_int1"
               fixed: false
@@ -3647,7 +3354,7 @@ methods:
             value:
               sapientType: "BASIC"
               suggestedContent: !<regular>
-                value: -1
+                value: 1
               valueType: "int"
               uuid: "fromBase58_int1"
               fixed: false
@@ -3668,7 +3375,6 @@ methods:
     ignoredBySystem: false
     failureReason:
       reason: "BITWISE_NOT_SUPPORTED"
-    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path1"
@@ -3891,13 +3597,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "158E79DD70B6399C4B791451AB8F30DB"
+    modelFingerprint: "DA084D02FF9687BFC1362FC1D9F914F8"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "base58"
-      modelFingerprint: "B62EFCC33AAFF241CE31CB876D5CCD2B"
+      modelFingerprint: "D7BAE30C5DD79A0EE2F51B888FFB6F7B"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -3905,9 +3611,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa"
+          value: "A"
         suggestedContent: !<regular>
-          value: "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa"
+          value: "A"
         valueType: "java.lang.String"
         uuid: "fromBase58_string1"
         fixed: false
@@ -3917,7 +3623,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "network"
-      modelFingerprint: "62D36D9D71CD6C8C1AEBB21D1EB5E1D6"
+      modelFingerprint: "B6E55541B0F91512F3A59D4AD0BB37A3"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -3931,14 +3637,13 @@ methods:
         valueType: "org.bitcoinj.base.Network"
         uuid: "fromBase58_network1"
         fixed: false
-        nameForMock: "org.bitcoinj.params.MainNetParams"
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
     - type: "STATIC"
       name: "Base58"
-      modelFingerprint: "63B0718960A7384DFA482073435A8EEA"
+      modelFingerprint: "A9DFEA51CE1AB5914B1C0B0C70AB087B"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -3958,9 +3663,9 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa"
+              value: "A"
             suggestedContent: !<regular>
-              value: "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa"
+              value: "A"
             valueType: "java.lang.String"
             uuid: "fromBase58_string1"
             fixed: false
@@ -3977,159 +3682,10 @@ methods:
                 sapientType: "BASIC"
                 content: !<regular>
                   value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              1:
-                sapientType: "BASIC"
-                content: !<regular>
+                suggestedContent: !<regular>
                   value: 0
                 valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              2:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              3:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              4:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              5:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              6:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              7:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              8:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              9:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              10:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              11:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              12:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              13:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              14:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              15:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              16:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              17:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              18:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              19:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
+                uuid: "fromBase58_byte1"
                 fixed: false
                 equalsMethodPresent: false
                 explicitCastNeeded: false
@@ -4139,159 +3695,10 @@ methods:
                 sapientType: "BASIC"
                 content: !<regular>
                   value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              1:
-                sapientType: "BASIC"
-                content: !<regular>
+                suggestedContent: !<regular>
                   value: 0
                 valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              2:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              3:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              4:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              5:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              6:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              7:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              8:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              9:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              10:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              11:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              12:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              13:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              14:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              15:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              16:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              17:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              18:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              19:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
+                uuid: "fromBase58_byte1"
                 fixed: false
                 equalsMethodPresent: false
                 explicitCastNeeded: false
@@ -4305,7 +3712,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "network"
-      modelFingerprint: "B3AB5DDBCE8773DCC42DA714E0B356E7"
+      modelFingerprint: "B397C8F65FF449FEA9F7E9FD75566A2C"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -4319,7 +3726,6 @@ methods:
         valueType: "org.bitcoinj.base.Network"
         uuid: "fromBase58_network1"
         fixed: false
-        nameForMock: "org.bitcoinj.params.MainNetParams"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -4330,9 +3736,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: 0
+            value: 1
           suggestedContent: !<regular>
-            value: 0
+            value: 1
           valueType: "int"
           uuid: "fromBase58_int3"
           fixed: false
@@ -4343,7 +3749,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "EC755A0E16524EAB0BFB8A9BE50CC974"
+      modelFingerprint: "295DFB2338CBC5797A7E5EC80EBCBEBE"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -4363,7 +3769,6 @@ methods:
               valueType: "org.bitcoinj.base.Network"
               uuid: "fromBase58_network1"
               fixed: false
-              nameForMock: "org.bitcoinj.params.MainNetParams"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "p2sh"
@@ -4756,7 +4161,7 @@ methods:
           parameters:
           - name: "network"
             value:
-              sapientType: "MOCK"
+              sapientType: "UNKNOWN"
               suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.base.Network"
                 onlyPojoFunctions: false
@@ -4764,7 +4169,6 @@ methods:
               valueType: "org.bitcoinj.base.Network"
               uuid: "fromBase58_network1"
               fixed: false
-              nameForMock: "org.bitcoinj.params.MainNetParams"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "p2sh"
@@ -4983,7 +4387,6 @@ methods:
     ignoredBySystem: false
     failureReason:
       reason: "BITWISE_NOT_SUPPORTED"
-    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path3"
@@ -4993,7 +4396,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "3513C97CFC589983553838AADB06C164"
+    modelFingerprint: "ADDC40423F47AE0371B847642DC44A60"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -5039,7 +4442,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Base58"
-      modelFingerprint: "E7B72EEEC28877E97026711D70E54ECC"
+      modelFingerprint: "B52FF7EFCB0FC8077111DD89E8703685"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -5078,159 +4481,10 @@ methods:
                 sapientType: "BASIC"
                 content: !<regular>
                   value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              1:
-                sapientType: "BASIC"
-                content: !<regular>
+                suggestedContent: !<regular>
                   value: 0
                 valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              2:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              3:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              4:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              5:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              6:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              7:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              8:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              9:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              10:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              11:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              12:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              13:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              14:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              15:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              16:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              17:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              18:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              19:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
+                uuid: "fromBase58_byte1"
                 fixed: false
                 equalsMethodPresent: false
                 explicitCastNeeded: false
@@ -5240,159 +4494,10 @@ methods:
                 sapientType: "BASIC"
                 content: !<regular>
                   value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              1:
-                sapientType: "BASIC"
-                content: !<regular>
+                suggestedContent: !<regular>
                   value: 0
                 valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              2:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              3:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              4:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              5:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              6:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              7:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              8:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              9:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              10:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              11:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              12:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              13:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              14:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              15:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              16:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              17:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              18:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              19:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "byte"
+                uuid: "fromBase58_byte1"
                 fixed: false
                 equalsMethodPresent: false
                 explicitCastNeeded: false
@@ -5406,7 +4511,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "network"
-      modelFingerprint: "55E5143805D36FD7022BF28A7D7DC0BF"
+      modelFingerprint: "44C18DE9A50D0E1BD336903193622B89"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -5430,9 +4535,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: 0
+            value: 2
           suggestedContent: !<regular>
-            value: 0
+            value: 2
           valueType: "int"
           uuid: "fromBase58_int3"
           fixed: false
@@ -5443,7 +4548,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "network"
-      modelFingerprint: "FA09903335D2C1A7C2DA10A4E7F3F437"
+      modelFingerprint: "EDCCB53C5DC402F8EF19968F55547DC6"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -5467,9 +4572,9 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: 196
+            value: 1
           suggestedContent: !<regular>
-            value: 196
+            value: 1
           valueType: "int"
           uuid: "fromBase58_int4"
           fixed: false
@@ -5532,7 +4637,6 @@ methods:
     ignoredBySystem: false
     failureReason:
       reason: "BITWISE_NOT_SUPPORTED"
-    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path4"
@@ -6522,6 +5626,8 @@ methods:
             sapientType: "ARRAY"
             content: !<array>
               values: {}
+            suggestedContent: !<array>
+              values: {}
             valueType: "byte[]"
             uuid: "fromPubKeyHash_byte[]1"
             fixed: false
@@ -6711,6 +5817,8 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
+              values: {}
+            suggestedContent: !<array>
               values: {}
             valueType: "byte[]"
             uuid: "fromPubKeyHash_byte[]1"
@@ -6938,6 +6046,8 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
+              values: {}
+            suggestedContent: !<array>
               values: {}
             valueType: "byte[]"
             uuid: "fromPubKeyHash_byte[]1"
@@ -7234,6 +6344,8 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
+              values: {}
+            suggestedContent: !<array>
               values: {}
             valueType: "byte[]"
             uuid: "fromPubKeyHash_byte[]1"
@@ -7707,6 +6819,8 @@ methods:
             sapientType: "ARRAY"
             content: !<array>
               values: {}
+            suggestedContent: !<array>
+              values: {}
             valueType: "byte[]"
             uuid: "fromPubKeyHash_byte[]1"
             fixed: false
@@ -7952,7 +7066,7 @@ methods:
         valueType: "org.bitcoinj.base.Address"
         uuid: "compareTo_address1"
         fixed: false
-        nameForMock: "{}"
+        nameForMock: "Network"
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
@@ -8011,7 +7125,7 @@ methods:
           valueType: "org.bitcoinj.base.Network"
           uuid: "fromPubKeyHash_network1"
           fixed: false
-          nameForMock: "BitcoinNetwork"
+          nameForMock: "Network"
           equalsMethodPresent: false
           explicitCastNeeded: false
         access: 1
@@ -8045,7 +7159,7 @@ methods:
             valueType: "org.bitcoinj.base.Network"
             uuid: "fromPubKeyHash_network1"
             fixed: false
-            nameForMock: "BitcoinNetwork"
+            nameForMock: "Network"
             equalsMethodPresent: false
             explicitCastNeeded: false
         - name: "hash160"

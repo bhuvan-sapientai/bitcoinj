@@ -1,5 +1,5 @@
 ---
-modelFingerprint: "6CB283CA533D1F35032B7907E93A4927"
+modelFingerprint: "97FCBA2E7E067A9EC071BE020213F12E"
 methods:
 - method:
     name: "read"
@@ -336,7 +336,7 @@ methods:
     - type: "STATIC"
       name: "Services"
       modelFingerprint: "958FAD95860B263E3214B9C7D5DC241E"
-      index: 4
+      index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -391,7 +391,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "org.bitcoinj.core.Services"
-          uuid: "read_services1"
+          uuid: "read_services2"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -1529,7 +1529,7 @@ methods:
     - type: "STATIC"
       name: "Services"
       modelFingerprint: "958FAD95860B263E3214B9C7D5DC241E"
-      index: 4
+      index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -1584,7 +1584,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "org.bitcoinj.core.Services"
-          uuid: "read_services1"
+          uuid: "read_services2"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -2723,7 +2723,7 @@ methods:
     - type: "STATIC"
       name: "Services"
       modelFingerprint: "958FAD95860B263E3214B9C7D5DC241E"
-      index: 4
+      index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -2778,7 +2778,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "org.bitcoinj.core.Services"
-          uuid: "read_services1"
+          uuid: "read_services2"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -3704,7 +3704,7 @@ methods:
     - type: "STATIC"
       name: "Services"
       modelFingerprint: "DFE1887BBB81355907AE2D1910527EF4"
-      index: 4
+      index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -3731,7 +3731,7 @@ methods:
             method: "none"
             methodParameters: []
           valueType: "org.bitcoinj.core.Services"
-          uuid: "<init>_services2"
+          uuid: "<init>_services1"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -3796,6 +3796,10 @@ methods:
         signature: "none(): Services"
         returnValue:
           sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.core.Services"
+            method: "none"
+            methodParameters: []
           suggestedContent: !<static_method_return>
             target: "org.bitcoinj.core.Services"
             method: "none"
@@ -4153,7 +4157,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "30E246CE32B8B0F14F3CD6E5BF8DC4F9"
+    modelFingerprint: "FA3490570DEC46A713D706A2DB71306E"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -4383,7 +4387,7 @@ methods:
     - type: "STATIC"
       name: "Services"
       modelFingerprint: "DFE1887BBB81355907AE2D1910527EF4"
-      index: 3
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -4410,7 +4414,7 @@ methods:
             method: "none"
             methodParameters: []
           valueType: "org.bitcoinj.core.Services"
-          uuid: "<init>_services1"
+          uuid: "<init>_services2"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -4512,7 +4516,7 @@ methods:
     - type: "FIELD"
       name: "localServices"
       modelFingerprint: "7966E933EF9578A1FE6F565ED28ACDB9"
-      index: 6
+      index: 8
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -4696,7 +4700,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "ByteUtils"
-      modelFingerprint: "D4EEB6B7F4071EC12214470049B0BCE2"
+      modelFingerprint: "E5C85C481EFC29A97EC0E427EB1BEBF2"
       index: 9
       ignored: false
       nestedInLoop: false
@@ -4716,7 +4720,7 @@ methods:
           value:
             sapientType: "BASIC"
             content: !<regular>
-              value: 1707138169
+              value: 1707198433
             valueType: "long"
             uuid: "bitcoinSerializeToStream_long1"
             fixed: false
@@ -5354,7 +5358,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "68041019986276EDF5D420282D883A57"
-      index: 16
+      index: 18
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -5472,7 +5476,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "9B0B9F720E193237CE486EEE8E896939"
+    modelFingerprint: "E5C49A2D85F7088172856C4369D6B77A"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -5583,7 +5587,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "REAL"
         valueType: "org.bitcoinj.core.Services"
         uuid: "org.bitcoinj.core.Services"
         fixed: false
@@ -5652,12 +5656,12 @@ methods:
     - type: "STATIC"
       name: "Services"
       modelFingerprint: "DFE1887BBB81355907AE2D1910527EF4"
-      index: 2
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "REAL"
         valueType: "org.bitcoinj.core.Services"
         uuid: "org.bitcoinj.core.Services"
         fixed: false
@@ -5679,7 +5683,7 @@ methods:
             method: "none"
             methodParameters: []
           valueType: "org.bitcoinj.core.Services"
-          uuid: "<init>_services1"
+          uuid: "<init>_services2"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -5762,7 +5766,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "TimeUtils"
-      modelFingerprint: "9F85D8E555A5B31CD0B57123DD4C7410"
+      modelFingerprint: "014A0EFF8E49EE58867331218C932D6F"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -5844,7 +5848,7 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: "2024-02-05T13:02:49Z"
+            value: "2024-02-06T05:47:13Z"
           valueType: "java.lang.String"
           uuid: "toString_string1"
           fixed: false
@@ -5855,7 +5859,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "3CBA35EC74069E1510DCF33D1A66BC80"
+      modelFingerprint: "8CFABE8A35B584147B79D631059CC543"
       index: 8
       ignored: false
       nestedInLoop: false
@@ -5863,11 +5867,11 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "\\nclient version: 70013\\n\\ntime:           2024-02-05T13:02:49Z\\\
+          value: "\\nclient version: 70013\\n\\ntime:           2024-02-06T05:47:13Z\\\
             nreceiving svc:  \\nreceiving addr: B\\nsub version:    /bitcoinj:0.17-SNAPSHOT/\\\
             nbest height:    2\\ndelay tx relay: false\\n"
         suggestedContent: !<regular>
-          value: "\\nclient version: 70013\\n\\ntime:           2024-02-05T13:02:49Z\\\
+          value: "\\nclient version: 70013\\n\\ntime:           2024-02-06T05:47:13Z\\\
             nreceiving svc:  \\nreceiving addr: B\\nsub version:    /bitcoinj:0.17-SNAPSHOT/\\\
             nbest height:    2\\ndelay tx relay: false\\n"
         valueType: "java.lang.String"
@@ -6052,7 +6056,7 @@ methods:
     - type: "STATIC"
       name: "Services"
       modelFingerprint: "DFE1887BBB81355907AE2D1910527EF4"
-      index: 2
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -6079,7 +6083,7 @@ methods:
             method: "none"
             methodParameters: []
           valueType: "org.bitcoinj.core.Services"
-          uuid: "<init>_services1"
+          uuid: "<init>_services2"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -6709,7 +6713,7 @@ methods:
     - type: "STATIC"
       name: "Services"
       modelFingerprint: "DFE1887BBB81355907AE2D1910527EF4"
-      index: 7
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -6736,7 +6740,7 @@ methods:
             method: "none"
             methodParameters: []
           valueType: "org.bitcoinj.core.Services"
-          uuid: "<init>_services2"
+          uuid: "<init>_services1"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -6801,6 +6805,10 @@ methods:
         signature: "none(): Services"
         returnValue:
           sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.core.Services"
+            method: "none"
+            methodParameters: []
           suggestedContent: !<static_method_return>
             target: "org.bitcoinj.core.Services"
             method: "none"
@@ -7043,7 +7051,7 @@ methods:
     - type: "STATIC"
       name: "Services"
       modelFingerprint: "DFE1887BBB81355907AE2D1910527EF4"
-      index: 7
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -7070,7 +7078,7 @@ methods:
             method: "none"
             methodParameters: []
           valueType: "org.bitcoinj.core.Services"
-          uuid: "<init>_services2"
+          uuid: "<init>_services1"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -7135,6 +7143,10 @@ methods:
         signature: "none(): Services"
         returnValue:
           sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.core.Services"
+            method: "none"
+            methodParameters: []
           suggestedContent: !<static_method_return>
             target: "org.bitcoinj.core.Services"
             method: "none"
@@ -7729,7 +7741,7 @@ methods:
     - type: "STATIC"
       name: "Services"
       modelFingerprint: "DFE1887BBB81355907AE2D1910527EF4"
-      index: 7
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -7756,7 +7768,7 @@ methods:
             method: "none"
             methodParameters: []
           valueType: "org.bitcoinj.core.Services"
-          uuid: "<init>_services2"
+          uuid: "<init>_services1"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -7821,6 +7833,10 @@ methods:
         signature: "none(): Services"
         returnValue:
           sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.core.Services"
+            method: "none"
+            methodParameters: []
           suggestedContent: !<static_method_return>
             target: "org.bitcoinj.core.Services"
             method: "none"
@@ -8358,7 +8374,7 @@ methods:
     - type: "STATIC"
       name: "Services"
       modelFingerprint: "DFE1887BBB81355907AE2D1910527EF4"
-      index: 4
+      index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -8385,7 +8401,7 @@ methods:
             method: "none"
             methodParameters: []
           valueType: "org.bitcoinj.core.Services"
-          uuid: "<init>_services2"
+          uuid: "<init>_services1"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -8450,6 +8466,10 @@ methods:
         signature: "none(): Services"
         returnValue:
           sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.core.Services"
+            method: "none"
+            methodParameters: []
           suggestedContent: !<static_method_return>
             target: "org.bitcoinj.core.Services"
             method: "none"

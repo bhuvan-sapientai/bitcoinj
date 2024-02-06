@@ -82,12 +82,19 @@ public class CheckpointManagerSapientGeneratedJunit4Test {
     @Ignore()
     @Test()
     public void openStreamTest() {
+        /**
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
         //Arrange Statement(s)
-        NetworkParameters networkParameters = NetworkParameters.fromID("id1");
+        NetworkParameters networkParameters = NetworkParameters.fromID("A");
+
         //Act Statement(s)
         InputStream result = CheckpointManager.openStream(networkParameters);
+
         //Assert statement(s)
-        assertThat(result, is(nullValue()));
+        //TODO: Please implement equals method in InputStream for verification to succeed or you need to adjust respective assertion statements
+        assertThat(result, equalTo(null));
     }
 
     //Sapient generated method id: ${0fe979c8-f2cf-36cf-b76b-50a9fc2d193f}
@@ -108,21 +115,24 @@ public class CheckpointManagerSapientGeneratedJunit4Test {
             doReturn("A").when(paramsMock).getId();
             StoredBlock storedBlock2 = new StoredBlock(blockMock, new BigInteger("0"), 0);
             storedBlock.when(() -> StoredBlock.deserializeCompact((ByteBuffer) any())).thenReturn(storedBlock2);
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
             timeUtils.when(() -> TimeUtils.dateTimeFormat((Instant) any())).thenReturn("return_of_dateTimeFormat1");
             byte[] byteArray = new byte[]{};
             sha256Hash.when(() -> Sha256Hash.wrap(byteArray)).thenReturn(sha256HashMock);
             preconditions.when(() -> Preconditions.checkArgument(false)).thenAnswer((Answer<Void>) invocation -> null);
             CheckpointManager target = new CheckpointManager(paramsMock, (InputStream) null);
             doReturn(blockMock2).when(paramsMock).getGenesisBlock();
-            Instant instant = Instant.now();
-            doReturn(instant).when(blockMock2).time();
             Instant instant2 = Instant.now();
+            doReturn(instant2).when(blockMock2).time();
+            Instant instant3 = Instant.now();
             //Act Statement(s)
-            StoredBlock result = target.getCheckpointBefore(instant2);
+            StoredBlock result = target.getCheckpointBefore(instant3);
             //Assert statement(s)
             assertThat(result, is(notNullValue()));
             verify(paramsMock, atLeast(1)).getId();
             storedBlock.verify(() -> StoredBlock.deserializeCompact((ByteBuffer) any()), atLeast(1));
+            verify(blockMock, atLeast(1)).time();
             timeUtils.verify(() -> TimeUtils.dateTimeFormat((Instant) any()), atLeast(1));
             sha256Hash.verify(() -> Sha256Hash.wrap(byteArray), atLeast(1));
             preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
@@ -149,28 +159,34 @@ public class CheckpointManagerSapientGeneratedJunit4Test {
             doReturn("A").when(paramsMock).getId();
             StoredBlock storedBlock2 = new StoredBlock(blockMock, new BigInteger("0"), 0);
             storedBlock.when(() -> StoredBlock.deserializeCompact((ByteBuffer) any())).thenReturn(storedBlock2);
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
             timeUtils.when(() -> TimeUtils.dateTimeFormat((Instant) any())).thenReturn("return_of_dateTimeFormat1");
             byte[] byteArray = new byte[]{};
             sha256Hash.when(() -> Sha256Hash.wrap(byteArray)).thenReturn(sha256HashMock);
             preconditions.when(() -> Preconditions.checkArgument(false)).thenAnswer((Answer<Void>) invocation -> null);
             CheckpointManager target = new CheckpointManager(paramsMock, (InputStream) null);
-            doReturn(blockMock2).when(paramsMock).getGenesisBlock();
-            doReturn(blockMock3).when(blockMock2).cloneAsHeader();
-            doReturn(new BigInteger("0")).when(blockMock3).getWork();
-            Instant instant = Instant.now();
+            Instant instant2 = Instant.now();
+            doReturn(instant2).when(blockMock2).time();
+            doReturn(blockMock2, blockMock3).when(paramsMock).getGenesisBlock();
+            doReturn(blockMock4).when(blockMock3).cloneAsHeader();
+            doReturn(new BigInteger("0")).when(blockMock4).getWork();
+            Instant instant3 = Instant.now();
             //Act Statement(s)
-            StoredBlock result = target.getCheckpointBefore(instant);
-            StoredBlock storedBlock3 = new StoredBlock(blockMock3, new BigInteger("0"), 0);
+            StoredBlock result = target.getCheckpointBefore(instant3);
+            StoredBlock storedBlock3 = new StoredBlock(blockMock4, new BigInteger("0"), 0);
             //Assert statement(s)
             assertThat(result, equalTo(storedBlock3));
             verify(paramsMock, atLeast(1)).getId();
             storedBlock.verify(() -> StoredBlock.deserializeCompact((ByteBuffer) any()), atLeast(1));
+            verify(blockMock, atLeast(1)).time();
             timeUtils.verify(() -> TimeUtils.dateTimeFormat((Instant) any()), atLeast(1));
             sha256Hash.verify(() -> Sha256Hash.wrap(byteArray), atLeast(1));
             preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
-            verify(paramsMock, atLeast(1)).getGenesisBlock();
-            verify(blockMock2, atLeast(1)).cloneAsHeader();
-            verify(blockMock3, atLeast(1)).getWork();
+            verify(paramsMock, times(2)).getGenesisBlock();
+            verify(blockMock2, atLeast(1)).time();
+            verify(blockMock3, atLeast(1)).cloneAsHeader();
+            verify(blockMock4, atLeast(1)).getWork();
         }
     }
 
@@ -193,22 +209,25 @@ public class CheckpointManagerSapientGeneratedJunit4Test {
             doReturn("A").when(paramsMock).getId();
             StoredBlock storedBlock2 = new StoredBlock(blockMock, new BigInteger("0"), 0);
             storedBlock.when(() -> StoredBlock.deserializeCompact((ByteBuffer) any())).thenReturn(storedBlock2);
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
             timeUtils.when(() -> TimeUtils.dateTimeFormat((Instant) any())).thenReturn("return_of_dateTimeFormat1");
             byte[] byteArray = new byte[]{};
             sha256Hash.when(() -> Sha256Hash.wrap(byteArray)).thenReturn(sha256HashMock);
             preconditions.when(() -> Preconditions.checkArgument(false)).thenAnswer((Answer<Void>) invocation -> null);
             CheckpointManager target = new CheckpointManager(paramsMock, (InputStream) null);
             doReturn(blockMock2).when(paramsMock).getGenesisBlock();
-            Instant instant = Instant.now();
-            doReturn(instant).when(blockMock2).time();
+            Instant instant2 = Instant.now();
+            doReturn(instant2).when(blockMock2).time();
             thrown.expect(RuntimeException.class);
             thrown.expectCause(is(instanceOf(VerificationException.class)));
-            Instant instant2 = Instant.now();
+            Instant instant3 = Instant.now();
             //Act Statement(s)
-            target.getCheckpointBefore(instant2);
+            target.getCheckpointBefore(instant3);
             //Assert statement(s)
             verify(paramsMock, atLeast(1)).getId();
             storedBlock.verify(() -> StoredBlock.deserializeCompact((ByteBuffer) any()), atLeast(1));
+            verify(blockMock, atLeast(1)).time();
             timeUtils.verify(() -> TimeUtils.dateTimeFormat((Instant) any()), atLeast(1));
             sha256Hash.verify(() -> Sha256Hash.wrap(byteArray), atLeast(1));
             preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
@@ -236,28 +255,34 @@ public class CheckpointManagerSapientGeneratedJunit4Test {
             doReturn("A").when(paramsMock).getId();
             StoredBlock storedBlock2 = new StoredBlock(blockMock, new BigInteger("0"), 0);
             storedBlock.when(() -> StoredBlock.deserializeCompact((ByteBuffer) any())).thenReturn(storedBlock2);
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
             timeUtils.when(() -> TimeUtils.dateTimeFormat((Instant) any())).thenReturn("return_of_dateTimeFormat1");
             byte[] byteArray = new byte[]{};
             sha256Hash.when(() -> Sha256Hash.wrap(byteArray)).thenReturn(sha256HashMock);
             preconditions.when(() -> Preconditions.checkArgument(false)).thenAnswer((Answer<Void>) invocation -> null);
             CheckpointManager target = new CheckpointManager(paramsMock, (InputStream) null);
-            doReturn(blockMock2).when(paramsMock).getGenesisBlock();
-            doReturn(blockMock3).when(blockMock2).cloneAsHeader();
-            doReturn(new BigInteger("0")).when(blockMock3).getWork();
+            Instant instant2 = Instant.now();
+            doReturn(instant2).when(blockMock2).time();
+            doReturn(blockMock2, blockMock3).when(paramsMock).getGenesisBlock();
+            doReturn(blockMock4).when(blockMock3).cloneAsHeader();
+            doReturn(new BigInteger("0")).when(blockMock4).getWork();
             thrown.expect(RuntimeException.class);
             thrown.expectCause(is(instanceOf(VerificationException.class)));
-            Instant instant = Instant.now();
+            Instant instant3 = Instant.now();
             //Act Statement(s)
-            target.getCheckpointBefore(instant);
+            target.getCheckpointBefore(instant3);
             //Assert statement(s)
             verify(paramsMock, atLeast(1)).getId();
             storedBlock.verify(() -> StoredBlock.deserializeCompact((ByteBuffer) any()), atLeast(1));
+            verify(blockMock, atLeast(1)).time();
             timeUtils.verify(() -> TimeUtils.dateTimeFormat((Instant) any()), atLeast(1));
             sha256Hash.verify(() -> Sha256Hash.wrap(byteArray), atLeast(1));
             preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
-            verify(paramsMock, atLeast(1)).getGenesisBlock();
-            verify(blockMock2, atLeast(1)).cloneAsHeader();
-            verify(blockMock3, atLeast(1)).getWork();
+            verify(paramsMock, times(2)).getGenesisBlock();
+            verify(blockMock2, atLeast(1)).time();
+            verify(blockMock3, atLeast(1)).cloneAsHeader();
+            verify(blockMock4, atLeast(1)).getWork();
         }
     }
 

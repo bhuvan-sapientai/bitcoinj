@@ -1,5 +1,5 @@
 ---
-modelFingerprint: "DF52C5308B3BA4140E1434995130BD9A"
+modelFingerprint: "DFF678C26B37CC1FAF87E50FE4B2D1A9"
 methods:
 - method:
     name: "bytes"
@@ -168,7 +168,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "REAL"
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.base.internal.ByteUtils"
         uuid: "org.bitcoinj.base.internal.ByteUtils"
         fixed: false
@@ -194,9 +194,7 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: ""
-          suggestedContent: !<regular>
-            value: ""
+            value: "return_of_formatHex1"
           valueType: "java.lang.String"
           uuid: "formatHex_string1"
           fixed: false
@@ -215,9 +213,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: ""
-        suggestedContent: !<regular>
-          value: ""
+          value: "return_of_formatHex1"
         valueType: "java.lang.String"
         uuid: "formatHex_string1"
         fixed: false
@@ -305,15 +301,16 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "5EAB151CE5A4D6AF1B3C8E3757DB4CD3"
-    problemWasSolvedByProver: true
+    modelFingerprint: "BD8A2BCBF4CEB0F8057C41DB5FFB1B23"
+    problemWasSolvedByProver: false
     truncated: true
     inputParameters: []
     uuid: "0343052f-7a8f-33ac-9253-572100b8dce1"
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path4"

@@ -127,11 +127,11 @@ public class RejectMessageSapientGeneratedJunit4Test {
     @Test()
     public void getRejectedMessageTest() {
         //Arrange Statement(s)
-        //RejectMessage target = new RejectMessage(RejectMessage.RejectCode.MALFORMED, rejectedMessageHashMock, "rejectedMessage1", "reason1");
+        RejectMessage target = new RejectMessage(RejectMessage.RejectCode.MALFORMED, rejectedMessageHashMock, "rejectedMessage1", "reason1");
         //Act Statement(s)
-        //String result = target.getRejectedMessage();
+        String result = target.getRejectedMessage();
         //Assert statement(s)
-        //assertThat(result, equalTo("rejectedMessage1"));
+        assertThat(result, equalTo("rejectedMessage1"));
     }
 
     //Sapient generated method id: ${de6cf383-7f9b-378c-8a29-766fcb0c49a9}
@@ -211,9 +211,7 @@ public class RejectMessageSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-        Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
-        RejectMessage target = new RejectMessage(RejectMessage.RejectCode.MALFORMED, sha256Hash, "Test message", "Invalid format");
+        RejectMessage target = new RejectMessage(RejectMessage.RejectCode.OTHER, rejectedMessageHashMock, "rejectedMessage1", "reason1");
         //Act Statement(s)
         String result = target.toString();
         //Assert statement(s)

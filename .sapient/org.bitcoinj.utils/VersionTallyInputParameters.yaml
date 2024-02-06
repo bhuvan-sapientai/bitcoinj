@@ -1435,9 +1435,9 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       modelFingerprint: "725CC4DA415E6BA7131BD23E9A666E7B"
-      index: 9
+      index: 6
       ignored: false
-      nestedInLoop: true
+      nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "OBJECT"
@@ -1452,7 +1452,7 @@ methods:
               suggestedContent: !<regular>
                 value: 1
               valueType: "long"
-              uuid: "initialize_long4"
+              uuid: "initialize_long1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -1460,7 +1460,7 @@ methods:
             value:
               sapientType: "MOCK"
               valueType: "org.bitcoinj.base.Sha256Hash"
-              uuid: "initialize_block2-arg1"
+              uuid: "initialize_block1-arg1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -1468,7 +1468,7 @@ methods:
             value:
               sapientType: "MOCK"
               valueType: "org.bitcoinj.base.Sha256Hash"
-              uuid: "initialize_block2-prevBlockHash"
+              uuid: "initialize_block1-prevBlockHash"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -1484,7 +1484,7 @@ methods:
                 method: "now"
                 methodParameters: []
               valueType: "java.time.Instant"
-              uuid: "initialize_block2-merkleRoot"
+              uuid: "initialize_block1-merkleRoot"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -1494,7 +1494,7 @@ methods:
               content: !<regular>
                 value: 0
               valueType: "long"
-              uuid: "initialize_block2-time"
+              uuid: "initialize_block1-time"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -1504,7 +1504,7 @@ methods:
               content: !<regular>
                 value: 0
               valueType: "long"
-              uuid: "initialize_block2-difficultyTarget"
+              uuid: "initialize_block1-difficultyTarget"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -1518,7 +1518,7 @@ methods:
                 parameters: []
                 values: []
               valueType: "java.util.List"
-              uuid: "initialize_block2-arg6"
+              uuid: "initialize_block1-arg6"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -1592,7 +1592,7 @@ methods:
           privateConstructor: false
           createdByTargetCode: false
         valueType: "org.bitcoinj.core.Block"
-        uuid: "initialize_block2"
+        uuid: "initialize_block1"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -1608,7 +1608,7 @@ methods:
           suggestedContent: !<regular>
             value: 1
           valueType: "long"
-          uuid: "initialize_long4"
+          uuid: "initialize_long1"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -2402,7 +2402,90 @@ methods:
       nestedInLoop: true
       nestedInRecursion: false
       value:
-        sapientType: "UNKNOWN"
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.Block"
+          parameters:
+          - name: "version"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 1
+              suggestedContent: !<regular>
+                value: 1
+              valueType: "long"
+              uuid: "initialize_long4"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "arg1"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.base.Sha256Hash"
+              uuid: "initialize_block2-arg1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "prevBlockHash"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.base.Sha256Hash"
+              uuid: "initialize_block2-prevBlockHash"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "merkleRoot"
+            value:
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "java.time.Instant"
+                method: "now"
+                methodParameters: []
+              suggestedContent: !<static_method_return>
+                target: "java.time.Instant"
+                method: "now"
+                methodParameters: []
+              valueType: "java.time.Instant"
+              uuid: "initialize_block2-merkleRoot"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "time"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "initialize_block2-time"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "difficultyTarget"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "initialize_block2-difficultyTarget"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "arg6"
+            value:
+              sapientType: "COLLECTION"
+              content: !<collection>
+                parameters: []
+                values: []
+              suggestedContent: !<collection>
+                parameters: []
+                values: []
+              valueType: "java.util.List"
+              uuid: "initialize_block2-arg6"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
         suggestedContent: !<new>
           target: "org.bitcoinj.core.Block"
           parameters:
@@ -2482,6 +2565,8 @@ methods:
         signature: "getVersion(): long"
         returnValue:
           sapientType: "BASIC"
+          content: !<regular>
+            value: 1
           suggestedContent: !<regular>
             value: 1
           valueType: "long"

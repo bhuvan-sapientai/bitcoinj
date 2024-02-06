@@ -66,8 +66,10 @@ public class StoredBlockSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         StoredBlock target = new StoredBlock(blockMock, new BigInteger("2"), 0);
         StoredBlock storedBlock = new StoredBlock(blockMock2, new BigInteger("1"), 0);
+
         //Act Statement(s)
         boolean result = target.moreWorkThan(storedBlock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
     }
@@ -81,8 +83,10 @@ public class StoredBlockSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         StoredBlock target = new StoredBlock(blockMock, new BigInteger("0"), 0);
         StoredBlock storedBlock = new StoredBlock(blockMock2, new BigInteger("0"), 0);
+
         //Act Statement(s)
         boolean result = target.moreWorkThan(storedBlock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
     }
@@ -93,9 +97,11 @@ public class StoredBlockSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         doReturn(new BigInteger("1")).when(blockMock).getWork();
         StoredBlock target = new StoredBlock(blockMock2, new BigInteger("1"), 1);
+
         //Act Statement(s)
         StoredBlock result = target.build(blockMock);
         StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("2"), 2);
+
         //Assert statement(s)
         assertThat(result, equalTo(storedBlock));
         verify(blockMock).getWork();
@@ -107,13 +113,17 @@ public class StoredBlockSapientGeneratedJunit4Test {
     public void getPrevTest() throws BlockStoreException {
         //Arrange Statement(s)
         BlockStore storeMock = mock(BlockStore.class);
+        Sha256Hash sha256HashMock = mock(Sha256Hash.class);
         doReturn(storedBlockMock).when(storeMock).get(sha256HashMock);
+        Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
         Instant instant = Instant.now();
         List list = new ArrayList<>();
         Block block = new Block(0L, sha256HashMock2, sha256HashMock, instant, 0L, 0L, list);
         StoredBlock target = new StoredBlock(block, new BigInteger("0"), 0);
+
         //Act Statement(s)
         StoredBlock result = target.getPrev(storeMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(storedBlockMock));
         verify(storeMock).get(sha256HashMock);
@@ -173,19 +183,17 @@ public class StoredBlockSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<Block> block = mockStatic(Block.class)) {
-            byte[] byteArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
-            ByteBuffer byteBuffer = ByteBuffer.wrap(byteArray);
-            Block block2 = Block.read(byteBuffer);
-            block.when(() -> Block.read((ByteBuffer) any())).thenReturn(block2);
-            ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
-            //Act Statement(s)
-            StoredBlock result = StoredBlock.deserializeCompact(byteBuffer2);
-            StoredBlock storedBlock = new StoredBlock(block2, new BigInteger("0"), 0);
-            //Assert statement(s)
-            assertThat(result, equalTo(storedBlock));
-            block.verify(() -> Block.read((ByteBuffer) any()));
-        }
+        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+
+        //Act Statement(s)
+        StoredBlock result = StoredBlock.deserializeCompact(byteBuffer);
+        byte[] byteArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
+        ByteBuffer byteBuffer2 = ByteBuffer.wrap(byteArray);
+        Block block = Block.read(byteBuffer2);
+        StoredBlock storedBlock = new StoredBlock(block, new BigInteger("0"), 0);
+
+        //Assert statement(s)
+        assertThat(result, equalTo(storedBlock));
     }
 
     //Sapient generated method id: ${6c2d1366-1370-3259-91d2-4247d0acb395}
@@ -213,18 +221,15 @@ public class StoredBlockSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Instant instant = Instant.now();
-        List list = new ArrayList<>();
-        Block block = new Block(0L, sha256HashMock, sha256HashMock2, instant, 0L, 0L, list);
-        StoredBlock target = spy(new StoredBlock(block, new BigInteger("0"), 0));
+        Block blockMock = mock(Block.class, "<init>_block1");
         doReturn("return_of_getHashAsString1").when(blockMock).getHashAsString();
-        Block blockMock2 = mock(Block.class, "toString_block2");
-        doReturn(blockMock, blockMock2).when(target).getHeader();
+        StoredBlock target = new StoredBlock(blockMock, new BigInteger("0"), 1);
+
         //Act Statement(s)
         String result = target.toString();
+
         //Assert statement(s)
         assertThat(result, equalTo("result1"));
-        verify(target, times(2)).getHeader();
         verify(blockMock).getHashAsString();
     }
 }

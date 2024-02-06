@@ -42,6 +42,8 @@ public class FiatSapientGeneratedJunit4Test {
 
     private final ArithmeticException arithmeticExceptionMock = mock(ArithmeticException.class);
 
+    private final MonetaryFormat FRIENDLY_FORMATMock = mock(MonetaryFormat.class, "FRIENDLY_FORMAT");
+
     //Sapient generated method id: ${3aeb0092-1c55-3557-8de4-613a23e110b0}
     @Test()
     public void valueOfTest() {
@@ -453,11 +455,14 @@ public class FiatSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Fiat target = Fiat.valueOf("USD", 1000L);
+        Fiat target = Fiat.valueOf("A", 0L);
+        MonetaryFormat monetaryFormat = FRIENDLY_FORMATMock.code(0, "A");
+        doReturn(monetaryFormat).when(FRIENDLY_FORMATMock).code(0, "A");
         //Act Statement(s)
         String result = target.toFriendlyString();
         //Assert statement(s)
         assertThat(result, equalTo("result1"));
+        verify(FRIENDLY_FORMATMock).code(0, "A");
     }
 
     //Sapient generated method id: ${cfd14524-d2de-392f-ab18-9c1817ef92cc}
@@ -469,7 +474,7 @@ public class FiatSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Fiat target = Fiat.valueOf("String", 0L);
+        Fiat target = Fiat.valueOf("USD", 100L);
         //Act Statement(s)
         String result = target.toPlainString();
         //Assert statement(s)

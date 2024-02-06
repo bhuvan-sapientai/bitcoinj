@@ -70,6 +70,8 @@ methods:
         sapientType: "ARRAY"
         content: !<array>
           values: {}
+        suggestedContent: !<array>
+          values: {}
         valueType: "byte[]"
         uuid: "encodeBytes_byte[]1"
         fixed: false
@@ -99,6 +101,8 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
+              values: {}
+            suggestedContent: !<array>
               values: {}
             valueType: "byte[]"
             uuid: "encodeBytes_byte[]1"
@@ -494,7 +498,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "031BE6DDE99C207F372EEDE07CCDB7D8"
-    problemWasSolvedByProver: false
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
@@ -633,13 +637,11 @@ methods:
       filledByUser: false
     uuid: "a9e352cf-d2aa-3c8b-8636-62c1990cd5be"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
-    failureReason:
-      reason: "UNKNOWN_REASON"
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "encode1WhenHrpLengthLessThan1ThrowsIllegalArgumentException"
@@ -1354,12 +1356,12 @@ methods:
       filledByUser: false
     uuid: "29b6353b-924d-3faf-8709-7f1426958672"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path10"
     pathIdForUser: "path12"
     testPathName: "decodeWhenCIndexOfCHARSET_REVEqualsMinus1ThrowsAddressFormatExceptionInvalidCharacter"
@@ -1472,12 +1474,12 @@ methods:
       filledByUser: false
     uuid: "db0bfc4f-291b-3dd2-a7ba-bed317905439"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path8"
     pathIdForUser: "path14"
     testPathName: "decodeWhenEncodingIsNotNull"
@@ -1607,12 +1609,12 @@ methods:
       filledByUser: false
     uuid: "1b9dfcb0-c453-326a-89a1-9c524713b9c7"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "BITWISE_NOT_SUPPORTED"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path7"
     pathIdForUser: "path15"
     testPathName: "decodeWhenEncodingIsNullThrowsAddressFormatExceptionInvalidChecksum"
@@ -1670,9 +1672,9 @@ methods:
       filledByUser: false
     uuid: "e6706136-4ef7-3bce-9137-b6ab29e180db"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "BITWISE_NOT_SUPPORTED"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false

@@ -111,7 +111,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${00c52a61-8e62-37ad-8f02-af5ff7dff678}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void addBlocksDownloadedEventListenerTest() {
         //Arrange Statement(s)
@@ -141,7 +141,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${97c71366-c1db-3ce7-9814-769dc1642163}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void addBlocksDownloadedEventListener1Test() {
         //Arrange Statement(s)
@@ -171,7 +171,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${c11d7f2e-8338-3fd7-b80d-222bef42da68}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void addChainDownloadStartedEventListenerTest() {
         //Arrange Statement(s)
@@ -201,7 +201,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${092ee437-e448-38ad-8be0-688d55976fe0}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void addChainDownloadStartedEventListener1Test() {
         //Arrange Statement(s)
@@ -231,7 +231,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${551c84dc-3cfa-36cf-9cd9-0a39cdbeebcb}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void addConnectedEventListenerTest() {
         //Arrange Statement(s)
@@ -261,7 +261,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${ea194ea1-a7a4-3311-9f90-586207598415}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void addConnectedEventListener1Test() {
         //Arrange Statement(s)
@@ -291,7 +291,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${559dc831-c890-3f1d-ad16-2e8e52a4ee44}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void addDisconnectedEventListenerTest() {
         //Arrange Statement(s)
@@ -321,7 +321,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${19bb2ab7-7876-38e9-976a-04483f499dfa}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void addDisconnectedEventListener1Test() {
         //Arrange Statement(s)
@@ -351,7 +351,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${4cd1dec5-33aa-3127-a1c4-c5d7aa3f1524}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void addGetDataEventListenerTest() {
         //Arrange Statement(s)
@@ -381,7 +381,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${35974df2-9357-3492-9cd6-ce43fda472d2}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void addGetDataEventListener1Test() {
         //Arrange Statement(s)
@@ -411,7 +411,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${fa4a053c-3288-3757-bf2a-9bd35587f295}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void addOnTransactionBroadcastListenerTest() {
         //Arrange Statement(s)
@@ -441,7 +441,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${32ca1a14-325b-39fb-abaa-274d6255ff42}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void addOnTransactionBroadcastListener1Test() {
         //Arrange Statement(s)
@@ -471,7 +471,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${d6c619a0-0eb3-3165-9522-25eb00b3cf25}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void addPreMessageReceivedEventListenerTest() {
         //Arrange Statement(s)
@@ -501,7 +501,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${4f51806c-fbd9-3401-ac7f-e9e77594c4c6}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void addPreMessageReceivedEventListener1Test() {
         //Arrange Statement(s)
@@ -531,7 +531,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${3b9cca88-5ab9-3be3-86a1-9343eeee7504}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void addAddressEventListenerTest() {
         //Arrange Statement(s)
@@ -561,7 +561,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${cdd439cb-7633-3e44-8437-9ff4d49bde8e}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void addAddressEventListener1Test() {
         //Arrange Statement(s)
@@ -592,6 +592,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${5f0fdca8-4345-3cd0-99a7-8498ae08c0e5}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void removeBlocksDownloadedEventListenerWhenListenerRegistrationRemoveFromListListenerBlocksDownloadedEventListeners() {
         /* Branches:
          * (ListenerRegistration.removeFromList(listener, blocksDownloadedEventListeners)) : true
@@ -626,6 +627,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${5985ba37-d992-3f94-92fc-4d416fd75fbf}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void removeBlocksDownloadedEventListenerWhenListenerRegistrationNotRemoveFromListListenerBlocksDownloadedEventListeners() {
         /* Branches:
          * (ListenerRegistration.removeFromList(listener, blocksDownloadedEventListeners)) : false
@@ -660,6 +662,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${8d0b5707-27f5-3f86-aca2-ccadad33283e}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void removeChainDownloadStartedEventListenerWhenListenerRegistrationRemoveFromListListenerChainDownloadStartedEventListeners() {
         /* Branches:
          * (ListenerRegistration.removeFromList(listener, chainDownloadStartedEventListeners)) : true
@@ -694,6 +697,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${8a4bc1ea-889a-34a0-b8fb-30f50c7329c8}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void removeChainDownloadStartedEventListenerWhenListenerRegistrationNotRemoveFromListListenerChainDownloadStartedEventListen() {
         /* Branches:
          * (ListenerRegistration.removeFromList(listener, chainDownloadStartedEventListeners)) : false
@@ -728,6 +732,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${f36be306-62cf-3bee-9d31-80907b91d80e}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void removeConnectedEventListenerWhenListenerRegistrationRemoveFromListListenerConnectedEventListeners() {
         /* Branches:
          * (ListenerRegistration.removeFromList(listener, connectedEventListeners)) : true
@@ -762,6 +767,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${4bdc761b-4605-3d87-896f-c6f547334f5f}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void removeConnectedEventListenerWhenListenerRegistrationNotRemoveFromListListenerConnectedEventListeners() {
         /* Branches:
          * (ListenerRegistration.removeFromList(listener, connectedEventListeners)) : false
@@ -796,6 +802,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${44127078-f982-3884-95a9-49a51e2b47c4}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void removeDisconnectedEventListenerWhenListenerRegistrationRemoveFromListListenerDisconnectedEventListeners() {
         /* Branches:
          * (ListenerRegistration.removeFromList(listener, disconnectedEventListeners)) : true
@@ -830,6 +837,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${8d349d48-ed3a-34df-bc44-3655fbf49585}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void removeDisconnectedEventListenerWhenListenerRegistrationNotRemoveFromListListenerDisconnectedEventListeners() {
         /* Branches:
          * (ListenerRegistration.removeFromList(listener, disconnectedEventListeners)) : false
@@ -864,6 +872,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${7ee66f14-a241-3c41-a0d9-02089cbf7dcd}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void removeGetDataEventListenerWhenListenerRegistrationRemoveFromListListenerGetDataEventListeners() {
         /* Branches:
          * (ListenerRegistration.removeFromList(listener, getDataEventListeners)) : true
@@ -898,6 +907,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${b347aab4-9a10-3ae5-abac-bfc1984aade5}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void removeGetDataEventListenerWhenListenerRegistrationNotRemoveFromListListenerGetDataEventListeners() {
         /* Branches:
          * (ListenerRegistration.removeFromList(listener, getDataEventListeners)) : false
@@ -932,6 +942,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${b33a0065-afae-34b6-9d70-705b9355eee9}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void removeOnTransactionBroadcastListenerWhenListenerRegistrationRemoveFromListListenerOnTransactionEventListeners() {
         /* Branches:
          * (ListenerRegistration.removeFromList(listener, onTransactionEventListeners)) : true
@@ -966,6 +977,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${dcb8cb2c-d317-30ef-a389-659cb056b60b}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void removeOnTransactionBroadcastListenerWhenListenerRegistrationNotRemoveFromListListenerOnTransactionEventListeners() {
         /* Branches:
          * (ListenerRegistration.removeFromList(listener, onTransactionEventListeners)) : false
@@ -1000,6 +1012,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${8ab243fc-8b67-3a30-b3fc-7ded5143d8ad}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void removePreMessageReceivedEventListenerWhenListenerRegistrationRemoveFromListListenerPreMessageReceivedEventListeners() {
         /* Branches:
          * (ListenerRegistration.removeFromList(listener, preMessageReceivedEventListeners)) : true
@@ -1034,6 +1047,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${6cc4e8a3-46f9-3ca3-887f-c19654342c72}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void removePreMessageReceivedEventListenerWhenListenerRegistrationNotRemoveFromListListenerPreMessageReceivedEventListeners() {
         /* Branches:
          * (ListenerRegistration.removeFromList(listener, preMessageReceivedEventListeners)) : false
@@ -1068,6 +1082,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${63a8b9de-60bb-3e17-8199-73cfcf1926aa}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void removeAddressEventListenerWhenListenerRegistrationRemoveFromListListenerAddressEventListeners() {
         /* Branches:
          * (ListenerRegistration.removeFromList(listener, addressEventListeners)) : true
@@ -1102,6 +1117,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${91521948-2692-30b7-a864-c2dbec47ec93}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void removeAddressEventListenerWhenListenerRegistrationNotRemoveFromListListenerAddressEventListeners() {
         /* Branches:
          * (ListenerRegistration.removeFromList(listener, addressEventListeners)) : false
@@ -1135,7 +1151,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${b3b94152-5234-3201-9a50-4bf966a1b50e}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void toStringWhenVPeerVersionMessageLocalServicesHasAny() {
         /* Branches:
@@ -1210,6 +1226,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${25db16a0-a3f4-3437-9876-07fba4305f4a}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void connectionClosedWhenDisconnectedEventListenersIsEmpty() {
         /* Branches:
          * (for-each(disconnectedEventListeners)) : false
@@ -1308,7 +1325,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${1e620967-3b40-3037-b0f2-d8bb27520f92}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void getConnectionOpenFutureTest() {
         //Arrange Statement(s)
@@ -1340,6 +1357,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${aaf609d0-f824-340e-afa2-e3b63a96d694}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void getVersionHandshakeFutureTest() {
         //Arrange Statement(s)
         MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
@@ -1371,6 +1389,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${cbd10551-604a-3b40-ad3a-8d98cf217fc3}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void processMessageWhenMIsNull() throws Exception {
         /* Branches:
          * (for-each(preMessageReceivedEventListeners)) : false
@@ -2522,6 +2541,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${fe357471-6f8f-37f7-9d70-27700f6ea893}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void startFilteredBlockTest() {
         //Arrange Statement(s)
         MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
@@ -2549,6 +2569,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${ee0235a4-4479-3ae1-ba22-5332d44fb457}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void processNotFoundMessageWhenGetDataFuturesIsEmpty() {
         /* Branches:
          * (for-each(getDataFutures)) : false
@@ -2579,6 +2600,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${467c7d49-c2b5-3a36-a37e-91aad7e4ea98}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void processHeadersWhenBlockChainIsNull() throws ProtocolException, PrunedException, BlockStoreException, IOException {
         /* Branches:
          * (blockChain == null) : true
@@ -2609,6 +2631,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${7ae6aec2-edb5-3ad2-abc8-81494eccbf35}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void processHeadersWhenDownloadBlockBodiesThrowsIllegalStateException() throws ProtocolException {
         /* Branches:
          * (blockChain == null) : false
@@ -2645,6 +2668,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${d123eed9-d8fb-3086-a4fd-cfa4fc21aed5}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void processGetDataWhenItemsIsEmpty() throws IOException {
         /* Branches:
          * (for-each(getDataEventListeners)) : false
@@ -2675,7 +2699,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${2bb0c661-78b6-3341-8fe6-f0a77f75ccdd}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void processTransactionWhenOnTransactionEventListenersIsEmpty() throws Exception {
         /* Branches:
@@ -2690,6 +2714,7 @@ public class PeerSapientGeneratedJunit4Test {
         Transaction txMock = mock(Transaction.class);
         Sha256Hash sha256HashMock = mock(Sha256Hash.class);
         TransactionConfidence transactionConfidenceMock = mock(TransactionConfidence.class);
+        Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
         MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
         Block blockMock = mock(Block.class);
         Network networkMock = mock(Network.class);
@@ -2697,9 +2722,9 @@ public class PeerSapientGeneratedJunit4Test {
         PeerAddress peerAddressMock = mock(PeerAddress.class);
         try (MockedStatic<Transaction> transaction = mockStatic(Transaction.class);
              MockedStatic<Context> context = mockStatic(Context.class)) {
-            doReturn(sha256HashMock).when(txMock).getTxId();
             doReturn(transactionConfidenceMock).when(txMock).getConfidence();
             doNothing().when(transactionConfidenceMock).maybeSetSourceToNetwork();
+            doReturn(sha256HashMock, sha256HashMock2).when(txMock).getTxId();
             doReturn(messageSerializerMock).when(paramsMock).getDefaultSerializer();
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
@@ -2712,7 +2737,7 @@ public class PeerSapientGeneratedJunit4Test {
             //Act Statement(s)
             target.processTransaction(txMock);
             //Assert statement(s)
-            verify(txMock).getTxId();
+            verify(txMock, times(2)).getTxId();
             verify(txMock).getConfidence();
             verify(transactionConfidenceMock).maybeSetSourceToNetwork();
             verify(paramsMock).getDefaultSerializer();
@@ -2725,7 +2750,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${fe0aa846-ab6b-3e08-8aa2-3f33ae7da6fd}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void processTransactionWhenCaughtVerificationExceptionAndOnTransactionEventListenersIsEmpty() throws Exception {
         /* Branches:
@@ -2736,11 +2761,15 @@ public class PeerSapientGeneratedJunit4Test {
          * (for-each(wallets)) : false
          * (catch-exception (VerificationException)) : true
          * (for-each(onTransactionEventListeners)) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         Transaction txMock = mock(Transaction.class);
         Sha256Hash sha256HashMock = mock(Sha256Hash.class);
         TransactionConfidence transactionConfidenceMock = mock(TransactionConfidence.class);
+        Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
         MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
         Block blockMock = mock(Block.class);
         Network networkMock = mock(Network.class);
@@ -2748,9 +2777,9 @@ public class PeerSapientGeneratedJunit4Test {
         PeerAddress peerAddressMock = mock(PeerAddress.class);
         try (MockedStatic<Transaction> transaction = mockStatic(Transaction.class);
              MockedStatic<Context> context = mockStatic(Context.class)) {
-            doReturn(sha256HashMock).when(txMock).getTxId();
             doReturn(transactionConfidenceMock).when(txMock).getConfidence();
             doNothing().when(transactionConfidenceMock).maybeSetSourceToNetwork();
+            doReturn(sha256HashMock, sha256HashMock2).when(txMock).getTxId();
             doReturn(messageSerializerMock).when(paramsMock).getDefaultSerializer();
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
@@ -2763,7 +2792,7 @@ public class PeerSapientGeneratedJunit4Test {
             //Act Statement(s)
             target.processTransaction(txMock);
             //Assert statement(s)
-            verify(txMock).getTxId();
+            verify(txMock, times(2)).getTxId();
             verify(txMock).getConfidence();
             verify(transactionConfidenceMock).maybeSetSourceToNetwork();
             verify(paramsMock).getDefaultSerializer();
@@ -2777,6 +2806,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${96fa7fc5-e96f-3e3e-bb59-41cbedbb68c5}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void downloadDependenciesWhenTxConfidenceNotEqualsTransactionConfidenceConfidenceTypeBUILDING() throws Exception {
         /* Branches:
          * (txConfidence != TransactionConfidence.ConfidenceType.BUILDING) : true
@@ -2823,6 +2853,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${07707a15-0b7d-3aa3-88a4-b918d60f03fc}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void downloadDependenciesWhenTxConfidenceEqualsTransactionConfidenceConfidenceTypeBUILDINGThrowsIllegalArgumentException() {
         /* Branches:
          * (txConfidence != TransactionConfidence.ConfidenceType.BUILDING) : false
@@ -3049,7 +3080,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${752c6d56-aa6a-3db0-b387-9bcc4dea2815}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void processBlockWhenLogIsDebugEnabled() throws PrunedException, BlockStoreException, IOException {
         /* Branches:
@@ -3101,7 +3132,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${2201ccf4-6b7b-3b39-962d-a1f705cc450c}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void processBlockWhenBlocksDownloadedEventListenersIsEmpty() throws VerificationException, PrunedException, BlockStoreException, IOException {
         /* Branches:
@@ -3119,6 +3150,7 @@ public class PeerSapientGeneratedJunit4Test {
         Transaction transactionMock = mock(Transaction.class);
         TransactionConfidence transactionConfidenceMock = mock(TransactionConfidence.class);
         Sha256Hash sha256HashMock = mock(Sha256Hash.class);
+        Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
         MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
         Block blockMock = mock(Block.class);
         VersionMessage versionMessageMock = mock(VersionMessage.class);
@@ -3131,7 +3163,7 @@ public class PeerSapientGeneratedJunit4Test {
             doReturn(transactionList, transactionList2).when(mMock).getTransactions();
             doReturn(transactionConfidenceMock).when(transactionMock).getConfidence();
             doNothing().when(transactionConfidenceMock).maybeSetSourceToNetwork();
-            doReturn(sha256HashMock).when(mMock).getHash();
+            doReturn(sha256HashMock, sha256HashMock2).when(mMock).getHash();
             doReturn(messageSerializerMock).when(paramsMock).getDefaultSerializer();
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
@@ -3148,7 +3180,7 @@ public class PeerSapientGeneratedJunit4Test {
             verify(mMock, times(2)).getTransactions();
             verify(transactionMock).getConfidence();
             verify(transactionConfidenceMock).maybeSetSourceToNetwork();
-            verify(mMock).getHash();
+            verify(mMock, times(2)).getHash();
             verify(paramsMock).getDefaultSerializer();
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
@@ -3159,7 +3191,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${22f8596e-064f-3f9f-b185-4cf4cb73bf04}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void processBlockWhenDownloadBlockBodiesThrowsIllegalStateException() throws VerificationException, PrunedException {
         /* Branches:
@@ -3176,13 +3208,15 @@ public class PeerSapientGeneratedJunit4Test {
         Block mMock = mock(Block.class);
         Transaction transactionMock = mock(Transaction.class);
         TransactionConfidence transactionConfidenceMock = mock(TransactionConfidence.class);
+        Sha256Hash sha256HashMock = mock(Sha256Hash.class);
+        Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
+        Sha256Hash sha256HashMock3 = mock(Sha256Hash.class);
         MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
         Block blockMock = mock(Block.class);
         VersionMessage versionMessageMock = mock(VersionMessage.class);
         PeerAddress peerAddressMock = mock(PeerAddress.class);
         Block blockMock2 = mock(Block.class);
-        Sha256Hash sha256HashMock = mock(Sha256Hash.class);
-        Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
+        Sha256Hash sha256HashMock4 = mock(Sha256Hash.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Context> context = mockStatic(Context.class)) {
             doReturn("return_of_getHashAsString1").when(mMock).getHashAsString();
@@ -3192,6 +3226,7 @@ public class PeerSapientGeneratedJunit4Test {
             doReturn(transactionList, transactionList2).when(mMock).getTransactions();
             doReturn(transactionConfidenceMock).when(transactionMock).getConfidence();
             doNothing().when(transactionConfidenceMock).maybeSetSourceToNetwork();
+            doReturn(sha256HashMock, sha256HashMock2, sha256HashMock3).when(mMock).getHash();
             doReturn(messageSerializerMock).when(paramsMock).getDefaultSerializer();
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
@@ -3202,8 +3237,8 @@ public class PeerSapientGeneratedJunit4Test {
             target = new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doReturn(false).when(blockChainMock).add(mMock);
-            doReturn(blockMock2).when(blockChainMock).getOrphanRoot(sha256HashMock);
-            doReturn(sha256HashMock2).when(blockMock2).getHash();
+            doReturn(blockMock2).when(blockChainMock).getOrphanRoot(sha256HashMock3);
+            doReturn(sha256HashMock4).when(blockMock2).getHash();
             thrown.expect(IllegalStateException.class);
             //Act Statement(s)
             target.processBlock(mMock);
@@ -3212,13 +3247,14 @@ public class PeerSapientGeneratedJunit4Test {
             verify(mMock, times(2)).getTransactions();
             verify(transactionMock).getConfidence();
             verify(transactionConfidenceMock).maybeSetSourceToNetwork();
+            verify(mMock, times(3)).getHash();
             verify(paramsMock).getDefaultSerializer();
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
             context.verify(() -> Context.get(), atLeast(1));
             preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
             verify(blockChainMock).add(mMock);
-            verify(blockChainMock).getOrphanRoot(sha256HashMock);
+            verify(blockChainMock).getOrphanRoot(sha256HashMock3);
             verify(blockMock2).getHash();
         }
     }
@@ -3344,7 +3380,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${162f37f4-03ef-3dcc-a702-87452013e911}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void endFilteredBlockWhenLogIsDebugEnabled() throws PrunedException, BlockStoreException, IOException {
         /* Branches:
@@ -3381,7 +3417,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${157042f7-d8ce-3ff6-a940-a9dec42eceda}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void endFilteredBlockWhenCaughtPrunedExceptionThrowsRuntimeException() {
         /* Branches:
@@ -3390,6 +3426,9 @@ public class PeerSapientGeneratedJunit4Test {
          * (blockChain == null) : false
          * (awaitingFreshFilter != null) : false
          * (catch-exception (PrunedException)) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         FilteredBlock mMock = mock(FilteredBlock.class);
@@ -3427,7 +3466,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${0505e779-a72a-3b25-a34a-dd86550e28c9}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void endFilteredBlockWhenBlockChainNotAddMThrowsIllegalStateException() throws VerificationException, PrunedException {
         /* Branches:
@@ -3444,16 +3483,18 @@ public class PeerSapientGeneratedJunit4Test {
         Sha256Hash sha256HashMock = mock(Sha256Hash.class, "endFilteredBlock_sha256Hash1");
         Block blockMock = mock(Block.class);
         Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
+        Sha256Hash sha256HashMock3 = mock(Sha256Hash.class);
         MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
         Block blockMock2 = mock(Block.class);
         VersionMessage versionMessageMock = mock(VersionMessage.class);
         PeerAddress peerAddressMock = mock(PeerAddress.class);
         Block blockMock3 = mock(Block.class);
-        Sha256Hash sha256HashMock3 = mock(Sha256Hash.class);
+        Sha256Hash sha256HashMock4 = mock(Sha256Hash.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Context> context = mockStatic(Context.class)) {
             doReturn(blockMock).when(mMock).getBlockHeader();
-            doReturn(sha256HashMock, sha256HashMock2).when(mMock).getHash();
+            doReturn(sha256HashMock2).when(blockMock).getHash();
+            doReturn(sha256HashMock, sha256HashMock3).when(mMock).getHash();
             doReturn(messageSerializerMock).when(paramsMock).getDefaultSerializer();
             doReturn(blockMock2).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
@@ -3464,27 +3505,28 @@ public class PeerSapientGeneratedJunit4Test {
             target = new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doReturn(false).when(blockChainMock).add(mMock);
-            doReturn(blockMock3).when(blockChainMock).getOrphanRoot(sha256HashMock2);
-            doReturn(sha256HashMock3).when(blockMock3).getHash();
+            doReturn(blockMock3).when(blockChainMock).getOrphanRoot(sha256HashMock3);
+            doReturn(sha256HashMock4).when(blockMock3).getHash();
             thrown.expect(IllegalStateException.class);
             //Act Statement(s)
             target.endFilteredBlock(mMock);
             //Assert statement(s)
             verify(mMock, times(2)).getHash();
             verify(mMock).getBlockHeader();
+            verify(blockMock).getHash();
             verify(paramsMock).getDefaultSerializer();
             verify(paramsMock).getGenesisBlock();
             verify(blockMock2).time();
             context.verify(() -> Context.get(), atLeast(1));
             preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
             verify(blockChainMock).add(mMock);
-            verify(blockChainMock).getOrphanRoot(sha256HashMock2);
+            verify(blockChainMock).getOrphanRoot(sha256HashMock3);
             verify(blockMock3).getHash();
         }
     }
 
     //Sapient generated method id: ${c8268dc6-27bb-3ae1-85f6-21db48e9b473}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void endFilteredBlockWhenBlocksDownloadedEventListenersIsEmpty() throws VerificationException, PrunedException, BlockStoreException, IOException {
         /* Branches:
@@ -3691,7 +3733,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${fec0364a-3545-36ab-b68d-d0338e76a49b}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void processInvWhenConfGetSourceEqualsTransactionConfidenceSourceSELFAndBlocksSizeNotGreaterThan0AndGetDataItemsIsEmptyAndNo() throws BlockStoreException, IOException {
         /* Branches:
@@ -3755,7 +3797,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${2148040e-f6a8-3756-b8dd-49d4a0357a31}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void processInvWhenPendingTxDownloadsSizeNotGreaterThanPENDING_TX_DOWNLOADS_LIMITAndBlocksSizeNotGreaterThan0AndGetDataItems() throws NotYetConnectedException, BlockStoreException, IOException {
         /* Branches:
@@ -3768,67 +3810,6 @@ public class PeerSapientGeneratedJunit4Test {
          * (conf.numBroadcastPeers() > 1) : false
          * (conf.getSource().equals(TransactionConfidence.Source.SELF)) : false
          * (log.isDebugEnabled()) : true
-         * (pendingTxDownloads.size() > PENDING_TX_DOWNLOADS_LIMIT) : false
-         * (blocks.size() > 0) : false
-         * (!getDataItems.isEmpty()) : true
-         * (pingAfterGetData) : false
-         */
-        //Arrange Statement(s)
-        MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
-        Block blockMock = mock(Block.class);
-        VersionMessage versionMessageMock = mock(VersionMessage.class);
-        PeerAddress peerAddressMock = mock(PeerAddress.class);
-        Services servicesMock = mock(Services.class);
-        TxConfidenceTable txConfidenceTableMock = mock(TxConfidenceTable.class);
-        TransactionConfidence transactionConfidenceMock = mock(TransactionConfidence.class);
-        ListenableCompletableFuture<Void> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
-        InventoryMessage inventoryMessageMock = mock(InventoryMessage.class);
-        try (MockedStatic<Context> context = mockStatic(Context.class)) {
-            doReturn(messageSerializerMock).when(paramsMock).getDefaultSerializer();
-            doReturn(blockMock).when(paramsMock).getGenesisBlock();
-            Instant instant = Instant.now();
-            doReturn(instant).when(blockMock).time();
-            context.when(() -> Context.get()).thenReturn(contextMock);
-            target = spy(new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0));
-            autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            doReturn(servicesMock).when(vPeerVersionMessageMock).services();
-            doReturn(false).when(servicesMock).has(8L);
-            doReturn(txConfidenceTableMock).when(contextMock).getConfidenceTable();
-            doReturn(transactionConfidenceMock).when(txConfidenceTableMock).seen((Sha256Hash) null, peerAddressMock);
-            doReturn(1).when(transactionConfidenceMock).numBroadcastPeers();
-            doReturn(TransactionConfidence.Source.UNKNOWN).when(transactionConfidenceMock).getSource();
-            doReturn(listenableCompletableFutureMock).when(target).sendMessage((GetDataMessage) any());
-            //Act Statement(s)
-            target.processInv(inventoryMessageMock);
-            //Assert statement(s)
-            verify(paramsMock).getDefaultSerializer();
-            verify(paramsMock).getGenesisBlock();
-            verify(blockMock).time();
-            context.verify(() -> Context.get(), atLeast(1));
-            verify(vPeerVersionMessageMock).services();
-            verify(servicesMock).has(8L);
-            verify(contextMock).getConfidenceTable();
-            verify(txConfidenceTableMock).seen((Sha256Hash) null, peerAddressMock);
-            verify(transactionConfidenceMock).numBroadcastPeers();
-            verify(transactionConfidenceMock).getSource();
-            verify(target).sendMessage((GetDataMessage) any());
-        }
-    }
-
-    //Sapient generated method id: ${f82e9f8c-f6b1-3206-984b-339196d8b607}
-    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
-    @Test()
-    public void processInvWhenBlocksSizeNotGreaterThan0AndGetDataItemsNotIsEmptyAndNotPingAfterGetData2() throws NotYetConnectedException, BlockStoreException, IOException {
-        /* Branches:
-         * (for-each(items)) : true
-         * (switch(item.type) = TRANSACTION) : true
-         * (log.isDebugEnabled()) : true
-         * (transactions.isEmpty()) : false
-         * (vPeerVersionMessage.services().has(Services.NODE_WITNESS)) : false
-         * (it.hasNext()) : true
-         * (conf.numBroadcastPeers() > 1) : false
-         * (conf.getSource().equals(TransactionConfidence.Source.SELF)) : false
-         * (log.isDebugEnabled()) : false
          * (pendingTxDownloads.size() > PENDING_TX_DOWNLOADS_LIMIT) : false
          * (blocks.size() > 0) : false
          * (!getDataItems.isEmpty()) : true
@@ -3936,7 +3917,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${c81f2afe-9841-3fd7-bc71-073b8d941ac1}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void processInvWhenDownloadBlockBodiesThrowsIllegalStateException() {
         /* Branches:
@@ -3958,6 +3939,8 @@ public class PeerSapientGeneratedJunit4Test {
          * (downloadBlockBodies) : true
          */
         //Arrange Statement(s)
+        InventoryMessage invMock = mock(InventoryMessage.class);
+        InventoryItem inventoryItemMock = mock(InventoryItem.class);
         MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
         Block blockMock = mock(Block.class);
         VersionMessage versionMessageMock = mock(VersionMessage.class);
@@ -3966,9 +3949,11 @@ public class PeerSapientGeneratedJunit4Test {
         Services servicesMock = mock(Services.class);
         Block blockMock2 = mock(Block.class);
         Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
-        InventoryMessage inventoryMessageMock = mock(InventoryMessage.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
              MockedStatic<Context> context = mockStatic(Context.class)) {
+            List<InventoryItem> inventoryItemList = new ArrayList<>();
+            inventoryItemList.add(inventoryItemMock);
+            doReturn(inventoryItemList).when(invMock).getItems();
             doReturn(messageSerializerMock).when(paramsMock).getDefaultSerializer();
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
@@ -3985,75 +3970,6 @@ public class PeerSapientGeneratedJunit4Test {
             doReturn(sha256HashMock2).when(blockMock2).getHash();
             thrown.expect(IllegalStateException.class);
             //Act Statement(s)
-            target.processInv(inventoryMessageMock);
-            //Assert statement(s)
-            verify(paramsMock).getDefaultSerializer();
-            verify(paramsMock).getGenesisBlock();
-            verify(blockMock).time();
-            context.verify(() -> Context.get(), atLeast(1));
-            preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
-            verify(blockChainMock, times(2)).isOrphan(sha256HashMock);
-            verify(vPeerVersionMessageMock).services();
-            verify(servicesMock).has(8L);
-            verify(blockChainMock).getOrphanRoot(sha256HashMock);
-            verify(blockMock2).getHash();
-        }
-    }
-
-    //Sapient generated method id: ${335124c7-28ca-3efc-8c7c-510d158b3d7f}
-    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
-    @Test()
-    public void processInvWhenBlocksIsNotEmptyAndBlockChainIsOrphanItemAndDownloadBlockBodiesThrowsIllegalStateException() {
-        /* Branches:
-         * (for-each(items)) : true
-         * (switch(item.type) = BLOCK) : true
-         * (log.isDebugEnabled()) : true
-         * (transactions.isEmpty()) : true
-         * (blocks.size() == 1) : true
-         * (downloadData) : true
-         * (blockChain != null) : true
-         * (!blockChain.isOrphan(blocks.get(0))) : false
-         * (vPeerVersionMessage.services().has(Services.NODE_WITNESS)) : true
-         * (it.hasNext()) : false
-         * (blocks.size() > 0) : true
-         * (downloadData) : true
-         * (blockChain != null) : true
-         * (for-each(blocks)) : true
-         * (blockChain.isOrphan(item)) : true
-         * (downloadBlockBodies) : true
-         */
-        //Arrange Statement(s)
-        InventoryMessage invMock = mock(InventoryMessage.class);
-        InventoryItem inventoryItemMock = mock(InventoryItem.class);
-        MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
-        Block blockMock = mock(Block.class);
-        VersionMessage versionMessageMock = mock(VersionMessage.class);
-        PeerAddress peerAddressMock = mock(PeerAddress.class);
-        Sha256Hash sha256HashMock = mock(Sha256Hash.class);
-        Services servicesMock = mock(Services.class);
-        Block blockMock2 = mock(Block.class);
-        Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-             MockedStatic<Context> context = mockStatic(Context.class)) {
-            List<InventoryItem> inventoryItemList = new ArrayList<>();
-            inventoryItemList.add(inventoryItemMock);
-            doReturn(inventoryItemList).when(invMock).getItems();
-            doReturn(messageSerializerMock).when(paramsMock).getDefaultSerializer();
-            doReturn(blockMock).when(paramsMock).getGenesisBlock();
-            Instant instant = Instant.now();
-            doReturn(instant).when(blockMock).time();
-            context.when(() -> Context.get()).thenReturn(contextMock);
-            IllegalStateException illegalStateException = new IllegalStateException();
-            preconditions.when(() -> Preconditions.checkState(false)).thenThrow(illegalStateException);
-            target = new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0);
-            autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            doReturn(true).when(blockChainMock).isOrphan(sha256HashMock);
-            doReturn(servicesMock).when(vPeerVersionMessageMock).services();
-            doReturn(true).when(servicesMock).has(8L);
-            doReturn(blockMock2).when(blockChainMock).getOrphanRoot(sha256HashMock);
-            doReturn(sha256HashMock2).when(blockMock2).getHash();
-            thrown.expect(IllegalStateException.class);
-            //Act Statement(s)
             target.processInv(invMock);
             //Assert statement(s)
             verify(invMock).getItems();
@@ -4067,78 +3983,6 @@ public class PeerSapientGeneratedJunit4Test {
             verify(servicesMock).has(8L);
             verify(blockChainMock).getOrphanRoot(sha256HashMock);
             verify(blockMock2).getHash();
-        }
-    }
-
-    //Sapient generated method id: ${3062dd15-cd7c-3621-a7ef-6c815e3087b6}
-    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
-    @Test()
-    public void processInvWhenIsBloomFilteringSupportedNotVPeerVersionMessageAndGetDataItemsNotIsEmptyAndNotPingAfterGetData() throws NotYetConnectedException, BlockStoreException, IOException {
-        /* Branches:
-         * (for-each(items)) : true
-         * (switch(item.type) = BLOCK) : true
-         * (log.isDebugEnabled()) : true
-         * (transactions.isEmpty()) : true
-         * (blocks.size() == 1) : true
-         * (downloadData) : true
-         * (blockChain != null) : true
-         * (!blockChain.isOrphan(blocks.get(0))) : true
-         * (vPeerVersionMessage.services().has(Services.NODE_WITNESS)) : true
-         * (it.hasNext()) : false
-         * (blocks.size() > 0) : true
-         * (downloadData) : true
-         * (blockChain != null) : true
-         * (for-each(blocks)) : true
-         * (blockChain.isOrphan(item)) : false
-         * (!pendingBlockDownloads.contains(item)) : true
-         * (clientVersion >= ProtocolVersion.BLOOM_FILTER.intValue()) : false  #  inside isBloomFilteringSupported method
-         * (version.services().has(Services.NODE_BLOOM)) : false  #  inside isBloomFilteringSupported method
-         * (isBloomFilteringSupported(vPeerVersionMessage)) : false
-         * (!getDataItems.isEmpty()) : true
-         * (pingAfterGetData) : false
-         */
-        //Arrange Statement(s)
-        InventoryMessage invMock = mock(InventoryMessage.class);
-        InventoryItem inventoryItemMock = mock(InventoryItem.class);
-        MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
-        Block blockMock = mock(Block.class);
-        Services servicesMock = mock(Services.class);
-        VersionMessage versionMessageMock = mock(VersionMessage.class);
-        PeerAddress peerAddressMock = mock(PeerAddress.class);
-        Sha256Hash sha256HashMock = mock(Sha256Hash.class);
-        Services servicesMock2 = mock(Services.class);
-        ListenableCompletableFuture<Void> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
-        try (MockedStatic<Context> context = mockStatic(Context.class)) {
-            List<InventoryItem> inventoryItemList = new ArrayList<>();
-            inventoryItemList.add(inventoryItemMock);
-            doReturn(inventoryItemList).when(invMock).getItems();
-            doReturn(messageSerializerMock).when(paramsMock).getDefaultSerializer();
-            doReturn(blockMock).when(paramsMock).getGenesisBlock();
-            Instant instant = Instant.now();
-            doReturn(instant).when(blockMock).time();
-            doReturn(0).when(vPeerVersionMessageMock).clientVersion();
-            doReturn(false).when(servicesMock).has(4L);
-            context.when(() -> Context.get()).thenReturn(contextMock);
-            target = spy(new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0));
-            autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            doReturn(false).when(blockChainMock).isOrphan(sha256HashMock);
-            doReturn(servicesMock2, servicesMock).when(vPeerVersionMessageMock).services();
-            doReturn(true).when(servicesMock2).has(8L);
-            doReturn(listenableCompletableFutureMock).when(target).sendMessage((GetDataMessage) any());
-            //Act Statement(s)
-            target.processInv(invMock);
-            //Assert statement(s)
-            verify(invMock).getItems();
-            verify(paramsMock).getDefaultSerializer();
-            verify(paramsMock).getGenesisBlock();
-            verify(blockMock).time();
-            verify(vPeerVersionMessageMock).clientVersion();
-            verify(vPeerVersionMessageMock, times(2)).services();
-            verify(servicesMock).has(4L);
-            context.verify(() -> Context.get(), atLeast(1));
-            verify(blockChainMock, times(2)).isOrphan(sha256HashMock);
-            verify(servicesMock2).has(8L);
-            verify(target).sendMessage((GetDataMessage) any());
         }
     }
 
@@ -4213,7 +4057,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${fc2449ac-d890-3384-8f69-1b444a0f7f91}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void processInvWhenIsBloomFilteringSupportedNotVPeerVersionMessageAndGetDataItemsNotIsEmptyAndNotPingAfterGetData4() throws NotYetConnectedException, BlockStoreException, IOException {
         /* Branches:
@@ -4241,74 +4085,6 @@ public class PeerSapientGeneratedJunit4Test {
          * (pingAfterGetData) : false
          */
         //Arrange Statement(s)
-        MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
-        Block blockMock = mock(Block.class);
-        Services servicesMock = mock(Services.class);
-        VersionMessage versionMessageMock = mock(VersionMessage.class);
-        PeerAddress peerAddressMock = mock(PeerAddress.class);
-        Sha256Hash sha256HashMock = mock(Sha256Hash.class);
-        Services servicesMock2 = mock(Services.class);
-        ListenableCompletableFuture<Void> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
-        InventoryMessage inventoryMessageMock = mock(InventoryMessage.class);
-        try (MockedStatic<Context> context = mockStatic(Context.class)) {
-            doReturn(messageSerializerMock).when(paramsMock).getDefaultSerializer();
-            doReturn(blockMock).when(paramsMock).getGenesisBlock();
-            Instant instant = Instant.now();
-            doReturn(instant).when(blockMock).time();
-            doReturn(70011).when(vPeerVersionMessageMock).clientVersion();
-            doReturn(false).when(servicesMock).has(4L);
-            context.when(() -> Context.get()).thenReturn(contextMock);
-            target = spy(new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0));
-            autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            doReturn(false).when(blockChainMock).isOrphan(sha256HashMock);
-            doReturn(servicesMock2, servicesMock).when(vPeerVersionMessageMock).services();
-            doReturn(true).when(servicesMock2).has(8L);
-            doReturn(listenableCompletableFutureMock).when(target).sendMessage((GetDataMessage) any());
-            //Act Statement(s)
-            target.processInv(inventoryMessageMock);
-            //Assert statement(s)
-            verify(paramsMock).getDefaultSerializer();
-            verify(paramsMock).getGenesisBlock();
-            verify(blockMock).time();
-            verify(vPeerVersionMessageMock).clientVersion();
-            verify(vPeerVersionMessageMock, times(2)).services();
-            verify(servicesMock).has(4L);
-            context.verify(() -> Context.get(), atLeast(1));
-            verify(blockChainMock).isOrphan(sha256HashMock);
-            verify(servicesMock2).has(8L);
-            verify(target).sendMessage((GetDataMessage) any());
-        }
-    }
-
-    //Sapient generated method id: ${62056136-f728-33f3-8510-a046a8fd0215}
-    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
-    @Test()
-    public void processInvWhenIsBloomFilteringSupportedVPeerVersionMessageAndNotUseFilteredBlocksAndGetDataItemsNotIsEmptyAndNotPingAft() throws NotYetConnectedException, BlockStoreException, IOException {
-        /* Branches:
-         * (for-each(items)) : true
-         * (switch(item.type) = BLOCK) : true
-         * (log.isDebugEnabled()) : true
-         * (transactions.isEmpty()) : true
-         * (blocks.size() == 1) : true
-         * (downloadData) : true
-         * (blockChain != null) : true
-         * (!blockChain.isOrphan(blocks.get(0))) : true
-         * (vPeerVersionMessage.services().has(Services.NODE_WITNESS)) : true
-         * (it.hasNext()) : false
-         * (blocks.size() > 0) : true
-         * (downloadData) : true
-         * (blockChain != null) : true
-         * (for-each(blocks)) : true
-         * (blockChain.isOrphan(item)) : false
-         * (!pendingBlockDownloads.contains(item)) : true
-         * (clientVersion >= ProtocolVersion.BLOOM_FILTER.intValue()) : false  #  inside isBloomFilteringSupported method
-         * (version.services().has(Services.NODE_BLOOM)) : true  #  inside isBloomFilteringSupported method
-         * (isBloomFilteringSupported(vPeerVersionMessage)) : true
-         * (useFilteredBlocks) : false
-         * (!getDataItems.isEmpty()) : true
-         * (pingAfterGetData) : false
-         */
-        //Arrange Statement(s)
         InventoryMessage invMock = mock(InventoryMessage.class);
         InventoryItem inventoryItemMock = mock(InventoryItem.class);
         MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
@@ -4327,8 +4103,8 @@ public class PeerSapientGeneratedJunit4Test {
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
             doReturn(instant).when(blockMock).time();
-            doReturn(0).when(vPeerVersionMessageMock).clientVersion();
-            doReturn(true).when(servicesMock).has(4L);
+            doReturn(70011).when(vPeerVersionMessageMock).clientVersion();
+            doReturn(false).when(servicesMock).has(4L);
             context.when(() -> Context.get()).thenReturn(contextMock);
             target = spy(new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
@@ -4354,7 +4130,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${59bbd185-6b35-3a42-8a43-f31fa3b5611b}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void processInvWhenNotUseFilteredBlocksAndGetDataItemsNotIsEmptyAndNotPingAfterGetData2() throws NotYetConnectedException, BlockStoreException, IOException {
         /* Branches:
@@ -4383,6 +4159,8 @@ public class PeerSapientGeneratedJunit4Test {
          * (pingAfterGetData) : false
          */
         //Arrange Statement(s)
+        InventoryMessage invMock = mock(InventoryMessage.class);
+        InventoryItem inventoryItemMock = mock(InventoryItem.class);
         MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
         Block blockMock = mock(Block.class);
         Services servicesMock = mock(Services.class);
@@ -4391,8 +4169,10 @@ public class PeerSapientGeneratedJunit4Test {
         Sha256Hash sha256HashMock = mock(Sha256Hash.class);
         Services servicesMock2 = mock(Services.class);
         ListenableCompletableFuture<Void> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
-        InventoryMessage inventoryMessageMock = mock(InventoryMessage.class);
         try (MockedStatic<Context> context = mockStatic(Context.class)) {
+            List<InventoryItem> inventoryItemList = new ArrayList<>();
+            inventoryItemList.add(inventoryItemMock);
+            doReturn(inventoryItemList).when(invMock).getItems();
             doReturn(messageSerializerMock).when(paramsMock).getDefaultSerializer();
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
             Instant instant = Instant.now();
@@ -4407,8 +4187,9 @@ public class PeerSapientGeneratedJunit4Test {
             doReturn(true).when(servicesMock2).has(8L);
             doReturn(listenableCompletableFutureMock).when(target).sendMessage((GetDataMessage) any());
             //Act Statement(s)
-            target.processInv(inventoryMessageMock);
+            target.processInv(invMock);
             //Assert statement(s)
+            verify(invMock).getItems();
             verify(paramsMock).getDefaultSerializer();
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
@@ -4416,14 +4197,14 @@ public class PeerSapientGeneratedJunit4Test {
             verify(vPeerVersionMessageMock, times(2)).services();
             verify(servicesMock).has(4L);
             context.verify(() -> Context.get(), atLeast(1));
-            verify(blockChainMock).isOrphan(sha256HashMock);
+            verify(blockChainMock, times(2)).isOrphan(sha256HashMock);
             verify(servicesMock2).has(8L);
             verify(target).sendMessage((GetDataMessage) any());
         }
     }
 
     //Sapient generated method id: ${5378fc3b-d92c-3a5e-9f2c-0e310632a5e7}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void getBlockWhenGetdataGetItemsSizeEquals1() throws NotYetConnectedException, IOException {
         /* Branches:
@@ -4437,6 +4218,7 @@ public class PeerSapientGeneratedJunit4Test {
         Block blockMock = mock(Block.class);
         GetDataMessage getDataMessageMock = mock(GetDataMessage.class);
         Sha256Hash sha256HashMock = mock(Sha256Hash.class);
+        Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
         ListenableCompletableFuture<Block> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
         VersionMessage versionMessageMock = mock(VersionMessage.class);
         PeerAddress peerAddressMock = mock(PeerAddress.class);
@@ -4450,6 +4232,10 @@ public class PeerSapientGeneratedJunit4Test {
             doReturn(instant).when(blockMock).time();
             context.when(() -> Context.get()).thenReturn(contextMock);
             getDataMessage.when(() -> GetDataMessage.ofBlock(sha256HashMock, true)).thenReturn(getDataMessageMock);
+            InventoryItem inventoryItem = new InventoryItem(InventoryItem.Type.ERROR, sha256HashMock2);
+            List<InventoryItem> inventoryItemList = new ArrayList<>();
+            inventoryItemList.add(inventoryItem);
+            doReturn(inventoryItemList).when(getDataMessageMock).getItems();
             listenableCompletableFuture.when(() -> ListenableCompletableFuture.of((CompletableFuture) any())).thenReturn(listenableCompletableFutureMock);
             target = spy(new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
@@ -4463,6 +4249,7 @@ public class PeerSapientGeneratedJunit4Test {
             verify(blockMock).time();
             context.verify(() -> Context.get(), atLeast(1));
             getDataMessage.verify(() -> GetDataMessage.ofBlock(sha256HashMock, true), atLeast(1));
+            verify(getDataMessageMock, times(2)).getItems();
             listenableCompletableFuture.verify(() -> ListenableCompletableFuture.of((CompletableFuture) any()));
             verify(target).sendMessage(getDataMessageMock);
         }
@@ -4470,6 +4257,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${3bce0190-3422-3bc3-8b13-9ffc085cadf9}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void getBlockWhenGetdataGetItemsSizeNotEquals1ThrowsIllegalArgumentException() {
         /* Branches:
          * (getdata.getItems().size() == 1) : false  #  inside sendSingleGetData method
@@ -4511,7 +4299,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${a1a82b28-bd80-3a94-897f-cf7d5aee5a00}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void getPeerMempoolTransactionWhenGetdataGetItemsSizeEquals1() throws NotYetConnectedException, IOException {
         /* Branches:
@@ -4525,6 +4313,7 @@ public class PeerSapientGeneratedJunit4Test {
         Block blockMock = mock(Block.class);
         GetDataMessage getDataMessageMock = mock(GetDataMessage.class);
         Sha256Hash sha256HashMock = mock(Sha256Hash.class);
+        Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
         ListenableCompletableFuture<Transaction> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
         VersionMessage versionMessageMock = mock(VersionMessage.class);
         PeerAddress peerAddressMock = mock(PeerAddress.class);
@@ -4539,6 +4328,10 @@ public class PeerSapientGeneratedJunit4Test {
             doReturn(instant).when(blockMock).time();
             context.when(() -> Context.get()).thenReturn(contextMock);
             getDataMessage.when(() -> GetDataMessage.ofTransaction(sha256HashMock, false)).thenReturn(getDataMessageMock);
+            InventoryItem inventoryItem = new InventoryItem(InventoryItem.Type.ERROR, sha256HashMock2);
+            List<InventoryItem> inventoryItemList = new ArrayList<>();
+            inventoryItemList.add(inventoryItem);
+            doReturn(inventoryItemList).when(getDataMessageMock).getItems();
             listenableCompletableFuture.when(() -> ListenableCompletableFuture.of((CompletableFuture) any())).thenReturn(listenableCompletableFutureMock);
             target = spy(new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
@@ -4554,6 +4347,7 @@ public class PeerSapientGeneratedJunit4Test {
             verify(blockMock).time();
             context.verify(() -> Context.get(), atLeast(1));
             getDataMessage.verify(() -> GetDataMessage.ofTransaction(sha256HashMock, false), atLeast(1));
+            verify(getDataMessageMock, times(2)).getItems();
             listenableCompletableFuture.verify(() -> ListenableCompletableFuture.of((CompletableFuture) any()));
             verify(vPeerVersionMessageMock).services();
             verify(servicesMock).has(8L);
@@ -4563,6 +4357,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${536eb69f-91aa-315e-ad4e-bb34056248ca}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void getPeerMempoolTransactionWhenGetdataGetItemsSizeNotEquals1ThrowsIllegalArgumentException() {
         /* Branches:
          * (getdata.getItems().size() == 1) : false  #  inside sendSingleGetData method
@@ -4609,7 +4404,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${3e8fee0e-d42c-3bd2-95c7-2be928eeccbd}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void getAddrTest() throws NotYetConnectedException, IOException {
         //Arrange Statement(s)
@@ -4642,7 +4437,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${9ed5e31a-69c9-3826-8ad1-dc2a3e75bbf0}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void setFastDownloadParametersWhenThisFastCatchupTimeIsAfterBlockChainGetChainHeadGetHeaderTime() {
         /* Branches:
@@ -4661,19 +4456,22 @@ public class PeerSapientGeneratedJunit4Test {
         try (MockedStatic<Context> context = mockStatic(Context.class)) {
             doReturn(messageSerializerMock).when(paramsMock).getDefaultSerializer();
             doReturn(blockMock).when(paramsMock).getGenesisBlock();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
             context.when(() -> Context.get()).thenReturn(contextMock);
             target = new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             StoredBlock storedBlock = new StoredBlock(blockMock2, new BigInteger("0"), 0);
             doReturn(storedBlock).when(blockChainMock).getChainHead();
-            Instant instant = Instant.now();
-            doReturn(instant).when(blockMock2).time();
             Instant instant2 = Instant.now();
+            doReturn(instant2).when(blockMock2).time();
+            Instant instant3 = Instant.now();
             //Act Statement(s)
-            target.setFastDownloadParameters(false, instant2);
+            target.setFastDownloadParameters(false, instant3);
             //Assert statement(s)
             verify(paramsMock).getDefaultSerializer();
             verify(paramsMock).getGenesisBlock();
+            verify(blockMock).time();
             context.verify(() -> Context.get(), atLeast(1));
             verify(blockChainMock).getChainHead();
             verify(blockMock2).time();
@@ -4681,7 +4479,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${d63cb059-3d8f-392a-900a-68aee158e762}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void setDownloadParametersTest() {
         //Arrange Statement(s)
@@ -4713,6 +4511,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${a05d8487-dc4b-39d9-9feb-ab42c9a4a566}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void setDownloadParameters1WhenFastCatchupTimeSecsGreaterThan0() {
         /* Branches:
          * (fastCatchupTimeSecs > 0) : true
@@ -4743,7 +4542,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${a0a8ddd3-4374-348c-bbfb-0d3c8324fd62}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void setDownloadParameters1WhenFastCatchupTimeSecsNotGreaterThan0() {
         /* Branches:
@@ -4757,17 +4556,20 @@ public class PeerSapientGeneratedJunit4Test {
         Block blockMock2 = mock(Block.class);
         try (MockedStatic<Context> context = mockStatic(Context.class)) {
             doReturn(messageSerializerMock).when(paramsMock).getDefaultSerializer();
+            Instant instant = Instant.now();
+            doReturn(instant).when(blockMock).time();
             context.when(() -> Context.get()).thenReturn(contextMock);
             target = new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doReturn(blockMock, blockMock2).when(paramsMock).getGenesisBlock();
-            Instant instant = Instant.now();
-            doReturn(instant).when(blockMock2).time();
+            Instant instant2 = Instant.now();
+            doReturn(instant2).when(blockMock2).time();
             //Act Statement(s)
             target.setDownloadParameters(0L, false);
             //Assert statement(s)
             verify(paramsMock).getDefaultSerializer();
             verify(paramsMock, times(2)).getGenesisBlock();
+            verify(blockMock).time();
             context.verify(() -> Context.get(), atLeast(1));
             verify(blockMock2).time();
         }
@@ -4775,6 +4577,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${3832fc87-b89b-3daf-9520-76cdb8c3fb5a}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void addWalletTest() {
         //Arrange Statement(s)
         MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
@@ -4802,6 +4605,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${bed2c0d2-5371-364c-99cf-0a2273e29d50}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void removeWalletTest() {
         //Arrange Statement(s)
         MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
@@ -4829,6 +4633,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${3241502b-0594-3cd8-a482-1d386990b1b6}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void startBlockChainDownloadWhenBlocksLeftLessThan0() throws BlockStoreException, IOException {
         /* Branches:
          * (blocksLeft >= 0) : false
@@ -4859,7 +4664,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${044214ab-4589-3ce3-a699-496823636a85}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void startBlockChainDownloadWhenChainDownloadStartedEventListenersIsEmptyThrowsIllegalStateException() {
         /* Branches:
@@ -4897,7 +4702,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${3492584e-4d6f-33ce-b68c-c542605bbe8e}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void sendPingTest() throws IOException {
         //Arrange Statement(s)
@@ -4914,7 +4719,7 @@ public class PeerSapientGeneratedJunit4Test {
             target = spy(new Peer(paramsMock, versionMessageMock, peerAddressMock, blockChainMock, 0L, 0));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             CompletableFuture<Duration> completableFuture = new CompletableFuture<>();
-            doReturn(completableFuture).when(target).sendPing(11372622334213120L);
+            doReturn(completableFuture).when(target).sendPing(2171458419846188032L);
             //Act Statement(s)
             CompletableFuture<Duration> result = target.sendPing();
             //Assert statement(s)
@@ -4923,7 +4728,7 @@ public class PeerSapientGeneratedJunit4Test {
             verify(paramsMock).getGenesisBlock();
             verify(blockMock).time();
             context.verify(() -> Context.get(), atLeast(1));
-            verify(target).sendPing(11372622334213120L);
+            verify(target).sendPing(2171458419846188032L);
         }
     }
 
@@ -5005,6 +4810,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${55e569af-d56c-3275-9bc3-75719524e213}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void lastPingIntervalTest() {
         //Arrange Statement(s)
         MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
@@ -5033,6 +4839,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${d58d1cc7-1963-3884-9c10-e01bb1943056}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void getLastPingTimeTest() {
         //Arrange Statement(s)
         MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
@@ -5060,6 +4867,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${b5fc716f-2cdc-37a4-84d0-d95e30da1df0}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void pingIntervalTest() {
         //Arrange Statement(s)
         MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
@@ -5088,6 +4896,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${1f9b698c-221c-315b-b2bc-0d108bbd4832}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void getPingTimeTest() {
         //Arrange Statement(s)
         MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
@@ -5115,6 +4924,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${9d6e8bc7-d2f2-3955-b48e-f27678894dcf}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void processPongWhenPendingPingsIsEmpty() {
         /* Branches:
          * (for-each(pendingPings)) : false
@@ -5144,7 +4954,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${6f6d690e-6b6a-388f-88d5-e0841d17fa39}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void getPeerBlockHeightDifferenceWhenChainHeightGreaterThan0() {
         /* Branches:
@@ -5183,7 +4993,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${70e3847a-49d7-3e8c-9cf3-f303d670b2f8}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void getPeerBlockHeightDifferenceWhenChainHeightNotGreaterThan0() {
         /* Branches:
@@ -5222,7 +5032,7 @@ public class PeerSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${618a24a1-42da-37c6-8670-a6aacf816b02}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void getBestHeightTest() {
         //Arrange Statement(s)
@@ -5251,6 +5061,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${1739afb2-3f32-3db8-8d54-6c57a67cb6e8}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void setMinProtocolVersionWhenVerIsNull() {
         /* Branches:
          * (ver != null) : false
@@ -5281,6 +5092,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${030a978e-88d0-3f3c-adb5-3d78357065f5}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void setBloomFilterTest() throws IOException {
         //Arrange Statement(s)
         MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
@@ -5310,6 +5122,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${017d64c7-0311-399f-a8f4-2e6d6bef4f94}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void setBloomFilter1ThrowsNullPointerException() {
         //Arrange Statement(s)
         MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
@@ -5338,6 +5151,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${0ccdc4b8-9b81-3368-a748-916c7b991515}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void isDownloadTxDependenciesWhenVDownloadTxDependencyDepthGreaterThan0() {
         /* Branches:
          * (vDownloadTxDependencyDepth > 0) : true
@@ -5368,6 +5182,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${c9c32abc-12b0-37d6-bee7-ba525c1db23f}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void isDownloadTxDependenciesWhenVDownloadTxDependencyDepthNotGreaterThan0() {
         /* Branches:
          * (vDownloadTxDependencyDepth > 0) : false
@@ -5398,6 +5213,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${554264d0-0030-31c5-8201-402939ab2652}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void setDownloadTxDependenciesWhenEnable() {
         /* Branches:
          * (enable) : true
@@ -5427,6 +5243,7 @@ public class PeerSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${8a932ad4-a65d-35ae-8dd4-42c15f75ddb3}
     @Test()
+    @Ignore(value = "Potential harmful system call (CompletableFuture.thenCombine, CompletableFuture.thenRunAsync) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void setDownloadTxDependenciesWhenNotEnable() {
         /* Branches:
          * (enable) : false

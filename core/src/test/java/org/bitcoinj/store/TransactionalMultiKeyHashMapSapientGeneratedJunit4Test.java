@@ -40,6 +40,7 @@ public class TransactionalMultiKeyHashMapSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         target = new TransactionalMultiKeyHashMap<>();
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
+
         //Act Statement(s)
         target.BeginTransaction();
     }
@@ -50,6 +51,7 @@ public class TransactionalMultiKeyHashMapSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         target = new TransactionalMultiKeyHashMap<>();
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
+
         //Act Statement(s)
         target.CommitTransaction();
     }
@@ -60,6 +62,7 @@ public class TransactionalMultiKeyHashMapSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         target = new TransactionalMultiKeyHashMap<>();
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
+
         //Act Statement(s)
         target.AbortTransaction();
     }
@@ -74,8 +77,10 @@ public class TransactionalMultiKeyHashMapSapientGeneratedJunit4Test {
         Object object2 = new Object();
         Object object = mapValuesMock.get(object2);
         doReturn(object).when(mapValuesMock).get(object2);
+
         //Act Statement(s)
         Object result = target.get(object2);
+
         //Assert statement(s)
         assertThat(result, equalTo(object));
         verify(mapValuesMock).get(object2);
@@ -94,8 +99,10 @@ public class TransactionalMultiKeyHashMapSapientGeneratedJunit4Test {
         Object object2 = new Object();
         doNothing().when(mapValuesMock).put(object, object2);
         Object object3 = new Object();
+
         //Act Statement(s)
         target.put(object, object3, object2);
+
         //Assert statement(s)
         verify(mapValuesMock).put(object, object2);
     }
@@ -110,8 +117,10 @@ public class TransactionalMultiKeyHashMapSapientGeneratedJunit4Test {
         Object object2 = new Object();
         Object object = mapValuesMock.remove(object2);
         doReturn(object).when(mapValuesMock).remove(object2);
+
         //Act Statement(s)
         Object result = target.removeByUniqueKey(object2);
+
         //Assert statement(s)
         assertThat(result, equalTo(object));
         verify(mapValuesMock).remove(object2);
@@ -127,6 +136,7 @@ public class TransactionalMultiKeyHashMapSapientGeneratedJunit4Test {
         target = new TransactionalMultiKeyHashMap<>();
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
         Object object = new Object();
+
         //Act Statement(s)
         target.removeByMultiKey(object);
     }

@@ -146,8 +146,10 @@ public class PaymentSessionSapientGeneratedJunit4Test {
         doReturn(null).when(uriMock).getPaymentRequestUrl();
         thrown.expect(PaymentProtocolException.InvalidPaymentRequestURL.class);
         TrustStoreLoader trustStoreLoaderMock = mock(TrustStoreLoader.class);
+
         //Act Statement(s)
         PaymentSession.createFromBitcoinUri(uriMock, false, trustStoreLoaderMock);
+
         //Assert statement(s)
         verify(uriMock).getPaymentRequestUrl();
     }
@@ -930,6 +932,7 @@ public class PaymentSessionSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         thrown.expect(PaymentProtocolException.InvalidPaymentRequestURL.class);
         TrustStoreLoader trustStoreLoaderMock = mock(TrustStoreLoader.class);
+
         //Act Statement(s)
         PaymentSession.createFromUrl((String) null, false, trustStoreLoaderMock);
     }
@@ -1276,7 +1279,6 @@ public class PaymentSessionSapientGeneratedJunit4Test {
         Protos.PaymentDetails.Builder protosPaymentDetailsBuilderMock = mock(Protos.PaymentDetails.Builder.class);
         Protos.PaymentDetails.Builder protosPaymentDetailsBuilderMock2 = mock(Protos.PaymentDetails.Builder.class);
         ListenableCompletableFuture<PaymentSession> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
-        Network networkMock = mock(Network.class);
         try (MockedStatic<ListenableCompletableFuture> listenableCompletableFuture = mockStatic(ListenableCompletableFuture.class);
              MockedStatic<PaymentProtocol> paymentProtocol = mockStatic(PaymentProtocol.class);
              MockedStatic<Protos.PaymentDetails> protosPaymentDetails = mockStatic(Protos.PaymentDetails.class);
@@ -1298,12 +1300,10 @@ public class PaymentSessionSapientGeneratedJunit4Test {
             doReturn(1).when(paymentDetailsMock).getOutputsCount();
             List<Protos.Output> protosOutputList = new ArrayList<>();
             doReturn(protosOutputList).when(paymentDetailsMock).getOutputsList();
-            doReturn(networkMock).when(paramsMock).network();
-            Coin coin = Coin.ZERO;
-            doReturn(false).when(networkMock).exceedsMaxMoney(coin);
+            doReturn(BitcoinNetwork.MAINNET).when(paramsMock).network();
             TrustStoreLoader trustStoreLoader = null;
             //Act Statement(s)
-            ListenableCompletableFuture<PaymentSession> result = PaymentSession.createFromUrl("https://example.com/payment", false, trustStoreLoader);
+            ListenableCompletableFuture<PaymentSession> result = PaymentSession.createFromUrl("url1", false, trustStoreLoader);
             //Assert statement(s)
             assertThat(result, equalTo(listenableCompletableFutureMock));
             protosPaymentRequest.verify(() -> Protos.PaymentRequest.parseFrom(inputStream), atLeast(1));
@@ -1320,7 +1320,6 @@ public class PaymentSessionSapientGeneratedJunit4Test {
             verify(paymentDetailsMock).getOutputsCount();
             verify(paymentDetailsMock).getOutputsList();
             verify(paramsMock).network();
-            verify(networkMock).exceedsMaxMoney(coin);
         }
     }
 
@@ -1661,6 +1660,7 @@ public class PaymentSessionSapientGeneratedJunit4Test {
         Protos.PaymentDetails protosPaymentDetailsMock = mock(Protos.PaymentDetails.class);
         Coin coinMock = mock(Coin.class);
         PaymentProtocol.PkiVerificationData paymentProtocolPkiVerificationDataMock = mock(PaymentProtocol.PkiVerificationData.class);
+        Coin coinMock2 = mock(Coin.class);
         Protos.Output outputMock = mock(Protos.Output.class);
         Protos.Output outputMock2 = mock(Protos.Output.class);
         ByteString byteStringMock2 = mock(ByteString.class);
@@ -1675,15 +1675,19 @@ public class PaymentSessionSapientGeneratedJunit4Test {
             protosPaymentDetails.when(() -> Protos.PaymentDetails.newBuilder()).thenReturn(protosPaymentDetailsBuilderMock);
             doReturn(protosPaymentDetailsBuilderMock2).when(protosPaymentDetailsBuilderMock).mergeFrom(byteStringMock);
             doReturn(protosPaymentDetailsMock).when(protosPaymentDetailsBuilderMock2).build();
-            coin.when(() -> Coin.valueOf(0L)).thenReturn(coinMock);
             paymentProtocol.when(() -> PaymentProtocol.verifyPaymentRequestPki(requestMock, (KeyStore) null)).thenReturn(paymentProtocolPkiVerificationDataMock);
+            coin.when(() -> Coin.valueOf(0L)).thenReturn(coinMock).thenReturn(coinMock2);
             target = new PaymentSession(requestMock, true, nonNullTrustStoreLoaderMock);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doReturn(false).when(protosPaymentDetailsMock).hasNetwork();
             List<Protos.Output> protosOutputList = new ArrayList<>();
             protosOutputList.add(outputMock);
-            doReturn(protosOutputList).when(protosPaymentDetailsMock).getOutputsList();
+            doReturn(true).when(outputMock).hasAmount();
+            doReturn(0L).when(outputMock).getAmount();
             doReturn(1, 0).when(protosPaymentDetailsMock).getOutputsCount();
+            List<Protos.Output> protosOutputList2 = new ArrayList<>();
+            protosOutputList2.add(outputMock2);
+            doReturn(protosOutputList, protosOutputList2).when(protosPaymentDetailsMock).getOutputsList();
             doReturn(true).when(outputMock2).hasAmount();
             doReturn(0L).when(outputMock2).getAmount();
             doReturn(byteStringMock2).when(outputMock2).getScript();
@@ -1691,7 +1695,7 @@ public class PaymentSessionSapientGeneratedJunit4Test {
             doReturn(byteArray).when(byteStringMock2).toByteArray();
             //Act Statement(s)
             List<PaymentProtocol.Output> result = target.getOutputs();
-            PaymentProtocol.Output paymentProtocolOutput = new PaymentProtocol.Output(coinMock, byteArray);
+            PaymentProtocol.Output paymentProtocolOutput = new PaymentProtocol.Output(coinMock2, byteArray);
             List<PaymentProtocol.Output> paymentProtocolOutputResultList = new ArrayList<>(0);
             paymentProtocolOutputResultList.add(paymentProtocolOutput);
             //Assert statement(s)
@@ -1710,8 +1714,10 @@ public class PaymentSessionSapientGeneratedJunit4Test {
             verify(protosPaymentDetailsMock).hasNetwork();
             verify(protosPaymentDetailsMock, times(2)).getOutputsCount();
             verify(protosPaymentDetailsMock, times(2)).getOutputsList();
-            verify(outputMock2, times(2)).hasAmount();
-            verify(outputMock2, times(2)).getAmount();
+            verify(outputMock).hasAmount();
+            verify(outputMock).getAmount();
+            verify(outputMock2).hasAmount();
+            verify(outputMock2).getAmount();
             verify(outputMock2).getScript();
             verify(byteStringMock2).toByteArray();
         }
@@ -1758,10 +1764,12 @@ public class PaymentSessionSapientGeneratedJunit4Test {
             doReturn(false).when(protosPaymentDetailsMock).hasNetwork();
             List<Protos.Output> protosOutputList = new ArrayList<>();
             protosOutputList.add(outputMock);
-            doReturn(protosOutputList).when(protosPaymentDetailsMock).getOutputsList();
             doReturn(true).when(outputMock).hasAmount();
             doReturn(0L).when(outputMock).getAmount();
             doReturn(1, 0).when(protosPaymentDetailsMock).getOutputsCount();
+            List<Protos.Output> protosOutputList2 = new ArrayList<>();
+            protosOutputList2.add(outputMock2);
+            doReturn(protosOutputList, protosOutputList2).when(protosPaymentDetailsMock).getOutputsList();
             doReturn(false).when(outputMock2).hasAmount();
             doReturn(byteStringMock2).when(outputMock2).getScript();
             byte[] byteArray = new byte[]{};
@@ -1815,7 +1823,6 @@ public class PaymentSessionSapientGeneratedJunit4Test {
         Coin coinMock = mock(Coin.class);
         PaymentProtocol.PkiVerificationData paymentProtocolPkiVerificationDataMock = mock(PaymentProtocol.PkiVerificationData.class);
         Protos.Output outputMock = mock(Protos.Output.class);
-        Protos.PaymentDetails paymentDetailsMock2 = mock(Protos.PaymentDetails.class);
         try (MockedStatic<PaymentProtocol> paymentProtocol = mockStatic(PaymentProtocol.class);
              MockedStatic<Coin> coin = mockStatic(Coin.class);
              MockedStatic<Protos.PaymentDetails> protosPaymentDetails = mockStatic(Protos.PaymentDetails.class)) {
@@ -1836,8 +1843,10 @@ public class PaymentSessionSapientGeneratedJunit4Test {
             List<Protos.Output> protosOutputList = new ArrayList<>();
             protosOutputList.add(outputMock);
             doReturn(protosOutputList).when(protosPaymentDetailsMock).getOutputsList();
-            doReturn(true).when(paymentDetailsMock2).hasMemo();
-            doReturn("return_of_getMemo1").when(paymentDetailsMock2).getMemo();
+            doReturn(true).when(outputMock).hasAmount();
+            doReturn(0L).when(outputMock).getAmount();
+            doReturn(true).when(protosPaymentDetailsMock).hasMemo();
+            doReturn("return_of_getMemo1").when(protosPaymentDetailsMock).getMemo();
             //Act Statement(s)
             String result = target.getMemo();
             //Assert statement(s)
@@ -1854,8 +1863,10 @@ public class PaymentSessionSapientGeneratedJunit4Test {
             verify(protosPaymentDetailsMock).hasNetwork();
             verify(protosPaymentDetailsMock).getOutputsCount();
             verify(protosPaymentDetailsMock).getOutputsList();
-            verify(paymentDetailsMock2).hasMemo();
-            verify(paymentDetailsMock2).getMemo();
+            verify(outputMock).hasAmount();
+            verify(outputMock).getAmount();
+            verify(protosPaymentDetailsMock).hasMemo();
+            verify(protosPaymentDetailsMock).getMemo();
         }
     }
 
@@ -1879,7 +1890,6 @@ public class PaymentSessionSapientGeneratedJunit4Test {
         Coin coinMock = mock(Coin.class);
         PaymentProtocol.PkiVerificationData paymentProtocolPkiVerificationDataMock = mock(PaymentProtocol.PkiVerificationData.class);
         Protos.Output outputMock = mock(Protos.Output.class);
-        Protos.PaymentDetails paymentDetailsMock2 = mock(Protos.PaymentDetails.class);
         try (MockedStatic<PaymentProtocol> paymentProtocol = mockStatic(PaymentProtocol.class);
              MockedStatic<Coin> coin = mockStatic(Coin.class);
              MockedStatic<Protos.PaymentDetails> protosPaymentDetails = mockStatic(Protos.PaymentDetails.class)) {
@@ -1900,7 +1910,9 @@ public class PaymentSessionSapientGeneratedJunit4Test {
             List<Protos.Output> protosOutputList = new ArrayList<>();
             protosOutputList.add(outputMock);
             doReturn(protosOutputList).when(protosPaymentDetailsMock).getOutputsList();
-            doReturn(false).when(paymentDetailsMock2).hasMemo();
+            doReturn(true).when(outputMock).hasAmount();
+            doReturn(0L).when(outputMock).getAmount();
+            doReturn(false).when(protosPaymentDetailsMock).hasMemo();
             //Act Statement(s)
             String result = target.getMemo();
             //Assert statement(s)
@@ -1917,7 +1929,9 @@ public class PaymentSessionSapientGeneratedJunit4Test {
             verify(protosPaymentDetailsMock).hasNetwork();
             verify(protosPaymentDetailsMock).getOutputsCount();
             verify(protosPaymentDetailsMock).getOutputsList();
-            verify(paymentDetailsMock2).hasMemo();
+            verify(outputMock).hasAmount();
+            verify(outputMock).getAmount();
+            verify(protosPaymentDetailsMock).hasMemo();
         }
     }
 
@@ -2023,6 +2037,8 @@ public class PaymentSessionSapientGeneratedJunit4Test {
             List<Protos.Output> protosOutputList = new ArrayList<>();
             protosOutputList.add(outputMock);
             doReturn(protosOutputList).when(protosPaymentDetailsMock).getOutputsList();
+            doReturn(true).when(outputMock).hasAmount();
+            doReturn(0L).when(outputMock).getAmount();
             doReturn(1L).when(protosPaymentDetailsMock).getTime();
             //Act Statement(s)
             Date result = target.getDate();
@@ -2041,6 +2057,8 @@ public class PaymentSessionSapientGeneratedJunit4Test {
             verify(protosPaymentDetailsMock).hasNetwork();
             verify(protosPaymentDetailsMock).getOutputsCount();
             verify(protosPaymentDetailsMock).getOutputsList();
+            verify(outputMock).hasAmount();
+            verify(outputMock).getAmount();
             verify(protosPaymentDetailsMock).getTime();
         }
     }
@@ -2134,7 +2152,6 @@ public class PaymentSessionSapientGeneratedJunit4Test {
         Coin coinMock = mock(Coin.class);
         PaymentProtocol.PkiVerificationData paymentProtocolPkiVerificationDataMock = mock(PaymentProtocol.PkiVerificationData.class);
         Protos.Output outputMock = mock(Protos.Output.class);
-        Protos.PaymentDetails paymentDetailsMock2 = mock(Protos.PaymentDetails.class);
         try (MockedStatic<PaymentProtocol> paymentProtocol = mockStatic(PaymentProtocol.class);
              MockedStatic<Coin> coin = mockStatic(Coin.class);
              MockedStatic<Protos.PaymentDetails> protosPaymentDetails = mockStatic(Protos.PaymentDetails.class)) {
@@ -2155,7 +2172,9 @@ public class PaymentSessionSapientGeneratedJunit4Test {
             List<Protos.Output> protosOutputList = new ArrayList<>();
             protosOutputList.add(outputMock);
             doReturn(protosOutputList).when(protosPaymentDetailsMock).getOutputsList();
-            doReturn(false).when(paymentDetailsMock2).hasExpires();
+            doReturn(true).when(outputMock).hasAmount();
+            doReturn(0L).when(outputMock).getAmount();
+            doReturn(false).when(protosPaymentDetailsMock).hasExpires();
             //Act Statement(s)
             Optional<Instant> result = target.expires();
             Optional<Instant> instantOptional = Optional.empty();
@@ -2173,7 +2192,9 @@ public class PaymentSessionSapientGeneratedJunit4Test {
             verify(protosPaymentDetailsMock).hasNetwork();
             verify(protosPaymentDetailsMock).getOutputsCount();
             verify(protosPaymentDetailsMock).getOutputsList();
-            verify(paymentDetailsMock2).hasExpires();
+            verify(outputMock).hasAmount();
+            verify(outputMock).getAmount();
+            verify(protosPaymentDetailsMock).hasExpires();
         }
     }
 
@@ -2342,6 +2363,8 @@ public class PaymentSessionSapientGeneratedJunit4Test {
             List<Protos.Output> protosOutputList = new ArrayList<>();
             protosOutputList.add(outputMock);
             doReturn(protosOutputList).when(protosPaymentDetailsMock).getOutputsList();
+            doReturn(true).when(outputMock).hasAmount();
+            doReturn(0L).when(outputMock).getAmount();
             Instant instant = Instant.now();
             doReturn(Optional.of(instant)).when(target).expires();
             //Act Statement(s)
@@ -2360,6 +2383,8 @@ public class PaymentSessionSapientGeneratedJunit4Test {
             verify(protosPaymentDetailsMock).hasNetwork();
             verify(protosPaymentDetailsMock).getOutputsCount();
             verify(protosPaymentDetailsMock).getOutputsList();
+            verify(outputMock).hasAmount();
+            verify(outputMock).getAmount();
             verify(target).expires();
         }
     }
@@ -2384,7 +2409,6 @@ public class PaymentSessionSapientGeneratedJunit4Test {
         Coin coinMock = mock(Coin.class);
         PaymentProtocol.PkiVerificationData paymentProtocolPkiVerificationDataMock = mock(PaymentProtocol.PkiVerificationData.class);
         Protos.Output outputMock = mock(Protos.Output.class);
-        Protos.PaymentDetails paymentDetailsMock2 = mock(Protos.PaymentDetails.class);
         try (MockedStatic<PaymentProtocol> paymentProtocol = mockStatic(PaymentProtocol.class);
              MockedStatic<Coin> coin = mockStatic(Coin.class);
              MockedStatic<Protos.PaymentDetails> protosPaymentDetails = mockStatic(Protos.PaymentDetails.class)) {
@@ -2405,8 +2429,10 @@ public class PaymentSessionSapientGeneratedJunit4Test {
             List<Protos.Output> protosOutputList = new ArrayList<>();
             protosOutputList.add(outputMock);
             doReturn(protosOutputList).when(protosPaymentDetailsMock).getOutputsList();
-            doReturn(true).when(paymentDetailsMock2).hasPaymentUrl();
-            doReturn("return_of_getPaymentUrl1").when(paymentDetailsMock2).getPaymentUrl();
+            doReturn(true).when(outputMock).hasAmount();
+            doReturn(0L).when(outputMock).getAmount();
+            doReturn(true).when(protosPaymentDetailsMock).hasPaymentUrl();
+            doReturn("return_of_getPaymentUrl1").when(protosPaymentDetailsMock).getPaymentUrl();
             //Act Statement(s)
             String result = target.getPaymentUrl();
             //Assert statement(s)
@@ -2423,8 +2449,10 @@ public class PaymentSessionSapientGeneratedJunit4Test {
             verify(protosPaymentDetailsMock).hasNetwork();
             verify(protosPaymentDetailsMock).getOutputsCount();
             verify(protosPaymentDetailsMock).getOutputsList();
-            verify(paymentDetailsMock2).hasPaymentUrl();
-            verify(paymentDetailsMock2).getPaymentUrl();
+            verify(outputMock).hasAmount();
+            verify(outputMock).getAmount();
+            verify(protosPaymentDetailsMock).hasPaymentUrl();
+            verify(protosPaymentDetailsMock).getPaymentUrl();
         }
     }
 
@@ -2448,7 +2476,6 @@ public class PaymentSessionSapientGeneratedJunit4Test {
         Coin coinMock = mock(Coin.class);
         PaymentProtocol.PkiVerificationData paymentProtocolPkiVerificationDataMock = mock(PaymentProtocol.PkiVerificationData.class);
         Protos.Output outputMock = mock(Protos.Output.class);
-        Protos.PaymentDetails paymentDetailsMock2 = mock(Protos.PaymentDetails.class);
         try (MockedStatic<PaymentProtocol> paymentProtocol = mockStatic(PaymentProtocol.class);
              MockedStatic<Coin> coin = mockStatic(Coin.class);
              MockedStatic<Protos.PaymentDetails> protosPaymentDetails = mockStatic(Protos.PaymentDetails.class)) {
@@ -2469,7 +2496,9 @@ public class PaymentSessionSapientGeneratedJunit4Test {
             List<Protos.Output> protosOutputList = new ArrayList<>();
             protosOutputList.add(outputMock);
             doReturn(protosOutputList).when(protosPaymentDetailsMock).getOutputsList();
-            doReturn(false).when(paymentDetailsMock2).hasPaymentUrl();
+            doReturn(true).when(outputMock).hasAmount();
+            doReturn(0L).when(outputMock).getAmount();
+            doReturn(false).when(protosPaymentDetailsMock).hasPaymentUrl();
             //Act Statement(s)
             String result = target.getPaymentUrl();
             //Assert statement(s)
@@ -2486,7 +2515,9 @@ public class PaymentSessionSapientGeneratedJunit4Test {
             verify(protosPaymentDetailsMock).hasNetwork();
             verify(protosPaymentDetailsMock).getOutputsCount();
             verify(protosPaymentDetailsMock).getOutputsList();
-            verify(paymentDetailsMock2).hasPaymentUrl();
+            verify(outputMock).hasAmount();
+            verify(outputMock).getAmount();
+            verify(protosPaymentDetailsMock).hasPaymentUrl();
         }
     }
 
@@ -2510,7 +2541,6 @@ public class PaymentSessionSapientGeneratedJunit4Test {
         Coin coinMock = mock(Coin.class);
         PaymentProtocol.PkiVerificationData paymentProtocolPkiVerificationDataMock = mock(PaymentProtocol.PkiVerificationData.class);
         Protos.Output outputMock = mock(Protos.Output.class);
-        Protos.PaymentDetails paymentDetailsMock2 = mock(Protos.PaymentDetails.class);
         ByteString byteStringMock2 = mock(ByteString.class);
         try (MockedStatic<PaymentProtocol> paymentProtocol = mockStatic(PaymentProtocol.class);
              MockedStatic<Coin> coin = mockStatic(Coin.class);
@@ -2532,8 +2562,10 @@ public class PaymentSessionSapientGeneratedJunit4Test {
             List<Protos.Output> protosOutputList = new ArrayList<>();
             protosOutputList.add(outputMock);
             doReturn(protosOutputList).when(protosPaymentDetailsMock).getOutputsList();
-            doReturn(true).when(paymentDetailsMock2).hasMerchantData();
-            doReturn(byteStringMock2).when(paymentDetailsMock2).getMerchantData();
+            doReturn(true).when(outputMock).hasAmount();
+            doReturn(0L).when(outputMock).getAmount();
+            doReturn(true).when(protosPaymentDetailsMock).hasMerchantData();
+            doReturn(byteStringMock2).when(protosPaymentDetailsMock).getMerchantData();
             byte[] byteArray = new byte[]{};
             doReturn(byteArray).when(byteStringMock2).toByteArray();
             //Act Statement(s)
@@ -2552,8 +2584,10 @@ public class PaymentSessionSapientGeneratedJunit4Test {
             verify(protosPaymentDetailsMock).hasNetwork();
             verify(protosPaymentDetailsMock).getOutputsCount();
             verify(protosPaymentDetailsMock).getOutputsList();
-            verify(paymentDetailsMock2).hasMerchantData();
-            verify(paymentDetailsMock2).getMerchantData();
+            verify(outputMock).hasAmount();
+            verify(outputMock).getAmount();
+            verify(protosPaymentDetailsMock).hasMerchantData();
+            verify(protosPaymentDetailsMock).getMerchantData();
             verify(byteStringMock2).toByteArray();
         }
     }
@@ -2578,7 +2612,6 @@ public class PaymentSessionSapientGeneratedJunit4Test {
         Coin coinMock = mock(Coin.class);
         PaymentProtocol.PkiVerificationData paymentProtocolPkiVerificationDataMock = mock(PaymentProtocol.PkiVerificationData.class);
         Protos.Output outputMock = mock(Protos.Output.class);
-        Protos.PaymentDetails paymentDetailsMock2 = mock(Protos.PaymentDetails.class);
         try (MockedStatic<PaymentProtocol> paymentProtocol = mockStatic(PaymentProtocol.class);
              MockedStatic<Coin> coin = mockStatic(Coin.class);
              MockedStatic<Protos.PaymentDetails> protosPaymentDetails = mockStatic(Protos.PaymentDetails.class)) {
@@ -2599,7 +2632,9 @@ public class PaymentSessionSapientGeneratedJunit4Test {
             List<Protos.Output> protosOutputList = new ArrayList<>();
             protosOutputList.add(outputMock);
             doReturn(protosOutputList).when(protosPaymentDetailsMock).getOutputsList();
-            doReturn(false).when(paymentDetailsMock2).hasMerchantData();
+            doReturn(true).when(outputMock).hasAmount();
+            doReturn(0L).when(outputMock).getAmount();
+            doReturn(false).when(protosPaymentDetailsMock).hasMerchantData();
             //Act Statement(s)
             byte[] result = target.getMerchantData();
             //Assert statement(s)
@@ -2616,7 +2651,9 @@ public class PaymentSessionSapientGeneratedJunit4Test {
             verify(protosPaymentDetailsMock).hasNetwork();
             verify(protosPaymentDetailsMock).getOutputsCount();
             verify(protosPaymentDetailsMock).getOutputsList();
-            verify(paymentDetailsMock2).hasMerchantData();
+            verify(outputMock).hasAmount();
+            verify(outputMock).getAmount();
+            verify(protosPaymentDetailsMock).hasMerchantData();
         }
     }
 
@@ -2643,9 +2680,9 @@ public class PaymentSessionSapientGeneratedJunit4Test {
         Protos.PaymentDetails protosPaymentDetailsMock = mock(Protos.PaymentDetails.class);
         Coin coinMock = mock(Coin.class);
         PaymentProtocol.PkiVerificationData paymentProtocolPkiVerificationDataMock = mock(PaymentProtocol.PkiVerificationData.class);
+        Coin coinMock2 = mock(Coin.class);
         SendRequest sendRequestMock = mock(SendRequest.class);
         SendRequest sendRequestMock2 = mock(SendRequest.class);
-        Protos.PaymentDetails protosPaymentDetailsMock2 = mock(Protos.PaymentDetails.class);
         Protos.Output outputMock = mock(Protos.Output.class);
         Protos.Output outputMock2 = mock(Protos.Output.class);
         ByteString byteStringMock2 = mock(ByteString.class);
@@ -2661,17 +2698,22 @@ public class PaymentSessionSapientGeneratedJunit4Test {
             protosPaymentDetails.when(() -> Protos.PaymentDetails.newBuilder()).thenReturn(protosPaymentDetailsBuilderMock);
             doReturn(protosPaymentDetailsBuilderMock2).when(protosPaymentDetailsBuilderMock).mergeFrom(byteStringMock);
             doReturn(protosPaymentDetailsMock).when(protosPaymentDetailsBuilderMock2).build();
-            coin.when(() -> Coin.valueOf(0L)).thenReturn(coinMock);
             paymentProtocol.when(() -> PaymentProtocol.verifyPaymentRequestPki(requestMock, (KeyStore) null)).thenReturn(paymentProtocolPkiVerificationDataMock);
+            coin.when(() -> Coin.valueOf(0L)).thenReturn(coinMock).thenReturn(coinMock2);
             sendRequest.when(() -> SendRequest.forTx((Transaction) any())).thenReturn(sendRequestMock);
-            doReturn(sendRequestMock2).when(sendRequestMock).fromPaymentDetails(protosPaymentDetailsMock2);
+            doReturn(sendRequestMock2).when(sendRequestMock).fromPaymentDetails(protosPaymentDetailsMock);
             target = new PaymentSession(requestMock, true, nonNullTrustStoreLoaderMock);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doReturn(false).when(protosPaymentDetailsMock).hasNetwork();
             doReturn(1).when(protosPaymentDetailsMock).getOutputsCount();
             List<Protos.Output> protosOutputList = new ArrayList<>();
             protosOutputList.add(outputMock);
-            doReturn(protosOutputList).when(protosPaymentDetailsMock).getOutputsList();
+            doReturn(true).when(outputMock).hasAmount();
+            doReturn(0L).when(outputMock).getAmount();
+            List<Protos.Output> protosOutputList2 = new ArrayList<>();
+            protosOutputList2.add(outputMock2);
+            doReturn(protosOutputList, protosOutputList2).when(protosPaymentDetailsMock).getOutputsList();
+            doReturn(0L).when(outputMock2).getAmount();
             doReturn(byteStringMock2).when(outputMock2).getScript();
             byte[] byteArray = new byte[]{};
             doReturn(byteArray).when(byteStringMock2).toByteArray();
@@ -2686,13 +2728,16 @@ public class PaymentSessionSapientGeneratedJunit4Test {
             protosPaymentDetails.verify(() -> Protos.PaymentDetails.newBuilder(), atLeast(1));
             verify(protosPaymentDetailsBuilderMock).mergeFrom(byteStringMock);
             verify(protosPaymentDetailsBuilderMock2).build();
-            coin.verify(() -> Coin.valueOf(0L), atLeast(1));
+            coin.verify(() -> Coin.valueOf(0L), atLeast(2));
             paymentProtocol.verify(() -> PaymentProtocol.verifyPaymentRequestPki(requestMock, (KeyStore) null), atLeast(1));
             sendRequest.verify(() -> SendRequest.forTx((Transaction) any()));
-            verify(sendRequestMock).fromPaymentDetails(protosPaymentDetailsMock2);
+            verify(sendRequestMock).fromPaymentDetails(protosPaymentDetailsMock);
             verify(protosPaymentDetailsMock).hasNetwork();
             verify(protosPaymentDetailsMock).getOutputsCount();
             verify(protosPaymentDetailsMock, times(2)).getOutputsList();
+            verify(outputMock).hasAmount();
+            verify(outputMock).getAmount();
+            verify(outputMock2).getAmount();
             verify(outputMock2).getScript();
             verify(byteStringMock2).toByteArray();
         }
@@ -3341,6 +3386,8 @@ public class PaymentSessionSapientGeneratedJunit4Test {
             List<Protos.Output> protosOutputList = new ArrayList<>();
             protosOutputList.add(outputMock);
             doReturn(protosOutputList).when(protosPaymentDetailsMock).getOutputsList();
+            doReturn(true).when(outputMock).hasAmount();
+            doReturn(0L).when(outputMock).getAmount();
             //Act Statement(s)
             PaymentProtocol.PkiVerificationData result = target.verifyPki();
             //Assert statement(s)
@@ -3357,6 +3404,8 @@ public class PaymentSessionSapientGeneratedJunit4Test {
             verify(protosPaymentDetailsMock).hasNetwork();
             verify(protosPaymentDetailsMock).getOutputsCount();
             verify(protosPaymentDetailsMock).getOutputsList();
+            verify(outputMock).hasAmount();
+            verify(outputMock).getAmount();
         }
     }
 }

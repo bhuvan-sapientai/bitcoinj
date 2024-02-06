@@ -64,7 +64,7 @@ public class TransactionInputSapientGeneratedJunit4Test {
     @Rule()
     public Timeout timeoutRule = Timeout.seconds(5);
 
-    private final TransactionOutPoint outpointMock = mock(TransactionOutPoint.class, "0");
+    private final TransactionOutPoint outpointMock = mock(TransactionOutPoint.class, "<init>_transactionOutPoint1");
 
     private final Coin coinMock = mock(Coin.class);
 
@@ -88,25 +88,6 @@ public class TransactionInputSapientGeneratedJunit4Test {
     public ExpectedException thrown = ExpectedException.none();
 
     private final Coin valueMock = mock(Coin.class);
-
-    //Sapient generated method id: ${a7ac346b-7b91-3b2a-82b8-24708ff3863e}
-    @Test()
-    public void coinbaseInputWhenScriptBytesLengthLessThan2ThrowsIllegalArgumentException() {
-        /* Branches:
-         * (scriptBytes.length >= 2) : false
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
-            thrown.expect(IllegalArgumentException.class);
-            byte[] byteArray = new byte[]{};
-            //Act Statement(s)
-            TransactionInput.coinbaseInput(transactionMock, byteArray);
-            //Assert statement(s)
-            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-        }
-    }
 
     //Sapient generated method id: ${086d8d32-3798-3ce3-87ef-2066773d7acb}
     @Ignore()
@@ -135,13 +116,16 @@ public class TransactionInputSapientGeneratedJunit4Test {
         /* Branches:
          * (scriptBytes.length >= 2) : true
          * (scriptBytes.length <= 100) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
             preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
             thrown.expect(IllegalArgumentException.class);
-            byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31, (byte) 32, (byte) 33, (byte) 34, (byte) 35, (byte) 36, (byte) 37, (byte) 38, (byte) 39, (byte) 40, (byte) 41, (byte) 42, (byte) 43, (byte) 44, (byte) 45, (byte) 46, (byte) 47, (byte) 48, (byte) 49, (byte) 50, (byte) 51, (byte) 52, (byte) 53, (byte) 54, (byte) 55, (byte) 56, (byte) 57, (byte) 58, (byte) 59, (byte) 60, (byte) 61, (byte) 62, (byte) 63, (byte) 64, (byte) 65, (byte) 66, (byte) 67, (byte) 68, (byte) 69, (byte) 70, (byte) 71, (byte) 72, (byte) 73, (byte) 74, (byte) 75, (byte) 76, (byte) 77, (byte) 78, (byte) 79, (byte) 80, (byte) 81, (byte) 82, (byte) 83, (byte) 84, (byte) 85, (byte) 86, (byte) 87, (byte) 88, (byte) 89, (byte) 90, (byte) 91, (byte) 92, (byte) 93, (byte) 94, (byte) 95, (byte) 96, (byte) 97, (byte) 98, (byte) 99, (byte) 100};
+            byte[] byteArray = new byte[]{};
             //Act Statement(s)
             TransactionInput.coinbaseInput(transactionMock, byteArray);
             //Assert statement(s)
@@ -320,29 +304,6 @@ public class TransactionInputSapientGeneratedJunit4Test {
         }
     }
 
-    //Sapient generated method id: ${0bc2c475-19cd-36f7-bc60-e3d2f7139143}
-    @Test()
-    public void isCoinBaseWhenOutpointHashNotEqualsSha256HashZERO_HASH() {
-        /* Branches:
-         * (outpoint.hash().equals(Sha256Hash.ZERO_HASH)) : false
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            doReturn(1).when(valueMock).signum();
-            preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            byte[] byteArray = new byte[]{};
-            TransactionInput target = new TransactionInput(transactionMock, byteArray, outpointMock, valueMock);
-            doReturn(sha256HashMock).when(outpointMock).hash();
-            //Act Statement(s)
-            boolean result = target.isCoinBase();
-            //Assert statement(s)
-            assertThat(result, equalTo(Boolean.FALSE));
-            verify(valueMock).signum();
-            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
-            verify(outpointMock).hash();
-        }
-    }
-
     //Sapient generated method id: ${be0fa096-1684-3633-8eb3-6476d95e5285}
     @Ignore()
     @Test()
@@ -449,30 +410,6 @@ public class TransactionInputSapientGeneratedJunit4Test {
             verify(scriptSigMock).program();
             verify(valueMock).signum();
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
-        }
-    }
-
-    //Sapient generated method id: ${8c5ada03-cdc6-3d5f-920f-a0b81807366c}
-    @Test()
-    public void setSequenceNumberWhenSequenceLessThan0ThrowsIllegalArgumentException() {
-        /* Branches:
-         * (sequence >= 0) : false
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            doReturn(1).when(valueMock).signum();
-            preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
-            byte[] byteArray = new byte[]{};
-            TransactionInput target = new TransactionInput(transactionMock, byteArray, outpointMock, valueMock);
-            thrown.expect(IllegalArgumentException.class);
-            //Act Statement(s)
-            target.setSequenceNumber(-1L);
-            //Assert statement(s)
-            verify(valueMock).signum();
-            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
-            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
         }
     }
 
@@ -856,21 +793,23 @@ public class TransactionInputSapientGeneratedJunit4Test {
     @Ignore()
     @Test()
     public void verifyThrowsNullPointerException() throws VerificationException {
+        /**
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
         //Arrange Statement(s)
-        Coin valueMock = mock(Coin.class, "1000");
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             doReturn(1).when(valueMock).signum();
             preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            Transaction transaction = new Transaction();
-            byte[] byteArray = new byte[]{(byte) 0};
-            TransactionInput target = spy(new TransactionInput(transaction, byteArray, outpointMock, valueMock));
-            doNothing().when(target).verify(transactionOutputMock);
+            byte[] byteArray = new byte[]{};
+            TransactionOutPoint transactionOutPoint = new TransactionOutPoint(0L, sha256HashMock);
+            TransactionInput target = new TransactionInput(transactionMock, byteArray, transactionOutPoint, valueMock);
+            thrown.expect(NullPointerException.class);
             //Act Statement(s)
             target.verify();
             //Assert statement(s)
             verify(valueMock).signum();
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
-            verify(target).verify(transactionOutputMock);
         }
     }
 
@@ -1105,42 +1044,6 @@ public class TransactionInputSapientGeneratedJunit4Test {
             String result = target.toString();
             //Assert statement(s)
             assertThat(result, equalTo("TxIn for [<init>_transactionOutPoint1]: toString_script1 (witness, sequence: ffffffff, opts into full RBF)"));
-            verify(valueMock).signum();
-            preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
-            verify(target).isCoinBase();
-            verify(target).getScriptSig();
-            verify(target).hasWitness();
-            verify(target).hasSequence();
-            verify(target).isOptInFullRBF();
-        }
-    }
-
-    //Sapient generated method id: ${98c95888-0693-3887-af9c-1407e21f5636}
-    @Ignore()
-    @Test()
-    public void toStringWhenIsOptInFullRBFNotAndFlagsNotIsEmpty() throws ScriptException {
-        /* Branches:
-         * (isCoinBase()) : false
-         * (hasWitness()) : true
-         * (hasSequence()) : true
-         * (isOptInFullRBF()) : false
-         * (!flags.isEmpty()) : true
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
-            doReturn(1).when(valueMock).signum();
-            preconditions.when(() -> Preconditions.checkArgument(eq(true), (Supplier) any())).thenAnswer((Answer<Void>) invocation -> null);
-            byte[] byteArray = new byte[]{};
-            TransactionInput target = spy(new TransactionInput(transactionMock, byteArray, outpointMock, valueMock));
-            doReturn(false).when(target).isCoinBase();
-            doReturn(scriptMock).when(target).getScriptSig();
-            doReturn(true).when(target).hasWitness();
-            doReturn(true).when(target).hasSequence();
-            doReturn(false).when(target).isOptInFullRBF();
-            //Act Statement(s)
-            String result = target.toString();
-            //Assert statement(s)
-            assertThat(result, equalTo("TxIn for [<init>_transactionOutPoint1]: toString_script1 (witness, sequence: ffffffff)"));
             verify(valueMock).signum();
             preconditions.verify(() -> Preconditions.checkArgument(eq(true), (Supplier) any()));
             verify(target).isCoinBase();

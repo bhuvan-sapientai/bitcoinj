@@ -82,10 +82,13 @@ public class InternalUtilsSapientGeneratedJunit4Test {
     //Sapient generated method id: ${a67de9d2-5d40-3245-aa13-b71d01084a76}
     @Ignore(value = "Potential harmful system call (Future.get, Thread.interrupt) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
-    public void getUninterruptiblyWhenInterruptedThrowsThrowable() throws ExecutionException, InterruptedException {
+    public void getUninterruptiblyWhenInterruptedThrowsThrowable() throws ExecutionException {
         /* Branches:
          * (catch-exception (InterruptedException)) : true
          * (interrupted) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         thrown.expect(Throwable.class);

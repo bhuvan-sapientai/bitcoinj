@@ -20,7 +20,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "53FE79101114A95090FA59890EF1C0A5"
-    problemWasSolvedByProver: false
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
@@ -228,7 +228,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "C2148401E48A3313C3C380CDC4BD220D"
-      index: 5
+      index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -335,13 +335,11 @@ methods:
       filledByUser: false
     uuid: "cc444f77-140b-3840-9219-40eba5f4e575"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
-    failureReason:
-      reason: "UNKNOWN_REASON"
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "ofMnemonic"
     returnType: "org.bitcoinj.wallet.DeterministicSeed"
@@ -359,7 +357,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "DCD5AB13A8173D92C3D6A996D18A97FC"
-    problemWasSolvedByProver: false
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
@@ -543,7 +541,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "A6E64DD65958401AC23954145D2D48DF"
-      index: 4
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -636,13 +634,11 @@ methods:
       filledByUser: false
     uuid: "ad639f9a-f0b3-3496-9f21-818d7b7016b0"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
-    failureReason:
-      reason: "UNKNOWN_REASON"
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "ofMnemonic"
     returnType: "org.bitcoinj.wallet.DeterministicSeed"
@@ -675,6 +671,9 @@ methods:
       value:
         sapientType: "COLLECTION"
         content: !<collection>
+          parameters: []
+          values: []
+        suggestedContent: !<collection>
           parameters: []
           values: []
         valueType: "java.util.List"
@@ -788,7 +787,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "699459DDF75DE6A53E9ACBD5CDD0EAB1"
-      index: 4
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -934,6 +933,9 @@ methods:
         content: !<collection>
           parameters: []
           values: []
+        suggestedContent: !<collection>
+          parameters: []
+          values: []
         valueType: "java.util.List"
         genericValueType: "java.lang.String"
         uuid: "ofMnemonic_list1"
@@ -1021,7 +1023,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "5F204903BF59098757E6F242B9276286"
-      index: 3
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -1139,7 +1141,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "55A364C95403FB9B3BDAA69462CFCEBA"
-    problemWasSolvedByProver: false
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
@@ -1574,13 +1576,11 @@ methods:
       filledByUser: false
     uuid: "a932416f-dcd5-33ef-a6ea-e346efe16df5"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
-    failureReason:
-      reason: "UNKNOWN_REASON"
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "ofEntropyWhenDefaultBranch2ThrowsIllegalArgumentException"
@@ -1758,7 +1758,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "FB9CC238560F249D540BB3E1A9A1BD4D"
-    problemWasSolvedByProver: false
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
@@ -2169,13 +2169,11 @@ methods:
       filledByUser: false
     uuid: "6a7f6c82-f232-3db3-86f4-2419ac7b25c6"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
-    failureReason:
-      reason: "UNKNOWN_REASON"
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "ofEntropy1WhenDefaultBranch2ThrowsIllegalArgumentException"
@@ -3175,12 +3173,12 @@ methods:
       filledByUser: false
     uuid: "6feb8104-e1fb-3c31-8751-eb2a06a07f7a"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "OBJECT_REQUIRE_NON_NULL_PARAMETER_FAILURE"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "toString"
     returnType: "java.lang.String"
@@ -4781,12 +4779,12 @@ methods:
       filledByUser: false
     uuid: "f3d9549d-5c4c-3a8a-b78c-ec40ba218fa1"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "OBJECT_REQUIRE_NON_NULL_PARAMETER_FAILURE"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "getSecretBytes"
     returnType: "byte[]"
@@ -5022,6 +5020,8 @@ methods:
       value:
         sapientType: "ARRAY"
         content: !<array>
+          values: {}
+        suggestedContent: !<array>
           values: {}
         valueType: "byte[]"
         uuid: "getMnemonicAsBytes_byte[]1"
@@ -6772,12 +6772,12 @@ methods:
       filledByUser: false
     uuid: "6efdfffb-ab76-3832-8528-819e02d958d6"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "encrypt"
     returnType: "org.bitcoinj.wallet.DeterministicSeed"
@@ -8158,6 +8158,8 @@ methods:
           sapientType: "ARRAY"
           content: !<array>
             values: {}
+          suggestedContent: !<array>
+            values: {}
           valueType: "byte[]"
           uuid: "getEntropyBytes_byte[]1"
           fixed: false
@@ -8176,6 +8178,8 @@ methods:
       value:
         sapientType: "ARRAY"
         content: !<array>
+          values: {}
+        suggestedContent: !<array>
           values: {}
         valueType: "byte[]"
         uuid: "getEntropyBytes_byte[]1"

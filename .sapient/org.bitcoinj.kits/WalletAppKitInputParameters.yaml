@@ -3244,7 +3244,7 @@ methods:
       filledByUser: false
     uuid: "f0959fc6-83d8-3415-ae1f-bcc8352678f6"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     variablesCouldNotBeIsolated: "kit"
     failureReason:
@@ -3252,7 +3252,7 @@ methods:
       source: "kit.connectToLocalHost();"
       lineNumber: 214
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "launch3WhenMaxConnectionsNotGreaterThan0"
@@ -3676,12 +3676,12 @@ methods:
       filledByUser: false
     uuid: "dbf7e57d-25b2-3b5c-a0aa-2edbecc71a75"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "setPeerNodesWhenStateNotEqualsStateNEWThrowsIllegalStateException"
@@ -3691,12 +3691,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "968AA2D8FF4DBC481021A7BB876C0AB3"
+    modelFingerprint: "3D0E4CA6327F541B90570452201F9E4F"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "E99B48EAEC767EC9DDD3CF7F69EDB2EE"
+      modelFingerprint: "B82A764B6E028EB19743C8C941C3EC37"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -3716,7 +3716,6 @@ methods:
               valueType: "org.bitcoinj.core.NetworkParameters"
               uuid: "<init>_networkParameters1"
               fixed: false
-              nameForMock: "1000000"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "preferredOutputScriptType"
@@ -3732,14 +3731,9 @@ methods:
           - name: "structure"
             value:
               sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.wallet.KeyChainGroupStructure"
-                onlyPojoFunctions: false
-                builderPattern: false
               valueType: "org.bitcoinj.wallet.KeyChainGroupStructure"
               uuid: "<init>_keyChainGroupStructure1"
               fixed: false
-              nameForMock: "DEFAULT"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "directory"
@@ -3782,9 +3776,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "wallet"
-              suggestedContent: !<regular>
-                value: "wallet"
+                value: "filePrefix1"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -3797,7 +3789,7 @@ methods:
           parameters:
           - name: "params"
             value:
-              sapientType: "MOCK"
+              sapientType: "UNKNOWN"
               suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.core.NetworkParameters"
                 onlyPojoFunctions: false
@@ -3805,7 +3797,6 @@ methods:
               valueType: "org.bitcoinj.core.NetworkParameters"
               uuid: "<init>_networkParameters1"
               fixed: false
-              nameForMock: "1000000"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "preferredOutputScriptType"
@@ -3818,35 +3809,15 @@ methods:
               explicitCastNeeded: false
           - name: "structure"
             value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.wallet.KeyChainGroupStructure"
-                onlyPojoFunctions: false
-                builderPattern: false
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.wallet.KeyChainGroupStructure"
               uuid: "<init>_keyChainGroupStructure1"
               fixed: false
-              nameForMock: "DEFAULT"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "directory"
             value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "java.io.File"
-                parameters:
-                - name: "pathname"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "pathname1"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_file1-pathname"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
+              sapientType: "UNKNOWN"
               suggestedContent: !<new>
                 target: "java.io.File"
                 parameters:
@@ -3868,10 +3839,6 @@ methods:
           - name: "filePrefix"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "wallet"
-              suggestedContent: !<regular>
-                value: "wallet"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -3888,7 +3855,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "addresses"
-      modelFingerprint: "57233F286DE1B2A977C5194BA4785A66"
+      modelFingerprint: "4E1C37BC829FC67D39E8474A5A991695"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -3896,1069 +3863,9 @@ methods:
       value:
         sapientType: "ARRAY"
         content: !<array>
-          values:
-            0:
-              sapientType: "ARRAY"
-              content: !<array>
-                values:
-                  0:
-                    sapientType: "ARRAY"
-                    content: !<array>
-                      values:
-                        0:
-                          sapientType: "OBJECT"
-                          content: !<static_method_return>
-                            target: "org.bitcoinj.core.PeerAddress"
-                            method: "simple"
-                            methodParameters:
-                            - name: "addr"
-                              value:
-                                sapientType: "OBJECT"
-                                content: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                suggestedContent: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                valueType: "java.net.InetAddress"
-                                uuid: "null-addr"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                            - name: "port"
-                              value:
-                                sapientType: "BASIC"
-                                content: !<regular>
-                                  value: 0
-                                valueType: "int"
-                                uuid: "null-port"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                          suggestedContent: !<static_method_return>
-                            target: "org.bitcoinj.core.PeerAddress"
-                            method: "simple"
-                            methodParameters:
-                            - name: "addr"
-                              value:
-                                sapientType: "UNKNOWN"
-                                suggestedContent: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                valueType: "java.net.InetAddress"
-                                uuid: "null-addr"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                            - name: "port"
-                              value:
-                                sapientType: "BASIC"
-                                valueType: "int"
-                                uuid: "null-port"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                          valueType: "org.bitcoinj.core.PeerAddress"
-                          fixed: false
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    suggestedContent: !<array>
-                      values:
-                        0:
-                          sapientType: "OBJECT"
-                          content: !<static_method_return>
-                            target: "org.bitcoinj.core.PeerAddress"
-                            method: "simple"
-                            methodParameters:
-                            - name: "addr"
-                              value:
-                                sapientType: "OBJECT"
-                                content: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                suggestedContent: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                valueType: "java.net.InetAddress"
-                                uuid: "null-addr"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                            - name: "port"
-                              value:
-                                sapientType: "BASIC"
-                                content: !<regular>
-                                  value: 0
-                                valueType: "int"
-                                uuid: "null-port"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                          suggestedContent: !<static_method_return>
-                            target: "org.bitcoinj.core.PeerAddress"
-                            method: "simple"
-                            methodParameters:
-                            - name: "addr"
-                              value:
-                                sapientType: "UNKNOWN"
-                                suggestedContent: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                valueType: "java.net.InetAddress"
-                                uuid: "null-addr"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                            - name: "port"
-                              value:
-                                sapientType: "BASIC"
-                                valueType: "int"
-                                uuid: "null-port"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                          valueType: "org.bitcoinj.core.PeerAddress"
-                          fixed: false
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    valueType: "org.bitcoinj.core.PeerAddress[][]"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  1:
-                    sapientType: "ARRAY"
-                    content: !<array>
-                      values:
-                        0:
-                          sapientType: "OBJECT"
-                          content: !<static_method_return>
-                            target: "org.bitcoinj.core.PeerAddress"
-                            method: "simple"
-                            methodParameters:
-                            - name: "addr"
-                              value:
-                                sapientType: "OBJECT"
-                                content: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                suggestedContent: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                valueType: "java.net.InetAddress"
-                                uuid: "null-addr"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                            - name: "port"
-                              value:
-                                sapientType: "BASIC"
-                                content: !<regular>
-                                  value: 0
-                                valueType: "int"
-                                uuid: "null-port"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                          suggestedContent: !<static_method_return>
-                            target: "org.bitcoinj.core.PeerAddress"
-                            method: "simple"
-                            methodParameters:
-                            - name: "addr"
-                              value:
-                                sapientType: "UNKNOWN"
-                                suggestedContent: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                valueType: "java.net.InetAddress"
-                                uuid: "null-addr"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                            - name: "port"
-                              value:
-                                sapientType: "BASIC"
-                                valueType: "int"
-                                uuid: "null-port"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                          valueType: "org.bitcoinj.core.PeerAddress"
-                          fixed: false
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    suggestedContent: !<array>
-                      values:
-                        0:
-                          sapientType: "OBJECT"
-                          content: !<static_method_return>
-                            target: "org.bitcoinj.core.PeerAddress"
-                            method: "simple"
-                            methodParameters:
-                            - name: "addr"
-                              value:
-                                sapientType: "OBJECT"
-                                content: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                suggestedContent: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                valueType: "java.net.InetAddress"
-                                uuid: "null-addr"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                            - name: "port"
-                              value:
-                                sapientType: "BASIC"
-                                content: !<regular>
-                                  value: 0
-                                valueType: "int"
-                                uuid: "null-port"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                          suggestedContent: !<static_method_return>
-                            target: "org.bitcoinj.core.PeerAddress"
-                            method: "simple"
-                            methodParameters:
-                            - name: "addr"
-                              value:
-                                sapientType: "UNKNOWN"
-                                suggestedContent: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                valueType: "java.net.InetAddress"
-                                uuid: "null-addr"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                            - name: "port"
-                              value:
-                                sapientType: "BASIC"
-                                valueType: "int"
-                                uuid: "null-port"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                          valueType: "org.bitcoinj.core.PeerAddress"
-                          fixed: false
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    valueType: "org.bitcoinj.core.PeerAddress[][]"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<array>
-                values:
-                  0:
-                    sapientType: "ARRAY"
-                    content: !<array>
-                      values:
-                        0:
-                          sapientType: "OBJECT"
-                          content: !<static_method_return>
-                            target: "org.bitcoinj.core.PeerAddress"
-                            method: "simple"
-                            methodParameters:
-                            - name: "addr"
-                              value:
-                                sapientType: "OBJECT"
-                                content: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                suggestedContent: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                valueType: "java.net.InetAddress"
-                                uuid: "null-addr"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                            - name: "port"
-                              value:
-                                sapientType: "BASIC"
-                                content: !<regular>
-                                  value: 0
-                                valueType: "int"
-                                uuid: "null-port"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                          suggestedContent: !<static_method_return>
-                            target: "org.bitcoinj.core.PeerAddress"
-                            method: "simple"
-                            methodParameters:
-                            - name: "addr"
-                              value:
-                                sapientType: "UNKNOWN"
-                                suggestedContent: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                valueType: "java.net.InetAddress"
-                                uuid: "null-addr"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                            - name: "port"
-                              value:
-                                sapientType: "BASIC"
-                                valueType: "int"
-                                uuid: "null-port"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                          valueType: "org.bitcoinj.core.PeerAddress"
-                          fixed: false
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    suggestedContent: !<array>
-                      values:
-                        0:
-                          sapientType: "OBJECT"
-                          content: !<static_method_return>
-                            target: "org.bitcoinj.core.PeerAddress"
-                            method: "simple"
-                            methodParameters:
-                            - name: "addr"
-                              value:
-                                sapientType: "OBJECT"
-                                content: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                suggestedContent: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                valueType: "java.net.InetAddress"
-                                uuid: "null-addr"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                            - name: "port"
-                              value:
-                                sapientType: "BASIC"
-                                content: !<regular>
-                                  value: 0
-                                valueType: "int"
-                                uuid: "null-port"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                          suggestedContent: !<static_method_return>
-                            target: "org.bitcoinj.core.PeerAddress"
-                            method: "simple"
-                            methodParameters:
-                            - name: "addr"
-                              value:
-                                sapientType: "UNKNOWN"
-                                suggestedContent: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                valueType: "java.net.InetAddress"
-                                uuid: "null-addr"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                            - name: "port"
-                              value:
-                                sapientType: "BASIC"
-                                valueType: "int"
-                                uuid: "null-port"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                          valueType: "org.bitcoinj.core.PeerAddress"
-                          fixed: false
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    valueType: "org.bitcoinj.core.PeerAddress[][]"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  1:
-                    sapientType: "ARRAY"
-                    content: !<array>
-                      values:
-                        0:
-                          sapientType: "OBJECT"
-                          content: !<static_method_return>
-                            target: "org.bitcoinj.core.PeerAddress"
-                            method: "simple"
-                            methodParameters:
-                            - name: "addr"
-                              value:
-                                sapientType: "OBJECT"
-                                content: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                suggestedContent: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                valueType: "java.net.InetAddress"
-                                uuid: "null-addr"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                            - name: "port"
-                              value:
-                                sapientType: "BASIC"
-                                content: !<regular>
-                                  value: 0
-                                valueType: "int"
-                                uuid: "null-port"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                          suggestedContent: !<static_method_return>
-                            target: "org.bitcoinj.core.PeerAddress"
-                            method: "simple"
-                            methodParameters:
-                            - name: "addr"
-                              value:
-                                sapientType: "UNKNOWN"
-                                suggestedContent: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                valueType: "java.net.InetAddress"
-                                uuid: "null-addr"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                            - name: "port"
-                              value:
-                                sapientType: "BASIC"
-                                valueType: "int"
-                                uuid: "null-port"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                          valueType: "org.bitcoinj.core.PeerAddress"
-                          fixed: false
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    suggestedContent: !<array>
-                      values:
-                        0:
-                          sapientType: "OBJECT"
-                          content: !<static_method_return>
-                            target: "org.bitcoinj.core.PeerAddress"
-                            method: "simple"
-                            methodParameters:
-                            - name: "addr"
-                              value:
-                                sapientType: "OBJECT"
-                                content: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                suggestedContent: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                valueType: "java.net.InetAddress"
-                                uuid: "null-addr"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                            - name: "port"
-                              value:
-                                sapientType: "BASIC"
-                                content: !<regular>
-                                  value: 0
-                                valueType: "int"
-                                uuid: "null-port"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                          suggestedContent: !<static_method_return>
-                            target: "org.bitcoinj.core.PeerAddress"
-                            method: "simple"
-                            methodParameters:
-                            - name: "addr"
-                              value:
-                                sapientType: "UNKNOWN"
-                                suggestedContent: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                valueType: "java.net.InetAddress"
-                                uuid: "null-addr"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                            - name: "port"
-                              value:
-                                sapientType: "BASIC"
-                                valueType: "int"
-                                uuid: "null-port"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                          valueType: "org.bitcoinj.core.PeerAddress"
-                          fixed: false
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    valueType: "org.bitcoinj.core.PeerAddress[][]"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              valueType: "org.bitcoinj.core.PeerAddress[]"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          values: {}
         suggestedContent: !<array>
-          values:
-            0:
-              sapientType: "ARRAY"
-              content: !<array>
-                values:
-                  0:
-                    sapientType: "ARRAY"
-                    content: !<array>
-                      values:
-                        0:
-                          sapientType: "OBJECT"
-                          content: !<static_method_return>
-                            target: "org.bitcoinj.core.PeerAddress"
-                            method: "simple"
-                            methodParameters:
-                            - name: "addr"
-                              value:
-                                sapientType: "OBJECT"
-                                content: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                suggestedContent: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                valueType: "java.net.InetAddress"
-                                uuid: "null-addr"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                            - name: "port"
-                              value:
-                                sapientType: "BASIC"
-                                content: !<regular>
-                                  value: 0
-                                valueType: "int"
-                                uuid: "null-port"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                          suggestedContent: !<static_method_return>
-                            target: "org.bitcoinj.core.PeerAddress"
-                            method: "simple"
-                            methodParameters:
-                            - name: "addr"
-                              value:
-                                sapientType: "UNKNOWN"
-                                suggestedContent: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                valueType: "java.net.InetAddress"
-                                uuid: "null-addr"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                            - name: "port"
-                              value:
-                                sapientType: "BASIC"
-                                valueType: "int"
-                                uuid: "null-port"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                          valueType: "org.bitcoinj.core.PeerAddress"
-                          fixed: false
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    suggestedContent: !<array>
-                      values:
-                        0:
-                          sapientType: "OBJECT"
-                          content: !<static_method_return>
-                            target: "org.bitcoinj.core.PeerAddress"
-                            method: "simple"
-                            methodParameters:
-                            - name: "addr"
-                              value:
-                                sapientType: "OBJECT"
-                                content: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                suggestedContent: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                valueType: "java.net.InetAddress"
-                                uuid: "null-addr"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                            - name: "port"
-                              value:
-                                sapientType: "BASIC"
-                                content: !<regular>
-                                  value: 0
-                                valueType: "int"
-                                uuid: "null-port"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                          suggestedContent: !<static_method_return>
-                            target: "org.bitcoinj.core.PeerAddress"
-                            method: "simple"
-                            methodParameters:
-                            - name: "addr"
-                              value:
-                                sapientType: "UNKNOWN"
-                                suggestedContent: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                valueType: "java.net.InetAddress"
-                                uuid: "null-addr"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                            - name: "port"
-                              value:
-                                sapientType: "BASIC"
-                                valueType: "int"
-                                uuid: "null-port"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                          valueType: "org.bitcoinj.core.PeerAddress"
-                          fixed: false
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    valueType: "org.bitcoinj.core.PeerAddress[][]"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  1:
-                    sapientType: "ARRAY"
-                    content: !<array>
-                      values:
-                        0:
-                          sapientType: "OBJECT"
-                          content: !<static_method_return>
-                            target: "org.bitcoinj.core.PeerAddress"
-                            method: "simple"
-                            methodParameters:
-                            - name: "addr"
-                              value:
-                                sapientType: "OBJECT"
-                                content: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                suggestedContent: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                valueType: "java.net.InetAddress"
-                                uuid: "null-addr"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                            - name: "port"
-                              value:
-                                sapientType: "BASIC"
-                                content: !<regular>
-                                  value: 0
-                                valueType: "int"
-                                uuid: "null-port"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                          suggestedContent: !<static_method_return>
-                            target: "org.bitcoinj.core.PeerAddress"
-                            method: "simple"
-                            methodParameters:
-                            - name: "addr"
-                              value:
-                                sapientType: "UNKNOWN"
-                                suggestedContent: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                valueType: "java.net.InetAddress"
-                                uuid: "null-addr"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                            - name: "port"
-                              value:
-                                sapientType: "BASIC"
-                                valueType: "int"
-                                uuid: "null-port"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                          valueType: "org.bitcoinj.core.PeerAddress"
-                          fixed: false
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    suggestedContent: !<array>
-                      values:
-                        0:
-                          sapientType: "OBJECT"
-                          content: !<static_method_return>
-                            target: "org.bitcoinj.core.PeerAddress"
-                            method: "simple"
-                            methodParameters:
-                            - name: "addr"
-                              value:
-                                sapientType: "OBJECT"
-                                content: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                suggestedContent: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                valueType: "java.net.InetAddress"
-                                uuid: "null-addr"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                            - name: "port"
-                              value:
-                                sapientType: "BASIC"
-                                content: !<regular>
-                                  value: 0
-                                valueType: "int"
-                                uuid: "null-port"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                          suggestedContent: !<static_method_return>
-                            target: "org.bitcoinj.core.PeerAddress"
-                            method: "simple"
-                            methodParameters:
-                            - name: "addr"
-                              value:
-                                sapientType: "UNKNOWN"
-                                suggestedContent: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                valueType: "java.net.InetAddress"
-                                uuid: "null-addr"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                            - name: "port"
-                              value:
-                                sapientType: "BASIC"
-                                valueType: "int"
-                                uuid: "null-port"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                          valueType: "org.bitcoinj.core.PeerAddress"
-                          fixed: false
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    valueType: "org.bitcoinj.core.PeerAddress[][]"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<array>
-                values:
-                  0:
-                    sapientType: "ARRAY"
-                    content: !<array>
-                      values:
-                        0:
-                          sapientType: "OBJECT"
-                          content: !<static_method_return>
-                            target: "org.bitcoinj.core.PeerAddress"
-                            method: "simple"
-                            methodParameters:
-                            - name: "addr"
-                              value:
-                                sapientType: "OBJECT"
-                                content: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                suggestedContent: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                valueType: "java.net.InetAddress"
-                                uuid: "null-addr"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                            - name: "port"
-                              value:
-                                sapientType: "BASIC"
-                                content: !<regular>
-                                  value: 0
-                                valueType: "int"
-                                uuid: "null-port"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                          suggestedContent: !<static_method_return>
-                            target: "org.bitcoinj.core.PeerAddress"
-                            method: "simple"
-                            methodParameters:
-                            - name: "addr"
-                              value:
-                                sapientType: "UNKNOWN"
-                                suggestedContent: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                valueType: "java.net.InetAddress"
-                                uuid: "null-addr"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                            - name: "port"
-                              value:
-                                sapientType: "BASIC"
-                                valueType: "int"
-                                uuid: "null-port"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                          valueType: "org.bitcoinj.core.PeerAddress"
-                          fixed: false
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    suggestedContent: !<array>
-                      values:
-                        0:
-                          sapientType: "OBJECT"
-                          content: !<static_method_return>
-                            target: "org.bitcoinj.core.PeerAddress"
-                            method: "simple"
-                            methodParameters:
-                            - name: "addr"
-                              value:
-                                sapientType: "OBJECT"
-                                content: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                suggestedContent: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                valueType: "java.net.InetAddress"
-                                uuid: "null-addr"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                            - name: "port"
-                              value:
-                                sapientType: "BASIC"
-                                content: !<regular>
-                                  value: 0
-                                valueType: "int"
-                                uuid: "null-port"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                          suggestedContent: !<static_method_return>
-                            target: "org.bitcoinj.core.PeerAddress"
-                            method: "simple"
-                            methodParameters:
-                            - name: "addr"
-                              value:
-                                sapientType: "UNKNOWN"
-                                suggestedContent: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                valueType: "java.net.InetAddress"
-                                uuid: "null-addr"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                            - name: "port"
-                              value:
-                                sapientType: "BASIC"
-                                valueType: "int"
-                                uuid: "null-port"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                          valueType: "org.bitcoinj.core.PeerAddress"
-                          fixed: false
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    valueType: "org.bitcoinj.core.PeerAddress[][]"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  1:
-                    sapientType: "ARRAY"
-                    content: !<array>
-                      values:
-                        0:
-                          sapientType: "OBJECT"
-                          content: !<static_method_return>
-                            target: "org.bitcoinj.core.PeerAddress"
-                            method: "simple"
-                            methodParameters:
-                            - name: "addr"
-                              value:
-                                sapientType: "OBJECT"
-                                content: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                suggestedContent: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                valueType: "java.net.InetAddress"
-                                uuid: "null-addr"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                            - name: "port"
-                              value:
-                                sapientType: "BASIC"
-                                content: !<regular>
-                                  value: 0
-                                valueType: "int"
-                                uuid: "null-port"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                          suggestedContent: !<static_method_return>
-                            target: "org.bitcoinj.core.PeerAddress"
-                            method: "simple"
-                            methodParameters:
-                            - name: "addr"
-                              value:
-                                sapientType: "UNKNOWN"
-                                suggestedContent: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                valueType: "java.net.InetAddress"
-                                uuid: "null-addr"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                            - name: "port"
-                              value:
-                                sapientType: "BASIC"
-                                valueType: "int"
-                                uuid: "null-port"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                          valueType: "org.bitcoinj.core.PeerAddress"
-                          fixed: false
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    suggestedContent: !<array>
-                      values:
-                        0:
-                          sapientType: "OBJECT"
-                          content: !<static_method_return>
-                            target: "org.bitcoinj.core.PeerAddress"
-                            method: "simple"
-                            methodParameters:
-                            - name: "addr"
-                              value:
-                                sapientType: "OBJECT"
-                                content: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                suggestedContent: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                valueType: "java.net.InetAddress"
-                                uuid: "null-addr"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                            - name: "port"
-                              value:
-                                sapientType: "BASIC"
-                                content: !<regular>
-                                  value: 0
-                                valueType: "int"
-                                uuid: "null-port"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                          suggestedContent: !<static_method_return>
-                            target: "org.bitcoinj.core.PeerAddress"
-                            method: "simple"
-                            methodParameters:
-                            - name: "addr"
-                              value:
-                                sapientType: "UNKNOWN"
-                                suggestedContent: !<static_method_return>
-                                  target: "java.net.InetAddress"
-                                  method: "getLoopbackAddress"
-                                  methodParameters: []
-                                valueType: "java.net.InetAddress"
-                                uuid: "null-addr"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                            - name: "port"
-                              value:
-                                sapientType: "BASIC"
-                                valueType: "int"
-                                uuid: "null-port"
-                                fixed: false
-                                equalsMethodPresent: false
-                                explicitCastNeeded: false
-                          valueType: "org.bitcoinj.core.PeerAddress"
-                          fixed: false
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    valueType: "org.bitcoinj.core.PeerAddress[][]"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              valueType: "org.bitcoinj.core.PeerAddress[]"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          values: {}
         valueType: "org.bitcoinj.core.PeerAddress[]"
         uuid: "setPeerNodes_peerAddress[]1"
         fixed: false
@@ -4968,7 +3875,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "params"
-      modelFingerprint: "168F15C90B447A7736A2CA72B6BB8C47"
+      modelFingerprint: "4692F2A5E3DFA646D98A7DD9D6E10333"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -4982,7 +3889,6 @@ methods:
         valueType: "org.bitcoinj.core.NetworkParameters"
         uuid: "<init>_networkParameters1"
         fixed: false
-        nameForMock: "1000000"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -5004,13 +3910,13 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "NetworkParameters"
-      modelFingerprint: "14185DB0FB630828724956F4B3623496"
+      modelFingerprint: "E48879B05E4DD49755A864AC6F05596E"
       index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "REAL"
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.core.NetworkParameters"
         uuid: "org.bitcoinj.core.NetworkParameters"
         fixed: false
@@ -5026,39 +3932,13 @@ methods:
             content: !<regular>
               value: "MAINNET"
             valueType: "org.bitcoinj.base.BitcoinNetwork"
-            uuid: "<init>_bitcoinNetwork1"
+            uuid: "<init>_network1"
             fixed: false
             equalsMethodPresent: false
-            explicitCastNeeded: false
+            explicitCastNeeded: true
         signature: "of(BitcoinNetwork): NetworkParameters"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.core.NetworkParameters"
-            method: "of"
-            methodParameters:
-            - value:
-                sapientType: "ENUM"
-                content: !<regular>
-                  value: "MAINNET"
-                valueType: "org.bitcoinj.base.BitcoinNetwork"
-                uuid: "<init>_bitcoinNetwork1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.core.NetworkParameters"
-            method: "of"
-            methodParameters:
-            - value:
-                sapientType: "ENUM"
-                content: !<regular>
-                  value: "MAINNET"
-                valueType: "org.bitcoinj.base.BitcoinNetwork"
-                uuid: "<init>_bitcoinNetwork1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+          sapientType: "MOCK"
           valueType: "org.bitcoinj.core.NetworkParameters"
           uuid: "<init>_networkParameters2"
           fixed: false
@@ -5149,13 +4029,12 @@ methods:
       filledByUser: false
     uuid: "ca932129-6290-34d4-89ae-e65900f0bf1a"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "connectToLocalHost"
     returnType: "org.bitcoinj.kits.WalletAppKit"
@@ -5471,7 +4350,7 @@ methods:
             suggestedContent: !<array>
               values:
                 0:
-                  sapientType: "UNKNOWN"
+                  sapientType: "MOCK"
                   valueType: "org.bitcoinj.core.PeerAddress"
                   uuid: "connectToLocalHost_peerAddress1"
                   fixed: false
@@ -5533,12 +4412,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "E026DB4884104E2A5B994978BF8CB870"
+    modelFingerprint: "B04F5438C1C296366488AC0491D97E72"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "F57FFC11C13F1528ECC782BD69345937"
+      modelFingerprint: "B82A764B6E028EB19743C8C941C3EC37"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -5558,15 +4437,12 @@ methods:
               valueType: "org.bitcoinj.core.NetworkParameters"
               uuid: "<init>_networkParameters1"
               fixed: false
-              nameForMock: "org.bitcoinj.params.MainNetParams"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "preferredOutputScriptType"
             value:
               sapientType: "ENUM"
               content: !<regular>
-                value: "P2PKH"
-              suggestedContent: !<regular>
                 value: "P2PKH"
               valueType: "org.bitcoinj.base.ScriptType"
               uuid: "<init>_scriptType1"
@@ -5576,14 +4452,9 @@ methods:
           - name: "structure"
             value:
               sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.wallet.KeyChainGroupStructure"
-                onlyPojoFunctions: false
-                builderPattern: false
               valueType: "org.bitcoinj.wallet.KeyChainGroupStructure"
               uuid: "<init>_keyChainGroupStructure1"
               fixed: false
-              nameForMock: "DEFAULT"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "directory"
@@ -5626,9 +4497,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "wallet"
-              suggestedContent: !<regular>
-                value: "wallet"
+                value: "filePrefix1"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -5641,7 +4510,7 @@ methods:
           parameters:
           - name: "params"
             value:
-              sapientType: "MOCK"
+              sapientType: "UNKNOWN"
               suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.core.NetworkParameters"
                 onlyPojoFunctions: false
@@ -5649,16 +4518,11 @@ methods:
               valueType: "org.bitcoinj.core.NetworkParameters"
               uuid: "<init>_networkParameters1"
               fixed: false
-              nameForMock: "org.bitcoinj.params.MainNetParams"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "preferredOutputScriptType"
             value:
               sapientType: "ENUM"
-              content: !<regular>
-                value: "P2PKH"
-              suggestedContent: !<regular>
-                value: "P2PKH"
               valueType: "org.bitcoinj.base.ScriptType"
               uuid: "<init>_scriptType1"
               fixed: false
@@ -5666,35 +4530,15 @@ methods:
               explicitCastNeeded: false
           - name: "structure"
             value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.wallet.KeyChainGroupStructure"
-                onlyPojoFunctions: false
-                builderPattern: false
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.wallet.KeyChainGroupStructure"
               uuid: "<init>_keyChainGroupStructure1"
               fixed: false
-              nameForMock: "DEFAULT"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "directory"
             value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "java.io.File"
-                parameters:
-                - name: "pathname"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "pathname1"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_file1-pathname"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
+              sapientType: "UNKNOWN"
               suggestedContent: !<new>
                 target: "java.io.File"
                 parameters:
@@ -5716,10 +4560,6 @@ methods:
           - name: "filePrefix"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "wallet"
-              suggestedContent: !<regular>
-                value: "wallet"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -5736,7 +4576,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "value"
-      modelFingerprint: "43908B86746E377277CE54F8CDA376C3"
+      modelFingerprint: "AB2D42617E5EE3A2B1ACEA110CF49C09"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -5744,9 +4584,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: true
-        suggestedContent: !<regular>
-          value: true
+          value: false
         valueType: "boolean"
         uuid: "setAutoSave_boolean1"
         fixed: false
@@ -5756,7 +4594,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "params"
-      modelFingerprint: "0573DF7D22854C75E31F289A2E77FE19"
+      modelFingerprint: "4692F2A5E3DFA646D98A7DD9D6E10333"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -5770,7 +4608,6 @@ methods:
         valueType: "org.bitcoinj.core.NetworkParameters"
         uuid: "<init>_networkParameters1"
         fixed: false
-        nameForMock: "org.bitcoinj.params.MainNetParams"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -5779,7 +4616,9 @@ methods:
         parameters: []
         signature: "network(): Network"
         returnValue:
-          sapientType: "NULL"
+          sapientType: "ENUM"
+          content: !<regular>
+            value: "MAINNET"
           valueType: "org.bitcoinj.base.BitcoinNetwork"
           uuid: "<init>_network1"
           fixed: false
@@ -5789,9 +4628,48 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "STATIC"
+      name: "NetworkParameters"
+      modelFingerprint: "E48879B05E4DD49755A864AC6F05596E"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.core.NetworkParameters"
+        uuid: "org.bitcoinj.core.NetworkParameters"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.core.NetworkParameters"
+        name: "of"
+        parameters:
+        - name: "network"
+          value:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "MAINNET"
+            valueType: "org.bitcoinj.base.BitcoinNetwork"
+            uuid: "<init>_network1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: true
+        signature: "of(BitcoinNetwork): NetworkParameters"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.core.NetworkParameters"
+          uuid: "<init>_networkParameters2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
       name: "Preconditions"
       modelFingerprint: "54C4D53CCD04B53C1A47AA185AEE8B06"
-      index: 4
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -5846,7 +4724,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "C9C68C9339F812BC8DEC7C1D6145A135"
-      index: 5
+      index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -5870,13 +4748,12 @@ methods:
       filledByUser: false
     uuid: "c091d87f-8785-3269-8907-22306d33428e"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     failureReason:
-      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
-    prover: "LLM"
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "setAutoSaveWhenStateNotEqualsStateNEWThrowsIllegalStateException"
@@ -5886,12 +4763,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "6725A4B3D8A94785EAB88BB8357583A4"
+    modelFingerprint: "65A6092E84709E9E872C3AB92EE68D31"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "4AA7FBCA0470843A908BA0DFC76D2750"
+      modelFingerprint: "B82A764B6E028EB19743C8C941C3EC37"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -5903,33 +4780,11 @@ methods:
           parameters:
           - name: "params"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.core.NetworkParameters"
-                method: "fromID"
-                methodParameters:
-                - name: "id"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "id1"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_networkParameters1-id"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.core.NetworkParameters"
-                method: "fromID"
-                methodParameters:
-                - name: "id"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_networkParameters1-id"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.core.NetworkParameters"
               uuid: "<init>_networkParameters1"
               fixed: false
@@ -5948,14 +4803,9 @@ methods:
           - name: "structure"
             value:
               sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.wallet.KeyChainGroupStructure"
-                onlyPojoFunctions: false
-                builderPattern: false
               valueType: "org.bitcoinj.wallet.KeyChainGroupStructure"
               uuid: "<init>_keyChainGroupStructure1"
               fixed: false
-              nameForMock: "<structure>"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "directory"
@@ -5998,9 +4848,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "<filePrefix>"
-              suggestedContent: !<regular>
-                value: "<filePrefix>"
+                value: "filePrefix1"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -6013,33 +4861,11 @@ methods:
           parameters:
           - name: "params"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.core.NetworkParameters"
-                method: "fromID"
-                methodParameters:
-                - name: "id"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "id1"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_networkParameters1-id"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.core.NetworkParameters"
-                method: "fromID"
-                methodParameters:
-                - name: "id"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_networkParameters1-id"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.core.NetworkParameters"
               uuid: "<init>_networkParameters1"
               fixed: false
@@ -6055,35 +4881,15 @@ methods:
               explicitCastNeeded: false
           - name: "structure"
             value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.wallet.KeyChainGroupStructure"
-                onlyPojoFunctions: false
-                builderPattern: false
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.wallet.KeyChainGroupStructure"
               uuid: "<init>_keyChainGroupStructure1"
               fixed: false
-              nameForMock: "<structure>"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "directory"
             value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "java.io.File"
-                parameters:
-                - name: "pathname"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "pathname1"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_file1-pathname"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
+              sapientType: "UNKNOWN"
               suggestedContent: !<new>
                 target: "java.io.File"
                 parameters:
@@ -6105,10 +4911,6 @@ methods:
           - name: "filePrefix"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "<filePrefix>"
-              suggestedContent: !<regular>
-                value: "<filePrefix>"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -6125,7 +4927,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "value"
-      modelFingerprint: "14B68106768E27162532B7C8D28F287B"
+      modelFingerprint: "AB2D42617E5EE3A2B1ACEA110CF49C09"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -6133,8 +4935,6 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: false
-        suggestedContent: !<regular>
           value: false
         valueType: "boolean"
         uuid: "setAutoSave_boolean1"
@@ -6145,39 +4945,17 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "params"
-      modelFingerprint: "71744C918B03E5EF11E82CE8E2BCAC77"
+      modelFingerprint: "4692F2A5E3DFA646D98A7DD9D6E10333"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.NetworkParameters"
-          method: "fromID"
-          methodParameters:
-          - name: "id"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "id1"
-              valueType: "java.lang.String"
-              uuid: "<init>_networkParameters1-id"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.core.NetworkParameters"
-          method: "fromID"
-          methodParameters:
-          - name: "id"
-            value:
-              sapientType: "BASIC"
-              valueType: "java.lang.String"
-              uuid: "<init>_networkParameters1-id"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.core.NetworkParameters"
         uuid: "<init>_networkParameters1"
         fixed: false
@@ -6202,13 +4980,13 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "NetworkParameters"
-      modelFingerprint: "14185DB0FB630828724956F4B3623496"
+      modelFingerprint: "E48879B05E4DD49755A864AC6F05596E"
       index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "REAL"
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.core.NetworkParameters"
         uuid: "org.bitcoinj.core.NetworkParameters"
         fixed: false
@@ -6224,39 +5002,13 @@ methods:
             content: !<regular>
               value: "MAINNET"
             valueType: "org.bitcoinj.base.BitcoinNetwork"
-            uuid: "<init>_bitcoinNetwork1"
+            uuid: "<init>_network1"
             fixed: false
             equalsMethodPresent: false
-            explicitCastNeeded: false
+            explicitCastNeeded: true
         signature: "of(BitcoinNetwork): NetworkParameters"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.core.NetworkParameters"
-            method: "of"
-            methodParameters:
-            - value:
-                sapientType: "ENUM"
-                content: !<regular>
-                  value: "MAINNET"
-                valueType: "org.bitcoinj.base.BitcoinNetwork"
-                uuid: "<init>_bitcoinNetwork1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.core.NetworkParameters"
-            method: "of"
-            methodParameters:
-            - value:
-                sapientType: "ENUM"
-                content: !<regular>
-                  value: "MAINNET"
-                valueType: "org.bitcoinj.base.BitcoinNetwork"
-                uuid: "<init>_bitcoinNetwork1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+          sapientType: "MOCK"
           valueType: "org.bitcoinj.core.NetworkParameters"
           uuid: "<init>_networkParameters2"
           fixed: false
@@ -6347,13 +5099,12 @@ methods:
       filledByUser: false
     uuid: "f89f9051-61a8-3ca8-81d0-c35a95594ddc"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "setDownloadListener"
     returnType: "org.bitcoinj.kits.WalletAppKit"
@@ -10467,14 +9218,14 @@ methods:
       filledByUser: false
     uuid: "ae1083be-f001-3aac-9717-9a1695bc5a89"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_CALL_INSTRUCTION_CONSTRUCTION_FAILURE"
       source: "File file = new File(directory, filePrefix + \\\".spvchain\\\");"
       lineNumber: 368
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "startUp"
     returnType: "void"
@@ -10494,7 +9245,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "BCFBFD001ACB6D71C8042FF04DD01F30"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -10820,11 +9571,13 @@ methods:
       filledByUser: false
     uuid: "62361cbe-d942-37df-ba8f-95285db6c253"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
+    failureReason:
+      reason: "UNKNOWN_REASON"
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path3"
     pathIdForUser: "path2"
     testPathName: "startUpWhenBlockingStartup"
@@ -11919,7 +10672,7 @@ methods:
       filledByUser: false
     uuid: "55c79d12-da48-3683-ab5a-7e38cb21a509"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
@@ -12028,7 +10781,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "MODERATE"
-    modelFingerprint: "2AB1BEDA9EA5009DF0B5859CCA909F79"
+    modelFingerprint: "7E64DC02F55316C4E9D1A3D2C33C3FE2"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -12299,7 +11052,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "NetworkParameters"
-      modelFingerprint: "3C3C7453AD07A7CD604D8E11B21D8B26"
+      modelFingerprint: "F8F28C9543145FD83E7213AEDA90A7CE"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -12368,7 +11121,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "wallet"
-      modelFingerprint: "D8F18AFBAD296EB9B6A7BC3481CA6186"
+      modelFingerprint: "A0B5D647DE759E4C3411B84F1A2C160D"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -12391,14 +11144,9 @@ methods:
         signature: "freshReceiveKey(): DeterministicKey"
         returnValue:
           sapientType: "MOCK"
-          suggestedContent: !<unknown_object>
-            target: "org.bitcoinj.crypto.DeterministicKey"
-            onlyPojoFunctions: false
-            builderPattern: false
           valueType: "org.bitcoinj.crypto.DeterministicKey"
           uuid: "createOrLoadWallet_deterministicKey1"
           fixed: false
-          nameForMock: "DeterministicKey"
           equalsMethodPresent: false
           explicitCastNeeded: false
         access: 1
@@ -12538,7 +11286,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Wallet"
-      modelFingerprint: "54CE5697C03A588780C7362A463B33C4"
+      modelFingerprint: "5644E7756821CEA3393809BAFEA93003"
       index: 7
       ignored: false
       nestedInLoop: false
@@ -12716,7 +11464,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "wallet"
-      modelFingerprint: "CD9DBDAAEBF24B6DCA844EC3C7C70087"
+      modelFingerprint: "85BE11B54355C30AC505D3B17551D0B1"
       index: 8
       ignored: false
       nestedInLoop: false
@@ -12873,144 +11621,7 @@ methods:
             explicitCastNeeded: false
         signature: "autosaveToFile(File,Duration,not-detected): WalletFiles"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<new>
-            target: "org.bitcoinj.wallet.WalletFiles"
-            parameters:
-            - name: "wallet"
-              value:
-                sapientType: "MOCK"
-                valueType: "org.bitcoinj.wallet.Wallet"
-                uuid: "setupAutoSave_walletFiles1-wallet"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "file"
-              value:
-                sapientType: "OBJECT"
-                content: !<new>
-                  target: "java.io.File"
-                  parameters:
-                  - name: "pathname"
-                    value:
-                      sapientType: "BASIC"
-                      content: !<regular>
-                        value: "pathname1"
-                      valueType: "java.lang.String"
-                      uuid: "setupAutoSave_walletFiles1-file-pathname"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  privateConstructor: false
-                  createdByTargetCode: false
-                suggestedContent: !<new>
-                  target: "java.io.File"
-                  parameters:
-                  - name: "pathname"
-                    value:
-                      sapientType: "BASIC"
-                      valueType: "java.lang.String"
-                      uuid: "setupAutoSave_walletFiles1-file-pathname"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  privateConstructor: false
-                  createdByTargetCode: false
-                valueType: "java.io.File"
-                uuid: "setupAutoSave_walletFiles1-file"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "delay"
-              value:
-                sapientType: "OBJECT"
-                content: !<static_method_return>
-                  target: "java.time.Duration"
-                  method: "ofDays"
-                  methodParameters:
-                  - name: "days"
-                    value:
-                      sapientType: "BASIC"
-                      content: !<regular>
-                        value: 0
-                      valueType: "long"
-                      uuid: "setupAutoSave_walletFiles1-delay-days"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                suggestedContent: !<static_method_return>
-                  target: "java.time.Duration"
-                  method: "ofDays"
-                  methodParameters:
-                  - name: "days"
-                    value:
-                      sapientType: "BASIC"
-                      valueType: "long"
-                      uuid: "setupAutoSave_walletFiles1-delay-days"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                valueType: "java.time.Duration"
-                uuid: "setupAutoSave_walletFiles1-delay"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            privateConstructor: false
-            createdByTargetCode: false
-          suggestedContent: !<new>
-            target: "org.bitcoinj.wallet.WalletFiles"
-            parameters:
-            - name: "wallet"
-              value:
-                sapientType: "UNKNOWN"
-                valueType: "org.bitcoinj.wallet.Wallet"
-                uuid: "setupAutoSave_walletFiles1-wallet"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "file"
-              value:
-                sapientType: "UNKNOWN"
-                suggestedContent: !<new>
-                  target: "java.io.File"
-                  parameters:
-                  - name: "pathname"
-                    value:
-                      sapientType: "BASIC"
-                      valueType: "java.lang.String"
-                      uuid: "setupAutoSave_walletFiles1-file-pathname"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  privateConstructor: false
-                  createdByTargetCode: false
-                valueType: "java.io.File"
-                uuid: "setupAutoSave_walletFiles1-file"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "delay"
-              value:
-                sapientType: "UNKNOWN"
-                suggestedContent: !<static_method_return>
-                  target: "java.time.Duration"
-                  method: "ofDays"
-                  methodParameters:
-                  - name: "days"
-                    value:
-                      sapientType: "BASIC"
-                      valueType: "long"
-                      uuid: "setupAutoSave_walletFiles1-delay-days"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                valueType: "java.time.Duration"
-                uuid: "setupAutoSave_walletFiles1-delay"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            privateConstructor: false
-            createdByTargetCode: false
+          sapientType: "MOCK"
           valueType: "org.bitcoinj.wallet.WalletFiles"
           uuid: "setupAutoSave_walletFiles1"
           fixed: false
@@ -13021,13 +11632,13 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "PlatformUtils"
-      modelFingerprint: "D3DBC06A8B920A45FF610FBA5ABE2491"
+      modelFingerprint: "38E10FB1C4F0A28C2077A4287FF064E2"
       index: 9
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "REAL"
         valueType: "org.bitcoinj.base.internal.PlatformUtils"
         uuid: "org.bitcoinj.base.internal.PlatformUtils"
         fixed: false
@@ -13042,8 +11653,6 @@ methods:
           sapientType: "BASIC"
           content: !<regular>
             value: false
-          suggestedContent: !<regular>
-            value: false
           valueType: "boolean"
           uuid: "startUp_boolean5"
           fixed: false
@@ -13054,7 +11663,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "CheckpointManager"
-      modelFingerprint: "B444DA6EBF361C05DE1F00A81CCAD783"
+      modelFingerprint: "D39A0BB3D2A804839D93AA0248151DBC"
       index: 10
       ignored: false
       nestedInLoop: false
@@ -13121,7 +11730,7 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "params"
-      modelFingerprint: "2EF2B86FCF9816C269065925662EAA1E"
+      modelFingerprint: "110482D7457352A1C4CDF4AE971E3107"
       index: 12
       ignored: false
       nestedInLoop: false
@@ -13144,14 +11753,9 @@ methods:
         signature: "network(): Network"
         returnValue:
           sapientType: "MOCK"
-          suggestedContent: !<unknown_object>
-            target: "org.bitcoinj.base.Network"
-            onlyPojoFunctions: false
-            builderPattern: false
           valueType: "org.bitcoinj.base.Network"
           uuid: "startUp_network1"
           fixed: false
-          nameForMock: "Network"
           equalsMethodPresent: false
           explicitCastNeeded: false
         access: 1
@@ -13228,7 +11832,7 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "vChain"
-      modelFingerprint: "5C433DD8C09FB52658A0A8D0DA20C5B2"
+      modelFingerprint: "68CBCB7ACD51678814434A0233458760"
       index: 14
       ignored: false
       nestedInLoop: false
@@ -13273,7 +11877,7 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "vPeerGroup"
-      modelFingerprint: "594BFD70B71B9040FB8B2826A501BA4A"
+      modelFingerprint: "5CCDE355A9F98F02A908143DCB5A60D5"
       index: 15
       ignored: false
       nestedInLoop: false
@@ -13318,7 +11922,7 @@ methods:
       filledByUser: false
     - type: "FIELD"
       name: "vPeerGroup"
-      modelFingerprint: "2194DBD93240BED8816948DE80FB5A09"
+      modelFingerprint: "3C4B9098899C9574BDC2CC1E463566F5"
       index: 16
       ignored: false
       nestedInLoop: false
@@ -13355,7 +11959,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "499288E60A56C60BDC3A41E9BC7884E4"
+      modelFingerprint: "7C070A4754793A75C8E18132D71086CF"
       index: 17
       ignored: false
       nestedInLoop: false
@@ -13385,15 +11989,17 @@ methods:
             explicitCastNeeded: false
         signature: "whenComplete(BiConsumer): CompletableFuture"
         returnValue:
-          sapientType: "NULL"
-          content: !<unknown_object>
+          sapientType: "OBJECT"
+          content: !<new>
             target: "java.util.concurrent.CompletableFuture"
-            onlyPojoFunctions: true
-            builderPattern: false
-          suggestedContent: !<unknown_object>
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
             target: "java.util.concurrent.CompletableFuture"
-            onlyPojoFunctions: true
-            builderPattern: false
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
           valueType: "java.util.concurrent.CompletableFuture"
           uuid: "startUp_completableFuture1"
           fixed: false
@@ -13453,11 +12059,12 @@ methods:
       filledByUser: false
     uuid: "0e00a561-e76f-310c-9c4f-e40b6e72e96d"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    prover: "LLM"
+    disabledReason: "Potential harmful system call (ListenableCompletableFuture.whenComplete)\
+      \ detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path17"
@@ -15095,7 +13702,7 @@ methods:
     disabledReason: "Potential harmful system call (ListenableCompletableFuture.whenComplete)\
       \ detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path13"
     pathIdForUser: "path24"
     testPathName: "startUpWhenPeerAddressesIsNullAndParamsNetworkEqualsBitcoinNetworkREGTESTAndAutoStopAndBlockingStartup9"
@@ -16805,7 +15412,7 @@ methods:
     disabledReason: "Potential harmful system call (ListenableCompletableFuture.whenComplete)\
       \ detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path14"
     pathIdForUser: "path29"
     testPathName: "startUpWhenParamsNetworkNotEqualsBitcoinNetworkREGTESTAndDiscoveryIsNullAndAutoStopAndBlockingStartup12"
@@ -17219,7 +15826,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "28B3D62E6B1C1913ADB56338C1C75582"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -17802,11 +16409,13 @@ methods:
       filledByUser: false
     uuid: "d8ba868e-af88-3f47-b72d-10ef1bdfa832"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
+    failureReason:
+      reason: "UNKNOWN_REASON"
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "createPeerGroup"
     returnType: "org.bitcoinj.core.PeerGroup"
@@ -18121,14 +16730,14 @@ methods:
       filledByUser: false
     uuid: "af519e4e-683c-3c51-a5fc-838bc39982be"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_CALL_INSTRUCTION_CONSTRUCTION_FAILURE"
       source: "return new PeerGroup(network, vChain);"
       lineNumber: 540
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "shutDown"
     returnType: "void"
@@ -18153,7 +16762,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "6F8F627E24B003FA3F0E1187A29AD593"
-    problemWasSolvedByProver: false
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -18589,13 +17198,11 @@ methods:
       filledByUser: false
     uuid: "a2a8a624-69f6-3bc6-9a6d-bb9e5c14dc6c"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
-    failureReason:
-      reason: "UNKNOWN_REASON"
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "shutDownWhenCaughtBlockStoreExceptionThrowsIOException"
@@ -19096,12 +17703,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "45EA7C006C2D73BA098BCCC42E7A38C2"
+    modelFingerprint: "51815AF1F003E3609123387C2B8E8929"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "DAC2265C54B973ABE10C1CE21B858C4B"
+      modelFingerprint: "1BCF48FA46F4BE37C455B877FDDD7C4F"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -19113,23 +17720,42 @@ methods:
           parameters:
           - name: "params"
             value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
+              sapientType: "OBJECT"
+              content: !<static_method_return>
                 target: "org.bitcoinj.core.NetworkParameters"
-                onlyPojoFunctions: false
-                builderPattern: false
+                method: "fromID"
+                methodParameters:
+                - name: "id"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "id1"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_networkParameters1-id"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.core.NetworkParameters"
+                method: "fromID"
+                methodParameters:
+                - name: "id"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_networkParameters1-id"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "org.bitcoinj.core.NetworkParameters"
               uuid: "<init>_networkParameters1"
               fixed: false
-              nameForMock: "BitcoinNetwork.TESTNET"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "preferredOutputScriptType"
             value:
               sapientType: "ENUM"
               content: !<regular>
-                value: "P2PKH"
-              suggestedContent: !<regular>
                 value: "P2PKH"
               valueType: "org.bitcoinj.base.ScriptType"
               uuid: "<init>_scriptType1"
@@ -19146,20 +17772,40 @@ methods:
               valueType: "org.bitcoinj.wallet.KeyChainGroupStructure"
               uuid: "<init>_keyChainGroupStructure1"
               fixed: false
-              nameForMock: "KeyChainGroupStructure.DEFAULT"
+              nameForMock: "KeyChainGroupStructure"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "directory"
             value:
-              sapientType: "NULL"
-              content: !<unknown_object>
+              sapientType: "OBJECT"
+              content: !<new>
                 target: "java.io.File"
-                onlyPojoFunctions: false
-                builderPattern: false
-              suggestedContent: !<unknown_object>
+                parameters:
+                - name: "pathname"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "pathname1"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_file1-pathname"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
+              suggestedContent: !<new>
                 target: "java.io.File"
-                onlyPojoFunctions: false
-                builderPattern: false
+                parameters:
+                - name: "pathname"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_file1-pathname"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
               valueType: "java.io.File"
               uuid: "<init>_file1"
               fixed: false
@@ -19169,9 +17815,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "wallet"
+                value: "String"
               suggestedContent: !<regular>
-                value: "wallet"
+                value: "String"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -19184,24 +17830,41 @@ methods:
           parameters:
           - name: "params"
             value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
+              sapientType: "OBJECT"
+              content: !<static_method_return>
                 target: "org.bitcoinj.core.NetworkParameters"
-                onlyPojoFunctions: false
-                builderPattern: false
+                method: "fromID"
+                methodParameters:
+                - name: "id"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "id1"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_networkParameters1-id"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.core.NetworkParameters"
+                method: "fromID"
+                methodParameters:
+                - name: "id"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_networkParameters1-id"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
               valueType: "org.bitcoinj.core.NetworkParameters"
               uuid: "<init>_networkParameters1"
               fixed: false
-              nameForMock: "BitcoinNetwork.TESTNET"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "preferredOutputScriptType"
             value:
               sapientType: "ENUM"
-              content: !<regular>
-                value: "P2PKH"
-              suggestedContent: !<regular>
-                value: "P2PKH"
               valueType: "org.bitcoinj.base.ScriptType"
               uuid: "<init>_scriptType1"
               fixed: false
@@ -19217,16 +17880,40 @@ methods:
               valueType: "org.bitcoinj.wallet.KeyChainGroupStructure"
               uuid: "<init>_keyChainGroupStructure1"
               fixed: false
-              nameForMock: "KeyChainGroupStructure.DEFAULT"
+              nameForMock: "KeyChainGroupStructure"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "directory"
             value:
-              sapientType: "NULL"
-              suggestedContent: !<unknown_object>
+              sapientType: "OBJECT"
+              content: !<new>
                 target: "java.io.File"
-                onlyPojoFunctions: false
-                builderPattern: false
+                parameters:
+                - name: "pathname"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: "pathname1"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_file1-pathname"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
+              suggestedContent: !<new>
+                target: "java.io.File"
+                parameters:
+                - name: "pathname"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "java.lang.String"
+                    uuid: "<init>_file1-pathname"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
               valueType: "java.io.File"
               uuid: "<init>_file1"
               fixed: false
@@ -19236,9 +17923,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "wallet"
+                value: "String"
               suggestedContent: !<regular>
-                value: "wallet"
+                value: "String"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -19255,21 +17942,42 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "params"
-      modelFingerprint: "168F15C90B447A7736A2CA72B6BB8C47"
+      modelFingerprint: "71744C918B03E5EF11E82CE8E2BCAC77"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
+        sapientType: "OBJECT"
+        content: !<static_method_return>
           target: "org.bitcoinj.core.NetworkParameters"
-          onlyPojoFunctions: false
-          builderPattern: false
+          method: "fromID"
+          methodParameters:
+          - name: "id"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "id1"
+              valueType: "java.lang.String"
+              uuid: "<init>_networkParameters1-id"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.core.NetworkParameters"
+          method: "fromID"
+          methodParameters:
+          - name: "id"
+            value:
+              sapientType: "BASIC"
+              valueType: "java.lang.String"
+              uuid: "<init>_networkParameters1-id"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
         valueType: "org.bitcoinj.core.NetworkParameters"
         uuid: "<init>_networkParameters1"
         fixed: false
-        nameForMock: "BitcoinNetwork.TESTNET"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -19373,7 +18081,7 @@ methods:
     disabled: false
     ignoredBySystem: false
     failureReason:
-      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
@@ -19966,12 +18674,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "74939C70B1772A360A0D78B4C16181FB"
+    modelFingerprint: "3977BC705998E62DAA728E7F6E5D80C7"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "1BCF48FA46F4BE37C455B877FDDD7C4F"
+      modelFingerprint: "B82A764B6E028EB19743C8C941C3EC37"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -19983,33 +18691,11 @@ methods:
           parameters:
           - name: "params"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.core.NetworkParameters"
-                method: "fromID"
-                methodParameters:
-                - name: "id"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "id1"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_networkParameters1-id"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.core.NetworkParameters"
-                method: "fromID"
-                methodParameters:
-                - name: "id"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_networkParameters1-id"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.core.NetworkParameters"
               uuid: "<init>_networkParameters1"
               fixed: false
@@ -20028,14 +18714,9 @@ methods:
           - name: "structure"
             value:
               sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.wallet.KeyChainGroupStructure"
-                onlyPojoFunctions: false
-                builderPattern: false
               valueType: "org.bitcoinj.wallet.KeyChainGroupStructure"
               uuid: "<init>_keyChainGroupStructure1"
               fixed: false
-              nameForMock: "KeyChainGroupStructure"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "directory"
@@ -20078,9 +18759,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "String"
-              suggestedContent: !<regular>
-                value: "String"
+                value: "filePrefix1"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -20093,33 +18772,11 @@ methods:
           parameters:
           - name: "params"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.core.NetworkParameters"
-                method: "fromID"
-                methodParameters:
-                - name: "id"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "id1"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_networkParameters1-id"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.core.NetworkParameters"
-                method: "fromID"
-                methodParameters:
-                - name: "id"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_networkParameters1-id"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.core.NetworkParameters"
               uuid: "<init>_networkParameters1"
               fixed: false
@@ -20135,35 +18792,15 @@ methods:
               explicitCastNeeded: false
           - name: "structure"
             value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.wallet.KeyChainGroupStructure"
-                onlyPojoFunctions: false
-                builderPattern: false
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.wallet.KeyChainGroupStructure"
               uuid: "<init>_keyChainGroupStructure1"
               fixed: false
-              nameForMock: "KeyChainGroupStructure"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "directory"
             value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "java.io.File"
-                parameters:
-                - name: "pathname"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "pathname1"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_file1-pathname"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
+              sapientType: "UNKNOWN"
               suggestedContent: !<new>
                 target: "java.io.File"
                 parameters:
@@ -20185,10 +18822,6 @@ methods:
           - name: "filePrefix"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "String"
-              suggestedContent: !<regular>
-                value: "String"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -20205,39 +18838,17 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "params"
-      modelFingerprint: "71744C918B03E5EF11E82CE8E2BCAC77"
+      modelFingerprint: "4692F2A5E3DFA646D98A7DD9D6E10333"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.NetworkParameters"
-          method: "fromID"
-          methodParameters:
-          - name: "id"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "id1"
-              valueType: "java.lang.String"
-              uuid: "<init>_networkParameters1-id"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.core.NetworkParameters"
-          method: "fromID"
-          methodParameters:
-          - name: "id"
-            value:
-              sapientType: "BASIC"
-              valueType: "java.lang.String"
-              uuid: "<init>_networkParameters1-id"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.core.NetworkParameters"
         uuid: "<init>_networkParameters1"
         fixed: false
@@ -20262,13 +18873,13 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "NetworkParameters"
-      modelFingerprint: "14185DB0FB630828724956F4B3623496"
+      modelFingerprint: "E48879B05E4DD49755A864AC6F05596E"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "REAL"
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.core.NetworkParameters"
         uuid: "org.bitcoinj.core.NetworkParameters"
         fixed: false
@@ -20284,39 +18895,13 @@ methods:
             content: !<regular>
               value: "MAINNET"
             valueType: "org.bitcoinj.base.BitcoinNetwork"
-            uuid: "<init>_bitcoinNetwork1"
+            uuid: "<init>_network1"
             fixed: false
             equalsMethodPresent: false
-            explicitCastNeeded: false
+            explicitCastNeeded: true
         signature: "of(BitcoinNetwork): NetworkParameters"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.core.NetworkParameters"
-            method: "of"
-            methodParameters:
-            - value:
-                sapientType: "ENUM"
-                content: !<regular>
-                  value: "MAINNET"
-                valueType: "org.bitcoinj.base.BitcoinNetwork"
-                uuid: "<init>_bitcoinNetwork1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.core.NetworkParameters"
-            method: "of"
-            methodParameters:
-            - value:
-                sapientType: "ENUM"
-                content: !<regular>
-                  value: "MAINNET"
-                valueType: "org.bitcoinj.base.BitcoinNetwork"
-                uuid: "<init>_bitcoinNetwork1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+          sapientType: "MOCK"
           valueType: "org.bitcoinj.core.NetworkParameters"
           uuid: "<init>_networkParameters2"
           fixed: false
@@ -20393,7 +18978,6 @@ methods:
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -20405,12 +18989,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "ECB23421F3B03DC78F76CF17C98A549B"
+    modelFingerprint: "F564AB2EA062DA2E4310C3AAA26CE4F9"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "1C30E30C56CBD31012287D31A3D25A5B"
+      modelFingerprint: "B82A764B6E028EB19743C8C941C3EC37"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -20422,33 +19006,11 @@ methods:
           parameters:
           - name: "params"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.core.NetworkParameters"
-                method: "fromID"
-                methodParameters:
-                - name: "id"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "id1"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_networkParameters1-id"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.core.NetworkParameters"
-                method: "fromID"
-                methodParameters:
-                - name: "id"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_networkParameters1-id"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.core.NetworkParameters"
               uuid: "<init>_networkParameters1"
               fixed: false
@@ -20467,14 +19029,9 @@ methods:
           - name: "structure"
             value:
               sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.wallet.KeyChainGroupStructure"
-                onlyPojoFunctions: false
-                builderPattern: false
               valueType: "org.bitcoinj.wallet.KeyChainGroupStructure"
               uuid: "<init>_keyChainGroupStructure1"
               fixed: false
-              nameForMock: "structure"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "directory"
@@ -20517,9 +19074,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "filePrefix"
-              suggestedContent: !<regular>
-                value: "filePrefix"
+                value: "filePrefix1"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -20532,33 +19087,11 @@ methods:
           parameters:
           - name: "params"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.core.NetworkParameters"
-                method: "fromID"
-                methodParameters:
-                - name: "id"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "id1"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_networkParameters1-id"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.core.NetworkParameters"
-                method: "fromID"
-                methodParameters:
-                - name: "id"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_networkParameters1-id"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.core.NetworkParameters"
               uuid: "<init>_networkParameters1"
               fixed: false
@@ -20574,35 +19107,15 @@ methods:
               explicitCastNeeded: false
           - name: "structure"
             value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.wallet.KeyChainGroupStructure"
-                onlyPojoFunctions: false
-                builderPattern: false
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.wallet.KeyChainGroupStructure"
               uuid: "<init>_keyChainGroupStructure1"
               fixed: false
-              nameForMock: "structure"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "directory"
             value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "java.io.File"
-                parameters:
-                - name: "pathname"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "pathname1"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_file1-pathname"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
+              sapientType: "UNKNOWN"
               suggestedContent: !<new>
                 target: "java.io.File"
                 parameters:
@@ -20624,10 +19137,6 @@ methods:
           - name: "filePrefix"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "filePrefix"
-              suggestedContent: !<regular>
-                value: "filePrefix"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -20644,39 +19153,17 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "params"
-      modelFingerprint: "71744C918B03E5EF11E82CE8E2BCAC77"
+      modelFingerprint: "4692F2A5E3DFA646D98A7DD9D6E10333"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.NetworkParameters"
-          method: "fromID"
-          methodParameters:
-          - name: "id"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "id1"
-              valueType: "java.lang.String"
-              uuid: "<init>_networkParameters1-id"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.core.NetworkParameters"
-          method: "fromID"
-          methodParameters:
-          - name: "id"
-            value:
-              sapientType: "BASIC"
-              valueType: "java.lang.String"
-              uuid: "<init>_networkParameters1-id"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.core.NetworkParameters"
         uuid: "<init>_networkParameters1"
         fixed: false
@@ -20701,13 +19188,13 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "NetworkParameters"
-      modelFingerprint: "14185DB0FB630828724956F4B3623496"
+      modelFingerprint: "E48879B05E4DD49755A864AC6F05596E"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "REAL"
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.core.NetworkParameters"
         uuid: "org.bitcoinj.core.NetworkParameters"
         fixed: false
@@ -20723,39 +19210,13 @@ methods:
             content: !<regular>
               value: "MAINNET"
             valueType: "org.bitcoinj.base.BitcoinNetwork"
-            uuid: "<init>_bitcoinNetwork1"
+            uuid: "<init>_network1"
             fixed: false
             equalsMethodPresent: false
-            explicitCastNeeded: false
+            explicitCastNeeded: true
         signature: "of(BitcoinNetwork): NetworkParameters"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.core.NetworkParameters"
-            method: "of"
-            methodParameters:
-            - value:
-                sapientType: "ENUM"
-                content: !<regular>
-                  value: "MAINNET"
-                valueType: "org.bitcoinj.base.BitcoinNetwork"
-                uuid: "<init>_bitcoinNetwork1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.core.NetworkParameters"
-            method: "of"
-            methodParameters:
-            - value:
-                sapientType: "ENUM"
-                content: !<regular>
-                  value: "MAINNET"
-                valueType: "org.bitcoinj.base.BitcoinNetwork"
-                uuid: "<init>_bitcoinNetwork1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+          sapientType: "MOCK"
           valueType: "org.bitcoinj.core.NetworkParameters"
           uuid: "<init>_networkParameters2"
           fixed: false
@@ -20832,7 +19293,6 @@ methods:
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -20872,12 +19332,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "A847C7C921D7D169B3045ABE0B04C687"
+    modelFingerprint: "B26ACD57C850BE6A5B91797AA3E0D82C"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "1BCF48FA46F4BE37C455B877FDDD7C4F"
+      modelFingerprint: "B82A764B6E028EB19743C8C941C3EC37"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -20889,33 +19349,11 @@ methods:
           parameters:
           - name: "params"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.core.NetworkParameters"
-                method: "fromID"
-                methodParameters:
-                - name: "id"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "id1"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_networkParameters1-id"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.core.NetworkParameters"
-                method: "fromID"
-                methodParameters:
-                - name: "id"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_networkParameters1-id"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.core.NetworkParameters"
               uuid: "<init>_networkParameters1"
               fixed: false
@@ -20934,14 +19372,9 @@ methods:
           - name: "structure"
             value:
               sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.wallet.KeyChainGroupStructure"
-                onlyPojoFunctions: false
-                builderPattern: false
               valueType: "org.bitcoinj.wallet.KeyChainGroupStructure"
               uuid: "<init>_keyChainGroupStructure1"
               fixed: false
-              nameForMock: "KeyChainGroupStructure"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "directory"
@@ -20984,9 +19417,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "String"
-              suggestedContent: !<regular>
-                value: "String"
+                value: "filePrefix1"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -20999,33 +19430,11 @@ methods:
           parameters:
           - name: "params"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.core.NetworkParameters"
-                method: "fromID"
-                methodParameters:
-                - name: "id"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "id1"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_networkParameters1-id"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.core.NetworkParameters"
-                method: "fromID"
-                methodParameters:
-                - name: "id"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_networkParameters1-id"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.core.NetworkParameters"
               uuid: "<init>_networkParameters1"
               fixed: false
@@ -21041,35 +19450,15 @@ methods:
               explicitCastNeeded: false
           - name: "structure"
             value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.wallet.KeyChainGroupStructure"
-                onlyPojoFunctions: false
-                builderPattern: false
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.wallet.KeyChainGroupStructure"
               uuid: "<init>_keyChainGroupStructure1"
               fixed: false
-              nameForMock: "KeyChainGroupStructure"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "directory"
             value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "java.io.File"
-                parameters:
-                - name: "pathname"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "pathname1"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_file1-pathname"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
+              sapientType: "UNKNOWN"
               suggestedContent: !<new>
                 target: "java.io.File"
                 parameters:
@@ -21091,10 +19480,6 @@ methods:
           - name: "filePrefix"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "String"
-              suggestedContent: !<regular>
-                value: "String"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -21111,39 +19496,17 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "params"
-      modelFingerprint: "71744C918B03E5EF11E82CE8E2BCAC77"
+      modelFingerprint: "4692F2A5E3DFA646D98A7DD9D6E10333"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.NetworkParameters"
-          method: "fromID"
-          methodParameters:
-          - name: "id"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "id1"
-              valueType: "java.lang.String"
-              uuid: "<init>_networkParameters1-id"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.core.NetworkParameters"
-          method: "fromID"
-          methodParameters:
-          - name: "id"
-            value:
-              sapientType: "BASIC"
-              valueType: "java.lang.String"
-              uuid: "<init>_networkParameters1-id"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.core.NetworkParameters"
         uuid: "<init>_networkParameters1"
         fixed: false
@@ -21168,13 +19531,13 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "NetworkParameters"
-      modelFingerprint: "14185DB0FB630828724956F4B3623496"
+      modelFingerprint: "E48879B05E4DD49755A864AC6F05596E"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "REAL"
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.core.NetworkParameters"
         uuid: "org.bitcoinj.core.NetworkParameters"
         fixed: false
@@ -21190,39 +19553,13 @@ methods:
             content: !<regular>
               value: "MAINNET"
             valueType: "org.bitcoinj.base.BitcoinNetwork"
-            uuid: "<init>_bitcoinNetwork1"
+            uuid: "<init>_network1"
             fixed: false
             equalsMethodPresent: false
-            explicitCastNeeded: false
+            explicitCastNeeded: true
         signature: "of(BitcoinNetwork): NetworkParameters"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.core.NetworkParameters"
-            method: "of"
-            methodParameters:
-            - value:
-                sapientType: "ENUM"
-                content: !<regular>
-                  value: "MAINNET"
-                valueType: "org.bitcoinj.base.BitcoinNetwork"
-                uuid: "<init>_bitcoinNetwork1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.core.NetworkParameters"
-            method: "of"
-            methodParameters:
-            - value:
-                sapientType: "ENUM"
-                content: !<regular>
-                  value: "MAINNET"
-                valueType: "org.bitcoinj.base.BitcoinNetwork"
-                uuid: "<init>_bitcoinNetwork1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+          sapientType: "MOCK"
           valueType: "org.bitcoinj.core.NetworkParameters"
           uuid: "<init>_networkParameters2"
           fixed: false
@@ -21299,7 +19636,6 @@ methods:
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -21311,12 +19647,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "A8F60FEACAB6BB7914B573BDF8846810"
+    modelFingerprint: "704EC64FFDD925C57CE327AA72A77546"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "1BCF48FA46F4BE37C455B877FDDD7C4F"
+      modelFingerprint: "B82A764B6E028EB19743C8C941C3EC37"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -21328,33 +19664,11 @@ methods:
           parameters:
           - name: "params"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.core.NetworkParameters"
-                method: "fromID"
-                methodParameters:
-                - name: "id"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "id1"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_networkParameters1-id"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.core.NetworkParameters"
-                method: "fromID"
-                methodParameters:
-                - name: "id"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_networkParameters1-id"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.core.NetworkParameters"
               uuid: "<init>_networkParameters1"
               fixed: false
@@ -21373,14 +19687,9 @@ methods:
           - name: "structure"
             value:
               sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.wallet.KeyChainGroupStructure"
-                onlyPojoFunctions: false
-                builderPattern: false
               valueType: "org.bitcoinj.wallet.KeyChainGroupStructure"
               uuid: "<init>_keyChainGroupStructure1"
               fixed: false
-              nameForMock: "KeyChainGroupStructure"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "directory"
@@ -21423,9 +19732,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "String"
-              suggestedContent: !<regular>
-                value: "String"
+                value: "filePrefix1"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -21438,33 +19745,11 @@ methods:
           parameters:
           - name: "params"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.core.NetworkParameters"
-                method: "fromID"
-                methodParameters:
-                - name: "id"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "id1"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_networkParameters1-id"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.core.NetworkParameters"
-                method: "fromID"
-                methodParameters:
-                - name: "id"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_networkParameters1-id"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.core.NetworkParameters"
               uuid: "<init>_networkParameters1"
               fixed: false
@@ -21480,35 +19765,15 @@ methods:
               explicitCastNeeded: false
           - name: "structure"
             value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.wallet.KeyChainGroupStructure"
-                onlyPojoFunctions: false
-                builderPattern: false
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.wallet.KeyChainGroupStructure"
               uuid: "<init>_keyChainGroupStructure1"
               fixed: false
-              nameForMock: "KeyChainGroupStructure"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "directory"
             value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "java.io.File"
-                parameters:
-                - name: "pathname"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "pathname1"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_file1-pathname"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
+              sapientType: "UNKNOWN"
               suggestedContent: !<new>
                 target: "java.io.File"
                 parameters:
@@ -21530,10 +19795,6 @@ methods:
           - name: "filePrefix"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "String"
-              suggestedContent: !<regular>
-                value: "String"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -21550,39 +19811,17 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "params"
-      modelFingerprint: "71744C918B03E5EF11E82CE8E2BCAC77"
+      modelFingerprint: "4692F2A5E3DFA646D98A7DD9D6E10333"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.NetworkParameters"
-          method: "fromID"
-          methodParameters:
-          - name: "id"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "id1"
-              valueType: "java.lang.String"
-              uuid: "<init>_networkParameters1-id"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.core.NetworkParameters"
-          method: "fromID"
-          methodParameters:
-          - name: "id"
-            value:
-              sapientType: "BASIC"
-              valueType: "java.lang.String"
-              uuid: "<init>_networkParameters1-id"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.core.NetworkParameters"
         uuid: "<init>_networkParameters1"
         fixed: false
@@ -21607,13 +19846,13 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "NetworkParameters"
-      modelFingerprint: "14185DB0FB630828724956F4B3623496"
+      modelFingerprint: "E48879B05E4DD49755A864AC6F05596E"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "REAL"
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.core.NetworkParameters"
         uuid: "org.bitcoinj.core.NetworkParameters"
         fixed: false
@@ -21629,39 +19868,13 @@ methods:
             content: !<regular>
               value: "MAINNET"
             valueType: "org.bitcoinj.base.BitcoinNetwork"
-            uuid: "<init>_bitcoinNetwork1"
+            uuid: "<init>_network1"
             fixed: false
             equalsMethodPresent: false
-            explicitCastNeeded: false
+            explicitCastNeeded: true
         signature: "of(BitcoinNetwork): NetworkParameters"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.core.NetworkParameters"
-            method: "of"
-            methodParameters:
-            - value:
-                sapientType: "ENUM"
-                content: !<regular>
-                  value: "MAINNET"
-                valueType: "org.bitcoinj.base.BitcoinNetwork"
-                uuid: "<init>_bitcoinNetwork1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.core.NetworkParameters"
-            method: "of"
-            methodParameters:
-            - value:
-                sapientType: "ENUM"
-                content: !<regular>
-                  value: "MAINNET"
-                valueType: "org.bitcoinj.base.BitcoinNetwork"
-                uuid: "<init>_bitcoinNetwork1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+          sapientType: "MOCK"
           valueType: "org.bitcoinj.core.NetworkParameters"
           uuid: "<init>_networkParameters2"
           fixed: false
@@ -21738,7 +19951,6 @@ methods:
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -21778,12 +19990,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "88A74FA7BE2E1CA061FF7DFA7E8B989D"
+    modelFingerprint: "51BF2FAFA182AE5C8EB7FD24842E7650"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "1BCF48FA46F4BE37C455B877FDDD7C4F"
+      modelFingerprint: "B82A764B6E028EB19743C8C941C3EC37"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -21795,33 +20007,11 @@ methods:
           parameters:
           - name: "params"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.core.NetworkParameters"
-                method: "fromID"
-                methodParameters:
-                - name: "id"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "id1"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_networkParameters1-id"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.core.NetworkParameters"
-                method: "fromID"
-                methodParameters:
-                - name: "id"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_networkParameters1-id"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.core.NetworkParameters"
               uuid: "<init>_networkParameters1"
               fixed: false
@@ -21840,14 +20030,9 @@ methods:
           - name: "structure"
             value:
               sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.wallet.KeyChainGroupStructure"
-                onlyPojoFunctions: false
-                builderPattern: false
               valueType: "org.bitcoinj.wallet.KeyChainGroupStructure"
               uuid: "<init>_keyChainGroupStructure1"
               fixed: false
-              nameForMock: "KeyChainGroupStructure"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "directory"
@@ -21890,9 +20075,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "String"
-              suggestedContent: !<regular>
-                value: "String"
+                value: "filePrefix1"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -21905,33 +20088,11 @@ methods:
           parameters:
           - name: "params"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.core.NetworkParameters"
-                method: "fromID"
-                methodParameters:
-                - name: "id"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "id1"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_networkParameters1-id"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.core.NetworkParameters"
-                method: "fromID"
-                methodParameters:
-                - name: "id"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_networkParameters1-id"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.core.NetworkParameters"
               uuid: "<init>_networkParameters1"
               fixed: false
@@ -21947,35 +20108,15 @@ methods:
               explicitCastNeeded: false
           - name: "structure"
             value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.wallet.KeyChainGroupStructure"
-                onlyPojoFunctions: false
-                builderPattern: false
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.wallet.KeyChainGroupStructure"
               uuid: "<init>_keyChainGroupStructure1"
               fixed: false
-              nameForMock: "KeyChainGroupStructure"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "directory"
             value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "java.io.File"
-                parameters:
-                - name: "pathname"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "pathname1"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_file1-pathname"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
+              sapientType: "UNKNOWN"
               suggestedContent: !<new>
                 target: "java.io.File"
                 parameters:
@@ -21997,10 +20138,6 @@ methods:
           - name: "filePrefix"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "String"
-              suggestedContent: !<regular>
-                value: "String"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -22017,39 +20154,17 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "params"
-      modelFingerprint: "71744C918B03E5EF11E82CE8E2BCAC77"
+      modelFingerprint: "4692F2A5E3DFA646D98A7DD9D6E10333"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.NetworkParameters"
-          method: "fromID"
-          methodParameters:
-          - name: "id"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "id1"
-              valueType: "java.lang.String"
-              uuid: "<init>_networkParameters1-id"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.core.NetworkParameters"
-          method: "fromID"
-          methodParameters:
-          - name: "id"
-            value:
-              sapientType: "BASIC"
-              valueType: "java.lang.String"
-              uuid: "<init>_networkParameters1-id"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.core.NetworkParameters"
         uuid: "<init>_networkParameters1"
         fixed: false
@@ -22074,13 +20189,13 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "NetworkParameters"
-      modelFingerprint: "14185DB0FB630828724956F4B3623496"
+      modelFingerprint: "E48879B05E4DD49755A864AC6F05596E"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "REAL"
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.core.NetworkParameters"
         uuid: "org.bitcoinj.core.NetworkParameters"
         fixed: false
@@ -22096,39 +20211,13 @@ methods:
             content: !<regular>
               value: "MAINNET"
             valueType: "org.bitcoinj.base.BitcoinNetwork"
-            uuid: "<init>_bitcoinNetwork1"
+            uuid: "<init>_network1"
             fixed: false
             equalsMethodPresent: false
-            explicitCastNeeded: false
+            explicitCastNeeded: true
         signature: "of(BitcoinNetwork): NetworkParameters"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.core.NetworkParameters"
-            method: "of"
-            methodParameters:
-            - value:
-                sapientType: "ENUM"
-                content: !<regular>
-                  value: "MAINNET"
-                valueType: "org.bitcoinj.base.BitcoinNetwork"
-                uuid: "<init>_bitcoinNetwork1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.core.NetworkParameters"
-            method: "of"
-            methodParameters:
-            - value:
-                sapientType: "ENUM"
-                content: !<regular>
-                  value: "MAINNET"
-                valueType: "org.bitcoinj.base.BitcoinNetwork"
-                uuid: "<init>_bitcoinNetwork1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+          sapientType: "MOCK"
           valueType: "org.bitcoinj.core.NetworkParameters"
           uuid: "<init>_networkParameters2"
           fixed: false
@@ -22205,7 +20294,6 @@ methods:
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -22217,12 +20305,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "1C285D0E4542D2CA869B72F1B3502260"
+    modelFingerprint: "25F3EC35AD12BA9AB451AF4F4CBA064A"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "F7B951C38842A6541BAD86A8B2553A23"
+      modelFingerprint: "B82A764B6E028EB19743C8C941C3EC37"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -22234,33 +20322,11 @@ methods:
           parameters:
           - name: "params"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.core.NetworkParameters"
-                method: "fromID"
-                methodParameters:
-                - name: "id"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "id1"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_networkParameters1-id"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.core.NetworkParameters"
-                method: "fromID"
-                methodParameters:
-                - name: "id"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_networkParameters1-id"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.core.NetworkParameters"
               uuid: "<init>_networkParameters1"
               fixed: false
@@ -22279,14 +20345,9 @@ methods:
           - name: "structure"
             value:
               sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.wallet.KeyChainGroupStructure"
-                onlyPojoFunctions: false
-                builderPattern: false
               valueType: "org.bitcoinj.wallet.KeyChainGroupStructure"
               uuid: "<init>_keyChainGroupStructure1"
               fixed: false
-              nameForMock: "<KeyChainGroupStructure>"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "directory"
@@ -22329,9 +20390,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "<String>"
-              suggestedContent: !<regular>
-                value: "<String>"
+                value: "filePrefix1"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -22344,33 +20403,11 @@ methods:
           parameters:
           - name: "params"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.core.NetworkParameters"
-                method: "fromID"
-                methodParameters:
-                - name: "id"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "id1"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_networkParameters1-id"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.core.NetworkParameters"
-                method: "fromID"
-                methodParameters:
-                - name: "id"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_networkParameters1-id"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.core.NetworkParameters"
               uuid: "<init>_networkParameters1"
               fixed: false
@@ -22386,35 +20423,15 @@ methods:
               explicitCastNeeded: false
           - name: "structure"
             value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.wallet.KeyChainGroupStructure"
-                onlyPojoFunctions: false
-                builderPattern: false
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.wallet.KeyChainGroupStructure"
               uuid: "<init>_keyChainGroupStructure1"
               fixed: false
-              nameForMock: "<KeyChainGroupStructure>"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "directory"
             value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "java.io.File"
-                parameters:
-                - name: "pathname"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "pathname1"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_file1-pathname"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
+              sapientType: "UNKNOWN"
               suggestedContent: !<new>
                 target: "java.io.File"
                 parameters:
@@ -22436,10 +20453,6 @@ methods:
           - name: "filePrefix"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "<String>"
-              suggestedContent: !<regular>
-                value: "<String>"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -22456,39 +20469,17 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "params"
-      modelFingerprint: "71744C918B03E5EF11E82CE8E2BCAC77"
+      modelFingerprint: "4692F2A5E3DFA646D98A7DD9D6E10333"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.NetworkParameters"
-          method: "fromID"
-          methodParameters:
-          - name: "id"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "id1"
-              valueType: "java.lang.String"
-              uuid: "<init>_networkParameters1-id"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.core.NetworkParameters"
-          method: "fromID"
-          methodParameters:
-          - name: "id"
-            value:
-              sapientType: "BASIC"
-              valueType: "java.lang.String"
-              uuid: "<init>_networkParameters1-id"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.core.NetworkParameters"
         uuid: "<init>_networkParameters1"
         fixed: false
@@ -22513,13 +20504,13 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "NetworkParameters"
-      modelFingerprint: "14185DB0FB630828724956F4B3623496"
+      modelFingerprint: "E48879B05E4DD49755A864AC6F05596E"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "REAL"
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.core.NetworkParameters"
         uuid: "org.bitcoinj.core.NetworkParameters"
         fixed: false
@@ -22535,39 +20526,13 @@ methods:
             content: !<regular>
               value: "MAINNET"
             valueType: "org.bitcoinj.base.BitcoinNetwork"
-            uuid: "<init>_bitcoinNetwork1"
+            uuid: "<init>_network1"
             fixed: false
             equalsMethodPresent: false
-            explicitCastNeeded: false
+            explicitCastNeeded: true
         signature: "of(BitcoinNetwork): NetworkParameters"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.core.NetworkParameters"
-            method: "of"
-            methodParameters:
-            - value:
-                sapientType: "ENUM"
-                content: !<regular>
-                  value: "MAINNET"
-                valueType: "org.bitcoinj.base.BitcoinNetwork"
-                uuid: "<init>_bitcoinNetwork1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.core.NetworkParameters"
-            method: "of"
-            methodParameters:
-            - value:
-                sapientType: "ENUM"
-                content: !<regular>
-                  value: "MAINNET"
-                valueType: "org.bitcoinj.base.BitcoinNetwork"
-                uuid: "<init>_bitcoinNetwork1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+          sapientType: "MOCK"
           valueType: "org.bitcoinj.core.NetworkParameters"
           uuid: "<init>_networkParameters2"
           fixed: false
@@ -22644,7 +20609,6 @@ methods:
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -22684,12 +20648,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "FBA30FFA7C809307B640611DFE2B2381"
+    modelFingerprint: "0FE29077564CE99E5F3E36E1F147AD7C"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "C587E37E294569F1FCBB5F91FC12A541"
+      modelFingerprint: "1BCF48FA46F4BE37C455B877FDDD7C4F"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -22738,8 +20702,6 @@ methods:
               sapientType: "ENUM"
               content: !<regular>
                 value: "P2PKH"
-              suggestedContent: !<regular>
-                value: "P2PKH"
               valueType: "org.bitcoinj.base.ScriptType"
               uuid: "<init>_scriptType1"
               fixed: false
@@ -22755,7 +20717,7 @@ methods:
               valueType: "org.bitcoinj.wallet.KeyChainGroupStructure"
               uuid: "<init>_keyChainGroupStructure1"
               fixed: false
-              nameForMock: "DEFAULT"
+              nameForMock: "NetworkParameters"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "directory"
@@ -22798,9 +20760,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "wallet"
+                value: "String"
               suggestedContent: !<regular>
-                value: "wallet"
+                value: "String"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -22848,10 +20810,6 @@ methods:
           - name: "preferredOutputScriptType"
             value:
               sapientType: "ENUM"
-              content: !<regular>
-                value: "P2PKH"
-              suggestedContent: !<regular>
-                value: "P2PKH"
               valueType: "org.bitcoinj.base.ScriptType"
               uuid: "<init>_scriptType1"
               fixed: false
@@ -22867,7 +20825,7 @@ methods:
               valueType: "org.bitcoinj.wallet.KeyChainGroupStructure"
               uuid: "<init>_keyChainGroupStructure1"
               fixed: false
-              nameForMock: "DEFAULT"
+              nameForMock: "NetworkParameters"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "directory"
@@ -22910,9 +20868,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "wallet"
+                value: "String"
               suggestedContent: !<regular>
-                value: "wallet"
+                value: "String"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -23129,12 +21087,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "D682240B462BC2AD5D801AA240D91224"
+    modelFingerprint: "FC04C11DC538BC0BD1718F670F5234D1"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "1BCF48FA46F4BE37C455B877FDDD7C4F"
+      modelFingerprint: "B82A764B6E028EB19743C8C941C3EC37"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -23146,33 +21104,11 @@ methods:
           parameters:
           - name: "params"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.core.NetworkParameters"
-                method: "fromID"
-                methodParameters:
-                - name: "id"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "id1"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_networkParameters1-id"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.core.NetworkParameters"
-                method: "fromID"
-                methodParameters:
-                - name: "id"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_networkParameters1-id"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.core.NetworkParameters"
               uuid: "<init>_networkParameters1"
               fixed: false
@@ -23191,14 +21127,9 @@ methods:
           - name: "structure"
             value:
               sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.wallet.KeyChainGroupStructure"
-                onlyPojoFunctions: false
-                builderPattern: false
               valueType: "org.bitcoinj.wallet.KeyChainGroupStructure"
               uuid: "<init>_keyChainGroupStructure1"
               fixed: false
-              nameForMock: "KeyChainGroupStructure"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "directory"
@@ -23241,9 +21172,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "String"
-              suggestedContent: !<regular>
-                value: "String"
+                value: "filePrefix1"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -23256,33 +21185,11 @@ methods:
           parameters:
           - name: "params"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.core.NetworkParameters"
-                method: "fromID"
-                methodParameters:
-                - name: "id"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "id1"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_networkParameters1-id"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.core.NetworkParameters"
-                method: "fromID"
-                methodParameters:
-                - name: "id"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_networkParameters1-id"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+                onlyPojoFunctions: false
+                builderPattern: false
               valueType: "org.bitcoinj.core.NetworkParameters"
               uuid: "<init>_networkParameters1"
               fixed: false
@@ -23298,35 +21205,15 @@ methods:
               explicitCastNeeded: false
           - name: "structure"
             value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.wallet.KeyChainGroupStructure"
-                onlyPojoFunctions: false
-                builderPattern: false
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.wallet.KeyChainGroupStructure"
               uuid: "<init>_keyChainGroupStructure1"
               fixed: false
-              nameForMock: "KeyChainGroupStructure"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "directory"
             value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "java.io.File"
-                parameters:
-                - name: "pathname"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "pathname1"
-                    valueType: "java.lang.String"
-                    uuid: "<init>_file1-pathname"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                privateConstructor: false
-                createdByTargetCode: false
+              sapientType: "UNKNOWN"
               suggestedContent: !<new>
                 target: "java.io.File"
                 parameters:
@@ -23348,10 +21235,6 @@ methods:
           - name: "filePrefix"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "String"
-              suggestedContent: !<regular>
-                value: "String"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -23368,39 +21251,17 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "params"
-      modelFingerprint: "71744C918B03E5EF11E82CE8E2BCAC77"
+      modelFingerprint: "4692F2A5E3DFA646D98A7DD9D6E10333"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.NetworkParameters"
-          method: "fromID"
-          methodParameters:
-          - name: "id"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: "id1"
-              valueType: "java.lang.String"
-              uuid: "<init>_networkParameters1-id"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.core.NetworkParameters"
-          method: "fromID"
-          methodParameters:
-          - name: "id"
-            value:
-              sapientType: "BASIC"
-              valueType: "java.lang.String"
-              uuid: "<init>_networkParameters1-id"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          onlyPojoFunctions: false
+          builderPattern: false
         valueType: "org.bitcoinj.core.NetworkParameters"
         uuid: "<init>_networkParameters1"
         fixed: false
@@ -23425,13 +21286,13 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "NetworkParameters"
-      modelFingerprint: "14185DB0FB630828724956F4B3623496"
+      modelFingerprint: "E48879B05E4DD49755A864AC6F05596E"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "REAL"
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.core.NetworkParameters"
         uuid: "org.bitcoinj.core.NetworkParameters"
         fixed: false
@@ -23447,39 +21308,13 @@ methods:
             content: !<regular>
               value: "MAINNET"
             valueType: "org.bitcoinj.base.BitcoinNetwork"
-            uuid: "<init>_bitcoinNetwork1"
+            uuid: "<init>_network1"
             fixed: false
             equalsMethodPresent: false
-            explicitCastNeeded: false
+            explicitCastNeeded: true
         signature: "of(BitcoinNetwork): NetworkParameters"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.core.NetworkParameters"
-            method: "of"
-            methodParameters:
-            - value:
-                sapientType: "ENUM"
-                content: !<regular>
-                  value: "MAINNET"
-                valueType: "org.bitcoinj.base.BitcoinNetwork"
-                uuid: "<init>_bitcoinNetwork1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.core.NetworkParameters"
-            method: "of"
-            methodParameters:
-            - value:
-                sapientType: "ENUM"
-                content: !<regular>
-                  value: "MAINNET"
-                valueType: "org.bitcoinj.base.BitcoinNetwork"
-                uuid: "<init>_bitcoinNetwork1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+          sapientType: "MOCK"
           valueType: "org.bitcoinj.core.NetworkParameters"
           uuid: "<init>_networkParameters2"
           fixed: false
@@ -23556,7 +21391,6 @@ methods:
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:

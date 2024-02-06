@@ -105,13 +105,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "8E985F5E5982CCB50FFB2E38360D6CB2"
+    modelFingerprint: "37E4FE9AAA603DA4DF16A5F5FCD3B4F1"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "buf"
-      modelFingerprint: "CCC4F5E2F111BBF0D20E46EF5CA68BC3"
+      modelFingerprint: "1252C11318E77FDAA9B366ABFB220D79"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -153,7 +153,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Coin"
-      modelFingerprint: "A66AB13E634EAD1CFA8CE9A8210B1A2E"
+      modelFingerprint: "74FF841EF4FEBA0A21DA9867B5F49A57"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -181,33 +181,7 @@ methods:
             explicitCastNeeded: false
         signature: "valueOf(long): Coin"
         returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.base.Coin"
-            method: "valueOf"
-            methodParameters:
-            - name: "satoshis"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "long"
-                uuid: "read_coin1-satoshis"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.base.Coin"
-            method: "valueOf"
-            methodParameters:
-            - name: "satoshis"
-              value:
-                sapientType: "BASIC"
-                valueType: "long"
-                uuid: "read_coin1-satoshis"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
+          sapientType: "MOCK"
           valueType: "org.bitcoinj.base.Coin"
           uuid: "read_coin1"
           fixed: false
@@ -218,39 +192,13 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "3FAF45AD6C39664A7C8E8FCA0DFAF4B4"
+      modelFingerprint: "0BA4BF04ACA4335CDA636F583E8FE771"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<static_method_return>
-          target: "org.bitcoinj.base.Coin"
-          method: "valueOf"
-          methodParameters:
-          - name: "satoshis"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "long"
-              uuid: "read_coin1-satoshis"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<static_method_return>
-          target: "org.bitcoinj.base.Coin"
-          method: "valueOf"
-          methodParameters:
-          - name: "satoshis"
-            value:
-              sapientType: "BASIC"
-              valueType: "long"
-              uuid: "read_coin1-satoshis"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.base.Coin"
         uuid: "read_coin1"
         fixed: false
@@ -264,7 +212,6 @@ methods:
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -403,7 +350,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "6DA4E57BDA5E9422AFAA597BB2F294CF"
-      index: 8
+      index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -469,7 +416,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "113B87FEEC60A46311DA1FA97E69ED91"
-    problemWasSolvedByProver: false
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
@@ -592,13 +539,11 @@ methods:
       filledByUser: false
     uuid: "2ec81543-8a7a-3e5b-b313-e6323fa07594"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
-    failureReason:
-      reason: "UNKNOWN_REASON"
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "valueOf1WhenCentsNotLessThan100ThrowsIllegalArgumentException"
@@ -2019,7 +1964,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "0BA4BF04ACA4335CDA636F583E8FE771"
-      index: 10
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -2462,7 +2407,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "0BA4BF04ACA4335CDA636F583E8FE771"
-      index: 10
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -2889,7 +2834,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "0BA4BF04ACA4335CDA636F583E8FE771"
-      index: 10
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -3102,7 +3047,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "0BA4BF04ACA4335CDA636F583E8FE771"
-      index: 10
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -3529,7 +3474,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "0BA4BF04ACA4335CDA636F583E8FE771"
-      index: 10
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -3707,7 +3652,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "3841594850AB1ED7D2AD7ECE1BB997F2"
-      index: 9
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -3742,7 +3687,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "0BA4BF04ACA4335CDA636F583E8FE771"
-      index: 10
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -4392,7 +4337,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "8BFC0C07B396319D220CCB5A25E29F5A"
-      index: 8
+      index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -4418,7 +4363,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "753659628F1B3F179A2EF0629F555437"
-      index: 9
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -4569,7 +4514,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "C6CA50F561CB8DD9C5AB2E16A34A56A4"
-      index: 8
+      index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -4595,7 +4540,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "3A21543F56248AC92654D6E439128AED"
-      index: 9
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -4753,7 +4698,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "3BAF8DA2EB3DC8C3334EC7D92EC82003"
-      index: 8
+      index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -4779,7 +4724,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "753659628F1B3F179A2EF0629F555437"
-      index: 9
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -4956,7 +4901,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "3A21543F56248AC92654D6E439128AED"
-      index: 9
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -5114,7 +5059,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "6F7E6FC3D318376DC1991554005677FC"
-      index: 8
+      index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -5140,7 +5085,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "753659628F1B3F179A2EF0629F555437"
-      index: 9
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -5317,7 +5262,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "3A21543F56248AC92654D6E439128AED"
-      index: 9
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -6307,7 +6252,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "158A76FAE4C1E5741587C22A6148B6F0"
-      index: 8
+      index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -6660,7 +6605,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "3938B0F3ED7FBE2A90E461B02D2EF6B1"
-      index: 8
+      index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -6819,7 +6764,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "3938B0F3ED7FBE2A90E461B02D2EF6B1"
-      index: 8
+      index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -6978,7 +6923,7 @@ methods:
     - type: "STATIC"
       name: "Coin"
       modelFingerprint: "FE108DF4325372B8AE975B1D5A9B1A97"
-      index: 8
+      index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -7019,7 +6964,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "B275E514ED8C56A9977D413C293E28BD"
-      index: 9
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -7223,7 +7168,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "7D316644F1B80F06BF95B6F66B39B36C"
-      index: 9
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -7406,7 +7351,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "850A205E812E0C52C13403E663D22E64"
-      index: 8
+      index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -8299,7 +8244,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "DD044509553F95BE712A7D8282E44680"
-      index: 8
+      index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -8589,7 +8534,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "8E4E4A3F04320A5F313F9B77CB2C7276"
-      index: 9
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false

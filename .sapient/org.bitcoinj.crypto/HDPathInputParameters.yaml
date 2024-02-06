@@ -47,6 +47,8 @@ methods:
           parameters: []
           values:
           - sapientType: "BASIC"
+            content: !<regular>
+              value: 0
             valueType: "int"
             uuid: "deserialize_integer1"
             fixed: false
@@ -83,6 +85,9 @@ methods:
           value:
             sapientType: "COLLECTION"
             content: !<collection>
+              parameters: []
+              values: []
+            suggestedContent: !<collection>
               parameters: []
               values: []
             valueType: "java.util.List"
@@ -1508,12 +1513,12 @@ methods:
       filledByUser: false
     uuid: "67df9a13-15fa-3529-a28c-2e50c5a12ceb"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path9"
     testPathName: "parsePathWhenNIsEmptyAndNotIsHard"
@@ -2200,7 +2205,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "7BFCCB1DFC965D30C01189E928EC1B7C"
-    problemWasSolvedByProver: false
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -2439,13 +2444,11 @@ methods:
       filledByUser: false
     uuid: "a6919fef-2149-3a63-9ffa-fa7507f84a39"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
-    failureReason:
-      reason: "UNKNOWN_REASON"
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "extend"
     returnType: "org.bitcoinj.crypto.HDPath"
@@ -2463,12 +2466,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "2D5E61A406B377459F526CDC4FC91AE5"
+    modelFingerprint: "863715F7CA96207C840DAD0D192D87AD"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "6D6242E86F4819470C2E53BDAD8006F5"
+      modelFingerprint: "FB9A01806D16353C6A6A0E3FA8488111"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2482,9 +2485,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: true
-              suggestedContent: !<regular>
-                value: true
+                value: false
               valueType: "boolean"
               uuid: "<init>_boolean4"
               fixed: false
@@ -2494,177 +2495,11 @@ methods:
             value:
               sapientType: "COLLECTION"
               content: !<collection>
-                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values:
-                - sapientType: "OBJECT"
-                  content: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "i"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 1
-                        suggestedContent: !<regular>
-                          value: 1
-                        valueType: "int"
-                        uuid: "<init>_list4-0-i"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  suggestedContent: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "i"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 1
-                        suggestedContent: !<regular>
-                          value: 1
-                        valueType: "int"
-                        uuid: "<init>_list4-0-i"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  valueType: "org.bitcoinj.crypto.ChildNumber"
-                  uuid: "<init>_list4-0"
-                  fixed: false
-                  collectionUuid: "<init>_list4"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                - sapientType: "OBJECT"
-                  content: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "i"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 2
-                        suggestedContent: !<regular>
-                          value: 2
-                        valueType: "int"
-                        uuid: "<init>_list4-1-i"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  suggestedContent: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "i"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 2
-                        suggestedContent: !<regular>
-                          value: 2
-                        valueType: "int"
-                        uuid: "<init>_list4-1-i"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  valueType: "org.bitcoinj.crypto.ChildNumber"
-                  uuid: "<init>_list4-1"
-                  fixed: false
-                  collectionUuid: "<init>_list4"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
+                values: []
               suggestedContent: !<collection>
-                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values:
-                - sapientType: "OBJECT"
-                  content: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "i"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 1
-                        suggestedContent: !<regular>
-                          value: 1
-                        valueType: "int"
-                        uuid: "<init>_list4-0-i"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  suggestedContent: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "i"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 1
-                        suggestedContent: !<regular>
-                          value: 1
-                        valueType: "int"
-                        uuid: "<init>_list4-0-i"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  valueType: "org.bitcoinj.crypto.ChildNumber"
-                  uuid: "<init>_list4-0"
-                  fixed: false
-                  collectionUuid: "<init>_list4"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                - sapientType: "OBJECT"
-                  content: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "i"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 2
-                        suggestedContent: !<regular>
-                          value: 2
-                        valueType: "int"
-                        uuid: "<init>_list4-1-i"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  suggestedContent: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "i"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 2
-                        suggestedContent: !<regular>
-                          value: 2
-                        valueType: "int"
-                        uuid: "<init>_list4-1-i"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  valueType: "org.bitcoinj.crypto.ChildNumber"
-                  uuid: "<init>_list4-1"
-                  fixed: false
-                  collectionUuid: "<init>_list4"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
+                values: []
               valueType: "java.util.List"
               genericValueType: "org.bitcoinj.crypto.ChildNumber"
               uuid: "<init>_list4"
@@ -2679,10 +2514,6 @@ methods:
           - name: "hasPrivateKey"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: true
-              suggestedContent: !<regular>
-                value: true
               valueType: "boolean"
               uuid: "<init>_boolean4"
               fixed: false
@@ -2691,178 +2522,9 @@ methods:
           - name: "list"
             value:
               sapientType: "COLLECTION"
-              content: !<collection>
-                collectionClass: "java.util.ArrayList"
-                parameters: []
-                values:
-                - sapientType: "OBJECT"
-                  content: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "i"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 1
-                        suggestedContent: !<regular>
-                          value: 1
-                        valueType: "int"
-                        uuid: "<init>_list4-0-i"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  suggestedContent: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "i"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 1
-                        suggestedContent: !<regular>
-                          value: 1
-                        valueType: "int"
-                        uuid: "<init>_list4-0-i"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  valueType: "org.bitcoinj.crypto.ChildNumber"
-                  uuid: "<init>_list4-0"
-                  fixed: false
-                  collectionUuid: "<init>_list4"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                - sapientType: "OBJECT"
-                  content: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "i"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 2
-                        suggestedContent: !<regular>
-                          value: 2
-                        valueType: "int"
-                        uuid: "<init>_list4-1-i"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  suggestedContent: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "i"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 2
-                        suggestedContent: !<regular>
-                          value: 2
-                        valueType: "int"
-                        uuid: "<init>_list4-1-i"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  valueType: "org.bitcoinj.crypto.ChildNumber"
-                  uuid: "<init>_list4-1"
-                  fixed: false
-                  collectionUuid: "<init>_list4"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
               suggestedContent: !<collection>
-                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values:
-                - sapientType: "OBJECT"
-                  content: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "i"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 1
-                        suggestedContent: !<regular>
-                          value: 1
-                        valueType: "int"
-                        uuid: "<init>_list4-0-i"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  suggestedContent: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "i"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 1
-                        suggestedContent: !<regular>
-                          value: 1
-                        valueType: "int"
-                        uuid: "<init>_list4-0-i"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  valueType: "org.bitcoinj.crypto.ChildNumber"
-                  uuid: "<init>_list4-0"
-                  fixed: false
-                  collectionUuid: "<init>_list4"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                - sapientType: "OBJECT"
-                  content: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "i"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 2
-                        suggestedContent: !<regular>
-                          value: 2
-                        valueType: "int"
-                        uuid: "<init>_list4-1-i"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  suggestedContent: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "i"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 2
-                        suggestedContent: !<regular>
-                          value: 2
-                        valueType: "int"
-                        uuid: "<init>_list4-1-i"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  valueType: "org.bitcoinj.crypto.ChildNumber"
-                  uuid: "<init>_list4-1"
-                  fixed: false
-                  collectionUuid: "<init>_list4"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
+                values: []
               valueType: "java.util.List"
               genericValueType: "org.bitcoinj.crypto.ChildNumber"
               uuid: "<init>_list4"
@@ -2880,28 +2542,23 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "path2"
-      modelFingerprint: "F6B2703DA5641944EDC5C5A06B0FD913"
+      modelFingerprint: "5B2A0581EBC768F1A41CC236508E8C30"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.crypto.HDPath"
-          onlyPojoFunctions: false
-          builderPattern: false
         valueType: "org.bitcoinj.crypto.HDPath"
         uuid: "extend_hDPath1"
         fixed: false
-        nameForMock: "[{i={value=3}, hardened={value=false}}, {i={value=4}, hardened={value=false}}]"
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "A54C303AB5618D87E2E24E7784068B68"
+      modelFingerprint: "B02DF976ADCC685B192229F882DC73A7"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -2915,9 +2572,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: true
-              suggestedContent: !<regular>
-                value: true
+                value: false
               valueType: "boolean"
               uuid: "<init>_boolean4"
               fixed: false
@@ -2927,178 +2582,12 @@ methods:
             value:
               sapientType: "COLLECTION"
               content: !<collection>
-                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values:
-                - sapientType: "OBJECT"
-                  content: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "i"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 1
-                        suggestedContent: !<regular>
-                          value: 1
-                        valueType: "int"
-                        uuid: "<init>_list4-0-i"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  suggestedContent: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "i"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 1
-                        suggestedContent: !<regular>
-                          value: 1
-                        valueType: "int"
-                        uuid: "<init>_list4-0-i"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  valueType: "org.bitcoinj.crypto.ChildNumber"
-                  uuid: "<init>_list4-0"
-                  fixed: false
-                  collectionUuid: "<init>_list4"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                - sapientType: "OBJECT"
-                  content: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "i"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 2
-                        suggestedContent: !<regular>
-                          value: 2
-                        valueType: "int"
-                        uuid: "<init>_list4-1-i"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  suggestedContent: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "i"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 2
-                        suggestedContent: !<regular>
-                          value: 2
-                        valueType: "int"
-                        uuid: "<init>_list4-1-i"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  valueType: "org.bitcoinj.crypto.ChildNumber"
-                  uuid: "<init>_list4-1"
-                  fixed: false
-                  collectionUuid: "<init>_list4"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
+                values: []
               suggestedContent: !<collection>
-                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values:
-                - sapientType: "OBJECT"
-                  content: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "i"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 1
-                        suggestedContent: !<regular>
-                          value: 1
-                        valueType: "int"
-                        uuid: "<init>_list4-0-i"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  suggestedContent: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "i"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 1
-                        suggestedContent: !<regular>
-                          value: 1
-                        valueType: "int"
-                        uuid: "<init>_list4-0-i"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  valueType: "org.bitcoinj.crypto.ChildNumber"
-                  uuid: "<init>_list4-0"
-                  fixed: false
-                  collectionUuid: "<init>_list4"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                - sapientType: "OBJECT"
-                  content: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "i"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 2
-                        suggestedContent: !<regular>
-                          value: 2
-                        valueType: "int"
-                        uuid: "<init>_list4-1-i"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  suggestedContent: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "i"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 2
-                        suggestedContent: !<regular>
-                          value: 2
-                        valueType: "int"
-                        uuid: "<init>_list4-1-i"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  valueType: "org.bitcoinj.crypto.ChildNumber"
-                  uuid: "<init>_list4-1"
-                  fixed: false
-                  collectionUuid: "<init>_list4"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              valueType: "java.util.List"
+                values: []
+              valueType: "java.util.ArrayList"
               genericValueType: "org.bitcoinj.crypto.ChildNumber"
               uuid: "extend_arrayList1"
               fixed: false
@@ -3112,10 +2601,6 @@ methods:
           - name: "hasPrivateKey"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: true
-              suggestedContent: !<regular>
-                value: true
               valueType: "boolean"
               uuid: "<init>_boolean4"
               fixed: false
@@ -3125,92 +2610,9 @@ methods:
             value:
               sapientType: "COLLECTION"
               suggestedContent: !<collection>
-                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values:
-                - sapientType: "OBJECT"
-                  content: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "i"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 1
-                        suggestedContent: !<regular>
-                          value: 1
-                        valueType: "int"
-                        uuid: "<init>_list4-0-i"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  suggestedContent: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "i"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 1
-                        suggestedContent: !<regular>
-                          value: 1
-                        valueType: "int"
-                        uuid: "<init>_list4-0-i"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  valueType: "org.bitcoinj.crypto.ChildNumber"
-                  uuid: "<init>_list4-0"
-                  fixed: false
-                  collectionUuid: "<init>_list4"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                - sapientType: "OBJECT"
-                  content: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "i"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 2
-                        suggestedContent: !<regular>
-                          value: 2
-                        valueType: "int"
-                        uuid: "<init>_list4-1-i"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  suggestedContent: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "i"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 2
-                        suggestedContent: !<regular>
-                          value: 2
-                        valueType: "int"
-                        uuid: "<init>_list4-1-i"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  valueType: "org.bitcoinj.crypto.ChildNumber"
-                  uuid: "<init>_list4-1"
-                  fixed: false
-                  collectionUuid: "<init>_list4"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              valueType: "java.util.List"
+                values: []
+              valueType: "java.util.ArrayList"
               genericValueType: "org.bitcoinj.crypto.ChildNumber"
               uuid: "extend_arrayList1"
               fixed: false
@@ -3231,7 +2633,6 @@ methods:
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -4093,6 +3494,9 @@ methods:
           content: !<collection>
             parameters: []
             values: []
+          suggestedContent: !<collection>
+            parameters: []
+            values: []
           valueType: "java.util.List"
           genericValueType: "org.bitcoinj.crypto.HDPath"
           uuid: "ancestors_list1"
@@ -4112,6 +3516,9 @@ methods:
       value:
         sapientType: "COLLECTION"
         content: !<collection>
+          parameters: []
+          values: []
+        suggestedContent: !<collection>
           parameters: []
           values: []
         valueType: "java.util.List"
@@ -4146,12 +3553,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "7D629FC2E383A39264D18F9C36D53245"
+    modelFingerprint: "A5AD65295EAFFFAD69A3047B27B01791"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "D7DEFA786BF17EFA08DBD51FE3E6F050"
+      modelFingerprint: "FB9A01806D16353C6A6A0E3FA8488111"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -4165,9 +3572,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: true
-              suggestedContent: !<regular>
-                value: true
+                value: false
               valueType: "boolean"
               uuid: "<init>_boolean4"
               fixed: false
@@ -4177,331 +3582,11 @@ methods:
             value:
               sapientType: "COLLECTION"
               content: !<collection>
-                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values:
-                - sapientType: "OBJECT"
-                  content: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "childNumber"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 0
-                        valueType: "int"
-                        uuid: "<init>_list4-0-childNumber"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "isHardened"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: false
-                        valueType: "boolean"
-                        uuid: "<init>_list4-0-isHardened"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  suggestedContent: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "childNumber"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "int"
-                        uuid: "<init>_list4-0-childNumber"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "isHardened"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "boolean"
-                        uuid: "<init>_list4-0-isHardened"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  valueType: "org.bitcoinj.crypto.ChildNumber"
-                  uuid: "<init>_list4-0"
-                  fixed: false
-                  collectionUuid: "<init>_list4"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                - sapientType: "OBJECT"
-                  content: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "childNumber"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 0
-                        valueType: "int"
-                        uuid: "<init>_list4-1-childNumber"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "isHardened"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: false
-                        valueType: "boolean"
-                        uuid: "<init>_list4-1-isHardened"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  suggestedContent: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "childNumber"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "int"
-                        uuid: "<init>_list4-1-childNumber"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "isHardened"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "boolean"
-                        uuid: "<init>_list4-1-isHardened"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  valueType: "org.bitcoinj.crypto.ChildNumber"
-                  uuid: "<init>_list4-1"
-                  fixed: false
-                  collectionUuid: "<init>_list4"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                - sapientType: "OBJECT"
-                  content: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "childNumber"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 0
-                        valueType: "int"
-                        uuid: "<init>_list4-2-childNumber"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "isHardened"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: false
-                        valueType: "boolean"
-                        uuid: "<init>_list4-2-isHardened"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  suggestedContent: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "childNumber"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "int"
-                        uuid: "<init>_list4-2-childNumber"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "isHardened"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "boolean"
-                        uuid: "<init>_list4-2-isHardened"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  valueType: "org.bitcoinj.crypto.ChildNumber"
-                  uuid: "<init>_list4-2"
-                  fixed: false
-                  collectionUuid: "<init>_list4"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
+                values: []
               suggestedContent: !<collection>
-                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values:
-                - sapientType: "OBJECT"
-                  content: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "childNumber"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 0
-                        valueType: "int"
-                        uuid: "<init>_list4-0-childNumber"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "isHardened"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: false
-                        valueType: "boolean"
-                        uuid: "<init>_list4-0-isHardened"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  suggestedContent: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "childNumber"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "int"
-                        uuid: "<init>_list4-0-childNumber"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "isHardened"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "boolean"
-                        uuid: "<init>_list4-0-isHardened"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  valueType: "org.bitcoinj.crypto.ChildNumber"
-                  uuid: "<init>_list4-0"
-                  fixed: false
-                  collectionUuid: "<init>_list4"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                - sapientType: "OBJECT"
-                  content: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "childNumber"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 0
-                        valueType: "int"
-                        uuid: "<init>_list4-1-childNumber"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "isHardened"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: false
-                        valueType: "boolean"
-                        uuid: "<init>_list4-1-isHardened"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  suggestedContent: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "childNumber"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "int"
-                        uuid: "<init>_list4-1-childNumber"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "isHardened"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "boolean"
-                        uuid: "<init>_list4-1-isHardened"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  valueType: "org.bitcoinj.crypto.ChildNumber"
-                  uuid: "<init>_list4-1"
-                  fixed: false
-                  collectionUuid: "<init>_list4"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                - sapientType: "OBJECT"
-                  content: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "childNumber"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 0
-                        valueType: "int"
-                        uuid: "<init>_list4-2-childNumber"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "isHardened"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: false
-                        valueType: "boolean"
-                        uuid: "<init>_list4-2-isHardened"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  suggestedContent: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "childNumber"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "int"
-                        uuid: "<init>_list4-2-childNumber"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "isHardened"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "boolean"
-                        uuid: "<init>_list4-2-isHardened"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  valueType: "org.bitcoinj.crypto.ChildNumber"
-                  uuid: "<init>_list4-2"
-                  fixed: false
-                  collectionUuid: "<init>_list4"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
+                values: []
               valueType: "java.util.List"
               genericValueType: "org.bitcoinj.crypto.ChildNumber"
               uuid: "<init>_list4"
@@ -4516,10 +3601,6 @@ methods:
           - name: "hasPrivateKey"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: true
-              suggestedContent: !<regular>
-                value: true
               valueType: "boolean"
               uuid: "<init>_boolean4"
               fixed: false
@@ -4528,308 +3609,9 @@ methods:
           - name: "list"
             value:
               sapientType: "COLLECTION"
-              content: !<collection>
-                collectionClass: "java.util.ArrayList"
-                parameters: []
-                values:
-                - sapientType: "OBJECT"
-                  content: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "childNumber"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "int"
-                        uuid: "<init>_list4-0-childNumber"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "isHardened"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "boolean"
-                        uuid: "<init>_list4-0-isHardened"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  suggestedContent: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "childNumber"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "int"
-                        uuid: "<init>_list4-0-childNumber"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "isHardened"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "boolean"
-                        uuid: "<init>_list4-0-isHardened"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  valueType: "org.bitcoinj.crypto.ChildNumber"
-                  uuid: "<init>_list4-0"
-                  fixed: false
-                  collectionUuid: "<init>_list4"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                - sapientType: "OBJECT"
-                  content: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "childNumber"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "int"
-                        uuid: "<init>_list4-1-childNumber"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "isHardened"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "boolean"
-                        uuid: "<init>_list4-1-isHardened"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  suggestedContent: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "childNumber"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "int"
-                        uuid: "<init>_list4-1-childNumber"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "isHardened"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "boolean"
-                        uuid: "<init>_list4-1-isHardened"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  valueType: "org.bitcoinj.crypto.ChildNumber"
-                  uuid: "<init>_list4-1"
-                  fixed: false
-                  collectionUuid: "<init>_list4"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                - sapientType: "OBJECT"
-                  content: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "childNumber"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "int"
-                        uuid: "<init>_list4-2-childNumber"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "isHardened"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "boolean"
-                        uuid: "<init>_list4-2-isHardened"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  suggestedContent: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "childNumber"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "int"
-                        uuid: "<init>_list4-2-childNumber"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "isHardened"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "boolean"
-                        uuid: "<init>_list4-2-isHardened"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  valueType: "org.bitcoinj.crypto.ChildNumber"
-                  uuid: "<init>_list4-2"
-                  fixed: false
-                  collectionUuid: "<init>_list4"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
               suggestedContent: !<collection>
-                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values:
-                - sapientType: "OBJECT"
-                  content: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "childNumber"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "int"
-                        uuid: "<init>_list4-0-childNumber"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "isHardened"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "boolean"
-                        uuid: "<init>_list4-0-isHardened"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  suggestedContent: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "childNumber"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "int"
-                        uuid: "<init>_list4-0-childNumber"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "isHardened"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "boolean"
-                        uuid: "<init>_list4-0-isHardened"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  valueType: "org.bitcoinj.crypto.ChildNumber"
-                  uuid: "<init>_list4-0"
-                  fixed: false
-                  collectionUuid: "<init>_list4"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                - sapientType: "OBJECT"
-                  content: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "childNumber"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "int"
-                        uuid: "<init>_list4-1-childNumber"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "isHardened"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "boolean"
-                        uuid: "<init>_list4-1-isHardened"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  suggestedContent: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "childNumber"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "int"
-                        uuid: "<init>_list4-1-childNumber"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "isHardened"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "boolean"
-                        uuid: "<init>_list4-1-isHardened"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  valueType: "org.bitcoinj.crypto.ChildNumber"
-                  uuid: "<init>_list4-1"
-                  fixed: false
-                  collectionUuid: "<init>_list4"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                - sapientType: "OBJECT"
-                  content: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "childNumber"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "int"
-                        uuid: "<init>_list4-2-childNumber"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "isHardened"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "boolean"
-                        uuid: "<init>_list4-2-isHardened"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  suggestedContent: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "childNumber"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "int"
-                        uuid: "<init>_list4-2-childNumber"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "isHardened"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "boolean"
-                        uuid: "<init>_list4-2-isHardened"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  valueType: "org.bitcoinj.crypto.ChildNumber"
-                  uuid: "<init>_list4-2"
-                  fixed: false
-                  collectionUuid: "<init>_list4"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
+                values: []
               valueType: "java.util.List"
               genericValueType: "org.bitcoinj.crypto.ChildNumber"
               uuid: "<init>_list4"
@@ -4847,7 +3629,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "includeSelf"
-      modelFingerprint: "C383E58F3A82B6A9E90529522CCA05F4"
+      modelFingerprint: "141639913D0DFE39071A948E5BF28285"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -4867,13 +3649,13 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "StreamUtils"
-      modelFingerprint: "90C71B12F00966BD21156D8FEEFC9829"
+      modelFingerprint: "349E09A777804A0E302B8EC0AA3F351D"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "REAL"
         valueType: "org.bitcoinj.base.internal.StreamUtils"
         uuid: "org.bitcoinj.base.internal.StreamUtils"
         fixed: false
@@ -4885,15 +3667,15 @@ methods:
         parameters: []
         signature: "toUnmodifiableList(): Collector"
         returnValue:
-          sapientType: "NULL"
-          content: !<unknown_object>
-            target: "java.util.stream.Collector"
-            onlyPojoFunctions: true
-            builderPattern: false
-          suggestedContent: !<unknown_object>
-            target: "java.util.stream.Collector"
-            onlyPojoFunctions: true
-            builderPattern: false
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.base.internal.StreamUtils"
+            method: "toUnmodifiableList"
+            methodParameters: []
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.base.internal.StreamUtils"
+            method: "toUnmodifiableList"
+            methodParameters: []
           valueType: "java.util.stream.Collector"
           uuid: "ancestors_collector1"
           fixed: false
@@ -4904,298 +3686,23 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "2C5E2D60E8CC6B49748EC5640990F25D"
+      modelFingerprint: "88E94A7FD1CACD4878BC0CA3E7C59BE3"
       index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<method_return_from_value>
-          target: "java.lang.Object"
-          localVariableValue:
-            sapientType: "OBJECT"
-            content: !<method_return_from_value>
-              target: "java.util.stream.Stream"
-              localVariableValue:
-                sapientType: "OBJECT"
-                content: !<method_return_from_value>
-                  target: "java.util.stream.Stream"
-                  localVariableValue:
-                    sapientType: "OBJECT"
-                    content: !<static_method_return>
-                      target: "java.util.stream.IntStream"
-                      method: "range"
-                      methodParameters:
-                      - value:
-                          sapientType: "BASIC"
-                          content: !<regular>
-                            value: 1
-                          valueType: "int"
-                          fixed: true
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                      - value:
-                          sapientType: "BASIC"
-                          content: !<regular>
-                            value: 4
-                          valueType: "int"
-                          uuid: "ancestors_int3"
-                          fixed: true
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    suggestedContent: !<static_method_return>
-                      target: "java.util.stream.IntStream"
-                      method: "range"
-                      methodParameters:
-                      - value:
-                          sapientType: "BASIC"
-                          content: !<regular>
-                            value: 1
-                          valueType: "int"
-                          fixed: true
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                      - value:
-                          sapientType: "BASIC"
-                          content: !<regular>
-                            value: 4
-                          valueType: "int"
-                          uuid: "ancestors_int3"
-                          fixed: true
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    valueType: "java.util.stream.IntStream"
-                    uuid: "ancestors_intStream1"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  methodParameters:
-                  - name: "arg0"
-                    value:
-                      sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-                      valueType: "java.util.function.IntFunction"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  methodName: "mapToObj"
-                suggestedContent: !<method_return_from_value>
-                  target: "java.util.stream.Stream"
-                  localVariableValue:
-                    sapientType: "OBJECT"
-                    suggestedContent: !<static_method_return>
-                      target: "java.util.stream.IntStream"
-                      method: "range"
-                      methodParameters:
-                      - value:
-                          sapientType: "BASIC"
-                          content: !<regular>
-                            value: 1
-                          valueType: "int"
-                          fixed: true
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                      - value:
-                          sapientType: "BASIC"
-                          content: !<regular>
-                            value: 4
-                          valueType: "int"
-                          uuid: "ancestors_int3"
-                          fixed: true
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    valueType: "java.util.stream.IntStream"
-                    uuid: "ancestors_intStream1"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  methodParameters:
-                  - name: "arg0"
-                    value:
-                      sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-                      valueType: "java.util.function.IntFunction"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  methodName: "mapToObj"
-                valueType: "java.util.stream.Stream"
-                uuid: "ancestors_stream1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              methodParameters:
-              - name: "arg0"
-                value:
-                  sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-                  valueType: "java.util.function.Function"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              methodName: "map"
-            suggestedContent: !<method_return_from_value>
-              target: "java.util.stream.Stream"
-              localVariableValue:
-                sapientType: "OBJECT"
-                suggestedContent: !<method_return_from_value>
-                  target: "java.util.stream.Stream"
-                  localVariableValue:
-                    sapientType: "OBJECT"
-                    suggestedContent: !<static_method_return>
-                      target: "java.util.stream.IntStream"
-                      method: "range"
-                      methodParameters:
-                      - value:
-                          sapientType: "BASIC"
-                          content: !<regular>
-                            value: 1
-                          valueType: "int"
-                          fixed: true
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                      - value:
-                          sapientType: "BASIC"
-                          content: !<regular>
-                            value: 4
-                          valueType: "int"
-                          uuid: "ancestors_int3"
-                          fixed: true
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    valueType: "java.util.stream.IntStream"
-                    uuid: "ancestors_intStream1"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  methodParameters:
-                  - name: "arg0"
-                    value:
-                      sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-                      valueType: "java.util.function.IntFunction"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  methodName: "mapToObj"
-                valueType: "java.util.stream.Stream"
-                uuid: "ancestors_stream1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              methodParameters:
-              - name: "arg0"
-                value:
-                  sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-                  valueType: "java.util.function.Function"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              methodName: "map"
-            valueType: "java.util.stream.Stream"
-            uuid: "ancestors_stream2"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-          methodParameters:
-          - name: "arg0"
-            value:
-              sapientType: "NULL"
-              content: !<unknown_object>
-                target: "java.util.stream.Collector"
-                onlyPojoFunctions: true
-                builderPattern: false
-              suggestedContent: !<unknown_object>
-                target: "java.util.stream.Collector"
-                onlyPojoFunctions: true
-                builderPattern: false
-              valueType: "java.util.stream.Collector"
-              uuid: "ancestors_collector1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          methodName: "collect"
-        suggestedContent: !<method_return_from_value>
-          target: "java.lang.Object"
-          localVariableValue:
-            sapientType: "OBJECT"
-            suggestedContent: !<method_return_from_value>
-              target: "java.util.stream.Stream"
-              localVariableValue:
-                sapientType: "OBJECT"
-                suggestedContent: !<method_return_from_value>
-                  target: "java.util.stream.Stream"
-                  localVariableValue:
-                    sapientType: "OBJECT"
-                    suggestedContent: !<static_method_return>
-                      target: "java.util.stream.IntStream"
-                      method: "range"
-                      methodParameters:
-                      - value:
-                          sapientType: "BASIC"
-                          content: !<regular>
-                            value: 1
-                          valueType: "int"
-                          fixed: true
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                      - value:
-                          sapientType: "BASIC"
-                          content: !<regular>
-                            value: 4
-                          valueType: "int"
-                          uuid: "ancestors_int3"
-                          fixed: true
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    valueType: "java.util.stream.IntStream"
-                    uuid: "ancestors_intStream1"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  methodParameters:
-                  - name: "arg0"
-                    value:
-                      sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-                      valueType: "java.util.function.IntFunction"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  methodName: "mapToObj"
-                valueType: "java.util.stream.Stream"
-                uuid: "ancestors_stream1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              methodParameters:
-              - name: "arg0"
-                value:
-                  sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-                  valueType: "java.util.function.Function"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              methodName: "map"
-            valueType: "java.util.stream.Stream"
-            uuid: "ancestors_stream2"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-          methodParameters:
-          - name: "arg0"
-            value:
-              sapientType: "NULL"
-              suggestedContent: !<unknown_object>
-                target: "java.util.stream.Collector"
-                onlyPojoFunctions: true
-                builderPattern: false
-              valueType: "java.util.stream.Collector"
-              uuid: "ancestors_collector1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          methodName: "collect"
+        sapientType: "COLLECTION"
+        content: !<collection>
+          parameters: []
+          values: []
+        suggestedContent: !<collection>
+          parameters: []
+          values: []
         valueType: "java.util.List"
         uuid: "ancestors_object1"
         fixed: false
-        equalsMethodPresent: true
+        equalsMethodPresent: false
         explicitCastNeeded: true
       staticReadMethodForField: false
       filledByUser: false
@@ -5205,7 +3712,6 @@ methods:
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -5217,12 +3723,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "4036A5FB3C330318278A2CC610A3A6DD"
+    modelFingerprint: "73B2409840D67EFC491A6D64BBC79EDE"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "CEC3CC10F7E6AA300CBB1B3660316394"
+      modelFingerprint: "FB9A01806D16353C6A6A0E3FA8488111"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -5236,9 +3742,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: true
-              suggestedContent: !<regular>
-                value: true
+                value: false
               valueType: "boolean"
               uuid: "<init>_boolean4"
               fixed: false
@@ -5248,119 +3752,11 @@ methods:
             value:
               sapientType: "COLLECTION"
               content: !<collection>
-                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values:
-                - sapientType: "OBJECT"
-                  content: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "childNumber"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 0
-                        valueType: "int"
-                        uuid: "<init>_list4-0-childNumber"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "isHardened"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: false
-                        valueType: "boolean"
-                        uuid: "<init>_list4-0-isHardened"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  suggestedContent: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "childNumber"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "int"
-                        uuid: "<init>_list4-0-childNumber"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "isHardened"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "boolean"
-                        uuid: "<init>_list4-0-isHardened"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  valueType: "org.bitcoinj.crypto.ChildNumber"
-                  uuid: "<init>_list4-0"
-                  fixed: false
-                  collectionUuid: "<init>_list4"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
+                values: []
               suggestedContent: !<collection>
-                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values:
-                - sapientType: "OBJECT"
-                  content: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "childNumber"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 0
-                        valueType: "int"
-                        uuid: "<init>_list4-0-childNumber"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "isHardened"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: false
-                        valueType: "boolean"
-                        uuid: "<init>_list4-0-isHardened"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  suggestedContent: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "childNumber"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "int"
-                        uuid: "<init>_list4-0-childNumber"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "isHardened"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "boolean"
-                        uuid: "<init>_list4-0-isHardened"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  valueType: "org.bitcoinj.crypto.ChildNumber"
-                  uuid: "<init>_list4-0"
-                  fixed: false
-                  collectionUuid: "<init>_list4"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
+                values: []
               valueType: "java.util.List"
               genericValueType: "org.bitcoinj.crypto.ChildNumber"
               uuid: "<init>_list4"
@@ -5375,10 +3771,6 @@ methods:
           - name: "hasPrivateKey"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: true
-              suggestedContent: !<regular>
-                value: true
               valueType: "boolean"
               uuid: "<init>_boolean4"
               fixed: false
@@ -5387,112 +3779,9 @@ methods:
           - name: "list"
             value:
               sapientType: "COLLECTION"
-              content: !<collection>
-                collectionClass: "java.util.ArrayList"
-                parameters: []
-                values:
-                - sapientType: "OBJECT"
-                  content: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "childNumber"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "int"
-                        uuid: "<init>_list4-0-childNumber"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "isHardened"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "boolean"
-                        uuid: "<init>_list4-0-isHardened"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  suggestedContent: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "childNumber"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "int"
-                        uuid: "<init>_list4-0-childNumber"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "isHardened"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "boolean"
-                        uuid: "<init>_list4-0-isHardened"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  valueType: "org.bitcoinj.crypto.ChildNumber"
-                  uuid: "<init>_list4-0"
-                  fixed: false
-                  collectionUuid: "<init>_list4"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
               suggestedContent: !<collection>
-                collectionClass: "java.util.ArrayList"
                 parameters: []
-                values:
-                - sapientType: "OBJECT"
-                  content: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "childNumber"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "int"
-                        uuid: "<init>_list4-0-childNumber"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "isHardened"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "boolean"
-                        uuid: "<init>_list4-0-isHardened"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  suggestedContent: !<new>
-                    target: "org.bitcoinj.crypto.ChildNumber"
-                    parameters:
-                    - name: "childNumber"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "int"
-                        uuid: "<init>_list4-0-childNumber"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "isHardened"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "boolean"
-                        uuid: "<init>_list4-0-isHardened"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: false
-                  valueType: "org.bitcoinj.crypto.ChildNumber"
-                  uuid: "<init>_list4-0"
-                  fixed: false
-                  collectionUuid: "<init>_list4"
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
+                values: []
               valueType: "java.util.List"
               genericValueType: "org.bitcoinj.crypto.ChildNumber"
               uuid: "<init>_list4"
@@ -5510,7 +3799,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "includeSelf"
-      modelFingerprint: "E6DB4F3C51ABA411EEF455A1E094C167"
+      modelFingerprint: "DF2225B8E2B6B4B33402713166DAA0FC"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -5530,13 +3819,13 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "StreamUtils"
-      modelFingerprint: "90C71B12F00966BD21156D8FEEFC9829"
+      modelFingerprint: "349E09A777804A0E302B8EC0AA3F351D"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "REAL"
         valueType: "org.bitcoinj.base.internal.StreamUtils"
         uuid: "org.bitcoinj.base.internal.StreamUtils"
         fixed: false
@@ -5548,15 +3837,15 @@ methods:
         parameters: []
         signature: "toUnmodifiableList(): Collector"
         returnValue:
-          sapientType: "NULL"
-          content: !<unknown_object>
-            target: "java.util.stream.Collector"
-            onlyPojoFunctions: true
-            builderPattern: false
-          suggestedContent: !<unknown_object>
-            target: "java.util.stream.Collector"
-            onlyPojoFunctions: true
-            builderPattern: false
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.base.internal.StreamUtils"
+            method: "toUnmodifiableList"
+            methodParameters: []
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.base.internal.StreamUtils"
+            method: "toUnmodifiableList"
+            methodParameters: []
           valueType: "java.util.stream.Collector"
           uuid: "ancestors_collector1"
           fixed: false
@@ -5567,298 +3856,23 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "735E20D01E1662C7E05D0CAAE70A8397"
+      modelFingerprint: "88E94A7FD1CACD4878BC0CA3E7C59BE3"
       index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "OBJECT"
-        content: !<method_return_from_value>
-          target: "java.lang.Object"
-          localVariableValue:
-            sapientType: "OBJECT"
-            content: !<method_return_from_value>
-              target: "java.util.stream.Stream"
-              localVariableValue:
-                sapientType: "OBJECT"
-                content: !<method_return_from_value>
-                  target: "java.util.stream.Stream"
-                  localVariableValue:
-                    sapientType: "OBJECT"
-                    content: !<static_method_return>
-                      target: "java.util.stream.IntStream"
-                      method: "range"
-                      methodParameters:
-                      - value:
-                          sapientType: "BASIC"
-                          content: !<regular>
-                            value: 1
-                          valueType: "int"
-                          fixed: true
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                      - value:
-                          sapientType: "BASIC"
-                          content: !<regular>
-                            value: 1
-                          valueType: "int"
-                          uuid: "ancestors_int3"
-                          fixed: true
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    suggestedContent: !<static_method_return>
-                      target: "java.util.stream.IntStream"
-                      method: "range"
-                      methodParameters:
-                      - value:
-                          sapientType: "BASIC"
-                          content: !<regular>
-                            value: 1
-                          valueType: "int"
-                          fixed: true
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                      - value:
-                          sapientType: "BASIC"
-                          content: !<regular>
-                            value: 1
-                          valueType: "int"
-                          uuid: "ancestors_int3"
-                          fixed: true
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    valueType: "java.util.stream.IntStream"
-                    uuid: "ancestors_intStream1"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  methodParameters:
-                  - name: "arg0"
-                    value:
-                      sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-                      valueType: "java.util.function.IntFunction"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  methodName: "mapToObj"
-                suggestedContent: !<method_return_from_value>
-                  target: "java.util.stream.Stream"
-                  localVariableValue:
-                    sapientType: "OBJECT"
-                    suggestedContent: !<static_method_return>
-                      target: "java.util.stream.IntStream"
-                      method: "range"
-                      methodParameters:
-                      - value:
-                          sapientType: "BASIC"
-                          content: !<regular>
-                            value: 1
-                          valueType: "int"
-                          fixed: true
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                      - value:
-                          sapientType: "BASIC"
-                          content: !<regular>
-                            value: 1
-                          valueType: "int"
-                          uuid: "ancestors_int3"
-                          fixed: true
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    valueType: "java.util.stream.IntStream"
-                    uuid: "ancestors_intStream1"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  methodParameters:
-                  - name: "arg0"
-                    value:
-                      sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-                      valueType: "java.util.function.IntFunction"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  methodName: "mapToObj"
-                valueType: "java.util.stream.Stream"
-                uuid: "ancestors_stream1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              methodParameters:
-              - name: "arg0"
-                value:
-                  sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-                  valueType: "java.util.function.Function"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              methodName: "map"
-            suggestedContent: !<method_return_from_value>
-              target: "java.util.stream.Stream"
-              localVariableValue:
-                sapientType: "OBJECT"
-                suggestedContent: !<method_return_from_value>
-                  target: "java.util.stream.Stream"
-                  localVariableValue:
-                    sapientType: "OBJECT"
-                    suggestedContent: !<static_method_return>
-                      target: "java.util.stream.IntStream"
-                      method: "range"
-                      methodParameters:
-                      - value:
-                          sapientType: "BASIC"
-                          content: !<regular>
-                            value: 1
-                          valueType: "int"
-                          fixed: true
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                      - value:
-                          sapientType: "BASIC"
-                          content: !<regular>
-                            value: 1
-                          valueType: "int"
-                          uuid: "ancestors_int3"
-                          fixed: true
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    valueType: "java.util.stream.IntStream"
-                    uuid: "ancestors_intStream1"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  methodParameters:
-                  - name: "arg0"
-                    value:
-                      sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-                      valueType: "java.util.function.IntFunction"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  methodName: "mapToObj"
-                valueType: "java.util.stream.Stream"
-                uuid: "ancestors_stream1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              methodParameters:
-              - name: "arg0"
-                value:
-                  sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-                  valueType: "java.util.function.Function"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              methodName: "map"
-            valueType: "java.util.stream.Stream"
-            uuid: "ancestors_stream2"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-          methodParameters:
-          - name: "arg0"
-            value:
-              sapientType: "NULL"
-              content: !<unknown_object>
-                target: "java.util.stream.Collector"
-                onlyPojoFunctions: true
-                builderPattern: false
-              suggestedContent: !<unknown_object>
-                target: "java.util.stream.Collector"
-                onlyPojoFunctions: true
-                builderPattern: false
-              valueType: "java.util.stream.Collector"
-              uuid: "ancestors_collector1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          methodName: "collect"
-        suggestedContent: !<method_return_from_value>
-          target: "java.lang.Object"
-          localVariableValue:
-            sapientType: "OBJECT"
-            suggestedContent: !<method_return_from_value>
-              target: "java.util.stream.Stream"
-              localVariableValue:
-                sapientType: "OBJECT"
-                suggestedContent: !<method_return_from_value>
-                  target: "java.util.stream.Stream"
-                  localVariableValue:
-                    sapientType: "OBJECT"
-                    suggestedContent: !<static_method_return>
-                      target: "java.util.stream.IntStream"
-                      method: "range"
-                      methodParameters:
-                      - value:
-                          sapientType: "BASIC"
-                          content: !<regular>
-                            value: 1
-                          valueType: "int"
-                          fixed: true
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                      - value:
-                          sapientType: "BASIC"
-                          content: !<regular>
-                            value: 1
-                          valueType: "int"
-                          uuid: "ancestors_int3"
-                          fixed: true
-                          equalsMethodPresent: false
-                          explicitCastNeeded: false
-                    valueType: "java.util.stream.IntStream"
-                    uuid: "ancestors_intStream1"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-                  methodParameters:
-                  - name: "arg0"
-                    value:
-                      sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-                      valueType: "java.util.function.IntFunction"
-                      fixed: false
-                      equalsMethodPresent: false
-                      explicitCastNeeded: false
-                  methodName: "mapToObj"
-                valueType: "java.util.stream.Stream"
-                uuid: "ancestors_stream1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-              methodParameters:
-              - name: "arg0"
-                value:
-                  sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-                  valueType: "java.util.function.Function"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              methodName: "map"
-            valueType: "java.util.stream.Stream"
-            uuid: "ancestors_stream2"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-          methodParameters:
-          - name: "arg0"
-            value:
-              sapientType: "NULL"
-              suggestedContent: !<unknown_object>
-                target: "java.util.stream.Collector"
-                onlyPojoFunctions: true
-                builderPattern: false
-              valueType: "java.util.stream.Collector"
-              uuid: "ancestors_collector1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          methodName: "collect"
+        sapientType: "COLLECTION"
+        content: !<collection>
+          parameters: []
+          values: []
+        suggestedContent: !<collection>
+          parameters: []
+          values: []
         valueType: "java.util.List"
         uuid: "ancestors_object1"
         fixed: false
-        equalsMethodPresent: true
+        equalsMethodPresent: false
         explicitCastNeeded: true
       staticReadMethodForField: false
       filledByUser: false
@@ -5868,7 +3882,6 @@ methods:
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:

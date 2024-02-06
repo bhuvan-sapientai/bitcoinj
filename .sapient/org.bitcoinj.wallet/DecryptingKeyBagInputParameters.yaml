@@ -99,6 +99,8 @@ methods:
         sapientType: "ARRAY"
         content: !<array>
           values: {}
+        suggestedContent: !<array>
+          values: {}
         valueType: "byte[]"
         uuid: "findKeyFromPubKeyHash_byte[]1"
         fixed: false
@@ -150,6 +152,8 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
+              values: {}
+            suggestedContent: !<array>
               values: {}
             valueType: "byte[]"
             uuid: "findKeyFromPubKeyHash_byte[]1"
@@ -289,6 +293,8 @@ methods:
         sapientType: "ARRAY"
         content: !<array>
           values: {}
+        suggestedContent: !<array>
+          values: {}
         valueType: "byte[]"
         uuid: "findKeyFromPubKeyHash_byte[]1"
         fixed: false
@@ -340,6 +346,8 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
+              values: {}
+            suggestedContent: !<array>
               values: {}
             valueType: "byte[]"
             uuid: "findKeyFromPubKeyHash_byte[]1"
@@ -524,6 +532,8 @@ methods:
         sapientType: "ARRAY"
         content: !<array>
           values: {}
+        suggestedContent: !<array>
+          values: {}
         valueType: "byte[]"
         uuid: "findKeyFromPubKeyHash_byte[]1"
         fixed: false
@@ -575,6 +585,8 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
+              values: {}
+            suggestedContent: !<array>
               values: {}
             valueType: "byte[]"
             uuid: "findKeyFromPubKeyHash_byte[]1"
@@ -765,6 +777,8 @@ methods:
         sapientType: "ARRAY"
         content: !<array>
           values: {}
+        suggestedContent: !<array>
+          values: {}
         valueType: "byte[]"
         uuid: "findKeyFromPubKeyHash_byte[]1"
         fixed: false
@@ -816,6 +830,8 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
+              values: {}
+            suggestedContent: !<array>
               values: {}
             valueType: "byte[]"
             uuid: "findKeyFromPubKeyHash_byte[]1"
@@ -1047,6 +1063,8 @@ methods:
         sapientType: "ARRAY"
         content: !<array>
           values: {}
+        suggestedContent: !<array>
+          values: {}
         valueType: "byte[]"
         uuid: "findKeyFromPubKey_byte[]1"
         fixed: false
@@ -1080,6 +1098,8 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
+              values: {}
+            suggestedContent: !<array>
               values: {}
             valueType: "byte[]"
             uuid: "findKeyFromPubKey_byte[]1"
@@ -1209,6 +1229,8 @@ methods:
         sapientType: "ARRAY"
         content: !<array>
           values: {}
+        suggestedContent: !<array>
+          values: {}
         valueType: "byte[]"
         uuid: "findKeyFromPubKey_byte[]1"
         fixed: false
@@ -1242,6 +1264,8 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
+              values: {}
+            suggestedContent: !<array>
               values: {}
             valueType: "byte[]"
             uuid: "findKeyFromPubKey_byte[]1"
@@ -1416,6 +1440,8 @@ methods:
         sapientType: "ARRAY"
         content: !<array>
           values: {}
+        suggestedContent: !<array>
+          values: {}
         valueType: "byte[]"
         uuid: "findKeyFromPubKey_byte[]1"
         fixed: false
@@ -1449,6 +1475,8 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
+              values: {}
+            suggestedContent: !<array>
               values: {}
             valueType: "byte[]"
             uuid: "findKeyFromPubKey_byte[]1"
@@ -1629,6 +1657,8 @@ methods:
         sapientType: "ARRAY"
         content: !<array>
           values: {}
+        suggestedContent: !<array>
+          values: {}
         valueType: "byte[]"
         uuid: "findKeyFromPubKey_byte[]1"
         fixed: false
@@ -1662,6 +1692,8 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
+              values: {}
+            suggestedContent: !<array>
               values: {}
             valueType: "byte[]"
             uuid: "findKeyFromPubKey_byte[]1"
@@ -1804,265 +1836,16 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "E8B242872EF04CB86E0ACAD93F612C34"
-    problemWasSolvedByProver: false
-    truncated: false
-    inputParameters:
-    - type: "CONSTRUCTOR"
-      modelFingerprint: "5F30E18AAC3E8FB97DA8DD2327D941A1"
-      index: 1
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.wallet.DecryptingKeyBag"
-          parameters:
-          - name: "target"
-            value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.wallet.KeyBag"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.wallet.KeyBag"
-              uuid: "<init>_keyBag1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "aesKey"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.crypto.AesKey"
-              uuid: "<init>_aesKey1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.wallet.DecryptingKeyBag"
-          parameters:
-          - name: "target"
-            value:
-              sapientType: "UNKNOWN"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.wallet.KeyBag"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.wallet.KeyBag"
-              uuid: "<init>_keyBag1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "aesKey"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.crypto.AesKey"
-              uuid: "<init>_aesKey1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        valueType: "org.bitcoinj.wallet.DecryptingKeyBag"
-        uuid: "target"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INPUT"
-      name: "scriptHash"
-      modelFingerprint: "F6F3BC8BE56743B0468E3580C74339A8"
-      index: 2
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "ARRAY"
-        content: !<array>
-          values: {}
-        valueType: "byte[]"
-        uuid: "findRedeemDataFromScriptHash_byte[]1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "FIELD"
-      name: "target"
-      modelFingerprint: "2211A67A3A550790DA31E988955D395A"
-      index: 3
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.wallet.KeyBag"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.wallet.KeyBag"
-        uuid: "<init>_keyBag1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "this.target"
-        name: "findRedeemDataFromScriptHash"
-        parameters:
-        - name: "arg0"
-          value:
-            sapientType: "ARRAY"
-            content: !<array>
-              values: {}
-            suggestedContent: !<array>
-              values: {}
-            valueType: "byte[]"
-            uuid: "findRedeemDataFromScriptHash_byte[]1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "findRedeemDataFromScriptHash(byte[]): RedeemData"
-        returnValue:
-          sapientType: "OBJECT"
-          content: !<static_method_return>
-            target: "org.bitcoinj.wallet.RedeemData"
-            method: "of"
-            methodParameters:
-            - name: "keys"
-              value:
-                sapientType: "COLLECTION"
-                content: !<collection>
-                  parameters: []
-                  values: []
-                suggestedContent: !<collection>
-                  parameters: []
-                  values: []
-                valueType: "java.util.List"
-                uuid: "maybeDecrypt_list3"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "redeemScript"
-              value:
-                sapientType: "MOCK"
-                valueType: "org.bitcoinj.script.Script"
-                uuid: "maybeDecrypt_script3"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          suggestedContent: !<static_method_return>
-            target: "org.bitcoinj.wallet.RedeemData"
-            method: "of"
-            methodParameters:
-            - name: "keys"
-              value:
-                sapientType: "COLLECTION"
-                suggestedContent: !<collection>
-                  parameters: []
-                  values: []
-                valueType: "java.util.List"
-                uuid: "maybeDecrypt_list3"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "redeemScript"
-              value:
-                sapientType: "UNKNOWN"
-                valueType: "org.bitcoinj.script.Script"
-                uuid: "maybeDecrypt_script3"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-          valueType: "org.bitcoinj.wallet.RedeemData"
-          uuid: "findRedeemDataFromScriptHash_redeemData1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1025
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "RedeemData"
-      modelFingerprint: "30B85E3B7EE2B1013A6498C7C24EA80B"
-      index: 4
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.wallet.RedeemData"
-        uuid: "org.bitcoinj.wallet.RedeemData"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.wallet.RedeemData"
-        name: "of"
-        parameters:
-        - name: "keys"
-          value:
-            sapientType: "COLLECTION"
-            content: !<collection>
-              collectionClass: "java.util.ArrayList"
-              parameters: []
-              values: []
-            suggestedContent: !<collection>
-              collectionClass: "java.util.ArrayList"
-              parameters: []
-              values: []
-            valueType: "java.util.List"
-            genericValueType: "org.bitcoinj.crypto.ECKey"
-            uuid: "maybeDecrypt_arrayList1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "redeemScript"
-          value:
-            sapientType: "MOCK"
-            valueType: "org.bitcoinj.script.Script"
-            uuid: "maybeDecrypt_script3"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "of(List,Script): RedeemData"
-        returnValue:
-          sapientType: "MOCK"
-          valueType: "org.bitcoinj.wallet.RedeemData"
-          uuid: "maybeDecrypt_redeemData1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "E72FAEA21AC64BC712F6669CDCD57BBA"
-      index: 5
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.wallet.RedeemData"
-        uuid: "maybeDecrypt_redeemData1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
     uuid: "eef7abbb-da93-3b4f-921f-39a229c2f6fe"
-    deleted: false
-    disabled: true
+    deleted: true
+    disabled: false
     ignoredBySystem: true
-    failureReason:
-      reason: "UNKNOWN_REASON"
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path1"
     pathIdForUser: "path2"
     testPathName: "findRedeemDataFromScriptHashWhenKeyIsNull"

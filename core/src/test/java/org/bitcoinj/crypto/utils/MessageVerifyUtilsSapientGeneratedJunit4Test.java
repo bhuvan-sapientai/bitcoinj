@@ -29,7 +29,7 @@ public class MessageVerifyUtilsSapientGeneratedJunit4Test {
     @Rule()
     public Timeout timeoutRule = Timeout.seconds(5);
 
-    private final LegacyAddress addressMock = mock(LegacyAddress.class);
+    private final Address addressMock = mock(Address.class);
 
     private final ECKey eCKeyMock = mock(ECKey.class);
 
@@ -43,13 +43,15 @@ public class MessageVerifyUtilsSapientGeneratedJunit4Test {
     public void verifyMessageWhenSwitchScriptTypeCaseDefaultThrowsSignatureException() throws SignatureException {
         /* Branches:
          * (switch(scriptType) = default) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Address addressMock = mock(Address.class, "bc1q7vzg5j4t0w3zj5z5zq6f6v8j5z8z5q6f6v8j5z");
-        doReturn(ScriptType.P2WSH).when(addressMock).getOutputScriptType();
+        doReturn(ScriptType.P2TR).when(addressMock).getOutputScriptType();
         thrown.expect(SignatureException.class);
         //Act Statement(s)
-        MessageVerifyUtils.verifyMessage(addressMock, "Hello, world!", "c2lnbmF0dXJl");
+        MessageVerifyUtils.verifyMessage(addressMock, "message1", "signatureBase64");
         //Assert statement(s)
         verify(addressMock).getOutputScriptType();
     }
@@ -62,6 +64,7 @@ public class MessageVerifyUtilsSapientGeneratedJunit4Test {
          * (!Arrays.equals(scriptHashFromAddress, scriptHashDerivedFromSig)) : true  #  inside compareP2SHScriptHashDerivedFromPubKey method
          */
         //Arrange Statement(s)
+        LegacyAddress addressMock = mock(LegacyAddress.class);
         try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class)) {
             doReturn(ScriptType.P2SH).when(addressMock).getOutputScriptType();
             byte[] byteArray = new byte[]{};
@@ -92,6 +95,7 @@ public class MessageVerifyUtilsSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        LegacyAddress addressMock = mock(LegacyAddress.class);
         try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class)) {
             doReturn(ScriptType.P2PKH).when(addressMock).getOutputScriptType();
             byte[] byteArray = new byte[]{};
@@ -115,13 +119,15 @@ public class MessageVerifyUtilsSapientGeneratedJunit4Test {
         /* Branches:
          * (switch(scriptType) = default) : true
          * (catch-exception (Exception)) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Address addressMock = mock(Address.class, "Address");
-        doThrow(runtimeExceptionMock).when(addressMock).getOutputScriptType();
+        doReturn(ScriptType.P2TR).when(addressMock).getOutputScriptType();
         thrown.expect(SignatureException.class);
         //Act Statement(s)
-        MessageVerifyUtils.verifyMessage(addressMock, "String", "String");
+        MessageVerifyUtils.verifyMessage(addressMock, "message1", "signatureBase64");
         //Assert statement(s)
         verify(addressMock).getOutputScriptType();
     }
@@ -139,7 +145,6 @@ public class MessageVerifyUtilsSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Address addressMock = mock(Address.class);
         try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class)) {
             doReturn(ScriptType.P2PKH).when(addressMock).getOutputScriptType();
             byte[] byteArray = new byte[]{};
@@ -167,7 +172,6 @@ public class MessageVerifyUtilsSapientGeneratedJunit4Test {
          * (!Arrays.equals(pubKeyHashFromAddress, pubKeyHashFromSignature)) : false  #  inside comparePubKeyHash method
          */
         //Arrange Statement(s)
-        Address addressMock = mock(Address.class);
         try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class)) {
             doReturn(ScriptType.P2PKH).when(addressMock).getOutputScriptType();
             byte[] byteArray = new byte[]{};
@@ -194,6 +198,7 @@ public class MessageVerifyUtilsSapientGeneratedJunit4Test {
          * (catch-exception (Exception)) : true
          */
         //Arrange Statement(s)
+        LegacyAddress addressMock = mock(LegacyAddress.class);
         try (MockedStatic<CryptoUtils> cryptoUtils = mockStatic(CryptoUtils.class);
              MockedStatic<ECKey> eCKey = mockStatic(ECKey.class)) {
             doReturn(ScriptType.P2SH).when(addressMock).getOutputScriptType();
@@ -226,14 +231,26 @@ public class MessageVerifyUtilsSapientGeneratedJunit4Test {
          * (address instanceof SegwitAddress) : false  #  inside comparePubKeyHash method
          * (!Arrays.equals(pubKeyHashFromAddress, pubKeyHashFromSignature)) : true  #  inside comparePubKeyHash method
          * (catch-exception (Exception)) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Address addressMock = mock(Address.class, "<valid Bitcoin address object>");
-        doThrow(runtimeExceptionMock).when(addressMock).getOutputScriptType();
-        thrown.expect(SignatureException.class);
-        //Act Statement(s)
-        MessageVerifyUtils.verifyMessage(addressMock, "<string message to be signed>", "<valid signature in Base64 format>");
-        //Assert statement(s)
-        verify(addressMock).getOutputScriptType();
+        try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class)) {
+            doReturn(ScriptType.P2PKH).when(addressMock).getOutputScriptType();
+            byte[] byteArray = new byte[]{};
+            doReturn(byteArray).when(addressMock).getHash();
+            eCKey.when(() -> ECKey.signedMessageToKey("message1", "signatureBase64")).thenReturn(eCKeyMock);
+            byte[] byteArray2 = new byte[]{};
+            doReturn(byteArray2).when(eCKeyMock).getPubKeyHash();
+            thrown.expect(SignatureException.class);
+            //Act Statement(s)
+            MessageVerifyUtils.verifyMessage(addressMock, "message1", "signatureBase64");
+            //Assert statement(s)
+            verify(addressMock).getOutputScriptType();
+            verify(addressMock).getHash();
+            eCKey.verify(() -> ECKey.signedMessageToKey("message1", "signatureBase64"), atLeast(1));
+            verify(eCKeyMock).getPubKeyHash();
+        }
     }
 }

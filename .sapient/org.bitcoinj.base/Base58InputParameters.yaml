@@ -251,12 +251,12 @@ methods:
       filledByUser: false
     uuid: "9ffe52a2-f6c8-31e4-a06f-316354bb76db"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "BITWISE_NOT_SUPPORTED"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path3"
     pathIdForUser: "path9"
     testPathName: "encodeWhenOutputStartLessThanEncodedLengthAndOutputStartIndexOfEncodedNotEqualsENCODED_ZEROAndZerosGreaterThanOrEqualsT"
@@ -383,6 +383,8 @@ methods:
         sapientType: "ARRAY"
         content: !<array>
           values: {}
+        suggestedContent: !<array>
+          values: {}
         valueType: "byte[]"
         uuid: "encodeChecked_byte[]1"
         fixed: false
@@ -448,13 +450,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "DFA10C2EEA774CA1AD8F8BEAD540A9CC"
-    problemWasSolvedByProver: false
+    modelFingerprint: "626A68AB8A4337B06C8A50580E52559B"
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "version"
-      modelFingerprint: "6649E9CF9A8CD8CC0D8E1AFE94F866C0"
+      modelFingerprint: "DD19F0D7B3111AD1DCD704F0CF5E3767"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -474,7 +476,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "payload"
-      modelFingerprint: "37A8D45DDE670B4414CD865EA49F4234"
+      modelFingerprint: "753EE9B0124C20DD45C6D1BDBB7FFCD0"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -494,13 +496,13 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Sha256Hash"
-      modelFingerprint: "CBBB208A98B4FC863610282A9ED38FA3"
+      modelFingerprint: "0B5924D15CF7ED398AE02B99CC719AF5"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "REAL"
         valueType: "org.bitcoinj.base.Sha256Hash"
         uuid: "org.bitcoinj.base.Sha256Hash"
         fixed: false
@@ -519,12 +521,9 @@ methods:
                   sapientType: "BASIC"
                   content: !<regular>
                     value: 1
-                  suggestedContent: !<regular>
-                    value: 1
                   valueType: "byte"
                   originalValueType: "int"
-                  uuid: "encodeChecked_byte1"
-                  fixed: false
+                  fixed: true
                   equalsMethodPresent: false
                   explicitCastNeeded: false
                 1:
@@ -532,7 +531,6 @@ methods:
                   content: !<regular>
                     value: 0
                   valueType: "byte"
-                  uuid: "encodeChecked_byte[]2Item1"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -541,7 +539,6 @@ methods:
                   content: !<regular>
                     value: 0
                   valueType: "byte"
-                  uuid: "encodeChecked_byte[]2Item2"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -550,7 +547,6 @@ methods:
                   content: !<regular>
                     value: 0
                   valueType: "byte"
-                  uuid: "encodeChecked_byte[]2Item3"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -559,7 +555,6 @@ methods:
                   content: !<regular>
                     value: 0
                   valueType: "byte"
-                  uuid: "encodeChecked_byte[]2Item4"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -567,12 +562,11 @@ methods:
               values:
                 0:
                   sapientType: "BASIC"
-                  suggestedContent: !<regular>
+                  content: !<regular>
                     value: 1
                   valueType: "byte"
                   originalValueType: "int"
-                  uuid: "encodeChecked_byte1"
-                  fixed: false
+                  fixed: true
                   equalsMethodPresent: false
                   explicitCastNeeded: false
                 1:
@@ -580,7 +574,6 @@ methods:
                   content: !<regular>
                     value: 0
                   valueType: "byte"
-                  uuid: "encodeChecked_byte[]2Item1"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -589,7 +582,6 @@ methods:
                   content: !<regular>
                     value: 0
                   valueType: "byte"
-                  uuid: "encodeChecked_byte[]2Item2"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -598,7 +590,6 @@ methods:
                   content: !<regular>
                     value: 0
                   valueType: "byte"
-                  uuid: "encodeChecked_byte[]2Item3"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -607,7 +598,6 @@ methods:
                   content: !<regular>
                     value: 0
                   valueType: "byte"
-                  uuid: "encodeChecked_byte[]2Item4"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -630,20 +620,593 @@ methods:
             sapientType: "BASIC"
             content: !<regular>
               value: 1
-            suggestedContent: !<regular>
-              value: 1
             valueType: "int"
-            uuid: "encodeChecked_int7"
-            fixed: false
+            fixed: true
             equalsMethodPresent: false
             explicitCastNeeded: false
         signature: "hashTwice(byte[],int,int): byte[]"
         returnValue:
           sapientType: "ARRAY"
           content: !<array>
-            values: {}
+            values:
+              0:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -100
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item0"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              1:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 18
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              2:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -49
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item2"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              3:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -36
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item3"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              4:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 4
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item4"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              5:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -57
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item5"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              6:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 69
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item6"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              7:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -124
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item7"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              8:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -41
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item8"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              9:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -121
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item9"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              10:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -84
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item10"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              11:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 61
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item11"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              12:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 35
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item12"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              13:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 119
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item13"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              14:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 33
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item14"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              15:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 50
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item15"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              16:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -63
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item16"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              17:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -123
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item17"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              18:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 36
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item18"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              19:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -68
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item19"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              20:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 122
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item20"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              21:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -78
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item21"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              22:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -115
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item22"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              23:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -20
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item23"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              24:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 66
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item24"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              25:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 25
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item25"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              26:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -72
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item26"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              27:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -4
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item27"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              28:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 91
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item28"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              29:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 66
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item29"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              30:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 95
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item30"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              31:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 112
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item31"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           suggestedContent: !<array>
-            values: {}
+            values:
+              0:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -100
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item0"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              1:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 18
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              2:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -49
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item2"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              3:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -36
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item3"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              4:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 4
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item4"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              5:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -57
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item5"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              6:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 69
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item6"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              7:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -124
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item7"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              8:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -41
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item8"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              9:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -121
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item9"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              10:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -84
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item10"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              11:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 61
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item11"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              12:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 35
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item12"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              13:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 119
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item13"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              14:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 33
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item14"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              15:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 50
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item15"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              16:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -63
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item16"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              17:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -123
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item17"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              18:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 36
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item18"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              19:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -68
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item19"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              20:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 122
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item20"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              21:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -78
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item21"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              22:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -115
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item22"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              23:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -20
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item23"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              24:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 66
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item24"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              25:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 25
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item25"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              26:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -72
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item26"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              27:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: -4
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item27"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              28:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 91
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item28"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              29:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 66
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item29"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              30:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 95
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item30"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              31:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 112
+                valueType: "byte"
+                uuid: "encodeChecked_byte[]3-item31"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
           valueType: "byte[]"
           uuid: "encodeChecked_byte[]3"
           fixed: false
@@ -654,7 +1217,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Base58"
-      modelFingerprint: "F3A12D052D9B1A05D7F5B9AC421F607C"
+      modelFingerprint: "AA0AD87D6C8BAFD3E762AC964046F45B"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -679,47 +1242,44 @@ methods:
                   sapientType: "BASIC"
                   content: !<regular>
                     value: 1
-                  suggestedContent: !<regular>
-                    value: 1
                   valueType: "byte"
-                  originalValueType: "int"
-                  uuid: "encodeChecked_byte1"
+                  uuid: "encodeChecked_byte[]2-item0"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
                 1:
                   sapientType: "BASIC"
                   content: !<regular>
-                    value: 0
+                    value: -100
                   valueType: "byte"
-                  uuid: "encodeChecked_byte[]2Item1"
+                  uuid: "encodeChecked_byte[]2-item1"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
                 2:
                   sapientType: "BASIC"
                   content: !<regular>
-                    value: 0
+                    value: 18
                   valueType: "byte"
-                  uuid: "encodeChecked_byte[]2Item2"
+                  uuid: "encodeChecked_byte[]2-item2"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
                 3:
                   sapientType: "BASIC"
                   content: !<regular>
-                    value: 0
+                    value: -49
                   valueType: "byte"
-                  uuid: "encodeChecked_byte[]2Item3"
+                  uuid: "encodeChecked_byte[]2-item3"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
                 4:
                   sapientType: "BASIC"
                   content: !<regular>
-                    value: 0
+                    value: -36
                   valueType: "byte"
-                  uuid: "encodeChecked_byte[]2Item4"
+                  uuid: "encodeChecked_byte[]2-item4"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -727,47 +1287,46 @@ methods:
               values:
                 0:
                   sapientType: "BASIC"
-                  suggestedContent: !<regular>
+                  content: !<regular>
                     value: 1
                   valueType: "byte"
-                  originalValueType: "int"
-                  uuid: "encodeChecked_byte1"
+                  uuid: "encodeChecked_byte[]2-item0"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
                 1:
                   sapientType: "BASIC"
                   content: !<regular>
-                    value: 0
+                    value: -100
                   valueType: "byte"
-                  uuid: "encodeChecked_byte[]2Item1"
+                  uuid: "encodeChecked_byte[]2-item1"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
                 2:
                   sapientType: "BASIC"
                   content: !<regular>
-                    value: 0
+                    value: 18
                   valueType: "byte"
-                  uuid: "encodeChecked_byte[]2Item2"
+                  uuid: "encodeChecked_byte[]2-item2"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
                 3:
                   sapientType: "BASIC"
                   content: !<regular>
-                    value: 0
+                    value: -49
                   valueType: "byte"
-                  uuid: "encodeChecked_byte[]2Item3"
+                  uuid: "encodeChecked_byte[]2-item3"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
                 4:
                   sapientType: "BASIC"
                   content: !<regular>
-                    value: 0
+                    value: -36
                   valueType: "byte"
-                  uuid: "encodeChecked_byte[]2Item4"
+                  uuid: "encodeChecked_byte[]2-item4"
                   fixed: false
                   equalsMethodPresent: false
                   explicitCastNeeded: false
@@ -811,8 +1370,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    failureReason:
-      reason: "REFLECTION_CALL_FAILURE"
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -948,9 +1506,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\uD83F"
+                value: "\ud83f"
               suggestedContent: !<regular>
-                value: "\\uD83F"
+                value: "\ud83f"
               valueType: "char"
               uuid: "decode_char1"
               fixed: false
@@ -975,7 +1533,7 @@ methods:
             value:
               sapientType: "BASIC"
               suggestedContent: !<regular>
-                value: "\\uD83F"
+                value: "\ud83f"
               valueType: "char"
               uuid: "decode_char1"
               fixed: false

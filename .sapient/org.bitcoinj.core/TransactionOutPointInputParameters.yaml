@@ -20,7 +20,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "9B6027A5AB47422E64B399A47FFC96CA"
-    problemWasSolvedByProver: false
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
@@ -281,13 +281,11 @@ methods:
       filledByUser: false
     uuid: "deec3b8b-bc29-3d32-aa61-00de8060308e"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
-    failureReason:
-      reason: "UNKNOWN_REASON"
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "readWhenDefaultBranch2ThrowsIllegalArgumentException"
@@ -296,7 +294,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "410EA1B1C35F0EF1F3E73E524474ED52"
-    problemWasSolvedByProver: false
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
@@ -557,13 +555,11 @@ methods:
       filledByUser: false
     uuid: "08cb91e3-2e12-388e-addd-fe332aabb42f"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
-    failureReason:
-      reason: "UNKNOWN_REASON"
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path3"
     pathIdForUser: "path3"
     testPathName: "readWhenDefaultBranch3ThrowsIllegalArgumentException"
@@ -983,12 +979,12 @@ methods:
       filledByUser: false
     uuid: "74367ac6-67d1-3ba8-9bdd-4aafa43d4139"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "serialize"
     returnType: "byte[]"
@@ -1166,7 +1162,7 @@ methods:
     - type: "FIELD"
       name: "hash"
       modelFingerprint: "02E5D99C79C542C177F9CAAFB3C3309E"
-      index: 3
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -1177,7 +1173,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.base.Sha256Hash"
-        uuid: "<init>_sha256Hash2"
+        uuid: "<init>_sha256Hash6"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -1302,7 +1298,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "068B181BB53AB6266E2479E1A01B77AD"
-      index: 5
+      index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -1969,12 +1965,12 @@ methods:
       filledByUser: false
     uuid: "9d328af1-2293-3544-bbbc-a0683c1f9fbe"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "bitcoinSerialize"
     returnType: "byte[]"
@@ -2152,7 +2148,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "207C944278ED2CF54600E238C6BDA5D4"
-      index: 3
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -2165,6 +2161,8 @@ methods:
           sapientType: "ARRAY"
           content: !<array>
             values: {}
+          suggestedContent: !<array>
+            values: {}
           valueType: "byte[]"
           uuid: "bitcoinSerialize_byte[]1"
           fixed: false
@@ -2176,13 +2174,15 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "740324D8AEEA83F5639543B37CAABC19"
-      index: 4
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "ARRAY"
         content: !<array>
+          values: {}
+        suggestedContent: !<array>
           values: {}
         valueType: "byte[]"
         uuid: "bitcoinSerialize_byte[]1"
@@ -2193,12 +2193,12 @@ methods:
       filledByUser: false
     uuid: "924fe7c3-f32b-3ad4-96ee-4ebf1903d243"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "getMessageSize"
     returnType: "int"
@@ -2601,7 +2601,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "85BD6C3E04457C6BA1707312201745C7"
-      index: 3
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -2713,7 +2713,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       modelFingerprint: "C427E4DC7B2264276696E95A4DBAD74D"
-      index: 4
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -2855,7 +2855,7 @@ methods:
     - type: "STATIC"
       name: "Preconditions"
       modelFingerprint: "ACF07FFCA3E2E1576E0B7D7733EEEFF8"
-      index: 5
+      index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -2893,7 +2893,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "8C6A07F9B57354212E04187875913A9D"
-      index: 6
+      index: 7
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -3106,7 +3106,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "9161449AE44342A9468F39A3AC285B97"
-      index: 3
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -3191,7 +3191,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       modelFingerprint: "0D4C4FDEAF9C6F15B46A9255AD450E91"
-      index: 4
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -3288,7 +3288,7 @@ methods:
     - type: "STATIC"
       name: "Preconditions"
       modelFingerprint: "5D1C76B3909AD28BDDC21FFF70362CB1"
-      index: 5
+      index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -3335,7 +3335,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "C9C68C9339F812BC8DEC7C1D6145A135"
-      index: 6
+      index: 7
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -3565,7 +3565,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "60DDD8DECC6DCE8F1B4C85F8417B2412"
-      index: 4
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -3591,7 +3591,7 @@ methods:
     - type: "LOCAL_VARIABLE"
       name: "connectedOutput"
       modelFingerprint: "8D93E030EECFEDEE24741197FE6EEEBC"
-      index: 5
+      index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -3626,7 +3626,7 @@ methods:
     - type: "STATIC"
       name: "ScriptPattern"
       modelFingerprint: "C3F00C9072C20E529404909F2F5CE96D"
-      index: 6
+      index: 7
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -3667,7 +3667,7 @@ methods:
     - type: "STATIC"
       name: "ScriptPattern"
       modelFingerprint: "91B9619EF70878E6913D54BE5BD865DF"
-      index: 7
+      index: 8
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -3695,6 +3695,8 @@ methods:
           sapientType: "ARRAY"
           content: !<array>
             values: {}
+          suggestedContent: !<array>
+            values: {}
           valueType: "byte[]"
           uuid: "getConnectedKey_byte[]1"
           fixed: false
@@ -3706,7 +3708,7 @@ methods:
     - type: "LOCAL_VARIABLE"
       name: "keyBag"
       modelFingerprint: "A1CD1FD7A541A98582A8E29BC239324A"
-      index: 8
+      index: 9
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -3729,6 +3731,8 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
+              values: {}
+            suggestedContent: !<array>
               values: {}
             valueType: "byte[]"
             uuid: "getConnectedKey_byte[]1"
@@ -3759,7 +3763,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "C726D6CBC072210C06F6D234FCFBB032"
-      index: 9
+      index: 10
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -3774,12 +3778,12 @@ methods:
       filledByUser: false
     uuid: "f85031ff-1a2c-3f30-b29d-9a0e9410815b"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "getConnectedKeyWhenScriptPatternIsP2WPKHConnectedScript"
@@ -3970,7 +3974,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "60DDD8DECC6DCE8F1B4C85F8417B2412"
-      index: 4
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -3996,7 +4000,7 @@ methods:
     - type: "LOCAL_VARIABLE"
       name: "connectedOutput"
       modelFingerprint: "8D93E030EECFEDEE24741197FE6EEEBC"
-      index: 5
+      index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -4031,7 +4035,7 @@ methods:
     - type: "STATIC"
       name: "ScriptPattern"
       modelFingerprint: "55B65DA30A56CF748E86A89CDDA4B3A1"
-      index: 6
+      index: 7
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -4072,7 +4076,7 @@ methods:
     - type: "STATIC"
       name: "ScriptPattern"
       modelFingerprint: "249616B5BB80E8FAD10C0F896D803029"
-      index: 7
+      index: 8
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -4113,7 +4117,7 @@ methods:
     - type: "STATIC"
       name: "ScriptPattern"
       modelFingerprint: "5E134BBA4EEE5E6C6DA9851A609A2A49"
-      index: 8
+      index: 9
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -4141,6 +4145,8 @@ methods:
           sapientType: "ARRAY"
           content: !<array>
             values: {}
+          suggestedContent: !<array>
+            values: {}
           valueType: "byte[]"
           uuid: "getConnectedKey_byte[]1"
           fixed: false
@@ -4152,7 +4158,7 @@ methods:
     - type: "LOCAL_VARIABLE"
       name: "keyBag"
       modelFingerprint: "997D038E96D3B606821EE7584188158D"
-      index: 9
+      index: 10
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -4175,6 +4181,8 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
+              values: {}
+            suggestedContent: !<array>
               values: {}
             valueType: "byte[]"
             uuid: "getConnectedKey_byte[]1"
@@ -4205,7 +4213,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "C726D6CBC072210C06F6D234FCFBB032"
-      index: 10
+      index: 11
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -4220,12 +4228,12 @@ methods:
       filledByUser: false
     uuid: "ff7a9419-bdcf-33c6-8f34-b856fe3542a0"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path3"
     pathIdForUser: "path3"
     testPathName: "getConnectedKeyWhenScriptPatternIsP2PKConnectedScript"
@@ -4416,7 +4424,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "60DDD8DECC6DCE8F1B4C85F8417B2412"
-      index: 4
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -4442,7 +4450,7 @@ methods:
     - type: "LOCAL_VARIABLE"
       name: "connectedOutput"
       modelFingerprint: "8D93E030EECFEDEE24741197FE6EEEBC"
-      index: 5
+      index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -4477,7 +4485,7 @@ methods:
     - type: "STATIC"
       name: "ScriptPattern"
       modelFingerprint: "55B65DA30A56CF748E86A89CDDA4B3A1"
-      index: 6
+      index: 7
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -4518,7 +4526,7 @@ methods:
     - type: "STATIC"
       name: "ScriptPattern"
       modelFingerprint: "CC77298EAC811FCD679C82528153F09C"
-      index: 7
+      index: 8
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -4559,7 +4567,7 @@ methods:
     - type: "STATIC"
       name: "ScriptPattern"
       modelFingerprint: "E82CB65D21D328460E09898597D89477"
-      index: 8
+      index: 9
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -4600,7 +4608,7 @@ methods:
     - type: "STATIC"
       name: "ScriptPattern"
       modelFingerprint: "EE2CAB903A0D50531F20FB0EC197E47F"
-      index: 9
+      index: 10
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -4628,6 +4636,8 @@ methods:
           sapientType: "ARRAY"
           content: !<array>
             values: {}
+          suggestedContent: !<array>
+            values: {}
           valueType: "byte[]"
           uuid: "getConnectedKey_byte[]1"
           fixed: false
@@ -4639,7 +4649,7 @@ methods:
     - type: "LOCAL_VARIABLE"
       name: "keyBag"
       modelFingerprint: "4AE09B733BFBE1260E5A3B83C7877D59"
-      index: 10
+      index: 11
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -4663,6 +4673,8 @@ methods:
             sapientType: "ARRAY"
             content: !<array>
               values: {}
+            suggestedContent: !<array>
+              values: {}
             valueType: "byte[]"
             uuid: "getConnectedKey_byte[]1"
             fixed: false
@@ -4682,7 +4694,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "C726D6CBC072210C06F6D234FCFBB032"
-      index: 11
+      index: 12
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -4697,12 +4709,12 @@ methods:
       filledByUser: false
     uuid: "b651f4d8-ac3d-35b4-853e-f24baf7c71b9"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path4"
     pathIdForUser: "path4"
     testPathName: "getConnectedKeyWhenScriptPatternNotIsP2PKConnectedScriptThrowsScriptException"
@@ -4889,7 +4901,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "60DDD8DECC6DCE8F1B4C85F8417B2412"
-      index: 4
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -4915,7 +4927,7 @@ methods:
     - type: "LOCAL_VARIABLE"
       name: "connectedOutput"
       modelFingerprint: "8D93E030EECFEDEE24741197FE6EEEBC"
-      index: 5
+      index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -4951,7 +4963,7 @@ methods:
     - type: "STATIC"
       name: "ScriptPattern"
       modelFingerprint: "55B65DA30A56CF748E86A89CDDA4B3A1"
-      index: 6
+      index: 7
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -4993,7 +5005,7 @@ methods:
     - type: "STATIC"
       name: "ScriptPattern"
       modelFingerprint: "CC77298EAC811FCD679C82528153F09C"
-      index: 7
+      index: 8
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -5035,7 +5047,7 @@ methods:
     - type: "STATIC"
       name: "ScriptPattern"
       modelFingerprint: "F25254BF751642CB294CA2B5C55B7982"
-      index: 8
+      index: 9
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -5077,7 +5089,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "53E9204832001D51A064DE676BF85155"
-      index: 9
+      index: 10
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -5350,7 +5362,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "60DDD8DECC6DCE8F1B4C85F8417B2412"
-      index: 4
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -5376,7 +5388,7 @@ methods:
     - type: "LOCAL_VARIABLE"
       name: "connectedOutput"
       modelFingerprint: "8D93E030EECFEDEE24741197FE6EEEBC"
-      index: 5
+      index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -5411,7 +5423,7 @@ methods:
     - type: "STATIC"
       name: "ScriptPattern"
       modelFingerprint: "C3F00C9072C20E529404909F2F5CE96D"
-      index: 6
+      index: 7
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -5452,7 +5464,7 @@ methods:
     - type: "STATIC"
       name: "ScriptPattern"
       modelFingerprint: "91B9619EF70878E6913D54BE5BD865DF"
-      index: 7
+      index: 8
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -5480,6 +5492,8 @@ methods:
           sapientType: "ARRAY"
           content: !<array>
             values: {}
+          suggestedContent: !<array>
+            values: {}
           valueType: "byte[]"
           uuid: "getConnectedRedeemData_byte[]1"
           fixed: false
@@ -5491,7 +5505,7 @@ methods:
     - type: "LOCAL_VARIABLE"
       name: "keyBag"
       modelFingerprint: "9BEFB6FA51E62A745B8DA80EBEA4C035"
-      index: 8
+      index: 9
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -5514,6 +5528,8 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
+              values: {}
+            suggestedContent: !<array>
               values: {}
             valueType: "byte[]"
             uuid: "getConnectedRedeemData_byte[]1"
@@ -5544,7 +5560,7 @@ methods:
     - type: "STATIC"
       name: "RedeemData"
       modelFingerprint: "05C8D91370B8A093604DE37FE62AF4C4"
-      index: 9
+      index: 10
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -5589,7 +5605,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "E72FAEA21AC64BC712F6669CDCD57BBA"
-      index: 10
+      index: 11
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -5604,12 +5620,12 @@ methods:
       filledByUser: false
     uuid: "63590fbc-487d-307f-940e-bf3655312e87"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "getConnectedRedeemDataWhenScriptPatternIsP2WPKHConnectedScript"
@@ -5800,7 +5816,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "60DDD8DECC6DCE8F1B4C85F8417B2412"
-      index: 4
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -5826,7 +5842,7 @@ methods:
     - type: "LOCAL_VARIABLE"
       name: "connectedOutput"
       modelFingerprint: "8D93E030EECFEDEE24741197FE6EEEBC"
-      index: 5
+      index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -5861,7 +5877,7 @@ methods:
     - type: "STATIC"
       name: "ScriptPattern"
       modelFingerprint: "55B65DA30A56CF748E86A89CDDA4B3A1"
-      index: 6
+      index: 7
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -5902,7 +5918,7 @@ methods:
     - type: "STATIC"
       name: "ScriptPattern"
       modelFingerprint: "249616B5BB80E8FAD10C0F896D803029"
-      index: 7
+      index: 8
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -5943,7 +5959,7 @@ methods:
     - type: "STATIC"
       name: "ScriptPattern"
       modelFingerprint: "5E134BBA4EEE5E6C6DA9851A609A2A49"
-      index: 8
+      index: 9
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -5971,6 +5987,8 @@ methods:
           sapientType: "ARRAY"
           content: !<array>
             values: {}
+          suggestedContent: !<array>
+            values: {}
           valueType: "byte[]"
           uuid: "getConnectedRedeemData_byte[]1"
           fixed: false
@@ -5982,7 +6000,7 @@ methods:
     - type: "LOCAL_VARIABLE"
       name: "keyBag"
       modelFingerprint: "724B1458499DCD6E18C7A18F9E96791C"
-      index: 9
+      index: 10
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -6005,6 +6023,8 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
+              values: {}
+            suggestedContent: !<array>
               values: {}
             valueType: "byte[]"
             uuid: "getConnectedRedeemData_byte[]1"
@@ -6035,7 +6055,7 @@ methods:
     - type: "STATIC"
       name: "RedeemData"
       modelFingerprint: "05C8D91370B8A093604DE37FE62AF4C4"
-      index: 10
+      index: 11
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -6080,7 +6100,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "E72FAEA21AC64BC712F6669CDCD57BBA"
-      index: 11
+      index: 12
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -6095,12 +6115,12 @@ methods:
       filledByUser: false
     uuid: "c6b5285d-7302-38ab-bd21-75d13eaa7872"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path3"
     pathIdForUser: "path3"
     testPathName: "getConnectedRedeemDataWhenScriptPatternIsP2PKConnectedScript"
@@ -6291,7 +6311,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "60DDD8DECC6DCE8F1B4C85F8417B2412"
-      index: 4
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -6317,7 +6337,7 @@ methods:
     - type: "LOCAL_VARIABLE"
       name: "connectedOutput"
       modelFingerprint: "8D93E030EECFEDEE24741197FE6EEEBC"
-      index: 5
+      index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -6352,7 +6372,7 @@ methods:
     - type: "STATIC"
       name: "ScriptPattern"
       modelFingerprint: "55B65DA30A56CF748E86A89CDDA4B3A1"
-      index: 6
+      index: 7
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -6393,7 +6413,7 @@ methods:
     - type: "STATIC"
       name: "ScriptPattern"
       modelFingerprint: "CC77298EAC811FCD679C82528153F09C"
-      index: 7
+      index: 8
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -6434,7 +6454,7 @@ methods:
     - type: "STATIC"
       name: "ScriptPattern"
       modelFingerprint: "E82CB65D21D328460E09898597D89477"
-      index: 8
+      index: 9
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -6475,7 +6495,7 @@ methods:
     - type: "STATIC"
       name: "ScriptPattern"
       modelFingerprint: "EE2CAB903A0D50531F20FB0EC197E47F"
-      index: 9
+      index: 10
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -6503,6 +6523,8 @@ methods:
           sapientType: "ARRAY"
           content: !<array>
             values: {}
+          suggestedContent: !<array>
+            values: {}
           valueType: "byte[]"
           uuid: "getConnectedRedeemData_byte[]1"
           fixed: false
@@ -6514,7 +6536,7 @@ methods:
     - type: "LOCAL_VARIABLE"
       name: "keyBag"
       modelFingerprint: "4610A897258E3D0B2D3A290ADD53AFEC"
-      index: 10
+      index: 11
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -6538,6 +6560,8 @@ methods:
             sapientType: "ARRAY"
             content: !<array>
               values: {}
+            suggestedContent: !<array>
+              values: {}
             valueType: "byte[]"
             uuid: "getConnectedRedeemData_byte[]1"
             fixed: false
@@ -6557,7 +6581,7 @@ methods:
     - type: "STATIC"
       name: "RedeemData"
       modelFingerprint: "05C8D91370B8A093604DE37FE62AF4C4"
-      index: 11
+      index: 12
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -6602,7 +6626,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "E72FAEA21AC64BC712F6669CDCD57BBA"
-      index: 12
+      index: 13
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -6617,12 +6641,12 @@ methods:
       filledByUser: false
     uuid: "3eab6edb-f6b0-3ff9-9ef3-d2acf12c9b43"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path4"
     pathIdForUser: "path4"
     testPathName: "getConnectedRedeemDataWhenScriptPatternIsP2SHConnectedScript"
@@ -6813,7 +6837,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "60DDD8DECC6DCE8F1B4C85F8417B2412"
-      index: 4
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -6839,7 +6863,7 @@ methods:
     - type: "LOCAL_VARIABLE"
       name: "connectedOutput"
       modelFingerprint: "8D93E030EECFEDEE24741197FE6EEEBC"
-      index: 5
+      index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -6874,7 +6898,7 @@ methods:
     - type: "STATIC"
       name: "ScriptPattern"
       modelFingerprint: "55B65DA30A56CF748E86A89CDDA4B3A1"
-      index: 6
+      index: 7
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -6915,7 +6939,7 @@ methods:
     - type: "STATIC"
       name: "ScriptPattern"
       modelFingerprint: "CC77298EAC811FCD679C82528153F09C"
-      index: 7
+      index: 8
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -6956,7 +6980,7 @@ methods:
     - type: "STATIC"
       name: "ScriptPattern"
       modelFingerprint: "F25254BF751642CB294CA2B5C55B7982"
-      index: 8
+      index: 9
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -6997,7 +7021,7 @@ methods:
     - type: "STATIC"
       name: "ScriptPattern"
       modelFingerprint: "E681C5ECE90A8741C1B4CA803C8AC519"
-      index: 9
+      index: 10
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -7038,7 +7062,7 @@ methods:
     - type: "STATIC"
       name: "ScriptPattern"
       modelFingerprint: "0E905599DA54B5BB7BD61868E9349EE3"
-      index: 10
+      index: 11
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -7066,6 +7090,8 @@ methods:
           sapientType: "ARRAY"
           content: !<array>
             values: {}
+          suggestedContent: !<array>
+            values: {}
           valueType: "byte[]"
           uuid: "getConnectedRedeemData_byte[]1"
           fixed: false
@@ -7077,7 +7103,7 @@ methods:
     - type: "LOCAL_VARIABLE"
       name: "keyBag"
       modelFingerprint: "DC83F0153E3A8A6EC282DC1495BCA634"
-      index: 11
+      index: 12
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -7101,6 +7127,8 @@ methods:
             sapientType: "ARRAY"
             content: !<array>
               values: {}
+            suggestedContent: !<array>
+              values: {}
             valueType: "byte[]"
             uuid: "getConnectedRedeemData_byte[]1"
             fixed: false
@@ -7120,7 +7148,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "E72FAEA21AC64BC712F6669CDCD57BBA"
-      index: 12
+      index: 13
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -7135,12 +7163,12 @@ methods:
       filledByUser: false
     uuid: "6df325cf-381f-33a4-8db5-97982c48df3b"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path5"
     pathIdForUser: "path5"
     testPathName: "getConnectedRedeemDataWhenScriptPatternNotIsP2SHConnectedScriptThrowsScriptException"
@@ -7327,7 +7355,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "60DDD8DECC6DCE8F1B4C85F8417B2412"
-      index: 4
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -7353,7 +7381,7 @@ methods:
     - type: "LOCAL_VARIABLE"
       name: "connectedOutput"
       modelFingerprint: "8D93E030EECFEDEE24741197FE6EEEBC"
-      index: 5
+      index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -7389,7 +7417,7 @@ methods:
     - type: "STATIC"
       name: "ScriptPattern"
       modelFingerprint: "55B65DA30A56CF748E86A89CDDA4B3A1"
-      index: 6
+      index: 7
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -7431,7 +7459,7 @@ methods:
     - type: "STATIC"
       name: "ScriptPattern"
       modelFingerprint: "CC77298EAC811FCD679C82528153F09C"
-      index: 7
+      index: 8
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -7473,7 +7501,7 @@ methods:
     - type: "STATIC"
       name: "ScriptPattern"
       modelFingerprint: "F25254BF751642CB294CA2B5C55B7982"
-      index: 8
+      index: 9
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -7515,7 +7543,7 @@ methods:
     - type: "STATIC"
       name: "ScriptPattern"
       modelFingerprint: "9B3B0EEAA7A78875D67C6A1A69680615"
-      index: 9
+      index: 10
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -7557,7 +7585,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "E4510DB379D4F643C53E155D61060E1E"
-      index: 10
+      index: 11
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -7886,12 +7914,12 @@ methods:
       filledByUser: false
     uuid: "d9e39a67-74c4-3965-ae2b-0a81ca7c754a"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "connectTransaction"
     returnType: "org.bitcoinj.core.TransactionOutPoint"
@@ -8165,12 +8193,12 @@ methods:
       filledByUser: false
     uuid: "4ef19704-57d4-34d5-9e73-70f5b9defd58"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "disconnectTransaction"
     returnType: "org.bitcoinj.core.TransactionOutPoint"
@@ -8427,12 +8455,12 @@ methods:
       filledByUser: false
     uuid: "c2b3e60c-c17f-39a6-b50b-883830e40442"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "toString"
     returnType: "java.lang.String"
@@ -8547,7 +8575,6 @@ methods:
           valueType: "org.bitcoinj.base.Sha256Hash"
           uuid: "<init>_sha256Hash2"
           fixed: false
-          nameForMock: "<init>_sha256Hash2"
           equalsMethodPresent: false
           explicitCastNeeded: false
         access: 1
@@ -8813,14 +8840,14 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "D5F995FF16038F8C8CEB6ED663606C67"
-      index: 3
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
         valueType: "org.bitcoinj.base.Sha256Hash"
-        uuid: "<init>_sha256Hash2"
+        uuid: "<init>_sha256Hash6"
         fixed: false
         equalsMethodPresent: true
         explicitCastNeeded: false
@@ -8828,12 +8855,12 @@ methods:
       filledByUser: false
     uuid: "9d300d6c-ecd3-35df-b3af-b16008977eae"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "index"
     returnType: "long"
@@ -9028,12 +9055,12 @@ methods:
       filledByUser: false
     uuid: "5f246a97-4870-30c4-9915-ed4b32bcd219"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "getHash"
     returnType: "org.bitcoinj.base.Sha256Hash"
@@ -9211,14 +9238,14 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "D5F995FF16038F8C8CEB6ED663606C67"
-      index: 3
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "MOCK"
         valueType: "org.bitcoinj.base.Sha256Hash"
-        uuid: "<init>_sha256Hash2"
+        uuid: "<init>_sha256Hash6"
         fixed: false
         equalsMethodPresent: true
         explicitCastNeeded: false
@@ -9226,12 +9253,12 @@ methods:
       filledByUser: false
     uuid: "c152b292-9f41-3184-8d0c-c8dacb973313"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "getIndex"
     returnType: "long"
@@ -9426,12 +9453,12 @@ methods:
       filledByUser: false
     uuid: "1051d90e-6143-3be9-a736-0083704c4119"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "equals"
     returnType: "boolean"

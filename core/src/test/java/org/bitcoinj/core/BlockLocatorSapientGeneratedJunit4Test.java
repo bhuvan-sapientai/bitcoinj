@@ -68,23 +68,13 @@ public class BlockLocatorSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-        Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
-        ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
-        Sha256Hash sha256Hash2 = Sha256Hash.read(byteBuffer2);
-        ByteBuffer byteBuffer3 = ByteBuffer.allocateDirect(0);
-        Sha256Hash sha256Hash3 = Sha256Hash.read(byteBuffer3);
         List<Sha256Hash> sha256HashList = new ArrayList<>();
-        sha256HashList.add(sha256Hash);
-        sha256HashList.add(sha256Hash2);
-        sha256HashList.add(sha256Hash3);
         target = new BlockLocator(sha256HashList);
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
-        ByteBuffer byteBuffer4 = ByteBuffer.allocateDirect(0);
-        Sha256Hash sha256Hash4 = Sha256Hash.read(byteBuffer4);
+        Sha256Hash sha256HashMock = mock(Sha256Hash.class);
 
         //Act Statement(s)
-        BlockLocator result = target.add(sha256Hash4);
+        BlockLocator result = target.add(sha256HashMock);
 
         //Assert statement(s)
         assertThat(result, is(notNullValue()));

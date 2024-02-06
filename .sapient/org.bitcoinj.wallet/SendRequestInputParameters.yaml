@@ -1,5 +1,5 @@
 ---
-modelFingerprint: "86B058CA6387423D60F6CD896B47E741"
+modelFingerprint: "7ACA7D16DD4628138F19C554399A6330"
 methods:
 - method:
     name: "setFeePerVkb"
@@ -838,7 +838,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "A3B330870491AB7702890B1DD1BB4471"
-      index: 4
+      index: 8
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -1518,7 +1518,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "A3B330870491AB7702890B1DD1BB4471"
-      index: 4
+      index: 8
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -2195,7 +2195,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "CC7A33F0E4CA31637749657763FA09F9"
-      index: 2
+      index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -2256,7 +2256,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "A2AE1905E1103BD99B830E0E8697C53E"
+    modelFingerprint: "51B0A3079EDAF391F05DBF926FE4C4F0"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -2417,13 +2417,13 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Context"
-      modelFingerprint: "7CB274AB8C5D9B10354956461082CFA8"
+      modelFingerprint: "8844008653DC641C2374B8DCFBDA516E"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "REAL"
         valueType: "org.bitcoinj.core.Context"
         uuid: "org.bitcoinj.core.Context"
         fixed: false
@@ -2436,86 +2436,14 @@ methods:
         signature: "get(): Context"
         returnValue:
           sapientType: "OBJECT"
-          content: !<new>
+          content: !<static_method_return>
             target: "org.bitcoinj.core.Context"
-            parameters:
-            - name: "eventHorizon"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "int"
-                uuid: "<init>_context1-eventHorizon"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "feePerKb"
-              value:
-                sapientType: "MOCK"
-                valueType: "org.bitcoinj.base.Coin"
-                uuid: "<init>_coin1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "ensureMinRequiredFee"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: false
-                valueType: "boolean"
-                uuid: "<init>_context1-ensureMinRequiredFee"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "relaxProofOfWork"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: false
-                valueType: "boolean"
-                uuid: "<init>_context1-relaxProofOfWork"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            privateConstructor: false
-            createdByTargetCode: false
-          suggestedContent: !<new>
+            method: "get"
+            methodParameters: []
+          suggestedContent: !<static_method_return>
             target: "org.bitcoinj.core.Context"
-            parameters:
-            - name: "eventHorizon"
-              value:
-                sapientType: "BASIC"
-                valueType: "int"
-                uuid: "<init>_context1-eventHorizon"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "feePerKb"
-              value:
-                sapientType: "UNKNOWN"
-                valueType: "org.bitcoinj.base.Coin"
-                uuid: "<init>_coin1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "ensureMinRequiredFee"
-              value:
-                sapientType: "BASIC"
-                valueType: "boolean"
-                uuid: "<init>_context1-ensureMinRequiredFee"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "relaxProofOfWork"
-              value:
-                sapientType: "BASIC"
-                valueType: "boolean"
-                uuid: "<init>_context1-relaxProofOfWork"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            privateConstructor: false
-            createdByTargetCode: false
+            method: "get"
+            methodParameters: []
           valueType: "org.bitcoinj.core.Context"
           uuid: "<init>_context1"
           fixed: false
@@ -2525,93 +2453,21 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "5371D4F71B6B72332DC4974B59C2474D"
+      modelFingerprint: "675494EA278D7458E41C890E1C6C3B9F"
       index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "OBJECT"
-        content: !<new>
+        content: !<static_method_return>
           target: "org.bitcoinj.core.Context"
-          parameters:
-          - name: "eventHorizon"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "int"
-              uuid: "<init>_context1-eventHorizon"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "feePerKb"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.base.Coin"
-              uuid: "<init>_coin1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "ensureMinRequiredFee"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: false
-              valueType: "boolean"
-              uuid: "<init>_context1-ensureMinRequiredFee"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "relaxProofOfWork"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: false
-              valueType: "boolean"
-              uuid: "<init>_context1-relaxProofOfWork"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
+          method: "get"
+          methodParameters: []
+        suggestedContent: !<static_method_return>
           target: "org.bitcoinj.core.Context"
-          parameters:
-          - name: "eventHorizon"
-            value:
-              sapientType: "BASIC"
-              valueType: "int"
-              uuid: "<init>_context1-eventHorizon"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "feePerKb"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.base.Coin"
-              uuid: "<init>_coin1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "ensureMinRequiredFee"
-            value:
-              sapientType: "BASIC"
-              valueType: "boolean"
-              uuid: "<init>_context1-ensureMinRequiredFee"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "relaxProofOfWork"
-            value:
-              sapientType: "BASIC"
-              valueType: "boolean"
-              uuid: "<init>_context1-relaxProofOfWork"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
+          method: "get"
+          methodParameters: []
         valueType: "org.bitcoinj.core.Context"
         uuid: "<init>_context1"
         fixed: false
@@ -2623,7 +2479,41 @@ methods:
         parameters: []
         signature: "getFeePerKb(): Coin"
         returnValue:
-          sapientType: "MOCK"
+          sapientType: "OBJECT"
+          content: !<method_return_from_value>
+            target: "org.bitcoinj.base.Coin"
+            localVariableValue:
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "org.bitcoinj.core.Context"
+                method: "get"
+                methodParameters: []
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.core.Context"
+                method: "get"
+                methodParameters: []
+              valueType: "org.bitcoinj.core.Context"
+              uuid: "<init>_context1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters: []
+            methodName: "getFeePerKb"
+          suggestedContent: !<method_return_from_value>
+            target: "org.bitcoinj.base.Coin"
+            localVariableValue:
+              sapientType: "OBJECT"
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.core.Context"
+                method: "get"
+                methodParameters: []
+              valueType: "org.bitcoinj.core.Context"
+              uuid: "<init>_context1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters: []
+            methodName: "getFeePerKb"
           valueType: "org.bitcoinj.base.Coin"
           uuid: "<init>_coin1"
           fixed: false
@@ -2634,13 +2524,13 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Context"
-      modelFingerprint: "7CB274AB8C5D9B10354956461082CFA8"
+      modelFingerprint: "8844008653DC641C2374B8DCFBDA516E"
       index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "REAL"
         valueType: "org.bitcoinj.core.Context"
         uuid: "org.bitcoinj.core.Context"
         fixed: false
@@ -2653,86 +2543,14 @@ methods:
         signature: "get(): Context"
         returnValue:
           sapientType: "OBJECT"
-          content: !<new>
+          content: !<static_method_return>
             target: "org.bitcoinj.core.Context"
-            parameters:
-            - name: "eventHorizon"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: 0
-                valueType: "int"
-                uuid: "<init>_context2-eventHorizon"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "feePerKb"
-              value:
-                sapientType: "MOCK"
-                valueType: "org.bitcoinj.base.Coin"
-                uuid: "<init>_context2-feePerKb"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "ensureMinRequiredFee"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: false
-                valueType: "boolean"
-                uuid: "<init>_boolean1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "relaxProofOfWork"
-              value:
-                sapientType: "BASIC"
-                content: !<regular>
-                  value: false
-                valueType: "boolean"
-                uuid: "<init>_context2-relaxProofOfWork"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            privateConstructor: false
-            createdByTargetCode: false
-          suggestedContent: !<new>
+            method: "get"
+            methodParameters: []
+          suggestedContent: !<static_method_return>
             target: "org.bitcoinj.core.Context"
-            parameters:
-            - name: "eventHorizon"
-              value:
-                sapientType: "BASIC"
-                valueType: "int"
-                uuid: "<init>_context2-eventHorizon"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "feePerKb"
-              value:
-                sapientType: "UNKNOWN"
-                valueType: "org.bitcoinj.base.Coin"
-                uuid: "<init>_context2-feePerKb"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "ensureMinRequiredFee"
-              value:
-                sapientType: "BASIC"
-                valueType: "boolean"
-                uuid: "<init>_boolean1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            - name: "relaxProofOfWork"
-              value:
-                sapientType: "BASIC"
-                valueType: "boolean"
-                uuid: "<init>_context2-relaxProofOfWork"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            privateConstructor: false
-            createdByTargetCode: false
+            method: "get"
+            methodParameters: []
           valueType: "org.bitcoinj.core.Context"
           uuid: "<init>_context2"
           fixed: false
@@ -2742,93 +2560,21 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "BC7D0D0C9DE649E5EAD9D695287E7C12"
+      modelFingerprint: "94288EE8C62573B5F097F9AC278AD694"
       index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "OBJECT"
-        content: !<new>
+        content: !<static_method_return>
           target: "org.bitcoinj.core.Context"
-          parameters:
-          - name: "eventHorizon"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "int"
-              uuid: "<init>_context2-eventHorizon"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "feePerKb"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.base.Coin"
-              uuid: "<init>_context2-feePerKb"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "ensureMinRequiredFee"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: false
-              valueType: "boolean"
-              uuid: "<init>_boolean1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "relaxProofOfWork"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: false
-              valueType: "boolean"
-              uuid: "<init>_context2-relaxProofOfWork"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
+          method: "get"
+          methodParameters: []
+        suggestedContent: !<static_method_return>
           target: "org.bitcoinj.core.Context"
-          parameters:
-          - name: "eventHorizon"
-            value:
-              sapientType: "BASIC"
-              valueType: "int"
-              uuid: "<init>_context2-eventHorizon"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "feePerKb"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.base.Coin"
-              uuid: "<init>_context2-feePerKb"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "ensureMinRequiredFee"
-            value:
-              sapientType: "BASIC"
-              valueType: "boolean"
-              uuid: "<init>_boolean1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "relaxProofOfWork"
-            value:
-              sapientType: "BASIC"
-              valueType: "boolean"
-              uuid: "<init>_context2-relaxProofOfWork"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
+          method: "get"
+          methodParameters: []
         valueType: "org.bitcoinj.core.Context"
         uuid: "<init>_context2"
         fixed: false
@@ -2854,7 +2600,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "A3B330870491AB7702890B1DD1BB4471"
-      index: 3
+      index: 7
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -3751,7 +3497,7 @@ methods:
     - type: "STATIC"
       name: "SendRequest"
       modelFingerprint: "F50E94C4225B4538B011224CC98FC161"
-      index: 18
+      index: 14
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -3818,7 +3564,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "1A9CEF61A7D892E5B95A81E0E790F6D1"
-      index: 19
+      index: 15
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -3833,7 +3579,7 @@ methods:
       filledByUser: false
     uuid: "296cbaee-2c96-3f11-8688-962118a92952"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     variablesCouldNotBeIsolated: "tx"
     failureReason:
@@ -3841,7 +3587,7 @@ methods:
       source: "tx.addInput(outputToSpend);"
       lineNumber: 230
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path5"
     testPathName: "childPaysForParentWhenOutputGetValueNotIsGreaterThanFeeRaiseThrowsNullPointerException"
@@ -4138,7 +3884,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "1544C3243427A58A5AE91A88CC628F77"
-      index: 6
+      index: 9
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -4485,12 +4231,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "BF7B457BC2C19D32F21FC19A502D543D"
+    modelFingerprint: "829A37C1100E85D1B41B66EC8520A217"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "STATIC_FACTORY_METHOD"
-      modelFingerprint: "AAD13D394BA5567D77658C6049AB53F8"
+      modelFingerprint: "E7D54EB330446567882985C6D21C3070"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -4503,33 +4249,7 @@ methods:
           methodParameters:
           - name: "params"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "org.bitcoinj.core.NetworkParameters"
-                method: "fromID"
-                methodParameters:
-                - name: "id"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "id1"
-                    valueType: "java.lang.String"
-                    uuid: "to_networkParameters1-id"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.core.NetworkParameters"
-                method: "fromID"
-                methodParameters:
-                - name: "id"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "java.lang.String"
-                    uuid: "to_networkParameters1-id"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+              sapientType: "MOCK"
               valueType: "org.bitcoinj.core.NetworkParameters"
               uuid: "to_networkParameters1"
               fixed: false
@@ -4537,17 +4257,7 @@ methods:
               explicitCastNeeded: false
           - name: "destination"
             value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "org.bitcoinj.crypto.ECKey"
-                parameters: []
-                privateConstructor: false
-                createdByTargetCode: false
-              suggestedContent: !<new>
-                target: "org.bitcoinj.crypto.ECKey"
-                parameters: []
-                privateConstructor: false
-                createdByTargetCode: false
+              sapientType: "MOCK"
               valueType: "org.bitcoinj.crypto.ECKey"
               uuid: "to_eCKey1"
               fixed: false
@@ -4555,33 +4265,7 @@ methods:
               explicitCastNeeded: false
           - name: "value"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "org.bitcoinj.base.Coin"
-                method: "valueOf"
-                methodParameters:
-                - name: "satoshis"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 0
-                    valueType: "long"
-                    uuid: "to_coin1-satoshis"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.base.Coin"
-                method: "valueOf"
-                methodParameters:
-                - name: "satoshis"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "long"
-                    uuid: "to_coin1-satoshis"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+              sapientType: "MOCK"
               valueType: "org.bitcoinj.base.Coin"
               uuid: "to_coin1"
               fixed: false
@@ -4593,33 +4277,7 @@ methods:
           methodParameters:
           - name: "params"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "org.bitcoinj.core.NetworkParameters"
-                method: "fromID"
-                methodParameters:
-                - name: "id"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: "id1"
-                    valueType: "java.lang.String"
-                    uuid: "to_networkParameters1-id"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.core.NetworkParameters"
-                method: "fromID"
-                methodParameters:
-                - name: "id"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "java.lang.String"
-                    uuid: "to_networkParameters1-id"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.core.NetworkParameters"
               uuid: "to_networkParameters1"
               fixed: false
@@ -4627,17 +4285,7 @@ methods:
               explicitCastNeeded: false
           - name: "destination"
             value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "org.bitcoinj.crypto.ECKey"
-                parameters: []
-                privateConstructor: false
-                createdByTargetCode: false
-              suggestedContent: !<new>
-                target: "org.bitcoinj.crypto.ECKey"
-                parameters: []
-                privateConstructor: false
-                createdByTargetCode: false
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.crypto.ECKey"
               uuid: "to_eCKey1"
               fixed: false
@@ -4645,33 +4293,7 @@ methods:
               explicitCastNeeded: false
           - name: "value"
             value:
-              sapientType: "OBJECT"
-              content: !<static_method_return>
-                target: "org.bitcoinj.base.Coin"
-                method: "valueOf"
-                methodParameters:
-                - name: "satoshis"
-                  value:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 0
-                    valueType: "long"
-                    uuid: "to_coin1-satoshis"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<static_method_return>
-                target: "org.bitcoinj.base.Coin"
-                method: "valueOf"
-                methodParameters:
-                - name: "satoshis"
-                  value:
-                    sapientType: "BASIC"
-                    valueType: "long"
-                    uuid: "to_coin1-satoshis"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.base.Coin"
               uuid: "to_coin1"
               fixed: false
@@ -4686,7 +4308,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "SendRequest"
-      modelFingerprint: "E59171B078F31368F51EC86C380F2BDF"
+      modelFingerprint: "979C8A8CC3B2C54AA7DACF2EC2D88D87"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -4704,17 +4326,7 @@ methods:
         parameters:
         - name: "destination"
           value:
-            sapientType: "OBJECT"
-            content: !<new>
-              target: "org.bitcoinj.crypto.ECKey"
-              parameters: []
-              privateConstructor: false
-              createdByTargetCode: false
-            suggestedContent: !<new>
-              target: "org.bitcoinj.crypto.ECKey"
-              parameters: []
-              privateConstructor: false
-              createdByTargetCode: false
+            sapientType: "MOCK"
             valueType: "org.bitcoinj.crypto.ECKey"
             uuid: "to_eCKey1"
             fixed: false
@@ -4722,33 +4334,7 @@ methods:
             explicitCastNeeded: false
         - name: "value"
           value:
-            sapientType: "OBJECT"
-            content: !<static_method_return>
-              target: "org.bitcoinj.base.Coin"
-              method: "valueOf"
-              methodParameters:
-              - name: "satoshis"
-                value:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: 0
-                  valueType: "long"
-                  uuid: "to_coin1-satoshis"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            suggestedContent: !<static_method_return>
-              target: "org.bitcoinj.base.Coin"
-              method: "valueOf"
-              methodParameters:
-              - name: "satoshis"
-                value:
-                  sapientType: "BASIC"
-                  valueType: "long"
-                  uuid: "to_coin1-satoshis"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
+            sapientType: "MOCK"
             valueType: "org.bitcoinj.base.Coin"
             uuid: "to_coin1"
             fixed: false
@@ -4791,6 +4377,5 @@ methods:
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

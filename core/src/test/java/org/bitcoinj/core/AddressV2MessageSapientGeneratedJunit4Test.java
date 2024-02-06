@@ -99,6 +99,7 @@ public class AddressV2MessageSapientGeneratedJunit4Test {
          * (for-each(addresses)) : true
          */
         //Arrange Statement(s)
+        //VarInt varIntMock = mock(VarInt.class);
         /*try (MockedStatic<VarInt> varInt = mockStatic(VarInt.class);
     MockedStatic<AddressMessage> addressMessage = mockStatic(AddressMessage.class)) {
     List<PeerAddress> peerAddressList = new ArrayList<>();
@@ -118,33 +119,6 @@ public class AddressV2MessageSapientGeneratedJunit4Test {
     addressMessage.verify(() -> AddressMessage.readAddresses((ByteBuffer) any(), eq(2)));
     verify(peerAddressMock).serialize(2);
     varInt.verify(() -> VarInt.of(1L), atLeast(1));
-    verify(varIntMock).serialize();
-}*/
-    }
-
-    //Sapient generated method id: ${35afdd86-5f5e-308a-90c4-f21907ff06dd}
-    @Test()
-    public void bitcoinSerializeToStreamWhenAddressesIsEmpty() throws IOException, BufferUnderflowException, ProtocolException {
-        /* Branches:
-         * (addresses == null) : false
-         * (for-each(addresses)) : false
-         */
-        //Arrange Statement(s)
-        /*try (MockedStatic<VarInt> varInt = mockStatic(VarInt.class);
-    MockedStatic<AddressMessage> addressMessage = mockStatic(AddressMessage.class)) {
-    List<PeerAddress> peerAddressList = new ArrayList<>();
-    addressMessage.when(() -> AddressMessage.readAddresses((ByteBuffer) any(), eq(2))).thenReturn(peerAddressList);
-    varInt.when(() -> VarInt.of(0L)).thenReturn(varIntMock);
-    byte[] byteArray = new byte[] {};
-    doReturn(byteArray).when(varIntMock).serialize();
-    ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-    AddressV2Message target = AddressV2Message.read(byteBuffer);
-    OutputStream outputStream = OutputStream.nullOutputStream();
-    //Act Statement(s)
-    target.bitcoinSerializeToStream(outputStream);
-    //Assert statement(s)
-    addressMessage.verify(() -> AddressMessage.readAddresses((ByteBuffer) any(), eq(2)));
-    varInt.verify(() -> VarInt.of(0L), atLeast(1));
     verify(varIntMock).serialize();
 }*/
     }

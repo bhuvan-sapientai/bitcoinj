@@ -127,10 +127,10 @@ public class DumpedPrivateKeySapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class);
              MockedStatic<Base58> base58 = mockStatic(Base58.class)) {
-            byte[] byteArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
+            byte[] byteArray = new byte[]{(byte) 0};
             base58.when(() -> Base58.decodeChecked("A")).thenReturn(byteArray);
             networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParametersMock);
-            doReturn(128).when(networkParametersMock).getDumpedPrivateKeyHeader();
+            doReturn(1).when(networkParametersMock).getDumpedPrivateKeyHeader();
             AddressFormatException.InvalidDataLength addressFormatExceptionInvalidDataLength = new AddressFormatException.InvalidDataLength("Wrong number of bytes for a private key (32 or 33): 0");
             thrown.expect(AddressFormatException.InvalidDataLength.class);
             thrown.expectMessage(addressFormatExceptionInvalidDataLength.getMessage());
@@ -172,35 +172,6 @@ public class DumpedPrivateKeySapientGeneratedJunit4Test {
         }
     }
 
-    //Sapient generated method id: ${4e0296e6-81c7-3592-9e53-2c2801536622}
-    @Ignore()
-    @Test()
-    public void fromBase58WhenVersionEqualsParamsGetDumpedPrivateKeyHeaderAndDefaultBranch() throws AddressFormatException, WrongNetwork {
-        /* Branches:
-         * (network == null) : false
-         * (version == params.getDumpedPrivateKeyHeader()) : true
-         * (branch expression (line 87)) : false  #  inside <init> method
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class);
-             MockedStatic<Base58> base58 = mockStatic(Base58.class)) {
-            byte[] byteArray = new byte[]{(byte) 0};
-            base58.when(() -> Base58.decodeChecked("A")).thenReturn(byteArray);
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParametersMock);
-            doReturn(1).when(networkParametersMock).getDumpedPrivateKeyHeader();
-            //Act Statement(s)
-            DumpedPrivateKey result = DumpedPrivateKey.fromBase58(networkMock, "A");
-            //Assert statement(s)
-            assertThat(result, is(notNullValue()));
-            base58.verify(() -> Base58.decodeChecked("A"), atLeast(1));
-            networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-            verify(networkParametersMock).getDumpedPrivateKeyHeader();
-        }
-    }
-
     //Sapient generated method id: ${300529ff-f3e9-35c4-9ee9-36efe8815233}
     @Ignore()
     @Test()
@@ -215,7 +186,6 @@ public class DumpedPrivateKeySapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Network networkMock = mock(Network.class, "Network");
         try (MockedStatic<Networks> networks = mockStatic(Networks.class);
              MockedStatic<Base58> base58 = mockStatic(Base58.class)) {
             byte[] byteArray = new byte[]{(byte) 0};
@@ -223,7 +193,7 @@ public class DumpedPrivateKeySapientGeneratedJunit4Test {
             Set<NetworkParameters> networkParametersSet = new HashSet<>();
             networkParametersSet.add(networkParametersMock);
             networks.when(() -> Networks.get()).thenReturn(networkParametersSet);
-            doReturn(0).when(networkParametersMock).getDumpedPrivateKeyHeader();
+            doReturn(1).when(networkParametersMock).getDumpedPrivateKeyHeader();
             doReturn(networkMock).when(networkParametersMock).network();
             AddressFormatException.InvalidDataLength addressFormatExceptionInvalidDataLength = new AddressFormatException.InvalidDataLength("Wrong number of bytes for a private key (32 or 33): 0");
             thrown.expect(AddressFormatException.InvalidDataLength.class);
@@ -253,7 +223,6 @@ public class DumpedPrivateKeySapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Network networkMock = mock(Network.class, "Network");
         try (MockedStatic<Networks> networks = mockStatic(Networks.class);
              MockedStatic<Base58> base58 = mockStatic(Base58.class)) {
             byte[] byteArray = new byte[]{(byte) 0};
@@ -261,7 +230,7 @@ public class DumpedPrivateKeySapientGeneratedJunit4Test {
             Set<NetworkParameters> networkParametersSet = new HashSet<>();
             networkParametersSet.add(networkParametersMock);
             networks.when(() -> Networks.get()).thenReturn(networkParametersSet);
-            doReturn(0).when(networkParametersMock).getDumpedPrivateKeyHeader();
+            doReturn(1).when(networkParametersMock).getDumpedPrivateKeyHeader();
             doReturn(networkMock).when(networkParametersMock).network();
             Network network = null;
             //Act Statement(s)

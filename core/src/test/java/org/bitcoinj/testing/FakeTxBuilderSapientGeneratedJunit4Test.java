@@ -214,16 +214,10 @@ public class FakeTxBuilderSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Coin valueMock = mock(Coin.class);
-        try (MockedStatic<ScriptBuilder> scriptBuilder = mockStatic(ScriptBuilder.class);
-             MockedStatic<TransactionSignature> transactionSignature = mockStatic(TransactionSignature.class);
-             MockedStatic<Coin> coin = mockStatic(Coin.class)) {
+        try (MockedStatic<Coin> coin = mockStatic(Coin.class)) {
             doReturn(0L).when(valueMock).getValue();
             Coin coin2 = Coin.valueOf(7L);
             coin.when(() -> Coin.valueOf(7L)).thenReturn(coin2);
-            TransactionSignature transactionSignature2 = TransactionSignature.dummy();
-            transactionSignature.when(() -> TransactionSignature.dummy()).thenReturn(transactionSignature2);
-            Script script = ScriptBuilder.createInputScript(transactionSignature2);
-            scriptBuilder.when(() -> ScriptBuilder.createInputScript((TransactionSignature) any())).thenReturn(script);
             coin.when(() -> Coin.valueOf(0L)).thenReturn(coinMock);
             //Act Statement(s)
             Transaction result = FakeTxBuilder.createFakeTxWithoutChangeAddress(valueMock, addressMock);
@@ -232,10 +226,8 @@ public class FakeTxBuilderSapientGeneratedJunit4Test {
             Transaction transaction = Transaction.read(byteBuffer);
             //Assert statement(s)
             assertThat(result, equalTo(transaction));
-            verify(valueMock).getValue();
+            verify(valueMock, times(3)).getValue();
             coin.verify(() -> Coin.valueOf(7L), atLeast(1));
-            transactionSignature.verify(() -> TransactionSignature.dummy(), atLeast(1));
-            scriptBuilder.verify(() -> ScriptBuilder.createInputScript((TransactionSignature) any()), atLeast(2));
             coin.verify(() -> Coin.valueOf(0L), atLeast(1));
         }
     }
@@ -356,7 +348,7 @@ public class FakeTxBuilderSapientGeneratedJunit4Test {
         TransactionOutput transactionOutput2 = new TransactionOutput(t1Mock, coin, addressMock);
         TransactionOutput transactionOutput = t1Mock.addOutput(transactionOutput2);
         doReturn(transactionOutput).when(t1Mock).addOutput((TransactionOutput) any());
-        byte[] byteArray = new byte[]{(byte) 1, (byte) 0, (byte) 0, (byte) 0, (byte) 1, (byte) -66, (byte) -73, (byte) 23, (byte) -111, (byte) -13, (byte) -74, (byte) 74, (byte) 40, (byte) -53, (byte) -89, (byte) -57, (byte) 26, (byte) -43, (byte) -22, (byte) 22, (byte) 94, (byte) 101, (byte) -3, (byte) 20, (byte) 52, (byte) -47, (byte) 117, (byte) -33, (byte) -14, (byte) -35, (byte) 46, (byte) 64, (byte) 104, (byte) -126, (byte) -26, (byte) -10, (byte) 67, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) -1, (byte) -1, (byte) -1, (byte) -1, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
+        byte[] byteArray = new byte[]{(byte) 1, (byte) 0, (byte) 0, (byte) 0, (byte) 1, (byte) 64, (byte) 62, (byte) 85, (byte) 120, (byte) -26, (byte) 17, (byte) 118, (byte) -80, (byte) -111, (byte) 109, (byte) -82, (byte) 67, (byte) -77, (byte) -26, (byte) 71, (byte) 118, (byte) 28, (byte) 103, (byte) -111, (byte) -90, (byte) -59, (byte) 4, (byte) 63, (byte) 29, (byte) 55, (byte) -21, (byte) -3, (byte) 85, (byte) 63, (byte) 36, (byte) 11, (byte) -18, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) -1, (byte) -1, (byte) -1, (byte) -1, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
         doReturn(byteArray).when(t1Mock).serialize();
         Transaction transaction = new Transaction();
         ECKey eCKey = new ECKey();
@@ -389,7 +381,7 @@ public class FakeTxBuilderSapientGeneratedJunit4Test {
         TransactionOutput transactionOutput2 = new TransactionOutput(t1Mock, coin, addressMock);
         TransactionOutput transactionOutput = t1Mock.addOutput(transactionOutput2);
         doReturn(transactionOutput).when(t1Mock).addOutput((TransactionOutput) any());
-        byte[] byteArray = new byte[]{(byte) 1, (byte) 0, (byte) 0, (byte) 0, (byte) 1, (byte) -88, (byte) -90, (byte) 80, (byte) 80, (byte) 13, (byte) 76, (byte) 51, (byte) -112, (byte) -78, (byte) 53, (byte) 120, (byte) 18, (byte) 85, (byte) 98, (byte) -34, (byte) 114, (byte) 126, (byte) 92, (byte) 73, (byte) -99, (byte) 53, (byte) 51, (byte) 22, (byte) -34, (byte) -42, (byte) -14, (byte) 105, (byte) -55, (byte) -69, (byte) -52, (byte) -46, (byte) 39, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) -1, (byte) -1, (byte) -1, (byte) -1, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
+        byte[] byteArray = new byte[]{(byte) 1, (byte) 0, (byte) 0, (byte) 0, (byte) 1, (byte) 42, (byte) 9, (byte) 114, (byte) -101, (byte) 69, (byte) 10, (byte) -69, (byte) 36, (byte) 19, (byte) -121, (byte) 5, (byte) 68, (byte) 33, (byte) 99, (byte) -64, (byte) -14, (byte) 100, (byte) -10, (byte) 28, (byte) -44, (byte) -74, (byte) 47, (byte) 46, (byte) 56, (byte) -109, (byte) -11, (byte) -87, (byte) 84, (byte) -110, (byte) -31, (byte) -20, (byte) 122, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) -1, (byte) -1, (byte) -1, (byte) -1, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
         doReturn(byteArray).when(t1Mock).serialize();
         Transaction transaction = new Transaction();
         ECKey eCKey = new ECKey();

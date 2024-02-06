@@ -170,7 +170,7 @@ methods:
             collectionClass: "java.util.ArrayList"
             parameters: []
             values:
-            - sapientType: "UNKNOWN"
+            - sapientType: "MOCK"
               valueType: "org.bitcoinj.script.ScriptChunk"
               uuid: "<init>_arrayList1Item0"
               fixed: false
@@ -2395,8 +2395,8 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "1901602B8F6548B1E24FA8F2A693F3C5"
-    problemWasSolvedByProver: false
+    modelFingerprint: "D7C2D2CD2C0197A7E1EF23C93F1F978C"
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -2450,7 +2450,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "index"
-      modelFingerprint: "3AA7A281AF957334EC60FB4709DC7758"
+      modelFingerprint: "AB46221EE38C6158A433A05F2D8F5C7A"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -2470,7 +2470,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "data"
-      modelFingerprint: "565935454FC57268BD0516C7C48214D6"
+      modelFingerprint: "B0B2413CB7E864B1BF4A66C7ADA26D83"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -2494,6 +2494,8 @@ methods:
           values:
             0:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 1
               suggestedContent: !<regular>
                 value: 1
               valueType: "byte"
@@ -2587,7 +2589,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "Script"
-      modelFingerprint: "AD13694B900BC6E497DD5ADB014E44B7"
+      modelFingerprint: "4480AB0F4FCA807DAC311477D0E9C4AB"
       index: 6
       ignored: false
       nestedInLoop: false
@@ -2619,8 +2621,6 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: 81
-          suggestedContent: !<regular>
             value: 81
           valueType: "int"
           uuid: "data_int5"
@@ -2667,8 +2667,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    failureReason:
-      reason: "REFLECTION_CALL_FAILURE"
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path3"
@@ -2679,8 +2678,8 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "B06971A39EA2945A7A85255E55AF6F0B"
-    problemWasSolvedByProver: false
+    modelFingerprint: "822F6C227EE696F3759A0A27335CEFE7"
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -2734,7 +2733,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "index"
-      modelFingerprint: "3AA7A281AF957334EC60FB4709DC7758"
+      modelFingerprint: "AB46221EE38C6158A433A05F2D8F5C7A"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -2754,7 +2753,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "data"
-      modelFingerprint: "1F30D88EF0B2B1F3A48386C5C626B01A"
+      modelFingerprint: "0D076C0E140B33EF05DF0E632B622FA0"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -2778,6 +2777,8 @@ methods:
           values:
             0:
               sapientType: "BASIC"
+              content: !<regular>
+                value: 17
               suggestedContent: !<regular>
                 value: 17
               valueType: "byte"
@@ -2906,8 +2907,7 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    failureReason:
-      reason: "REFLECTION_CALL_FAILURE"
+    prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path6"
@@ -4721,7 +4721,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "9C2942F615251A91E193CF9DCEB41B2D"
+    modelFingerprint: "9B2263D254AB18141FE7494A765D9E70"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -4814,13 +4814,13 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "TimeUtils"
-      modelFingerprint: "19DE031B758E44392582012D4037D413"
+      modelFingerprint: "395487F60C1C4BD4BBDD54A9D0F8C51F"
       index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
+        sapientType: "REAL"
         valueType: "org.bitcoinj.base.internal.TimeUtils"
         uuid: "org.bitcoinj.base.internal.TimeUtils"
         fixed: false
@@ -4851,7 +4851,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "template"
-      modelFingerprint: "C0DAD5904B4A16B9AF9A0322435B153B"
+      modelFingerprint: "867E928E2F01D6807E79E6CB89C39120"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -4935,13 +4935,12 @@ methods:
       filledByUser: false
     uuid: "080cad56-3838-34be-ad35-86f8a3ef6b63"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
-    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "number"
     returnType: "org.bitcoinj.script.ScriptBuilder"
@@ -6411,7 +6410,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "AD5052984EE8C957D6840AD78EAC306B"
-    problemWasSolvedByProver: false
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -6660,13 +6659,11 @@ methods:
       filledByUser: false
     uuid: "d685ddeb-f729-3a5d-a311-d32195ba457d"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
-    failureReason:
-      reason: "UNKNOWN_REASON"
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "smallNum1WhenNumLessThan0ThrowsIllegalArgumentException"
@@ -12987,7 +12984,7 @@ methods:
     - type: "STATIC"
       name: "Preconditions"
       modelFingerprint: "60A6CF81A4B62FC26CAD9062FF6E1448"
-      index: 4
+      index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -13015,7 +13012,7 @@ methods:
         returnValue:
           sapientType: "VOID"
           valueType: "void"
-          uuid: "createMultiSigOutputScript_void2"
+          uuid: "createMultiSigOutputScript_void1"
           fixed: true
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -13369,7 +13366,7 @@ methods:
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "REAL"
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.base.internal.Preconditions"
         uuid: "org.bitcoinj.base.internal.Preconditions"
         fixed: false
@@ -13402,12 +13399,12 @@ methods:
     - type: "STATIC"
       name: "Preconditions"
       modelFingerprint: "60A6CF81A4B62FC26CAD9062FF6E1448"
-      index: 3
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "REAL"
+        sapientType: "MOCK"
         valueType: "org.bitcoinj.base.internal.Preconditions"
         uuid: "org.bitcoinj.base.internal.Preconditions"
         fixed: false
@@ -13430,7 +13427,7 @@ methods:
         returnValue:
           sapientType: "VOID"
           valueType: "void"
-          uuid: "createMultiSigOutputScript_void1"
+          uuid: "createMultiSigOutputScript_void2"
           fixed: true
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -14831,6 +14828,9 @@ methods:
         content: !<collection>
           parameters: []
           values: []
+        suggestedContent: !<collection>
+          parameters: []
+          values: []
         valueType: "java.util.List"
         genericValueType: "byte[]"
         uuid: "createMultiSigInputScriptBytes_list1"
@@ -14861,6 +14861,9 @@ methods:
           value:
             sapientType: "COLLECTION"
             content: !<collection>
+              parameters: []
+              values: []
+            suggestedContent: !<collection>
               parameters: []
               values: []
             valueType: "java.util.List"
@@ -15032,6 +15035,8 @@ methods:
           sapientType: "ARRAY"
           content: !<array>
             values: {}
+          suggestedContent: !<array>
+            values: {}
           valueType: "byte[]"
           uuid: "createP2SHMultiSigInputScript_byte[]2"
           fixed: false
@@ -15080,6 +15085,8 @@ methods:
               parameters: []
               values:
               - sapientType: "ARRAY"
+                content: !<array>
+                  values: {}
                 suggestedContent: !<array>
                   values: {}
                 valueType: "byte[]"
@@ -15097,6 +15104,8 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
+              values: {}
+            suggestedContent: !<array>
               values: {}
             valueType: "byte[]"
             uuid: "createP2SHMultiSigInputScript_byte[]2"
@@ -17291,14 +17300,14 @@ methods:
             collectionClass: "java.util.ArrayList"
             parameters: []
             values:
-            - sapientType: "UNKNOWN"
+            - sapientType: "MOCK"
               valueType: "org.bitcoinj.script.ScriptChunk"
               uuid: "updateScriptWithSignature_object1"
               fixed: false
               collectionUuid: "updateScriptWithSignature_list2"
               equalsMethodPresent: false
               explicitCastNeeded: false
-            - sapientType: "UNKNOWN"
+            - sapientType: "MOCK"
               suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.script.ScriptChunk"
                 onlyPojoFunctions: false
@@ -17309,13 +17318,13 @@ methods:
               collectionUuid: "updateScriptWithSignature_list3"
               equalsMethodPresent: false
               explicitCastNeeded: false
-            - sapientType: "UNKNOWN"
+            - sapientType: "MOCK"
               valueType: "org.bitcoinj.script.ScriptChunk"
               uuid: "updateScriptWithSignature_list3Item1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
-            - sapientType: "UNKNOWN"
+            - sapientType: "MOCK"
               suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.script.ScriptChunk"
                 onlyPojoFunctions: false
@@ -17326,7 +17335,7 @@ methods:
               collectionUuid: "updateScriptWithSignature_list1"
               equalsMethodPresent: false
               explicitCastNeeded: false
-            - sapientType: "UNKNOWN"
+            - sapientType: "MOCK"
               valueType: "org.bitcoinj.script.ScriptChunk"
               uuid: "updateScriptWithSignature_object3"
               fixed: false
@@ -17436,7 +17445,7 @@ methods:
     - type: "LOCAL_VARIABLE"
       name: "builder"
       modelFingerprint: "3A0E5E4F5EDD43C28270EA44F838FCBA"
-      index: 15
+      index: 10
       ignored: false
       nestedInLoop: true
       nestedInRecursion: false
@@ -17465,7 +17474,7 @@ methods:
           value:
             sapientType: "MOCK"
             valueType: "org.bitcoinj.script.ScriptChunk"
-            uuid: "updateScriptWithSignature_object3"
+            uuid: "updateScriptWithSignature_object1"
             fixed: false
             collectionUuid: "updateScriptWithSignature_list2"
             equalsMethodPresent: false
@@ -17497,9 +17506,9 @@ methods:
               value:
                 sapientType: "MOCK"
                 valueType: "org.bitcoinj.script.ScriptChunk"
-                uuid: "updateScriptWithSignature_object3"
+                uuid: "updateScriptWithSignature_object1"
                 fixed: false
-                collectionUuid: "updateScriptWithSignature_list4"
+                collectionUuid: "updateScriptWithSignature_list2"
                 equalsMethodPresent: false
                 explicitCastNeeded: false
             methodName: "addChunk"
@@ -17529,7 +17538,7 @@ methods:
                 explicitCastNeeded: false
             methodName: "addChunk"
           valueType: "org.bitcoinj.script.ScriptBuilder"
-          uuid: "updateScriptWithSignature_scriptBuilder6"
+          uuid: "updateScriptWithSignature_scriptBuilder2"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -18022,6 +18031,11 @@ methods:
       nestedInRecursion: false
       value:
         sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.script.ScriptBuilder"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
         suggestedContent: !<new>
           target: "org.bitcoinj.script.ScriptBuilder"
           parameters: []
@@ -18038,7 +18052,7 @@ methods:
         parameters:
         - name: "chunk"
           value:
-            sapientType: "UNKNOWN"
+            sapientType: "MOCK"
             valueType: "org.bitcoinj.script.ScriptChunk"
             uuid: "updateScriptWithSignature_object3"
             fixed: false
@@ -18048,6 +18062,36 @@ methods:
         signature: "addChunk(ScriptChunk): ScriptBuilder"
         returnValue:
           sapientType: "OBJECT"
+          content: !<method_return_from_value>
+            target: "org.bitcoinj.script.ScriptBuilder"
+            localVariableValue:
+              sapientType: "OBJECT"
+              content: !<new>
+                target: "org.bitcoinj.script.ScriptBuilder"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              suggestedContent: !<new>
+                target: "org.bitcoinj.script.ScriptBuilder"
+                parameters: []
+                privateConstructor: false
+                createdByTargetCode: true
+              valueType: "org.bitcoinj.script.ScriptBuilder"
+              uuid: "updateScriptWithSignature_scriptBuilder1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "chunk"
+              value:
+                sapientType: "MOCK"
+                valueType: "org.bitcoinj.script.ScriptChunk"
+                uuid: "updateScriptWithSignature_object3"
+                fixed: false
+                collectionUuid: "updateScriptWithSignature_list4"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "addChunk"
           suggestedContent: !<method_return_from_value>
             target: "org.bitcoinj.script.ScriptBuilder"
             localVariableValue:
@@ -19057,7 +19101,7 @@ methods:
     - type: "LOCAL_VARIABLE"
       name: "builder"
       modelFingerprint: "3A0E5E4F5EDD43C28270EA44F838FCBA"
-      index: 10
+      index: 14
       ignored: false
       nestedInLoop: true
       nestedInRecursion: false
@@ -19086,7 +19130,7 @@ methods:
           value:
             sapientType: "MOCK"
             valueType: "org.bitcoinj.script.ScriptChunk"
-            uuid: "updateScriptWithSignature_object1"
+            uuid: "updateScriptWithSignature_object3"
             fixed: false
             collectionUuid: "updateScriptWithSignature_list4"
             equalsMethodPresent: false
@@ -19150,7 +19194,7 @@ methods:
                 explicitCastNeeded: false
             methodName: "addChunk"
           valueType: "org.bitcoinj.script.ScriptBuilder"
-          uuid: "updateScriptWithSignature_scriptBuilder2"
+          uuid: "updateScriptWithSignature_scriptBuilder5"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -20740,6 +20784,8 @@ methods:
           sapientType: "ARRAY"
           content: !<array>
             values: {}
+          suggestedContent: !<array>
+            values: {}
           valueType: "byte[]"
           uuid: "createP2PKOutputScript_byte[]1"
           fixed: false
@@ -20770,6 +20816,8 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
+              values: {}
+            suggestedContent: !<array>
               values: {}
             valueType: "byte[]"
             uuid: "createP2PKOutputScript_byte[]1"
@@ -21143,6 +21191,8 @@ methods:
           sapientType: "ARRAY"
           content: !<array>
             values: {}
+          suggestedContent: !<array>
+            values: {}
           valueType: "byte[]"
           uuid: "createP2PKHOutputScript_byte[]1"
           fixed: false
@@ -21173,6 +21223,8 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
+              values: {}
+            suggestedContent: !<array>
               values: {}
             valueType: "byte[]"
             uuid: "createP2PKHOutputScript_byte[]1"
@@ -25719,6 +25771,8 @@ methods:
           sapientType: "ARRAY"
           content: !<array>
             values: {}
+          suggestedContent: !<array>
+            values: {}
           valueType: "byte[]"
           uuid: "createP2WPKHOutputScript_byte[]1"
           fixed: false
@@ -25749,6 +25803,8 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
+              values: {}
+            suggestedContent: !<array>
               values: {}
             valueType: "byte[]"
             uuid: "createP2WPKHOutputScript_byte[]1"
@@ -34577,6 +34633,9 @@ methods:
         content: !<collection>
           parameters: []
           values: []
+        suggestedContent: !<collection>
+          parameters: []
+          values: []
         valueType: "java.util.List"
         genericValueType: "org.bitcoinj.crypto.ECKey"
         uuid: "createP2SHOutputScript_list1"
@@ -34617,6 +34676,9 @@ methods:
           value:
             sapientType: "COLLECTION"
             content: !<collection>
+              parameters: []
+              values: []
+            suggestedContent: !<collection>
               parameters: []
               values: []
             valueType: "java.util.List"

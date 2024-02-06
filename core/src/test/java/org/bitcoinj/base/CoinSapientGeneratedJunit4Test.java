@@ -64,8 +64,10 @@ public class CoinSapientGeneratedJunit4Test {
         /* Branches:
          * (satoshis == 0) : false
          */
+
         //Act Statement(s)
         Coin result = Coin.valueOf(-1L);
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -80,13 +82,12 @@ public class CoinSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<Coin> coin = mockStatic(Coin.class, CALLS_REAL_METHODS)) {
-            Coin coin2 = Coin.valueOf(0L);
-            coin.when(() -> Coin.valueOf(0L)).thenReturn(coin2);
+            coin.when(() -> Coin.valueOf(0L)).thenReturn(coinMock);
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
             //Act Statement(s)
             Coin result = Coin.read(byteBuffer);
             //Assert statement(s)
-            assertThat(result, equalTo(coin2));
+            assertThat(result, equalTo(coinMock));
             coin.verify(() -> Coin.valueOf(0L), atLeast(1));
         }
     }
@@ -153,8 +154,10 @@ public class CoinSapientGeneratedJunit4Test {
     @Ignore()
     @Test()
     public void btcToSatoshiTest() throws ArithmeticException {
+
         //Act Statement(s)
         long result = Coin.btcToSatoshi(new BigDecimal("1.0"));
+
         //Assert statement(s)
         assertThat(result, equalTo(100000000L));
     }
@@ -163,8 +166,10 @@ public class CoinSapientGeneratedJunit4Test {
     @Ignore()
     @Test()
     public void satoshiToBtcTest() {
+
         //Act Statement(s)
         BigDecimal result = Coin.satoshiToBtc(0L);
+
         //Assert statement(s)
         assertThat(result.stripTrailingZeros(), equalTo(new BigDecimal("1.0E-8").stripTrailingZeros()));
     }

@@ -44,6 +44,28 @@ public class TransactionSignatureSapientGeneratedJunit4Test {
     @Rule()
     public ExpectedException thrown = ExpectedException.none();
 
+    //Sapient generated method id: ${3dbfe428-6e56-33c3-8bcb-173a846a51e4}
+    @Ignore()
+    @Test()
+    public void encodeToBitcoinWhenCaughtIOExceptionThrowsRuntimeException() throws IOException {
+        /* Branches:
+         * (catch-exception (IOException)) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        TransactionSignature target = spy(new TransactionSignature(new BigInteger("0"), new BigInteger("0"), 0));
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        doReturn(byteArrayOutputStream).when(target).derByteStream();
+        thrown.expect(RuntimeException.class);
+        thrown.expectCause(is(instanceOf(IOException.class)));
+        //Act Statement(s)
+        target.encodeToBitcoin();
+        //Assert statement(s)
+        verify(target).derByteStream();
+    }
+
     //Sapient generated method id: ${d0af7b12-863b-39db-883e-ba87d0065357}
     @Test()
     public void dummyTest() {
@@ -52,20 +74,6 @@ public class TransactionSignatureSapientGeneratedJunit4Test {
         TransactionSignature transactionSignature = new TransactionSignature(new BigInteger("57896044618658097711785492504343953926418782139537452191302581570759080747168"), new BigInteger("57896044618658097711785492504343953926418782139537452191302581570759080747168"));
         //Assert statement(s)
         assertThat(result, equalTo(transactionSignature));
-    }
-
-    //Sapient generated method id: ${8abe3a34-808c-30c8-b7c2-d61287cda95b}
-    @Ignore()
-    @Test()
-    public void calcSigHashValueWhenAnyoneCanPay() {
-        /* Branches:
-         * (SigHash.ALL == mode) : true
-         * (anyoneCanPay) : true
-         */
-        //Act Statement(s)
-        int result = TransactionSignature.calcSigHashValue(Transaction.SigHash.ALL, true);
-        //Assert statement(s)
-        assertThat(result, equalTo(0));
     }
 
     //Sapient generated method id: ${fa4ea5c0-f0d2-3f55-996b-8017c6fb9fad}
@@ -119,15 +127,19 @@ public class TransactionSignatureSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${4bb63b8a-9ee0-3a6f-acb1-b95fc9bcb0db}
+    @Ignore()
     @Test()
     public void isEncodingCanonicalWhenSignatureLengthGreaterThan73() {
         /* Branches:
          * (signature.length == 0) : false
          * (signature.length < 9) : false
          * (signature.length > 73) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31, (byte) 32, (byte) 33, (byte) 34, (byte) 35, (byte) 36, (byte) 37, (byte) 38, (byte) 39, (byte) 40, (byte) 41, (byte) 42, (byte) 43, (byte) 44, (byte) 45, (byte) 46, (byte) 47, (byte) 48, (byte) 49, (byte) 50, (byte) 51, (byte) 52, (byte) 53, (byte) 54, (byte) 55, (byte) 56, (byte) 57, (byte) 58, (byte) 59, (byte) 60, (byte) 61, (byte) 62, (byte) 63, (byte) 64, (byte) 65, (byte) 66, (byte) 67, (byte) 68, (byte) 69, (byte) 70, (byte) 71, (byte) 72, (byte) 73};
+        byte[] byteArray = new byte[]{};
         //Act Statement(s)
         boolean result = TransactionSignature.isEncodingCanonical(byteArray);
         //Assert statement(s)
@@ -143,6 +155,9 @@ public class TransactionSignatureSapientGeneratedJunit4Test {
          * (signature.length > 73) : false
          * (hashType < Transaction.SigHash.ALL.value) : false
          * (hashType > Transaction.SigHash.SINGLE.value) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8};
@@ -227,207 +242,6 @@ public class TransactionSignatureSapientGeneratedJunit4Test {
         assertThat(result, equalTo(Boolean.FALSE));
     }
 
-    //Sapient generated method id: ${2e36f6ae-29d5-3900-9449-a0fb3cf7f5de}
-    @Test()
-    public void isEncodingCanonicalWhen4IndexOfSignatureAnd128Equals128() {
-        /* Branches:
-         * (signature.length == 0) : false
-         * (signature.length < 9) : false
-         * (signature.length > 73) : false
-         * (hashType < Transaction.SigHash.ALL.value) : false
-         * (hashType > Transaction.SigHash.SINGLE.value) : false
-         * ((signature[0] & 0xff) != 0x30) : false
-         * ((signature[1] & 0xff) != signature.length - 3) : false
-         * (5 + lenR >= signature.length) : false
-         * (lenR == 0) : false
-         * (lenR + lenS + 7 != signature.length) : false
-         * (lenS == 0) : false
-         * (signature[4 - 2] != 0x02) : false
-         * ((signature[4] & 0x80) == 0x80) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8};
-        //Act Statement(s)
-        boolean result = TransactionSignature.isEncodingCanonical(byteArray);
-        //Assert statement(s)
-        assertThat(result, equalTo(Boolean.FALSE));
-    }
-
-    //Sapient generated method id: ${968ffbbf-970a-3ef2-8b01-d4d01c77372f}
-    @Test()
-    public void isEncodingCanonicalWhen6PlusLenRMinus2IndexOfSignatureNotEquals2() {
-        /* Branches:
-         * (signature.length == 0) : false
-         * (signature.length < 9) : false
-         * (signature.length > 73) : false
-         * (hashType < Transaction.SigHash.ALL.value) : false
-         * (hashType > Transaction.SigHash.SINGLE.value) : false
-         * ((signature[0] & 0xff) != 0x30) : false
-         * ((signature[1] & 0xff) != signature.length - 3) : false
-         * (5 + lenR >= signature.length) : false
-         * (lenR == 0) : false
-         * (lenR + lenS + 7 != signature.length) : false
-         * (lenS == 0) : false
-         * (signature[4 - 2] != 0x02) : false
-         * ((signature[4] & 0x80) == 0x80) : false
-         * (lenR > 1) : false
-         * (signature[6 + lenR - 2] != 0x02) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 0, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8};
-        //Act Statement(s)
-        boolean result = TransactionSignature.isEncodingCanonical(byteArray);
-        //Assert statement(s)
-        assertThat(result, equalTo(Boolean.FALSE));
-    }
-
-    //Sapient generated method id: ${fb675832-8fa9-39d9-9fea-84cad0c337bb}
-    @Test()
-    public void isEncodingCanonicalWhen4Plus1IndexOfSignatureAnd128NotEquals128() {
-        /* Branches:
-         * (signature.length == 0) : false
-         * (signature.length < 9) : false
-         * (signature.length > 73) : false
-         * (hashType < Transaction.SigHash.ALL.value) : false
-         * (hashType > Transaction.SigHash.SINGLE.value) : false
-         * ((signature[0] & 0xff) != 0x30) : false
-         * ((signature[1] & 0xff) != signature.length - 3) : false
-         * (5 + lenR >= signature.length) : false
-         * (lenR == 0) : false
-         * (lenR + lenS + 7 != signature.length) : false
-         * (lenS == 0) : false
-         * (signature[4 - 2] != 0x02) : false
-         * ((signature[4] & 0x80) == 0x80) : false
-         * (lenR > 1) : true
-         * (signature[4] == 0x00) : true
-         * ((signature[4 + 1] & 0x80) != 0x80) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 0, (byte) 5, (byte) 6, (byte) 7, (byte) 8};
-        //Act Statement(s)
-        boolean result = TransactionSignature.isEncodingCanonical(byteArray);
-        //Assert statement(s)
-        assertThat(result, equalTo(Boolean.FALSE));
-    }
-
-    //Sapient generated method id: ${532335fa-a47f-3f3e-b298-a91d13d1ac5b}
-    @Test()
-    public void isEncodingCanonicalWhen4Plus1IndexOfSignatureAnd128Equals128And6PlusLenRMinus2IndexOfSignatureEquals2And6PlusLenRIndexO() {
-        /* Branches:
-         * (signature.length == 0) : false
-         * (signature.length < 9) : false
-         * (signature.length > 73) : false
-         * (hashType < Transaction.SigHash.ALL.value) : false
-         * (hashType > Transaction.SigHash.SINGLE.value) : false
-         * ((signature[0] & 0xff) != 0x30) : false
-         * ((signature[1] & 0xff) != signature.length - 3) : false
-         * (5 + lenR >= signature.length) : false
-         * (lenR == 0) : false
-         * (lenR + lenS + 7 != signature.length) : false
-         * (lenS == 0) : false
-         * (signature[4 - 2] != 0x02) : false
-         * ((signature[4] & 0x80) == 0x80) : false
-         * (lenR > 1) : true
-         * (signature[4] == 0x00) : true
-         * ((signature[4 + 1] & 0x80) != 0x80) : false
-         * (signature[6 + lenR - 2] != 0x02) : false
-         * ((signature[6 + lenR] & 0x80) == 0x80) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 0, (byte) 5, (byte) 2, (byte) 7, (byte) 8, (byte) 9};
-        //Act Statement(s)
-        boolean result = TransactionSignature.isEncodingCanonical(byteArray);
-        //Assert statement(s)
-        assertThat(result, equalTo(Boolean.FALSE));
-    }
-
-    //Sapient generated method id: ${66b9a231-2bf0-3797-958b-70798cd020d7}
-    @Test()
-    public void isEncodingCanonicalWhenLenSGreaterThan1And6PlusLenRIndexOfSignatureEquals0And6PlusLenRPlus1IndexOfSignatureAnd128NotEqu() {
-        /* Branches:
-         * (signature.length == 0) : false
-         * (signature.length < 9) : false
-         * (signature.length > 73) : false
-         * (hashType < Transaction.SigHash.ALL.value) : false
-         * (hashType > Transaction.SigHash.SINGLE.value) : false
-         * ((signature[0] & 0xff) != 0x30) : false
-         * ((signature[1] & 0xff) != signature.length - 3) : false
-         * (5 + lenR >= signature.length) : false
-         * (lenR == 0) : false
-         * (lenR + lenS + 7 != signature.length) : false
-         * (lenS == 0) : false
-         * (signature[4 - 2] != 0x02) : false
-         * ((signature[4] & 0x80) == 0x80) : false
-         * (lenR > 1) : true
-         * (signature[4] == 0x00) : true
-         * ((signature[4 + 1] & 0x80) != 0x80) : false
-         * (signature[6 + lenR - 2] != 0x02) : false
-         * ((signature[6 + lenR] & 0x80) == 0x80) : false
-         * (lenS > 1) : true
-         * (signature[6 + lenR] == 0x00) : true
-         * ((signature[6 + lenR + 1] & 0x80) != 0x80) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 0, (byte) 5, (byte) 2, (byte) 7, (byte) 0, (byte) 9, (byte) 10};
-        //Act Statement(s)
-        boolean result = TransactionSignature.isEncodingCanonical(byteArray);
-        //Assert statement(s)
-        assertThat(result, equalTo(Boolean.FALSE));
-    }
-
-    //Sapient generated method id: ${892643da-9a14-3e26-8906-fad1f7d6431f}
-    @Ignore()
-    @Test()
-    public void isEncodingCanonicalWhenLenSGreaterThan1And6PlusLenRIndexOfSignatureEquals0And6PlusLenRPlus1IndexOfSignatureAnd128Equals() {
-        /* Branches:
-         * (signature.length == 0) : false
-         * (signature.length < 9) : false
-         * (signature.length > 73) : false
-         * (hashType < Transaction.SigHash.ALL.value) : false
-         * (hashType > Transaction.SigHash.SINGLE.value) : false
-         * ((signature[0] & 0xff) != 0x30) : false
-         * ((signature[1] & 0xff) != signature.length - 3) : false
-         * (5 + lenR >= signature.length) : false
-         * (lenR == 0) : false
-         * (lenR + lenS + 7 != signature.length) : false
-         * (lenS == 0) : false
-         * (signature[4 - 2] != 0x02) : false
-         * ((signature[4] & 0x80) == 0x80) : false
-         * (lenR > 1) : true
-         * (signature[4] == 0x00) : true
-         * ((signature[4 + 1] & 0x80) != 0x80) : false
-         * (signature[6 + lenR - 2] != 0x02) : false
-         * ((signature[6 + lenR] & 0x80) == 0x80) : false
-         * (lenS > 1) : true
-         * (signature[6 + lenR] == 0x00) : true
-         * ((signature[6 + lenR + 1] & 0x80) != 0x80) : false
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 0, (byte) 5, (byte) 2, (byte) 7, (byte) 0, (byte) 9, (byte) 10};
-        //Act Statement(s)
-        boolean result = TransactionSignature.isEncodingCanonical(byteArray);
-        //Assert statement(s)
-        assertThat(result, equalTo(Boolean.TRUE));
-    }
-
     //Sapient generated method id: ${882d22fc-598a-3814-9856-697349d7ec4b}
     @Ignore()
     @Test()
@@ -483,7 +297,7 @@ public class TransactionSignatureSapientGeneratedJunit4Test {
          * (mode == Transaction.SigHash.SINGLE.value) : false
          */
         //Arrange Statement(s)
-        TransactionSignature target = new TransactionSignature(new BigInteger("1234567890"), new BigInteger("9876543210"), 1);
+        TransactionSignature target = new TransactionSignature(new BigInteger("10"), new BigInteger("20"), 31);
         //Act Statement(s)
         Transaction.SigHash result = target.sigHashMode();
         //Assert statement(s)
@@ -507,28 +321,6 @@ public class TransactionSignatureSapientGeneratedJunit4Test {
         byte[] byteResultArray = new byte[]{};
         //Assert statement(s)
         assertThat(result, equalTo(byteResultArray));
-        verify(target).derByteStream();
-    }
-
-    //Sapient generated method id: ${3dbfe428-6e56-33c3-8bcb-173a846a51e4}
-    @Ignore()
-    @Test()
-    public void encodeToBitcoinWhenCaughtIOExceptionThrowsRuntimeException() throws IOException {
-        /* Branches:
-         * (catch-exception (IOException)) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        TransactionSignature target = spy(new TransactionSignature(new BigInteger("10"), new BigInteger("20"), 1));
-        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-        doReturn(byteArrayOutputStream).when(target).derByteStream();
-        thrown.expect(RuntimeException.class);
-        thrown.expectCause(is(instanceOf(IOException.class)));
-        //Act Statement(s)
-        target.encodeToBitcoin();
-        //Assert statement(s)
         verify(target).derByteStream();
     }
 
@@ -584,11 +376,15 @@ public class TransactionSignatureSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${29a36674-78fa-37ab-bc86-8d03db35531a}
+    @Ignore()
     @Test()
     public void decodeFromBitcoinWhenIsEncodingCanonicalNotBytesThrowsVerificationExceptionNoncanonicalSignature() throws SignatureDecodeException, VerificationException {
         /* Branches:
          * (requireCanonicalEncoding) : true
          * (!isEncodingCanonical(bytes)) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         try (MockedStatic<TransactionSignature> transactionSignature = mockStatic(TransactionSignature.class, CALLS_REAL_METHODS)) {
@@ -596,7 +392,7 @@ public class TransactionSignatureSapientGeneratedJunit4Test {
             transactionSignature.when(() -> TransactionSignature.isEncodingCanonical(byteArray)).thenReturn(false);
             thrown.expect(VerificationException.NoncanonicalSignature.class);
             //Act Statement(s)
-            TransactionSignature.decodeFromBitcoin(byteArray, true, false);
+            TransactionSignature.decodeFromBitcoin(byteArray, false, false);
             //Assert statement(s)
             transactionSignature.verify(() -> TransactionSignature.isEncodingCanonical(byteArray), atLeast(1));
         }

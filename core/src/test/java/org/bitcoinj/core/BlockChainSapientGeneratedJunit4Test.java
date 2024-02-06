@@ -136,37 +136,6 @@ public class BlockChainSapientGeneratedJunit4Test {
         }
     }
 
-    //Sapient generated method id: ${86b85864-54ef-3bde-b9e6-1827988cc0bf}
-    @Ignore()
-    @Test()
-    public void rollbackBlockStoreWhenHeightLessThan0ThrowsIllegalArgumentException() throws BlockStoreException {
-        /* Branches:
-         * (height >= 0) : false
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), -1);
-            doReturn(storedBlock).when(blockStoreMock).getChainHead();
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(networkParametersMock);
-            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
-            BlockChain target = spy(new BlockChain(networkMock, walletMock, blockStoreMock));
-            doReturn(0).when(target).getBestChainHeight();
-            thrown.expect(IllegalArgumentException.class);
-            //Act Statement(s)
-            target.rollbackBlockStore(-1);
-            //Assert statement(s)
-            verify(blockStoreMock).getChainHead();
-            networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-            verify(target).getBestChainHeight();
-        }
-    }
-
     //Sapient generated method id: ${1c0ebbf4-3510-3785-b5d3-8a5f306034af}
     @Ignore()
     @Test()

@@ -39,7 +39,7 @@ public class TransactionBroadcastSapientGeneratedJunit4Test {
     @Rule()
     public Timeout timeoutRule = Timeout.seconds(5);
 
-    private final PeerGroup peerGroupMock = mock(PeerGroup.class, "PeerGroup");
+    private final PeerGroup peerGroupMock = mock(PeerGroup.class, "peerGroupValue");
 
     private final Context contextMock = mock(Context.class);
 
@@ -60,7 +60,7 @@ public class TransactionBroadcastSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        doReturn(1).when(peerGroupMock).getMinBroadcastConnections();
+        doReturn(5).when(peerGroupMock).getMinBroadcastConnections();
         Transaction transaction = new Transaction();
         TransactionBroadcast target = new TransactionBroadcast(peerGroupMock, transaction);
         //Act Statement(s)
@@ -73,11 +73,14 @@ public class TransactionBroadcastSapientGeneratedJunit4Test {
     //Sapient generated method id: ${d7e77330-f070-3bc7-9504-6705e6b01f93}
     @Test()
     public void createMockBroadcastTest() {
+        /**
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
         //Arrange Statement(s)
-        Transaction transaction = new Transaction();
         CompletableFuture<Transaction> completableFuture = new CompletableFuture<>();
         //Act Statement(s)
-        TransactionBroadcast result = TransactionBroadcast.createMockBroadcast(transaction, completableFuture);
+        TransactionBroadcast result = TransactionBroadcast.createMockBroadcast(transactionMock, completableFuture);
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -95,8 +98,7 @@ public class TransactionBroadcastSapientGeneratedJunit4Test {
             doReturn(1).when(peerGroupMock).getMinBroadcastConnections();
             CompletableFuture completableFuture = new CompletableFuture();
             listenableCompletableFuture.when(() -> ListenableCompletableFuture.of(completableFuture)).thenReturn(listenableCompletableFutureMock);
-            Transaction transaction = new Transaction();
-            TransactionBroadcast target = spy(new TransactionBroadcast(peerGroupMock, transaction));
+            TransactionBroadcast target = spy(new TransactionBroadcast(peerGroupMock, transactionMock));
             CompletableFuture<TransactionBroadcast> completableFuture2 = new CompletableFuture<>();
             doReturn(completableFuture2).when(target).awaitRelayed();
             //Act Statement(s)
@@ -190,13 +192,16 @@ public class TransactionBroadcastSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        TransactionBroadcast target = new TransactionBroadcast(peerGroupMock, transactionMock);
+        doReturn(5).when(peerGroupMock).getMinBroadcastConnections();
+        Transaction transaction = new Transaction();
+        TransactionBroadcast target = new TransactionBroadcast(peerGroupMock, transaction);
         //Act Statement(s)
         CompletableFuture<TransactionBroadcast> result = target.awaitRelayed();
         CompletableFuture<TransactionBroadcast> completableFuture = new CompletableFuture<>();
         //Assert statement(s)
         //TODO: Please implement equals method in CompletableFuture for verification to succeed or you need to adjust respective assertion statements
         assertThat(result, equalTo(completableFuture));
+        verify(peerGroupMock).getMinBroadcastConnections();
     }
 
     //Sapient generated method id: ${59a0d6d6-3259-3488-904b-6593cd7ea6c0}
@@ -208,13 +213,16 @@ public class TransactionBroadcastSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        TransactionBroadcast target = new TransactionBroadcast(peerGroupMock, transactionMock);
+        doReturn(1).when(peerGroupMock).getMinBroadcastConnections();
+        Transaction transaction = new Transaction();
+        TransactionBroadcast target = new TransactionBroadcast(peerGroupMock, transaction);
         //Act Statement(s)
         CompletableFuture<TransactionBroadcast> result = target.awaitSent();
         CompletableFuture<TransactionBroadcast> completableFuture = new CompletableFuture<>();
         //Assert statement(s)
         //TODO: Please implement equals method in CompletableFuture for verification to succeed or you need to adjust respective assertion statements
         assertThat(result, equalTo(completableFuture));
+        verify(peerGroupMock).getMinBroadcastConnections();
     }
 
     //Sapient generated method id: ${4eb7128d-6d35-3535-8be5-c40ff5bd2b32}
@@ -230,8 +238,7 @@ public class TransactionBroadcastSapientGeneratedJunit4Test {
             doReturn(1).when(peerGroupMock).getMinBroadcastConnections();
             CompletableFuture completableFuture = new CompletableFuture();
             listenableCompletableFuture.when(() -> ListenableCompletableFuture.of(completableFuture)).thenReturn(listenableCompletableFutureMock);
-            Transaction transaction = new Transaction();
-            TransactionBroadcast target = spy(new TransactionBroadcast(peerGroupMock, transaction));
+            TransactionBroadcast target = spy(new TransactionBroadcast(peerGroupMock, transactionMock));
             CompletableFuture<TransactionBroadcast> completableFuture2 = new CompletableFuture<>();
             doReturn(completableFuture2).when(target).broadcastAndAwaitRelay();
             //Act Statement(s)
@@ -253,10 +260,8 @@ public class TransactionBroadcastSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        doReturn(0).when(peerGroupMock).getMinBroadcastConnections();
-        Transaction transaction = new Transaction();
-        TransactionBroadcast target = spy(new TransactionBroadcast(peerGroupMock, transaction));
-        TransactionBroadcast.ProgressCallback transactionBroadcastProgressCallbackMock = mock(TransactionBroadcast.ProgressCallback.class, "<value>");
+        doReturn(1).when(peerGroupMock).getMinBroadcastConnections();
+        TransactionBroadcast target = spy(new TransactionBroadcast(peerGroupMock, transactionMock));
         doNothing().when(target).setProgressCallback(transactionBroadcastProgressCallbackMock, (Executor) null);
         //Act Statement(s)
         target.setProgressCallback(transactionBroadcastProgressCallbackMock);
@@ -277,9 +282,7 @@ public class TransactionBroadcastSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         doReturn(1).when(peerGroupMock).getMinBroadcastConnections();
-        Transaction transaction = new Transaction();
-        TransactionBroadcast target = new TransactionBroadcast(peerGroupMock, transaction);
-        TransactionBroadcast.ProgressCallback transactionBroadcastProgressCallbackMock = mock(TransactionBroadcast.ProgressCallback.class, "null");
+        TransactionBroadcast target = new TransactionBroadcast(peerGroupMock, transactionMock);
         //TODO: Needs initialization with real value
         Executor executor = null;
         //Act Statement(s)

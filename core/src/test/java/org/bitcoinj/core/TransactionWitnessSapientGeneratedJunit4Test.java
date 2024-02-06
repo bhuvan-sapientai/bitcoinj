@@ -63,6 +63,31 @@ public class TransactionWitnessSapientGeneratedJunit4Test {
     @Rule()
     public ExpectedException thrown = ExpectedException.none();
 
+    //Sapient generated method id: ${9d328af1-2293-3544-bbbc-a0683c1f9fbe}
+    @Ignore()
+    @Test()
+    public void serializeTest() throws BufferOverflowException {
+        /**
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        byte[] byteArray = new byte[]{};
+        List<byte[]> byteList = new ArrayList<>();
+        byteList.add(byteArray);
+        TransactionWitness target = spy(TransactionWitness.of(byteList));
+        doReturn(1).when(target).messageSize();
+        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+        doReturn(byteBuffer).when(target).write((ByteBuffer) any());
+        //Act Statement(s)
+        byte[] result = target.serialize();
+        byte[] byteResultArray = new byte[]{};
+        //Assert statement(s)
+        assertThat(result, equalTo(byteResultArray));
+        verify(target).messageSize();
+        verify(target).write((ByteBuffer) any());
+    }
+
     //Sapient generated method id: ${848b5418-f65f-3400-a9e9-12dec4a0a36f}
     @Test()
     public void redeemP2WPKHWhenSignatureIsNotNull() {
@@ -232,64 +257,35 @@ public class TransactionWitnessSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${46390a57-25fa-372f-b5f9-33562d858327}
+    @Ignore()
     @Test()
     public void writeWhenPushesIsNotEmpty() throws BufferOverflowException {
         /* Branches:
          * (for-each(pushes)) : true
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<Buffers> buffers = mockStatic(Buffers.class);
-             MockedStatic<VarInt> varInt = mockStatic(VarInt.class)) {
-            varInt.when(() -> VarInt.of(2L)).thenReturn(varIntMock);
-            //TODO: Needs to return real value
-            doReturn(null).when(varIntMock).write((ByteBuffer) any());
-            byte[] byteArray = new byte[]{(byte) 1, (byte) 2, (byte) 3};
-            //TODO: Needs to return real value
-            buffers.when(() -> Buffers.writeLengthPrefixedBytes((ByteBuffer) any(), eq(byteArray))).thenReturn(null);
-            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-            byte[] byteArray2 = new byte[]{(byte) 4, (byte) 5, (byte) 6};
-            buffers.when(() -> Buffers.writeLengthPrefixedBytes((ByteBuffer) any(), eq(byteArray2))).thenReturn(byteBuffer);
-            List<byte[]> byteList = new ArrayList<>();
-            byteList.add(byteArray);
-            byteList.add(byteArray2);
-            TransactionWitness target = TransactionWitness.of(byteList);
-            ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
-            //Act Statement(s)
-            ByteBuffer result = target.write(byteBuffer2);
-            //Assert statement(s)
-            assertThat(result, equalTo(byteBuffer2));
-            varInt.verify(() -> VarInt.of(2L), atLeast(1));
-            verify(varIntMock).write((ByteBuffer) any());
-            buffers.verify(() -> Buffers.writeLengthPrefixedBytes((ByteBuffer) any(), eq(byteArray)));
-            buffers.verify(() -> Buffers.writeLengthPrefixedBytes((ByteBuffer) any(), eq(byteArray2)));
-        }
-    }
-
-    //Sapient generated method id: ${9d328af1-2293-3544-bbbc-a0683c1f9fbe}
-    @Ignore()
-    @Test()
-    public void serializeTest() throws BufferOverflowException {
-        /**
+         *
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        byte[] byteArray = new byte[]{(byte) 1, (byte) 2, (byte) 3};
-        byte[] byteArray2 = new byte[]{(byte) 4, (byte) 5, (byte) 6};
-        List<byte[]> byteList = new ArrayList<>();
-        byteList.add(byteArray);
-        byteList.add(byteArray2);
-        TransactionWitness target = spy(TransactionWitness.of(byteList));
-        doReturn(1).when(target).messageSize();
-        ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-        doReturn(byteBuffer).when(target).write((ByteBuffer) any());
-        //Act Statement(s)
-        byte[] result = target.serialize();
-        byte[] byteResultArray = new byte[]{};
-        //Assert statement(s)
-        assertThat(result, equalTo(byteResultArray));
-        verify(target).messageSize();
-        verify(target).write((ByteBuffer) any());
+        try (MockedStatic<Buffers> buffers = mockStatic(Buffers.class);
+             MockedStatic<VarInt> varInt = mockStatic(VarInt.class)) {
+            varInt.when(() -> VarInt.of(0L)).thenReturn(varIntMock);
+            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+            doReturn(byteBuffer).when(varIntMock).write((ByteBuffer) any());
+            ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
+            byte[] byteArray = new byte[]{};
+            buffers.when(() -> Buffers.writeLengthPrefixedBytes((ByteBuffer) any(), eq(byteArray))).thenReturn(byteBuffer2);
+            List<byte[]> byteList = new ArrayList<>();
+            TransactionWitness target = TransactionWitness.of(byteList);
+            ByteBuffer byteBuffer3 = ByteBuffer.allocateDirect(0);
+            //Act Statement(s)
+            ByteBuffer result = target.write(byteBuffer3);
+            //Assert statement(s)
+            assertThat(result, equalTo(byteBuffer3));
+            varInt.verify(() -> VarInt.of(0L), atLeast(1));
+            verify(varIntMock).write((ByteBuffer) any());
+            buffers.verify(() -> Buffers.writeLengthPrefixedBytes((ByteBuffer) any(), eq(byteArray)));
+        }
     }
 
     //Sapient generated method id: ${198e0ef0-e6d5-3daa-9f95-2e02390f74a3}
@@ -332,22 +328,8 @@ public class TransactionWitnessSapientGeneratedJunit4Test {
         verify(target).messageSize();
     }
 
-    //Sapient generated method id: ${e6355e02-ffe7-36cf-882f-9b4527452410}
-    @Test()
-    public void toStringWhenPushesIsEmpty() {
-        /* Branches:
-         * (for-each(pushes)) : false
-         */
-        //Arrange Statement(s)
-        List<byte[]> byteList = new ArrayList<>();
-        TransactionWitness target = TransactionWitness.of(byteList);
-        //Act Statement(s)
-        String result = target.toString();
-        //Assert statement(s)
-        assertThat(result, equalTo(""));
-    }
-
     //Sapient generated method id: ${6ecbda3c-3734-3c94-b31a-d398eb9ec8be}
+    @Ignore()
     @Test()
     public void toStringWhenPushLengthEquals0() {
         /* Branches:
@@ -367,7 +349,7 @@ public class TransactionWitnessSapientGeneratedJunit4Test {
         //Act Statement(s)
         String result = target.toString();
         //Assert statement(s)
-        assertThat(result, equalTo(""));
+        assertThat(result, equalTo("return_of_join1"));
     }
 
     //Sapient generated method id: ${065a56d0-4ec0-38eb-a24f-b51c11ce350a}

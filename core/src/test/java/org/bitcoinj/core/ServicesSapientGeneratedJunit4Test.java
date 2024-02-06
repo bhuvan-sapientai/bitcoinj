@@ -15,6 +15,20 @@ import static org.hamcrest.Matchers.is;
 
 import org.junit.Ignore;
 
+import java.util.List;
+
+import org.mockito.MockedStatic;
+
+import java.util.LinkedList;
+
+import org.bitcoinj.base.internal.InternalUtils;
+
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.atLeast;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.mockStatic;
+import static org.mockito.Mockito.doReturn;
+
 public class ServicesSapientGeneratedJunit4Test {
 
     @Rule()
@@ -23,8 +37,10 @@ public class ServicesSapientGeneratedJunit4Test {
     //Sapient generated method id: ${3155f475-158f-3510-8516-db6562387204}
     @Test()
     public void ofTest() {
+
         //Act Statement(s)
         Services result = Services.of(0L);
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -32,8 +48,10 @@ public class ServicesSapientGeneratedJunit4Test {
     //Sapient generated method id: ${7ef024fb-dd14-348c-bb93-ea4260fa7df5}
     @Test()
     public void noneTest() {
+
         //Act Statement(s)
         Services result = Services.none();
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -48,8 +66,10 @@ public class ServicesSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+
         //Act Statement(s)
         Services result = Services.read(byteBuffer);
+
         //Assert statement(s)
         assertThat(result, is(notNullValue()));
     }
@@ -59,8 +79,10 @@ public class ServicesSapientGeneratedJunit4Test {
     public void bitsTest() {
         //Arrange Statement(s)
         Services target = Services.of(0L);
+
         //Act Statement(s)
         long result = target.bits();
+
         //Assert statement(s)
         assertThat(result, equalTo(0L));
     }
@@ -73,8 +95,10 @@ public class ServicesSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Services target = Services.of(1L);
+
         //Act Statement(s)
         boolean result = target.hasAny();
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
     }
@@ -87,8 +111,10 @@ public class ServicesSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Services target = Services.of(0L);
+
         //Act Statement(s)
         boolean result = target.hasAny();
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
     }
@@ -101,8 +127,10 @@ public class ServicesSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Services target = Services.of(0L);
+
         //Act Statement(s)
         boolean result = target.has(0L);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
     }
@@ -115,8 +143,10 @@ public class ServicesSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Services target = Services.of(0L);
+
         //Act Statement(s)
         boolean result = target.has(2L);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
     }
@@ -128,9 +158,11 @@ public class ServicesSapientGeneratedJunit4Test {
          * ((bits & bitmask) != 0) : true
          */
         //Arrange Statement(s)
-        Services target = Services.of(10101010L);
+        Services target = Services.of(12L);
+
         //Act Statement(s)
-        boolean result = target.anyOf(1010101L);
+        boolean result = target.anyOf(10L);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
     }
@@ -143,8 +175,10 @@ public class ServicesSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Services target = Services.of(0L);
+
         //Act Statement(s)
         boolean result = target.anyOf(0L);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
     }
@@ -158,10 +192,12 @@ public class ServicesSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Services target = Services.of(123456789L);
+        Services target = Services.of(0L);
         ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
+
         //Act Statement(s)
         ByteBuffer result = target.write(byteBuffer);
+
         //Assert statement(s)
         assertThat(result, equalTo(byteBuffer));
     }
@@ -172,9 +208,11 @@ public class ServicesSapientGeneratedJunit4Test {
     public void serializeTest() {
         //Arrange Statement(s)
         Services target = Services.of(1L);
+
         //Act Statement(s)
         byte[] result = target.serialize();
         byte[] byteResultArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
+
         //Assert statement(s)
         assertThat(result, equalTo(byteResultArray));
     }
@@ -189,30 +227,28 @@ public class ServicesSapientGeneratedJunit4Test {
          * ((bits & NODE_WITNESS) == NODE_WITNESS) : true
          * ((bits & NODE_NETWORK_LIMITED) == NODE_NETWORK_LIMITED) : true
          * (bits != 0) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Services target = Services.of(1039L);
-        //Act Statement(s)
-        String result = target.toString();
-        //Assert statement(s)
-        assertThat(result, equalTo("return_of_join1"));
-    }
-
-    //Sapient generated method id: ${195c5bfe-2e3d-3e94-9d7e-bbfa6850f11e}
-    @Test()
-    public void toStringWhenBitsAndNODE_NETWORK_LIMITEDNotEqualsNODE_NETWORK_LIMITEDAndBitsEquals06() {
-        /* Branches:
-         * ((bits & NODE_NETWORK) == NODE_NETWORK) : false
-         * ((bits & NODE_BLOOM) == NODE_BLOOM) : false
-         * ((bits & NODE_WITNESS) == NODE_WITNESS) : false
-         * ((bits & NODE_NETWORK_LIMITED) == NODE_NETWORK_LIMITED) : false
-         * (bits != 0) : false
-         */
-        //Arrange Statement(s)
-        Services target = Services.of(0L);
-        //Act Statement(s)
-        String result = target.toString();
-        //Assert statement(s)
-        assertThat(result, equalTo(""));
+        InternalUtils.Joiner internalUtilsJoinerMock = mock(InternalUtils.Joiner.class);
+        try (MockedStatic<InternalUtils> internalUtils = mockStatic(InternalUtils.class)) {
+            internalUtils.when(() -> InternalUtils.joiner(", ")).thenReturn(internalUtilsJoinerMock);
+            List<String> stringList = new LinkedList<>();
+            stringList.add("NETWORK");
+            stringList.add("BLOOM");
+            stringList.add("WITNESS");
+            stringList.add("NETWORK_LIMITED");
+            stringList.add("remaining: 1111111111111111111111111111111111111111111111111111111111111111");
+            doReturn("return_of_join1").when(internalUtilsJoinerMock).join(stringList);
+            Services target = Services.of(0L);
+            //Act Statement(s)
+            String result = target.toString();
+            //Assert statement(s)
+            assertThat(result, equalTo("return_of_join1"));
+            internalUtils.verify(() -> InternalUtils.joiner(", "), atLeast(1));
+            verify(internalUtilsJoinerMock).join(stringList);
+        }
     }
 }

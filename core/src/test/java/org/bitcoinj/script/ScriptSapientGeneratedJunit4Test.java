@@ -455,7 +455,7 @@ public class ScriptSapientGeneratedJunit4Test {
         //Act Statement(s)
         //long result = target.getCreationTimeSeconds();
         //Assert statement(s)
-        //assertThat(result, equalTo(1707139051L));
+        //assertThat(result, equalTo(1707199402L));
     }
 
     //Sapient generated method id: ${bef8a8c7-3d0d-3446-966d-df436c067332}
@@ -734,40 +734,6 @@ public class ScriptSapientGeneratedJunit4Test {
 }*/
     }
 
-    //Sapient generated method id: ${98efc77d-0493-37b6-bd1e-e00fba3dc603}
-    @Test()
-    public void getToAddress2WhenScriptPatternIsP2WHThis() throws ScriptException {
-        /* Branches:
-         * (ScriptPattern.isP2PKH(this)) : false
-         * (ScriptPattern.isP2SH(this)) : false
-         * (forcePayToPubKey) : false
-         * (ScriptPattern.isP2WH(this)) : true
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<SegwitAddress> segwitAddress = mockStatic(SegwitAddress.class);
-             MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class)) {
-            byte[] byteArray = new byte[]{};
-            segwitAddress.when(() -> SegwitAddress.fromHash(networkMock, byteArray)).thenReturn(segwitAddressMock);
-            List<ScriptChunk> scriptChunkList = new ArrayList<>();
-            scriptChunkList.add(null);
-            Instant instant = Instant.now();
-            Script target = Script.of(scriptChunkList, instant);
-            scriptPattern.when(() -> ScriptPattern.isP2PKH(target)).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isP2SH(target)).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isP2WH(target)).thenReturn(true);
-            scriptPattern.when(() -> ScriptPattern.extractHashFromP2WH(target)).thenReturn(byteArray);
-            //Act Statement(s)
-            Address result = target.getToAddress(networkMock, false);
-            //Assert statement(s)
-            assertThat(result, equalTo(segwitAddressMock));
-            segwitAddress.verify(() -> SegwitAddress.fromHash(networkMock, byteArray), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.isP2PKH(target), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.isP2SH(target), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.isP2WH(target), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.extractHashFromP2WH(target), atLeast(1));
-        }
-    }
-
     //Sapient generated method id: ${66b93e1f-6799-3c30-a98c-f138c2cdaa5c}
     @Test()
     public void getToAddress2WhenScriptPatternNotIsP2PKThisAndScriptPatternIsP2WHThis() throws ScriptException {
@@ -802,43 +768,6 @@ public class ScriptSapientGeneratedJunit4Test {
             scriptPattern.verify(() -> ScriptPattern.isP2PK(target), atLeast(1));
             scriptPattern.verify(() -> ScriptPattern.isP2WH(target), atLeast(1));
             scriptPattern.verify(() -> ScriptPattern.extractHashFromP2WH(target), atLeast(1));
-        }
-    }
-
-    //Sapient generated method id: ${b637e820-2b7d-3085-8ddf-958ff2dfbdd5}
-    @Test()
-    public void getToAddress2WhenScriptPatternIsP2TRThis() throws ScriptException {
-        /* Branches:
-         * (ScriptPattern.isP2PKH(this)) : false
-         * (ScriptPattern.isP2SH(this)) : false
-         * (forcePayToPubKey) : false
-         * (ScriptPattern.isP2WH(this)) : false
-         * (ScriptPattern.isP2TR(this)) : true
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<SegwitAddress> segwitAddress = mockStatic(SegwitAddress.class);
-             MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class)) {
-            byte[] byteArray = new byte[]{};
-            segwitAddress.when(() -> SegwitAddress.fromProgram(networkMock, 1, byteArray)).thenReturn(segwitAddressMock);
-            List<ScriptChunk> scriptChunkList = new ArrayList<>();
-            scriptChunkList.add(null);
-            Instant instant = Instant.now();
-            Script target = Script.of(scriptChunkList, instant);
-            scriptPattern.when(() -> ScriptPattern.isP2PKH(target)).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isP2SH(target)).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isP2WH(target)).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isP2TR(target)).thenReturn(true);
-            scriptPattern.when(() -> ScriptPattern.extractOutputKeyFromP2TR(target)).thenReturn(byteArray);
-            //Act Statement(s)
-            Address result = target.getToAddress(networkMock, false);
-            //Assert statement(s)
-            assertThat(result, equalTo(segwitAddressMock));
-            segwitAddress.verify(() -> SegwitAddress.fromProgram(networkMock, 1, byteArray), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.isP2PKH(target), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.isP2SH(target), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.isP2WH(target), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.isP2TR(target), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.extractOutputKeyFromP2TR(target), atLeast(1));
         }
     }
 
@@ -953,13 +882,10 @@ public class ScriptSapientGeneratedJunit4Test {
         /* Branches:
          * (buf.length < OP_PUSHDATA1) : false
          * (buf.length < 256) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         //OutputStream outputStream = OutputStream.nullOutputStream();
-        //byte[] byteArray = new byte[] {};
+        //byte[] byteArray = new byte[] { (byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31, (byte) 32, (byte) 33, (byte) 34, (byte) 35, (byte) 36, (byte) 37, (byte) 38, (byte) 39, (byte) 40, (byte) 41, (byte) 42, (byte) 43, (byte) 44, (byte) 45, (byte) 46, (byte) 47, (byte) 48, (byte) 49, (byte) 50, (byte) 51, (byte) 52, (byte) 53, (byte) 54, (byte) 55, (byte) 56, (byte) 57, (byte) 58, (byte) 59, (byte) 60, (byte) 61, (byte) 62, (byte) 63, (byte) 64, (byte) 65, (byte) 66, (byte) 67, (byte) 68, (byte) 69, (byte) 70, (byte) 71, (byte) 72, (byte) 73, (byte) 74, (byte) 75 };
         //Act Statement(s)
         //Script.writeBytes(outputStream, byteArray);
     }
@@ -1035,7 +961,8 @@ public class ScriptSapientGeneratedJunit4Test {
          * (threshold <= pubkeys.size()) : false
          */
         //Arrange Statement(s)
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class, CALLS_REAL_METHODS)) {
+        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
             IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
             preconditions.when(() -> Preconditions.checkArgument(false)).thenThrow(illegalArgumentException);
             thrown.expect(IllegalArgumentException.class);
@@ -1043,6 +970,7 @@ public class ScriptSapientGeneratedJunit4Test {
             //Act Statement(s)
             Script.createMultiSigOutputScript(1, eCKeyList);
             //Assert statement(s)
+            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
             preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
         }
     }
@@ -1096,7 +1024,7 @@ public class ScriptSapientGeneratedJunit4Test {
             //Act Statement(s)
             Script.createMultiSigOutputScript(1, eCKeyList);
             //Assert statement(s)
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
+            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(2));
             preconditions.verify(() -> Preconditions.checkArgument(false), atLeast(1));
         }
     }
@@ -1176,11 +1104,9 @@ public class ScriptSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<Script> script = mockStatic(Script.class, CALLS_REAL_METHODS);
-             MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
+        try (MockedStatic<Script> script = mockStatic(Script.class, CALLS_REAL_METHODS)) {
             byte[] byteArray = new byte[]{};
             doReturn(byteArray).when(keyMock).getPubKey();
-            preconditions.when(() -> Preconditions.checkArgument(true)).thenAnswer((Answer<Void>) invocation -> null);
             script.when(() -> Script.encodeToOpN(1)).thenReturn(1);
             script.when(() -> Script.writeBytes((ByteArrayOutputStream) any(), eq(byteArray))).thenAnswer((Answer<Void>) invocation -> null);
             script.when(() -> Script.encodeToOpN(4)).thenReturn(1);
@@ -1195,7 +1121,6 @@ public class ScriptSapientGeneratedJunit4Test {
             Script.createMultiSigOutputScript(1, eCKeyList);
             //Assert statement(s)
             verify(keyMock, atLeast(1)).getPubKey();
-            preconditions.verify(() -> Preconditions.checkArgument(true), atLeast(1));
             script.verify(() -> Script.encodeToOpN(1), atLeast(1));
             script.verify(() -> Script.writeBytes((ByteArrayOutputStream) any(), eq(byteArray)), atLeast(1));
             script.verify(() -> Script.encodeToOpN(4), atLeast(1));
@@ -1233,9 +1158,9 @@ public class ScriptSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         try (MockedStatic<Script> script = mockStatic(Script.class, CALLS_REAL_METHODS)) {
-            byte[] byteArray = new byte[]{(byte) 0};
+            byte[] byteArray = new byte[]{};
             script.when(() -> Script.writeBytes((ByteArrayOutputStream) any(), eq(byteArray))).thenAnswer((Answer<Void>) invocation -> null);
-            byte[] byteArray2 = new byte[]{(byte) 0};
+            byte[] byteArray2 = new byte[]{};
             script.when(() -> Script.writeBytes((ByteArrayOutputStream) any(), eq(byteArray2))).thenAnswer((Answer<Void>) invocation -> null);
             thrown.expect(RuntimeException.class);
             thrown.expectCause(is(instanceOf(IOException.class)));
@@ -1348,21 +1273,21 @@ public class ScriptSapientGeneratedJunit4Test {
          * (ScriptPattern.isP2WPKH(this)) : true
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class)) {
-    List<ScriptChunk> scriptChunkList = new ArrayList<>();
-    scriptChunkList.add(null);
-    Instant instant = Instant.now();
-    Script target = Script.of(scriptChunkList, instant);
-    scriptPattern.when(() -> ScriptPattern.isP2PKH(target)).thenReturn(false);
-    scriptPattern.when(() -> ScriptPattern.isP2WPKH(target)).thenReturn(true);
-    //Act Statement(s)
-    Script result = target.createEmptyInputScript(eCKeyMock, scriptMock);
-    Script script = ScriptBuilder.createEmpty();
-    //Assert statement(s)
-    assertThat(result, equalTo(script));
-    scriptPattern.verify(() -> ScriptPattern.isP2PKH(target), atLeast(1));
-    scriptPattern.verify(() -> ScriptPattern.isP2WPKH(target), atLeast(1));
-}*/
+        try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class)) {
+            List<ScriptChunk> scriptChunkList = new ArrayList<>();
+            scriptChunkList.add(null);
+            Instant instant = Instant.now();
+            Script target = Script.of(scriptChunkList, instant);
+            scriptPattern.when(() -> ScriptPattern.isP2PKH(target)).thenReturn(false);
+            scriptPattern.when(() -> ScriptPattern.isP2WPKH(target)).thenReturn(true);
+            //Act Statement(s)
+            Script result = target.createEmptyInputScript(eCKeyMock, scriptMock);
+            Script script = ScriptBuilder.createEmpty();
+            //Assert statement(s)
+            assertThat(result, equalTo(script));
+            scriptPattern.verify(() -> ScriptPattern.isP2PKH(target), atLeast(1));
+            scriptPattern.verify(() -> ScriptPattern.isP2WPKH(target), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${522baaee-5e06-3518-a757-5f87ea08cf27}
@@ -1374,25 +1299,25 @@ public class ScriptSapientGeneratedJunit4Test {
          * (ScriptPattern.isP2PK(this)) : true
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<ScriptBuilder> scriptBuilder = mockStatic(ScriptBuilder.class);
-    MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class)) {
-    scriptBuilder.when(() -> ScriptBuilder.createInputScript(null)).thenReturn(scriptMock);
-    List<ScriptChunk> scriptChunkList = new ArrayList<>();
-    scriptChunkList.add(null);
-    Instant instant = Instant.now();
-    Script target = Script.of(scriptChunkList, instant);
-    scriptPattern.when(() -> ScriptPattern.isP2PKH(target)).thenReturn(false);
-    scriptPattern.when(() -> ScriptPattern.isP2WPKH(target)).thenReturn(false);
-    scriptPattern.when(() -> ScriptPattern.isP2PK(target)).thenReturn(true);
-    //Act Statement(s)
-    Script result = target.createEmptyInputScript(eCKeyMock, scriptMock2);
-    //Assert statement(s)
-    assertThat(result, equalTo(scriptMock));
-    scriptBuilder.verify(() -> ScriptBuilder.createInputScript(null), atLeast(1));
-    scriptPattern.verify(() -> ScriptPattern.isP2PKH(target), atLeast(1));
-    scriptPattern.verify(() -> ScriptPattern.isP2WPKH(target), atLeast(1));
-    scriptPattern.verify(() -> ScriptPattern.isP2PK(target), atLeast(1));
-}*/
+        try (MockedStatic<ScriptBuilder> scriptBuilder = mockStatic(ScriptBuilder.class);
+             MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class)) {
+            scriptBuilder.when(() -> ScriptBuilder.createInputScript(null)).thenReturn(scriptMock);
+            List<ScriptChunk> scriptChunkList = new ArrayList<>();
+            scriptChunkList.add(null);
+            Instant instant = Instant.now();
+            Script target = Script.of(scriptChunkList, instant);
+            scriptPattern.when(() -> ScriptPattern.isP2PKH(target)).thenReturn(false);
+            scriptPattern.when(() -> ScriptPattern.isP2WPKH(target)).thenReturn(false);
+            scriptPattern.when(() -> ScriptPattern.isP2PK(target)).thenReturn(true);
+            //Act Statement(s)
+            Script result = target.createEmptyInputScript(eCKeyMock, scriptMock2);
+            //Assert statement(s)
+            assertThat(result, equalTo(scriptMock));
+            scriptBuilder.verify(() -> ScriptBuilder.createInputScript(null), atLeast(1));
+            scriptPattern.verify(() -> ScriptPattern.isP2PKH(target), atLeast(1));
+            scriptPattern.verify(() -> ScriptPattern.isP2WPKH(target), atLeast(1));
+            scriptPattern.verify(() -> ScriptPattern.isP2PK(target), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${93dfce7d-d8dd-30c1-9d7e-cdbc01bd4c3c}
@@ -1438,28 +1363,28 @@ public class ScriptSapientGeneratedJunit4Test {
          * (redeemScript != null) : true
          */
         //Arrange Statement(s)
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-             MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class)) {
-            IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
-            preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
-            List<ScriptChunk> scriptChunkList = new ArrayList<>();
-            scriptChunkList.add(null);
-            Instant instant = Instant.now();
-            Script target = Script.of(scriptChunkList, instant);
-            scriptPattern.when(() -> ScriptPattern.isP2PKH(target)).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isP2WPKH(target)).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isP2PK(target)).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isP2SH(target)).thenReturn(true);
-            thrown.expect(IllegalArgumentException.class);
-            //Act Statement(s)
-            target.createEmptyInputScript(eCKeyMock, scriptMock);
-            //Assert statement(s)
-            preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
-            scriptPattern.verify(() -> ScriptPattern.isP2PKH(target), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.isP2WPKH(target), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.isP2PK(target), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.isP2SH(target), atLeast(1));
-        }
+        /*try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
+    MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class)) {
+    IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
+    preconditions.when(() -> Preconditions.checkArgument(eq(false), (Supplier) any())).thenThrow(illegalArgumentException);
+    List<ScriptChunk> scriptChunkList = new ArrayList<>();
+    scriptChunkList.add(null);
+    Instant instant = Instant.now();
+    Script target = Script.of(scriptChunkList, instant);
+    scriptPattern.when(() -> ScriptPattern.isP2PKH(target)).thenReturn(false);
+    scriptPattern.when(() -> ScriptPattern.isP2WPKH(target)).thenReturn(false);
+    scriptPattern.when(() -> ScriptPattern.isP2PK(target)).thenReturn(false);
+    scriptPattern.when(() -> ScriptPattern.isP2SH(target)).thenReturn(true);
+    thrown.expect(IllegalArgumentException.class);
+    //Act Statement(s)
+    target.createEmptyInputScript(eCKeyMock, scriptMock);
+    //Assert statement(s)
+    preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+    scriptPattern.verify(() -> ScriptPattern.isP2PKH(target), atLeast(1));
+    scriptPattern.verify(() -> ScriptPattern.isP2WPKH(target), atLeast(1));
+    scriptPattern.verify(() -> ScriptPattern.isP2PK(target), atLeast(1));
+    scriptPattern.verify(() -> ScriptPattern.isP2SH(target), atLeast(1));
+}*/
     }
 
     //Sapient generated method id: ${924fc5b1-0025-3f08-95c9-1f00a927b4d8}
@@ -1580,25 +1505,6 @@ public class ScriptSapientGeneratedJunit4Test {
             scriptPattern.verify(() -> ScriptPattern.isSentToMultisig(target), atLeast(1));
             scriptPattern.verify(() -> ScriptPattern.isP2PKH(target), atLeast(1));
         }
-    }
-
-    //Sapient generated method id: ${ebb40f4a-a05f-3741-8e58-85e3bf1aced0}
-    @Test()
-    public void getSigInsertionIndexWhenExistingChunksIsEmpty() throws SignatureDecodeException {
-        //TODO: Please change the modifier of findKeyInRedeem from private to default to isolate the test case scenario
-        //Act Statement(s)
-        //Assert statement(s)
-        //byte[] byteArray = new byte[] {};
-        //script.when(() -> Script.parse(byteArray)).thenReturn(scriptMock);
-        //doReturn(0).when(scriptMock).findKeyInRedeem(eCKeyMock);
-        //List<ScriptChunk> scriptChunkList = new ArrayList<>();
-        //scriptChunkList.add(null);
-        //scriptChunkList.add(null);
-        //Instant instant = Instant.now();
-        //Script target = Script.of(scriptChunkList, instant);
-        //int result = target.getSigInsertionIndex(sha256HashMock, eCKeyMock);
-        //assertThat(result, equalTo(0));
-        //script.verify(() -> Script.parse(byteArray), atLeast(1));
     }
 
     //Sapient generated method id: ${7015688f-681e-3c03-8d15-ac0677ed4d9f}
@@ -1888,7 +1794,7 @@ public class ScriptSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        byte[] byteArray = new byte[]{};
+        byte[] byteArray = new byte[]{(byte) 0};
         //Act Statement(s)
         int result = Script.getSigOpCount(byteArray);
         //Assert statement(s)
@@ -1974,7 +1880,7 @@ public class ScriptSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        byte[] byteArray = new byte[]{(byte) 118, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
+        byte[] byteArray = new byte[]{(byte) 0};
         //Act Statement(s)
         int result = Script.getSigOpCount(byteArray);
         //Assert statement(s)
@@ -2010,7 +1916,7 @@ public class ScriptSapientGeneratedJunit4Test {
         try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
             ByteArrayInputStream byteArrayInputStream = mock(ByteArrayInputStream.class);
             byteUtils.when(() -> ByteUtils.readUint32(byteArrayInputStream)).thenReturn(1L);
-            byte[] byteArray = new byte[]{(byte) 0};
+            byte[] byteArray = new byte[]{};
             //Act Statement(s)
             int result = Script.getSigOpCount(byteArray);
             //Assert statement(s)
@@ -2034,7 +1940,7 @@ public class ScriptSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        byte[] byteArray = new byte[]{(byte) 0};
+        byte[] byteArray = new byte[]{};
         //Act Statement(s)
         long result = Script.getP2SHSigOpCount(byteArray);
         //Assert statement(s)
@@ -2091,8 +1997,8 @@ public class ScriptSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
             ByteArrayInputStream byteArrayInputStream = mock(ByteArrayInputStream.class);
-            byteUtils.when(() -> ByteUtils.readUint16(byteArrayInputStream)).thenReturn(0);
-            byte[] byteArray = new byte[]{(byte) 0};
+            byteUtils.when(() -> ByteUtils.readUint16(byteArrayInputStream)).thenReturn(2);
+            byte[] byteArray = new byte[]{};
             //Act Statement(s)
             long result = Script.getP2SHSigOpCount(byteArray);
             //Assert statement(s)
@@ -2147,26 +2053,25 @@ public class ScriptSapientGeneratedJunit4Test {
          * (chunk.isOpCode()) : true  #  inside getSigOpCount method
          * (switch(chunk.opcode) = default) : true  #  inside getSigOpCount method
          *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         * TODO: Help needed! This method is not unit testable!
+         *  Following variables could not be isolated/mocked: chunk
+         *  Suggestions:
+         *  You can change the initialization of above variables and make it injectable or
+         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<Script> script = mockStatic(Script.class, CALLS_REAL_METHODS)) {
-    List list = new ArrayList<>();
-    Script script2 = Script.of(list);
-    script.when(() -> Script.parse((byte[]) null)).thenReturn(script2);
-    byte[][] byteArray3 = new byte[][] { (byte) 0 };
-    byte[][] byteArray4 = new byte[][] { (byte) 0 };
-    byte[][] byteArray5 = new byte[][] { (byte) 0 };
-    byte[][] byteArray6 = new byte[][] {};
-    byte[] byteArray2 = new byte[] { byteArray3, byteArray4, byteArray5, byteArray6 };
-    byte[] byteArray = new byte[] { byteArray2 };
-    //Act Statement(s)
-    long result = Script.getP2SHSigOpCount(byteArray);
-    //Assert statement(s)
-    assertThat(result, equalTo(0L));
-    script.verify(() -> Script.parse((byte[]) null), atLeast(1));
-}*/
+        try (MockedStatic<Script> script = mockStatic(Script.class, CALLS_REAL_METHODS)) {
+            List list = new ArrayList<>();
+            Script script2 = Script.of(list);
+            script.when(() -> Script.parse((byte[]) null)).thenReturn(script2);
+            byte[] byteArray = new byte[]{};
+            //Act Statement(s)
+            long result = Script.getP2SHSigOpCount(byteArray);
+            //Assert statement(s)
+            assertThat(result, equalTo(0L));
+            script.verify(() -> Script.parse((byte[]) null), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${c251917c-4144-3f6f-a093-ed6757da6760}
@@ -2228,30 +2133,6 @@ public class ScriptSapientGeneratedJunit4Test {
             assertThat(result, equalTo(0));
             script.verify(() -> Script.decodeFromOpN(0), atLeast(1));
             scriptPattern.verify(() -> ScriptPattern.isSentToMultisig(target), atLeast(1));
-        }
-    }
-
-    //Sapient generated method id: ${ec6bafdb-7f5c-3aea-af0e-a90178266b39}
-    @Test()
-    public void getNumberOfSignaturesRequiredToSpendWhenScriptPatternIsP2PKHThis() {
-        /* Branches:
-         * (ScriptPattern.isSentToMultisig(this)) : false
-         * (ScriptPattern.isP2PKH(this)) : true
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class)) {
-            List<ScriptChunk> scriptChunkList = new ArrayList<>();
-            scriptChunkList.add(null);
-            Instant instant = Instant.now();
-            Script target = Script.of(scriptChunkList, instant);
-            scriptPattern.when(() -> ScriptPattern.isSentToMultisig(target)).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isP2PKH(target)).thenReturn(true);
-            //Act Statement(s)
-            int result = target.getNumberOfSignaturesRequiredToSpend();
-            //Assert statement(s)
-            assertThat(result, equalTo(1));
-            scriptPattern.verify(() -> ScriptPattern.isSentToMultisig(target), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.isP2PKH(target), atLeast(1));
         }
     }
 
@@ -2664,8 +2545,8 @@ public class ScriptSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         thrown.expect(RuntimeException.class);
         thrown.expectCause(is(instanceOf(IOException.class)));
-        byte[] byteArray = new byte[]{(byte) 0, (byte) 74, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8};
-        byte[] byteArray2 = new byte[]{(byte) 9, (byte) 9};
+        byte[] byteArray = new byte[]{(byte) 0};
+        byte[] byteArray2 = new byte[]{(byte) 0, (byte) 1};
         //Act Statement(s)
         Script.removeAllInstancesOf(byteArray, byteArray2);
     }
@@ -2768,12 +2649,17 @@ public class ScriptSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        thrown.expect(RuntimeException.class);
-        thrown.expectCause(is(instanceOf(IOException.class)));
-        byte[] byteArray = new byte[]{(byte) 1, (byte) 2, (byte) 3, (byte) 2, (byte) 4};
-        byte[] byteArray2 = new byte[]{(byte) 2, (byte) 3};
-        //Act Statement(s)
-        Script.removeAllInstancesOf(byteArray, byteArray2);
+        try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
+            byte[] byteArray = new byte[]{(byte) 0};
+            byteUtils.when(() -> ByteUtils.readUint16(byteArray, 1)).thenReturn(-2);
+            thrown.expect(RuntimeException.class);
+            thrown.expectCause(is(instanceOf(IOException.class)));
+            byte[] byteArray2 = new byte[]{(byte) 0, (byte) 1};
+            //Act Statement(s)
+            Script.removeAllInstancesOf(byteArray, byteArray2);
+            //Assert statement(s)
+            byteUtils.verify(() -> ByteUtils.readUint16(byteArray, 1), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${767e4e99-2879-3710-893a-108556d1cc56}
@@ -2884,8 +2770,8 @@ public class ScriptSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         thrown.expect(RuntimeException.class);
         thrown.expectCause(is(instanceOf(IOException.class)));
-        byte[] byteArray = new byte[]{(byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 3, (byte) 4, (byte) 6, (byte) 7};
-        byte[] byteArray2 = new byte[]{(byte) 3, (byte) 4};
+        byte[] byteArray = new byte[]{(byte) -1};
+        byte[] byteArray2 = new byte[]{(byte) 0};
         //Act Statement(s)
         Script.removeAllInstancesOf(byteArray, byteArray2);
     }
@@ -4666,57 +4552,8 @@ public class ScriptSapientGeneratedJunit4Test {
         }
     }
 
-    //Sapient generated method id: ${edb723f5-a0d1-3f40-b760-5ab5fc6af269}
-    @Test()
-    public void correctlySpendsWhenValidSigAndCaughtSignatureDecodeException() throws Exception {
-        /* Branches:
-         * (ScriptPattern.isP2WPKH(scriptPubKey)) : true
-         * (witness.getPushCount() < 2) : false
-         * (!validSig) : false
-         * (catch-exception (SignatureDecodeException)) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<ScriptBuilder> scriptBuilder = mockStatic(ScriptBuilder.class);
-             MockedStatic<ECKey> eCKey = mockStatic(ECKey.class);
-             MockedStatic<TransactionSignature> transactionSignature = mockStatic(TransactionSignature.class);
-             MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class)) {
-            doReturn(sha256HashMock).when(txContainingThisMock).hashForWitnessSignature(0, scriptMock, coinMock, Transaction.SigHash.ALL, false);
-            doReturn(2).when(witnessMock).getPushCount();
-            byte[] byteArray = new byte[]{};
-            doReturn(byteArray).when(witnessMock).getPush(0);
-            byte[] byteArray2 = new byte[]{};
-            doReturn(byteArray2).when(witnessMock).getPush(1);
-            scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock2)).thenReturn(true);
-            transactionSignature.when(() -> TransactionSignature.decodeFromBitcoin(byteArray, true, true)).thenReturn(transactionSignatureMock);
-            doReturn(Transaction.SigHash.ALL).when(transactionSignatureMock).sigHashMode();
-            eCKey.when(() -> ECKey.fromPublicOnly(byteArray2)).thenReturn(eCKeyMock);
-            doReturn(true).when(eCKeyMock).verify(sha256HashMock, transactionSignatureMock);
-            scriptBuilder.when(() -> ScriptBuilder.createP2PKHOutputScript(eCKeyMock)).thenReturn(scriptMock);
-            List<ScriptChunk> scriptChunkList = new ArrayList<>();
-            scriptChunkList.add(null);
-            Instant instant = Instant.now();
-            Script target = Script.of(scriptChunkList, instant);
-            Set<Script.VerifyFlag> scriptVerifyFlagSet = new HashSet<>();
-            //Act Statement(s)
-            target.correctlySpends(txContainingThisMock, 0, witnessMock, coinMock, scriptMock2, scriptVerifyFlagSet);
-            //Assert statement(s)
-            verify(txContainingThisMock).hashForWitnessSignature(0, scriptMock, coinMock, Transaction.SigHash.ALL, false);
-            verify(witnessMock).getPushCount();
-            verify(witnessMock).getPush(0);
-            verify(witnessMock).getPush(1);
-            scriptPattern.verify(() -> ScriptPattern.isP2WPKH(scriptMock2), atLeast(1));
-            transactionSignature.verify(() -> TransactionSignature.decodeFromBitcoin(byteArray, true, true), atLeast(1));
-            verify(transactionSignatureMock).sigHashMode();
-            eCKey.verify(() -> ECKey.fromPublicOnly(byteArray2), atLeast(1));
-            verify(eCKeyMock).verify(sha256HashMock, transactionSignatureMock);
-            scriptBuilder.verify(() -> ScriptBuilder.createP2PKHOutputScript(eCKeyMock), atLeast(1));
-        }
-    }
-
     //Sapient generated method id: ${02f097ae-9119-3dfd-bfc6-e0fb5c3fea7f}
+    @Ignore()
     @Test()
     public void correctlySpendsWhenChunksSizeEquals2AndCaughtSignatureDecodeExceptionThrowsScriptException() throws ScriptException, SignatureDecodeException {
         /* Branches:
@@ -4726,26 +4563,26 @@ public class ScriptSapientGeneratedJunit4Test {
          * (catch-exception (SignatureDecodeException)) : true
          */
         //Arrange Statement(s)
-        /*try (MockedStatic<TransactionSignature> transactionSignature = mockStatic(TransactionSignature.class);
-    MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class)) {
-    scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock)).thenReturn(false);
-    scriptPattern.when(() -> ScriptPattern.isP2PKH(scriptMock)).thenReturn(true);
-    byte[] byteArray = new byte[] {};
-    transactionSignature.when(() -> TransactionSignature.decodeFromBitcoin(byteArray, true, true)).thenThrow(signatureDecodeExceptionMock);
-    List<ScriptChunk> scriptChunkList = new ArrayList<>();
-    scriptChunkList.add(null);
-    scriptChunkList.add(null);
-    Instant instant = Instant.now();
-    Script target = Script.of(scriptChunkList, instant);
-    thrown.expect(ScriptException.class);
-    Set<Script.VerifyFlag> scriptVerifyFlagSet = new HashSet<>();
-    //Act Statement(s)
-    target.correctlySpends(transactionMock, 0, transactionWitnessMock, coinMock, scriptMock, scriptVerifyFlagSet);
-    //Assert statement(s)
-    scriptPattern.verify(() -> ScriptPattern.isP2WPKH(scriptMock), atLeast(1));
-    scriptPattern.verify(() -> ScriptPattern.isP2PKH(scriptMock), atLeast(1));
-    transactionSignature.verify(() -> TransactionSignature.decodeFromBitcoin(byteArray, true, true), atLeast(1));
-}*/
+        try (MockedStatic<TransactionSignature> transactionSignature = mockStatic(TransactionSignature.class);
+             MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class)) {
+            scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock)).thenReturn(false);
+            scriptPattern.when(() -> ScriptPattern.isP2PKH(scriptMock)).thenReturn(true);
+            byte[] byteArray = new byte[]{};
+            transactionSignature.when(() -> TransactionSignature.decodeFromBitcoin(byteArray, true, true)).thenThrow(signatureDecodeExceptionMock);
+            List<ScriptChunk> scriptChunkList = new ArrayList<>();
+            scriptChunkList.add(null);
+            scriptChunkList.add(null);
+            Instant instant = Instant.now();
+            Script target = Script.of(scriptChunkList, instant);
+            thrown.expect(ScriptException.class);
+            Set<Script.VerifyFlag> scriptVerifyFlagSet = new HashSet<>();
+            //Act Statement(s)
+            target.correctlySpends(transactionMock, 0, transactionWitnessMock, coinMock, scriptMock, scriptVerifyFlagSet);
+            //Assert statement(s)
+            scriptPattern.verify(() -> ScriptPattern.isP2WPKH(scriptMock), atLeast(1));
+            scriptPattern.verify(() -> ScriptPattern.isP2PKH(scriptMock), atLeast(1));
+            transactionSignature.verify(() -> TransactionSignature.decodeFromBitcoin(byteArray, true, true), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${c7fa24fa-b555-3280-a8e9-57968e873b95}
@@ -4877,36 +4714,36 @@ public class ScriptSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class);
-             MockedStatic<TransactionSignature> transactionSignature = mockStatic(TransactionSignature.class);
-             MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class)) {
-            doReturn(sha256HashMock).when(txContainingThisMock).hashForSignature(0, scriptMock, Transaction.SigHash.ALL, false);
-            scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock)).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isP2PKH(scriptMock)).thenReturn(true);
-            byte[] byteArray = new byte[]{};
-            transactionSignature.when(() -> TransactionSignature.decodeFromBitcoin(byteArray, true, true)).thenReturn(transactionSignatureMock);
-            doReturn(Transaction.SigHash.ALL).when(transactionSignatureMock).sigHashMode();
-            byte[] byteArray2 = new byte[]{};
-            eCKey.when(() -> ECKey.fromPublicOnly(byteArray2)).thenReturn(eCKeyMock);
-            doReturn(false).when(eCKeyMock).verify(sha256HashMock, transactionSignatureMock);
-            List<ScriptChunk> scriptChunkList = new ArrayList<>();
-            scriptChunkList.add(null);
-            scriptChunkList.add(null);
-            Instant instant = Instant.now();
-            Script target = Script.of(scriptChunkList, instant);
-            thrown.expect(ScriptException.class);
-            Set<Script.VerifyFlag> scriptVerifyFlagSet = new HashSet<>();
-            //Act Statement(s)
-            target.correctlySpends(txContainingThisMock, 0, transactionWitnessMock, coinMock, scriptMock, scriptVerifyFlagSet);
-            //Assert statement(s)
-            verify(txContainingThisMock).hashForSignature(0, scriptMock, Transaction.SigHash.ALL, false);
-            scriptPattern.verify(() -> ScriptPattern.isP2WPKH(scriptMock), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.isP2PKH(scriptMock), atLeast(1));
-            transactionSignature.verify(() -> TransactionSignature.decodeFromBitcoin(byteArray, true, true), atLeast(1));
-            verify(transactionSignatureMock).sigHashMode();
-            eCKey.verify(() -> ECKey.fromPublicOnly(byteArray2), atLeast(1));
-            verify(eCKeyMock).verify(sha256HashMock, transactionSignatureMock);
-        }
+        /*try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class);
+    MockedStatic<TransactionSignature> transactionSignature = mockStatic(TransactionSignature.class);
+    MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class)) {
+    doReturn(sha256HashMock).when(txContainingThisMock).hashForSignature(0, scriptMock, Transaction.SigHash.ALL, false);
+    scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock)).thenReturn(false);
+    scriptPattern.when(() -> ScriptPattern.isP2PKH(scriptMock)).thenReturn(true);
+    byte[] byteArray = new byte[] {};
+    transactionSignature.when(() -> TransactionSignature.decodeFromBitcoin(byteArray, true, true)).thenReturn(transactionSignatureMock);
+    doReturn(Transaction.SigHash.ALL).when(transactionSignatureMock).sigHashMode();
+    byte[] byteArray2 = new byte[] {};
+    eCKey.when(() -> ECKey.fromPublicOnly(byteArray2)).thenReturn(eCKeyMock);
+    doReturn(false).when(eCKeyMock).verify(sha256HashMock, transactionSignatureMock);
+    List<ScriptChunk> scriptChunkList = new ArrayList<>();
+    scriptChunkList.add(null);
+    scriptChunkList.add(null);
+    Instant instant = Instant.now();
+    Script target = Script.of(scriptChunkList, instant);
+    thrown.expect(ScriptException.class);
+    Set<Script.VerifyFlag> scriptVerifyFlagSet = new HashSet<>();
+    //Act Statement(s)
+    target.correctlySpends(txContainingThisMock, 0, transactionWitnessMock, coinMock, scriptMock, scriptVerifyFlagSet);
+    //Assert statement(s)
+    verify(txContainingThisMock).hashForSignature(0, scriptMock, Transaction.SigHash.ALL, false);
+    scriptPattern.verify(() -> ScriptPattern.isP2WPKH(scriptMock), atLeast(1));
+    scriptPattern.verify(() -> ScriptPattern.isP2PKH(scriptMock), atLeast(1));
+    transactionSignature.verify(() -> TransactionSignature.decodeFromBitcoin(byteArray, true, true), atLeast(1));
+    verify(transactionSignatureMock).sigHashMode();
+    eCKey.verify(() -> ECKey.fromPublicOnly(byteArray2), atLeast(1));
+    verify(eCKeyMock).verify(sha256HashMock, transactionSignatureMock);
+}*/
     }
 
     //Sapient generated method id: ${0771d460-42e4-3a59-af06-1311256dc847}
@@ -4919,52 +4756,6 @@ public class ScriptSapientGeneratedJunit4Test {
          * (ScriptPattern.isP2PKH(scriptPubKey)) : true
          * (chunks.size() != 2) : false
          * (!validSig) : false
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class);
-             MockedStatic<TransactionSignature> transactionSignature = mockStatic(TransactionSignature.class);
-             MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class)) {
-            doReturn(sha256HashMock).when(txContainingThisMock).hashForSignature(0, scriptMock, Transaction.SigHash.ALL, false);
-            scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock)).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isP2PKH(scriptMock)).thenReturn(true);
-            byte[] byteArray = new byte[]{};
-            transactionSignature.when(() -> TransactionSignature.decodeFromBitcoin(byteArray, true, true)).thenReturn(transactionSignatureMock);
-            doReturn(Transaction.SigHash.ALL).when(transactionSignatureMock).sigHashMode();
-            byte[] byteArray2 = new byte[]{};
-            eCKey.when(() -> ECKey.fromPublicOnly(byteArray2)).thenReturn(eCKeyMock);
-            doReturn(true).when(eCKeyMock).verify(sha256HashMock, transactionSignatureMock);
-            List<ScriptChunk> scriptChunkList = new ArrayList<>();
-            scriptChunkList.add(null);
-            scriptChunkList.add(null);
-            Instant instant = Instant.now();
-            Script target = Script.of(scriptChunkList, instant);
-            Set<Script.VerifyFlag> scriptVerifyFlagSet = new HashSet<>();
-            //Act Statement(s)
-            target.correctlySpends(txContainingThisMock, 0, transactionWitnessMock, coinMock, scriptMock, scriptVerifyFlagSet);
-            //Assert statement(s)
-            verify(txContainingThisMock).hashForSignature(0, scriptMock, Transaction.SigHash.ALL, false);
-            scriptPattern.verify(() -> ScriptPattern.isP2WPKH(scriptMock), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.isP2PKH(scriptMock), atLeast(1));
-            transactionSignature.verify(() -> TransactionSignature.decodeFromBitcoin(byteArray, true, true), atLeast(1));
-            verify(transactionSignatureMock).sigHashMode();
-            eCKey.verify(() -> ECKey.fromPublicOnly(byteArray2), atLeast(1));
-            verify(eCKeyMock).verify(sha256HashMock, transactionSignatureMock);
-        }
-    }
-
-    //Sapient generated method id: ${5abac50c-64a8-30bb-853a-0e8e26f75c1f}
-    @Ignore()
-    @Test()
-    public void correctlySpendsWhenChunksSizeEquals2AndValidSigAndCaughtSignatureDecodeException() throws Exception {
-        /* Branches:
-         * (ScriptPattern.isP2WPKH(scriptPubKey)) : false
-         * (ScriptPattern.isP2PKH(scriptPubKey)) : true
-         * (chunks.size() != 2) : false
-         * (!validSig) : false
-         * (catch-exception (SignatureDecodeException)) : true
          *
          * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
          *  The test code, including the assertion statements, has been successfully generated.
@@ -5107,7 +4898,7 @@ public class ScriptSapientGeneratedJunit4Test {
             doReturn(Transaction.SigHash.ALL).when(transactionSignatureMock).sigHashMode();
             byte[] byteArray2 = new byte[]{};
             scriptPattern.when(() -> ScriptPattern.extractKeyFromP2PK(scriptMock)).thenReturn(byteArray2);
-            eCKey.when(() -> ECKey.fromPublicOnly(byteArray)).thenReturn(eCKeyMock);
+            eCKey.when(() -> ECKey.fromPublicOnly(byteArray2)).thenReturn(eCKeyMock);
             doReturn(true).when(eCKeyMock).verify(sha256HashMock, transactionSignatureMock);
             List<ScriptChunk> scriptChunkList = new ArrayList<>();
             scriptChunkList.add(null);
@@ -5124,7 +4915,7 @@ public class ScriptSapientGeneratedJunit4Test {
             transactionSignature.verify(() -> TransactionSignature.decodeFromBitcoin(byteArray, false, false), atLeast(1));
             verify(transactionSignatureMock).sigHashMode();
             scriptPattern.verify(() -> ScriptPattern.extractKeyFromP2PK(scriptMock), atLeast(1));
-            eCKey.verify(() -> ECKey.fromPublicOnly(byteArray), atLeast(1));
+            eCKey.verify(() -> ECKey.fromPublicOnly(byteArray2), atLeast(1));
             verify(eCKeyMock).verify(sha256HashMock, transactionSignatureMock);
         }
     }
@@ -5157,7 +4948,7 @@ public class ScriptSapientGeneratedJunit4Test {
             doReturn(Transaction.SigHash.ALL).when(transactionSignatureMock).sigHashMode();
             byte[] byteArray2 = new byte[]{};
             scriptPattern.when(() -> ScriptPattern.extractKeyFromP2PK(scriptMock)).thenReturn(byteArray2);
-            eCKey.when(() -> ECKey.fromPublicOnly(byteArray)).thenReturn(eCKeyMock);
+            eCKey.when(() -> ECKey.fromPublicOnly(byteArray2)).thenReturn(eCKeyMock);
             doReturn(false).when(eCKeyMock).verify(sha256HashMock, transactionSignatureMock);
             List<ScriptChunk> scriptChunkList = new ArrayList<>();
             scriptChunkList.add(null);
@@ -5175,7 +4966,7 @@ public class ScriptSapientGeneratedJunit4Test {
             transactionSignature.verify(() -> TransactionSignature.decodeFromBitcoin(byteArray, false, false), atLeast(1));
             verify(transactionSignatureMock).sigHashMode();
             scriptPattern.verify(() -> ScriptPattern.extractKeyFromP2PK(scriptMock), atLeast(1));
-            eCKey.verify(() -> ECKey.fromPublicOnly(byteArray), atLeast(1));
+            eCKey.verify(() -> ECKey.fromPublicOnly(byteArray2), atLeast(1));
             verify(eCKeyMock).verify(sha256HashMock, transactionSignatureMock);
         }
     }
@@ -5188,107 +4979,6 @@ public class ScriptSapientGeneratedJunit4Test {
          * (ScriptPattern.isP2WPKH(scriptPubKey)) : false
          * (catch-exception (SignatureDecodeException)) : true
          * (ScriptPattern.isP2PKH(scriptPubKey)) : false
-         * (ScriptPattern.isP2PK(scriptPubKey)) : true
-         * (chunks.size() != 1) : false
-         * (!validSig) : false
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class);
-             MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class);
-             MockedStatic<TransactionSignature> transactionSignature = mockStatic(TransactionSignature.class)) {
-            doReturn(sha256HashMock).when(txContainingThisMock).hashForSignature(0, scriptMock, Transaction.SigHash.ALL, false);
-            scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock)).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isP2PKH(scriptMock)).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(true);
-            byte[] byteArray = new byte[]{};
-            transactionSignature.when(() -> TransactionSignature.decodeFromBitcoin(byteArray, false, false)).thenReturn(transactionSignatureMock);
-            doReturn(Transaction.SigHash.ALL).when(transactionSignatureMock).sigHashMode();
-            byte[] byteArray2 = new byte[]{};
-            scriptPattern.when(() -> ScriptPattern.extractKeyFromP2PK(scriptMock)).thenReturn(byteArray2);
-            eCKey.when(() -> ECKey.fromPublicOnly(byteArray2)).thenReturn(eCKeyMock);
-            doReturn(true).when(eCKeyMock).verify(sha256HashMock, transactionSignatureMock);
-            List<ScriptChunk> scriptChunkList = new ArrayList<>();
-            scriptChunkList.add(null);
-            Instant instant = Instant.now();
-            Script target = Script.of(scriptChunkList, instant);
-            Set<Script.VerifyFlag> scriptVerifyFlagSet = new HashSet<>();
-            //Act Statement(s)
-            target.correctlySpends(txContainingThisMock, 0, transactionWitnessMock, coinMock, scriptMock, scriptVerifyFlagSet);
-            //Assert statement(s)
-            verify(txContainingThisMock).hashForSignature(0, scriptMock, Transaction.SigHash.ALL, false);
-            scriptPattern.verify(() -> ScriptPattern.isP2WPKH(scriptMock), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.isP2PKH(scriptMock), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock), atLeast(1));
-            transactionSignature.verify(() -> TransactionSignature.decodeFromBitcoin(byteArray, false, false), atLeast(1));
-            verify(transactionSignatureMock).sigHashMode();
-            scriptPattern.verify(() -> ScriptPattern.extractKeyFromP2PK(scriptMock), atLeast(1));
-            eCKey.verify(() -> ECKey.fromPublicOnly(byteArray2), atLeast(1));
-            verify(eCKeyMock).verify(sha256HashMock, transactionSignatureMock);
-        }
-    }
-
-    //Sapient generated method id: ${f6676f8f-6523-3815-aa9f-8dea34a412ba}
-    @Ignore()
-    @Test()
-    public void correctlySpendsWhenCaughtSignatureDecodeExceptionAndScriptPatternIsP2PKScriptPubKeyAndChunksSizeEqThrowsScriptException() throws ScriptException, SignatureDecodeException {
-        /* Branches:
-         * (ScriptPattern.isP2WPKH(scriptPubKey)) : false
-         * (ScriptPattern.isP2PKH(scriptPubKey)) : false
-         * (catch-exception (SignatureDecodeException)) : true
-         * (ScriptPattern.isP2PK(scriptPubKey)) : true
-         * (chunks.size() != 1) : false
-         * (!validSig) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class);
-             MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class);
-             MockedStatic<TransactionSignature> transactionSignature = mockStatic(TransactionSignature.class)) {
-            doReturn(sha256HashMock).when(txContainingThisMock).hashForSignature(0, scriptMock, Transaction.SigHash.ALL, false);
-            scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock)).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isP2PKH(scriptMock)).thenReturn(false);
-            scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(true);
-            byte[] byteArray = new byte[]{};
-            transactionSignature.when(() -> TransactionSignature.decodeFromBitcoin(byteArray, false, false)).thenReturn(transactionSignatureMock);
-            doReturn(Transaction.SigHash.ALL).when(transactionSignatureMock).sigHashMode();
-            byte[] byteArray2 = new byte[]{};
-            scriptPattern.when(() -> ScriptPattern.extractKeyFromP2PK(scriptMock)).thenReturn(byteArray2);
-            eCKey.when(() -> ECKey.fromPublicOnly(byteArray2)).thenReturn(eCKeyMock);
-            doReturn(false).when(eCKeyMock).verify(sha256HashMock, transactionSignatureMock);
-            List<ScriptChunk> scriptChunkList = new ArrayList<>();
-            scriptChunkList.add(null);
-            Instant instant = Instant.now();
-            Script target = Script.of(scriptChunkList, instant);
-            thrown.expect(ScriptException.class);
-            Set<Script.VerifyFlag> scriptVerifyFlagSet = new HashSet<>();
-            //Act Statement(s)
-            target.correctlySpends(txContainingThisMock, 0, transactionWitnessMock, coinMock, scriptMock, scriptVerifyFlagSet);
-            //Assert statement(s)
-            verify(txContainingThisMock).hashForSignature(0, scriptMock, Transaction.SigHash.ALL, false);
-            scriptPattern.verify(() -> ScriptPattern.isP2WPKH(scriptMock), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.isP2PKH(scriptMock), atLeast(1));
-            scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock), atLeast(1));
-            transactionSignature.verify(() -> TransactionSignature.decodeFromBitcoin(byteArray, false, false), atLeast(1));
-            verify(transactionSignatureMock).sigHashMode();
-            scriptPattern.verify(() -> ScriptPattern.extractKeyFromP2PK(scriptMock), atLeast(1));
-            eCKey.verify(() -> ECKey.fromPublicOnly(byteArray2), atLeast(1));
-            verify(eCKeyMock).verify(sha256HashMock, transactionSignatureMock);
-        }
-    }
-
-    //Sapient generated method id: ${94ac2698-1dc3-37e1-a80a-38a9eea1a826}
-    @Ignore()
-    @Test()
-    public void correctlySpendsWhenCaughtSignatureDecodeExceptionAndScriptPatternIsP2PKScriptPubKeyAndChunksSizeEquals1AndValidSig() throws Exception {
-        /* Branches:
-         * (ScriptPattern.isP2WPKH(scriptPubKey)) : false
-         * (ScriptPattern.isP2PKH(scriptPubKey)) : false
-         * (catch-exception (SignatureDecodeException)) : true
          * (ScriptPattern.isP2PK(scriptPubKey)) : true
          * (chunks.size() != 1) : false
          * (!validSig) : false
@@ -5423,46 +5113,6 @@ public class ScriptSapientGeneratedJunit4Test {
             thrown.expect(ScriptException.class);
             Set<Script.VerifyFlag> scriptVerifyFlagSet = new HashSet<>();
             scriptVerifyFlagSet.add(Script.VerifyFlag.P2SH);
-            //Act Statement(s)
-            target.correctlySpends(txContainingThisMock, 0L, scriptPubKeyMock, scriptVerifyFlagSet);
-            //Assert statement(s)
-            verify(txContainingThisMock).serialize();
-            verify(scriptPubKeyMock).program();
-            transaction.verify(() -> Transaction.read((ByteBuffer) any()));
-            script.verify(() -> Script.executeScript(eq(transactionMock), eq(0L), eq(scriptPubKeyMock), any(), anySet()));
-            verify(target).program();
-            script.verify(() -> Script.executeScript(eq(transactionMock), eq(0L), eq(target), any(), anySet()));
-        }
-    }
-
-    //Sapient generated method id: ${3a2f9211-e9e1-3c1c-8042-43ae658c1e4d}
-    @Ignore()
-    @Test()
-    public void correctlySpends1WhenVerifyFlagsNotContainsVerifyFlagP2SHAndStackSizeEquals0ThrowsScriptException() throws ScriptException {
-        /* Branches:
-         * (program().length > MAX_SCRIPT_SIZE) : false
-         * (scriptPubKey.program().length > MAX_SCRIPT_SIZE) : false
-         * (verifyFlags.contains(VerifyFlag.P2SH)) : false
-         * (stack.size() == 0) : true
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<Script> script = mockStatic(Script.class);
-             MockedStatic<Transaction> transaction = mockStatic(Transaction.class)) {
-            byte[] byteArray = new byte[]{};
-            doReturn(byteArray).when(txContainingThisMock).serialize();
-            byte[] byteArray2 = new byte[]{};
-            doReturn(byteArray2).when(scriptPubKeyMock).program();
-            transaction.when(() -> Transaction.read((ByteBuffer) any())).thenReturn(transactionMock);
-            script.when(() -> Script.executeScript(eq(transactionMock), eq(0L), eq(scriptPubKeyMock), any(), anySet())).thenAnswer((Answer<Void>) invocation -> null);
-            List<ScriptChunk> scriptChunkList = new ArrayList<>();
-            scriptChunkList.add(null);
-            Instant instant = Instant.now();
-            Script target = spy(Script.of(scriptChunkList, instant));
-            byte[] byteArray3 = new byte[]{};
-            doReturn(byteArray3).when(target).program();
-            script.when(() -> Script.executeScript(eq(transactionMock), eq(0L), eq(target), any(), anySet())).thenAnswer((Answer<Void>) invocation -> null);
-            thrown.expect(ScriptException.class);
-            Set<Script.VerifyFlag> scriptVerifyFlagSet = new HashSet<>();
             //Act Statement(s)
             target.correctlySpends(txContainingThisMock, 0L, scriptPubKeyMock, scriptVerifyFlagSet);
             //Assert statement(s)

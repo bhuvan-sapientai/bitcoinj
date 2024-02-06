@@ -61,8 +61,10 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         List<ScriptChunk> scriptChunkList = new ArrayList<>();
         scriptChunkList.add(scriptChunkMock);
         doReturn(scriptChunkList).when(scriptMock).chunks();
+
         //Act Statement(s)
         boolean result = ScriptPattern.isP2PKH(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
         verify(scriptMock).chunks();
@@ -84,8 +86,10 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         scriptChunkList.add(scriptChunkMock5);
         doReturn(scriptChunkList).when(scriptMock).chunks();
         doReturn(false).when(scriptChunkMock).equalsOpCode(118);
+
         //Act Statement(s)
         boolean result = ScriptPattern.isP2PKH(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
         verify(scriptMock).chunks();
@@ -110,8 +114,10 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         doReturn(scriptChunkList).when(scriptMock).chunks();
         doReturn(true).when(scriptChunkMock).equalsOpCode(118);
         doReturn(false).when(scriptChunkMock2).equalsOpCode(169);
+
         //Act Statement(s)
         boolean result = ScriptPattern.isP2PKH(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
         verify(scriptMock).chunks();
@@ -139,8 +145,10 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         doReturn(scriptChunkList).when(scriptMock).chunks();
         doReturn(true).when(scriptChunkMock).equalsOpCode(118);
         doReturn(true).when(scriptChunkMock2).equalsOpCode(169);
+
         //Act Statement(s)
         boolean result = ScriptPattern.isP2PKH(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
         verify(scriptMock).chunks();
@@ -170,8 +178,10 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         doReturn(scriptChunkList).when(scriptMock).chunks();
         doReturn(true).when(scriptChunkMock).equalsOpCode(118);
         doReturn(true).when(scriptChunkMock2).equalsOpCode(169);
+
         //Act Statement(s)
         boolean result = ScriptPattern.isP2PKH(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
         verify(scriptMock).chunks();
@@ -203,8 +213,10 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         doReturn(true).when(scriptChunkMock).equalsOpCode(118);
         doReturn(true).when(scriptChunkMock2).equalsOpCode(169);
         doReturn(false).when(scriptChunk2Mock).equalsOpCode(136);
+
         //Act Statement(s)
         boolean result = ScriptPattern.isP2PKH(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
         verify(scriptMock).chunks();
@@ -239,8 +251,10 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         doReturn(true).when(scriptChunkMock2).equalsOpCode(169);
         doReturn(true).when(scriptChunk2Mock).equalsOpCode(136);
         doReturn(false).when(scriptChunk2Mock2).equalsOpCode(172);
+
         //Act Statement(s)
         boolean result = ScriptPattern.isP2PKH(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
         verify(scriptMock).chunks();
@@ -277,8 +291,10 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         doReturn(true).when(scriptChunkMock2).equalsOpCode(169);
         doReturn(true).when(scriptChunk2Mock).equalsOpCode(136);
         doReturn(true).when(scriptChunk2Mock2).equalsOpCode(172);
+
         //Act Statement(s)
         boolean result = ScriptPattern.isP2PKH(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
         verify(scriptMock).chunks();
@@ -300,8 +316,10 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         scriptChunkList.add(scriptChunkMock2);
         scriptChunkList.add(scriptChunk);
         doReturn(scriptChunkList).when(scriptMock).chunks();
+
         //Act Statement(s)
         byte[] result = ScriptPattern.extractHashFromP2PKH(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(byteArray));
         verify(scriptMock).chunks();
@@ -317,8 +335,10 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         List<ScriptChunk> scriptChunkList = new ArrayList<>();
         scriptChunkList.add(scriptChunkMock);
         doReturn(scriptChunkList).when(scriptMock).chunks();
+
         //Act Statement(s)
         boolean result = ScriptPattern.isP2SH(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
         verify(scriptMock).chunks();
@@ -338,8 +358,10 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         scriptChunkList.add(scriptChunkMock3);
         doReturn(scriptChunkList).when(scriptMock).chunks();
         doReturn(false).when(scriptChunkMock).equalsOpCode(169);
+
         //Act Statement(s)
         boolean result = ScriptPattern.isP2SH(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
         verify(scriptMock).chunks();
@@ -363,8 +385,10 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         scriptChunkList.add(scriptChunk2Mock);
         doReturn(scriptChunkList).when(scriptMock).chunks();
         doReturn(true).when(scriptChunkMock).equalsOpCode(169);
+
         //Act Statement(s)
         boolean result = ScriptPattern.isP2SH(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
         verify(scriptMock).chunks();
@@ -388,8 +412,10 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         scriptChunkList.add(scriptChunk2Mock);
         doReturn(scriptChunkList).when(scriptMock).chunks();
         doReturn(true).when(scriptChunkMock).equalsOpCode(169);
+
         //Act Statement(s)
         boolean result = ScriptPattern.isP2SH(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
         verify(scriptMock).chunks();
@@ -415,8 +441,10 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         scriptChunkList.add(scriptChunk2Mock);
         doReturn(scriptChunkList).when(scriptMock).chunks();
         doReturn(true).when(scriptChunkMock).equalsOpCode(169);
+
         //Act Statement(s)
         boolean result = ScriptPattern.isP2SH(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
         verify(scriptMock).chunks();
@@ -444,8 +472,10 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         doReturn(scriptChunkList).when(scriptMock).chunks();
         doReturn(true).when(scriptChunkMock).equalsOpCode(169);
         doReturn(false).when(scriptChunk2Mock).equalsOpCode(135);
+
         //Act Statement(s)
         boolean result = ScriptPattern.isP2SH(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
         verify(scriptMock).chunks();
@@ -474,8 +504,10 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         doReturn(scriptChunkList).when(scriptMock).chunks();
         doReturn(true).when(scriptChunkMock).equalsOpCode(169);
         doReturn(true).when(scriptChunk2Mock).equalsOpCode(135);
+
         //Act Statement(s)
         boolean result = ScriptPattern.isP2SH(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
         verify(scriptMock).chunks();
@@ -487,11 +519,20 @@ public class ScriptPatternSapientGeneratedJunit4Test {
     @Ignore()
     @Test()
     public void extractHashFromP2SHTest() {
+        //Arrange Statement(s)
+        byte[] byteArray = new byte[]{};
+        ScriptChunk scriptChunk = new ScriptChunk(0, byteArray);
+        List<ScriptChunk> scriptChunkList = new ArrayList<>();
+        scriptChunkList.add(scriptChunkMock);
+        scriptChunkList.add(scriptChunk);
+        doReturn(scriptChunkList).when(scriptMock).chunks();
+
         //Act Statement(s)
         byte[] result = ScriptPattern.extractHashFromP2SH(scriptMock);
-        byte[] byteResultArray = new byte[]{};
+
         //Assert statement(s)
-        assertThat(result, equalTo(byteResultArray));
+        assertThat(result, equalTo(byteArray));
+        verify(scriptMock).chunks();
     }
 
     //Sapient generated method id: ${0c20955b-87ae-3adf-b232-fcf9ad518028}
@@ -504,8 +545,10 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         List<ScriptChunk> scriptChunkList = new ArrayList<>();
         scriptChunkList.add(scriptChunkMock);
         doReturn(scriptChunkList).when(scriptMock).chunks();
+
         //Act Statement(s)
         boolean result = ScriptPattern.isP2PK(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
         verify(scriptMock).chunks();
@@ -524,8 +567,10 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         scriptChunkList.add(scriptChunkMock2);
         doReturn(scriptChunkList).when(scriptMock).chunks();
         doReturn(true).when(scriptChunkMock).isOpCode();
+
         //Act Statement(s)
         boolean result = ScriptPattern.isP2PK(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
         verify(scriptMock).chunks();
@@ -541,10 +586,20 @@ public class ScriptPatternSapientGeneratedJunit4Test {
          * (chunk0.isOpCode()) : false
          * (chunk0data == null) : true
          */
+        //Arrange Statement(s)
+        List<ScriptChunk> scriptChunkList = new ArrayList<>();
+        scriptChunkList.add(scriptChunkMock);
+        scriptChunkList.add(scriptChunkMock2);
+        doReturn(scriptChunkList).when(scriptMock).chunks();
+        doReturn(false).when(scriptChunkMock).isOpCode();
+
         //Act Statement(s)
         boolean result = ScriptPattern.isP2PK(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
+        verify(scriptMock).chunks();
+        verify(scriptChunkMock).isOpCode();
     }
 
     //Sapient generated method id: ${f6b02a19-efbd-32ad-a73a-58fcb08220be}
@@ -557,11 +612,12 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         List<ScriptChunk> scriptChunkList = new ArrayList<>();
         scriptChunkList.add(scriptChunk);
         doReturn(scriptChunkList).when(scriptMock).chunks();
+
         //Act Statement(s)
         byte[] result = ScriptPattern.extractKeyFromP2PK(scriptMock);
-        byte[] byteResultArray = new byte[]{};
+
         //Assert statement(s)
-        assertThat(result, equalTo(byteResultArray));
+        assertThat(result, equalTo(byteArray));
         verify(scriptMock).chunks();
     }
 
@@ -575,8 +631,10 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         List<ScriptChunk> scriptChunkList = new ArrayList<>();
         scriptChunkList.add(scriptChunkMock);
         doReturn(scriptChunkList).when(scriptMock).chunks();
+
         //Act Statement(s)
         boolean result = ScriptPattern.isP2WH(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
         verify(scriptMock).chunks();
@@ -595,8 +653,10 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         scriptChunkList.add(scriptChunkMock2);
         doReturn(scriptChunkList).when(scriptMock).chunks();
         doReturn(false).when(scriptChunkMock).equalsOpCode(0);
+
         //Act Statement(s)
         boolean result = ScriptPattern.isP2WH(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
         verify(scriptMock).chunks();
@@ -618,36 +678,12 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         scriptChunkList.add(scriptChunk);
         doReturn(scriptChunkList).when(scriptMock).chunks();
         doReturn(true).when(scriptChunkMock).equalsOpCode(0);
+
         //Act Statement(s)
         boolean result = ScriptPattern.isP2WH(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
-        verify(scriptMock).chunks();
-        verify(scriptChunkMock).equalsOpCode(0);
-    }
-
-    //Sapient generated method id: ${c9ec8fe2-8751-3e2c-8e76-592cd1c3496d}
-    @Ignore()
-    @Test()
-    public void isP2WHWhenChunk1dataLengthEqualsSegwitAddressWITNESS_PROGRAM_LENGTH_PKH() {
-        /* Branches:
-         * (chunks.size() != 2) : false
-         * (!chunks.get(0).equalsOpCode(OP_0)) : false
-         * (chunk1data == null) : false
-         * (chunk1data.length != SegwitAddress.WITNESS_PROGRAM_LENGTH_PKH) : false
-         */
-        //Arrange Statement(s)
-        byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19};
-        ScriptChunk scriptChunk = new ScriptChunk(0, byteArray);
-        List<ScriptChunk> scriptChunkList = new ArrayList<>();
-        scriptChunkList.add(scriptChunkMock);
-        scriptChunkList.add(scriptChunk);
-        doReturn(scriptChunkList).when(scriptMock).chunks();
-        doReturn(true).when(scriptChunkMock).equalsOpCode(0);
-        //Act Statement(s)
-        boolean result = ScriptPattern.isP2WH(scriptMock);
-        //Assert statement(s)
-        assertThat(result, equalTo(Boolean.TRUE));
         verify(scriptMock).chunks();
         verify(scriptChunkMock).equalsOpCode(0);
     }
@@ -670,8 +706,10 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         scriptChunkList.add(scriptChunk);
         doReturn(scriptChunkList).when(scriptMock).chunks();
         doReturn(true).when(scriptChunkMock).equalsOpCode(0);
+
         //Act Statement(s)
         boolean result = ScriptPattern.isP2WH(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
         verify(scriptMock).chunks();
@@ -697,8 +735,10 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         scriptChunkList.add(scriptChunk);
         doReturn(scriptChunkList).when(scriptMock).chunks();
         doReturn(true).when(scriptChunkMock).equalsOpCode(0);
+
         //Act Statement(s)
         boolean result = ScriptPattern.isP2WH(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
         verify(scriptMock).chunks();
@@ -735,33 +775,6 @@ public class ScriptPatternSapientGeneratedJunit4Test {
             scriptChunkList.add(scriptChunkMock);
             doReturn(scriptChunkList).when(scriptMock).chunks();
             doReturn(false).when(scriptChunkMock).equalsOpCode(0);
-            scriptPattern.when(() -> ScriptPattern.isP2WH(scriptMock)).thenReturn(true);
-            //Act Statement(s)
-            boolean result = ScriptPattern.isP2WPKH(scriptMock);
-            //Assert statement(s)
-            assertThat(result, equalTo(Boolean.FALSE));
-            verify(scriptMock, atLeast(1)).chunks();
-            verify(scriptChunkMock, atLeast(1)).equalsOpCode(0);
-            scriptPattern.verify(() -> ScriptPattern.isP2WH(scriptMock), atLeast(1));
-        }
-    }
-
-    //Sapient generated method id: ${dc0b12fd-1d81-3a7f-b46a-a4a5f90d2888}
-    @Test()
-    public void isP2WPKHWhenChunk1dataIsNull() {
-        /* Branches:
-         * (!isP2WH(script)) : false
-         * (!chunks.get(0).equalsOpCode(OP_0)) : false
-         * (chunk1data != null) : false
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class, CALLS_REAL_METHODS)) {
-            ScriptChunk scriptChunk = new ScriptChunk(0, (byte[]) null);
-            List<ScriptChunk> scriptChunkList = new ArrayList<>();
-            scriptChunkList.add(scriptChunkMock);
-            scriptChunkList.add(scriptChunk);
-            doReturn(scriptChunkList).when(scriptMock).chunks();
-            doReturn(true).when(scriptChunkMock).equalsOpCode(0);
             scriptPattern.when(() -> ScriptPattern.isP2WH(scriptMock)).thenReturn(true);
             //Act Statement(s)
             boolean result = ScriptPattern.isP2WPKH(scriptMock);
@@ -873,33 +886,6 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         }
     }
 
-    //Sapient generated method id: ${0d2a552b-23f7-34b8-aa1c-c5b694304f17}
-    @Test()
-    public void isP2WSHWhenChunk1dataIsNull() {
-        /* Branches:
-         * (!isP2WH(script)) : false
-         * (!chunks.get(0).equalsOpCode(OP_0)) : false
-         * (chunk1data != null) : false
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class, CALLS_REAL_METHODS)) {
-            ScriptChunk scriptChunk = new ScriptChunk(0, (byte[]) null);
-            List<ScriptChunk> scriptChunkList = new ArrayList<>();
-            scriptChunkList.add(scriptChunkMock);
-            scriptChunkList.add(scriptChunk);
-            doReturn(scriptChunkList).when(scriptMock).chunks();
-            doReturn(true).when(scriptChunkMock).equalsOpCode(0);
-            scriptPattern.when(() -> ScriptPattern.isP2WH(scriptMock)).thenReturn(true);
-            //Act Statement(s)
-            boolean result = ScriptPattern.isP2WSH(scriptMock);
-            //Assert statement(s)
-            assertThat(result, equalTo(Boolean.FALSE));
-            verify(scriptMock, atLeast(1)).chunks();
-            verify(scriptChunkMock, atLeast(1)).equalsOpCode(0);
-            scriptPattern.verify(() -> ScriptPattern.isP2WH(scriptMock), atLeast(1));
-        }
-    }
-
     //Sapient generated method id: ${f70e942b-c2ae-372f-8a39-f24c18216fff}
     @Ignore()
     @Test()
@@ -971,11 +957,12 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         scriptChunkList.add(scriptChunkMock);
         scriptChunkList.add(scriptChunk);
         doReturn(scriptChunkList).when(scriptMock).chunks();
+
         //Act Statement(s)
         byte[] result = ScriptPattern.extractHashFromP2WH(scriptMock);
-        byte[] byteResultArray = new byte[]{};
+
         //Assert statement(s)
-        assertThat(result, equalTo(byteResultArray));
+        assertThat(result, equalTo(byteArray));
         verify(scriptMock).chunks();
     }
 
@@ -989,8 +976,10 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         List<ScriptChunk> scriptChunkList = new ArrayList<>();
         scriptChunkList.add(scriptChunkMock);
         doReturn(scriptChunkList).when(scriptMock).chunks();
+
         //Act Statement(s)
         boolean result = ScriptPattern.isP2TR(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
         verify(scriptMock).chunks();
@@ -1009,8 +998,10 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         scriptChunkList.add(scriptChunkMock2);
         doReturn(scriptChunkList).when(scriptMock).chunks();
         doReturn(false).when(scriptChunkMock).equalsOpCode(81);
+
         //Act Statement(s)
         boolean result = ScriptPattern.isP2TR(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
         verify(scriptMock).chunks();
@@ -1032,8 +1023,10 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         scriptChunkList.add(scriptChunk);
         doReturn(scriptChunkList).when(scriptMock).chunks();
         doReturn(true).when(scriptChunkMock).equalsOpCode(81);
+
         //Act Statement(s)
         boolean result = ScriptPattern.isP2TR(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
         verify(scriptMock).chunks();
@@ -1057,8 +1050,10 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         scriptChunkList.add(scriptChunk);
         doReturn(scriptChunkList).when(scriptMock).chunks();
         doReturn(true).when(scriptChunkMock).equalsOpCode(81);
+
         //Act Statement(s)
         boolean result = ScriptPattern.isP2TR(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
         verify(scriptMock).chunks();
@@ -1083,8 +1078,10 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         scriptChunkList.add(scriptChunk);
         doReturn(scriptChunkList).when(scriptMock).chunks();
         doReturn(true).when(scriptChunkMock).equalsOpCode(81);
+
         //Act Statement(s)
         boolean result = ScriptPattern.isP2TR(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
         verify(scriptMock).chunks();
@@ -1095,11 +1092,20 @@ public class ScriptPatternSapientGeneratedJunit4Test {
     @Ignore()
     @Test()
     public void extractOutputKeyFromP2TRTest() {
+        //Arrange Statement(s)
+        byte[] byteArray = new byte[]{};
+        ScriptChunk scriptChunk = new ScriptChunk(0, byteArray);
+        List<ScriptChunk> scriptChunkList = new ArrayList<>();
+        scriptChunkList.add(scriptChunkMock);
+        scriptChunkList.add(scriptChunk);
+        doReturn(scriptChunkList).when(scriptMock).chunks();
+
         //Act Statement(s)
         byte[] result = ScriptPattern.extractOutputKeyFromP2TR(scriptMock);
-        byte[] byteResultArray = new byte[]{};
+
         //Assert statement(s)
-        assertThat(result, equalTo(byteResultArray));
+        assertThat(result, equalTo(byteArray));
+        verify(scriptMock).chunks();
     }
 
     //Sapient generated method id: ${d79f7b50-def1-3073-a1dd-a065c6b57396}
@@ -1112,8 +1118,10 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         List<ScriptChunk> scriptChunkList = new ArrayList<>();
         scriptChunkList.add(scriptChunkMock);
         doReturn(scriptChunkList).when(scriptMock).chunks();
+
         //Act Statement(s)
         boolean result = ScriptPattern.isSentToMultisig(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
         verify(scriptMock).chunks();
@@ -1136,39 +1144,15 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         doReturn(scriptChunkList).when(scriptMock).chunks();
         doReturn(false).when(scriptChunkMock4).equalsOpCode(174);
         doReturn(false).when(scriptChunkMock4).equalsOpCode(175);
+
         //Act Statement(s)
         boolean result = ScriptPattern.isSentToMultisig(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
         verify(scriptMock).chunks();
         verify(scriptChunkMock4).equalsOpCode(174);
         verify(scriptChunkMock4).equalsOpCode(175);
-    }
-
-    //Sapient generated method id: ${a94be50e-0852-3a6e-a11a-512a34f5e8e5}
-    @Test()
-    public void isSentToMultisigWhenNOpCodeLessThanOP_1() {
-        /* Branches:
-         * (chunks.size() < 4) : false
-         * (!(chunk.equalsOpCode(OP_CHECKMULTISIG) || chunk.equalsOpCode(OP_CHECKMULTISIGVERIFY))) : false
-         * (nOpCode < OP_1) : true
-         */
-        //Arrange Statement(s)
-        byte[] byteArray = new byte[]{};
-        ScriptChunk scriptChunk = new ScriptChunk(0, byteArray);
-        List<ScriptChunk> scriptChunkList = new ArrayList<>();
-        scriptChunkList.add(scriptChunkMock);
-        scriptChunkList.add(scriptChunkMock2);
-        scriptChunkList.add(scriptChunk);
-        scriptChunkList.add(scriptChunk2Mock);
-        doReturn(scriptChunkList).when(scriptMock).chunks();
-        doReturn(true).when(scriptChunk2Mock).equalsOpCode(174);
-        //Act Statement(s)
-        boolean result = ScriptPattern.isSentToMultisig(scriptMock);
-        //Assert statement(s)
-        assertThat(result, equalTo(Boolean.FALSE));
-        verify(scriptMock).chunks();
-        verify(scriptChunk2Mock).equalsOpCode(174);
     }
 
     //Sapient generated method id: ${ae40914e-8760-3f13-9274-9c4cef47ff8a}
@@ -1192,8 +1176,10 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         doReturn(scriptChunkList).when(scriptMock).chunks();
         doReturn(false).when(scriptChunk2Mock).equalsOpCode(174);
         doReturn(true).when(scriptChunk2Mock).equalsOpCode(175);
+
         //Act Statement(s)
         boolean result = ScriptPattern.isSentToMultisig(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
         verify(scriptMock).chunks();
@@ -1225,8 +1211,10 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         doReturn(scriptChunkList).when(scriptMock).chunks();
         doReturn(false).when(scriptChunk2Mock).equalsOpCode(174);
         doReturn(true).when(scriptChunk2Mock).equalsOpCode(175);
+
         //Act Statement(s)
         boolean result = ScriptPattern.isSentToMultisig(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
         verify(scriptMock).chunks();
@@ -1260,8 +1248,10 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         doReturn(true).when(scriptChunkMock2).isOpCode();
         doReturn(false).when(scriptChunk2Mock).equalsOpCode(174);
         doReturn(true).when(scriptChunk2Mock).equalsOpCode(175);
+
         //Act Statement(s)
         boolean result = ScriptPattern.isSentToMultisig(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
         verify(scriptMock).chunks();
@@ -1300,8 +1290,10 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         doReturn(false).when(scriptChunk2Mock).isOpCode();
         doReturn(false).when(scriptChunk3Mock).equalsOpCode(174);
         doReturn(true).when(scriptChunk3Mock).equalsOpCode(175);
+
         //Act Statement(s)
         boolean result = ScriptPattern.isSentToMultisig(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
         verify(scriptMock).chunks();
@@ -1340,8 +1332,10 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         doReturn(false).when(scriptChunk2Mock).isOpCode();
         doReturn(false).when(scriptChunk3Mock).equalsOpCode(174);
         doReturn(true).when(scriptChunk3Mock).equalsOpCode(175);
+
         //Act Statement(s)
         boolean result = ScriptPattern.isSentToMultisig(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
         verify(scriptMock).chunks();
@@ -1362,8 +1356,10 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         scriptChunkList.add(scriptChunkMock);
         doReturn(scriptChunkList).when(scriptMock).chunks();
         doReturn(true).when(scriptChunkMock).equalsOpCode(106);
+
         //Act Statement(s)
         boolean result = ScriptPattern.isOpReturn(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
         verify(scriptMock).chunks();
@@ -1382,8 +1378,10 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         scriptChunkList.add(scriptChunkMock);
         doReturn(scriptChunkList).when(scriptMock).chunks();
         doReturn(false).when(scriptChunkMock).equalsOpCode(106);
+
         //Act Statement(s)
         boolean result = ScriptPattern.isOpReturn(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
         verify(scriptMock).chunks();
@@ -1400,8 +1398,10 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         List<ScriptChunk> scriptChunkList = new ArrayList<>();
         scriptChunkList.add(scriptChunkMock);
         doReturn(scriptChunkList).when(scriptMock).chunks();
+
         //Act Statement(s)
         boolean result = ScriptPattern.isWitnessCommitment(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
         verify(scriptMock).chunks();
@@ -1420,31 +1420,10 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         scriptChunkList.add(scriptChunkMock2);
         doReturn(scriptChunkList).when(scriptMock).chunks();
         doReturn(false).when(scriptChunkMock).equalsOpCode(106);
-        //Act Statement(s)
-        boolean result = ScriptPattern.isWitnessCommitment(scriptMock);
-        //Assert statement(s)
-        assertThat(result, equalTo(Boolean.FALSE));
-        verify(scriptMock).chunks();
-        verify(scriptChunkMock).equalsOpCode(106);
-    }
 
-    //Sapient generated method id: ${3b26ea4e-d9c9-3b7d-bbf3-e13e1822bec9}
-    @Test()
-    public void isWitnessCommitmentWhenChunkDataIsNull() {
-        /* Branches:
-         * (chunks.size() < 2) : false
-         * (!chunks.get(0).equalsOpCode(ScriptOpCodes.OP_RETURN)) : false
-         * (chunkData == null) : true
-         */
-        //Arrange Statement(s)
-        ScriptChunk scriptChunk = new ScriptChunk(0, (byte[]) null);
-        List<ScriptChunk> scriptChunkList = new ArrayList<>();
-        scriptChunkList.add(scriptChunkMock);
-        scriptChunkList.add(scriptChunk);
-        doReturn(scriptChunkList).when(scriptMock).chunks();
-        doReturn(true).when(scriptChunkMock).equalsOpCode(106);
         //Act Statement(s)
         boolean result = ScriptPattern.isWitnessCommitment(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
         verify(scriptMock).chunks();
@@ -1468,8 +1447,10 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         scriptChunkList.add(scriptChunk);
         doReturn(scriptChunkList).when(scriptMock).chunks();
         doReturn(true).when(scriptChunkMock).equalsOpCode(106);
+
         //Act Statement(s)
         boolean result = ScriptPattern.isWitnessCommitment(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
         verify(scriptMock).chunks();
@@ -1494,8 +1475,10 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         scriptChunkList.add(scriptChunk);
         doReturn(scriptChunkList).when(scriptMock).chunks();
         doReturn(true).when(scriptChunkMock).equalsOpCode(106);
+
         //Act Statement(s)
         boolean result = ScriptPattern.isWitnessCommitment(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
         verify(scriptMock).chunks();
@@ -1519,8 +1502,10 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         List<ScriptChunk> scriptChunkList = new ArrayList<>();
         doReturn(scriptChunkList).when(scriptMock).chunks();
+
         //Act Statement(s)
         boolean result = ScriptPattern.isWitnessCommitment(scriptMock);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
         verify(scriptMock).chunks();
@@ -1538,12 +1523,19 @@ public class ScriptPatternSapientGeneratedJunit4Test {
         Sha256Hash sha256HashMock = mock(Sha256Hash.class);
         try (MockedStatic<Sha256Hash> sha256Hash = mockStatic(Sha256Hash.class)) {
             byte[] byteArray = new byte[]{};
-            sha256Hash.when(() -> Sha256Hash.wrap(byteArray)).thenReturn(sha256HashMock);
+            ScriptChunk scriptChunk = new ScriptChunk(0, byteArray);
+            List<ScriptChunk> scriptChunkList = new ArrayList<>();
+            scriptChunkList.add(scriptChunkMock);
+            scriptChunkList.add(scriptChunk);
+            doReturn(scriptChunkList).when(scriptMock).chunks();
+            byte[] byteArray2 = new byte[]{};
+            sha256Hash.when(() -> Sha256Hash.wrap(byteArray2)).thenReturn(sha256HashMock);
             //Act Statement(s)
             Sha256Hash result = ScriptPattern.extractWitnessCommitmentHash(scriptMock);
             //Assert statement(s)
             assertThat(result, equalTo(sha256HashMock));
-            sha256Hash.verify(() -> Sha256Hash.wrap(byteArray), atLeast(1));
+            verify(scriptMock).chunks();
+            sha256Hash.verify(() -> Sha256Hash.wrap(byteArray2), atLeast(1));
         }
     }
 }

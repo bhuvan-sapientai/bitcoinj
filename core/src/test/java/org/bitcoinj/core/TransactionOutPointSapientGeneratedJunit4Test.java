@@ -173,7 +173,7 @@ public class TransactionOutPointSapientGeneratedJunit4Test {
             byteUtils.when(() -> ByteUtils.writeInt32LE(eq(0L), (ByteBuffer) any())).thenReturn(byteBuffer);
             TransactionOutPoint target = new TransactionOutPoint(0L, fromTxMock);
             byte[] byteArray = new byte[]{};
-            doReturn(byteArray).when(sha256HashMock).serialize();
+            doReturn(byteArray).when(hashMock).serialize();
             //Act Statement(s)
             byte[] result = target.serialize();
             byte[] byteResultArray = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
@@ -182,7 +182,7 @@ public class TransactionOutPointSapientGeneratedJunit4Test {
             verify(fromTxMock).getTxId();
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
             byteUtils.verify(() -> ByteUtils.writeInt32LE(eq(0L), (ByteBuffer) any()));
-            verify(sha256HashMock).serialize();
+            verify(hashMock).serialize();
         }
     }
 
@@ -758,7 +758,6 @@ public class TransactionOutPointSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Sha256Hash sha256HashMock = mock(Sha256Hash.class, "<init>_sha256Hash2");
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class)) {
             doReturn(sha256HashMock).when(fromTxMock).getTxId();
             IllegalArgumentException illegalArgumentException = new IllegalArgumentException();
@@ -790,7 +789,7 @@ public class TransactionOutPointSapientGeneratedJunit4Test {
             //Act Statement(s)
             Sha256Hash result = target.hash();
             //Assert statement(s)
-            assertThat(result, equalTo(sha256HashMock));
+            assertThat(result, equalTo(hashMock));
             verify(fromTxMock).getTxId();
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
         }
@@ -836,7 +835,7 @@ public class TransactionOutPointSapientGeneratedJunit4Test {
             //Act Statement(s)
             Sha256Hash result = target.getHash();
             //Assert statement(s)
-            assertThat(result, equalTo(sha256HashMock));
+            assertThat(result, equalTo(hashMock));
             verify(fromTxMock).getTxId();
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
         }

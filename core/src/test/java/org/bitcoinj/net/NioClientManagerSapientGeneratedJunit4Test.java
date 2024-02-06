@@ -96,36 +96,6 @@ public class NioClientManagerSapientGeneratedJunit4Test {
         }
     }
 
-    //Sapient generated method id: ${09155cc5-b64b-3585-b645-7080c2fb3964}
-    @Ignore(value = "Potential harmful system call (Selector.select, Selector.close, Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
-    @Test()
-    public void runWhenKeyIsValidAndKeyNotIsConnectableAndSelectorKeysIsNotEmptyAndKeyAttachmentInstanceOfConnectionHandler() throws Exception {
-        /* Branches:
-         * (isRunning()) : true
-         * ((conn = newConnectionChannels.poll()) != null) : false
-         * (catch-exception (ClosedChannelException)) : true
-         * (keyIterator.hasNext()) : true
-         * (key.isValid()) : true  #  inside handleKey method
-         * (key.isConnectable()) : false  #  inside handleKey method
-         * (for-each(selector.keys())) : true
-         * (key.attachment() instanceof ConnectionHandler) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<ConnectionHandler> connectionHandler = mockStatic(ConnectionHandler.class)) {
-            connectionHandler.when(() -> ConnectionHandler.handleKey((SelectionKey) null)).thenAnswer((Answer<Void>) invocation -> null);
-            NioClientManager target = spy(new NioClientManager());
-            doReturn(true, false).when(target).isRunning();
-            //Act Statement(s)
-            target.run();
-            //Assert statement(s)
-            connectionHandler.verify(() -> ConnectionHandler.handleKey((SelectionKey) null), atLeast(2));
-            verify(target, times(2)).isRunning();
-        }
-    }
-
     //Sapient generated method id: ${7d7f567a-d796-380f-a7e8-a3c075963831}
     @Ignore(value = "Potential harmful system call (Selector.select, Selector.close, Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
@@ -247,68 +217,6 @@ public class NioClientManagerSapientGeneratedJunit4Test {
         }
     }
 
-    //Sapient generated method id: ${c5a26871-d41e-39f4-a06e-0a3e4a5c6633}
-    @Ignore(value = "Potential harmful system call (Selector.select, Selector.close, Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
-    @Test()
-    public void runWhenCaughtIOExceptionAndSelectorKeysIsNotEmptyAndKeyAttachmentInstanceOfConnectionHandler() throws Exception {
-        /* Branches:
-         * (isRunning()) : true
-         * ((conn = newConnectionChannels.poll()) != null) : false
-         * (keyIterator.hasNext()) : true
-         * (key.isValid()) : true  #  inside handleKey method
-         * (key.isConnectable()) : true  #  inside handleKey method
-         * (sc.finishConnect()) : true  #  inside handleKey method
-         * (catch-exception (IOException)) : true
-         * (for-each(selector.keys())) : true
-         * (key.attachment() instanceof ConnectionHandler) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<ConnectionHandler> connectionHandler = mockStatic(ConnectionHandler.class)) {
-            connectionHandler.when(() -> ConnectionHandler.handleKey((SelectionKey) null)).thenAnswer((Answer<Void>) invocation -> null);
-            NioClientManager target = spy(new NioClientManager());
-            doReturn(true).when(target).isRunning();
-            //Act Statement(s)
-            target.run();
-            //Assert statement(s)
-            connectionHandler.verify(() -> ConnectionHandler.handleKey((SelectionKey) null), atLeast(1));
-            verify(target).isRunning();
-        }
-    }
-
-    //Sapient generated method id: ${f0d911b4-a5be-3e95-897c-c0c456067260}
-    @Ignore(value = "Potential harmful system call (Selector.select, Selector.close, Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
-    @Test()
-    public void runWhenScFinishConnectAndCaughtIOExceptionAndSelectorKeysIsNotEmptyAndKeyAttachmentInstanceOfConnectionHandler() throws Exception {
-        /* Branches:
-         * (isRunning()) : true
-         * ((conn = newConnectionChannels.poll()) != null) : false
-         * (keyIterator.hasNext()) : true
-         * (key.isValid()) : true  #  inside handleKey method
-         * (key.isConnectable()) : true  #  inside handleKey method
-         * (sc.finishConnect()) : true  #  inside handleKey method
-         * (catch-exception (IOException)) : true
-         * (for-each(selector.keys())) : true
-         * (key.attachment() instanceof ConnectionHandler) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<ConnectionHandler> connectionHandler = mockStatic(ConnectionHandler.class)) {
-            connectionHandler.when(() -> ConnectionHandler.handleKey((SelectionKey) null)).thenAnswer((Answer<Void>) invocation -> null);
-            NioClientManager target = spy(new NioClientManager());
-            doReturn(true).when(target).isRunning();
-            //Act Statement(s)
-            target.run();
-            //Assert statement(s)
-            connectionHandler.verify(() -> ConnectionHandler.handleKey((SelectionKey) null), atLeast(1));
-            verify(target).isRunning();
-        }
-    }
-
     //Sapient generated method id: ${2bb3f3f2-19d9-3686-8409-b9ef5ffc97ff}
     @Test()
     public void openConnectionWhenIsRunningNotThrowsIllegalStateException() {
@@ -339,6 +247,7 @@ public class NioClientManagerSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         ListenableCompletableFuture<SocketAddress> listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
+        StreamConnection streamConnectionMock = mock(StreamConnection.class, "StreamConnection");
         try (MockedStatic<ListenableCompletableFuture> listenableCompletableFuture = mockStatic(ListenableCompletableFuture.class)) {
             listenableCompletableFuture.when(() -> ListenableCompletableFuture.of((CompletableFuture) null)).thenReturn(listenableCompletableFutureMock);
             NioClientManager target = spy(new NioClientManager());
@@ -366,16 +275,15 @@ public class NioClientManagerSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        StreamConnection streamConnectionMock = mock(StreamConnection.class, "{}");
+        ListenableCompletableFuture listenableCompletableFutureMock = mock(ListenableCompletableFuture.class);
+        ListenableCompletableFuture<SocketAddress> listenableCompletableFutureMock2 = mock(ListenableCompletableFuture.class);
         try (MockedStatic<ListenableCompletableFuture> listenableCompletableFuture = mockStatic(ListenableCompletableFuture.class);
              MockedStatic<SocketChannel> socketChannel = mockStatic(SocketChannel.class)) {
             SocketChannel socketChannel2 = SocketChannel.open();
             socketChannel.when(() -> SocketChannel.open()).thenReturn(socketChannel2);
-            ListenableCompletableFuture listenableCompletableFuture2 = new ListenableCompletableFuture();
-            listenableCompletableFuture.when(() -> ListenableCompletableFuture.of((CompletableFuture) null)).thenReturn(listenableCompletableFuture2);
-            ListenableCompletableFuture<SocketAddress> listenableCompletableFuture3 = new ListenableCompletableFuture<>();
+            listenableCompletableFuture.when(() -> ListenableCompletableFuture.of((CompletableFuture) null)).thenReturn(listenableCompletableFutureMock);
             Throwable throwable = new Throwable();
-            listenableCompletableFuture.when(() -> ListenableCompletableFuture.failedFuture(throwable)).thenReturn(listenableCompletableFuture3);
+            listenableCompletableFuture.when(() -> ListenableCompletableFuture.failedFuture(throwable)).thenReturn(listenableCompletableFutureMock2);
             NioClientManager target = spy(new NioClientManager());
             doReturn(true).when(target).isRunning();
             //TODO: Needs initialization with real value
@@ -383,7 +291,7 @@ public class NioClientManagerSapientGeneratedJunit4Test {
             //Act Statement(s)
             ListenableCompletableFuture<SocketAddress> result = target.openConnection(socketAddress, streamConnectionMock);
             //Assert statement(s)
-            assertThat(result, equalTo(listenableCompletableFuture3));
+            assertThat(result, equalTo(listenableCompletableFutureMock2));
             socketChannel.verify(() -> SocketChannel.open(), atLeast(1));
             listenableCompletableFuture.verify(() -> ListenableCompletableFuture.of((CompletableFuture) null), atLeast(1));
             listenableCompletableFuture.verify(() -> ListenableCompletableFuture.failedFuture(throwable), atLeast(1));

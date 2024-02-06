@@ -170,7 +170,7 @@ public class BlockingClientSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${561998f8-7691-38b6-b1d5-0712aa9b4d77}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (Thread.start) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void closeConnectionTest() throws IOException {
         /**
@@ -194,7 +194,7 @@ public class BlockingClientSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${ba15c53d-07b3-3a43-bed0-8662bcd3e061}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (Thread.start) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void closeConnectionWhenCaughtIOExceptionThrowsRuntimeException() throws IOException {
         /* Branches:
@@ -222,7 +222,7 @@ public class BlockingClientSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${90b47dad-6d2c-3295-946b-afa0a749fd31}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (Thread.start) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void writeBytesTest() throws IOException {
         /**
@@ -253,6 +253,7 @@ public class BlockingClientSapientGeneratedJunit4Test {
 
     //Sapient generated method id: ${d197da93-8eb6-3952-99de-dd3433302555}
     @Test()
+    @Ignore(value = "Potential harmful system call (Thread.start) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     public void writeBytesWhenCaughtIOExceptionThrowsIOException() throws IOException {
         /* Branches:
          * (catch-exception (IOException)) : true
@@ -285,7 +286,7 @@ public class BlockingClientSapientGeneratedJunit4Test {
     }
 
     //Sapient generated method id: ${36732ad5-ba24-3fdc-b468-45e041efaa06}
-    @Ignore()
+    @Ignore(value = "Potential harmful system call (Thread.start) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
     @Test()
     public void getConnectFutureTest() throws IOException {
         /**

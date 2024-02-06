@@ -1,5 +1,5 @@
 ---
-modelFingerprint: "220D9F8CDFC1BF9021472CD63609D731"
+modelFingerprint: "DD65FB05ED283FFEE7B4AB8EF9FF3215"
 methods:
 - method:
     name: "dummy"
@@ -110,114 +110,16 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "C45C8A7A1AD6A91B845C3DDA54AAC1C2"
-    problemWasSolvedByProver: false
-    truncated: false
-    inputParameters:
-    - type: "INPUT"
-      name: "mode"
-      modelFingerprint: "698255E1A348109A9C11C2E04F25493B"
-      index: 1
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "ENUM"
-        content: !<regular>
-          value: "ALL"
-        suggestedContent: !<regular>
-          value: "ALL"
-        valueType: "org.bitcoinj.core.Transaction$SigHash"
-        uuid: "calcSigHashValue_transaction.SigHash1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INPUT"
-      name: "anyoneCanPay"
-      modelFingerprint: "501B69A0465FA3491D2C8C974A3B765F"
-      index: 2
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "BASIC"
-        content: !<regular>
-          value: true
-        suggestedContent: !<regular>
-          value: true
-        valueType: "boolean"
-        uuid: "calcSigHashValue_boolean1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Preconditions"
-      modelFingerprint: "60A6CF81A4B62FC26CAD9062FF6E1448"
-      index: 3
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "REAL"
-        valueType: "org.bitcoinj.base.internal.Preconditions"
-        uuid: "org.bitcoinj.base.internal.Preconditions"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.Preconditions"
-        name: "checkArgument"
-        parameters:
-        - name: "expression"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: true
-            valueType: "boolean"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "checkArgument(boolean): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "calcSigHashValue_void1"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "158A76FAE4C1E5741587C22A6148B6F0"
-      index: 4
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "BASIC"
-        content: !<regular>
-          value: 0
-        valueType: "int"
-        uuid: "calcSigHashValue_int6"
-        fixed: true
-        equalsMethodPresent: true
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
     uuid: "8abe3a34-808c-30c8-b7c2-d61287cda95b"
-    deleted: false
-    disabled: true
+    deleted: true
+    disabled: false
     ignoredBySystem: true
-    failureReason:
-      reason: "UNKNOWN_REASON"
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path7"
     pathIdForUser: "path2"
     testPathName: "calcSigHashValueWhenNotAnyoneCanPay"
@@ -595,38 +497,20 @@ methods:
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
-  - pathId: "path30"
-    pathIdForUser: "path2"
-    testPathName: "isEncodingCanonicalWhenSignatureLengthLessThan9"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "686E766E159855401015442B1D74DEF7"
-    problemWasSolvedByProver: true
-    truncated: true
-    inputParameters: []
-    uuid: "17bf03ea-57ab-38e9-b9fb-773fae628434"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    prover: "DEFAULT"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
-    pathIdForUser: "path3"
+    pathIdForUser: "path2"
     testPathName: "isEncodingCanonicalWhenSignatureLengthGreaterThan73"
     nameDefinedByUser: false
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "02004D706A7DDB9383C63104BA4614A7"
-    problemWasSolvedByProver: true
+    modelFingerprint: "6F306C059A78379F64E4676B5AE6E5EF"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "signature"
-      modelFingerprint: "EFEF2064D8E0E6D22DA85005DD7C3E4C"
+      modelFingerprint: "1B5DDFAE8491E2AB68A91906AABE31BA"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -634,1341 +518,9 @@ methods:
       value:
         sapientType: "ARRAY"
         content: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item0"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            1:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 1
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            2:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 2
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            3:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 3
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item3"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            4:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 4
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item4"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            5:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 5
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item5"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            6:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 6
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item6"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            7:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 7
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item7"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            8:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 8
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item8"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            9:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 9
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item9"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            10:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 10
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item10"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            11:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 11
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item11"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            12:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 12
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item12"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            13:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 13
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item13"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            14:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 14
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item14"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            15:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 15
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item15"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            16:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 16
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item16"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            17:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 17
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item17"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            18:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 18
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item18"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            19:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 19
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item19"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            20:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 20
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item20"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            21:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 21
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item21"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            22:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 22
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item22"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            23:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 23
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item23"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            24:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 24
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item24"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            25:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 25
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item25"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            26:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 26
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item26"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            27:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 27
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item27"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            28:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 28
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item28"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            29:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 29
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item29"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            30:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 30
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item30"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            31:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 31
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item31"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            32:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 32
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item32"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            33:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 33
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item33"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            34:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 34
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item34"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            35:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 35
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item35"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            36:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 36
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item36"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            37:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 37
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item37"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            38:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 38
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item38"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            39:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 39
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item39"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            40:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 40
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item40"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            41:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 41
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item41"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            42:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 42
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item42"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            43:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 43
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item43"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            44:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 44
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item44"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            45:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 45
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item45"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            46:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 46
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item46"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            47:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 47
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item47"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            48:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 48
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item48"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            49:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 49
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item49"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            50:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 50
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item50"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            51:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 51
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item51"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            52:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 52
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item52"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            53:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 53
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item53"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            54:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 54
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item54"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            55:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 55
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item55"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            56:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 56
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item56"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            57:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 57
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item57"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            58:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 58
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item58"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            59:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 59
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item59"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            60:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 60
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item60"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            61:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 61
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item61"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            62:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 62
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item62"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            63:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 63
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item63"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            64:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 64
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item64"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            65:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 65
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item65"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            66:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 66
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item66"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            67:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 67
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item67"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            68:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 68
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item68"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            69:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 69
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item69"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            70:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 70
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item70"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            71:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 71
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item71"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            72:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 72
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item72"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            73:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 73
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item73"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          values: {}
         suggestedContent: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item0"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            1:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 1
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            2:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 2
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            3:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 3
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item3"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            4:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 4
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item4"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            5:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 5
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item5"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            6:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 6
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item6"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            7:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 7
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item7"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            8:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 8
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item8"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            9:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 9
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item9"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            10:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 10
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item10"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            11:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 11
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item11"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            12:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 12
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item12"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            13:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 13
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item13"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            14:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 14
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item14"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            15:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 15
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item15"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            16:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 16
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item16"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            17:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 17
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item17"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            18:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 18
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item18"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            19:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 19
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item19"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            20:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 20
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item20"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            21:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 21
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item21"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            22:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 22
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item22"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            23:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 23
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item23"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            24:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 24
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item24"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            25:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 25
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item25"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            26:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 26
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item26"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            27:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 27
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item27"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            28:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 28
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item28"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            29:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 29
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item29"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            30:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 30
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item30"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            31:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 31
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item31"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            32:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 32
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item32"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            33:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 33
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item33"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            34:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 34
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item34"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            35:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 35
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item35"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            36:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 36
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item36"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            37:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 37
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item37"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            38:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 38
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item38"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            39:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 39
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item39"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            40:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 40
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item40"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            41:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 41
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item41"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            42:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 42
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item42"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            43:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 43
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item43"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            44:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 44
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item44"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            45:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 45
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item45"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            46:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 46
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item46"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            47:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 47
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item47"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            48:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 48
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item48"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            49:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 49
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item49"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            50:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 50
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item50"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            51:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 51
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item51"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            52:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 52
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item52"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            53:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 53
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item53"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            54:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 54
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item54"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            55:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 55
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item55"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            56:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 56
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item56"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            57:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 57
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item57"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            58:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 58
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item58"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            59:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 59
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item59"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            60:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 60
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item60"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            61:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 61
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item61"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            62:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 62
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item62"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            63:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 63
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item63"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            64:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 64
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item64"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            65:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 65
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item65"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            66:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 66
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item66"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            67:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 67
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item67"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            68:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 68
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item68"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            69:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 69
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item69"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            70:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 70
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item70"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            71:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 71
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item71"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            72:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 72
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item72"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            73:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 73
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item73"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          values: {}
         valueType: "byte[]"
         uuid: "isEncodingCanonical_byte[]1"
         fixed: false
@@ -1995,25 +547,26 @@ methods:
       filledByUser: false
     uuid: "4bb63b8a-9ee0-3a6f-acb1-b95fc9bcb0db"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path3"
-    pathIdForUser: "path4"
+    pathIdForUser: "path3"
     testPathName: "isEncodingCanonicalWhenHashTypeGreaterThanTransactionSigHashSINGLEValue"
     nameDefinedByUser: false
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "634E17984E5B6F63FE5BD82B30E27864"
-    problemWasSolvedByProver: true
+    modelFingerprint: "975E851726D8AB13CCED9E56F12ACD50"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "signature"
-      modelFingerprint: "F2CF328C7F831316041EF709023A1EF9"
+      modelFingerprint: "782CEB0A257C75621549091F222D2C58"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -2026,8 +579,6 @@ methods:
               sapientType: "BASIC"
               content: !<regular>
                 value: 0
-              suggestedContent: !<regular>
-                value: 0
               valueType: "byte"
               uuid: "isEncodingCanonical_byte[]1Item0"
               fixed: false
@@ -2036,8 +587,6 @@ methods:
             1:
               sapientType: "BASIC"
               content: !<regular>
-                value: 1
-              suggestedContent: !<regular>
                 value: 1
               valueType: "byte"
               uuid: "isEncodingCanonical_byte[]1Item1"
@@ -2048,8 +597,6 @@ methods:
               sapientType: "BASIC"
               content: !<regular>
                 value: 2
-              suggestedContent: !<regular>
-                value: 2
               valueType: "byte"
               uuid: "isEncodingCanonical_byte[]1Item2"
               fixed: false
@@ -2058,8 +605,6 @@ methods:
             3:
               sapientType: "BASIC"
               content: !<regular>
-                value: 3
-              suggestedContent: !<regular>
                 value: 3
               valueType: "byte"
               uuid: "isEncodingCanonical_byte[]1Item3"
@@ -2070,8 +615,6 @@ methods:
               sapientType: "BASIC"
               content: !<regular>
                 value: 4
-              suggestedContent: !<regular>
-                value: 4
               valueType: "byte"
               uuid: "isEncodingCanonical_byte[]1Item4"
               fixed: false
@@ -2080,8 +623,6 @@ methods:
             5:
               sapientType: "BASIC"
               content: !<regular>
-                value: 5
-              suggestedContent: !<regular>
                 value: 5
               valueType: "byte"
               uuid: "isEncodingCanonical_byte[]1Item5"
@@ -2092,8 +633,6 @@ methods:
               sapientType: "BASIC"
               content: !<regular>
                 value: 6
-              suggestedContent: !<regular>
-                value: 6
               valueType: "byte"
               uuid: "isEncodingCanonical_byte[]1Item6"
               fixed: false
@@ -2102,8 +641,6 @@ methods:
             7:
               sapientType: "BASIC"
               content: !<regular>
-                value: 7
-              suggestedContent: !<regular>
                 value: 7
               valueType: "byte"
               uuid: "isEncodingCanonical_byte[]1Item7"
@@ -2127,8 +664,6 @@ methods:
               sapientType: "BASIC"
               content: !<regular>
                 value: 0
-              suggestedContent: !<regular>
-                value: 0
               valueType: "byte"
               uuid: "isEncodingCanonical_byte[]1Item0"
               fixed: false
@@ -2137,8 +672,6 @@ methods:
             1:
               sapientType: "BASIC"
               content: !<regular>
-                value: 1
-              suggestedContent: !<regular>
                 value: 1
               valueType: "byte"
               uuid: "isEncodingCanonical_byte[]1Item1"
@@ -2149,8 +682,6 @@ methods:
               sapientType: "BASIC"
               content: !<regular>
                 value: 2
-              suggestedContent: !<regular>
-                value: 2
               valueType: "byte"
               uuid: "isEncodingCanonical_byte[]1Item2"
               fixed: false
@@ -2159,8 +690,6 @@ methods:
             3:
               sapientType: "BASIC"
               content: !<regular>
-                value: 3
-              suggestedContent: !<regular>
                 value: 3
               valueType: "byte"
               uuid: "isEncodingCanonical_byte[]1Item3"
@@ -2171,8 +700,6 @@ methods:
               sapientType: "BASIC"
               content: !<regular>
                 value: 4
-              suggestedContent: !<regular>
-                value: 4
               valueType: "byte"
               uuid: "isEncodingCanonical_byte[]1Item4"
               fixed: false
@@ -2181,8 +708,6 @@ methods:
             5:
               sapientType: "BASIC"
               content: !<regular>
-                value: 5
-              suggestedContent: !<regular>
                 value: 5
               valueType: "byte"
               uuid: "isEncodingCanonical_byte[]1Item5"
@@ -2193,8 +718,6 @@ methods:
               sapientType: "BASIC"
               content: !<regular>
                 value: 6
-              suggestedContent: !<regular>
-                value: 6
               valueType: "byte"
               uuid: "isEncodingCanonical_byte[]1Item6"
               fixed: false
@@ -2203,8 +726,6 @@ methods:
             7:
               sapientType: "BASIC"
               content: !<regular>
-                value: 7
-              suggestedContent: !<regular>
                 value: 7
               valueType: "byte"
               uuid: "isEncodingCanonical_byte[]1Item7"
@@ -2250,30 +771,12 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path29"
-    pathIdForUser: "path5"
-    testPathName: "isEncodingCanonicalWhen0IndexOfSignatureAnd255NotEquals48"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "4906BDBC4C3D0005DB1F0A3DB007086C"
-    problemWasSolvedByProver: false
-    truncated: true
-    inputParameters: []
-    uuid: "7b77bdff-52f1-3ccc-be38-59ed8c493540"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
     failureReason:
       reason: "BITWISE_NOT_SUPPORTED"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path4"
-    pathIdForUser: "path6"
+    pathIdForUser: "path4"
     testPathName: "isEncodingCanonicalWhen1IndexOfSignatureAnd255NotEqualsSignatureLengthMinus3"
     nameDefinedByUser: false
     priorityDefinedByUser: false
@@ -2503,7 +1006,7 @@ methods:
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path5"
-    pathIdForUser: "path7"
+    pathIdForUser: "path5"
     testPathName: "isEncodingCanonicalWhenLenREquals0"
     nameDefinedByUser: false
     priorityDefinedByUser: false
@@ -2736,27 +1239,8 @@ methods:
       reason: "BITWISE_NOT_SUPPORTED"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
-  - pathId: "path28"
-    pathIdForUser: "path8"
-    testPathName: "isEncodingCanonicalWhenLenRPlusLenSPlus7NotEqualsSignatureLength"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "8042D47903BCC7C848D3E519ED7CA334"
-    problemWasSolvedByProver: false
-    truncated: true
-    inputParameters: []
-    uuid: "0534826b-6178-30d9-abd8-7a62848d7747"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    failureReason:
-      reason: "BITWISE_NOT_SUPPORTED"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
   - pathId: "path6"
-    pathIdForUser: "path9"
+    pathIdForUser: "path6"
     testPathName: "isEncodingCanonicalWhenLenSEquals0"
     nameDefinedByUser: false
     priorityDefinedByUser: false
@@ -2993,1825 +1477,6 @@ methods:
       reason: "BITWISE_NOT_SUPPORTED"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
-  - pathId: "path27"
-    pathIdForUser: "path10"
-    testPathName: "isEncodingCanonicalWhen4Minus2IndexOfSignatureNotEquals2"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "32F585FBB6184F06F1C9D58BEF39972B"
-    problemWasSolvedByProver: false
-    truncated: true
-    inputParameters: []
-    uuid: "01064d8a-e3ba-3729-aec3-16edb54cdefe"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    failureReason:
-      reason: "BITWISE_NOT_SUPPORTED"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path7"
-    pathIdForUser: "path11"
-    testPathName: "isEncodingCanonicalWhen4IndexOfSignatureAnd128Equals128"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "47897C6EC109F207DEF2FB18774BA2DD"
-    problemWasSolvedByProver: false
-    truncated: false
-    inputParameters:
-    - type: "INPUT"
-      name: "signature"
-      modelFingerprint: "95C5DF6E58DB9D14C39C83F31305790A"
-      index: 1
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "ARRAY"
-        content: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            1:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 1
-              suggestedContent: !<regular>
-                value: 1
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte3"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            2:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 2
-              suggestedContent: !<regular>
-                value: 2
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte6"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            3:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 3
-              suggestedContent: !<regular>
-                value: 3
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte4"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            4:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 4
-              suggestedContent: !<regular>
-                value: 4
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte7"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            5:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 5
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item5"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            6:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 6
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item6"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            7:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 7
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item7"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            8:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 8
-              suggestedContent: !<regular>
-                value: 8
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            1:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 1
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte3"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            2:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 2
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte6"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            3:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 3
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte4"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            4:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 4
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte7"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            5:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 5
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item5"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            6:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 6
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item6"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            7:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 7
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item7"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            8:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 8
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        valueType: "byte[]"
-        uuid: "isEncodingCanonical_byte[]1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "3A21543F56248AC92654D6E439128AED"
-      index: 2
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "BASIC"
-        content: !<regular>
-          value: false
-        valueType: "boolean"
-        fixed: true
-        equalsMethodPresent: true
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    uuid: "2e36f6ae-29d5-3900-9449-a0fb3cf7f5de"
-    deleted: false
-    disabled: false
-    ignoredBySystem: false
-    failureReason:
-      reason: "BITWISE_NOT_SUPPORTED"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path26"
-    pathIdForUser: "path12"
-    testPathName: "isEncodingCanonicalWhen6PlusLenRMinus2IndexOfSignatureNotEquals2"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "854DEC7CCF02EFE51630A746C1692CD9"
-    problemWasSolvedByProver: false
-    truncated: false
-    inputParameters:
-    - type: "INPUT"
-      name: "signature"
-      modelFingerprint: "01D857A2659387410E82CEB86E1808EF"
-      index: 1
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "ARRAY"
-        content: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            1:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 1
-              suggestedContent: !<regular>
-                value: 1
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte3"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            2:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 2
-              suggestedContent: !<regular>
-                value: 2
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte6"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            3:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte8"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            4:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 4
-              suggestedContent: !<regular>
-                value: 4
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte7"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            5:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 5
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item5"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            6:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 6
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item6"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            7:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 7
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item7"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            8:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 8
-              suggestedContent: !<regular>
-                value: 8
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            1:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 1
-              suggestedContent: !<regular>
-                value: 1
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte3"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            2:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 2
-              suggestedContent: !<regular>
-                value: 2
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte6"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            3:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte8"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            4:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 4
-              suggestedContent: !<regular>
-                value: 4
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte7"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            5:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 5
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item5"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            6:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 6
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item6"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            7:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 7
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item7"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            8:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 8
-              suggestedContent: !<regular>
-                value: 8
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        valueType: "byte[]"
-        uuid: "isEncodingCanonical_byte[]1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "3A21543F56248AC92654D6E439128AED"
-      index: 2
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "BASIC"
-        content: !<regular>
-          value: false
-        valueType: "boolean"
-        fixed: true
-        equalsMethodPresent: true
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    uuid: "968ffbbf-970a-3ef2-8b01-d4d01c77372f"
-    deleted: false
-    disabled: false
-    ignoredBySystem: true
-    failureReason:
-      reason: "BITWISE_NOT_SUPPORTED"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path8"
-    pathIdForUser: "path13"
-    testPathName: "isEncodingCanonicalWhen4Plus1IndexOfSignatureAnd128NotEquals128"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "6EC768F310F7DC75A8FDECD4965122EA"
-    problemWasSolvedByProver: false
-    truncated: false
-    inputParameters:
-    - type: "INPUT"
-      name: "signature"
-      modelFingerprint: "41CF6DF11C22C4874A33B1672EEA8ECF"
-      index: 1
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "ARRAY"
-        content: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            1:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 1
-              suggestedContent: !<regular>
-                value: 1
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte3"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            2:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 2
-              suggestedContent: !<regular>
-                value: 2
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte6"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            3:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 3
-              suggestedContent: !<regular>
-                value: 3
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte4"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            4:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte7"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            5:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 5
-              suggestedContent: !<regular>
-                value: 5
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte9"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            6:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 6
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item6"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            7:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 7
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item7"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            8:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 8
-              suggestedContent: !<regular>
-                value: 8
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte5"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            1:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 1
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte3"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            2:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 2
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte6"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            3:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 3
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte4"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            4:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte7"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            5:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 5
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte9"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            6:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 6
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item6"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            7:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 7
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte[]1Item7"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            8:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 8
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte5"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        valueType: "byte[]"
-        uuid: "isEncodingCanonical_byte[]1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "3A21543F56248AC92654D6E439128AED"
-      index: 2
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "BASIC"
-        content: !<regular>
-          value: false
-        valueType: "boolean"
-        fixed: true
-        equalsMethodPresent: true
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    uuid: "fb675832-8fa9-39d9-9fea-84cad0c337bb"
-    deleted: false
-    disabled: false
-    ignoredBySystem: false
-    failureReason:
-      reason: "BITWISE_NOT_SUPPORTED"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path20"
-    pathIdForUser: "path14"
-    testPathName: "isEncodingCanonicalWhen4IndexOfSignatureNotEquals0And6PlusLenRMinus2IndexOfSignatureNotEquals2"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "EABDCFC9173B54D75A9BFA28C713EBCD"
-    problemWasSolvedByProver: false
-    truncated: true
-    inputParameters: []
-    uuid: "a8ba392e-7747-3fea-826e-0196e0ed56df"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    failureReason:
-      reason: "BITWISE_NOT_SUPPORTED"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path21"
-    pathIdForUser: "path15"
-    testPathName: "isEncodingCanonicalWhen6PlusLenRIndexOfSignatureAnd128Equals128"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "8389249E7BCA7BEE45C0159ECD1C8A75"
-    problemWasSolvedByProver: false
-    truncated: true
-    inputParameters: []
-    uuid: "9d5e40c5-33cd-396d-8940-8b8cc653781f"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    failureReason:
-      reason: "BITWISE_NOT_SUPPORTED"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path14"
-    pathIdForUser: "path16"
-    testPathName: "isEncodingCanonicalWhen4Plus1IndexOfSignatureAnd128Equals128And6PlusLenRMinus2IndexOfSignatureNotEquals2"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "A7BFD801FCD22A5FAA9E3141D045B82B"
-    problemWasSolvedByProver: false
-    truncated: true
-    inputParameters: []
-    uuid: "f7c8efe8-9728-382c-a76b-e8b86a9bb873"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    failureReason:
-      reason: "BITWISE_NOT_SUPPORTED"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path15"
-    pathIdForUser: "path17"
-    testPathName: "isEncodingCanonicalWhen6PlusLenRMinus2IndexOfSignatureEquals2And6PlusLenRIndexOfSignatureAnd128Equals128"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "20B4892C001716CA5F9523D0DE59F18B"
-    problemWasSolvedByProver: false
-    truncated: true
-    inputParameters: []
-    uuid: "d859887b-5d1f-37d0-9ad7-ffa97eeec95f"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    failureReason:
-      reason: "BITWISE_NOT_SUPPORTED"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path25"
-    pathIdForUser: "path18"
-    testPathName: "isEncodingCanonicalWhenLenSNotGreaterThan1"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "6AC814FB3645E5379107CDD3801B0A7D"
-    problemWasSolvedByProver: false
-    truncated: true
-    inputParameters: []
-    uuid: "54689f7a-1e73-3de1-81ab-d826169a47ba"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    failureReason:
-      reason: "BITWISE_NOT_SUPPORTED"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path9"
-    pathIdForUser: "path19"
-    testPathName: "isEncodingCanonicalWhen4Plus1IndexOfSignatureAnd128Equals128And6PlusLenRMinus2IndexOfSignatureEquals2And6PlusLenRIndexO"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "F5FED55655BCAC8F68FB9A2D36485405"
-    problemWasSolvedByProver: false
-    truncated: false
-    inputParameters:
-    - type: "INPUT"
-      name: "signature"
-      modelFingerprint: "2E6BDBBBFCF4DA562E6D1B27374A5CC4"
-      index: 1
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "ARRAY"
-        content: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            1:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 1
-              suggestedContent: !<regular>
-                value: 1
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte3"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            2:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 2
-              suggestedContent: !<regular>
-                value: 2
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte6"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            3:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 3
-              suggestedContent: !<regular>
-                value: 3
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte4"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            4:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte7"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            5:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 5
-              suggestedContent: !<regular>
-                value: 5
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte9"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            6:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 2
-              suggestedContent: !<regular>
-                value: 2
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte10"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            7:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 7
-              suggestedContent: !<regular>
-                value: 7
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte5"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            8:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 8
-              suggestedContent: !<regular>
-                value: 8
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte11"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            9:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 9
-              suggestedContent: !<regular>
-                value: 9
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            1:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 1
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte3"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            2:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 2
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte6"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            3:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 3
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte4"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            4:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte7"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            5:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 5
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte9"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            6:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 2
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte10"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            7:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 7
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte5"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            8:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 8
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte11"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            9:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 9
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        valueType: "byte[]"
-        uuid: "isEncodingCanonical_byte[]1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "3A21543F56248AC92654D6E439128AED"
-      index: 2
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "BASIC"
-        content: !<regular>
-          value: false
-        valueType: "boolean"
-        fixed: true
-        equalsMethodPresent: true
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    uuid: "532335fa-a47f-3f3e-b298-a91d13d1ac5b"
-    deleted: false
-    disabled: false
-    ignoredBySystem: false
-    failureReason:
-      reason: "BITWISE_NOT_SUPPORTED"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path19"
-    pathIdForUser: "path20"
-    testPathName: "isEncodingCanonicalWhen6PlusLenRIndexOfSignatureAnd128NotEquals128AndLenSNotGreaterThan1"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "B6A13CA695F1EDE7DA84182C540D57B4"
-    problemWasSolvedByProver: false
-    truncated: true
-    inputParameters: []
-    uuid: "882a9e7d-f1ae-38a2-ad2b-5d59c4001a18"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    failureReason:
-      reason: "BITWISE_NOT_SUPPORTED"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path24"
-    pathIdForUser: "path21"
-    testPathName: "isEncodingCanonicalWhen6PlusLenRIndexOfSignatureNotEquals0"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "985270A3F39FA889CFED13F261AD6332"
-    problemWasSolvedByProver: false
-    truncated: true
-    inputParameters: []
-    uuid: "1599878d-8a4d-3f5a-b389-5d6e15d4fa93"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    failureReason:
-      reason: "BITWISE_NOT_SUPPORTED"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path13"
-    pathIdForUser: "path22"
-    testPathName: "isEncodingCanonicalWhen6PlusLenRMinus2IndexOfSignatureEquals2And6PlusLenRIndexOfSignatureAnd128NotEquals128AndLenSNotGr"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "7CB55F10C4A25079B4C34071ADB5475D"
-    problemWasSolvedByProver: false
-    truncated: true
-    inputParameters: []
-    uuid: "da5b882c-2d89-32bd-bd6e-29200084ebd6"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    failureReason:
-      reason: "BITWISE_NOT_SUPPORTED"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path18"
-    pathIdForUser: "path23"
-    testPathName: "isEncodingCanonicalWhenLenSGreaterThan1And6PlusLenRIndexOfSignatureNotEquals0"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "9B1AA2F41F024093725F35F6D7679050"
-    problemWasSolvedByProver: false
-    truncated: true
-    inputParameters: []
-    uuid: "f79b0639-6a67-3a0d-9284-aecfc460be71"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    failureReason:
-      reason: "BITWISE_NOT_SUPPORTED"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path22"
-    pathIdForUser: "path24"
-    testPathName: "isEncodingCanonicalWhen6PlusLenRPlus1IndexOfSignatureAnd128NotEquals128"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "56332CE0BA0A1395A4C56CACEA4219C2"
-    problemWasSolvedByProver: false
-    truncated: true
-    inputParameters: []
-    uuid: "96f652b7-2e9d-3d11-b4e4-8ec1dd70b842"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    failureReason:
-      reason: "BITWISE_NOT_SUPPORTED"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path23"
-    pathIdForUser: "path25"
-    testPathName: "isEncodingCanonicalWhen6PlusLenRPlus1IndexOfSignatureAnd128Equals128"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "85D273B54470080328AEDEAFE701F9C0"
-    problemWasSolvedByProver: false
-    truncated: true
-    inputParameters: []
-    uuid: "4e8d7a7c-f4d3-317a-81a6-4cff981b0506"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    failureReason:
-      reason: "BITWISE_NOT_SUPPORTED"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path12"
-    pathIdForUser: "path26"
-    testPathName: "isEncodingCanonicalWhen6PlusLenRIndexOfSignatureAnd128NotEquals128AndLenSGreaterThan1And6PlusLenRIndexOfSignatureNotEqu"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "964B90976768FF4CA92ABA78D4703CF3"
-    problemWasSolvedByProver: false
-    truncated: true
-    inputParameters: []
-    uuid: "998af83f-5730-3b11-8fe2-b6aa8b23a367"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    failureReason:
-      reason: "BITWISE_NOT_SUPPORTED"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path16"
-    pathIdForUser: "path27"
-    testPathName: "isEncodingCanonicalWhen6PlusLenRIndexOfSignatureEquals0And6PlusLenRPlus1IndexOfSignatureAnd128NotEquals128"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "F5EAA7AA6887E029D93084F92B152007"
-    problemWasSolvedByProver: false
-    truncated: true
-    inputParameters: []
-    uuid: "daeb594a-81bd-355f-95b3-80dabfe6db75"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    failureReason:
-      reason: "BITWISE_NOT_SUPPORTED"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path17"
-    pathIdForUser: "path28"
-    testPathName: "isEncodingCanonicalWhen6PlusLenRIndexOfSignatureEquals0And6PlusLenRPlus1IndexOfSignatureAnd128Equals128"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "C3F7E4103F772949C04981C3AD661485"
-    problemWasSolvedByProver: false
-    truncated: true
-    inputParameters: []
-    uuid: "010492f1-637f-3053-97f4-8b55cb33dba4"
-    deleted: true
-    disabled: false
-    ignoredBySystem: true
-    failureReason:
-      reason: "BITWISE_NOT_SUPPORTED"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path10"
-    pathIdForUser: "path29"
-    testPathName: "isEncodingCanonicalWhenLenSGreaterThan1And6PlusLenRIndexOfSignatureEquals0And6PlusLenRPlus1IndexOfSignatureAnd128NotEqu"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "A1B168C41C80ECFAF61F8970EAE4FF48"
-    problemWasSolvedByProver: false
-    truncated: false
-    inputParameters:
-    - type: "INPUT"
-      name: "signature"
-      modelFingerprint: "119CA3608C94F1B5CA5C43070C36D7BB"
-      index: 1
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "ARRAY"
-        content: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            1:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 1
-              suggestedContent: !<regular>
-                value: 1
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte3"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            2:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 2
-              suggestedContent: !<regular>
-                value: 2
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte6"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            3:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 3
-              suggestedContent: !<regular>
-                value: 3
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte4"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            4:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte7"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            5:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 5
-              suggestedContent: !<regular>
-                value: 5
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte9"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            6:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 2
-              suggestedContent: !<regular>
-                value: 2
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte10"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            7:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 7
-              suggestedContent: !<regular>
-                value: 7
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte5"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            8:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte12"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            9:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 9
-              suggestedContent: !<regular>
-                value: 9
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte13"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            10:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 10
-              suggestedContent: !<regular>
-                value: 10
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            1:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 1
-              suggestedContent: !<regular>
-                value: 1
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte3"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            2:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 2
-              suggestedContent: !<regular>
-                value: 2
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte6"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            3:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 3
-              suggestedContent: !<regular>
-                value: 3
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte4"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            4:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte7"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            5:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 5
-              suggestedContent: !<regular>
-                value: 5
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte9"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            6:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 2
-              suggestedContent: !<regular>
-                value: 2
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte10"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            7:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 7
-              suggestedContent: !<regular>
-                value: 7
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte5"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            8:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte12"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            9:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 9
-              suggestedContent: !<regular>
-                value: 9
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte13"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            10:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 10
-              suggestedContent: !<regular>
-                value: 10
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        valueType: "byte[]"
-        uuid: "isEncodingCanonical_byte[]1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "3A21543F56248AC92654D6E439128AED"
-      index: 2
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "BASIC"
-        content: !<regular>
-          value: false
-        valueType: "boolean"
-        fixed: true
-        equalsMethodPresent: true
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    uuid: "66b9a231-2bf0-3797-958b-70798cd020d7"
-    deleted: false
-    disabled: false
-    ignoredBySystem: false
-    failureReason:
-      reason: "BITWISE_NOT_SUPPORTED"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
-  - pathId: "path11"
-    pathIdForUser: "path30"
-    testPathName: "isEncodingCanonicalWhenLenSGreaterThan1And6PlusLenRIndexOfSignatureEquals0And6PlusLenRPlus1IndexOfSignatureAnd128Equals"
-    nameDefinedByUser: false
-    priorityDefinedByUser: false
-    filledByUser: false
-    priority: "LOW"
-    modelFingerprint: "E19A452EA82E4AE5433388CBBEB2342F"
-    problemWasSolvedByProver: false
-    truncated: false
-    inputParameters:
-    - type: "INPUT"
-      name: "signature"
-      modelFingerprint: "119CA3608C94F1B5CA5C43070C36D7BB"
-      index: 1
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "ARRAY"
-        content: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            1:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 1
-              suggestedContent: !<regular>
-                value: 1
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte3"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            2:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 2
-              suggestedContent: !<regular>
-                value: 2
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte6"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            3:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 3
-              suggestedContent: !<regular>
-                value: 3
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte4"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            4:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte7"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            5:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 5
-              suggestedContent: !<regular>
-                value: 5
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte9"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            6:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 2
-              suggestedContent: !<regular>
-                value: 2
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte10"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            7:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 7
-              suggestedContent: !<regular>
-                value: 7
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte5"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            8:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte12"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            9:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 9
-              suggestedContent: !<regular>
-                value: 9
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte13"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            10:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 10
-              suggestedContent: !<regular>
-                value: 10
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            1:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 1
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte3"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            2:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 2
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte6"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            3:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 3
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte4"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            4:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte7"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            5:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 5
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte9"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            6:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 2
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte10"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            7:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 7
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte5"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            8:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 0
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte12"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            9:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 9
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte13"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            10:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 10
-              valueType: "byte"
-              uuid: "isEncodingCanonical_byte1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        valueType: "byte[]"
-        uuid: "isEncodingCanonical_byte[]1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "753659628F1B3F179A2EF0629F555437"
-      index: 2
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "BASIC"
-        content: !<regular>
-          value: true
-        valueType: "boolean"
-        fixed: true
-        equalsMethodPresent: true
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    uuid: "892643da-9a14-3e26-8906-fad1f7d6431f"
-    deleted: false
-    disabled: true
-    ignoredBySystem: false
-    failureReason:
-      reason: "BITWISE_NOT_SUPPORTED"
-    disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
 - method:
     name: "anyoneCanPay"
     returnType: "boolean"
@@ -4934,7 +1599,6 @@ methods:
     ignoredBySystem: false
     failureReason:
       reason: "BITWISE_NOT_SUPPORTED"
-    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -5222,12 +1886,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "8CB7D28536AD45DFD196838F14643526"
+    modelFingerprint: "7062EF580CC86BD5C88B55F1B8813A8E"
     problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "33068187833E0190E350B8DC2084321E"
+      modelFingerprint: "1FF64086CC2063FCE46D5E26723E1857"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -5241,9 +1905,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 1234567890
+                value: 10
               suggestedContent: !<regular>
-                value: 1234567890
+                value: 10
               valueType: "java.math.BigInteger"
               uuid: "<init>_bigInteger1"
               fixed: false
@@ -5253,9 +1917,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 9876543210
+                value: 20
               suggestedContent: !<regular>
-                value: 9876543210
+                value: 20
               valueType: "java.math.BigInteger"
               uuid: "<init>_bigInteger2"
               fixed: false
@@ -5265,9 +1929,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 1
+                value: 31
               suggestedContent: !<regular>
-                value: 1
+                value: 31
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -5282,9 +1946,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 1234567890
+                value: 10
               suggestedContent: !<regular>
-                value: 1234567890
+                value: 10
               valueType: "java.math.BigInteger"
               uuid: "<init>_bigInteger1"
               fixed: false
@@ -5294,9 +1958,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 9876543210
+                value: 20
               suggestedContent: !<regular>
-                value: 9876543210
+                value: 20
               valueType: "java.math.BigInteger"
               uuid: "<init>_bigInteger2"
               fixed: false
@@ -5306,9 +1970,9 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 1
+                value: 31
               suggestedContent: !<regular>
-                value: 1
+                value: 31
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -5526,7 +2190,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "C7361ED3B6EEC17095E3FCA660B9045B"
+    modelFingerprint: "FC49FD732AE3D1F7ED039CEEB0BE156A"
     problemWasSolvedByProver: false
     catchBlockExercised:
       idExternalInstruction: 0
@@ -5536,7 +2200,7 @@ methods:
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "5B428069FDC92EB1B7F440A9FA105EB6"
+      modelFingerprint: "CBD3D18E35EFE330D8885FA59ACC63E2"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -5550,9 +2214,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 10
-              suggestedContent: !<regular>
-                value: 10
+                value: 0
               valueType: "java.math.BigInteger"
               uuid: "<init>_bigInteger1"
               fixed: false
@@ -5562,9 +2224,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 20
-              suggestedContent: !<regular>
-                value: 20
+                value: 0
               valueType: "java.math.BigInteger"
               uuid: "<init>_bigInteger2"
               fixed: false
@@ -5574,9 +2234,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: 1
-              suggestedContent: !<regular>
-                value: 1
+                value: 0
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -5590,10 +2248,6 @@ methods:
           - name: "r"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 10
-              suggestedContent: !<regular>
-                value: 10
               valueType: "java.math.BigInteger"
               uuid: "<init>_bigInteger1"
               fixed: false
@@ -5602,10 +2256,6 @@ methods:
           - name: "s"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 20
-              suggestedContent: !<regular>
-                value: 20
               valueType: "java.math.BigInteger"
               uuid: "<init>_bigInteger2"
               fixed: false
@@ -5614,10 +2264,6 @@ methods:
           - name: "sighashFlags"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: 1
-              suggestedContent: !<regular>
-                value: 1
               valueType: "int"
               uuid: "<init>_int1"
               fixed: false
@@ -5727,13 +2373,12 @@ methods:
       filledByUser: false
     uuid: "3dbfe428-6e56-33c3-8bcb-173a846a51e4"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    prover: "LLM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
 - method:
     name: "toCanonicalised"
     returnType: "org.bitcoinj.crypto.ECKey$ECDSASignature"
@@ -6537,8 +3182,8 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "301053E64AC2A71692B448455896DB9D"
-    problemWasSolvedByProver: true
+    modelFingerprint: "CDA867543AC4245E659AE1C87177B4C9"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
@@ -6552,6 +3197,8 @@ methods:
         sapientType: "ARRAY"
         content: !<array>
           values: {}
+        suggestedContent: !<array>
+          values: {}
         valueType: "byte[]"
         uuid: "decodeFromBitcoin_byte[]1"
         fixed: false
@@ -6561,7 +3208,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "requireCanonicalEncoding"
-      modelFingerprint: "B8E865667FA924294EB45A5098CE0034"
+      modelFingerprint: "B2EA3206AC3988FF21EDA0A84613F6F6"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -6569,9 +3216,7 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: true
-        suggestedContent: !<regular>
-          value: true
+          value: false
         valueType: "boolean"
         uuid: "decodeFromBitcoin_boolean1"
         fixed: false
@@ -6599,7 +3244,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "TransactionSignature"
-      modelFingerprint: "54ED3D9EAB13879E5D8843C6B090286E"
+      modelFingerprint: "AE04ED32D2CD4DD41664BA61E3BB877A"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -6620,6 +3265,8 @@ methods:
             sapientType: "ARRAY"
             content: !<array>
               values: {}
+            suggestedContent: !<array>
+              values: {}
             valueType: "byte[]"
             uuid: "decodeFromBitcoin_byte[]1"
             fixed: false
@@ -6629,8 +3276,6 @@ methods:
         returnValue:
           sapientType: "BASIC"
           content: !<regular>
-            value: false
-          suggestedContent: !<regular>
             value: false
           valueType: "boolean"
           uuid: "decodeFromBitcoin_boolean3"
@@ -6668,11 +3313,12 @@ methods:
       filledByUser: false
     uuid: "29a36674-78fa-37ab-bc86-8d03db35531a"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path7"
     pathIdForUser: "path2"
     testPathName: "decodeFromBitcoinWhenNotRequireCanonicalSValue"
@@ -6767,6 +3413,8 @@ methods:
         sapientType: "ARRAY"
         content: !<array>
           values: {}
+        suggestedContent: !<array>
+          values: {}
         valueType: "byte[]"
         uuid: "decodeFromBitcoin_byte[]1"
         fixed: false
@@ -6837,6 +3485,8 @@ methods:
             sapientType: "ARRAY"
             content: !<array>
               values: {}
+            suggestedContent: !<array>
+              values: {}
             valueType: "byte[]"
             uuid: "decodeFromBitcoin_byte[]1"
             fixed: false
@@ -6879,6 +3529,8 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
+              values: {}
+            suggestedContent: !<array>
               values: {}
             valueType: "byte[]"
             uuid: "decodeFromBitcoin_byte[]1"

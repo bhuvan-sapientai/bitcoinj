@@ -18,7 +18,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "2E08ABFB0054DBF9E6802A4B61C6BFAD"
-    problemWasSolvedByProver: false
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -170,13 +170,11 @@ methods:
       filledByUser: false
     uuid: "444f0862-e09d-380c-aa36-5078b542a394"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
-    failureReason:
-      reason: "UNKNOWN_REASON"
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "negativeSignWhenCharacterIsDigitNegativeSignThrowsIllegalArgumentException"
@@ -332,12 +330,12 @@ methods:
       filledByUser: false
     uuid: "82510699-208f-3216-b79d-d23ba54f97db"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "positiveSign"
     returnType: "org.bitcoinj.base.utils.MonetaryFormat"
@@ -355,7 +353,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "275656A7639D7A2B208D619E49696C62"
-    problemWasSolvedByProver: false
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -507,13 +505,11 @@ methods:
       filledByUser: false
     uuid: "0c421713-8e02-371f-b0f0-c4c68e495b27"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
-    failureReason:
-      reason: "UNKNOWN_REASON"
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "positiveSignWhenCharacterIsDigitPositiveSignThrowsIllegalArgumentException"
@@ -669,12 +665,12 @@ methods:
       filledByUser: false
     uuid: "be5d81f5-c486-3ee2-bf04-9380b406bc8a"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "digits"
     returnType: "org.bitcoinj.base.utils.MonetaryFormat"
@@ -905,7 +901,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -1146,7 +1142,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -1335,7 +1331,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "06DB62A0E8339746E724D5F0E39320DA"
-    problemWasSolvedByProver: false
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -1487,13 +1483,11 @@ methods:
       filledByUser: false
     uuid: "b23fa074-9e12-36d6-a178-dcbba9818bd8"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
-    failureReason:
-      reason: "UNKNOWN_REASON"
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "decimalMarkWhenCharacterIsDigitDecimalMarkThrowsIllegalArgumentException"
@@ -1649,12 +1643,12 @@ methods:
       filledByUser: false
     uuid: "5ddaf9a0-df81-3b76-9ead-5bf50894084c"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "minDecimals"
     returnType: "org.bitcoinj.base.utils.MonetaryFormat"
@@ -1885,7 +1879,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -2126,7 +2120,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -2435,7 +2429,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -2701,7 +2695,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -2924,7 +2918,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "F734179821DD880ACB2BEC4119617FBB"
-    problemWasSolvedByProver: false
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -3094,13 +3088,11 @@ methods:
       filledByUser: false
     uuid: "e2bf9808-8943-3038-8589-f4022e068bc3"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
-    failureReason:
-      reason: "UNKNOWN_REASON"
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "repeatOptionalDecimalsWhenRepetitionsLessThan0ThrowsIllegalArgumentException"
@@ -3515,7 +3507,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -3756,7 +3748,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -4158,7 +4150,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -4399,7 +4391,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -4663,7 +4655,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -4773,7 +4765,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -4898,7 +4890,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "BE9DCD4B34E72C7BF14F3C7759E786DE"
-    problemWasSolvedByProver: false
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -5068,13 +5060,11 @@ methods:
       filledByUser: false
     uuid: "3779f917-7f05-3e1d-a075-74d55ca3fac9"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
-    failureReason:
-      reason: "UNKNOWN_REASON"
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "codeWhenCodeShiftLessThan0ThrowsIllegalArgumentException"
@@ -5276,7 +5266,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "7DF0090C7ACEC5319F55A2084D3ADB6A"
-    problemWasSolvedByProver: false
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -5428,13 +5418,11 @@ methods:
       filledByUser: false
     uuid: "aa19d1ad-818c-3f30-abaf-5c707cfb852a"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
-    failureReason:
-      reason: "UNKNOWN_REASON"
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "codeSeparatorWhenCharacterIsDigitCodeSeparatorThrowsIllegalArgumentException"
@@ -5590,12 +5578,12 @@ methods:
       filledByUser: false
     uuid: "1ff9fc3c-a15e-31d2-af83-29727ff221bf"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "prefixCode"
     returnType: "org.bitcoinj.base.utils.MonetaryFormat"
@@ -5792,7 +5780,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -6030,7 +6018,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -6346,7 +6334,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true
@@ -6585,7 +6573,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "\\u0000"
+                value: "\0"
               valueType: "char"
               uuid: "<init>_int42"
               fixed: true

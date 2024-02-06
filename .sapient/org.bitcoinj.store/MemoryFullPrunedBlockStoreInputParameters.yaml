@@ -1213,7 +1213,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "68041019986276EDF5D420282D883A57"
-      index: 15
+      index: 16
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -1801,10 +1801,12 @@ methods:
     - type: "FIELD"
       name: "fullBlockMap"
       modelFingerprint: "B71C2A9C92FAB7BBD377D0511E4ADD90"
-      index: 15
+      index: 11
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 1
       value:
         sapientType: "MOCK"
         suggestedContent: !<unknown_object>
@@ -1825,7 +1827,7 @@ methods:
           value:
             sapientType: "MOCK"
             valueType: "org.bitcoinj.base.Sha256Hash"
-            uuid: "put_sha256Hash2"
+            uuid: "put_sha256Hash1"
             fixed: false
             equalsMethodPresent: false
             explicitCastNeeded: false
@@ -1835,7 +1837,7 @@ methods:
             content: !<regular>
               value: 0
             valueType: "java.lang.Integer"
-            uuid: "put_integer2"
+            uuid: "put_integer1"
             fixed: false
             equalsMethodPresent: false
             explicitCastNeeded: false
@@ -1907,7 +1909,7 @@ methods:
         returnValue:
           sapientType: "VOID"
           valueType: "void"
-          uuid: "put_void3"
+          uuid: "put_void1"
           fixed: true
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -2222,7 +2224,7 @@ methods:
           value:
             sapientType: "MOCK"
             valueType: "org.bitcoinj.base.Sha256Hash"
-            uuid: "put_sha256Hash2"
+            uuid: "put_sha256Hash1"
             fixed: false
             equalsMethodPresent: false
             explicitCastNeeded: false
@@ -4388,908 +4390,18 @@ methods:
     priority: "LOW"
     modelFingerprint: "4B3F7D12B5440F51D70B43266AF88217"
     problemWasSolvedByProver: false
-    truncated: false
-    inputParameters:
-    - type: "CONSTRUCTOR"
-      modelFingerprint: "B6C9EF34816F577521794E0D1DEE9816"
-      index: 1
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.store.MemoryFullPrunedBlockStore"
-          parameters:
-          - name: "params"
-            value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.core.NetworkParameters"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.core.NetworkParameters"
-              uuid: "<init>_networkParameters1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "fullStoreDepth"
-            value:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 1
-              suggestedContent: !<regular>
-                value: 1
-              valueType: "int"
-              uuid: "<init>_int1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-          propertiesMap:
-            fullBlockMap:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "org.bitcoinj.store.TransactionalMultiKeyHashMap"
-                parameters: []
-                privateConstructor: false
-                createdByTargetCode: true
-              suggestedContent: !<new>
-                target: "org.bitcoinj.store.TransactionalMultiKeyHashMap"
-                parameters: []
-                privateConstructor: false
-                createdByTargetCode: true
-              valueType: "org.bitcoinj.store.TransactionalMultiKeyHashMap"
-              genericValueType: "org.bitcoinj.base.Sha256Hash,java.lang.Integer,org.bitcoinj.core.StoredUndoableBlock"
-              uuid: "<init>_transactionalMultiKeyHashMap1"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            blockMap:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.store.TransactionalHashMap"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.store.TransactionalHashMap"
-              genericValueType: "org.bitcoinj.base.Sha256Hash,org.bitcoinj.store.MemoryFullPrunedBlockStore$StoredBlockAndWasUndoableFlag"
-              uuid: "<init>_transactionalHashMap1"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.store.MemoryFullPrunedBlockStore"
-          parameters:
-          - name: "params"
-            value:
-              sapientType: "UNKNOWN"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.core.NetworkParameters"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.core.NetworkParameters"
-              uuid: "<init>_networkParameters1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "fullStoreDepth"
-            value:
-              sapientType: "BASIC"
-              suggestedContent: !<regular>
-                value: 1
-              valueType: "int"
-              uuid: "<init>_int1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-          propertiesMap:
-            fullBlockMap:
-              sapientType: "OBJECT"
-              suggestedContent: !<new>
-                target: "org.bitcoinj.store.TransactionalMultiKeyHashMap"
-                parameters: []
-                privateConstructor: false
-                createdByTargetCode: true
-              valueType: "org.bitcoinj.store.TransactionalMultiKeyHashMap"
-              genericValueType: "org.bitcoinj.base.Sha256Hash,java.lang.Integer,org.bitcoinj.core.StoredUndoableBlock"
-              uuid: "<init>_transactionalMultiKeyHashMap1"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            blockMap:
-              sapientType: "UNKNOWN"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.store.TransactionalHashMap"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.store.TransactionalHashMap"
-              genericValueType: "org.bitcoinj.base.Sha256Hash,org.bitcoinj.store.MemoryFullPrunedBlockStore$StoredBlockAndWasUndoableFlag"
-              uuid: "<init>_transactionalHashMap1"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-        valueType: "org.bitcoinj.store.MemoryFullPrunedBlockStore"
-        uuid: "target"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INPUT"
-      name: "hash"
-      modelFingerprint: "5013FA43D41C42D0C9BB2BBEE9A02D24"
-      index: 2
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.Sha256Hash"
-        uuid: "getOnceUndoableStoredBlock_sha256Hash1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "params"
-      modelFingerprint: "219C4762D95BAE01080CFCB23567874F"
-      index: 3
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 1
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.core.NetworkParameters"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.core.NetworkParameters"
-        uuid: "<init>_networkParameters1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "params"
-        name: "getGenesisBlock"
-        parameters: []
-        signature: "getGenesisBlock(): Block"
-        returnValue:
-          sapientType: "MOCK"
-          suggestedContent: !<unknown_object>
-            target: "org.bitcoinj.core.Block"
-            onlyPojoFunctions: false
-            builderPattern: false
-          valueType: "org.bitcoinj.core.Block"
-          uuid: "<init>_block1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1025
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      modelFingerprint: "EDDE8501C6F0423ED4DACE0D21184967"
-      index: 4
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 1
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.core.Block"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.core.Block"
-        uuid: "<init>_block1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.core.Block"
-        name: "cloneAsHeader"
-        parameters: []
-        signature: "cloneAsHeader(): Block"
-        returnValue:
-          sapientType: "MOCK"
-          suggestedContent: !<unknown_object>
-            target: "org.bitcoinj.core.Block"
-            onlyPojoFunctions: false
-            builderPattern: false
-          valueType: "org.bitcoinj.core.Block"
-          uuid: "<init>_block2"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "params"
-      modelFingerprint: "219C4762D95BAE01080CFCB23567874F"
-      index: 3
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 1
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.core.NetworkParameters"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.core.NetworkParameters"
-        uuid: "<init>_networkParameters1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "params"
-        name: "getGenesisBlock"
-        parameters: []
-        signature: "getGenesisBlock(): Block"
-        returnValue:
-          sapientType: "MOCK"
-          suggestedContent: !<unknown_object>
-            target: "org.bitcoinj.core.Block"
-            onlyPojoFunctions: false
-            builderPattern: false
-          valueType: "org.bitcoinj.core.Block"
-          uuid: "<init>_block1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1025
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      modelFingerprint: "27941F72C534C66A27C66995CFEECEE6"
-      index: 6
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 1
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.core.Block"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.core.Block"
-        uuid: "<init>_block3"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.core.Block"
-        name: "getWork"
-        parameters: []
-        throwsExceptions:
-        - "org.bitcoinj.core.VerificationException"
-        signature: "getWork(): BigInteger throws org.bitcoinj.core.VerificationException"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: 0
-          valueType: "java.math.BigInteger"
-          uuid: "<init>_bigInteger1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "params"
-      modelFingerprint: "219C4762D95BAE01080CFCB23567874F"
-      index: 3
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 1
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.core.NetworkParameters"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.core.NetworkParameters"
-        uuid: "<init>_networkParameters1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "params"
-        name: "getGenesisBlock"
-        parameters: []
-        signature: "getGenesisBlock(): Block"
-        returnValue:
-          sapientType: "MOCK"
-          suggestedContent: !<unknown_object>
-            target: "org.bitcoinj.core.Block"
-            onlyPojoFunctions: false
-            builderPattern: false
-          valueType: "org.bitcoinj.core.Block"
-          uuid: "<init>_block1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1025
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      modelFingerprint: "093923621BD05377325D6E7FCBB5633F"
-      index: 8
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 1
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.core.Block"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.core.Block"
-        uuid: "<init>_block4"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.core.Block"
-        name: "getHash"
-        parameters: []
-        signature: "getHash(): Sha256Hash"
-        returnValue:
-          sapientType: "MOCK"
-          valueType: "org.bitcoinj.base.Sha256Hash"
-          uuid: "<init>_sha256Hash1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      modelFingerprint: "093923621BD05377325D6E7FCBB5633F"
-      index: 8
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 1
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.core.Block"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.core.Block"
-        uuid: "<init>_block4"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.core.Block"
-        name: "getHash"
-        parameters: []
-        signature: "getHash(): Sha256Hash"
-        returnValue:
-          sapientType: "MOCK"
-          valueType: "org.bitcoinj.base.Sha256Hash"
-          uuid: "<init>_sha256Hash1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "FIELD"
-      name: "fullBlockMap"
-      modelFingerprint: "FD7DF48C76DBE87E1BFD96382FD78B5A"
-      index: 10
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 1
-      value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.store.TransactionalMultiKeyHashMap"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: true
-        suggestedContent: !<new>
-          target: "org.bitcoinj.store.TransactionalMultiKeyHashMap"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: true
-        valueType: "org.bitcoinj.store.TransactionalMultiKeyHashMap"
-        genericValueType: "org.bitcoinj.base.Sha256Hash,java.lang.Integer,org.bitcoinj.core.StoredUndoableBlock"
-        uuid: "<init>_transactionalMultiKeyHashMap1"
-        fixed: true
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "this.fullBlockMap"
-        name: "put"
-        parameters:
-        - name: "uniqueKey"
-          value:
-            sapientType: "MOCK"
-            valueType: "org.bitcoinj.base.Sha256Hash"
-            uuid: "put_sha256Hash1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "multiKey"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: 0
-            valueType: "java.lang.Integer"
-            uuid: "put_integer1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "value"
-          value:
-            sapientType: "OBJECT"
-            content: !<new>
-              target: "org.bitcoinj.core.StoredUndoableBlock"
-              parameters:
-              - name: "hash"
-                value:
-                  sapientType: "MOCK"
-                  valueType: "org.bitcoinj.base.Sha256Hash"
-                  uuid: "<init>_sha256Hash1"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "transactions"
-                value:
-                  sapientType: "COLLECTION"
-                  content: !<collection>
-                    collectionClass: "java.util.LinkedList"
-                    parameters: []
-                    values: []
-                  suggestedContent: !<collection>
-                    collectionClass: "java.util.LinkedList"
-                    parameters: []
-                    values: []
-                  valueType: "java.util.List"
-                  genericValueType: "org.bitcoinj.core.Transaction"
-                  uuid: "<init>_linkedList1"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              privateConstructor: false
-              createdByTargetCode: true
-            suggestedContent: !<new>
-              target: "org.bitcoinj.core.StoredUndoableBlock"
-              parameters:
-              - name: "hash"
-                value:
-                  sapientType: "UNKNOWN"
-                  valueType: "org.bitcoinj.base.Sha256Hash"
-                  uuid: "<init>_sha256Hash1"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "transactions"
-                value:
-                  sapientType: "COLLECTION"
-                  suggestedContent: !<collection>
-                    collectionClass: "java.util.LinkedList"
-                    parameters: []
-                    values: []
-                  valueType: "java.util.List"
-                  genericValueType: "org.bitcoinj.core.Transaction"
-                  uuid: "<init>_linkedList1"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              privateConstructor: false
-              createdByTargetCode: true
-            valueType: "org.bitcoinj.core.StoredUndoableBlock"
-            uuid: "<init>_storedUndoableBlock1"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "put(Sha256Hash,Integer,StoredUndoableBlock): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "put_void1"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "FIELD"
-      name: "blockMap"
-      modelFingerprint: "6B2A4D5985D2A3AF39388842D01376F0"
-      index: 11
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 1
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.store.TransactionalHashMap"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.store.TransactionalHashMap"
-        genericValueType: "org.bitcoinj.base.Sha256Hash,org.bitcoinj.store.MemoryFullPrunedBlockStore$StoredBlockAndWasUndoableFlag"
-        uuid: "<init>_transactionalHashMap1"
-        fixed: true
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "this.blockMap"
-        name: "put"
-        parameters:
-        - name: "key"
-          value:
-            sapientType: "MOCK"
-            valueType: "org.bitcoinj.base.Sha256Hash"
-            uuid: "put_sha256Hash1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "value"
-          value:
-            sapientType: "OBJECT"
-            content: !<new>
-              target: "org.bitcoinj.store.MemoryFullPrunedBlockStore$StoredBlockAndWasUndoableFlag"
-              parameters:
-              - name: "block"
-                value:
-                  sapientType: "OBJECT"
-                  content: !<new>
-                    target: "org.bitcoinj.core.StoredBlock"
-                    parameters:
-                    - name: "header"
-                      value:
-                        sapientType: "MOCK"
-                        suggestedContent: !<unknown_object>
-                          target: "org.bitcoinj.core.Block"
-                          onlyPojoFunctions: false
-                          builderPattern: false
-                        valueType: "org.bitcoinj.core.Block"
-                        uuid: "<init>_block2"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "chainWork"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 0
-                        valueType: "java.math.BigInteger"
-                        uuid: "<init>_bigInteger1"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "height"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 0
-                        valueType: "int"
-                        fixed: true
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: true
-                  suggestedContent: !<new>
-                    target: "org.bitcoinj.core.StoredBlock"
-                    parameters:
-                    - name: "header"
-                      value:
-                        sapientType: "UNKNOWN"
-                        suggestedContent: !<unknown_object>
-                          target: "org.bitcoinj.core.Block"
-                          onlyPojoFunctions: false
-                          builderPattern: false
-                        valueType: "org.bitcoinj.core.Block"
-                        uuid: "<init>_block2"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "chainWork"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "java.math.BigInteger"
-                        uuid: "<init>_bigInteger1"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "height"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 0
-                        valueType: "int"
-                        fixed: true
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: true
-                  valueType: "org.bitcoinj.core.StoredBlock"
-                  uuid: "<init>_storedBlock1"
-                  fixed: true
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "wasUndoable"
-                value:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: true
-                  valueType: "boolean"
-                  fixed: true
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              privateConstructor: false
-              createdByTargetCode: true
-            suggestedContent: !<new>
-              target: "org.bitcoinj.store.MemoryFullPrunedBlockStore$StoredBlockAndWasUndoableFlag"
-              parameters:
-              - name: "block"
-                value:
-                  sapientType: "OBJECT"
-                  suggestedContent: !<new>
-                    target: "org.bitcoinj.core.StoredBlock"
-                    parameters:
-                    - name: "header"
-                      value:
-                        sapientType: "UNKNOWN"
-                        suggestedContent: !<unknown_object>
-                          target: "org.bitcoinj.core.Block"
-                          onlyPojoFunctions: false
-                          builderPattern: false
-                        valueType: "org.bitcoinj.core.Block"
-                        uuid: "<init>_block2"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "chainWork"
-                      value:
-                        sapientType: "BASIC"
-                        valueType: "java.math.BigInteger"
-                        uuid: "<init>_bigInteger1"
-                        fixed: false
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    - name: "height"
-                      value:
-                        sapientType: "BASIC"
-                        content: !<regular>
-                          value: 0
-                        valueType: "int"
-                        fixed: true
-                        equalsMethodPresent: false
-                        explicitCastNeeded: false
-                    privateConstructor: false
-                    createdByTargetCode: true
-                  valueType: "org.bitcoinj.core.StoredBlock"
-                  uuid: "<init>_storedBlock1"
-                  fixed: true
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              - name: "wasUndoable"
-                value:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: true
-                  valueType: "boolean"
-                  fixed: true
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-              privateConstructor: false
-              createdByTargetCode: true
-            valueType: "org.bitcoinj.store.MemoryFullPrunedBlockStore$StoredBlockAndWasUndoableFlag"
-            uuid: "put_memoryFullPrunedBlockStore.StoredBlockAndWasUndoableFlag1"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "put(Sha256Hash,MemoryFullPrunedBlockStore$StoredBlockAndWasUndoableFlag):\
-          \ void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "put_void2"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "FIELD"
-      name: "fullBlockMap"
-      modelFingerprint: "7BC8E911F65C91E022F7C5BC5FCF09B0"
-      index: 12
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 1
-      value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.store.TransactionalMultiKeyHashMap"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: true
-        suggestedContent: !<new>
-          target: "org.bitcoinj.store.TransactionalMultiKeyHashMap"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: true
-        valueType: "org.bitcoinj.store.TransactionalMultiKeyHashMap"
-        genericValueType: "org.bitcoinj.base.Sha256Hash,java.lang.Integer,org.bitcoinj.core.StoredUndoableBlock"
-        uuid: "<init>_transactionalMultiKeyHashMap1"
-        fixed: true
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "this.fullBlockMap"
-        name: "removeByMultiKey"
-        parameters:
-        - name: "key"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: -1
-            suggestedContent: !<regular>
-              value: -1
-            valueType: "java.lang.Integer"
-            uuid: "setVerifiedChainHead_integer1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "removeByMultiKey(Integer): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "setVerifiedChainHead_void1"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "FIELD"
-      name: "blockMap"
-      modelFingerprint: "5695B5E37198557ACC4B5F33ADEF4135"
-      index: 13
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.store.TransactionalHashMap"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.store.TransactionalHashMap"
-        genericValueType: "org.bitcoinj.base.Sha256Hash,org.bitcoinj.store.MemoryFullPrunedBlockStore$StoredBlockAndWasUndoableFlag"
-        uuid: "<init>_transactionalHashMap1"
-        fixed: true
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "this.blockMap"
-        name: "get"
-        parameters:
-        - name: "key"
-          value:
-            sapientType: "MOCK"
-            valueType: "org.bitcoinj.base.Sha256Hash"
-            uuid: "getOnceUndoableStoredBlock_sha256Hash1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "get(Sha256Hash): Object"
-        returnValue:
-          sapientType: "NULL"
-          content: !<method_return_from_value>
-            target: "java.lang.Object"
-            localVariableValue:
-              sapientType: "UNKNOWN"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.store.TransactionalHashMap"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.store.TransactionalHashMap"
-              genericValueType: "org.bitcoinj.base.Sha256Hash,org.bitcoinj.store.MemoryFullPrunedBlockStore$StoredBlockAndWasUndoableFlag"
-              uuid: "<init>_transactionalHashMap1"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            methodParameters:
-            - name: "key"
-              value:
-                sapientType: "UNKNOWN"
-                valueType: "org.bitcoinj.base.Sha256Hash"
-                uuid: "getOnceUndoableStoredBlock_sha256Hash1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            methodName: "get"
-          suggestedContent: !<method_return_from_value>
-            target: "java.lang.Object"
-            localVariableValue:
-              sapientType: "UNKNOWN"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.store.TransactionalHashMap"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.store.TransactionalHashMap"
-              genericValueType: "org.bitcoinj.base.Sha256Hash,org.bitcoinj.store.MemoryFullPrunedBlockStore$StoredBlockAndWasUndoableFlag"
-              uuid: "<init>_transactionalHashMap1"
-              fixed: true
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            methodParameters:
-            - name: "key"
-              value:
-                sapientType: "UNKNOWN"
-                valueType: "org.bitcoinj.base.Sha256Hash"
-                uuid: "getOnceUndoableStoredBlock_sha256Hash1"
-                fixed: false
-                equalsMethodPresent: false
-                explicitCastNeeded: false
-            methodName: "get"
-          valueType: "org.bitcoinj.store.MemoryFullPrunedBlockStore$StoredBlockAndWasUndoableFlag"
-          uuid: "getOnceUndoableStoredBlock_object1"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: true
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "A5FFE9DBD183A37786B7914A5B207CA7"
-      index: 14
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "NULL"
-        valueType: "org.bitcoinj.core.StoredBlock"
-        uuid: "getOnceUndoableStoredBlock_storedBlock1"
-        fixed: true
-        equalsMethodPresent: true
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
+    truncated: true
+    inputParameters: []
     uuid: "bc9a8220-48d1-3dfa-a8fb-e91f63c4a341"
-    deleted: false
-    disabled: true
+    deleted: true
+    disabled: false
     ignoredBySystem: true
     failureReason:
       reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
       source: "fullBlockMap.put(hash, storedBlock.getHeight(), undoableBlock);"
       lineNumber: 302
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path1"
     pathIdForUser: "path2"
     testPathName: "getOnceUndoableStoredBlockWhenStoredBlockNotWasUndoable"
@@ -6194,14 +5306,14 @@ methods:
       filledByUser: false
     uuid: "15828e36-626d-3dc9-916c-08292d146e2b"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
       source: "fullBlockMap.put(hash, storedBlock.getHeight(), undoableBlock);"
       lineNumber: 302
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "getUndoBlock"
     returnType: "org.bitcoinj.core.StoredUndoableBlock"
@@ -11864,7 +10976,7 @@ methods:
     - type: "LOCAL_VARIABLE"
       name: "params"
       modelFingerprint: "219C4762D95BAE01080CFCB23567874F"
-      index: 4
+      index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -11893,7 +11005,7 @@ methods:
             onlyPojoFunctions: false
             builderPattern: false
           valueType: "org.bitcoinj.core.Block"
-          uuid: "<init>_block1"
+          uuid: "<init>_block3"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -11941,7 +11053,7 @@ methods:
     - type: "LOCAL_VARIABLE"
       name: "params"
       modelFingerprint: "219C4762D95BAE01080CFCB23567874F"
-      index: 4
+      index: 8
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -11970,7 +11082,7 @@ methods:
             onlyPojoFunctions: false
             builderPattern: false
           valueType: "org.bitcoinj.core.Block"
-          uuid: "<init>_block1"
+          uuid: "<init>_block4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -12013,7 +11125,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       modelFingerprint: "093923621BD05377325D6E7FCBB5633F"
-      index: 9
+      index: 10
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -12026,7 +11138,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.core.Block"
-        uuid: "<init>_block4"
+        uuid: "<init>_block2"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -12038,7 +11150,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "org.bitcoinj.base.Sha256Hash"
-          uuid: "<init>_sha256Hash1"
+          uuid: "put_sha256Hash1"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -17008,7 +16120,7 @@ methods:
     - type: "LOCAL_VARIABLE"
       name: "params"
       modelFingerprint: "219C4762D95BAE01080CFCB23567874F"
-      index: 2
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -17037,7 +16149,7 @@ methods:
             onlyPojoFunctions: false
             builderPattern: false
           valueType: "org.bitcoinj.core.Block"
-          uuid: "<init>_block1"
+          uuid: "<init>_block3"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -17085,7 +16197,7 @@ methods:
     - type: "LOCAL_VARIABLE"
       name: "params"
       modelFingerprint: "219C4762D95BAE01080CFCB23567874F"
-      index: 2
+      index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -17114,7 +16226,7 @@ methods:
             onlyPojoFunctions: false
             builderPattern: false
           valueType: "org.bitcoinj.core.Block"
-          uuid: "<init>_block1"
+          uuid: "<init>_block4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -17157,7 +16269,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       modelFingerprint: "093923621BD05377325D6E7FCBB5633F"
-      index: 7
+      index: 8
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -17170,7 +16282,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.core.Block"
-        uuid: "<init>_block4"
+        uuid: "<init>_block2"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -17182,7 +16294,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "org.bitcoinj.base.Sha256Hash"
-          uuid: "<init>_sha256Hash1"
+          uuid: "put_sha256Hash1"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -20516,14 +19628,14 @@ methods:
       filledByUser: false
     uuid: "2648eb0e-30ea-3a47-88e3-482c193a1f0c"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
       source: "fullBlockMap.put(hash, storedBlock.getHeight(), undoableBlock);"
       lineNumber: 302
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "network"
     returnType: "org.bitcoinj.base.Network"
@@ -23724,7 +22836,7 @@ methods:
     - type: "LOCAL_VARIABLE"
       name: "params"
       modelFingerprint: "219C4762D95BAE01080CFCB23567874F"
-      index: 3
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -23753,7 +22865,7 @@ methods:
             onlyPojoFunctions: false
             builderPattern: false
           valueType: "org.bitcoinj.core.Block"
-          uuid: "<init>_block1"
+          uuid: "<init>_block3"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -23801,7 +22913,7 @@ methods:
     - type: "LOCAL_VARIABLE"
       name: "params"
       modelFingerprint: "219C4762D95BAE01080CFCB23567874F"
-      index: 3
+      index: 7
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -23830,7 +22942,7 @@ methods:
             onlyPojoFunctions: false
             builderPattern: false
           valueType: "org.bitcoinj.core.Block"
-          uuid: "<init>_block1"
+          uuid: "<init>_block4"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -23873,7 +22985,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       modelFingerprint: "093923621BD05377325D6E7FCBB5633F"
-      index: 8
+      index: 9
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -23886,7 +22998,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.core.Block"
-        uuid: "<init>_block4"
+        uuid: "<init>_block2"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -23898,7 +23010,7 @@ methods:
         returnValue:
           sapientType: "MOCK"
           valueType: "org.bitcoinj.base.Sha256Hash"
-          uuid: "<init>_sha256Hash1"
+          uuid: "put_sha256Hash1"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -24364,11 +23476,11 @@ methods:
       filledByUser: false
     uuid: "f9b297ce-f846-365a-8980-986b12302ea0"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
       reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
       source: "fullBlockMap.put(hash, storedBlock.getHeight(), undoableBlock);"
       lineNumber: 302
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false

@@ -26,7 +26,7 @@ public class ScriptOpCodesSapientGeneratedJunit4Test {
          */
 
         //Act Statement(s)
-        String result = ScriptOpCodes.getOpCodeName(0);
+        String result = ScriptOpCodes.getOpCodeName(1);
 
         //Assert statement(s)
         assertThat(result, equalTo("result1"));
@@ -44,10 +44,10 @@ public class ScriptOpCodesSapientGeneratedJunit4Test {
          */
 
         //Act Statement(s)
-        String result = ScriptOpCodes.getOpCodeName(10);
+        String result = ScriptOpCodes.getOpCodeName(2);
 
         //Assert statement(s)
-        assertThat(result, equalTo("NON_OP(10)"));
+        assertThat(result, equalTo("NON_OP(2)"));
     }
 
     //Sapient generated method id: ${2085f4ca-53bf-3a20-bd24-b2d70ca47c0a}
@@ -62,7 +62,7 @@ public class ScriptOpCodesSapientGeneratedJunit4Test {
          */
 
         //Act Statement(s)
-        String result = ScriptOpCodes.getPushDataName(0);
+        String result = ScriptOpCodes.getPushDataName(1);
 
         //Assert statement(s)
         assertThat(result, equalTo("result1"));
@@ -80,10 +80,10 @@ public class ScriptOpCodesSapientGeneratedJunit4Test {
          */
 
         //Act Statement(s)
-        String result = ScriptOpCodes.getPushDataName(100);
+        String result = ScriptOpCodes.getPushDataName(2);
 
         //Assert statement(s)
-        assertThat(result, equalTo("PUSHDATA(100)"));
+        assertThat(result, equalTo("PUSHDATA(2)"));
     }
 
     //Sapient generated method id: ${98749a8d-84cf-3675-aca0-3f4fb869e089}

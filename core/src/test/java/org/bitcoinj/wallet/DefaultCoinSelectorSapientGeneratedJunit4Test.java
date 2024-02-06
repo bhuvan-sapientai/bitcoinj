@@ -66,25 +66,17 @@ public class DefaultCoinSelectorSapientGeneratedJunit4Test {
 
     private final Transaction transactionMock2 = mock(Transaction.class);
 
-    //Sapient generated method id: ${ac60cd75-b61f-3484-bd94-dd5676c31587}
-    @Ignore()
+    //Sapient generated method id: ${2d5f29f1-90e7-3f61-a9d7-f2281c1948cc}
     @Test()
-    public void selectWhenTargetEqualsBitcoinNetworkMAX_MONEYAndSortedOutputsIsEmpty() {
-        /* Branches:
-         * (!target.equals(BitcoinNetwork.MAX_MONEY)) : false
-         * (for-each(sortedOutputs)) : false
+    public void sortOutputsTest() {
+        /**
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        DefaultCoinSelector target = new DefaultCoinSelector();
-        Coin coin = BitcoinNetwork.MAX_MONEY;
-        List<TransactionOutput> transactionOutputList = new ArrayList<>();
+        ArrayList<TransactionOutput> transactionOutputList = new ArrayList<>();
         //Act Statement(s)
-        CoinSelection result = target.select(coin, transactionOutputList);
-        ArrayList<TransactionOutput> transactionOutputList2 = new ArrayList<>();
-        CoinSelection coinSelection = new CoinSelection(transactionOutputList2);
-        //Assert statement(s)
-        //TODO: Please implement equals method in CoinSelection for verification to succeed or you need to adjust respective assertion statements
-        assertThat(result, equalTo(coinSelection));
+        DefaultCoinSelector.sortOutputs(transactionOutputList);
     }
 
     //Sapient generated method id: ${6df8707e-9185-30b4-8c99-8abb00f110d8}
@@ -101,17 +93,9 @@ public class DefaultCoinSelectorSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         DefaultCoinSelector target = new DefaultCoinSelector();
-        Coin coinMock = mock(Coin.class, "1000000");
-        Coin coinMock2 = mock(Coin.class);
-        byte[] byteArray = new byte[]{};
-        TransactionOutput transactionOutput = new TransactionOutput(transactionMock, coinMock2, byteArray);
-        Transaction transactionMock2 = mock(Transaction.class);
-        Coin coinMock3 = mock(Coin.class);
-        byte[] byteArray2 = new byte[]{};
-        TransactionOutput transactionOutput2 = new TransactionOutput(transactionMock2, coinMock3, byteArray2);
+        TransactionOutput transactionOutputMock = mock(TransactionOutput.class);
         List<TransactionOutput> transactionOutputList = new ArrayList<>();
-        transactionOutputList.add(transactionOutput);
-        transactionOutputList.add(transactionOutput2);
+        transactionOutputList.add(transactionOutputMock);
         //Act Statement(s)
         CoinSelection result = target.select(coinMock, transactionOutputList);
         ArrayList<TransactionOutput> transactionOutputList2 = new ArrayList<>();
@@ -208,23 +192,6 @@ public class DefaultCoinSelectorSapientGeneratedJunit4Test {
         verify(coinMock).compareTo((Coin) any());
         verify(bMock).getParentTransactionHash();
         verify(sha256HashMock2).toBigInteger();
-    }
-
-    //Sapient generated method id: ${2d5f29f1-90e7-3f61-a9d7-f2281c1948cc}
-    @Ignore()
-    @Test()
-    public void sortOutputsTest() {
-        /**
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        byte[] byteArray = new byte[]{};
-        TransactionOutput transactionOutput = new TransactionOutput(transactionMock, coinMock, byteArray);
-        ArrayList<TransactionOutput> transactionOutputList = new ArrayList<>();
-        transactionOutputList.add(transactionOutput);
-        //Act Statement(s)
-        DefaultCoinSelector.sortOutputs(transactionOutputList);
     }
 
     //Sapient generated method id: ${127bc44c-a0ba-3224-9ca7-a5fa510f205a}

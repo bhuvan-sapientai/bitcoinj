@@ -51,7 +51,6 @@ public class NioServerSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        StreamConnectionFactory streamConnectionFactoryMock = mock(StreamConnectionFactory.class, "StreamConnectionFactory");
         InetSocketAddress inetSocketAddress = new InetSocketAddress(0);
         NioServer target = spy(new NioServer(streamConnectionFactoryMock, inetSocketAddress));
         doReturn(true).when(target).isRunning();
@@ -79,7 +78,6 @@ public class NioServerSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        StreamConnectionFactory streamConnectionFactoryMock = mock(StreamConnectionFactory.class, "<mock implementation>");
         try (MockedStatic<ConnectionHandler> connectionHandler = mockStatic(ConnectionHandler.class)) {
             connectionHandler.when(() -> ConnectionHandler.handleKey((SelectionKey) null)).thenAnswer((Answer<Void>) invocation -> null);
             InetSocketAddress inetSocketAddress = new InetSocketAddress(0);
@@ -108,7 +106,6 @@ public class NioServerSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        StreamConnectionFactory streamConnectionFactoryMock = mock(StreamConnectionFactory.class, "<mock implementation>");
         try (MockedStatic<ConnectionHandler> connectionHandler = mockStatic(ConnectionHandler.class)) {
             connectionHandler.when(() -> ConnectionHandler.handleKey((SelectionKey) null)).thenAnswer((Answer<Void>) invocation -> null);
             InetSocketAddress inetSocketAddress = new InetSocketAddress(0);
@@ -138,7 +135,6 @@ public class NioServerSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        StreamConnectionFactory streamConnectionFactoryMock = mock(StreamConnectionFactory.class, "MyConnectionFactory");
         try (MockedStatic<ConnectionHandler> connectionHandler = mockStatic(ConnectionHandler.class)) {
             connectionHandler.when(() -> ConnectionHandler.handleKey((SelectionKey) null)).thenAnswer((Answer<Void>) invocation -> null);
             InetSocketAddress inetSocketAddress = new InetSocketAddress(0);
@@ -168,7 +164,6 @@ public class NioServerSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        StreamConnectionFactory streamConnectionFactoryMock = mock(StreamConnectionFactory.class, "new StreamConnectionFactory()");
         InetSocketAddress inetSocketAddress = new InetSocketAddress(0);
         NioServer target = spy(new NioServer(streamConnectionFactoryMock, inetSocketAddress));
         doReturn(true).when(target).isRunning();
@@ -226,7 +221,6 @@ public class NioServerSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        StreamConnectionFactory streamConnectionFactoryMock = mock(StreamConnectionFactory.class, "StreamConnectionFactory");
         try (MockedStatic<ConnectionHandler> connectionHandler = mockStatic(ConnectionHandler.class)) {
             connectionHandler.when(() -> ConnectionHandler.handleKey((SelectionKey) null)).thenAnswer((Answer<Void>) invocation -> null);
             InetSocketAddress inetSocketAddress = new InetSocketAddress(0);
@@ -237,35 +231,6 @@ public class NioServerSapientGeneratedJunit4Test {
             target.run();
             //Assert statement(s)
             connectionHandler.verify(() -> ConnectionHandler.handleKey((SelectionKey) null), atLeast(1));
-            verify(target, times(2)).isRunning();
-        }
-    }
-
-    //Sapient generated method id: ${99c7a02b-c4b1-3825-ae95-1d0be326e2fb}
-    @Ignore(value = "Potential harmful system call (Selector.select, Selector.close, ServerSocket.bind, Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
-    @Test()
-    public void runWhenSelectorKeysIsNotEmptyAndCaughtIOException() throws Exception {
-        /* Branches:
-         * (isRunning()) : true
-         * (keyIterator.hasNext()) : true
-         * (key.isValid()) : true  #  inside handleKey method
-         * (key.isAcceptable()) : false  #  inside handleKey method
-         * (for-each(selector.keys())) : true
-         * (catch-exception (IOException)) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<ConnectionHandler> connectionHandler = mockStatic(ConnectionHandler.class)) {
-            connectionHandler.when(() -> ConnectionHandler.handleKey((SelectionKey) null)).thenAnswer((Answer<Void>) invocation -> null);
-            InetSocketAddress inetSocketAddress = new InetSocketAddress(0);
-            NioServer target = spy(new NioServer(streamConnectionFactoryMock, inetSocketAddress));
-            doReturn(true, false).when(target).isRunning();
-            //Act Statement(s)
-            target.run();
-            //Assert statement(s)
-            connectionHandler.verify(() -> ConnectionHandler.handleKey((SelectionKey) null), atLeast(2));
             verify(target, times(2)).isRunning();
         }
     }
@@ -286,7 +251,6 @@ public class NioServerSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        StreamConnectionFactory streamConnectionFactoryMock = mock(StreamConnectionFactory.class, "<StreamConnectionFactory object>");
         try (MockedStatic<ConnectionHandler> connectionHandler = mockStatic(ConnectionHandler.class)) {
             connectionHandler.when(() -> ConnectionHandler.handleKey((SelectionKey) null)).thenAnswer((Answer<Void>) invocation -> null);
             InetSocketAddress inetSocketAddress = new InetSocketAddress(0);
@@ -316,7 +280,6 @@ public class NioServerSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        StreamConnectionFactory streamConnectionFactoryMock = mock(StreamConnectionFactory.class, "<value>");
         try (MockedStatic<ConnectionHandler> connectionHandler = mockStatic(ConnectionHandler.class)) {
             connectionHandler.when(() -> ConnectionHandler.handleKey((SelectionKey) null)).thenAnswer((Answer<Void>) invocation -> null);
             InetSocketAddress inetSocketAddress = new InetSocketAddress(0);
@@ -326,93 +289,6 @@ public class NioServerSapientGeneratedJunit4Test {
             target.run();
             //Assert statement(s)
             connectionHandler.verify(() -> ConnectionHandler.handleKey((SelectionKey) null), atLeast(2));
-            verify(target, times(2)).isRunning();
-        }
-    }
-
-    //Sapient generated method id: ${e7b9376e-d1e9-3940-a95e-bfcebffd5d24}
-    @Ignore(value = "Potential harmful system call (Selector.select, Selector.close, ServerSocket.bind, Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
-    @Test()
-    public void runWhenKeyNotIsAcceptableAndSelectorKeysIsEmptyAndCaughtIOException() throws Exception {
-        /* Branches:
-         * (isRunning()) : true
-         * (keyIterator.hasNext()) : true
-         * (key.isValid()) : true  #  inside handleKey method
-         * (key.isAcceptable()) : false  #  inside handleKey method
-         * (for-each(selector.keys())) : false
-         * (catch-exception (IOException)) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<ConnectionHandler> connectionHandler = mockStatic(ConnectionHandler.class)) {
-            connectionHandler.when(() -> ConnectionHandler.handleKey((SelectionKey) null)).thenAnswer((Answer<Void>) invocation -> null);
-            InetSocketAddress inetSocketAddress = new InetSocketAddress(0);
-            NioServer target = spy(new NioServer(streamConnectionFactoryMock, inetSocketAddress));
-            doReturn(true, false).when(target).isRunning();
-            //Act Statement(s)
-            target.run();
-            //Assert statement(s)
-            connectionHandler.verify(() -> ConnectionHandler.handleKey((SelectionKey) null), atLeast(1));
-            verify(target, times(2)).isRunning();
-        }
-    }
-
-    //Sapient generated method id: ${376de6a2-dae5-3ae3-9e8a-5e4c15c5397f}
-    @Ignore(value = "Potential harmful system call (Selector.select, Selector.close, ServerSocket.bind, Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
-    @Test()
-    public void runWhenKeyIsValidAndKeyNotIsAcceptableAndSelectorKeysIsEmptyAndCaughtIOException() throws Exception {
-        /* Branches:
-         * (isRunning()) : true
-         * (keyIterator.hasNext()) : true
-         * (key.isValid()) : true  #  inside handleKey method
-         * (key.isAcceptable()) : false  #  inside handleKey method
-         * (for-each(selector.keys())) : false
-         * (catch-exception (IOException)) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<ConnectionHandler> connectionHandler = mockStatic(ConnectionHandler.class)) {
-            connectionHandler.when(() -> ConnectionHandler.handleKey((SelectionKey) null)).thenAnswer((Answer<Void>) invocation -> null);
-            InetSocketAddress inetSocketAddress = new InetSocketAddress(0);
-            NioServer target = spy(new NioServer(streamConnectionFactoryMock, inetSocketAddress));
-            doReturn(true, false).when(target).isRunning();
-            //Act Statement(s)
-            target.run();
-            //Assert statement(s)
-            connectionHandler.verify(() -> ConnectionHandler.handleKey((SelectionKey) null), atLeast(1));
-            verify(target, times(2)).isRunning();
-        }
-    }
-
-    //Sapient generated method id: ${7a307582-0afc-32c3-b90e-9359915018eb}
-    @Ignore(value = "Potential harmful system call (Selector.select, Selector.close, ServerSocket.bind, Selector.selectedKeys, Selector.keys) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
-    @Test()
-    public void runWhenKeyIteratorHasNextAndKeyIsValidAndKeyNotIsAcceptableAndSelectorKeysIsEmptyAndCaughtIOException() throws Exception {
-        /* Branches:
-         * (isRunning()) : true
-         * (keyIterator.hasNext()) : true
-         * (key.isValid()) : true  #  inside handleKey method
-         * (key.isAcceptable()) : false  #  inside handleKey method
-         * (for-each(selector.keys())) : false
-         * (catch-exception (IOException)) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<ConnectionHandler> connectionHandler = mockStatic(ConnectionHandler.class)) {
-            connectionHandler.when(() -> ConnectionHandler.handleKey((SelectionKey) null)).thenAnswer((Answer<Void>) invocation -> null);
-            InetSocketAddress inetSocketAddress = new InetSocketAddress(0);
-            NioServer target = spy(new NioServer(streamConnectionFactoryMock, inetSocketAddress));
-            doReturn(true, false).when(target).isRunning();
-            //Act Statement(s)
-            target.run();
-            //Assert statement(s)
-            connectionHandler.verify(() -> ConnectionHandler.handleKey((SelectionKey) null), atLeast(1));
             verify(target, times(2)).isRunning();
         }
     }

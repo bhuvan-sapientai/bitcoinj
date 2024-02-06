@@ -113,8 +113,10 @@ public class MemoryFullPrunedBlockStoreSapientGeneratedJunit4Test {
         doNothing().when(blockMapMock).put(eq(sha256HashMock2), (MemoryFullPrunedBlockStore.StoredBlockAndWasUndoableFlag) any());
         doNothing().when(blockMapMock).put(eq(sha256HashMock), (MemoryFullPrunedBlockStore.StoredBlockAndWasUndoableFlag) any());
         StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), 0);
+
         //Act Statement(s)
         target.put(storedBlock);
+
         //Assert statement(s)
         verify(blockMock).getHash();
         verify(paramsMock, times(3)).getGenesisBlock();
@@ -148,22 +150,23 @@ public class MemoryFullPrunedBlockStoreSapientGeneratedJunit4Test {
         doReturn(sha256HashMock2).when(blockMock4).getHash();
         target = new MemoryFullPrunedBlockStore(paramsMock, 1);
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
-        Sha256Hash sha256HashMock3 = mock(Sha256Hash.class);
-        doNothing().when(fullBlockMapMock).put(eq(sha256HashMock3), eq(0), (StoredUndoableBlock) any());
+        doNothing().when(fullBlockMapMock).put(eq(sha256HashMock), eq(0), (StoredUndoableBlock) any());
         doNothing().when(blockMapMock).put(eq(sha256HashMock), (MemoryFullPrunedBlockStore.StoredBlockAndWasUndoableFlag) any());
         doNothing().when(fullBlockMapMock).removeByMultiKey(-1);
         StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), 0);
         List<Transaction> transactionList = new LinkedList<>();
         StoredUndoableBlock storedUndoableBlock = new StoredUndoableBlock(sha256HashMock2, transactionList);
+
         //Act Statement(s)
         target.put(storedBlock, storedUndoableBlock);
+
         //Assert statement(s)
         verify(blockMock, times(2)).getHash();
         verify(paramsMock, times(3)).getGenesisBlock();
         verify(blockMock2).cloneAsHeader();
         verify(blockMock3).getWork();
         verify(blockMock4).getHash();
-        verify(fullBlockMapMock).put(eq(sha256HashMock3), eq(0), (StoredUndoableBlock) any());
+        verify(fullBlockMapMock, atLeast(2)).put(eq(sha256HashMock), eq(0), (StoredUndoableBlock) any());
         verify(blockMapMock, atLeast(2)).put(eq(sha256HashMock), (MemoryFullPrunedBlockStore.StoredBlockAndWasUndoableFlag) any());
         verify(fullBlockMapMock).removeByMultiKey(-1);
     }
@@ -195,8 +198,10 @@ public class MemoryFullPrunedBlockStoreSapientGeneratedJunit4Test {
         doNothing().when(blockMapMock).put(eq(sha256HashMock), (MemoryFullPrunedBlockStore.StoredBlockAndWasUndoableFlag) any());
         Sha256Hash sha256HashMock3 = mock(Sha256Hash.class);
         doReturn(null).when(blockMapMock).get(sha256HashMock3);
+
         //Act Statement(s)
         StoredBlock result = target.get(sha256HashMock3);
+
         //Assert statement(s)
         assertThat(result, is(nullValue()));
         verify(paramsMock, times(3)).getGenesisBlock();
@@ -236,8 +241,10 @@ public class MemoryFullPrunedBlockStoreSapientGeneratedJunit4Test {
         Sha256Hash sha256HashMock3 = mock(Sha256Hash.class);
         MemoryFullPrunedBlockStore.StoredBlockAndWasUndoableFlag storedBlockAndWasUndoableFlag = (MemoryFullPrunedBlockStore.StoredBlockAndWasUndoableFlag) blockMapMock.get(sha256HashMock3);
         doReturn(storedBlockAndWasUndoableFlag).when(blockMapMock).get(sha256HashMock3);
+
         //Act Statement(s)
         StoredBlock result = target.get(sha256HashMock3);
+
         //Assert statement(s)
         assertThat(result, is(nullValue()));
         verify(paramsMock, times(3)).getGenesisBlock();
@@ -247,37 +254,6 @@ public class MemoryFullPrunedBlockStoreSapientGeneratedJunit4Test {
         verify(blockMock4).getHash();
         verify(blockMapMock).put(eq(sha256HashMock), (MemoryFullPrunedBlockStore.StoredBlockAndWasUndoableFlag) any());
         verify(blockMapMock).get(sha256HashMock3);
-    }
-
-    //Sapient generated method id: ${bc9a8220-48d1-3dfa-a8fb-e91f63c4a341}
-    @Ignore()
-    @Test()
-    public void getOnceUndoableStoredBlockWhenStoredBlockIsNull() throws BlockStoreException, VerificationException {
-        /* Branches:
-         * (storedBlock != null) : false
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        Block blockMock = mock(Block.class);
-        doReturn(blockMock).when(paramsMock).getGenesisBlock();
-        Block blockMock2 = mock(Block.class);
-        doReturn(blockMock2).when(blockMock).cloneAsHeader();
-        target = new MemoryFullPrunedBlockStore(paramsMock, 1);
-        autoCloseableMocks = MockitoAnnotations.openMocks(this);
-        Sha256Hash sha256HashMock = mock(Sha256Hash.class);
-        doNothing().when(blockMapMock).put(eq(sha256HashMock), (MemoryFullPrunedBlockStore.StoredBlockAndWasUndoableFlag) any());
-        Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
-        doReturn(null).when(blockMapMock).get(sha256HashMock2);
-        //Act Statement(s)
-        StoredBlock result = target.getOnceUndoableStoredBlock(sha256HashMock2);
-        //Assert statement(s)
-        assertThat(result, is(nullValue()));
-        verify(paramsMock).getGenesisBlock();
-        verify(blockMock).cloneAsHeader();
-        verify(blockMapMock).put(eq(sha256HashMock), (MemoryFullPrunedBlockStore.StoredBlockAndWasUndoableFlag) any());
-        verify(blockMapMock).get(sha256HashMock2);
     }
 
     //Sapient generated method id: ${15828e36-626d-3dc9-916c-08292d146e2b}
@@ -309,8 +285,10 @@ public class MemoryFullPrunedBlockStoreSapientGeneratedJunit4Test {
         Sha256Hash sha256HashMock3 = mock(Sha256Hash.class);
         MemoryFullPrunedBlockStore.StoredBlockAndWasUndoableFlag storedBlockAndWasUndoableFlag = (MemoryFullPrunedBlockStore.StoredBlockAndWasUndoableFlag) blockMapMock.get(sha256HashMock3);
         doReturn(storedBlockAndWasUndoableFlag).when(blockMapMock).get(sha256HashMock3);
+
         //Act Statement(s)
         StoredBlock result = target.getOnceUndoableStoredBlock(sha256HashMock3);
+
         //Assert statement(s)
         assertThat(result, is(nullValue()));
         verify(paramsMock, times(3)).getGenesisBlock();
@@ -349,8 +327,10 @@ public class MemoryFullPrunedBlockStoreSapientGeneratedJunit4Test {
         StoredUndoableBlock storedUndoableBlockMock = mock(StoredUndoableBlock.class);
         Sha256Hash sha256HashMock3 = mock(Sha256Hash.class);
         doReturn(storedUndoableBlockMock).when(fullBlockMapMock).get(sha256HashMock3);
+
         //Act Statement(s)
         StoredUndoableBlock result = target.getUndoBlock(sha256HashMock3);
+
         //Assert statement(s)
         assertThat(result, equalTo(storedUndoableBlockMock));
         verify(paramsMock, times(3)).getGenesisBlock();
@@ -385,9 +365,11 @@ public class MemoryFullPrunedBlockStoreSapientGeneratedJunit4Test {
         doReturn(sha256HashMock2).when(blockMock4).getHash();
         target = new MemoryFullPrunedBlockStore(paramsMock, 1);
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
+
         //Act Statement(s)
         StoredBlock result = target.getChainHead();
         StoredBlock storedBlock = new StoredBlock(blockMock2, new BigInteger("0"), 0);
+
         //Assert statement(s)
         assertThat(result, equalTo(storedBlock));
         verify(paramsMock, times(3)).getGenesisBlock();
@@ -420,8 +402,10 @@ public class MemoryFullPrunedBlockStoreSapientGeneratedJunit4Test {
         target = new MemoryFullPrunedBlockStore(paramsMock, 1);
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
         StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), 0);
+
         //Act Statement(s)
         target.setChainHead(storedBlock);
+
         //Assert statement(s)
         verify(blockMock).getHash();
         verify(paramsMock, times(3)).getGenesisBlock();
@@ -452,9 +436,11 @@ public class MemoryFullPrunedBlockStoreSapientGeneratedJunit4Test {
         doReturn(sha256HashMock2).when(blockMock4).getHash();
         target = new MemoryFullPrunedBlockStore(paramsMock, 1);
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
+
         //Act Statement(s)
         StoredBlock result = target.getVerifiedChainHead();
         StoredBlock storedBlock = new StoredBlock(blockMock2, new BigInteger("0"), 0);
+
         //Assert statement(s)
         assertThat(result, equalTo(storedBlock));
         verify(paramsMock, times(3)).getGenesisBlock();
@@ -489,8 +475,10 @@ public class MemoryFullPrunedBlockStoreSapientGeneratedJunit4Test {
         target = new MemoryFullPrunedBlockStore(paramsMock, 1);
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
         StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), 0);
+
         //Act Statement(s)
         target.setVerifiedChainHead(storedBlock);
+
         //Assert statement(s)
         verify(blockMock).getHash();
         verify(paramsMock, times(3)).getGenesisBlock();
@@ -521,8 +509,10 @@ public class MemoryFullPrunedBlockStoreSapientGeneratedJunit4Test {
         doReturn(sha256HashMock2).when(blockMock4).getHash();
         target = new MemoryFullPrunedBlockStore(paramsMock, 1);
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
+
         //Act Statement(s)
         target.close();
+
         //Assert statement(s)
         verify(paramsMock, times(3)).getGenesisBlock();
         verify(blockMock).cloneAsHeader();
@@ -541,21 +531,33 @@ public class MemoryFullPrunedBlockStoreSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Block blockMock = mock(Block.class);
-        doReturn(blockMock).when(paramsMock).getGenesisBlock();
         Block blockMock2 = mock(Block.class);
         doReturn(blockMock2).when(blockMock).cloneAsHeader();
+        Sha256Hash sha256HashMock = mock(Sha256Hash.class);
+        doReturn(sha256HashMock).when(blockMock2).getHash();
+        Block blockMock3 = mock(Block.class);
+        doReturn(new BigInteger("0")).when(blockMock3).getWork();
+        Block blockMock4 = mock(Block.class);
+        doReturn(blockMock, blockMock3, blockMock4).when(paramsMock).getGenesisBlock();
+        Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
+        doReturn(sha256HashMock2).when(blockMock4).getHash();
         target = new MemoryFullPrunedBlockStore(paramsMock, 1);
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
-        Sha256Hash sha256HashMock = mock(Sha256Hash.class);
-        StoredTransactionOutPoint storedTransactionOutPoint = new StoredTransactionOutPoint(sha256HashMock, 0L);
+        Sha256Hash sha256HashMock3 = mock(Sha256Hash.class);
+        StoredTransactionOutPoint storedTransactionOutPoint = new StoredTransactionOutPoint(sha256HashMock3, 0L);
         UTXO uTXO = (UTXO) transactionOutputMapMock.get(storedTransactionOutPoint);
         doReturn(uTXO).when(transactionOutputMapMock).get((StoredTransactionOutPoint) any());
+
         //Act Statement(s)
-        UTXO result = target.getTransactionOutput(sha256HashMock, 0L);
+        UTXO result = target.getTransactionOutput(sha256HashMock3, 0L);
+
         //Assert statement(s)
         assertThat(result, equalTo(uTXO));
-        verify(paramsMock).getGenesisBlock();
+        verify(paramsMock, times(3)).getGenesisBlock();
         verify(blockMock).cloneAsHeader();
+        verify(blockMock2).getHash();
+        verify(blockMock3).getWork();
+        verify(blockMock4).getHash();
         verify(transactionOutputMapMock).get((StoredTransactionOutPoint) any());
     }
 
@@ -583,8 +585,10 @@ public class MemoryFullPrunedBlockStoreSapientGeneratedJunit4Test {
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
         UTXO uTXOMock = mock(UTXO.class);
         doNothing().when(transactionOutputMapMock).put((StoredTransactionOutPoint) any(), eq(uTXOMock));
+
         //Act Statement(s)
         target.addUnspentTransactionOutput(uTXOMock);
+
         //Assert statement(s)
         verify(paramsMock, times(3)).getGenesisBlock();
         verify(blockMock).cloneAsHeader();
@@ -624,8 +628,10 @@ public class MemoryFullPrunedBlockStoreSapientGeneratedJunit4Test {
         thrown.expect(BlockStoreException.class);
         thrown.expectMessage(blockStoreException.getMessage());
         UTXO uTXOMock = mock(UTXO.class);
+
         //Act Statement(s)
         target.removeUnspentTransactionOutput(uTXOMock);
+
         //Assert statement(s)
         verify(paramsMock, times(3)).getGenesisBlock();
         verify(blockMock).cloneAsHeader();
@@ -663,8 +669,10 @@ public class MemoryFullPrunedBlockStoreSapientGeneratedJunit4Test {
         StoredTransactionOutPoint storedTransactionOutPoint = new StoredTransactionOutPoint(uTXOMock);
         Object object = transactionOutputMapMock.remove(storedTransactionOutPoint);
         doReturn(object).when(transactionOutputMapMock).remove((StoredTransactionOutPoint) any());
+
         //Act Statement(s)
         target.removeUnspentTransactionOutput(uTXOMock);
+
         //Assert statement(s)
         verify(paramsMock, times(3)).getGenesisBlock();
         verify(blockMock).cloneAsHeader();
@@ -696,8 +704,10 @@ public class MemoryFullPrunedBlockStoreSapientGeneratedJunit4Test {
         doReturn(sha256HashMock2).when(blockMock4).getHash();
         target = new MemoryFullPrunedBlockStore(paramsMock, 1);
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
+
         //Act Statement(s)
         target.beginDatabaseBatchWrite();
+
         //Assert statement(s)
         verify(paramsMock, times(3)).getGenesisBlock();
         verify(blockMock).cloneAsHeader();
@@ -716,16 +726,28 @@ public class MemoryFullPrunedBlockStoreSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Block blockMock = mock(Block.class);
-        doReturn(blockMock).when(paramsMock).getGenesisBlock();
         Block blockMock2 = mock(Block.class);
         doReturn(blockMock2).when(blockMock).cloneAsHeader();
+        Sha256Hash sha256HashMock = mock(Sha256Hash.class);
+        doReturn(sha256HashMock).when(blockMock2).getHash();
+        Block blockMock3 = mock(Block.class);
+        doReturn(new BigInteger("0")).when(blockMock3).getWork();
+        Block blockMock4 = mock(Block.class);
+        doReturn(blockMock, blockMock3, blockMock4).when(paramsMock).getGenesisBlock();
+        Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
+        doReturn(sha256HashMock2).when(blockMock4).getHash();
         target = new MemoryFullPrunedBlockStore(paramsMock, 1);
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
+
         //Act Statement(s)
         target.commitDatabaseBatchWrite();
+
         //Assert statement(s)
-        verify(paramsMock).getGenesisBlock();
+        verify(paramsMock, times(3)).getGenesisBlock();
         verify(blockMock).cloneAsHeader();
+        verify(blockMock2).getHash();
+        verify(blockMock3).getWork();
+        verify(blockMock4).getHash();
     }
 
     //Sapient generated method id: ${bb5143f8-c902-349e-b57f-69694a4394f7}
@@ -750,8 +772,10 @@ public class MemoryFullPrunedBlockStoreSapientGeneratedJunit4Test {
         doReturn(sha256HashMock2).when(blockMock4).getHash();
         target = new MemoryFullPrunedBlockStore(paramsMock, 1);
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
+
         //Act Statement(s)
         target.abortDatabaseBatchWrite();
+
         //Assert statement(s)
         verify(paramsMock, times(3)).getGenesisBlock();
         verify(blockMock).cloneAsHeader();
@@ -788,8 +812,10 @@ public class MemoryFullPrunedBlockStoreSapientGeneratedJunit4Test {
         UTXO uTXOMock = mock(UTXO.class);
         Sha256Hash sha256HashMock3 = mock(Sha256Hash.class);
         doReturn(uTXOMock).when(target).getTransactionOutput(sha256HashMock3, 0L);
+
         //Act Statement(s)
         boolean result = target.hasUnspentOutputs(sha256HashMock3, 1);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
         verify(paramsMock, times(3)).getGenesisBlock();
@@ -827,8 +853,10 @@ public class MemoryFullPrunedBlockStoreSapientGeneratedJunit4Test {
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
         Sha256Hash sha256HashMock3 = mock(Sha256Hash.class);
         doReturn(null).when(target).getTransactionOutput(sha256HashMock3, 0L);
+
         //Act Statement(s)
         boolean result = target.hasUnspentOutputs(sha256HashMock3, 1);
+
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
         verify(paramsMock, times(3)).getGenesisBlock();
@@ -863,8 +891,10 @@ public class MemoryFullPrunedBlockStoreSapientGeneratedJunit4Test {
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
         Network networkMock = mock(Network.class);
         doReturn(networkMock).when(paramsMock).network();
+
         //Act Statement(s)
         Network result = target.network();
+
         //Assert statement(s)
         assertThat(result, equalTo(networkMock));
         verify(paramsMock, times(3)).getGenesisBlock();
@@ -900,8 +930,10 @@ public class MemoryFullPrunedBlockStoreSapientGeneratedJunit4Test {
         Block blockMock5 = mock(Block.class);
         StoredBlock storedBlock = new StoredBlock(blockMock5, new BigInteger("0"), 0);
         doReturn(storedBlock).when(target).getVerifiedChainHead();
+
         //Act Statement(s)
         int result = target.getChainHeadHeight();
+
         //Assert statement(s)
         assertThat(result, equalTo(0));
         verify(paramsMock, times(3)).getGenesisBlock();
@@ -941,8 +973,10 @@ public class MemoryFullPrunedBlockStoreSapientGeneratedJunit4Test {
         doReturn(storedBlock).when(target).getVerifiedChainHead();
         thrown.expect(UTXOProviderException.class);
         thrown.expectCause(is(instanceOf(BlockStoreException.class)));
+
         //Act Statement(s)
         target.getChainHeadHeight();
+
         //Assert statement(s)
         verify(paramsMock, times(3)).getGenesisBlock();
         verify(blockMock).cloneAsHeader();
@@ -964,17 +998,29 @@ public class MemoryFullPrunedBlockStoreSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Block blockMock = mock(Block.class);
-        doReturn(blockMock).when(paramsMock).getGenesisBlock();
         Block blockMock2 = mock(Block.class);
         doReturn(blockMock2).when(blockMock).cloneAsHeader();
+        Sha256Hash sha256HashMock = mock(Sha256Hash.class);
+        doReturn(sha256HashMock).when(blockMock2).getHash();
+        Block blockMock3 = mock(Block.class);
+        doReturn(new BigInteger("0")).when(blockMock3).getWork();
+        Block blockMock4 = mock(Block.class);
+        doReturn(blockMock, blockMock3, blockMock4).when(paramsMock).getGenesisBlock();
+        Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
+        doReturn(sha256HashMock2).when(blockMock4).getHash();
         target = new MemoryFullPrunedBlockStore(paramsMock, 1);
         autoCloseableMocks = MockitoAnnotations.openMocks(this);
         List<ECKey> eCKeyList = new ArrayList<>();
+
         //Act Statement(s)
         List<UTXO> result = target.getOpenTransactionOutputs(eCKeyList);
+
         //Assert statement(s)
         assertThat(result.size(), equalTo(0));
-        verify(paramsMock).getGenesisBlock();
+        verify(paramsMock, times(3)).getGenesisBlock();
         verify(blockMock).cloneAsHeader();
+        verify(blockMock2).getHash();
+        verify(blockMock3).getWork();
+        verify(blockMock4).getHash();
     }
 }

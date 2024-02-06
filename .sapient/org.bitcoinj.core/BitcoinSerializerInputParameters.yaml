@@ -411,7 +411,7 @@ methods:
     - type: "STATIC"
       name: "NetworkParameters"
       modelFingerprint: "241C8F0087A065039075A9D9A5002A54"
-      index: 5
+      index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -442,7 +442,7 @@ methods:
             onlyPojoFunctions: false
             builderPattern: false
           valueType: "org.bitcoinj.core.NetworkParameters"
-          uuid: "<init>_networkParameters3"
+          uuid: "<init>_networkParameters2"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -451,7 +451,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       modelFingerprint: "B3179A3C3A0321952D26E36DA53CE369"
-      index: 6
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -462,7 +462,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.core.NetworkParameters"
-        uuid: "<init>_networkParameters3"
+        uuid: "<init>_networkParameters2"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -476,7 +476,7 @@ methods:
           content: !<regular>
             value: 0
           valueType: "int"
-          uuid: "<init>_int3"
+          uuid: "<init>_int2"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -3335,6 +3335,8 @@ methods:
           sapientType: "ARRAY"
           content: !<array>
             values: {}
+          suggestedContent: !<array>
+            values: {}
           valueType: "byte[]"
           uuid: "serialize_byte[]1"
           fixed: false
@@ -3369,6 +3371,8 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
+              values: {}
+            suggestedContent: !<array>
               values: {}
             valueType: "byte[]"
             uuid: "serialize_byte[]1"
@@ -4245,7 +4249,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "081FFC2C59CCD9B1C9F70F3879A69504"
-    problemWasSolvedByProver: true
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -5940,11 +5944,13 @@ methods:
       filledByUser: false
     uuid: "a1ab99b1-eec7-356b-b9fe-abd938ce31f5"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
+    failureReason:
+      reason: "UNKNOWN_REASON"
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "deserializePayloadWhenLogIsDebugEnabledThrowsProtocolException"
@@ -9684,7 +9690,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "E64B92914D7D83F2E57C3FA14F96ED54"
+    modelFingerprint: "524B1E026CF9F9D1E75205E83228BC2B"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -9829,7 +9835,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "NetworkParameters"
-      modelFingerprint: "F98CFD1338325072F086F1E685553416"
+      modelFingerprint: "241C8F0087A065039075A9D9A5002A54"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -9869,7 +9875,7 @@ methods:
       staticReadMethodForField: false
       filledByUser: false
     - type: "LOCAL_VARIABLE"
-      modelFingerprint: "C1A5FDAEBCB3806C5C58EF2AD8B86CF6"
+      modelFingerprint: "B3179A3C3A0321952D26E36DA53CE369"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -9922,6 +9928,5 @@ methods:
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

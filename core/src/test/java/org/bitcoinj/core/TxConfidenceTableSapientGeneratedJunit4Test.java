@@ -33,7 +33,7 @@ public class TxConfidenceTableSapientGeneratedJunit4Test {
     @Rule()
     public Timeout timeoutRule = Timeout.seconds(5);
 
-    private final TransactionConfidence.Factory confidenceFactoryMock = mock(TransactionConfidence.Factory.class, "TransactionConfidence.Factory");
+    private final TransactionConfidence.Factory confidenceFactoryMock = mock(TransactionConfidence.Factory.class, "confidenceFactory");
 
     private final Sha256Hash sha256HashMock = mock(Sha256Hash.class);
 
@@ -124,18 +124,11 @@ public class TxConfidenceTableSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-            ReentrantLock reentrantLock = Threading.lock(TxConfidenceTable.class);
-            threading.when(() -> Threading.lock(TxConfidenceTable.class)).thenReturn(reentrantLock);
-            TxConfidenceTable target = new TxConfidenceTable(10, confidenceFactoryMock);
-            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-            Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
-            //Act Statement(s)
-            TransactionConfidence result = target.getOrCreate(sha256Hash);
-            //Assert statement(s)
-            assertThat(result, is(notNullValue()));
-            threading.verify(() -> Threading.lock(TxConfidenceTable.class), atLeast(1));
-        }
+        TxConfidenceTable target = new TxConfidenceTable(0, confidenceFactoryMock);
+        //Act Statement(s)
+        TransactionConfidence result = target.getOrCreate(sha256HashMock);
+        //Assert statement(s)
+        assertThat(result, is(notNullValue()));
     }
 
     //Sapient generated method id: ${0612b96e-688d-399d-89cc-93535a129726}
@@ -171,21 +164,13 @@ public class TxConfidenceTableSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-            ReentrantLock reentrantLock = new ReentrantLock();
-            threading.when(() -> Threading.lock(TxConfidenceTable.class)).thenReturn(reentrantLock);
-            TxConfidenceTable target = new TxConfidenceTable(10, confidenceFactoryMock);
-            TransactionConfidence transactionConfidence = new TransactionConfidence(sha256HashMock);
-            doReturn(transactionConfidence).when(confidenceFactoryMock).createConfidence((Sha256Hash) any());
-            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-            Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
-            //Act Statement(s)
-            TransactionConfidence result = target.getOrCreate(sha256Hash);
-            //Assert statement(s)
-            assertThat(result, equalTo(transactionConfidence));
-            threading.verify(() -> Threading.lock(TxConfidenceTable.class), atLeast(1));
-            verify(confidenceFactoryMock).createConfidence((Sha256Hash) any());
-        }
+        TxConfidenceTable target = new TxConfidenceTable(0, confidenceFactoryMock);
+        doReturn(transactionConfidenceMock).when(confidenceFactoryMock).createConfidence(sha256HashMock);
+        //Act Statement(s)
+        TransactionConfidence result = target.getOrCreate(sha256HashMock);
+        //Assert statement(s)
+        assertThat(result, equalTo(transactionConfidenceMock));
+        verify(confidenceFactoryMock).createConfidence(sha256HashMock);
     }
 
     //Sapient generated method id: ${b41355bd-04ce-314d-96dc-4fc8c8a6b5a4}
@@ -199,18 +184,11 @@ public class TxConfidenceTableSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-            ReentrantLock reentrantLock = Threading.lock(TxConfidenceTable.class);
-            threading.when(() -> Threading.lock(TxConfidenceTable.class)).thenReturn(reentrantLock);
-            TxConfidenceTable target = new TxConfidenceTable(10, confidenceFactoryMock);
-            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-            Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
-            //Act Statement(s)
-            TransactionConfidence result = target.get(sha256Hash);
-            //Assert statement(s)
-            assertThat(result, is(notNullValue()));
-            threading.verify(() -> Threading.lock(TxConfidenceTable.class), atLeast(1));
-        }
+        TxConfidenceTable target = new TxConfidenceTable(0, confidenceFactoryMock);
+        //Act Statement(s)
+        TransactionConfidence result = target.get(sha256HashMock);
+        //Assert statement(s)
+        assertThat(result, is(notNullValue()));
     }
 
     //Sapient generated method id: ${9f0bc527-6f06-32ef-9c0f-30f4d74475bb}
@@ -224,17 +202,10 @@ public class TxConfidenceTableSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<Threading> threading = mockStatic(Threading.class)) {
-            ReentrantLock reentrantLock = Threading.lock(TxConfidenceTable.class);
-            threading.when(() -> Threading.lock(TxConfidenceTable.class)).thenReturn(reentrantLock);
-            TxConfidenceTable target = new TxConfidenceTable(10, confidenceFactoryMock);
-            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-            Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
-            //Act Statement(s)
-            TransactionConfidence result = target.get(sha256Hash);
-            //Assert statement(s)
-            assertThat(result, is(nullValue()));
-            threading.verify(() -> Threading.lock(TxConfidenceTable.class), atLeast(1));
-        }
+        TxConfidenceTable target = new TxConfidenceTable(0, confidenceFactoryMock);
+        //Act Statement(s)
+        TransactionConfidence result = target.get(sha256HashMock);
+        //Assert statement(s)
+        assertThat(result, is(nullValue()));
     }
 }

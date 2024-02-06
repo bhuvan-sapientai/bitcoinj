@@ -17,12 +17,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "CE75FF3AC9A142B0AA85631596AD13FD"
+    modelFingerprint: "A6EC1DD60C7F338C0BE03515BA4A8BC1"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "0E6404401EAEE6310F19A797BF4D245B"
+      modelFingerprint: "F992F37F1CE9530AA4CC1D83C521A98D"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -36,9 +36,7 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "<String value>"
-              suggestedContent: !<regular>
-                value: "<String value>"
+                value: "name1"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -62,10 +60,6 @@ methods:
           - name: "name"
             value:
               sapientType: "BASIC"
-              content: !<regular>
-                value: "<String value>"
-              suggestedContent: !<regular>
-                value: "<String value>"
               valueType: "java.lang.String"
               uuid: "<init>_string1"
               fixed: false
@@ -90,17 +84,13 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "r"
-      modelFingerprint: "141953A8D4501F319A47C4CC1CF03F91"
+      modelFingerprint: "E19F7DDCD869EDBB675FEEDF46089F9F"
       index: 2
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "NULL"
-        content: !<unknown_object>
-          target: "java.lang.Runnable"
-          onlyPojoFunctions: false
-          builderPattern: false
         suggestedContent: !<unknown_object>
           target: "java.lang.Runnable"
           onlyPojoFunctions: false
@@ -143,7 +133,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "CECB7A98C5A8E6B14CC009DA0399D003"
+      modelFingerprint: "70319B4504DBF8DD1AE03242AE00A184"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -163,6 +153,5 @@ methods:
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false

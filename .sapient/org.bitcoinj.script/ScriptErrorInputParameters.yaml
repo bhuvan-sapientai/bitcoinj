@@ -131,13 +131,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "171BC2D741673E6B12A72DEF91A94E86"
-    problemWasSolvedByProver: true
+    modelFingerprint: "E775A44C5F755BB73872BC7EC5FDEACB"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "name"
-      modelFingerprint: "3830444B9B8AF74B18598135ED0CC485"
+      modelFingerprint: "6EA07A17E3D3E21407332E2E522586C1"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -145,9 +145,9 @@ methods:
       value:
         sapientType: "BASIC"
         content: !<regular>
-          value: "OK"
+          value: "J"
         suggestedContent: !<regular>
-          value: "OK"
+          value: "J"
         valueType: "java.lang.String"
         uuid: "fromMnemonic_string1"
         fixed: false
@@ -157,7 +157,7 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "E8D717724AA1ED7E85C91A784DC2F249"
+      modelFingerprint: "33B6BE2DD587778575E36BE82D6908A5"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -165,7 +165,9 @@ methods:
       value:
         sapientType: "ENUM"
         content: !<regular>
-          value: "SCRIPT_ERR_OK"
+          value: "SCRIPT_ERR_ERROR_COUNT"
+        suggestedContent: !<regular>
+          value: "SCRIPT_ERR_ERROR_COUNT"
         valueType: "org.bitcoinj.script.ScriptError"
         uuid: "fromMnemonic_scriptError1"
         fixed: false
@@ -176,8 +178,9 @@ methods:
       filledByUser: false
     uuid: "1917e9f8-0714-38f6-afb9-d52c8973b4ef"
     deleted: false
-    disabled: false
+    disabled: true
     ignoredBySystem: false
-    prover: "LLM"
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: false
+    disabledStatusUpdatedBySystem: true

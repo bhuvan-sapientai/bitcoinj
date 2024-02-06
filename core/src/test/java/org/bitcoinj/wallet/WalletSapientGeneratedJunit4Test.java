@@ -173,6 +173,8 @@ import static org.mockito.Mockito.mockStatic;
 
 import java.util.Arrays;
 
+import org.bitcoinj.core.TransactionWitness;
+
 public class WalletSapientGeneratedJunit4Test {
 
     @Rule()
@@ -198,6 +200,8 @@ public class WalletSapientGeneratedJunit4Test {
 
     @After()
     public void afterTest() throws Exception {
+        if (autoCloseableMocks != null)
+            autoCloseableMocks.close();
         /*if (autoCloseableMocks != null)
     autoCloseableMocks.close();*/
         /*if (autoCloseableMocks != null)
@@ -291,36 +295,36 @@ public class WalletSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         //NetworkParameters paramsMock2 = mock(NetworkParameters.class);
         //Network networkMock2 = mock(Network.class);
+        //Network networkMock3 = mock(Network.class);
         //KeyChainGroup.Builder keyChainGroupBuilderMock = mock(KeyChainGroup.Builder.class);
         //KeyChainGroupStructure keyChainGroupStructureMock = mock(KeyChainGroupStructure.class);
         //KeyChainGroup.Builder keyChainGroupBuilderMock2 = mock(KeyChainGroup.Builder.class);
         //KeyChainGroup keyChainGroupMock2 = mock(KeyChainGroup.class);
-        //Network networkMock3 = mock(Network.class);
         //CoinSelector coinSelectorMock = mock(CoinSelector.class);
         /*try (MockedStatic<DefaultCoinSelector> defaultCoinSelector = mockStatic(DefaultCoinSelector.class);
     MockedStatic<AddressParser> addressParser = mockStatic(AddressParser.class);
     MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class);
     MockedStatic<KeyChainGroup> keyChainGroup = mockStatic(KeyChainGroup.class)) {
-    doReturn(networkMock2).when(paramsMock2).network();
-    keyChainGroup.when(() -> KeyChainGroup.builder(networkMock2, keyChainGroupStructureMock)).thenReturn(keyChainGroupBuilderMock);
+    doReturn(networkMock2, networkMock3).when(paramsMock2).network();
+    keyChainGroup.when(() -> KeyChainGroup.builder(networkMock3, keyChainGroupStructureMock)).thenReturn(keyChainGroupBuilderMock);
     doReturn(keyChainGroupBuilderMock2).when(keyChainGroupBuilderMock).fromRandom(ScriptType.P2PKH);
     doReturn(keyChainGroupMock2).when(keyChainGroupBuilderMock2).build();
-    networkParameters.when(() -> NetworkParameters.of(networkMock3)).thenReturn(paramsMock);
-    addressParser.when(() -> AddressParser.getDefault(networkMock3)).thenReturn(addressParserMock);
-    defaultCoinSelector.when(() -> DefaultCoinSelector.get(networkMock3)).thenReturn(coinSelectorMock);
+    networkParameters.when(() -> NetworkParameters.of(networkMock2)).thenReturn(paramsMock);
+    addressParser.when(() -> AddressParser.getDefault(networkMock2)).thenReturn(addressParserMock);
+    defaultCoinSelector.when(() -> DefaultCoinSelector.get(networkMock2)).thenReturn(coinSelectorMock);
     //Act Statement(s)
     Wallet result = Wallet.createDeterministic(paramsMock2, ScriptType.P2PKH, keyChainGroupStructureMock);
-    Wallet wallet = new Wallet(networkMock3, keyChainGroupMock2);
+    Wallet wallet = new Wallet(networkMock2, keyChainGroupMock2);
     //Assert statement(s)
     //TODO: Please implement equals method in Wallet for verification to succeed or you need to adjust respective assertion statements
     assertThat(result, equalTo(wallet));
-    verify(paramsMock2).network();
-    keyChainGroup.verify(() -> KeyChainGroup.builder(networkMock2, keyChainGroupStructureMock), atLeast(1));
+    verify(paramsMock2, times(2)).network();
+    keyChainGroup.verify(() -> KeyChainGroup.builder(networkMock3, keyChainGroupStructureMock), atLeast(1));
     verify(keyChainGroupBuilderMock).fromRandom(ScriptType.P2PKH);
     verify(keyChainGroupBuilderMock2).build();
-    networkParameters.verify(() -> NetworkParameters.of(networkMock3), atLeast(1));
-    addressParser.verify(() -> AddressParser.getDefault(networkMock3), atLeast(1));
-    defaultCoinSelector.verify(() -> DefaultCoinSelector.get(networkMock3), atLeast(1));
+    networkParameters.verify(() -> NetworkParameters.of(networkMock2), atLeast(1));
+    addressParser.verify(() -> AddressParser.getDefault(networkMock2), atLeast(1));
+    defaultCoinSelector.verify(() -> DefaultCoinSelector.get(networkMock2), atLeast(1));
 }*/
     }
 
@@ -892,40 +896,40 @@ public class WalletSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        NetworkParameters paramsMock2 = mock(NetworkParameters.class);
-        Network networkMock2 = mock(Network.class);
-        KeyChainGroup.Builder keyChainGroupBuilderMock = mock(KeyChainGroup.Builder.class);
-        KeyChainGroup.Builder keyChainGroupBuilderMock2 = mock(KeyChainGroup.Builder.class);
-        DeterministicKeyChain deterministicKeyChainMock = mock(DeterministicKeyChain.class);
-        KeyChainGroup keyChainGroupMock2 = mock(KeyChainGroup.class);
-        Network networkMock3 = mock(Network.class);
-        CoinSelector coinSelectorMock = mock(CoinSelector.class);
-        DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
-        try (MockedStatic<DefaultCoinSelector> defaultCoinSelector = mockStatic(DefaultCoinSelector.class);
-             MockedStatic<AddressParser> addressParser = mockStatic(AddressParser.class);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class);
-             MockedStatic<KeyChainGroup> keyChainGroup = mockStatic(KeyChainGroup.class)) {
-            doReturn(networkMock2).when(paramsMock2).network();
-            keyChainGroup.when(() -> KeyChainGroup.builder(networkMock2)).thenReturn(keyChainGroupBuilderMock);
-            doReturn(keyChainGroupBuilderMock2).when(keyChainGroupBuilderMock).addChain(deterministicKeyChainMock);
-            doReturn(keyChainGroupMock2).when(keyChainGroupBuilderMock2).build();
-            networkParameters.when(() -> NetworkParameters.of(networkMock3)).thenReturn(paramsMock);
-            addressParser.when(() -> AddressParser.getDefault(networkMock3)).thenReturn(addressParserMock);
-            defaultCoinSelector.when(() -> DefaultCoinSelector.get(networkMock3)).thenReturn(coinSelectorMock);
-            //Act Statement(s)
-            Wallet result = Wallet.fromSpendingKey(paramsMock2, deterministicKeyMock, ScriptType.P2PKH);
-            Wallet wallet = new Wallet(networkMock3, keyChainGroupMock2);
-            //Assert statement(s)
-            //TODO: Please implement equals method in Wallet for verification to succeed or you need to adjust respective assertion statements
-            assertThat(result, equalTo(wallet));
-            verify(paramsMock2).network();
-            keyChainGroup.verify(() -> KeyChainGroup.builder(networkMock2), atLeast(1));
-            verify(keyChainGroupBuilderMock).addChain(deterministicKeyChainMock);
-            verify(keyChainGroupBuilderMock2).build();
-            networkParameters.verify(() -> NetworkParameters.of(networkMock3), atLeast(1));
-            addressParser.verify(() -> AddressParser.getDefault(networkMock3), atLeast(1));
-            defaultCoinSelector.verify(() -> DefaultCoinSelector.get(networkMock3), atLeast(1));
-        }
+        //NetworkParameters paramsMock2 = mock(NetworkParameters.class);
+        //Network networkMock2 = mock(Network.class);
+        //Network networkMock3 = mock(Network.class);
+        //KeyChainGroup.Builder keyChainGroupBuilderMock = mock(KeyChainGroup.Builder.class);
+        //KeyChainGroup.Builder keyChainGroupBuilderMock2 = mock(KeyChainGroup.Builder.class);
+        //DeterministicKeyChain deterministicKeyChainMock = mock(DeterministicKeyChain.class);
+        //KeyChainGroup keyChainGroupMock2 = mock(KeyChainGroup.class);
+        //CoinSelector coinSelectorMock = mock(CoinSelector.class);
+        //DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
+        /*try (MockedStatic<DefaultCoinSelector> defaultCoinSelector = mockStatic(DefaultCoinSelector.class);
+    MockedStatic<AddressParser> addressParser = mockStatic(AddressParser.class);
+    MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class);
+    MockedStatic<KeyChainGroup> keyChainGroup = mockStatic(KeyChainGroup.class)) {
+    doReturn(networkMock2, networkMock3).when(paramsMock2).network();
+    keyChainGroup.when(() -> KeyChainGroup.builder(networkMock3)).thenReturn(keyChainGroupBuilderMock);
+    doReturn(keyChainGroupBuilderMock2).when(keyChainGroupBuilderMock).addChain(deterministicKeyChainMock);
+    doReturn(keyChainGroupMock2).when(keyChainGroupBuilderMock2).build();
+    networkParameters.when(() -> NetworkParameters.of(networkMock2)).thenReturn(paramsMock);
+    addressParser.when(() -> AddressParser.getDefault(networkMock2)).thenReturn(addressParserMock);
+    defaultCoinSelector.when(() -> DefaultCoinSelector.get(networkMock2)).thenReturn(coinSelectorMock);
+    //Act Statement(s)
+    Wallet result = Wallet.fromSpendingKey(paramsMock2, deterministicKeyMock, ScriptType.P2PKH);
+    Wallet wallet = new Wallet(networkMock2, keyChainGroupMock2);
+    //Assert statement(s)
+    //TODO: Please implement equals method in Wallet for verification to succeed or you need to adjust respective assertion statements
+    assertThat(result, equalTo(wallet));
+    verify(paramsMock2, times(2)).network();
+    keyChainGroup.verify(() -> KeyChainGroup.builder(networkMock3), atLeast(1));
+    verify(keyChainGroupBuilderMock).addChain(deterministicKeyChainMock);
+    verify(keyChainGroupBuilderMock2).build();
+    networkParameters.verify(() -> NetworkParameters.of(networkMock2), atLeast(1));
+    addressParser.verify(() -> AddressParser.getDefault(networkMock2), atLeast(1));
+    defaultCoinSelector.verify(() -> DefaultCoinSelector.get(networkMock2), atLeast(1));
+}*/
     }
 
     //Sapient generated method id: ${494da1ac-7edf-3ac0-a303-96f3da859cc2}
@@ -940,35 +944,35 @@ public class WalletSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
-        Network networkMock2 = mock(Network.class);
-        NetworkParameters networkParametersMock = mock(NetworkParameters.class);
-        Wallet walletMock = mock(Wallet.class);
-        try (MockedStatic<Wallet> wallet = mockStatic(Wallet.class, CALLS_REAL_METHODS);
-             MockedStatic<Base58> base58 = mockStatic(Base58.class);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class);
-             MockedStatic<DeterministicKey> deterministicKey = mockStatic(DeterministicKey.class)) {
-            deterministicKey.when(() -> DeterministicKey.deserializeB58(null, "A", networkMock2)).thenReturn(deterministicKeyMock);
-            doNothing().when(deterministicKeyMock).setCreationTime((Instant) any());
-            networkParameters.when(() -> NetworkParameters.of(networkMock2)).thenReturn(networkParametersMock);
-            doReturn(2).when(networkParametersMock).getBip32HeaderP2PKHpub();
-            doReturn(1).when(networkParametersMock).getBip32HeaderP2PKHpriv();
-            byte[] byteArray = new byte[]{};
-            base58.when(() -> Base58.decodeChecked("A")).thenReturn(byteArray);
-            wallet.when(() -> Wallet.fromSpendingKey(networkMock2, deterministicKeyMock, ScriptType.P2PKH)).thenReturn(walletMock);
-            Instant instant = Instant.now();
-            //Act Statement(s)
-            Wallet result = Wallet.fromSpendingKeyB58(networkMock2, "A", instant);
-            //Assert statement(s)
-            assertThat(result, equalTo(walletMock));
-            deterministicKey.verify(() -> DeterministicKey.deserializeB58(null, "A", networkMock2), atLeast(1));
-            verify(deterministicKeyMock, atLeast(1)).setCreationTime((Instant) any());
-            networkParameters.verify(() -> NetworkParameters.of(networkMock2), atLeast(1));
-            verify(networkParametersMock, atLeast(1)).getBip32HeaderP2PKHpub();
-            verify(networkParametersMock, atLeast(1)).getBip32HeaderP2PKHpriv();
-            base58.verify(() -> Base58.decodeChecked("A"), atLeast(1));
-            wallet.verify(() -> Wallet.fromSpendingKey(networkMock2, deterministicKeyMock, ScriptType.P2PKH), atLeast(1));
-        }
+        //DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
+        //Network networkMock2 = mock(Network.class);
+        //NetworkParameters networkParametersMock = mock(NetworkParameters.class);
+        //Wallet walletMock = mock(Wallet.class);
+        /*try (MockedStatic<Wallet> wallet = mockStatic(Wallet.class, CALLS_REAL_METHODS);
+    MockedStatic<Base58> base58 = mockStatic(Base58.class);
+    MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class);
+    MockedStatic<DeterministicKey> deterministicKey = mockStatic(DeterministicKey.class)) {
+    deterministicKey.when(() -> DeterministicKey.deserializeB58(null, "A", networkMock2)).thenReturn(deterministicKeyMock);
+    doNothing().when(deterministicKeyMock).setCreationTime((Instant) any());
+    networkParameters.when(() -> NetworkParameters.of(networkMock2)).thenReturn(networkParametersMock);
+    doReturn(2).when(networkParametersMock).getBip32HeaderP2PKHpub();
+    doReturn(1).when(networkParametersMock).getBip32HeaderP2PKHpriv();
+    byte[] byteArray = new byte[] {};
+    base58.when(() -> Base58.decodeChecked("A")).thenReturn(byteArray);
+    wallet.when(() -> Wallet.fromSpendingKey(networkMock2, deterministicKeyMock, ScriptType.P2PKH)).thenReturn(walletMock);
+    Instant instant = Instant.now();
+    //Act Statement(s)
+    Wallet result = Wallet.fromSpendingKeyB58(networkMock2, "A", instant);
+    //Assert statement(s)
+    assertThat(result, equalTo(walletMock));
+    deterministicKey.verify(() -> DeterministicKey.deserializeB58(null, "A", networkMock2), atLeast(1));
+    verify(deterministicKeyMock, atLeast(1)).setCreationTime((Instant) any());
+    networkParameters.verify(() -> NetworkParameters.of(networkMock2), atLeast(1));
+    verify(networkParametersMock, atLeast(1)).getBip32HeaderP2PKHpub();
+    verify(networkParametersMock, atLeast(1)).getBip32HeaderP2PKHpriv();
+    base58.verify(() -> Base58.decodeChecked("A"), atLeast(1));
+    wallet.verify(() -> Wallet.fromSpendingKey(networkMock2, deterministicKeyMock, ScriptType.P2PKH), atLeast(1));
+}*/
     }
 
     //Sapient generated method id: ${347c5bf4-02fe-3272-9ba6-723d62eeccfd}
@@ -985,39 +989,39 @@ public class WalletSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
-        //Network networkMock2 = mock(Network.class);
-        //NetworkParameters networkParametersMock = mock(NetworkParameters.class);
-        //Wallet walletMock = mock(Wallet.class);
-        /*try (MockedStatic<Wallet> wallet = mockStatic(Wallet.class, CALLS_REAL_METHODS);
-    MockedStatic<Base58> base58 = mockStatic(Base58.class);
-    MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class);
-    MockedStatic<DeterministicKey> deterministicKey = mockStatic(DeterministicKey.class)) {
-    deterministicKey.when(() -> DeterministicKey.deserializeB58(null, "", networkMock2)).thenReturn(deterministicKeyMock);
-    doNothing().when(deterministicKeyMock).setCreationTime((Instant) any());
-    networkParameters.when(() -> NetworkParameters.of(networkMock2)).thenReturn(networkParametersMock);
-    doReturn(1).when(networkParametersMock).getBip32HeaderP2PKHpub();
-    doReturn(1).when(networkParametersMock).getBip32HeaderP2PKHpriv();
-    doReturn(1).when(networkParametersMock).getBip32HeaderP2WPKHpub();
-    doReturn(0).when(networkParametersMock).getBip32HeaderP2WPKHpriv();
-    byte[] byteArray = new byte[] {};
-    base58.when(() -> Base58.decodeChecked("")).thenReturn(byteArray);
-    wallet.when(() -> Wallet.fromSpendingKey(networkMock2, deterministicKeyMock, ScriptType.P2WPKH)).thenReturn(walletMock);
-    Instant instant = Instant.now();
-    //Act Statement(s)
-    Wallet result = Wallet.fromSpendingKeyB58(networkMock2, "", instant);
-    //Assert statement(s)
-    assertThat(result, equalTo(walletMock));
-    deterministicKey.verify(() -> DeterministicKey.deserializeB58(null, "", networkMock2), atLeast(1));
-    verify(deterministicKeyMock, atLeast(1)).setCreationTime((Instant) any());
-    networkParameters.verify(() -> NetworkParameters.of(networkMock2), atLeast(1));
-    verify(networkParametersMock, atLeast(1)).getBip32HeaderP2PKHpub();
-    verify(networkParametersMock, atLeast(1)).getBip32HeaderP2PKHpriv();
-    verify(networkParametersMock, atLeast(1)).getBip32HeaderP2WPKHpub();
-    verify(networkParametersMock, atLeast(1)).getBip32HeaderP2WPKHpriv();
-    base58.verify(() -> Base58.decodeChecked(""), atLeast(1));
-    wallet.verify(() -> Wallet.fromSpendingKey(networkMock2, deterministicKeyMock, ScriptType.P2WPKH), atLeast(1));
-}*/
+        DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
+        Network networkMock2 = mock(Network.class);
+        NetworkParameters networkParametersMock = mock(NetworkParameters.class);
+        Wallet walletMock = mock(Wallet.class);
+        try (MockedStatic<Wallet> wallet = mockStatic(Wallet.class, CALLS_REAL_METHODS);
+             MockedStatic<Base58> base58 = mockStatic(Base58.class);
+             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class);
+             MockedStatic<DeterministicKey> deterministicKey = mockStatic(DeterministicKey.class)) {
+            deterministicKey.when(() -> DeterministicKey.deserializeB58(null, "", networkMock2)).thenReturn(deterministicKeyMock);
+            doNothing().when(deterministicKeyMock).setCreationTime((Instant) any());
+            networkParameters.when(() -> NetworkParameters.of(networkMock2)).thenReturn(networkParametersMock);
+            doReturn(1).when(networkParametersMock).getBip32HeaderP2PKHpub();
+            doReturn(1).when(networkParametersMock).getBip32HeaderP2PKHpriv();
+            doReturn(1).when(networkParametersMock).getBip32HeaderP2WPKHpub();
+            doReturn(0).when(networkParametersMock).getBip32HeaderP2WPKHpriv();
+            byte[] byteArray = new byte[]{};
+            base58.when(() -> Base58.decodeChecked("")).thenReturn(byteArray);
+            wallet.when(() -> Wallet.fromSpendingKey(networkMock2, deterministicKeyMock, ScriptType.P2WPKH)).thenReturn(walletMock);
+            Instant instant = Instant.now();
+            //Act Statement(s)
+            Wallet result = Wallet.fromSpendingKeyB58(networkMock2, "", instant);
+            //Assert statement(s)
+            assertThat(result, equalTo(walletMock));
+            deterministicKey.verify(() -> DeterministicKey.deserializeB58(null, "", networkMock2), atLeast(1));
+            verify(deterministicKeyMock, atLeast(1)).setCreationTime((Instant) any());
+            networkParameters.verify(() -> NetworkParameters.of(networkMock2), atLeast(1));
+            verify(networkParametersMock, atLeast(1)).getBip32HeaderP2PKHpub();
+            verify(networkParametersMock, atLeast(1)).getBip32HeaderP2PKHpriv();
+            verify(networkParametersMock, atLeast(1)).getBip32HeaderP2WPKHpub();
+            verify(networkParametersMock, atLeast(1)).getBip32HeaderP2WPKHpriv();
+            base58.verify(() -> Base58.decodeChecked(""), atLeast(1));
+            wallet.verify(() -> Wallet.fromSpendingKey(networkMock2, deterministicKeyMock, ScriptType.P2WPKH), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${69559c9b-d4b0-3367-a5fc-7bf942c039ed}
@@ -1034,37 +1038,37 @@ public class WalletSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
-        //Network networkMock2 = mock(Network.class);
-        //NetworkParameters networkParametersMock = mock(NetworkParameters.class);
-        /*try (MockedStatic<Base58> base58 = mockStatic(Base58.class);
-    MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class);
-    MockedStatic<DeterministicKey> deterministicKey = mockStatic(DeterministicKey.class)) {
-    deterministicKey.when(() -> DeterministicKey.deserializeB58(null, "ABCD", networkMock2)).thenReturn(deterministicKeyMock);
-    doNothing().when(deterministicKeyMock).setCreationTime((Instant) any());
-    networkParameters.when(() -> NetworkParameters.of(networkMock2)).thenReturn(networkParametersMock);
-    doReturn(2).when(networkParametersMock).getBip32HeaderP2PKHpub();
-    doReturn(2).when(networkParametersMock).getBip32HeaderP2PKHpriv();
-    doReturn(2).when(networkParametersMock).getBip32HeaderP2WPKHpub();
-    doReturn(0).when(networkParametersMock).getBip32HeaderP2WPKHpriv();
-    byte[] byteArray = new byte[] {};
-    base58.when(() -> Base58.decodeChecked("ABCD")).thenReturn(byteArray);
-    IllegalArgumentException illegalArgumentException = new IllegalArgumentException("ABCD");
-    thrown.expect(IllegalArgumentException.class);
-    thrown.expectMessage(illegalArgumentException.getMessage());
-    Instant instant = Instant.now();
-    //Act Statement(s)
-    Wallet.fromSpendingKeyB58(networkMock2, "ABCD", instant);
-    //Assert statement(s)
-    deterministicKey.verify(() -> DeterministicKey.deserializeB58(null, "ABCD", networkMock2), atLeast(1));
-    verify(deterministicKeyMock).setCreationTime((Instant) any());
-    networkParameters.verify(() -> NetworkParameters.of(networkMock2), atLeast(1));
-    verify(networkParametersMock).getBip32HeaderP2PKHpub();
-    verify(networkParametersMock).getBip32HeaderP2PKHpriv();
-    verify(networkParametersMock).getBip32HeaderP2WPKHpub();
-    verify(networkParametersMock).getBip32HeaderP2WPKHpriv();
-    base58.verify(() -> Base58.decodeChecked("ABCD"), atLeast(1));
-}*/
+        DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
+        Network networkMock2 = mock(Network.class);
+        NetworkParameters networkParametersMock = mock(NetworkParameters.class);
+        try (MockedStatic<Base58> base58 = mockStatic(Base58.class);
+             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class);
+             MockedStatic<DeterministicKey> deterministicKey = mockStatic(DeterministicKey.class)) {
+            deterministicKey.when(() -> DeterministicKey.deserializeB58(null, "ABCD", networkMock2)).thenReturn(deterministicKeyMock);
+            doNothing().when(deterministicKeyMock).setCreationTime((Instant) any());
+            networkParameters.when(() -> NetworkParameters.of(networkMock2)).thenReturn(networkParametersMock);
+            doReturn(2).when(networkParametersMock).getBip32HeaderP2PKHpub();
+            doReturn(2).when(networkParametersMock).getBip32HeaderP2PKHpriv();
+            doReturn(2).when(networkParametersMock).getBip32HeaderP2WPKHpub();
+            doReturn(0).when(networkParametersMock).getBip32HeaderP2WPKHpriv();
+            byte[] byteArray = new byte[]{};
+            base58.when(() -> Base58.decodeChecked("ABCD")).thenReturn(byteArray);
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException("ABCD");
+            thrown.expect(IllegalArgumentException.class);
+            thrown.expectMessage(illegalArgumentException.getMessage());
+            Instant instant = Instant.now();
+            //Act Statement(s)
+            Wallet.fromSpendingKeyB58(networkMock2, "ABCD", instant);
+            //Assert statement(s)
+            deterministicKey.verify(() -> DeterministicKey.deserializeB58(null, "ABCD", networkMock2), atLeast(1));
+            verify(deterministicKeyMock).setCreationTime((Instant) any());
+            networkParameters.verify(() -> NetworkParameters.of(networkMock2), atLeast(1));
+            verify(networkParametersMock).getBip32HeaderP2PKHpub();
+            verify(networkParametersMock).getBip32HeaderP2PKHpriv();
+            verify(networkParametersMock).getBip32HeaderP2WPKHpub();
+            verify(networkParametersMock).getBip32HeaderP2WPKHpriv();
+            base58.verify(() -> Base58.decodeChecked("ABCD"), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${8ab7eeea-982b-354f-a34a-b30652ad6565}
@@ -1194,7 +1198,8 @@ public class WalletSapientGeneratedJunit4Test {
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class);
              MockedStatic<KeyChainGroup> keyChainGroup = mockStatic(KeyChainGroup.class);
              MockedStatic<HDKeyDerivation> hDKeyDerivation = mockStatic(HDKeyDerivation.class)) {
-            doReturn(Optional.of(null)).when(masterKeyMock).creationTime();
+            Instant instant = (Instant) Instant.now();
+            doReturn(Optional.of(instant)).when(masterKeyMock).creationTime();
             hDKeyDerivation.when(() -> HDKeyDerivation.deriveChildKey(masterKeyMock, childNumberMock)).thenReturn(deterministicKeyMock);
             doReturn(deterministicKeyMock2).when(deterministicKeyMock).dropParent();
             doNothing().when(deterministicKeyMock2).setCreationTime((Instant) any());
@@ -1353,26 +1358,26 @@ public class WalletSapientGeneratedJunit4Test {
     @Test()
     public void getActiveKeyChainsTest() {
         //Arrange Statement(s)
-        CoinSelector coinSelectorMock = mock(CoinSelector.class);
-        try (MockedStatic<DefaultCoinSelector> defaultCoinSelector = mockStatic(DefaultCoinSelector.class);
-             MockedStatic<AddressParser> addressParser = mockStatic(AddressParser.class);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
-            addressParser.when(() -> AddressParser.getDefault(networkMock)).thenReturn(addressParserMock);
-            defaultCoinSelector.when(() -> DefaultCoinSelector.get(networkMock)).thenReturn(coinSelectorMock);
-            target = new Wallet(networkMock, keyChainGroupMock);
-            autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
-            doReturn(deterministicKeyChainList).when(keyChainGroupMock).getActiveKeyChains((Instant) null);
-            //Act Statement(s)
-            List<DeterministicKeyChain> result = target.getActiveKeyChains();
-            //Assert statement(s)
-            assertThat(result, equalTo(deterministicKeyChainList));
-            networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-            addressParser.verify(() -> AddressParser.getDefault(networkMock), atLeast(1));
-            defaultCoinSelector.verify(() -> DefaultCoinSelector.get(networkMock), atLeast(1));
-            verify(keyChainGroupMock).getActiveKeyChains((Instant) null);
-        }
+        //CoinSelector coinSelectorMock = mock(CoinSelector.class);
+        /*try (MockedStatic<DefaultCoinSelector> defaultCoinSelector = mockStatic(DefaultCoinSelector.class);
+    MockedStatic<AddressParser> addressParser = mockStatic(AddressParser.class);
+    MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+    networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+    addressParser.when(() -> AddressParser.getDefault(networkMock)).thenReturn(addressParserMock);
+    defaultCoinSelector.when(() -> DefaultCoinSelector.get(networkMock)).thenReturn(coinSelectorMock);
+    target = new Wallet(networkMock, keyChainGroupMock);
+    autoCloseableMocks = MockitoAnnotations.openMocks(this);
+    List<DeterministicKeyChain> deterministicKeyChainList = new ArrayList<>();
+    doReturn(deterministicKeyChainList).when(keyChainGroupMock).getActiveKeyChains((Instant) null);
+    //Act Statement(s)
+    List<DeterministicKeyChain> result = target.getActiveKeyChains();
+    //Assert statement(s)
+    assertThat(result, equalTo(deterministicKeyChainList));
+    networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+    addressParser.verify(() -> AddressParser.getDefault(networkMock), atLeast(1));
+    defaultCoinSelector.verify(() -> DefaultCoinSelector.get(networkMock), atLeast(1));
+    verify(keyChainGroupMock).getActiveKeyChains((Instant) null);
+}*/
     }
 
     //Sapient generated method id: ${30b29ed1-c704-3981-a75a-3bb97d54af40}
@@ -1432,28 +1437,28 @@ public class WalletSapientGeneratedJunit4Test {
     @Test()
     public void getTransactionSignersTest() {
         //Arrange Statement(s)
-        //CoinSelector coinSelectorMock = mock(CoinSelector.class);
-        /*try (MockedStatic<DefaultCoinSelector> defaultCoinSelector = mockStatic(DefaultCoinSelector.class);
-    MockedStatic<AddressParser> addressParser = mockStatic(AddressParser.class);
-    MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-    networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
-    addressParser.when(() -> AddressParser.getDefault(networkMock)).thenReturn(addressParserMock);
-    defaultCoinSelector.when(() -> DefaultCoinSelector.get(networkMock)).thenReturn(coinSelectorMock);
-    target = new Wallet(networkMock, keyChainGroupMock);
-    autoCloseableMocks = MockitoAnnotations.openMocks(this);
-    //Act Statement(s)
-    List<TransactionSigner> result = target.getTransactionSigners();
-    LocalTransactionSigner localTransactionSigner = new LocalTransactionSigner();
-    List<TransactionSigner> transactionSignerResultList = new ArrayList<>();
-    transactionSignerResultList.add(localTransactionSigner);
-    //Assert statement(s)
-    assertThat(result.size(), equalTo(transactionSignerResultList.size()));
-    //TODO: Please implement equals method in LocalTransactionSigner for verification to succeed or you need to adjust respective assertion statements
-    assertThat(result, containsInRelativeOrder(transactionSignerResultList.toArray()));
-    networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-    addressParser.verify(() -> AddressParser.getDefault(networkMock), atLeast(1));
-    defaultCoinSelector.verify(() -> DefaultCoinSelector.get(networkMock), atLeast(1));
-}*/
+        CoinSelector coinSelectorMock = mock(CoinSelector.class);
+        try (MockedStatic<DefaultCoinSelector> defaultCoinSelector = mockStatic(DefaultCoinSelector.class);
+             MockedStatic<AddressParser> addressParser = mockStatic(AddressParser.class);
+             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            addressParser.when(() -> AddressParser.getDefault(networkMock)).thenReturn(addressParserMock);
+            defaultCoinSelector.when(() -> DefaultCoinSelector.get(networkMock)).thenReturn(coinSelectorMock);
+            target = new Wallet(networkMock, keyChainGroupMock);
+            autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            //Act Statement(s)
+            List<TransactionSigner> result = target.getTransactionSigners();
+            LocalTransactionSigner localTransactionSigner = new LocalTransactionSigner();
+            List<TransactionSigner> transactionSignerResultList = new ArrayList<>();
+            transactionSignerResultList.add(localTransactionSigner);
+            //Assert statement(s)
+            assertThat(result.size(), equalTo(transactionSignerResultList.size()));
+            //TODO: Please implement equals method in LocalTransactionSigner for verification to succeed or you need to adjust respective assertion statements
+            assertThat(result, containsInRelativeOrder(transactionSignerResultList.toArray()));
+            networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            addressParser.verify(() -> AddressParser.getDefault(networkMock), atLeast(1));
+            defaultCoinSelector.verify(() -> DefaultCoinSelector.get(networkMock), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${a5846529-8a02-3ed8-949d-c4be8b18a341}
@@ -2164,28 +2169,28 @@ public class WalletSapientGeneratedJunit4Test {
          * (key instanceof DeterministicKey) : true  #  inside checkNoDeterministicKeys method
          */
         //Arrange Statement(s)
-        //CoinSelector coinSelectorMock = mock(CoinSelector.class);
-        //DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
-        /*try (MockedStatic<DefaultCoinSelector> defaultCoinSelector = mockStatic(DefaultCoinSelector.class);
-    MockedStatic<AddressParser> addressParser = mockStatic(AddressParser.class);
-    MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-    networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
-    addressParser.when(() -> AddressParser.getDefault(networkMock)).thenReturn(addressParserMock);
-    defaultCoinSelector.when(() -> DefaultCoinSelector.get(networkMock)).thenReturn(coinSelectorMock);
-    target = new Wallet(networkMock, keyChainGroupMock);
-    autoCloseableMocks = MockitoAnnotations.openMocks(this);
-    IllegalArgumentException illegalArgumentException = new IllegalArgumentException("Cannot import HD keys back into the wallet");
-    thrown.expect(IllegalArgumentException.class);
-    thrown.expectMessage(illegalArgumentException.getMessage());
-    List<ECKey> eCKeyList = new ArrayList<>();
-    eCKeyList.add(deterministicKeyMock);
-    //Act Statement(s)
-    target.importKeys(eCKeyList);
-    //Assert statement(s)
-    networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-    addressParser.verify(() -> AddressParser.getDefault(networkMock), atLeast(1));
-    defaultCoinSelector.verify(() -> DefaultCoinSelector.get(networkMock), atLeast(1));
-}*/
+        CoinSelector coinSelectorMock = mock(CoinSelector.class);
+        DeterministicKey deterministicKeyMock = mock(DeterministicKey.class);
+        try (MockedStatic<DefaultCoinSelector> defaultCoinSelector = mockStatic(DefaultCoinSelector.class);
+             MockedStatic<AddressParser> addressParser = mockStatic(AddressParser.class);
+             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            addressParser.when(() -> AddressParser.getDefault(networkMock)).thenReturn(addressParserMock);
+            defaultCoinSelector.when(() -> DefaultCoinSelector.get(networkMock)).thenReturn(coinSelectorMock);
+            target = new Wallet(networkMock, keyChainGroupMock);
+            autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            IllegalArgumentException illegalArgumentException = new IllegalArgumentException("Cannot import HD keys back into the wallet");
+            thrown.expect(IllegalArgumentException.class);
+            thrown.expectMessage(illegalArgumentException.getMessage());
+            List<ECKey> eCKeyList = new ArrayList<>();
+            eCKeyList.add(deterministicKeyMock);
+            //Act Statement(s)
+            target.importKeys(eCKeyList);
+            //Assert statement(s)
+            networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            addressParser.verify(() -> AddressParser.getDefault(networkMock), atLeast(1));
+            defaultCoinSelector.verify(() -> DefaultCoinSelector.get(networkMock), atLeast(1));
+        }
     }
 
     //Sapient generated method id: ${d74639dc-bf6a-3392-b5b6-d14d4b40cc24}
@@ -2200,30 +2205,30 @@ public class WalletSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        //CoinSelector coinSelectorMock = mock(CoinSelector.class);
-        //ECKey eCKeyMock = mock(ECKey.class);
-        /*try (MockedStatic<DefaultCoinSelector> defaultCoinSelector = mockStatic(DefaultCoinSelector.class);
-    MockedStatic<AddressParser> addressParser = mockStatic(AddressParser.class);
-    MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-    networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
-    addressParser.when(() -> AddressParser.getDefault(networkMock)).thenReturn(addressParserMock);
-    defaultCoinSelector.when(() -> DefaultCoinSelector.get(networkMock)).thenReturn(coinSelectorMock);
-    target = spy(new Wallet(networkMock, keyChainGroupMock));
-    autoCloseableMocks = MockitoAnnotations.openMocks(this);
-    List<ECKey> eCKeyList = new ArrayList<>();
-    eCKeyList.add(eCKeyMock);
-    doReturn(0).when(keyChainGroupMock).importKeys(eCKeyList);
-    doNothing().when(target).saveNow();
-    //Act Statement(s)
-    int result = target.importKeys(eCKeyList);
-    //Assert statement(s)
-    assertThat(result, equalTo(0));
-    networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-    addressParser.verify(() -> AddressParser.getDefault(networkMock), atLeast(1));
-    defaultCoinSelector.verify(() -> DefaultCoinSelector.get(networkMock), atLeast(1));
-    verify(keyChainGroupMock).importKeys(eCKeyList);
-    verify(target).saveNow();
-}*/
+        CoinSelector coinSelectorMock = mock(CoinSelector.class);
+        ECKey eCKeyMock = mock(ECKey.class);
+        try (MockedStatic<DefaultCoinSelector> defaultCoinSelector = mockStatic(DefaultCoinSelector.class);
+             MockedStatic<AddressParser> addressParser = mockStatic(AddressParser.class);
+             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
+            addressParser.when(() -> AddressParser.getDefault(networkMock)).thenReturn(addressParserMock);
+            defaultCoinSelector.when(() -> DefaultCoinSelector.get(networkMock)).thenReturn(coinSelectorMock);
+            target = spy(new Wallet(networkMock, keyChainGroupMock));
+            autoCloseableMocks = MockitoAnnotations.openMocks(this);
+            List<ECKey> eCKeyList = new ArrayList<>();
+            eCKeyList.add(eCKeyMock);
+            doReturn(0).when(keyChainGroupMock).importKeys(eCKeyList);
+            doNothing().when(target).saveNow();
+            //Act Statement(s)
+            int result = target.importKeys(eCKeyList);
+            //Assert statement(s)
+            assertThat(result, equalTo(0));
+            networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
+            addressParser.verify(() -> AddressParser.getDefault(networkMock), atLeast(1));
+            defaultCoinSelector.verify(() -> DefaultCoinSelector.get(networkMock), atLeast(1));
+            verify(keyChainGroupMock).importKeys(eCKeyList);
+            verify(target).saveNow();
+        }
     }
 
     //Sapient generated method id: ${92ad1dca-e3c7-3650-a26a-c40d78b3a556}
@@ -2242,18 +2247,18 @@ public class WalletSapientGeneratedJunit4Test {
             target = spy(new Wallet(networkMock, keyChainGroupMock));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doReturn(keyCrypterMock).when(keyChainGroupMock).getKeyCrypter();
-            doReturn(aesKeyMock).when(keyCrypterMock).deriveKey("null");
+            doReturn(aesKeyMock).when(keyCrypterMock).deriveKey("importKeysAndEncrypt_charSequence1");
             List<ECKey> eCKeyList = new ArrayList<>();
             doReturn(0).when(target).importKeysAndEncrypt(eCKeyList, aesKeyMock);
             //Act Statement(s)
-            int result = target.importKeysAndEncrypt(eCKeyList, "null");
+            int result = target.importKeysAndEncrypt(eCKeyList, "importKeysAndEncrypt_charSequence1");
             //Assert statement(s)
             assertThat(result, equalTo(0));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             addressParser.verify(() -> AddressParser.getDefault(networkMock), atLeast(1));
             defaultCoinSelector.verify(() -> DefaultCoinSelector.get(networkMock), atLeast(1));
             verify(keyChainGroupMock, times(2)).getKeyCrypter();
-            verify(keyCrypterMock).deriveKey("null");
+            verify(keyCrypterMock).deriveKey("importKeysAndEncrypt_charSequence1");
             verify(target).importKeysAndEncrypt(eCKeyList, aesKeyMock);
         }
     }
@@ -4872,18 +4877,20 @@ public class WalletSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Wallet walletMock = mock(Wallet.class);
-        WalletProtobufSerializer.WalletFactory walletProtobufSerializerWalletFactoryMock = mock(WalletProtobufSerializer.WalletFactory.class);
+        Wallet walletMock = mock(Wallet.class, "Wallet");
+        WalletProtobufSerializer.WalletFactory walletProtobufSerializerWalletFactoryMock = mock(WalletProtobufSerializer.WalletFactory.class, "factoryValue");
+        WalletExtension walletExtensionMock = mock(WalletExtension.class, "extension1");
+        WalletExtension walletExtensionMock2 = mock(WalletExtension.class, "extension2");
         try (MockedStatic<Wallet> wallet = mockStatic(Wallet.class, CALLS_REAL_METHODS)) {
             FileInputStream fileInputStream = mock(FileInputStream.class);
-            WalletExtension[] walletExtensionArray = new WalletExtension[]{};
-            wallet.when(() -> Wallet.loadFromFileStream(fileInputStream, walletProtobufSerializerWalletFactoryMock, false, false, walletExtensionArray)).thenReturn(walletMock);
+            WalletExtension[] walletExtensionArray = new WalletExtension[]{walletExtensionMock, walletExtensionMock2};
+            wallet.when(() -> Wallet.loadFromFileStream(fileInputStream, walletProtobufSerializerWalletFactoryMock, true, false, walletExtensionArray)).thenReturn(walletMock);
             File file = new File("pathname1");
             //Act Statement(s)
-            Wallet result = Wallet.loadFromFile(file, walletProtobufSerializerWalletFactoryMock, false, false, walletExtensionArray);
+            Wallet result = Wallet.loadFromFile(file, walletProtobufSerializerWalletFactoryMock, true, false, walletExtensionArray);
             //Assert statement(s)
             assertThat(result, equalTo(walletMock));
-            wallet.verify(() -> Wallet.loadFromFileStream(fileInputStream, walletProtobufSerializerWalletFactoryMock, false, false, walletExtensionArray), atLeast(1));
+            wallet.verify(() -> Wallet.loadFromFileStream(fileInputStream, walletProtobufSerializerWalletFactoryMock, true, false, walletExtensionArray), atLeast(1));
         }
     }
 
@@ -4898,17 +4905,17 @@ public class WalletSapientGeneratedJunit4Test {
          */
         //Arrange Statement(s)
         Wallet walletMock = mock(Wallet.class);
-        WalletProtobufSerializer.WalletFactory walletProtobufSerializerWalletFactoryMock = mock(WalletProtobufSerializer.WalletFactory.class, "<WalletProtobufSerializer.WalletFactory object>");
+        WalletProtobufSerializer.WalletFactory walletProtobufSerializerWalletFactoryMock = mock(WalletProtobufSerializer.WalletFactory.class);
         try (MockedStatic<Wallet> wallet = mockStatic(Wallet.class, CALLS_REAL_METHODS)) {
             FileInputStream fileInputStream = mock(FileInputStream.class);
             WalletExtension[] walletExtensionArray = new WalletExtension[]{};
-            wallet.when(() -> Wallet.loadFromFileStream(fileInputStream, walletProtobufSerializerWalletFactoryMock, false, true, walletExtensionArray)).thenReturn(walletMock);
+            wallet.when(() -> Wallet.loadFromFileStream(fileInputStream, walletProtobufSerializerWalletFactoryMock, false, false, walletExtensionArray)).thenReturn(walletMock);
             thrown.expect(Throwable.class);
             File file = new File("pathname1");
             //Act Statement(s)
-            Wallet.loadFromFile(file, walletProtobufSerializerWalletFactoryMock, false, true, walletExtensionArray);
+            Wallet.loadFromFile(file, walletProtobufSerializerWalletFactoryMock, false, false, walletExtensionArray);
             //Assert statement(s)
-            wallet.verify(() -> Wallet.loadFromFileStream(fileInputStream, walletProtobufSerializerWalletFactoryMock, false, true, walletExtensionArray), atLeast(1));
+            wallet.verify(() -> Wallet.loadFromFileStream(fileInputStream, walletProtobufSerializerWalletFactoryMock, false, false, walletExtensionArray), atLeast(1));
         }
     }
 
@@ -4923,21 +4930,22 @@ public class WalletSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Wallet walletMock = mock(Wallet.class);
-        WalletProtobufSerializer.WalletFactory walletProtobufSerializerWalletFactoryMock = mock(WalletProtobufSerializer.WalletFactory.class);
+        Wallet walletMock = mock(Wallet.class, "Wallet");
+        WalletProtobufSerializer.WalletFactory walletProtobufSerializerWalletFactoryMock = mock(WalletProtobufSerializer.WalletFactory.class, "factoryValue");
+        WalletExtension walletExtensionMock = mock(WalletExtension.class, "walletExtensionsValue");
         try (MockedStatic<Wallet> wallet = mockStatic(Wallet.class, CALLS_REAL_METHODS)) {
             FileInputStream fileInputStream = mock(FileInputStream.class);
-            WalletExtension[] walletExtensionArray = new WalletExtension[]{};
-            wallet.when(() -> Wallet.loadFromFileStream(fileInputStream, walletProtobufSerializerWalletFactoryMock, false, false, walletExtensionArray)).thenReturn(walletMock);
+            WalletExtension[] walletExtensionArray = new WalletExtension[]{walletExtensionMock};
+            wallet.when(() -> Wallet.loadFromFileStream(fileInputStream, walletProtobufSerializerWalletFactoryMock, true, false, walletExtensionArray)).thenReturn(walletMock);
             IOException iOException = new IOException();
             UnreadableWalletException unreadableWalletException = new UnreadableWalletException("Could not open file", iOException);
             thrown.expect(UnreadableWalletException.class);
             thrown.expectMessage(unreadableWalletException.getMessage());
             File file = new File("pathname1");
             //Act Statement(s)
-            Wallet.loadFromFile(file, walletProtobufSerializerWalletFactoryMock, false, false, walletExtensionArray);
+            Wallet.loadFromFile(file, walletProtobufSerializerWalletFactoryMock, true, false, walletExtensionArray);
             //Assert statement(s)
-            wallet.verify(() -> Wallet.loadFromFileStream(fileInputStream, walletProtobufSerializerWalletFactoryMock, false, false, walletExtensionArray), atLeast(1));
+            wallet.verify(() -> Wallet.loadFromFileStream(fileInputStream, walletProtobufSerializerWalletFactoryMock, true, false, walletExtensionArray), atLeast(1));
         }
     }
 
@@ -5492,7 +5500,8 @@ public class WalletSapientGeneratedJunit4Test {
             byte[] byteArray = new byte[]{};
             doReturn(byteArray).when(txMock).serialize();
             doReturn(Transaction.Purpose.UNKNOWN).when(txMock).getPurpose();
-            doReturn(Optional.of(null)).when(txMock).updateTime();
+            Instant instant = (Instant) Instant.now();
+            doReturn(Optional.of(instant)).when(txMock).updateTime();
             networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
             addressParser.when(() -> AddressParser.getDefault(networkMock)).thenReturn(addressParserMock);
             defaultCoinSelector.when(() -> DefaultCoinSelector.get(networkMock)).thenReturn(coinSelectorMock);
@@ -5644,6 +5653,7 @@ public class WalletSapientGeneratedJunit4Test {
             EnumSet<WalletTransaction.Pool> walletTransactionPoolSet = EnumSet.noneOf(WalletTransaction.Pool.class);
             doReturn(walletTransactionPoolSet).when(target).getContainingPools(txMock);
             doReturn(coinMock).when(txMock).getValueSentToMe(target);
+            doReturn("return_of_toFriendlyString1").when(coinMock).toFriendlyString();
             doReturn(coinMock2).when(txMock).getValueSentFromMe(target);
             doReturn("return_of_toFriendlyString1").when(coinMock2).toFriendlyString();
             doReturn(true).when(target).isPendingTransactionRelevant(txMock);
@@ -5670,6 +5680,7 @@ public class WalletSapientGeneratedJunit4Test {
             verify(txConfidenceTableMock).getConfidence(txMock);
             verify(target).getContainingPools(txMock);
             verify(txMock).getValueSentToMe(target);
+            verify(coinMock).toFriendlyString();
             verify(txMock).getValueSentFromMe(target);
             verify(coinMock2).toFriendlyString();
             verify(target).isPendingTransactionRelevant(txMock);
@@ -5701,7 +5712,7 @@ public class WalletSapientGeneratedJunit4Test {
         CoinSelector coinSelectorMock = mock(CoinSelector.class);
         Context contextMock = mock(Context.class);
         TxConfidenceTable txConfidenceTableMock = mock(TxConfidenceTable.class);
-        TransactionConfidence transactionConfidenceMock = mock(TransactionConfidence.class);
+        Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
         Coin coinMock = mock(Coin.class);
         Coin coinMock2 = mock(Coin.class);
         MessageSerializer messageSerializerMock = mock(MessageSerializer.class);
@@ -5722,8 +5733,9 @@ public class WalletSapientGeneratedJunit4Test {
             transaction.when(() -> Transaction.verify(networkMock, txMock)).thenAnswer((Answer<Void>) invocation -> null);
             context.when(() -> Context.get()).thenReturn(contextMock);
             doReturn(txConfidenceTableMock).when(contextMock).getConfidenceTable();
-            doReturn(transactionConfidenceMock).when(txConfidenceTableMock).getConfidence(txMock);
-            doReturn(TransactionConfidence.Source.UNKNOWN).when(transactionConfidenceMock).getSource();
+            TransactionConfidence transactionConfidence = new TransactionConfidence(sha256HashMock2);
+            transactionConfidence.setSource(TransactionConfidence.Source.UNKNOWN);
+            doReturn(transactionConfidence).when(txConfidenceTableMock).getConfidence(txMock);
             target = spy(new Wallet(networkMock, keyChainGroupMock));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             EnumSet<WalletTransaction.Pool> walletTransactionPoolSet = EnumSet.noneOf(WalletTransaction.Pool.class);
@@ -5731,6 +5743,7 @@ public class WalletSapientGeneratedJunit4Test {
             doReturn(coinMock).when(txMock).getValueSentToMe(target);
             doReturn("return_of_toFriendlyString1").when(coinMock).toFriendlyString();
             doReturn(coinMock2).when(txMock).getValueSentFromMe(target);
+            doReturn("return_of_toFriendlyString1").when(coinMock2).toFriendlyString();
             doReturn(true).when(target).isPendingTransactionRelevant(txMock);
             List<Transaction> transactionList = new ArrayList<>();
             doReturn(false).when(target).isTransactionRisky(txMock, transactionList);
@@ -5753,11 +5766,11 @@ public class WalletSapientGeneratedJunit4Test {
             context.verify(() -> Context.get(), atLeast(1));
             verify(contextMock).getConfidenceTable();
             verify(txConfidenceTableMock).getConfidence(txMock);
-            verify(transactionConfidenceMock).getSource();
             verify(target).getContainingPools(txMock);
             verify(txMock).getValueSentToMe(target);
             verify(coinMock).toFriendlyString();
             verify(txMock).getValueSentFromMe(target);
+            verify(coinMock2).toFriendlyString();
             verify(target).isPendingTransactionRelevant(txMock);
             verify(target).isTransactionRisky(txMock, transactionList);
             verify(paramsMock).getDefaultSerializer();
@@ -6027,6 +6040,7 @@ public class WalletSapientGeneratedJunit4Test {
             target = new Wallet(networkMock, keyChainGroupMock);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doReturn(coinMock).when(txMock).getValueSentFromMe(target);
+            doReturn(0).when(coinMock).signum();
             doReturn(coinMock2).when(txMock).getValueSentToMe(target);
             doReturn(0).when(coinMock2).signum();
             thrown.expect(IllegalStateException.class);
@@ -6038,6 +6052,7 @@ public class WalletSapientGeneratedJunit4Test {
             defaultCoinSelector.verify(() -> DefaultCoinSelector.get(networkMock), atLeast(1));
             preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
             verify(txMock).getValueSentFromMe(target);
+            verify(coinMock).signum();
             verify(txMock).getValueSentToMe(target);
             verify(coinMock2).signum();
         }
@@ -6181,6 +6196,9 @@ public class WalletSapientGeneratedJunit4Test {
          * (for-each(txPool)) : true
          * (anotherTx.equals(tx)) : false
          * (for-each(anotherTx.getInputs())) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         Transaction txMock = mock(Transaction.class);
@@ -6231,6 +6249,9 @@ public class WalletSapientGeneratedJunit4Test {
          * (for-each(txPool)) : true
          * (anotherTx.equals(tx)) : false
          * (for-each(anotherTx.getInputs())) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
         Transaction txMock = mock(Transaction.class);
@@ -6367,8 +6388,8 @@ public class WalletSapientGeneratedJunit4Test {
         Transaction transactionMock = mock(Transaction.class);
         TransactionOutPoint transactionOutPointMock = mock(TransactionOutPoint.class);
         Sha256Hash sha256HashMock = mock(Sha256Hash.class);
+        Transaction txBMock = mock(Transaction.class);
         CoinSelector coinSelectorMock = mock(CoinSelector.class);
-        Transaction transactionMock2 = mock(Transaction.class);
         try (MockedStatic<DefaultCoinSelector> defaultCoinSelector = mockStatic(DefaultCoinSelector.class);
              MockedStatic<AddressParser> addressParser = mockStatic(AddressParser.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
@@ -6378,17 +6399,19 @@ public class WalletSapientGeneratedJunit4Test {
             transactionInputList.add(transactionInput);
             doReturn(transactionInputList).when(txAMock).getInputs();
             doReturn(sha256HashMock).when(transactionOutPointMock).hash();
+            doReturn(sha256HashMock).when(txBMock).getTxId();
             networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
             addressParser.when(() -> AddressParser.getDefault(networkMock)).thenReturn(addressParserMock);
             defaultCoinSelector.when(() -> DefaultCoinSelector.get(networkMock)).thenReturn(coinSelectorMock);
             target = new Wallet(networkMock, keyChainGroupMock);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
-            boolean result = target.spends(txAMock, transactionMock2);
+            boolean result = target.spends(txAMock, txBMock);
             //Assert statement(s)
             assertThat(result, equalTo(Boolean.TRUE));
             verify(txAMock).getInputs();
             verify(transactionOutPointMock).hash();
+            verify(txBMock).getTxId();
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             addressParser.verify(() -> AddressParser.getDefault(networkMock), atLeast(1));
             defaultCoinSelector.verify(() -> DefaultCoinSelector.get(networkMock), atLeast(1));
@@ -6446,11 +6469,12 @@ public class WalletSapientGeneratedJunit4Test {
          * (newBlockHash.equals(getLastBlockSeenHash())) : true
          */
         //Arrange Statement(s)
-        CoinSelector coinSelectorMock = mock(CoinSelector.class);
         Block blockMock = mock(Block.class);
+        CoinSelector coinSelectorMock = mock(CoinSelector.class);
         try (MockedStatic<DefaultCoinSelector> defaultCoinSelector = mockStatic(DefaultCoinSelector.class);
              MockedStatic<AddressParser> addressParser = mockStatic(AddressParser.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            doReturn(null).when(blockMock).getHash();
             networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
             addressParser.when(() -> AddressParser.getDefault(networkMock)).thenReturn(addressParserMock);
             defaultCoinSelector.when(() -> DefaultCoinSelector.get(networkMock)).thenReturn(coinSelectorMock);
@@ -6460,6 +6484,7 @@ public class WalletSapientGeneratedJunit4Test {
             //Act Statement(s)
             target.notifyNewBestBlock(storedBlock);
             //Assert statement(s)
+            verify(blockMock).getHash();
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             addressParser.verify(() -> AddressParser.getDefault(networkMock), atLeast(1));
             defaultCoinSelector.verify(() -> DefaultCoinSelector.get(networkMock), atLeast(1));
@@ -6625,6 +6650,7 @@ public class WalletSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         Transaction txMock = mock(Transaction.class);
         Sha256Hash sha256HashMock = mock(Sha256Hash.class);
+        Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
         TransactionOutput transactionOutputMock = mock(TransactionOutput.class);
         Coin coinMock = mock(Coin.class);
         CoinSelector coinSelectorMock = mock(CoinSelector.class);
@@ -6634,7 +6660,7 @@ public class WalletSapientGeneratedJunit4Test {
              MockedStatic<DefaultCoinSelector> defaultCoinSelector = mockStatic(DefaultCoinSelector.class);
              MockedStatic<AddressParser> addressParser = mockStatic(AddressParser.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            doReturn(sha256HashMock).when(txMock).getTxId();
+            doReturn(sha256HashMock, sha256HashMock2).when(txMock).getTxId();
             doNothing().when(txMock).setUpdateTime((Instant) any());
             List<TransactionOutput> transactionOutputList = new ArrayList<>();
             transactionOutputList.add(transactionOutputMock);
@@ -6654,7 +6680,7 @@ public class WalletSapientGeneratedJunit4Test {
             //Act Statement(s)
             target.maybeCommitTx(txMock);
             //Assert statement(s)
-            verify(txMock).getTxId();
+            verify(txMock, times(2)).getTxId();
             verify(txMock).setUpdateTime((Instant) any());
             verify(txMock).getOutputs();
             verify(transactionOutputMock).getValue();
@@ -9158,7 +9184,7 @@ public class WalletSapientGeneratedJunit4Test {
             //Act Statement(s)
             Transaction result = target.sendCoinsOffline(sendRequest);
             //Assert statement(s)
-            assertThat(result, is(notNullValue()));
+            assertThat(result, equalTo(transactionMock2));
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             addressParser.verify(() -> AddressParser.getDefault(networkMock), atLeast(1));
             defaultCoinSelector.verify(() -> DefaultCoinSelector.get(networkMock), atLeast(1));
@@ -9546,40 +9572,27 @@ public class WalletSapientGeneratedJunit4Test {
     public void connectInputsWhenDefaultBranch2() {
         /* Branches:
          * (branch expression (line 4708)) : false
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
-        TransactionOutPoint transactionOutPoint = null;
         //Arrange Statement(s)
-        TransactionOutput utxoMock = mock(TransactionOutput.class, "[1, 2, 3]");
+        TransactionOutput utxoMock = mock(TransactionOutput.class);
         TransactionOutPoint transactionOutPointMock = mock(TransactionOutPoint.class);
-        doReturn(transactionOutPointMock, transactionOutPoint, transactionOutPoint).when(utxoMock).getOutPointFor();
-        TransactionOutput utxoMock2 = mock(TransactionOutput.class, "[4, 5, 6]");
-        doReturn(null).when(utxoMock2).getOutPointFor();
-        TransactionOutput utxoMock3 = mock(TransactionOutput.class, "[7, 8, 9]");
-        doReturn(null).when(utxoMock3).getOutPointFor();
-        TransactionInput inMock = mock(TransactionInput.class, "[1, 2, 3]");
-        doReturn(null).when(inMock).getOutpoint();
-        TransactionInput inMock2 = mock(TransactionInput.class, "[4, 5, 6]");
-        doReturn(null).when(inMock2).getOutpoint();
-        TransactionInput inMock3 = mock(TransactionInput.class, "[10, 11, 12]");
-        doReturn(null).when(inMock3).getOutpoint();
-        thrown.expect(NullPointerException.class);
+        doReturn(transactionOutPointMock).when(utxoMock).getOutPointFor();
         List<TransactionOutput> transactionOutputList = new ArrayList<>();
         transactionOutputList.add(utxoMock);
-        transactionOutputList.add(utxoMock2);
-        transactionOutputList.add(utxoMock3);
+        Transaction transactionMock = mock(Transaction.class);
+        byte[] byteArray = new byte[]{};
+        TransactionOutPoint transactionOutPointMock2 = mock(TransactionOutPoint.class);
+        TransactionInput transactionInput = new TransactionInput(transactionMock, byteArray, transactionOutPointMock2);
         List<TransactionInput> transactionInputList = new ArrayList<>();
-        transactionInputList.add(inMock);
-        transactionInputList.add(inMock2);
-        transactionInputList.add(inMock3);
+        transactionInputList.add(transactionInput);
         //Act Statement(s)
-        Wallet.connectInputs(transactionOutputList, transactionInputList);
+        List<TransactionInput> result = Wallet.connectInputs(transactionOutputList, transactionInputList);
         //Assert statement(s)
-        verify(utxoMock, times(3)).getOutPointFor();
-        verify(utxoMock2, times(3)).getOutPointFor();
-        verify(utxoMock3, times(3)).getOutPointFor();
-        verify(inMock, times(3)).getOutpoint();
-        verify(inMock2, times(3)).getOutpoint();
-        verify(inMock3, times(3)).getOutpoint();
+        assertThat(result.size(), equalTo(0));
+        verify(utxoMock).getOutPointFor();
     }
 
     //Sapient generated method id: ${25ab0566-ae04-3642-a2cd-01f8318c3ab3}
@@ -9687,6 +9700,9 @@ public class WalletSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         AesKey aesKeyMock = mock(AesKey.class);
         Transaction transactionMock = mock(Transaction.class);
+        TransactionInput transactionInputMock = mock(TransactionInput.class);
+        TransactionOutput transactionOutputMock = mock(TransactionOutput.class);
+        TransactionInput transactionInputMock2 = mock(TransactionInput.class);
         CoinSelector coinSelectorMock = mock(CoinSelector.class);
         try (MockedStatic<DefaultCoinSelector> defaultCoinSelector = mockStatic(DefaultCoinSelector.class);
              MockedStatic<AddressParser> addressParser = mockStatic(AddressParser.class);
@@ -9694,6 +9710,14 @@ public class WalletSapientGeneratedJunit4Test {
             SendRequest sendRequest = SendRequest.forTx(transactionMock);
             sendRequest.aesKey = aesKeyMock;
             sendRequest.missingSigsMode = Wallet.MissingSigsMode.USE_OP_ZERO;
+            List<TransactionInput> transactionInputList = new ArrayList<>();
+            transactionInputList.add(transactionInputMock);
+            doReturn(transactionInputList).when(transactionMock).getInputs();
+            List<TransactionOutput> transactionOutputList = new ArrayList<>();
+            transactionOutputList.add(transactionOutputMock);
+            doReturn(transactionOutputList).when(transactionMock).getOutputs();
+            doReturn(transactionInputMock2).when(transactionMock).getInput(0L);
+            doReturn(null).when(transactionInputMock2).getConnectedOutput();
             networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
             addressParser.when(() -> AddressParser.getDefault(networkMock)).thenReturn(addressParserMock);
             defaultCoinSelector.when(() -> DefaultCoinSelector.get(networkMock)).thenReturn(coinSelectorMock);
@@ -9702,6 +9726,10 @@ public class WalletSapientGeneratedJunit4Test {
             //Act Statement(s)
             target.signTransaction(sendRequest);
             //Assert statement(s)
+            verify(transactionMock, times(2)).getInputs();
+            verify(transactionMock).getOutputs();
+            verify(transactionMock).getInput(0L);
+            verify(transactionInputMock2).getConnectedOutput();
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             addressParser.verify(() -> AddressParser.getDefault(networkMock), atLeast(1));
             defaultCoinSelector.verify(() -> DefaultCoinSelector.get(networkMock), atLeast(1));
@@ -9730,124 +9758,67 @@ public class WalletSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         AesKey aesKeyMock = mock(AesKey.class);
         Transaction transactionMock = mock(Transaction.class);
-        CoinSelector coinSelectorMock = mock(CoinSelector.class);
-        try (MockedStatic<DefaultCoinSelector> defaultCoinSelector = mockStatic(DefaultCoinSelector.class);
-             MockedStatic<AddressParser> addressParser = mockStatic(AddressParser.class);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            SendRequest sendRequest = SendRequest.forTx(transactionMock);
-            sendRequest.aesKey = aesKeyMock;
-            sendRequest.missingSigsMode = Wallet.MissingSigsMode.USE_OP_ZERO;
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
-            addressParser.when(() -> AddressParser.getDefault(networkMock)).thenReturn(addressParserMock);
-            defaultCoinSelector.when(() -> DefaultCoinSelector.get(networkMock)).thenReturn(coinSelectorMock);
-            target = new Wallet(networkMock, keyChainGroupMock);
-            autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            //Act Statement(s)
-            target.signTransaction(sendRequest);
-            //Assert statement(s)
-            networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-            addressParser.verify(() -> AddressParser.getDefault(networkMock), atLeast(1));
-            defaultCoinSelector.verify(() -> DefaultCoinSelector.get(networkMock), atLeast(1));
-        }
-    }
-
-    //Sapient generated method id: ${85f80e20-dcc9-3e05-87b1-adec1b3dd9ff}
-    @Ignore()
-    @Test()
-    public void signTransactionWhenSignersIsNotEmptyAndSignerSignInputsProposalMaybeDecryptingKeyBag() throws BadWalletEncryptionKeyException, ScriptException {
-        /* Branches:
-         * (inputs.size() > 0) : true
-         * (outputs.size() > 0) : true
-         * (i < numInputs) : true
-         * (connectedOutput == null) : false
-         * (for-each(signers)) : true
-         * (!signer.signInputs(proposal, maybeDecryptingKeyBag)) : false
-         *
-         * TODO: Help needed! This method is not unit testable!
-         *  Following variables could not be isolated/mocked: org.bitcoinj.signers.MissingSigResolutionSigner, signer
-         *  Suggestions:
-         *  You can change the initialization of above variables and make it injectable or
-         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        AesKey aesKeyMock = mock(AesKey.class);
-        Transaction transactionMock = mock(Transaction.class);
-        CoinSelector coinSelectorMock = mock(CoinSelector.class);
-        try (MockedStatic<DefaultCoinSelector> defaultCoinSelector = mockStatic(DefaultCoinSelector.class);
-             MockedStatic<AddressParser> addressParser = mockStatic(AddressParser.class);
-             MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
-            SendRequest sendRequest = SendRequest.forTx(transactionMock);
-            sendRequest.aesKey = aesKeyMock;
-            sendRequest.missingSigsMode = Wallet.MissingSigsMode.USE_OP_ZERO;
-            networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
-            addressParser.when(() -> AddressParser.getDefault(networkMock)).thenReturn(addressParserMock);
-            defaultCoinSelector.when(() -> DefaultCoinSelector.get(networkMock)).thenReturn(coinSelectorMock);
-            target = new Wallet(networkMock, keyChainGroupMock);
-            autoCloseableMocks = MockitoAnnotations.openMocks(this);
-            //Act Statement(s)
-            target.signTransaction(sendRequest);
-            //Assert statement(s)
-            networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
-            addressParser.verify(() -> AddressParser.getDefault(networkMock), atLeast(1));
-            defaultCoinSelector.verify(() -> DefaultCoinSelector.get(networkMock), atLeast(1));
-        }
-    }
-
-    //Sapient generated method id: ${a1c37fbf-a449-3e04-bcda-f28ac3475514}
-    @Ignore()
-    @Test()
-    public void signTransactionWhenConnectedOutputIsNullAndCaughtScriptExceptionAndSignersIsNotEmptyAndSignerNotSignInputsProposalMaybe() throws BadWalletEncryptionKeyException {
-        /* Branches:
-         * (inputs.size() > 0) : true
-         * (outputs.size() > 0) : true
-         * (i < numInputs) : true
-         * (connectedOutput == null) : true
-         * (catch-exception (ScriptException)) : true
-         * (for-each(signers)) : true
-         * (!signer.signInputs(proposal, maybeDecryptingKeyBag)) : true
-         *
-         * TODO: Help needed! This method is not unit testable!
-         *  Following variables could not be isolated/mocked: org.bitcoinj.signers.MissingSigResolutionSigner, signer
-         *  Suggestions:
-         *  You can change the initialization of above variables and make it injectable or
-         *  adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        AesKey aesKeyMock = mock(AesKey.class);
-        Transaction transactionMock = mock(Transaction.class);
-        TransactionOutput transactionOutputMock = mock(TransactionOutput.class);
         TransactionInput transactionInputMock = mock(TransactionInput.class);
+        TransactionOutput transactionOutputMock = mock(TransactionOutput.class);
+        TransactionInput transactionInputMock2 = mock(TransactionInput.class);
+        TransactionOutput transactionOutputMock2 = mock(TransactionOutput.class);
+        Script scriptMock = mock(Script.class);
+        Coin coinMock = mock(Coin.class);
+        Script scriptMock2 = mock(Script.class);
+        Script scriptMock3 = mock(Script.class);
+        TransactionWitness transactionWitnessMock = mock(TransactionWitness.class);
         CoinSelector coinSelectorMock = mock(CoinSelector.class);
-        try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class);
-             MockedStatic<DefaultCoinSelector> defaultCoinSelector = mockStatic(DefaultCoinSelector.class);
+        try (MockedStatic<DefaultCoinSelector> defaultCoinSelector = mockStatic(DefaultCoinSelector.class);
              MockedStatic<AddressParser> addressParser = mockStatic(AddressParser.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
             SendRequest sendRequest = SendRequest.forTx(transactionMock);
             sendRequest.aesKey = aesKeyMock;
             sendRequest.missingSigsMode = Wallet.MissingSigsMode.USE_OP_ZERO;
+            List<TransactionInput> transactionInputList = new ArrayList<>();
+            transactionInputList.add(transactionInputMock);
+            doReturn(transactionInputList).when(transactionMock).getInputs();
             List<TransactionOutput> transactionOutputList = new ArrayList<>();
             transactionOutputList.add(transactionOutputMock);
             doReturn(transactionOutputList).when(transactionMock).getOutputs();
-            doReturn(transactionInputMock).when(transactionMock).getInput(0L);
-            doReturn(null).when(transactionInputMock).getConnectedOutput();
+            doReturn(transactionInputMock2).when(transactionMock).getInput(0L);
+            doReturn(transactionOutputMock2).when(transactionInputMock2).getConnectedOutput();
+            doReturn(coinMock).when(transactionOutputMock2).getValue();
+            doReturn(scriptMock, scriptMock2).when(transactionOutputMock2).getScriptPubKey();
+            doReturn(scriptMock3).when(transactionInputMock2).getScriptSig();
+            EnumSet<Script.VerifyFlag> scriptVerifyFlagSet = EnumSet.noneOf(Script.VerifyFlag.class);
+            scriptVerifyFlagSet.add(Script.VerifyFlag.P2SH);
+            scriptVerifyFlagSet.add(Script.VerifyFlag.STRICTENC);
+            scriptVerifyFlagSet.add(Script.VerifyFlag.DERSIG);
+            scriptVerifyFlagSet.add(Script.VerifyFlag.LOW_S);
+            scriptVerifyFlagSet.add(Script.VerifyFlag.NULLDUMMY);
+            scriptVerifyFlagSet.add(Script.VerifyFlag.SIGPUSHONLY);
+            scriptVerifyFlagSet.add(Script.VerifyFlag.MINIMALDATA);
+            scriptVerifyFlagSet.add(Script.VerifyFlag.DISCOURAGE_UPGRADABLE_NOPS);
+            scriptVerifyFlagSet.add(Script.VerifyFlag.CLEANSTACK);
+            scriptVerifyFlagSet.add(Script.VerifyFlag.CHECKLOCKTIMEVERIFY);
+            scriptVerifyFlagSet.add(Script.VerifyFlag.CHECKSEQUENCEVERIFY);
+            doNothing().when(scriptMock3).correctlySpends(transactionMock, 0, transactionWitnessMock, coinMock, scriptMock2, scriptVerifyFlagSet);
+            doReturn(transactionWitnessMock).when(transactionInputMock2).getWitness();
             networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
             addressParser.when(() -> AddressParser.getDefault(networkMock)).thenReturn(addressParserMock);
             defaultCoinSelector.when(() -> DefaultCoinSelector.get(networkMock)).thenReturn(coinSelectorMock);
-            preconditions.when(() -> Preconditions.checkState(true)).thenAnswer((Answer<Void>) invocation -> null);
             target = new Wallet(networkMock, keyChainGroupMock);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             //Act Statement(s)
             target.signTransaction(sendRequest);
             //Assert statement(s)
+            verify(transactionMock, times(2)).getInputs();
             verify(transactionMock).getOutputs();
             verify(transactionMock).getInput(0L);
-            verify(transactionInputMock).getConnectedOutput();
+            verify(transactionInputMock2).getConnectedOutput();
+            verify(transactionOutputMock2, times(2)).getScriptPubKey();
+            verify(transactionOutputMock2).getValue();
+            verify(transactionInputMock2).getScriptSig();
+            verify(scriptMock3).correctlySpends(transactionMock, 0, transactionWitnessMock, coinMock, scriptMock2, scriptVerifyFlagSet);
+            verify(transactionInputMock2).getWitness();
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             addressParser.verify(() -> AddressParser.getDefault(networkMock), atLeast(1));
             defaultCoinSelector.verify(() -> DefaultCoinSelector.get(networkMock), atLeast(1));
-            preconditions.verify(() -> Preconditions.checkState(true), atLeast(1));
         }
     }
 
@@ -9934,6 +9905,18 @@ public class WalletSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         AesKey aesKeyMock = mock(AesKey.class);
         Transaction transactionMock = mock(Transaction.class);
+        TransactionInput transactionInputMock = mock(TransactionInput.class);
+        TransactionOutput transactionOutputMock = mock(TransactionOutput.class);
+        TransactionInput transactionInputMock2 = mock(TransactionInput.class);
+        TransactionOutput transactionOutputMock2 = mock(TransactionOutput.class);
+        Script scriptMock = mock(Script.class);
+        Script scriptMock2 = mock(Script.class);
+        ECKey eCKeyMock = mock(ECKey.class);
+        Script scriptMock3 = mock(Script.class);
+        Coin coinMock = mock(Coin.class);
+        Script scriptMock4 = mock(Script.class);
+        Script scriptMock5 = mock(Script.class);
+        TransactionWitness transactionWitnessMock = mock(TransactionWitness.class);
         CoinSelector coinSelectorMock = mock(CoinSelector.class);
         try (MockedStatic<DefaultCoinSelector> defaultCoinSelector = mockStatic(DefaultCoinSelector.class);
              MockedStatic<AddressParser> addressParser = mockStatic(AddressParser.class);
@@ -9941,6 +9924,37 @@ public class WalletSapientGeneratedJunit4Test {
             SendRequest sendRequest = SendRequest.forTx(transactionMock);
             sendRequest.aesKey = aesKeyMock;
             sendRequest.missingSigsMode = Wallet.MissingSigsMode.USE_OP_ZERO;
+            List<TransactionInput> transactionInputList = new ArrayList<>();
+            transactionInputList.add(transactionInputMock);
+            doReturn(transactionInputList).when(transactionMock).getInputs();
+            List<TransactionOutput> transactionOutputList = new ArrayList<>();
+            transactionOutputList.add(transactionOutputMock);
+            doReturn(transactionOutputList).when(transactionMock).getOutputs();
+            doReturn(transactionInputMock2).when(transactionMock).getInput(0L);
+            doReturn(transactionOutputMock2).when(transactionInputMock2).getConnectedOutput();
+            doReturn(scriptMock2).when(scriptMock).createEmptyInputScript(eCKeyMock, scriptMock3);
+            doReturn(coinMock).when(transactionOutputMock2).getValue();
+            doReturn(scriptMock, scriptMock4).when(transactionOutputMock2).getScriptPubKey();
+            doReturn(scriptMock5).when(transactionInputMock2).getScriptSig();
+            EnumSet<Script.VerifyFlag> scriptVerifyFlagSet = EnumSet.noneOf(Script.VerifyFlag.class);
+            scriptVerifyFlagSet.add(Script.VerifyFlag.P2SH);
+            scriptVerifyFlagSet.add(Script.VerifyFlag.STRICTENC);
+            scriptVerifyFlagSet.add(Script.VerifyFlag.DERSIG);
+            scriptVerifyFlagSet.add(Script.VerifyFlag.LOW_S);
+            scriptVerifyFlagSet.add(Script.VerifyFlag.NULLDUMMY);
+            scriptVerifyFlagSet.add(Script.VerifyFlag.SIGPUSHONLY);
+            scriptVerifyFlagSet.add(Script.VerifyFlag.MINIMALDATA);
+            scriptVerifyFlagSet.add(Script.VerifyFlag.DISCOURAGE_UPGRADABLE_NOPS);
+            scriptVerifyFlagSet.add(Script.VerifyFlag.CLEANSTACK);
+            scriptVerifyFlagSet.add(Script.VerifyFlag.CHECKLOCKTIMEVERIFY);
+            scriptVerifyFlagSet.add(Script.VerifyFlag.CHECKSEQUENCEVERIFY);
+            doNothing().when(scriptMock5).correctlySpends(transactionMock, 0, transactionWitnessMock, coinMock, scriptMock4, scriptVerifyFlagSet);
+            doReturn(transactionWitnessMock).when(transactionInputMock2).getWitness();
+            List list = new ArrayList<>();
+            list.add(eCKeyMock);
+            RedeemData redeemData = RedeemData.of(list, scriptMock3);
+            doReturn(redeemData).when(transactionInputMock2).getConnectedRedeemData((DecryptingKeyBag) any());
+            doNothing().when(transactionInputMock2).setScriptSig(scriptMock2);
             networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
             addressParser.when(() -> AddressParser.getDefault(networkMock)).thenReturn(addressParserMock);
             defaultCoinSelector.when(() -> DefaultCoinSelector.get(networkMock)).thenReturn(coinSelectorMock);
@@ -9949,6 +9963,18 @@ public class WalletSapientGeneratedJunit4Test {
             //Act Statement(s)
             target.signTransaction(sendRequest);
             //Assert statement(s)
+            verify(transactionMock, times(2)).getInputs();
+            verify(transactionMock).getOutputs();
+            verify(transactionMock).getInput(0L);
+            verify(transactionInputMock2).getConnectedOutput();
+            verify(transactionOutputMock2, times(2)).getScriptPubKey();
+            verify(scriptMock).createEmptyInputScript(eCKeyMock, scriptMock3);
+            verify(transactionOutputMock2).getValue();
+            verify(transactionInputMock2).getScriptSig();
+            verify(scriptMock5).correctlySpends(transactionMock, 0, transactionWitnessMock, coinMock, scriptMock4, scriptVerifyFlagSet);
+            verify(transactionInputMock2).getWitness();
+            verify(transactionInputMock2).getConnectedRedeemData((DecryptingKeyBag) any());
+            verify(transactionInputMock2).setScriptSig(scriptMock2);
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             addressParser.verify(() -> AddressParser.getDefault(networkMock), atLeast(1));
             defaultCoinSelector.verify(() -> DefaultCoinSelector.get(networkMock), atLeast(1));
@@ -9978,6 +10004,15 @@ public class WalletSapientGeneratedJunit4Test {
         //Arrange Statement(s)
         AesKey aesKeyMock = mock(AesKey.class);
         Transaction transactionMock = mock(Transaction.class);
+        TransactionInput transactionInputMock = mock(TransactionInput.class);
+        TransactionOutput transactionOutputMock = mock(TransactionOutput.class);
+        TransactionInput transactionInputMock2 = mock(TransactionInput.class);
+        TransactionOutput transactionOutputMock2 = mock(TransactionOutput.class);
+        Script scriptMock = mock(Script.class);
+        Coin coinMock = mock(Coin.class);
+        Script scriptMock2 = mock(Script.class);
+        Script scriptMock3 = mock(Script.class);
+        TransactionWitness transactionWitnessMock = mock(TransactionWitness.class);
         CoinSelector coinSelectorMock = mock(CoinSelector.class);
         try (MockedStatic<DefaultCoinSelector> defaultCoinSelector = mockStatic(DefaultCoinSelector.class);
              MockedStatic<AddressParser> addressParser = mockStatic(AddressParser.class);
@@ -9985,6 +10020,31 @@ public class WalletSapientGeneratedJunit4Test {
             SendRequest sendRequest = SendRequest.forTx(transactionMock);
             sendRequest.aesKey = aesKeyMock;
             sendRequest.missingSigsMode = Wallet.MissingSigsMode.USE_OP_ZERO;
+            List<TransactionInput> transactionInputList = new ArrayList<>();
+            transactionInputList.add(transactionInputMock);
+            doReturn(transactionInputList).when(transactionMock).getInputs();
+            List<TransactionOutput> transactionOutputList = new ArrayList<>();
+            transactionOutputList.add(transactionOutputMock);
+            doReturn(transactionOutputList).when(transactionMock).getOutputs();
+            doReturn(transactionInputMock2).when(transactionMock).getInput(0L);
+            doReturn(transactionOutputMock2).when(transactionInputMock2).getConnectedOutput();
+            doReturn(coinMock).when(transactionOutputMock2).getValue();
+            doReturn(scriptMock, scriptMock2).when(transactionOutputMock2).getScriptPubKey();
+            doReturn(scriptMock3).when(transactionInputMock2).getScriptSig();
+            EnumSet<Script.VerifyFlag> scriptVerifyFlagSet = EnumSet.noneOf(Script.VerifyFlag.class);
+            scriptVerifyFlagSet.add(Script.VerifyFlag.P2SH);
+            scriptVerifyFlagSet.add(Script.VerifyFlag.STRICTENC);
+            scriptVerifyFlagSet.add(Script.VerifyFlag.DERSIG);
+            scriptVerifyFlagSet.add(Script.VerifyFlag.LOW_S);
+            scriptVerifyFlagSet.add(Script.VerifyFlag.NULLDUMMY);
+            scriptVerifyFlagSet.add(Script.VerifyFlag.SIGPUSHONLY);
+            scriptVerifyFlagSet.add(Script.VerifyFlag.MINIMALDATA);
+            scriptVerifyFlagSet.add(Script.VerifyFlag.DISCOURAGE_UPGRADABLE_NOPS);
+            scriptVerifyFlagSet.add(Script.VerifyFlag.CLEANSTACK);
+            scriptVerifyFlagSet.add(Script.VerifyFlag.CHECKLOCKTIMEVERIFY);
+            scriptVerifyFlagSet.add(Script.VerifyFlag.CHECKSEQUENCEVERIFY);
+            doNothing().when(scriptMock3).correctlySpends(transactionMock, 0, transactionWitnessMock, coinMock, scriptMock2, scriptVerifyFlagSet);
+            doReturn(transactionWitnessMock).when(transactionInputMock2).getWitness();
             networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
             addressParser.when(() -> AddressParser.getDefault(networkMock)).thenReturn(addressParserMock);
             defaultCoinSelector.when(() -> DefaultCoinSelector.get(networkMock)).thenReturn(coinSelectorMock);
@@ -9994,6 +10054,15 @@ public class WalletSapientGeneratedJunit4Test {
             //Act Statement(s)
             target.signTransaction(sendRequest);
             //Assert statement(s)
+            verify(transactionMock, times(2)).getInputs();
+            verify(transactionMock).getOutputs();
+            verify(transactionMock).getInput(0L);
+            verify(transactionInputMock2).getConnectedOutput();
+            verify(transactionOutputMock2, times(2)).getScriptPubKey();
+            verify(transactionOutputMock2).getValue();
+            verify(transactionInputMock2).getScriptSig();
+            verify(scriptMock3).correctlySpends(transactionMock, 0, transactionWitnessMock, coinMock, scriptMock2, scriptVerifyFlagSet);
+            verify(transactionInputMock2).getWitness();
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             addressParser.verify(() -> AddressParser.getDefault(networkMock), atLeast(1));
             defaultCoinSelector.verify(() -> DefaultCoinSelector.get(networkMock), atLeast(1));
@@ -10795,6 +10864,7 @@ public class WalletSapientGeneratedJunit4Test {
         try (MockedStatic<DefaultCoinSelector> defaultCoinSelector = mockStatic(DefaultCoinSelector.class);
              MockedStatic<AddressParser> addressParser = mockStatic(AddressParser.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            doReturn("return_of_getHashAsString1").when(blockMock).getHashAsString();
             doReturn(sha256HashMock).when(blockMock).getHash();
             doReturn("return_of_getHashAsString1").when(blockMock2).getHashAsString();
             networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
@@ -10818,6 +10888,7 @@ public class WalletSapientGeneratedJunit4Test {
             //Act Statement(s)
             target.reorganize(storedBlockMock, storedBlockList, storedBlockList2);
             //Assert statement(s)
+            verify(blockMock).getHashAsString();
             verify(blockMock).getHash();
             verify(blockMock2).getHashAsString();
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
@@ -10853,24 +10924,27 @@ public class WalletSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
+        Block blockMock = mock(Block.class);
+        Sha256Hash sha256HashMock = mock(Sha256Hash.class);
         CoinSelector coinSelectorMock = mock(CoinSelector.class);
         Transaction txMock = mock(Transaction.class);
-        Sha256Hash sha256HashMock = mock(Sha256Hash.class);
-        Block blockMock = mock(Block.class);
+        Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class, CALLS_REAL_METHODS);
              MockedStatic<DefaultCoinSelector> defaultCoinSelector = mockStatic(DefaultCoinSelector.class);
              MockedStatic<AddressParser> addressParser = mockStatic(AddressParser.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            doReturn(sha256HashMock).when(blockMock).getHash();
             networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
             addressParser.when(() -> AddressParser.getDefault(networkMock)).thenReturn(addressParserMock);
             defaultCoinSelector.when(() -> DefaultCoinSelector.get(networkMock)).thenReturn(coinSelectorMock);
+            preconditions.when(() -> Preconditions.checkState(true)).thenAnswer((Answer<Void>) invocation -> null);
             IllegalStateException illegalStateException = new IllegalStateException();
             preconditions.when(() -> Preconditions.checkState(false)).thenThrow(illegalStateException);
             target = spy(new Wallet(networkMock, keyChainGroupMock));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             Set<Transaction> transactionSet = new HashSet<>();
             doReturn(transactionSet).when(target).getTransactions(true);
-            doReturn(sha256HashMock).when(txMock).getTxId();
+            doReturn(sha256HashMock2).when(txMock).getTxId();
             thrown.expect(IllegalStateException.class);
             StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), 0);
             List<StoredBlock> storedBlockList = new ArrayList<>();
@@ -10878,9 +10952,11 @@ public class WalletSapientGeneratedJunit4Test {
             //Act Statement(s)
             target.reorganize(storedBlock, storedBlockList, storedBlockList2);
             //Assert statement(s)
+            verify(blockMock, atLeast(1)).getHash();
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             addressParser.verify(() -> AddressParser.getDefault(networkMock), atLeast(1));
             defaultCoinSelector.verify(() -> DefaultCoinSelector.get(networkMock), atLeast(1));
+            preconditions.verify(() -> Preconditions.checkState(true), atLeast(1));
             preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
             verify(target, atLeast(1)).getTransactions(true);
             verify(txMock, atLeast(1)).getTxId();
@@ -10912,48 +10988,53 @@ public class WalletSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        CoinSelector coinSelectorMock = mock(CoinSelector.class);
         Block blockMock = mock(Block.class);
         Sha256Hash sha256HashMock = mock(Sha256Hash.class);
-        Coin coinMock = mock(Coin.class);
+        CoinSelector coinSelectorMock = mock(CoinSelector.class);
         Block blockMock2 = mock(Block.class);
+        Sha256Hash sha256HashMock2 = mock(Sha256Hash.class);
+        Coin coinMock = mock(Coin.class);
         try (MockedStatic<Preconditions> preconditions = mockStatic(Preconditions.class, CALLS_REAL_METHODS);
              MockedStatic<DefaultCoinSelector> defaultCoinSelector = mockStatic(DefaultCoinSelector.class);
              MockedStatic<AddressParser> addressParser = mockStatic(AddressParser.class);
              MockedStatic<NetworkParameters> networkParameters = mockStatic(NetworkParameters.class)) {
+            doReturn(sha256HashMock).when(blockMock).getHash();
             networkParameters.when(() -> NetworkParameters.of(networkMock)).thenReturn(paramsMock);
             addressParser.when(() -> AddressParser.getDefault(networkMock)).thenReturn(addressParserMock);
             defaultCoinSelector.when(() -> DefaultCoinSelector.get(networkMock)).thenReturn(coinSelectorMock);
+            preconditions.when(() -> Preconditions.checkState(true)).thenAnswer((Answer<Void>) invocation -> null);
             IllegalStateException illegalStateException = new IllegalStateException();
             preconditions.when(() -> Preconditions.checkState(false)).thenThrow(illegalStateException);
             target = spy(new Wallet(networkMock, keyChainGroupMock));
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             Set<Transaction> transactionSet = new HashSet<>();
             doReturn(transactionSet).when(target).getTransactions(true);
-            StoredBlock storedBlock = new StoredBlock(blockMock, new BigInteger("0"), 0);
+            StoredBlock storedBlock = new StoredBlock(blockMock2, new BigInteger("0"), 0);
             doNothing().when(target).notifyNewBestBlock(storedBlock);
-            doReturn("return_of_getHashAsString1").when(blockMock).getHashAsString();
-            doReturn(sha256HashMock).when(blockMock).getHash();
+            doReturn("return_of_getHashAsString1").when(blockMock2).getHashAsString();
+            doReturn(sha256HashMock2).when(blockMock2).getHash();
             doNothing().when(target).isConsistentOrThrow();
             doReturn(coinMock).when(target).getBalance();
             doReturn("return_of_toFriendlyString1").when(coinMock).toFriendlyString();
             doNothing().when(target).queueOnReorganize();
             doNothing().when(target).maybeQueueOnWalletChanged();
             thrown.expect(IllegalStateException.class);
-            StoredBlock storedBlock2 = new StoredBlock(blockMock2, new BigInteger("0"), 0);
+            StoredBlock storedBlock2 = new StoredBlock(blockMock, new BigInteger("0"), 0);
             List<StoredBlock> storedBlockList = new ArrayList<>();
             List<StoredBlock> storedBlockList2 = new ArrayList<>();
             //Act Statement(s)
             target.reorganize(storedBlock2, storedBlockList, storedBlockList2);
             //Assert statement(s)
+            verify(blockMock, atLeast(1)).getHash();
             networkParameters.verify(() -> NetworkParameters.of(networkMock), atLeast(1));
             addressParser.verify(() -> AddressParser.getDefault(networkMock), atLeast(1));
             defaultCoinSelector.verify(() -> DefaultCoinSelector.get(networkMock), atLeast(1));
+            preconditions.verify(() -> Preconditions.checkState(true), atLeast(1));
             preconditions.verify(() -> Preconditions.checkState(false), atLeast(1));
             verify(target, atLeast(1)).getTransactions(true);
             verify(target, atLeast(1)).notifyNewBestBlock(storedBlock);
-            verify(blockMock, atLeast(1)).getHashAsString();
-            verify(blockMock, atLeast(1)).getHash();
+            verify(blockMock2, atLeast(1)).getHashAsString();
+            verify(blockMock2, atLeast(1)).getHash();
             verify(target, atLeast(1)).isConsistentOrThrow();
             verify(target, atLeast(1)).getBalance();
             verify(coinMock, atLeast(1)).toFriendlyString();
@@ -11238,7 +11319,7 @@ public class WalletSapientGeneratedJunit4Test {
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doReturn(true).when(keyChainGroupMock).supportsDeterministicChains();
             doNothing().when(keyChainGroupMock).markPubKeyAsUsed(byteArray);
-            doReturn(1, 2).when(keyChainGroupMock).getCombinedKeyLookaheadEpochs();
+            doReturn(-1, 0).when(keyChainGroupMock).getCombinedKeyLookaheadEpochs();
             //Act Statement(s)
             boolean result = target.checkForFilterExhaustion(blockMock);
             //Assert statement(s)
@@ -11295,7 +11376,7 @@ public class WalletSapientGeneratedJunit4Test {
             target = new Wallet(networkMock, keyChainGroupMock);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doReturn(true).when(keyChainGroupMock).supportsDeterministicChains();
-            doReturn(1).when(keyChainGroupMock).getCombinedKeyLookaheadEpochs();
+            doReturn(0).when(keyChainGroupMock).getCombinedKeyLookaheadEpochs();
             doNothing().when(keyChainGroupMock).markPubKeyAsUsed(byteArray);
             //Act Statement(s)
             boolean result = target.checkForFilterExhaustion(blockMock);
@@ -11417,7 +11498,7 @@ public class WalletSapientGeneratedJunit4Test {
             target = new Wallet(networkMock, keyChainGroupMock);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doReturn(true).when(keyChainGroupMock).supportsDeterministicChains();
-            doReturn(1, 2).when(keyChainGroupMock).getCombinedKeyLookaheadEpochs();
+            doReturn(-1, 0).when(keyChainGroupMock).getCombinedKeyLookaheadEpochs();
             //Act Statement(s)
             boolean result = target.checkForFilterExhaustion(blockMock);
             //Assert statement(s)
@@ -11471,7 +11552,7 @@ public class WalletSapientGeneratedJunit4Test {
             target = new Wallet(networkMock, keyChainGroupMock);
             autoCloseableMocks = MockitoAnnotations.openMocks(this);
             doReturn(true).when(keyChainGroupMock).supportsDeterministicChains();
-            doReturn(1).when(keyChainGroupMock).getCombinedKeyLookaheadEpochs();
+            doReturn(0).when(keyChainGroupMock).getCombinedKeyLookaheadEpochs();
             //Act Statement(s)
             boolean result = target.checkForFilterExhaustion(blockMock);
             //Assert statement(s)

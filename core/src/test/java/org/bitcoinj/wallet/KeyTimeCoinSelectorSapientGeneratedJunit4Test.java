@@ -82,26 +82,22 @@ public class KeyTimeCoinSelectorSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Coin coinMock = mock(Coin.class, "1000");
-        try (MockedStatic<StreamUtils> streamUtils = mockStatic(StreamUtils.class)) {
-            //TODO: Needs to return real value
-            streamUtils.when(() -> StreamUtils.toUnmodifiableList()).thenReturn(null);
-            Instant instant = Instant.now();
-            KeyTimeCoinSelector target = new KeyTimeCoinSelector(walletMock, instant, true);
-            TransactionConfidence transactionConfidence = new TransactionConfidence(sha256HashMock);
-            transactionConfidence.setConfidenceType(TransactionConfidence.ConfidenceType.UNKNOWN);
-            doReturn(transactionConfidence).when(walletMock).getConfidence((Transaction) any());
-            byte[] byteArray = new byte[]{};
-            TransactionOutput transactionOutput = new TransactionOutput(transactionMock, coinMock2, byteArray);
-            List<TransactionOutput> transactionOutputList = new ArrayList<>();
-            transactionOutputList.add(transactionOutput);
-            //Act Statement(s)
-            CoinSelection result = target.select(coinMock, transactionOutputList);
-            //Assert statement(s)
-            assertThat(result, is(notNullValue()));
-            streamUtils.verify(() -> StreamUtils.toUnmodifiableList(), atLeast(1));
-            verify(walletMock).getConfidence((Transaction) any());
-        }
+        doReturn(transactionMock).when(outputMock).getParentTransaction();
+        Instant instant = Instant.now();
+        KeyTimeCoinSelector target = new KeyTimeCoinSelector(walletMock, instant, true);
+        TransactionConfidence transactionConfidence = new TransactionConfidence(sha256HashMock);
+        transactionConfidence.setConfidenceType(TransactionConfidence.ConfidenceType.UNKNOWN);
+        doReturn(transactionConfidence).when(walletMock).getConfidence(transactionMock);
+        List<TransactionOutput> transactionOutputList = new ArrayList<>();
+        transactionOutputList.add(outputMock);
+
+        //Act Statement(s)
+        CoinSelection result = target.select(coinMock, transactionOutputList);
+
+        //Assert statement(s)
+        assertThat(result, is(notNullValue()));
+        verify(outputMock).getParentTransaction();
+        verify(walletMock).getConfidence(transactionMock);
     }
 
     //Sapient generated method id: ${25125d06-df3a-3cec-b8d4-665654193cdf}
@@ -140,7 +136,7 @@ public class KeyTimeCoinSelectorSapientGeneratedJunit4Test {
     //Sapient generated method id: ${68c2ddd4-b561-3665-8a65-333199173ea5}
     @Ignore()
     @Test()
-    public void selectWhenOptKeyNotIsPresentAndCaughtScriptExceptionThrowsRuntimeException() {
+    public void selectWhenOptKeyNotIsPresentAndCaughtScriptExceptionThrowsRuntimeException() throws ScriptException {
         /* Branches:
          * (!ignorePending) : true  #  inside lambda$select$0 method
          * (ScriptPattern.isP2PK(scriptPubKey)) : false  #  inside findKey method
@@ -153,26 +149,24 @@ public class KeyTimeCoinSelectorSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Coin coinMock = mock(Coin.class, "1000");
-        try (MockedStatic<StreamUtils> streamUtils = mockStatic(StreamUtils.class)) {
-            //TODO: Needs to return real value
-            streamUtils.when(() -> StreamUtils.toUnmodifiableList()).thenReturn(null);
+        try (MockedStatic<ScriptPattern> scriptPattern = mockStatic(ScriptPattern.class)) {
+            doReturn(scriptMock).when(outputMock).getScriptPubKey();
+            scriptPattern.when(() -> ScriptPattern.isP2PK(scriptMock)).thenReturn(false);
+            scriptPattern.when(() -> ScriptPattern.isP2PKH(scriptMock)).thenReturn(false);
+            scriptPattern.when(() -> ScriptPattern.isP2WPKH(scriptMock)).thenReturn(false);
             Instant instant = Instant.now();
-            KeyTimeCoinSelector target = new KeyTimeCoinSelector(walletMock, instant, true);
-            TransactionConfidence transactionConfidence = new TransactionConfidence(sha256HashMock);
-            transactionConfidence.setConfidenceType(TransactionConfidence.ConfidenceType.UNKNOWN);
-            doReturn(transactionConfidence).when(walletMock).getConfidence((Transaction) any());
+            KeyTimeCoinSelector target = new KeyTimeCoinSelector(walletMock, instant, false);
             thrown.expect(RuntimeException.class);
             thrown.expectCause(is(instanceOf(ScriptException.class)));
-            byte[] byteArray = new byte[]{};
-            TransactionOutput transactionOutput = new TransactionOutput(transactionMock, coinMock2, byteArray);
             List<TransactionOutput> transactionOutputList = new ArrayList<>();
-            transactionOutputList.add(transactionOutput);
+            transactionOutputList.add(outputMock);
             //Act Statement(s)
             target.select(coinMock, transactionOutputList);
             //Assert statement(s)
-            streamUtils.verify(() -> StreamUtils.toUnmodifiableList(), atLeast(1));
-            verify(walletMock).getConfidence((Transaction) any());
+            verify(outputMock).getScriptPubKey();
+            scriptPattern.verify(() -> ScriptPattern.isP2PK(scriptMock), atLeast(1));
+            scriptPattern.verify(() -> ScriptPattern.isP2PKH(scriptMock), atLeast(1));
+            scriptPattern.verify(() -> ScriptPattern.isP2WPKH(scriptMock), atLeast(1));
         }
     }
 

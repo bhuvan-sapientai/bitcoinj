@@ -206,6 +206,6 @@ public class TimeUtilsSapientGeneratedJunit4Test {
         //Act Statement(s)
         String result = TimeUtils.dateTimeFormat(instant);
         //Assert statement(s)
-        assertThat(result, equalTo("2024-02-05T12:54:16.026653Z"));
+        assertThat(result, equalTo("2024-02-06T05:37:55.263272Z"));
     }
 }

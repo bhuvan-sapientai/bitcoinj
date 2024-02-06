@@ -164,6 +164,26 @@ public class ECKeySapientGeneratedJunit4Test {
         }
     }
 
+    //Sapient generated method id: ${fbf3887f-1293-39bc-8a18-c76d59a51717}
+    @Ignore()
+    @Test()
+    public void fromPrivate1WhenDefaultBranch() {
+        /* Branches:
+         * (branch expression (line 190)) : false  #  inside <init> method
+         */
+        //Arrange Statement(s)
+        try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class, CALLS_REAL_METHODS)) {
+            eCKey.when(() -> ECKey.publicPointFromPrivate((BigInteger) null)).thenReturn(eCPointMock);
+            //Act Statement(s)
+            ECKey result = ECKey.fromPrivate((BigInteger) null, false);
+            LazyECPoint lazyECPoint = new LazyECPoint(eCPointMock, false);
+            ECKey eCKey2 = new ECKey((BigInteger) null, lazyECPoint);
+            //Assert statement(s)
+            assertThat(result, equalTo(eCKey2));
+            eCKey.verify(() -> ECKey.publicPointFromPrivate((BigInteger) null), atLeast(1));
+        }
+    }
+
     //Sapient generated method id: ${4726f81f-5980-3739-8640-c3fb89f37181}
     @Ignore()
     @Test()
@@ -240,6 +260,20 @@ public class ECKeySapientGeneratedJunit4Test {
         }
     }
 
+    //Sapient generated method id: ${36632af1-275a-359c-8095-611b1d01ffc4}
+    @Ignore()
+    @Test()
+    public void fromPrivateAndPrecalculatedPublicWhenDefaultBranch() {
+        /* Branches:
+         * (branch expression (line 190)) : false  #  inside <init> method
+         */
+        //Act Statement(s)
+        ECKey result = ECKey.fromPrivateAndPrecalculatedPublic((BigInteger) null, eCPointMock, false);
+        ECKey eCKey = new ECKey((BigInteger) null, eCPointMock, false);
+        //Assert statement(s)
+        assertThat(result, equalTo(eCKey));
+    }
+
     //Sapient generated method id: ${3edc9d5c-18be-3659-abcf-d54c53b2d01b}
     @Ignore()
     @Test()
@@ -277,6 +311,36 @@ public class ECKeySapientGeneratedJunit4Test {
             ECKey.fromPrivateAndPrecalculatedPublic(new BigInteger("0"), eCPointMock, false);
             //Assert statement(s)
             preconditions.verify(() -> Preconditions.checkArgument(eq(false), (Supplier) any()));
+        }
+    }
+
+    //Sapient generated method id: ${e5ee0511-711c-37c8-9c17-3d3bafe97251}
+    @Ignore()
+    @Test()
+    public void fromPrivateAndPrecalculatedPublic1WhenDefaultBranch() {
+        /* Branches:
+         * (branch expression (line 190)) : false  #  inside <init> method
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
+            byte[] byteArray = new byte[]{};
+            byteUtils.when(() -> ByteUtils.bytesToBigInteger(byteArray)).thenReturn(null);
+            byte[] byteArray2 = new byte[]{};
+            //Act Statement(s)
+            ECKey result = ECKey.fromPrivateAndPrecalculatedPublic(byteArray, byteArray2);
+            X9ECParameters x9ECParameters = CustomNamedCurves.getByName("secp256k1");
+            ECCurve eCCurve = x9ECParameters.getCurve();
+            ECPoint eCPoint = x9ECParameters.getG();
+            ECDomainParameters eCDomainParameters = new ECDomainParameters(eCCurve, eCPoint, new BigInteger("115792089237316195423570985008687907852837564279074904382605163141518161494337"), new BigInteger("1"));
+            ECCurve eCCurve2 = eCDomainParameters.getCurve();
+            LazyECPoint lazyECPoint = new LazyECPoint(eCCurve2, byteArray2);
+            ECKey eCKey = new ECKey((BigInteger) null, lazyECPoint);
+            //Assert statement(s)
+            assertThat(result, equalTo(eCKey));
+            byteUtils.verify(() -> ByteUtils.bytesToBigInteger(byteArray), atLeast(1));
         }
     }
 
@@ -1056,28 +1120,6 @@ public class ECKeySapientGeneratedJunit4Test {
         assertThat(result, equalTo(Boolean.TRUE));
     }
 
-    //Sapient generated method id: ${ae454323-bd7b-38b2-87f0-467843bca13c}
-    @Test()
-    public void isPubKeyCompressedWhen0IndexOfEncodedNotEquals4ThrowsIllegalArgumentException() {
-        /* Branches:
-         * (encoded.length == 33) : false
-         * (encoded.length == 65) : true
-         * (encoded[0] == 0x04) : false
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
-            byte[] byteArray = new byte[]{(byte) 5, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31, (byte) 32, (byte) 33, (byte) 34, (byte) 35, (byte) 36, (byte) 37, (byte) 38, (byte) 39, (byte) 40, (byte) 41, (byte) 42, (byte) 43, (byte) 44, (byte) 45, (byte) 46, (byte) 47, (byte) 48, (byte) 49, (byte) 50, (byte) 51, (byte) 52, (byte) 53, (byte) 54, (byte) 55, (byte) 56, (byte) 57, (byte) 58, (byte) 59, (byte) 60, (byte) 61, (byte) 62, (byte) 63, (byte) 64};
-            byteUtils.when(() -> ByteUtils.formatHex(byteArray)).thenReturn("return_of_formatHex1");
-            IllegalArgumentException illegalArgumentException = new IllegalArgumentException("return_of_formatHex1");
-            thrown.expect(IllegalArgumentException.class);
-            thrown.expectMessage(illegalArgumentException.getMessage());
-            //Act Statement(s)
-            ECKey.isPubKeyCompressed(byteArray);
-            //Assert statement(s)
-            byteUtils.verify(() -> ByteUtils.formatHex(byteArray), atLeast(1));
-        }
-    }
-
     //Sapient generated method id: ${52c56dad-1857-3f48-84e4-b815c4c147ee}
     @Test()
     public void isPubKeyCompressedWhen0IndexOfEncodedNotEquals3AndEncodedLengthNotEquals65ThrowsIllegalArgumentException() {
@@ -1165,25 +1207,6 @@ public class ECKeySapientGeneratedJunit4Test {
         verify(target).signMessage("message1", aesKeyMock, ScriptType.P2PKH);
     }
 
-    //Sapient generated method id: ${1eded7c5-f238-3f48-866c-a50b2d8946af}
-    @Test()
-    public void signMessage3WhenScriptTypeEqualsScriptTypeP2WPKHThrowsIllegalArgumentException() throws KeyCrypterException {
-        /* Branches:
-         * (!isCompressed()) : true
-         * (scriptType == ScriptType.P2WPKH) : true
-         */
-        //Arrange Statement(s)
-        ECKey target = spy(new ECKey((BigInteger) null, eCPointMock, false));
-        doReturn(false).when(target).isCompressed();
-        IllegalArgumentException illegalArgumentException = new IllegalArgumentException("Segwit P2WPKH and P2SH-P2WPKH script types only can be used with compressed keys. See BIP 141.");
-        thrown.expect(IllegalArgumentException.class);
-        thrown.expectMessage(illegalArgumentException.getMessage());
-        //Act Statement(s)
-        target.signMessage("message1", aesKeyMock, ScriptType.P2WPKH);
-        //Assert statement(s)
-        verify(target).isCompressed();
-    }
-
     //Sapient generated method id: ${7d19bab2-8cde-3516-97ba-4a22e0e7cc0f}
     @Ignore()
     @Test()
@@ -1196,45 +1219,33 @@ public class ECKeySapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        ECPoint eCPointMock = mock(ECPoint.class, "{}");
         try (MockedStatic<Base64> base64 = mockStatic(Base64.class);
-             MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class);
              MockedStatic<Sha256Hash> sha256Hash = mockStatic(Sha256Hash.class);
              MockedStatic<VarInt> varInt = mockStatic(VarInt.class)) {
-            varInt.when(() -> VarInt.of(13L)).thenReturn(varIntMock);
-            byte[] byteArray = new byte[]{(byte) 0};
+            varInt.when(() -> VarInt.of(0L)).thenReturn(varIntMock);
+            byte[] byteArray = new byte[]{};
             doReturn(byteArray).when(varIntMock).serialize();
-            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-            Sha256Hash sha256Hash2 = Sha256Hash.read(byteBuffer);
-            byte[] byteArray2 = new byte[]{(byte) 24, (byte) 66, (byte) 105, (byte) 116, (byte) 99, (byte) 111, (byte) 105, (byte) 110, (byte) 32, (byte) 83, (byte) 105, (byte) 103, (byte) 110, (byte) 101, (byte) 100, (byte) 32, (byte) 77, (byte) 101, (byte) 115, (byte) 115, (byte) 97, (byte) 103, (byte) 101, (byte) 58, (byte) 10, (byte) 72, (byte) 101, (byte) 108, (byte) 108, (byte) 111, (byte) 44, (byte) 32, (byte) 119, (byte) 111, (byte) 114, (byte) 108, (byte) 100, (byte) 33};
-            sha256Hash.when(() -> Sha256Hash.twiceOf(byteArray2)).thenReturn(sha256Hash2);
-            byte[] byteArray3 = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
-            byteUtils.when(() -> ByteUtils.bigIntegerToBytes(new BigInteger("1"), 32)).thenReturn(byteArray3);
-            byte[] byteArray4 = new byte[]{(byte) 0};
-            byteUtils.when(() -> ByteUtils.bigIntegerToBytes(new BigInteger("0"), 32)).thenReturn(byteArray4);
-            byte[] byteArray5 = new byte[]{(byte) 0};
-            byte[] byteArray6 = new byte[]{(byte) 40, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
-            base64.when(() -> Base64.encode(byteArray6)).thenReturn(byteArray5);
-            ECKey target = spy(new ECKey((BigInteger) null, eCPointMock, true));
+            byte[] byteArray2 = new byte[]{(byte) 24, (byte) 66, (byte) 105, (byte) 116, (byte) 99, (byte) 111, (byte) 105, (byte) 110, (byte) 32, (byte) 83, (byte) 105, (byte) 103, (byte) 110, (byte) 101, (byte) 100, (byte) 32, (byte) 77, (byte) 101, (byte) 115, (byte) 115, (byte) 97, (byte) 103, (byte) 101, (byte) 58, (byte) 10};
+            sha256Hash.when(() -> Sha256Hash.twiceOf(byteArray2)).thenReturn(sha256HashMock);
+            byte[] byteArray3 = new byte[]{};
+            byte[] byteArray4 = new byte[]{(byte) 39, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
+            base64.when(() -> Base64.encode(byteArray4)).thenReturn(byteArray3);
+            ECKey target = spy(new ECKey((BigInteger) null, eCPointMock, false));
             doReturn(true).when(target).isCompressed();
-            ECKey.ECDSASignature eCKeyECDSASignature = new ECKey.ECDSASignature(new BigInteger("1"), new BigInteger("0"));
-            byte[] byteArray7 = new byte[]{};
-            AesKey aesKey = new AesKey(byteArray7);
-            doReturn(eCKeyECDSASignature).when(target).sign((Sha256Hash) any(), eq(aesKey));
-            doReturn((byte) 1).when(target).findRecoveryId((Sha256Hash) any(), eq(eCKeyECDSASignature));
+            ECKey.ECDSASignature eCKeyECDSASignature = new ECKey.ECDSASignature(new BigInteger("0"), new BigInteger("0"));
+            doReturn(eCKeyECDSASignature).when(target).sign(sha256HashMock, aesKeyMock);
+            doReturn((byte) 0).when(target).findRecoveryId(sha256HashMock, eCKeyECDSASignature);
             //Act Statement(s)
-            String result = target.signMessage("Hello, world!", aesKey, ScriptType.P2WPKH);
+            String result = target.signMessage("message1", aesKeyMock, ScriptType.P2WPKH);
             //Assert statement(s)
             assertThat(result, equalTo("result1"));
-            varInt.verify(() -> VarInt.of(13L), atLeast(1));
+            varInt.verify(() -> VarInt.of(0L), atLeast(1));
             verify(varIntMock).serialize();
             sha256Hash.verify(() -> Sha256Hash.twiceOf(byteArray2), atLeast(1));
-            byteUtils.verify(() -> ByteUtils.bigIntegerToBytes(new BigInteger("1"), 32), atLeast(1));
-            byteUtils.verify(() -> ByteUtils.bigIntegerToBytes(new BigInteger("0"), 32), atLeast(1));
-            base64.verify(() -> Base64.encode(byteArray6), atLeast(1));
+            base64.verify(() -> Base64.encode(byteArray4), atLeast(1));
             verify(target).isCompressed();
-            verify(target).sign((Sha256Hash) any(), eq(aesKey));
-            verify(target).findRecoveryId((Sha256Hash) any(), eq(eCKeyECDSASignature));
+            verify(target).sign(sha256HashMock, aesKeyMock);
+            verify(target).findRecoveryId(sha256HashMock, eCKeyECDSASignature);
         }
     }
 
@@ -1259,92 +1270,6 @@ public class ECKeySapientGeneratedJunit4Test {
         verify(target).isCompressed();
     }
 
-    //Sapient generated method id: ${b2bbbc2d-da65-3b7b-a08a-e1db579322f2}
-    @Ignore()
-    @Test()
-    public void signMessage3WhenIsCompressed() throws KeyCrypterException, IOException {
-        /* Branches:
-         * (!isCompressed()) : false
-         * (switch(scriptType) = P2PKH) : true
-         * (isCompressed()) : true
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<Base64> base64 = mockStatic(Base64.class);
-             MockedStatic<Sha256Hash> sha256Hash = mockStatic(Sha256Hash.class);
-             MockedStatic<VarInt> varInt = mockStatic(VarInt.class)) {
-            varInt.when(() -> VarInt.of(0L)).thenReturn(varIntMock);
-            byte[] byteArray = new byte[]{};
-            doReturn(byteArray).when(varIntMock).serialize();
-            byte[] byteArray2 = new byte[]{(byte) 24, (byte) 66, (byte) 105, (byte) 116, (byte) 99, (byte) 111, (byte) 105, (byte) 110, (byte) 32, (byte) 83, (byte) 105, (byte) 103, (byte) 110, (byte) 101, (byte) 100, (byte) 32, (byte) 77, (byte) 101, (byte) 115, (byte) 115, (byte) 97, (byte) 103, (byte) 101, (byte) 58, (byte) 10};
-            sha256Hash.when(() -> Sha256Hash.twiceOf(byteArray2)).thenReturn(sha256HashMock);
-            byte[] byteArray3 = new byte[]{};
-            byte[] byteArray4 = new byte[]{(byte) 31, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
-            base64.when(() -> Base64.encode(byteArray4)).thenReturn(byteArray3);
-            ECKey target = spy(new ECKey((BigInteger) null, eCPointMock, false));
-            doReturn(true).when(target).isCompressed();
-            ECKey.ECDSASignature eCKeyECDSASignature = new ECKey.ECDSASignature(new BigInteger("0"), new BigInteger("0"));
-            doReturn(eCKeyECDSASignature).when(target).sign(sha256HashMock, aesKeyMock);
-            doReturn((byte) 0).when(target).findRecoveryId(sha256HashMock, eCKeyECDSASignature);
-            //Act Statement(s)
-            String result = target.signMessage("message1", aesKeyMock, ScriptType.P2PKH);
-            //Assert statement(s)
-            assertThat(result, equalTo("result1"));
-            varInt.verify(() -> VarInt.of(0L), atLeast(1));
-            verify(varIntMock).serialize();
-            sha256Hash.verify(() -> Sha256Hash.twiceOf(byteArray2), atLeast(1));
-            base64.verify(() -> Base64.encode(byteArray4), atLeast(1));
-            verify(target).isCompressed();
-            verify(target).sign(sha256HashMock, aesKeyMock);
-            verify(target).findRecoveryId(sha256HashMock, eCKeyECDSASignature);
-        }
-    }
-
-    //Sapient generated method id: ${b533d728-9534-377e-9357-19acb68bdf26}
-    @Ignore()
-    @Test()
-    public void signMessage3WhenIsCompressedNot() throws KeyCrypterException, IOException {
-        /* Branches:
-         * (!isCompressed()) : false
-         * (switch(scriptType) = P2PKH) : true
-         * (isCompressed()) : false
-         *
-         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
-         *  The test code, including the assertion statements, has been successfully generated.
-         */
-        //Arrange Statement(s)
-        try (MockedStatic<Base64> base64 = mockStatic(Base64.class);
-             MockedStatic<Sha256Hash> sha256Hash = mockStatic(Sha256Hash.class);
-             MockedStatic<VarInt> varInt = mockStatic(VarInt.class)) {
-            varInt.when(() -> VarInt.of(0L)).thenReturn(varIntMock);
-            byte[] byteArray = new byte[]{};
-            doReturn(byteArray).when(varIntMock).serialize();
-            byte[] byteArray2 = new byte[]{(byte) 24, (byte) 66, (byte) 105, (byte) 116, (byte) 99, (byte) 111, (byte) 105, (byte) 110, (byte) 32, (byte) 83, (byte) 105, (byte) 103, (byte) 110, (byte) 101, (byte) 100, (byte) 32, (byte) 77, (byte) 101, (byte) 115, (byte) 115, (byte) 97, (byte) 103, (byte) 101, (byte) 58, (byte) 10};
-            sha256Hash.when(() -> Sha256Hash.twiceOf(byteArray2)).thenReturn(sha256HashMock);
-            byte[] byteArray3 = new byte[]{};
-            byte[] byteArray4 = new byte[]{(byte) 27, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
-            base64.when(() -> Base64.encode(byteArray4)).thenReturn(byteArray3);
-            ECKey target = spy(new ECKey((BigInteger) null, eCPointMock, false));
-            ECKey.ECDSASignature eCKeyECDSASignature = new ECKey.ECDSASignature(new BigInteger("0"), new BigInteger("0"));
-            doReturn(eCKeyECDSASignature).when(target).sign(sha256HashMock, aesKeyMock);
-            doReturn((byte) 0).when(target).findRecoveryId(sha256HashMock, eCKeyECDSASignature);
-            doReturn(false, true).when(target).isCompressed();
-            //Act Statement(s)
-            String result = target.signMessage("message1", aesKeyMock, ScriptType.P2PKH);
-            //Assert statement(s)
-            assertThat(result, equalTo("result1"));
-            varInt.verify(() -> VarInt.of(0L), atLeast(1));
-            verify(varIntMock).serialize();
-            sha256Hash.verify(() -> Sha256Hash.twiceOf(byteArray2), atLeast(1));
-            base64.verify(() -> Base64.encode(byteArray4), atLeast(1));
-            verify(target, times(2)).isCompressed();
-            verify(target).sign(sha256HashMock, aesKeyMock);
-            verify(target).findRecoveryId(sha256HashMock, eCKeyECDSASignature);
-        }
-    }
-
     //Sapient generated method id: ${f15961a7-fcc2-3053-9b6b-30454ee8cef8}
     @Ignore()
     @Test()
@@ -1364,23 +1289,21 @@ public class ECKeySapientGeneratedJunit4Test {
              MockedStatic<Sha256Hash> sha256Hash = mockStatic(Sha256Hash.class);
              MockedStatic<VarInt> varInt = mockStatic(VarInt.class)) {
             varInt.when(() -> VarInt.of(0L)).thenReturn(varIntMock);
-            byte[] byteArray = new byte[]{(byte) 0};
+            byte[] byteArray = new byte[]{};
             doReturn(byteArray).when(varIntMock).serialize();
-            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-            Sha256Hash sha256Hash2 = Sha256Hash.read(byteBuffer);
             byte[] byteArray2 = new byte[]{};
-            sha256Hash.when(() -> Sha256Hash.twiceOf(byteArray2)).thenReturn(sha256Hash2);
+            sha256Hash.when(() -> Sha256Hash.twiceOf(byteArray2)).thenReturn(sha256HashMock);
             byte[] byteArray3 = new byte[]{};
-            byte[] byteArray4 = new byte[]{(byte) 0};
+            byte[] byteArray4 = new byte[]{};
             byteUtils.when(() -> ByteUtils.bigIntegerToBytes(new BigInteger("0"), 32)).thenReturn(byteArray3).thenReturn(byteArray4);
-            byte[] byteArray5 = new byte[]{(byte) 0};
+            byte[] byteArray5 = new byte[]{};
             byte[] byteArray6 = new byte[]{(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
             base64.when(() -> Base64.encode(byteArray6)).thenReturn(byteArray5);
             ECKey target = spy(new ECKey((BigInteger) null, eCPointMock, false));
             doReturn(false).when(target).isCompressed();
             ECKey.ECDSASignature eCKeyECDSASignature = new ECKey.ECDSASignature(new BigInteger("0"), new BigInteger("0"));
-            doReturn(eCKeyECDSASignature).when(target).sign((Sha256Hash) any(), eq(aesKeyMock));
-            doReturn((byte) 0).when(target).findRecoveryId((Sha256Hash) any(), eq(eCKeyECDSASignature));
+            doReturn(eCKeyECDSASignature).when(target).sign(sha256HashMock, aesKeyMock);
+            doReturn((byte) 0).when(target).findRecoveryId(sha256HashMock, eCKeyECDSASignature);
             //Act Statement(s)
             String result = target.signMessage("message1", aesKeyMock, ScriptType.P2PKH);
             //Assert statement(s)
@@ -1391,8 +1314,8 @@ public class ECKeySapientGeneratedJunit4Test {
             byteUtils.verify(() -> ByteUtils.bigIntegerToBytes(new BigInteger("0"), 32), atLeast(2));
             base64.verify(() -> Base64.encode(byteArray6), atLeast(1));
             verify(target).isCompressed();
-            verify(target).sign((Sha256Hash) any(), eq(aesKeyMock));
-            verify(target).findRecoveryId((Sha256Hash) any(), eq(eCKeyECDSASignature));
+            verify(target).sign(sha256HashMock, aesKeyMock);
+            verify(target).findRecoveryId(sha256HashMock, eCKeyECDSASignature);
         }
     }
 
@@ -1482,17 +1405,17 @@ public class ECKeySapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        ECPoint eCPointMock = mock(ECPoint.class, "{}");
+        ECPoint eCPointMock = mock(ECPoint.class, "solved_pub_value");
         try (MockedStatic<Base64> base64 = mockStatic(Base64.class);
              MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class);
              MockedStatic<Sha256Hash> sha256Hash = mockStatic(Sha256Hash.class);
              MockedStatic<VarInt> varInt = mockStatic(VarInt.class)) {
-            varInt.when(() -> VarInt.of(13L)).thenReturn(varIntMock);
+            varInt.when(() -> VarInt.of(20L)).thenReturn(varIntMock);
             byte[] byteArray = new byte[]{(byte) 0};
             doReturn(byteArray).when(varIntMock).serialize();
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
             Sha256Hash sha256Hash2 = Sha256Hash.read(byteBuffer);
-            byte[] byteArray2 = new byte[]{(byte) 24, (byte) 66, (byte) 105, (byte) 116, (byte) 99, (byte) 111, (byte) 105, (byte) 110, (byte) 32, (byte) 83, (byte) 105, (byte) 103, (byte) 110, (byte) 101, (byte) 100, (byte) 32, (byte) 77, (byte) 101, (byte) 115, (byte) 115, (byte) 97, (byte) 103, (byte) 101, (byte) 58, (byte) 10, (byte) 72, (byte) 101, (byte) 108, (byte) 108, (byte) 111, (byte) 44, (byte) 32, (byte) 119, (byte) 111, (byte) 114, (byte) 108, (byte) 100, (byte) 33};
+            byte[] byteArray2 = new byte[]{(byte) 24, (byte) 66, (byte) 105, (byte) 116, (byte) 99, (byte) 111, (byte) 105, (byte) 110, (byte) 32, (byte) 83, (byte) 105, (byte) 103, (byte) 110, (byte) 101, (byte) 100, (byte) 32, (byte) 77, (byte) 101, (byte) 115, (byte) 115, (byte) 97, (byte) 103, (byte) 101, (byte) 58, (byte) 10, (byte) 115, (byte) 111, (byte) 108, (byte) 118, (byte) 101, (byte) 100, (byte) 95, (byte) 109, (byte) 101, (byte) 115, (byte) 115, (byte) 97, (byte) 103, (byte) 101, (byte) 95, (byte) 118, (byte) 97, (byte) 108, (byte) 117, (byte) 101};
             sha256Hash.when(() -> Sha256Hash.twiceOf(byteArray2)).thenReturn(sha256Hash2);
             byte[] byteArray3 = new byte[]{(byte) 0, (byte) 1, (byte) 2, (byte) 3, (byte) 4, (byte) 5, (byte) 6, (byte) 7, (byte) 8, (byte) 9, (byte) 10, (byte) 11, (byte) 12, (byte) 13, (byte) 14, (byte) 15, (byte) 16, (byte) 17, (byte) 18, (byte) 19, (byte) 20, (byte) 21, (byte) 22, (byte) 23, (byte) 24, (byte) 25, (byte) 26, (byte) 27, (byte) 28, (byte) 29, (byte) 30, (byte) 31};
             byte[] byteArray4 = new byte[]{(byte) 0};
@@ -1500,7 +1423,7 @@ public class ECKeySapientGeneratedJunit4Test {
             byte[] byteArray5 = new byte[]{(byte) 0};
             byte[] byteArray6 = new byte[]{(byte) 31, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
             base64.when(() -> Base64.encode(byteArray6)).thenReturn(byteArray5);
-            ECKey target = spy(new ECKey((BigInteger) null, eCPointMock, true));
+            ECKey target = spy(new ECKey((BigInteger) null, eCPointMock, false));
             ECKey.ECDSASignature eCKeyECDSASignature = new ECKey.ECDSASignature(new BigInteger("0"), new BigInteger("0"));
             byte[] byteArray7 = new byte[]{};
             AesKey aesKey = new AesKey(byteArray7);
@@ -1508,10 +1431,10 @@ public class ECKeySapientGeneratedJunit4Test {
             doReturn((byte) 0).when(target).findRecoveryId((Sha256Hash) any(), eq(eCKeyECDSASignature));
             doReturn(false, true).when(target).isCompressed();
             //Act Statement(s)
-            String result = target.signMessage("Hello, world!", aesKey, ScriptType.P2PKH);
+            String result = target.signMessage("solved_message_value", aesKey, ScriptType.P2PKH);
             //Assert statement(s)
             assertThat(result, equalTo("result1"));
-            varInt.verify(() -> VarInt.of(13L), atLeast(1));
+            varInt.verify(() -> VarInt.of(20L), atLeast(1));
             verify(varIntMock).serialize();
             sha256Hash.verify(() -> Sha256Hash.twiceOf(byteArray2), atLeast(1));
             byteUtils.verify(() -> ByteUtils.bigIntegerToBytes(new BigInteger("0"), 32), atLeast(2));
@@ -1561,7 +1484,7 @@ public class ECKeySapientGeneratedJunit4Test {
             verify(varIntMock).serialize();
             sha256Hash.verify(() -> Sha256Hash.twiceOf(byteArray2), atLeast(1));
             base64.verify(() -> Base64.encode(byteArray4), atLeast(1));
-            verify(target).isCompressed();
+            verify(target, times(2)).isCompressed();
             verify(target).sign(sha256HashMock, aesKeyMock);
             verify(target).findRecoveryId(sha256HashMock, eCKeyECDSASignature);
         }
@@ -1788,6 +1711,7 @@ public class ECKeySapientGeneratedJunit4Test {
          * (recId == -1) : false
          */
         //Arrange Statement(s)
+        ECKey eCKeyMock2 = mock(ECKey.class);
         try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class)) {
             eCKey.when(() -> ECKey.recoverFromSignature((byte) 0, eCKeyECDSASignatureMock, sha256HashMock, false)).thenReturn(eCKeyMock);
             eCKey.when(() -> ECKey.recoverFromSignature((byte) 1, eCKeyECDSASignatureMock, sha256HashMock, false)).thenReturn(eCKeyMock2);
@@ -1800,35 +1724,6 @@ public class ECKeySapientGeneratedJunit4Test {
             eCKey.verify(() -> ECKey.recoverFromSignature((byte) 0, eCKeyECDSASignatureMock, sha256HashMock, false), atLeast(1));
             eCKey.verify(() -> ECKey.recoverFromSignature((byte) 1, eCKeyECDSASignatureMock, sha256HashMock, false), atLeast(1));
             verify(target, times(2)).isCompressed();
-        }
-    }
-
-    //Sapient generated method id: ${9275f7b6-d9cf-3000-bef3-996895d1cb87}
-    @Ignore()
-    @Test()
-    public void findRecoveryIdWhenKIsNotNullAndKPubNotEqualsPubAndRecIdNotEqualsMinus1() {
-        /* Branches:
-         * (i < 4) : true
-         * (k != null) : true
-         * (k.pub.equals(pub)) : false
-         * (recId == -1) : false
-         */
-        //Arrange Statement(s)
-        ECKey eCKeyMock3 = mock(ECKey.class);
-        try (MockedStatic<ECKey> eCKey = mockStatic(ECKey.class)) {
-            eCKey.when(() -> ECKey.recoverFromSignature((byte) 0, eCKeyECDSASignatureMock, sha256HashMock, false)).thenReturn(eCKeyMock);
-            eCKey.when(() -> ECKey.recoverFromSignature((byte) 1, eCKeyECDSASignatureMock, sha256HashMock, false)).thenReturn(eCKeyMock2);
-            eCKey.when(() -> ECKey.recoverFromSignature((byte) 2, eCKeyECDSASignatureMock, sha256HashMock, false)).thenReturn(eCKeyMock3);
-            ECKey target = spy(new ECKey((BigInteger) null, eCPointMock, false));
-            doReturn(false).when(target).isCompressed();
-            //Act Statement(s)
-            byte result = target.findRecoveryId(sha256HashMock, eCKeyECDSASignatureMock);
-            //Assert statement(s)
-            assertThat(result, equalTo((byte) 2));
-            eCKey.verify(() -> ECKey.recoverFromSignature((byte) 0, eCKeyECDSASignatureMock, sha256HashMock, false), atLeast(1));
-            eCKey.verify(() -> ECKey.recoverFromSignature((byte) 1, eCKeyECDSASignatureMock, sha256HashMock, false), atLeast(1));
-            eCKey.verify(() -> ECKey.recoverFromSignature((byte) 2, eCKeyECDSASignatureMock, sha256HashMock, false), atLeast(1));
-            verify(target).isCompressed();
         }
     }
 
@@ -2116,17 +2011,23 @@ public class ECKeySapientGeneratedJunit4Test {
     public void encryptionIsReversibleWhenArraysNotEqualsOriginalPrivateKeyBytesRebornKeyBytes() throws KeyCrypterException {
         /* Branches:
          * (!Arrays.equals(originalPrivateKeyBytes, rebornKeyBytes)) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        ECKey eCKey = new ECKey();
-        ECKey eCKey2 = new ECKey();
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "<generated KeyCrypter object>");
         byte[] byteArray = new byte[]{};
-        AesKey aesKey = new AesKey(byteArray);
+        doReturn(byteArray).when(originalKeyMock).getPrivKeyBytes();
+        doReturn(eCKeyMock).when(encryptedKeyMock).decrypt(keyCrypterMock, aesKeyMock);
+        byte[] byteArray2 = new byte[]{};
+        doReturn(byteArray2).when(eCKeyMock).getPrivKeyBytes();
         //Act Statement(s)
-        boolean result = ECKey.encryptionIsReversible(eCKey, eCKey2, keyCrypterMock, aesKey);
+        boolean result = ECKey.encryptionIsReversible(originalKeyMock, encryptedKeyMock, keyCrypterMock, aesKeyMock);
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
+        verify(originalKeyMock).getPrivKeyBytes();
+        verify(encryptedKeyMock).decrypt(keyCrypterMock, aesKeyMock);
+        verify(eCKeyMock).getPrivKeyBytes();
     }
 
     //Sapient generated method id: ${6f02d818-da6d-3983-80e1-9ddcd62c21bf}
@@ -2137,13 +2038,16 @@ public class ECKeySapientGeneratedJunit4Test {
          * (!Arrays.equals(originalPrivateKeyBytes, rebornKeyBytes)) : false
          */
         //Arrange Statement(s)
-        doReturn(eCKeyMock).when(encryptedKeyMock).decrypt(keyCrypterMock, aesKeyMock);
         byte[] byteArray = new byte[]{};
-        doReturn(byteArray).when(eCKeyMock).getPrivKeyBytes();
+        doReturn(byteArray).when(originalKeyMock).getPrivKeyBytes();
+        doReturn(eCKeyMock).when(encryptedKeyMock).decrypt(keyCrypterMock, aesKeyMock);
+        byte[] byteArray2 = new byte[]{};
+        doReturn(byteArray2).when(eCKeyMock).getPrivKeyBytes();
         //Act Statement(s)
-        boolean result = ECKey.encryptionIsReversible(eCKeyMock2, encryptedKeyMock, keyCrypterMock, aesKeyMock);
+        boolean result = ECKey.encryptionIsReversible(originalKeyMock, encryptedKeyMock, keyCrypterMock, aesKeyMock);
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.TRUE));
+        verify(originalKeyMock).getPrivKeyBytes();
         verify(encryptedKeyMock).decrypt(keyCrypterMock, aesKeyMock);
         verify(eCKeyMock).getPrivKeyBytes();
     }
@@ -2155,23 +2059,23 @@ public class ECKeySapientGeneratedJunit4Test {
         /* Branches:
          * (!Arrays.equals(originalPrivateKeyBytes, rebornKeyBytes)) : true
          * (catch-exception (KeyCrypterException)) : true
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        KeyCrypterException keyCrypterExceptionMock = mock(KeyCrypterException.class);
-        KeyCrypter keyCrypterMock = mock(KeyCrypter.class, "AES-256");
         byte[] byteArray = new byte[]{};
-        AesKey aesKey = new AesKey(byteArray);
-        doThrow(keyCrypterExceptionMock).when(encryptedKeyMock).decrypt(keyCrypterMock, aesKey);
-        ECKey rebornUnencryptedKeyMock = mock(ECKey.class);
+        doReturn(byteArray).when(originalKeyMock).getPrivKeyBytes();
+        doReturn(eCKeyMock).when(encryptedKeyMock).decrypt(keyCrypterMock, aesKeyMock);
         byte[] byteArray2 = new byte[]{};
-        doReturn(byteArray2).when(rebornUnencryptedKeyMock).getPrivKeyBytes();
-        ECKey eCKey = new ECKey();
+        doReturn(byteArray2).when(eCKeyMock).getPrivKeyBytes();
         //Act Statement(s)
-        boolean result = ECKey.encryptionIsReversible(eCKey, encryptedKeyMock, keyCrypterMock, aesKey);
+        boolean result = ECKey.encryptionIsReversible(originalKeyMock, encryptedKeyMock, keyCrypterMock, aesKeyMock);
         //Assert statement(s)
         assertThat(result, equalTo(Boolean.FALSE));
-        verify(encryptedKeyMock).decrypt(keyCrypterMock, aesKey);
-        verify(rebornUnencryptedKeyMock).getPrivKeyBytes();
+        verify(originalKeyMock).getPrivKeyBytes();
+        verify(encryptedKeyMock).decrypt(keyCrypterMock, aesKeyMock);
+        verify(eCKeyMock).getPrivKeyBytes();
     }
 
     //Sapient generated method id: ${fb4885d6-9d6e-3304-8242-966497227d83}
@@ -2266,23 +2170,15 @@ public class ECKeySapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        ECPoint eCPointMock = mock(ECPoint.class, "0479BE667EF9DCBBAC55A06295CE870B07029BFCDB2DCE28D959F2815B16F81798483ADA7726A3C4655DA4FBFC0E1108A8FD17B448A68554199C47D08FFB10D4B8");
-        try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
-            byte[] byteArray = new byte[]{};
-            byteUtils.when(() -> ByteUtils.formatHex(byteArray)).thenReturn("");
-            ECKey target = spy(new ECKey((BigInteger) null, eCPointMock, true));
-            doReturn(byteArray).when(pubMock).getEncoded();
-            doReturn(false).when(target).isEncrypted();
-            doReturn(false).when(target).isPubKeyOnly();
-            //Act Statement(s)
-            String result = target.toString();
-            //Assert statement(s)
-            assertThat(result, equalTo("toString_moreObjects.ToStringHelper2"));
-            byteUtils.verify(() -> ByteUtils.formatHex(byteArray), atLeast(1));
-            verify(pubMock).getEncoded();
-            verify(target).isEncrypted();
-            verify(target).isPubKeyOnly();
-        }
+        ECKey target = spy(new ECKey((BigInteger) null, eCPointMock, false));
+        doReturn(false).when(target).isEncrypted();
+        doReturn(false).when(target).isPubKeyOnly();
+        //Act Statement(s)
+        String result = target.toString();
+        //Assert statement(s)
+        assertThat(result, equalTo("toString_moreObjects.ToStringHelper2"));
+        verify(target).isEncrypted();
+        verify(target).isPubKeyOnly();
     }
 
     //Sapient generated method id: ${bfa400b6-269c-3f50-82d6-2f7c2ddf9df7}
@@ -2299,26 +2195,21 @@ public class ECKeySapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
-            byte[] byteArray = new byte[]{};
-            byteUtils.when(() -> ByteUtils.formatHex(byteArray)).thenReturn("");
-            ECKey target = spy(new ECKey((BigInteger) null, eCPointMock, false));
-            doReturn(eCKeyMock).when(target).decrypt(aesKeyMock);
-            doReturn("return_of_getPrivateKeyAsHex1").when(eCKeyMock).getPrivateKeyAsHex();
-            doReturn("return_of_getPrivateKeyAsWiF1").when(eCKeyMock).getPrivateKeyAsWiF(networkMock);
-            doReturn(true, false).when(target).isEncrypted();
-            doReturn(false).when(target).isPubKeyOnly();
-            //Act Statement(s)
-            String result = target.toStringWithPrivate(aesKeyMock, networkMock);
-            //Assert statement(s)
-            assertThat(result, equalTo("toString_moreObjects.ToStringHelper2"));
-            byteUtils.verify(() -> ByteUtils.formatHex(byteArray), atLeast(1));
-            verify(target, times(2)).isEncrypted();
-            verify(target).decrypt(aesKeyMock);
-            verify(eCKeyMock).getPrivateKeyAsHex();
-            verify(eCKeyMock).getPrivateKeyAsWiF(networkMock);
-            verify(target).isPubKeyOnly();
-        }
+        ECKey target = spy(new ECKey((BigInteger) null, eCPointMock, false));
+        doReturn(eCKeyMock).when(target).decrypt(aesKeyMock);
+        doReturn("return_of_getPrivateKeyAsHex1").when(eCKeyMock).getPrivateKeyAsHex();
+        doReturn("return_of_getPrivateKeyAsWiF1").when(eCKeyMock).getPrivateKeyAsWiF(networkMock);
+        doReturn(true, false).when(target).isEncrypted();
+        doReturn(false).when(target).isPubKeyOnly();
+        //Act Statement(s)
+        String result = target.toStringWithPrivate(aesKeyMock, networkMock);
+        //Assert statement(s)
+        assertThat(result, equalTo("toString_moreObjects.ToStringHelper2"));
+        verify(target, times(2)).isEncrypted();
+        verify(target).decrypt(aesKeyMock);
+        verify(eCKeyMock).getPrivateKeyAsHex();
+        verify(eCKeyMock).getPrivateKeyAsWiF(networkMock);
+        verify(target).isPubKeyOnly();
     }
 
     //Sapient generated method id: ${4faebd0e-ce55-326b-b1f6-8d86e7fe9cd3}
@@ -2335,26 +2226,15 @@ public class ECKeySapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        ECPoint eCPointMock = mock(ECPoint.class, "pub");
-        Network networkMock = mock(Network.class, "new Network()");
-        try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
-            byte[] byteArray = new byte[]{};
-            byteUtils.when(() -> ByteUtils.formatHex(byteArray)).thenReturn("formatHex()");
-            ECKey target = spy(new ECKey((BigInteger) null, eCPointMock, false));
-            doReturn(byteArray).when(pubMock).getEncoded();
-            doReturn(false).when(target).isEncrypted();
-            doReturn(false).when(target).isPubKeyOnly();
-            byte[] byteArray2 = new byte[]{};
-            AesKey aesKey = new AesKey(byteArray2);
-            //Act Statement(s)
-            String result = target.toStringWithPrivate(aesKey, networkMock);
-            //Assert statement(s)
-            assertThat(result, equalTo("toString_moreObjects.ToStringHelper2"));
-            byteUtils.verify(() -> ByteUtils.formatHex(byteArray), atLeast(1));
-            verify(pubMock).getEncoded();
-            verify(target, times(2)).isEncrypted();
-            verify(target).isPubKeyOnly();
-        }
+        ECKey target = spy(new ECKey((BigInteger) null, eCPointMock, false));
+        doReturn(false).when(target).isEncrypted();
+        doReturn(false).when(target).isPubKeyOnly();
+        //Act Statement(s)
+        String result = target.toStringWithPrivate(aesKeyMock, networkMock);
+        //Assert statement(s)
+        assertThat(result, equalTo("toString_moreObjects.ToStringHelper2"));
+        verify(target, times(2)).isEncrypted();
+        verify(target).isPubKeyOnly();
     }
 
     //Sapient generated method id: ${dad9b6ef-c8da-31a8-9de5-425b2ba97f08}
@@ -2372,16 +2252,16 @@ public class ECKeySapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        ECPoint eCPointMock = mock(ECPoint.class, "<value>");
-        Network networkMock = mock(Network.class, "<value>");
+        ECPoint eCPointMock = mock(ECPoint.class, "solved_pub_value");
+        Network networkMock = mock(Network.class, "solved_network_value");
         try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
             byte[] byteArray = new byte[]{};
-            byteUtils.when(() -> ByteUtils.formatHex(byteArray)).thenReturn("<String>");
+            byteUtils.when(() -> ByteUtils.formatHex(byteArray)).thenReturn("solved_formatHex_value");
             ECKey target = spy(new ECKey((BigInteger) null, eCPointMock, false));
             doReturn(byteArray).when(pubMock).getEncoded();
             doReturn(eCKeyMock).when(target).decrypt((AesKey) any());
-            doReturn("<String>").when(eCKeyMock).getPrivateKeyAsHex();
-            doReturn("<String>").when(eCKeyMock).getPrivateKeyAsWiF(networkMock);
+            doReturn("solved_getPrivateKeyAsHex_value").when(eCKeyMock).getPrivateKeyAsHex();
+            doReturn("solved_getPrivateKeyAsWiF_value").when(eCKeyMock).getPrivateKeyAsWiF(networkMock);
             doReturn(true, false).when(target).isEncrypted();
             doReturn(false).when(target).isPubKeyOnly();
             byte[] byteArray2 = new byte[]{};
@@ -2416,32 +2296,21 @@ public class ECKeySapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        ECPoint eCPointMock = mock(ECPoint.class, "1");
-        Network networkMock = mock(Network.class, "MAINNET");
-        try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
-            byte[] byteArray = new byte[]{};
-            byteUtils.when(() -> ByteUtils.formatHex(byteArray)).thenReturn("<String>");
-            ECKey target = spy(new ECKey((BigInteger) null, eCPointMock, true));
-            doReturn(byteArray).when(pubMock).getEncoded();
-            doReturn(eCKeyMock).when(target).decrypt((AesKey) any());
-            doReturn("<String>").when(eCKeyMock).getPrivateKeyAsHex();
-            doReturn("<String>").when(eCKeyMock).getPrivateKeyAsWiF(networkMock);
-            doReturn(true, false).when(target).isEncrypted();
-            doReturn(false).when(target).isPubKeyOnly();
-            byte[] byteArray2 = new byte[]{};
-            AesKey aesKey = new AesKey(byteArray2);
-            //Act Statement(s)
-            String result = target.toStringWithPrivate(aesKey, networkMock);
-            //Assert statement(s)
-            assertThat(result, equalTo("toString_moreObjects.ToStringHelper2"));
-            byteUtils.verify(() -> ByteUtils.formatHex(byteArray), atLeast(1));
-            verify(pubMock).getEncoded();
-            verify(target, times(2)).isEncrypted();
-            verify(target).decrypt((AesKey) any());
-            verify(eCKeyMock).getPrivateKeyAsHex();
-            verify(eCKeyMock).getPrivateKeyAsWiF(networkMock);
-            verify(target).isPubKeyOnly();
-        }
+        ECKey target = spy(new ECKey((BigInteger) null, eCPointMock, false));
+        doReturn(eCKeyMock).when(target).decrypt(aesKeyMock);
+        doReturn("return_of_getPrivateKeyAsHex1").when(eCKeyMock).getPrivateKeyAsHex();
+        doReturn("return_of_getPrivateKeyAsWiF1").when(eCKeyMock).getPrivateKeyAsWiF(networkMock);
+        doReturn(true, false).when(target).isEncrypted();
+        doReturn(false).when(target).isPubKeyOnly();
+        //Act Statement(s)
+        String result = target.toStringWithPrivate(aesKeyMock, networkMock);
+        //Assert statement(s)
+        assertThat(result, equalTo("toString_moreObjects.ToStringHelper2"));
+        verify(target, times(2)).isEncrypted();
+        verify(target).decrypt(aesKeyMock);
+        verify(eCKeyMock).getPrivateKeyAsHex();
+        verify(eCKeyMock).getPrivateKeyAsWiF(networkMock);
+        verify(target).isPubKeyOnly();
     }
 
     //Sapient generated method id: ${f53b019d-a53e-3c35-9234-a04367bc2912}
@@ -2460,26 +2329,21 @@ public class ECKeySapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        try (MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
-            byte[] byteArray = new byte[]{};
-            byteUtils.when(() -> ByteUtils.formatHex(byteArray)).thenReturn("02a8a6e7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c7c");
-            ECKey target = spy(new ECKey((BigInteger) null, eCPointMock, false));
-            doReturn(eCKeyMock).when(target).decrypt(aesKeyMock);
-            doReturn("123456789").when(eCKeyMock).getPrivateKeyAsHex();
-            doReturn("L3eLJ1qJ3J1J1J1J1J1J1J1J1J1J1J1J1J1J1J1J1J1").when(eCKeyMock).getPrivateKeyAsWiF(networkMock);
-            doReturn(true, false).when(target).isEncrypted();
-            doReturn(false).when(target).isPubKeyOnly();
-            //Act Statement(s)
-            String result = target.toStringWithPrivate(aesKeyMock, networkMock);
-            //Assert statement(s)
-            assertThat(result, equalTo("toString_moreObjects.ToStringHelper2"));
-            byteUtils.verify(() -> ByteUtils.formatHex(byteArray), atLeast(1));
-            verify(target, times(2)).isEncrypted();
-            verify(target).decrypt(aesKeyMock);
-            verify(eCKeyMock).getPrivateKeyAsHex();
-            verify(eCKeyMock).getPrivateKeyAsWiF(networkMock);
-            verify(target).isPubKeyOnly();
-        }
+        ECKey target = spy(new ECKey((BigInteger) null, eCPointMock, false));
+        doReturn(eCKeyMock).when(target).decrypt(aesKeyMock);
+        doReturn("return_of_getPrivateKeyAsHex1").when(eCKeyMock).getPrivateKeyAsHex();
+        doReturn("return_of_getPrivateKeyAsWiF1").when(eCKeyMock).getPrivateKeyAsWiF(networkMock);
+        doReturn(true, false).when(target).isEncrypted();
+        doReturn(false).when(target).isPubKeyOnly();
+        //Act Statement(s)
+        String result = target.toStringWithPrivate(aesKeyMock, networkMock);
+        //Assert statement(s)
+        assertThat(result, equalTo("toString_moreObjects.ToStringHelper2"));
+        verify(target, times(2)).isEncrypted();
+        verify(target).decrypt(aesKeyMock);
+        verify(eCKeyMock).getPrivateKeyAsHex();
+        verify(eCKeyMock).getPrivateKeyAsWiF(networkMock);
+        verify(target).isPubKeyOnly();
     }
 
     //Sapient generated method id: ${7f603b49-10d4-30e2-9888-4c99700b69fd}
@@ -2592,31 +2456,6 @@ public class ECKeySapientGeneratedJunit4Test {
         verify(target).toStringWithPrivate(aesKeyMock, networkMock);
     }
 
-    //Sapient generated method id: ${a083f203-2072-363d-b6f3-21d883405eb5}
-    @Test()
-    public void formatKeyWithAddressWhenNotIncludePrivateKeys() throws Exception {
-        /* Branches:
-         * (outputScriptType != null) : true
-         * (!isCompressed()) : true
-         * (creationTime != null) : false
-         * (comment != null) : true
-         * (includePrivateKeys) : false
-         */
-        //Arrange Statement(s)
-        ECKey target = spy(new ECKey((BigInteger) null, eCPointMock, false));
-        doReturn(addressMock).when(target).toAddress(ScriptType.P2PKH, networkMock);
-        doReturn(false).when(target).isCompressed();
-        byte[] byteArray = new byte[]{};
-        doReturn(byteArray).when(target).getPubKeyHash();
-        StringBuilder stringBuilder = new StringBuilder();
-        //Act Statement(s)
-        target.formatKeyWithAddress(false, aesKeyMock, stringBuilder, networkMock, ScriptType.P2PKH, "");
-        //Assert statement(s)
-        verify(target).toAddress(ScriptType.P2PKH, networkMock);
-        verify(target).isCompressed();
-        verify(target).getPubKeyHash();
-    }
-
     //Sapient generated method id: ${dc218c70-b931-3940-94a6-8902b834f344}
     @Ignore()
     @Test()
@@ -2658,11 +2497,11 @@ public class ECKeySapientGeneratedJunit4Test {
         doReturn(networkMock).when(paramsMock).network();
         ECKey target = spy(new ECKey((BigInteger) null, eCPointMock, false));
         StringBuilder stringBuilder = new StringBuilder();
-        doNothing().when(target).formatKeyWithAddress(false, aesKeyMock, stringBuilder, networkMock, ScriptType.P2PKH, "");
+        doNothing().when(target).formatKeyWithAddress(false, aesKeyMock, stringBuilder, networkMock, ScriptType.P2PKH, "comment1");
         //Act Statement(s)
-        target.formatKeyWithAddress(false, aesKeyMock, stringBuilder, paramsMock, ScriptType.P2PKH, "");
+        target.formatKeyWithAddress(false, aesKeyMock, stringBuilder, paramsMock, ScriptType.P2PKH, "comment1");
         //Assert statement(s)
         verify(paramsMock).network();
-        verify(target).formatKeyWithAddress(false, aesKeyMock, stringBuilder, networkMock, ScriptType.P2PKH, "");
+        verify(target).formatKeyWithAddress(false, aesKeyMock, stringBuilder, networkMock, ScriptType.P2PKH, "comment1");
     }
 }

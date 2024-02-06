@@ -54,6 +54,8 @@ public class PartialMerkleTreeSapientGeneratedJunit4Test {
     @Rule()
     public ExpectedException thrown = ExpectedException.none();
 
+    private final Sha256Hash sha256Hash2Mock = mock(Sha256Hash.class);
+
     //Sapient generated method id: ${4aa4bedf-c7b1-3c8b-9764-9ede7c68f03b}
     @Test()
     public void readWhenILessThanNHashes() throws Throwable {
@@ -176,41 +178,24 @@ public class PartialMerkleTreeSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Sha256Hash sha256Hash3Mock = mock(Sha256Hash.class, "true");
-        Sha256Hash sha256Hash3Mock2 = mock(Sha256Hash.class, "true");
-        try (MockedStatic<Sha256Hash> sha256Hash = mockStatic(Sha256Hash.class);
-             MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class)) {
-            byte[] byteArray = new byte[]{(byte) 0};
+        try (MockedStatic<Sha256Hash> sha256Hash = mockStatic(Sha256Hash.class, CALLS_REAL_METHODS);
+             MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class, CALLS_REAL_METHODS)) {
+            byte[] byteArray = new byte[]{};
             byteUtils.when(() -> ByteUtils.checkBitLE(byteArray, 0)).thenReturn(false);
-            byteUtils.when(() -> ByteUtils.checkBitLE(byteArray, 1)).thenReturn(false);
-            byte[] byteArray2 = new byte[]{};
-            byte[] byteArray3 = new byte[]{};
-            byteUtils.when(() -> ByteUtils.reverseBytes(byteArray3)).thenReturn(byteArray2);
-            byte[] byteArray4 = new byte[]{};
-            byte[] byteArray5 = new byte[]{};
-            byteUtils.when(() -> ByteUtils.reverseBytes(byteArray5)).thenReturn(byteArray4);
-            byte[] byteArray6 = new byte[]{(byte) 93, (byte) -10, (byte) -32, (byte) -30, (byte) 118, (byte) 19, (byte) 89, (byte) -45, (byte) 10, (byte) -126, (byte) 117, (byte) 5, (byte) -114, (byte) 41, (byte) -97, (byte) -52, (byte) 3, (byte) -127, (byte) 83, (byte) 69, (byte) 69, (byte) -11, (byte) 92, (byte) -12, (byte) 62, (byte) 65, (byte) -104, (byte) 63, (byte) 93, (byte) 76, (byte) -108, (byte) 86};
-            sha256Hash.when(() -> Sha256Hash.hashTwice(byteArray2, byteArray4)).thenReturn(byteArray6);
-            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(0);
-            Sha256Hash sha256Hash2 = Sha256Hash.read(byteBuffer);
-            sha256Hash.when(() -> Sha256Hash.wrapReversed(byteArray6)).thenReturn(sha256Hash2);
+            byte[] byteArray2 = new byte[]{(byte) 93, (byte) -10, (byte) -32, (byte) -30, (byte) 118, (byte) 19, (byte) 89, (byte) -45, (byte) 10, (byte) -126, (byte) 117, (byte) 5, (byte) -114, (byte) 41, (byte) -97, (byte) -52, (byte) 3, (byte) -127, (byte) 83, (byte) 69, (byte) 69, (byte) -11, (byte) 92, (byte) -12, (byte) 62, (byte) 65, (byte) -104, (byte) 63, (byte) 93, (byte) 76, (byte) -108, (byte) 86};
+            sha256Hash.when(() -> Sha256Hash.wrapReversed(byteArray2)).thenReturn(sha256HashMock);
             List<Sha256Hash> sha256HashList = new ArrayList<>();
-            sha256HashList.add(sha256Hash3Mock);
-            sha256HashList.add(sha256Hash3Mock2);
+            sha256HashList.add(sha256Hash2Mock);
             //Act Statement(s)
             PartialMerkleTree result = PartialMerkleTree.buildFromLeaves(byteArray, sha256HashList);
             List<Sha256Hash> sha256HashList2 = new ArrayList<>();
-            sha256HashList2.add(sha256Hash2);
-            byte[] byteArray7 = new byte[]{(byte) 0};
-            PartialMerkleTree partialMerkleTree = new PartialMerkleTree(2, sha256HashList2, byteArray7);
+            sha256HashList2.add(sha256HashMock);
+            byte[] byteArray3 = new byte[]{(byte) 0};
+            PartialMerkleTree partialMerkleTree = new PartialMerkleTree(1, sha256HashList2, byteArray3);
             //Assert statement(s)
             assertThat(result, equalTo(partialMerkleTree));
             byteUtils.verify(() -> ByteUtils.checkBitLE(byteArray, 0), atLeast(1));
-            byteUtils.verify(() -> ByteUtils.checkBitLE(byteArray, 1), atLeast(1));
-            byteUtils.verify(() -> ByteUtils.reverseBytes(byteArray3), atLeast(1));
-            byteUtils.verify(() -> ByteUtils.reverseBytes(byteArray5), atLeast(1));
-            sha256Hash.verify(() -> Sha256Hash.hashTwice(byteArray2, byteArray4), atLeast(1));
-            sha256Hash.verify(() -> Sha256Hash.wrapReversed(byteArray6), atLeast(1));
+            sha256Hash.verify(() -> Sha256Hash.wrapReversed(byteArray2), atLeast(1));
         }
     }
 
@@ -234,7 +219,6 @@ public class PartialMerkleTreeSapientGeneratedJunit4Test {
          *  The test code, including the assertion statements, has been successfully generated.
          */
         //Arrange Statement(s)
-        Sha256Hash sha256Hash2Mock = mock(Sha256Hash.class);
         try (MockedStatic<Sha256Hash> sha256Hash = mockStatic(Sha256Hash.class, CALLS_REAL_METHODS);
              MockedStatic<ByteUtils> byteUtils = mockStatic(ByteUtils.class, CALLS_REAL_METHODS)) {
             byte[] byteArray = new byte[]{};
@@ -310,13 +294,16 @@ public class PartialMerkleTreeSapientGeneratedJunit4Test {
         Sha256Hash sha256Hash = Sha256Hash.read(byteBuffer);
         ByteBuffer byteBuffer2 = ByteBuffer.allocateDirect(0);
         Sha256Hash sha256Hash2 = Sha256Hash.read(byteBuffer2);
+        ByteBuffer byteBuffer3 = ByteBuffer.allocateDirect(0);
+        Sha256Hash sha256Hash3 = Sha256Hash.read(byteBuffer3);
         List<Sha256Hash> sha256HashList = new ArrayList<>();
         sha256HashList.add(sha256Hash);
         sha256HashList.add(sha256Hash2);
-        byte[] byteArray = new byte[]{(byte) 0, (byte) 1, (byte) 0, (byte) 1};
-        PartialMerkleTree target = spy(new PartialMerkleTree(1, sha256HashList, byteArray));
-        ByteBuffer byteBuffer3 = ByteBuffer.allocateDirect(0);
-        doReturn(byteBuffer3).when(target).write((ByteBuffer) any());
+        sha256HashList.add(sha256Hash3);
+        byte[] byteArray = new byte[]{(byte) 1, (byte) 0, (byte) 1};
+        PartialMerkleTree target = spy(new PartialMerkleTree(10, sha256HashList, byteArray));
+        ByteBuffer byteBuffer4 = ByteBuffer.allocateDirect(0);
+        doReturn(byteBuffer4).when(target).write((ByteBuffer) any());
         //Act Statement(s)
         byte[] result = target.serialize();
         byte[] byteResultArray = new byte[]{};
@@ -637,8 +624,7 @@ public class PartialMerkleTreeSapientGeneratedJunit4Test {
             byteUtils.when(() -> ByteUtils.checkBitLE(byteArray, 0)).thenReturn(true);
             List<Sha256Hash> sha256HashList = new ArrayList<>();
             sha256HashList.add(sha256HashMock);
-            byte[] byteArray2 = new byte[]{(byte) 0};
-            PartialMerkleTree target = new PartialMerkleTree(1, sha256HashList, byteArray2);
+            PartialMerkleTree target = new PartialMerkleTree(1, sha256HashList, byteArray);
             List<Sha256Hash> sha256HashList2 = new ArrayList<>();
             //Act Statement(s)
             Sha256Hash result = target.getTxnHashAndMerkleRoot(sha256HashList2);

@@ -16,13 +16,13 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "DDCDB61AC50345348A7A2E5B85AD6EA1"
-    problemWasSolvedByProver: true
+    modelFingerprint: "E46F0EBAC2500CEFBFD51610A2B45C64"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
       name: "params"
-      modelFingerprint: "909FCB8DCA6367523087485A7F6E5496"
+      modelFingerprint: "63D09E7DFEAB15F7E65DCACCC8B23152"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -37,9 +37,11 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "id1"
+                value: "A"
+              suggestedContent: !<regular>
+                value: "A"
               valueType: "java.lang.String"
-              uuid: "openStream_networkParameters1-id"
+              uuid: "openStream_string1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -50,8 +52,10 @@ methods:
           - name: "id"
             value:
               sapientType: "BASIC"
+              suggestedContent: !<regular>
+                value: "A"
               valueType: "java.lang.String"
-              uuid: "openStream_networkParameters1-id"
+              uuid: "openStream_string1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -64,7 +68,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "params"
-      modelFingerprint: "C2EF5268F6E7DC470F326F68FF8DD2E0"
+      modelFingerprint: "1214DBD3625B4519C1589E40895341F0"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -79,9 +83,11 @@ methods:
             value:
               sapientType: "BASIC"
               content: !<regular>
-                value: "id1"
+                value: "A"
+              suggestedContent: !<regular>
+                value: "A"
               valueType: "java.lang.String"
-              uuid: "openStream_networkParameters1-id"
+              uuid: "openStream_string1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -92,8 +98,10 @@ methods:
           - name: "id"
             value:
               sapientType: "BASIC"
+              suggestedContent: !<regular>
+                value: "A"
               valueType: "java.lang.String"
-              uuid: "openStream_networkParameters1-id"
+              uuid: "openStream_string1"
               fixed: false
               equalsMethodPresent: false
               explicitCastNeeded: false
@@ -123,17 +131,19 @@ methods:
       filledByUser: false
     - type: "RESULT"
       name: "result"
-      modelFingerprint: "4DADEC03167E85C1124CFCA3003BDB7B"
+      modelFingerprint: "07A2D19F8BEACCE135BC406E06015891"
       index: 3
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "NULL"
+        sapientType: "INPUT_STREAM"
+        content: !<inputStream>
+          values: []
         valueType: "java.io.InputStream"
         uuid: "openStream_inputStream1"
         fixed: false
-        equalsMethodPresent: true
+        equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
@@ -141,7 +151,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "LLM"
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -582,12 +593,12 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       modelFingerprint: "E38C5190C06FCF1AA264DA6E4656D919"
-      index: 11
+      index: 7
       ignored: false
-      nestedInLoop: false
+      nestedInLoop: true
       nestedInRecursion: false
       idsTryCatchBlockSurrounding:
-      - 4
+      - 820002
       value:
         sapientType: "MOCK"
         suggestedContent: !<unknown_object>
@@ -595,7 +606,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.core.Block"
-        uuid: "getCheckpointBefore_block1"
+        uuid: "readTextual_block1"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -615,7 +626,7 @@ methods:
             method: "now"
             methodParameters: []
           valueType: "java.time.Instant"
-          uuid: "getCheckpointBefore_instant2"
+          uuid: "readTextual_instant1"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -696,6 +707,8 @@ methods:
             sapientType: "ARRAY"
             content: !<array>
               values: {}
+            suggestedContent: !<array>
+              values: {}
             valueType: "byte[]"
             uuid: "readTextual_byte[]3"
             fixed: false
@@ -760,7 +773,7 @@ methods:
       idsTryCatchBlockSurrounding:
       - 4
       value:
-        sapientType: "UNKNOWN"
+        sapientType: "MOCK"
         suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.Block"
           onlyPojoFunctions: false
@@ -776,7 +789,11 @@ methods:
         parameters: []
         signature: "time(): Instant"
         returnValue:
-          sapientType: "UNKNOWN"
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "java.time.Instant"
+            method: "now"
+            methodParameters: []
           suggestedContent: !<static_method_return>
             target: "java.time.Instant"
             method: "now"
@@ -1277,12 +1294,12 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       modelFingerprint: "E38C5190C06FCF1AA264DA6E4656D919"
-      index: 11
+      index: 7
       ignored: false
-      nestedInLoop: false
+      nestedInLoop: true
       nestedInRecursion: false
       idsTryCatchBlockSurrounding:
-      - 4
+      - 820002
       value:
         sapientType: "MOCK"
         suggestedContent: !<unknown_object>
@@ -1290,7 +1307,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.core.Block"
-        uuid: "getCheckpointBefore_block1"
+        uuid: "readTextual_block1"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -1310,7 +1327,7 @@ methods:
             method: "now"
             methodParameters: []
           valueType: "java.time.Instant"
-          uuid: "getCheckpointBefore_instant2"
+          uuid: "readTextual_instant1"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -1391,6 +1408,8 @@ methods:
             sapientType: "ARRAY"
             content: !<array>
               values: {}
+            suggestedContent: !<array>
+              values: {}
             valueType: "byte[]"
             uuid: "readTextual_byte[]3"
             fixed: false
@@ -1410,12 +1429,12 @@ methods:
     - type: "FIELD"
       name: "params"
       modelFingerprint: "476FE7AD40757BFF25839E09E3957894"
-      index: 13
+      index: 10
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       idsTryCatchBlockSurrounding:
-      - 5
+      - 4
       value:
         sapientType: "MOCK"
         suggestedContent: !<unknown_object>
@@ -1439,7 +1458,7 @@ methods:
             onlyPojoFunctions: false
             builderPattern: false
           valueType: "org.bitcoinj.core.Block"
-          uuid: "getCheckpointBefore_block2"
+          uuid: "getCheckpointBefore_block1"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -2167,12 +2186,12 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       modelFingerprint: "E38C5190C06FCF1AA264DA6E4656D919"
-      index: 11
+      index: 7
       ignored: false
-      nestedInLoop: false
+      nestedInLoop: true
       nestedInRecursion: false
       idsTryCatchBlockSurrounding:
-      - 4
+      - 820002
       value:
         sapientType: "MOCK"
         suggestedContent: !<unknown_object>
@@ -2180,7 +2199,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.core.Block"
-        uuid: "getCheckpointBefore_block1"
+        uuid: "readTextual_block1"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -2200,7 +2219,7 @@ methods:
             method: "now"
             methodParameters: []
           valueType: "java.time.Instant"
-          uuid: "getCheckpointBefore_instant2"
+          uuid: "readTextual_instant1"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -2281,6 +2300,8 @@ methods:
             sapientType: "ARRAY"
             content: !<array>
               values: {}
+            suggestedContent: !<array>
+              values: {}
             valueType: "byte[]"
             uuid: "readTextual_byte[]3"
             fixed: false
@@ -2345,7 +2366,7 @@ methods:
       idsTryCatchBlockSurrounding:
       - 4
       value:
-        sapientType: "UNKNOWN"
+        sapientType: "MOCK"
         suggestedContent: !<unknown_object>
           target: "org.bitcoinj.core.Block"
           onlyPojoFunctions: false
@@ -2361,7 +2382,11 @@ methods:
         parameters: []
         signature: "time(): Instant"
         returnValue:
-          sapientType: "UNKNOWN"
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "java.time.Instant"
+            method: "now"
+            methodParameters: []
           suggestedContent: !<static_method_return>
             target: "java.time.Instant"
             method: "now"
@@ -2893,12 +2918,12 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       modelFingerprint: "E38C5190C06FCF1AA264DA6E4656D919"
-      index: 11
+      index: 7
       ignored: false
-      nestedInLoop: false
+      nestedInLoop: true
       nestedInRecursion: false
       idsTryCatchBlockSurrounding:
-      - 4
+      - 820002
       value:
         sapientType: "MOCK"
         suggestedContent: !<unknown_object>
@@ -2906,7 +2931,7 @@ methods:
           onlyPojoFunctions: false
           builderPattern: false
         valueType: "org.bitcoinj.core.Block"
-        uuid: "getCheckpointBefore_block1"
+        uuid: "readTextual_block1"
         fixed: false
         equalsMethodPresent: false
         explicitCastNeeded: false
@@ -2926,7 +2951,7 @@ methods:
             method: "now"
             methodParameters: []
           valueType: "java.time.Instant"
-          uuid: "getCheckpointBefore_instant2"
+          uuid: "readTextual_instant1"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -3007,6 +3032,8 @@ methods:
             sapientType: "ARRAY"
             content: !<array>
               values: {}
+            suggestedContent: !<array>
+              values: {}
             valueType: "byte[]"
             uuid: "readTextual_byte[]3"
             fixed: false
@@ -3026,12 +3053,12 @@ methods:
     - type: "FIELD"
       name: "params"
       modelFingerprint: "476FE7AD40757BFF25839E09E3957894"
-      index: 13
+      index: 10
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       idsTryCatchBlockSurrounding:
-      - 5
+      - 4
       value:
         sapientType: "MOCK"
         suggestedContent: !<unknown_object>
@@ -3055,7 +3082,7 @@ methods:
             onlyPojoFunctions: false
             builderPattern: false
           valueType: "org.bitcoinj.core.Block"
-          uuid: "getCheckpointBefore_block2"
+          uuid: "getCheckpointBefore_block1"
           fixed: false
           equalsMethodPresent: false
           explicitCastNeeded: false
@@ -3923,6 +3950,8 @@ methods:
             sapientType: "ARRAY"
             content: !<array>
               values: {}
+            suggestedContent: !<array>
+              values: {}
             valueType: "byte[]"
             uuid: "readTextual_byte[]3"
             fixed: false
@@ -4599,6 +4628,8 @@ methods:
             sapientType: "ARRAY"
             content: !<array>
               values: {}
+            suggestedContent: !<array>
+              values: {}
             valueType: "byte[]"
             uuid: "readTextual_byte[]3"
             fixed: false
@@ -4706,7 +4737,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "A553AF32020D283434DAC645DE32FD54"
-    problemWasSolvedByProver: false
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
@@ -4865,13 +4896,11 @@ methods:
       filledByUser: false
     uuid: "80743552-f341-3c4d-b1ab-8fd557cd048c"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
-    failureReason:
-      reason: "UNKNOWN_REASON"
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path2"
     testPathName: "checkpointWhenStoreInstanceOfFullPrunedBlockStoreThrowsIllegalArgumentException"

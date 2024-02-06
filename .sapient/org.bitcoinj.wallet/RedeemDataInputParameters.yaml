@@ -475,7 +475,7 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "F8C8E1A8712BEAD9B32105BBC7ED9409"
+    modelFingerprint: "B73524072937701322E8332624FC1C06"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
@@ -513,7 +513,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "ScriptPattern"
-      modelFingerprint: "AFAFD398E6F0C95BDAB79E80A5CB9A4B"
+      modelFingerprint: "55B65DA30A56CF748E86A89CDDA4B3A1"
       index: 3
       ignored: false
       nestedInLoop: false
@@ -554,7 +554,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "ScriptPattern"
-      modelFingerprint: "B43B303F11D823830DD0AF807854D776"
+      modelFingerprint: "CC77298EAC811FCD679C82528153F09C"
       index: 4
       ignored: false
       nestedInLoop: false
@@ -595,7 +595,7 @@ methods:
       filledByUser: false
     - type: "STATIC"
       name: "ScriptPattern"
-      modelFingerprint: "A47265E1A8401B2211408DE0F6D0147C"
+      modelFingerprint: "E82CB65D21D328460E09898597D89477"
       index: 5
       ignored: false
       nestedInLoop: false
@@ -765,7 +765,6 @@ methods:
     ignoredBySystem: false
     failureReason:
       reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
-    prover: "LLM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
   - pathId: "path2"
@@ -777,10 +776,219 @@ methods:
     priority: "LOW"
     modelFingerprint: "CDEC72B73593F249B78434B8252CC5D7"
     problemWasSolvedByProver: true
-    truncated: true
-    inputParameters: []
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "key"
+      modelFingerprint: "F0633AD7841EA77C69F7E3CA53ADFF90"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        valueType: "org.bitcoinj.crypto.ECKey"
+        uuid: "of_eCKey1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "redeemScript"
+      modelFingerprint: "E224839605F075F14EE2F9D73901D4A4"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.script.Script"
+        uuid: "of_script1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "ScriptPattern"
+      modelFingerprint: "55B65DA30A56CF748E86A89CDDA4B3A1"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.script.ScriptPattern"
+        uuid: "org.bitcoinj.script.ScriptPattern"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.script.ScriptPattern"
+        name: "isP2PKH"
+        parameters:
+        - name: "script"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.script.Script"
+            uuid: "of_script1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "isP2PKH(Script): boolean"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: false
+          suggestedContent: !<regular>
+            value: false
+          valueType: "boolean"
+          uuid: "of_boolean1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "ScriptPattern"
+      modelFingerprint: "CC77298EAC811FCD679C82528153F09C"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.script.ScriptPattern"
+        uuid: "org.bitcoinj.script.ScriptPattern"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.script.ScriptPattern"
+        name: "isP2WPKH"
+        parameters:
+        - name: "script"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.script.Script"
+            uuid: "of_script1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "isP2WPKH(Script): boolean"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: false
+          suggestedContent: !<regular>
+            value: false
+          valueType: "boolean"
+          uuid: "of_boolean2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "ScriptPattern"
+      modelFingerprint: "E82CB65D21D328460E09898597D89477"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.script.ScriptPattern"
+        uuid: "org.bitcoinj.script.ScriptPattern"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.script.ScriptPattern"
+        name: "isP2PK"
+        parameters:
+        - name: "script"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.script.Script"
+            uuid: "of_script1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "isP2PK(Script): boolean"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: true
+          suggestedContent: !<regular>
+            value: true
+          valueType: "boolean"
+          uuid: "of_boolean3"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "60A6CF81A4B62FC26CAD9062FF6E1448"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "REAL"
+        valueType: "org.bitcoinj.base.internal.Preconditions"
+        uuid: "org.bitcoinj.base.internal.Preconditions"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: true
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "checkArgument(boolean): void"
+        returnValue:
+          sapientType: "VOID"
+          valueType: "void"
+          uuid: "of_void1"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "E982E7C249AF5BE6878FF1D453EDFC05"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        valueType: "org.bitcoinj.wallet.RedeemData"
+        uuid: "of_redeemData1"
+        fixed: true
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
     uuid: "9d1e8e57-907f-33a3-b30e-6041e5041e34"
-    deleted: true
+    deleted: false
     disabled: false
     ignoredBySystem: false
     prover: "DEFAULT"

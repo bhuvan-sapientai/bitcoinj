@@ -1,5 +1,5 @@
 ---
-modelFingerprint: "0D04CB778245364640A5288184A287F2"
+modelFingerprint: "8C20088C9B481CD802D5E05DE96F22B7"
 methods:
 - method:
     name: "coinbaseInput"
@@ -19,126 +19,10 @@ methods:
     priority: "LOW"
     modelFingerprint: "9F0404DC57FA461DD0DE226DBF42A031"
     problemWasSolvedByProver: true
-    truncated: false
-    inputParameters:
-    - type: "INPUT"
-      name: "parentTransaction"
-      modelFingerprint: "712E4C9EF6BD25D3CDFF3E4BFB717331"
-      index: 1
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.core.Transaction"
-        uuid: "coinbaseInput_transaction1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INPUT"
-      name: "scriptBytes"
-      modelFingerprint: "ACE07134C375A74A976487C06AB082E0"
-      index: 2
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "ARRAY"
-        content: !<array>
-          values: {}
-        suggestedContent: !<array>
-          values: {}
-        valueType: "byte[]"
-        uuid: "coinbaseInput_byte[]1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Preconditions"
-      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
-      index: 3
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.Preconditions"
-        uuid: "org.bitcoinj.base.internal.Preconditions"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.Preconditions"
-        name: "checkArgument"
-        parameters:
-        - name: "expression"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: false
-            valueType: "boolean"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "messageSupplier"
-          value:
-            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-            valueType: "java.util.function.Supplier"
-            genericValueType: "java.lang.String"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "checkArgument(boolean,Supplier): void"
-        returnValue:
-          sapientType: "EXCEPTION"
-          content: !<new>
-            target: "java.lang.IllegalArgumentException"
-            parameters: []
-            privateConstructor: false
-            createdByTargetCode: false
-          suggestedContent: !<new>
-            target: "java.lang.IllegalArgumentException"
-            parameters: []
-            privateConstructor: false
-            createdByTargetCode: false
-          valueType: "java.lang.IllegalArgumentException"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "3E9C76AB51311DE97AE9C2294CD5E1D6"
-      index: 4
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "EXCEPTION"
-        content: !<new>
-          target: "java.lang.IllegalArgumentException"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "java.lang.IllegalArgumentException"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
-        valueType: "java.lang.IllegalArgumentException"
-        fixed: true
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
+    truncated: true
+    inputParameters: []
     uuid: "a7ac346b-7b91-3b2a-82b8-24708ff3863e"
-    deleted: false
+    deleted: true
     disabled: false
     ignoredBySystem: true
     prover: "DEFAULT"
@@ -152,7 +36,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "7DC732E07DE2AA7718DB220B9EC48752"
-    problemWasSolvedByProver: false
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "INPUT"
@@ -309,13 +193,11 @@ methods:
       filledByUser: false
     uuid: "086d8d32-3798-3ce3-87ef-2066773d7acb"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
-    failureReason:
-      reason: "UNKNOWN_REASON"
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path3"
     testPathName: "coinbaseInputWhenScriptBytesLengthGreaterThan100ThrowsIllegalArgumentException"
@@ -323,8 +205,8 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "72DCDB593C8AB84D0E14198CE8123561"
-    problemWasSolvedByProver: true
+    modelFingerprint: "4FEFAFEEAC2921A8935A89F4EE44C124"
+    problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "INPUT"
@@ -345,7 +227,7 @@ methods:
       filledByUser: false
     - type: "INPUT"
       name: "scriptBytes"
-      modelFingerprint: "C30ACBA409C6C6EDFD63875326A01914"
+      modelFingerprint: "75DC6BCF8AD250AE5FC6FC91C0406ED9"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -353,1827 +235,9 @@ methods:
       value:
         sapientType: "ARRAY"
         content: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item0"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            1:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 1
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            2:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 2
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            3:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 3
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item3"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            4:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 4
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item4"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            5:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 5
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item5"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            6:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 6
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item6"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            7:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 7
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item7"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            8:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 8
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item8"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            9:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 9
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item9"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            10:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 10
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item10"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            11:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 11
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item11"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            12:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 12
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item12"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            13:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 13
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item13"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            14:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 14
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item14"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            15:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 15
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item15"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            16:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 16
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item16"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            17:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 17
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item17"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            18:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 18
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item18"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            19:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 19
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item19"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            20:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 20
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item20"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            21:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 21
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item21"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            22:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 22
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item22"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            23:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 23
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item23"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            24:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 24
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item24"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            25:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 25
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item25"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            26:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 26
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item26"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            27:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 27
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item27"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            28:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 28
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item28"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            29:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 29
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item29"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            30:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 30
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item30"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            31:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 31
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item31"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            32:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 32
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item32"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            33:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 33
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item33"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            34:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 34
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item34"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            35:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 35
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item35"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            36:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 36
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item36"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            37:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 37
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item37"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            38:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 38
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item38"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            39:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 39
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item39"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            40:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 40
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item40"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            41:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 41
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item41"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            42:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 42
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item42"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            43:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 43
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item43"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            44:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 44
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item44"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            45:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 45
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item45"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            46:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 46
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item46"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            47:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 47
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item47"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            48:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 48
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item48"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            49:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 49
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item49"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            50:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 50
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item50"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            51:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 51
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item51"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            52:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 52
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item52"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            53:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 53
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item53"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            54:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 54
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item54"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            55:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 55
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item55"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            56:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 56
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item56"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            57:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 57
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item57"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            58:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 58
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item58"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            59:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 59
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item59"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            60:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 60
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item60"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            61:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 61
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item61"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            62:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 62
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item62"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            63:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 63
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item63"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            64:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 64
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item64"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            65:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 65
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item65"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            66:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 66
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item66"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            67:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 67
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item67"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            68:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 68
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item68"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            69:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 69
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item69"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            70:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 70
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item70"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            71:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 71
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item71"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            72:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 72
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item72"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            73:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 73
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item73"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            74:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 74
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item74"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            75:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 75
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item75"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            76:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 76
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item76"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            77:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 77
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item77"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            78:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 78
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item78"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            79:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 79
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item79"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            80:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 80
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item80"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            81:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 81
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item81"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            82:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 82
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item82"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            83:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 83
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item83"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            84:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 84
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item84"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            85:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 85
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item85"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            86:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 86
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item86"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            87:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 87
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item87"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            88:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 88
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item88"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            89:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 89
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item89"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            90:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 90
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item90"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            91:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 91
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item91"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            92:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 92
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item92"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            93:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 93
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item93"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            94:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 94
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item94"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            95:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 95
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item95"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            96:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 96
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item96"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            97:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 97
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item97"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            98:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 98
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item98"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            99:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 99
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item99"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            100:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 100
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item100"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          values: {}
         suggestedContent: !<array>
-          values:
-            0:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 0
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item0"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            1:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 1
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            2:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 2
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item2"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            3:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 3
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item3"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            4:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 4
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item4"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            5:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 5
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item5"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            6:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 6
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item6"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            7:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 7
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item7"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            8:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 8
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item8"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            9:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 9
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item9"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            10:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 10
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item10"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            11:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 11
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item11"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            12:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 12
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item12"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            13:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 13
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item13"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            14:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 14
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item14"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            15:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 15
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item15"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            16:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 16
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item16"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            17:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 17
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item17"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            18:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 18
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item18"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            19:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 19
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item19"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            20:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 20
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item20"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            21:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 21
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item21"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            22:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 22
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item22"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            23:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 23
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item23"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            24:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 24
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item24"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            25:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 25
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item25"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            26:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 26
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item26"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            27:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 27
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item27"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            28:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 28
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item28"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            29:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 29
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item29"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            30:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 30
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item30"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            31:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 31
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item31"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            32:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 32
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item32"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            33:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 33
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item33"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            34:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 34
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item34"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            35:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 35
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item35"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            36:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 36
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item36"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            37:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 37
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item37"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            38:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 38
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item38"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            39:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 39
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item39"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            40:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 40
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item40"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            41:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 41
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item41"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            42:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 42
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item42"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            43:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 43
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item43"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            44:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 44
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item44"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            45:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 45
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item45"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            46:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 46
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item46"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            47:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 47
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item47"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            48:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 48
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item48"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            49:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 49
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item49"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            50:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 50
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item50"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            51:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 51
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item51"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            52:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 52
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item52"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            53:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 53
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item53"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            54:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 54
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item54"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            55:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 55
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item55"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            56:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 56
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item56"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            57:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 57
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item57"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            58:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 58
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item58"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            59:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 59
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item59"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            60:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 60
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item60"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            61:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 61
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item61"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            62:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 62
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item62"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            63:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 63
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item63"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            64:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 64
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item64"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            65:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 65
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item65"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            66:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 66
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item66"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            67:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 67
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item67"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            68:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 68
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item68"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            69:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 69
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item69"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            70:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 70
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item70"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            71:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 71
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item71"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            72:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 72
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item72"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            73:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 73
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item73"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            74:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 74
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item74"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            75:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 75
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item75"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            76:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 76
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item76"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            77:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 77
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item77"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            78:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 78
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item78"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            79:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 79
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item79"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            80:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 80
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item80"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            81:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 81
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item81"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            82:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 82
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item82"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            83:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 83
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item83"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            84:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 84
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item84"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            85:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 85
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item85"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            86:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 86
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item86"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            87:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 87
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item87"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            88:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 88
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item88"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            89:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 89
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item89"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            90:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 90
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item90"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            91:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 91
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item91"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            92:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 92
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item92"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            93:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 93
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item93"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            94:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 94
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item94"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            95:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 95
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item95"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            96:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 96
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item96"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            97:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 97
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item97"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            98:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 98
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item98"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            99:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 99
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item99"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-            100:
-              sapientType: "BASIC"
-              content: !<regular>
-                value: 100
-              valueType: "byte"
-              uuid: "coinbaseInput_byte[]1Item100"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
+          values: {}
         valueType: "byte[]"
         uuid: "coinbaseInput_byte[]1"
         fixed: false
@@ -2265,7 +329,8 @@ methods:
     deleted: false
     disabled: false
     ignoredBySystem: false
-    prover: "DEFAULT"
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
     disabledStatusUpdatedByUser: false
     disabledStatusUpdatedBySystem: false
 - method:
@@ -2474,6 +539,8 @@ methods:
           sapientType: "ARRAY"
           content: !<array>
             values: {}
+          suggestedContent: !<array>
+            values: {}
           valueType: "byte[]"
           uuid: "read_byte[]1"
           fixed: false
@@ -2598,7 +665,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "36256F63E95F6F8C34A76BFB81C47DFF"
-      index: 6
+      index: 7
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -2926,7 +993,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       modelFingerprint: "0493032C9BAF148FB08CBFEF9D1DA56A"
-      index: 2
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -2966,7 +1033,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "9328854D7739B5AF872CA37444F14FF2"
-      index: 3
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -3807,7 +1874,7 @@ methods:
     - type: "STATIC"
       name: "VarInt"
       modelFingerprint: "4E5004D74314CB7D2EEEAAFD66952691"
-      index: 2
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -3853,7 +1920,7 @@ methods:
     - type: "FIELD"
       name: "outpoint"
       modelFingerprint: "E896A44D6A59D2502E7466934617CE1B"
-      index: 3
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -3890,7 +1957,7 @@ methods:
     - type: "STATIC"
       name: "Buffers"
       modelFingerprint: "53CE1EBD479781F7F8BF084A613DA734"
-      index: 4
+      index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -3994,7 +2061,7 @@ methods:
     - type: "STATIC"
       name: "ByteUtils"
       modelFingerprint: "67763EB9CBB93F0491F14564E27BA6E3"
-      index: 5
+      index: 7
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -4095,7 +2162,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "4C7C11B3555B42656FBE351307740D18"
-      index: 6
+      index: 8
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -5064,7 +3131,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "207C944278ED2CF54600E238C6BDA5D4"
-      index: 2
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -5077,6 +3144,8 @@ methods:
           sapientType: "ARRAY"
           content: !<array>
             values: {}
+          suggestedContent: !<array>
+            values: {}
           valueType: "byte[]"
           uuid: "bitcoinSerialize_byte[]1"
           fixed: false
@@ -5088,13 +3157,15 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "740324D8AEEA83F5639543B37CAABC19"
-      index: 3
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
         sapientType: "ARRAY"
         content: !<array>
+          values: {}
+        suggestedContent: !<array>
           values: {}
         valueType: "byte[]"
         uuid: "bitcoinSerialize_byte[]1"
@@ -5319,7 +3390,7 @@ methods:
     - type: "STATIC"
       name: "VarInt"
       modelFingerprint: "4E5004D74314CB7D2EEEAAFD66952691"
-      index: 2
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -5365,7 +3436,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "F0F6A3BDE2A102D0FBC0B26FC781BB96"
-      index: 3
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -5598,7 +3669,7 @@ methods:
     - type: "STATIC"
       name: "VarInt"
       modelFingerprint: "4E5004D74314CB7D2EEEAAFD66952691"
-      index: 2
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -5644,7 +3715,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "F0F6A3BDE2A102D0FBC0B26FC781BB96"
-      index: 3
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -5686,256 +3757,10 @@ methods:
     priority: "LOW"
     modelFingerprint: "0378479270BF41E3D45C81D9D8888A57"
     problemWasSolvedByProver: true
-    truncated: false
-    inputParameters:
-    - type: "CONSTRUCTOR"
-      modelFingerprint: "63DB563EA1F8B2F7340C840CC5C192AC"
-      index: 1
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.core.TransactionInput"
-          parameters:
-          - name: "parentTransaction"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "<init>_transaction1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "scriptBytes"
-            value:
-              sapientType: "ARRAY"
-              content: !<array>
-                values: {}
-              suggestedContent: !<array>
-                values: {}
-              valueType: "byte[]"
-              uuid: "<init>_byte[]1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "outpoint"
-            value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.core.TransactionOutPoint"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.core.TransactionOutPoint"
-              uuid: "<init>_transactionOutPoint1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "value"
-            value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.base.Coin"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.base.Coin"
-              uuid: "<init>_coin1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.core.TransactionInput"
-          parameters:
-          - name: "parentTransaction"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "<init>_transaction1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "scriptBytes"
-            value:
-              sapientType: "ARRAY"
-              valueType: "byte[]"
-              uuid: "<init>_byte[]1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "outpoint"
-            value:
-              sapientType: "UNKNOWN"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.core.TransactionOutPoint"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.core.TransactionOutPoint"
-              uuid: "<init>_transactionOutPoint1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "value"
-            value:
-              sapientType: "UNKNOWN"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.base.Coin"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.base.Coin"
-              uuid: "<init>_coin1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        valueType: "org.bitcoinj.core.TransactionInput"
-        uuid: "target"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "value"
-      modelFingerprint: "2FA8228322760FBFC20CDE1983242629"
-      index: 2
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.base.Coin"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.base.Coin"
-        uuid: "<init>_coin1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "value"
-        name: "signum"
-        parameters: []
-        signature: "signum(): int"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: 1
-          suggestedContent: !<regular>
-            value: 1
-          valueType: "int"
-          uuid: "<init>_int1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Preconditions"
-      modelFingerprint: "EE07D40EFD4ADC96C83D317FAE9481C2"
-      index: 3
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.Preconditions"
-        uuid: "org.bitcoinj.base.internal.Preconditions"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.Preconditions"
-        name: "checkArgument"
-        parameters:
-        - name: "expression"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: true
-            valueType: "boolean"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "messageSupplier"
-          value:
-            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-            valueType: "java.util.function.Supplier"
-            genericValueType: "java.lang.String"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "checkArgument(boolean,Supplier): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "<init>_void1"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "FIELD"
-      name: "outpoint"
-      modelFingerprint: "2EF31492D24F0B98405180583A371864"
-      index: 4
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.core.TransactionOutPoint"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.core.TransactionOutPoint"
-        uuid: "<init>_transactionOutPoint1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "this.outpoint"
-        name: "hash"
-        parameters: []
-        signature: "hash(): Sha256Hash"
-        returnValue:
-          sapientType: "MOCK"
-          suggestedContent: !<unknown_object>
-            target: "org.bitcoinj.base.Sha256Hash"
-            onlyPojoFunctions: false
-            builderPattern: false
-          valueType: "org.bitcoinj.base.Sha256Hash"
-          uuid: "isCoinBase_sha256Hash1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "3A21543F56248AC92654D6E439128AED"
-      index: 4
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "BASIC"
-        content: !<regular>
-          value: false
-        valueType: "boolean"
-        fixed: true
-        equalsMethodPresent: true
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
+    truncated: true
+    inputParameters: []
     uuid: "0bc2c475-19cd-36f7-bc60-e3d2f7139143"
-    deleted: false
+    deleted: true
     disabled: false
     ignoredBySystem: true
     prover: "DEFAULT"
@@ -6223,7 +4048,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "753659628F1B3F179A2EF0629F555437"
-      index: 4
+      index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -6758,7 +4583,7 @@ methods:
     - type: "STATIC"
       name: "Script"
       modelFingerprint: "667043B25971CF296332FA30C1C12CF0"
-      index: 2
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -6777,6 +4602,8 @@ methods:
           value:
             sapientType: "ARRAY"
             content: !<array>
+              values: {}
+            suggestedContent: !<array>
               values: {}
             valueType: "byte[]"
             uuid: "<init>_byte[]1"
@@ -6799,7 +4626,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "D996CA7316C46D13B3D176AA333ADD3C"
-      index: 3
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -7047,7 +4874,7 @@ methods:
     - type: "LOCAL_VARIABLE"
       name: "scriptSig"
       modelFingerprint: "280CC392358DF97C8BC44D0972C6F349"
-      index: 3
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -7071,6 +4898,8 @@ methods:
           sapientType: "ARRAY"
           content: !<array>
             values: {}
+          suggestedContent: !<array>
+            values: {}
           valueType: "byte[]"
           uuid: "setScriptSig_byte[]1"
           fixed: false
@@ -7082,7 +4911,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "68041019986276EDF5D420282D883A57"
-      index: 4
+      index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -7146,294 +4975,10 @@ methods:
     priority: "LOW"
     modelFingerprint: "56DBD4E4CCB44CE2EEF71AEB933044B1"
     problemWasSolvedByProver: true
-    truncated: false
-    inputParameters:
-    - type: "CONSTRUCTOR"
-      modelFingerprint: "F2E47E786D52653898E153269C846BE3"
-      index: 1
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.core.TransactionInput"
-          parameters:
-          - name: "parentTransaction"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "<init>_transaction1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "scriptBytes"
-            value:
-              sapientType: "ARRAY"
-              content: !<array>
-                values: {}
-              suggestedContent: !<array>
-                values: {}
-              valueType: "byte[]"
-              uuid: "<init>_byte[]1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "outpoint"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.core.TransactionOutPoint"
-              uuid: "<init>_transactionOutPoint1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "value"
-            value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.base.Coin"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.base.Coin"
-              uuid: "<init>_coin1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.core.TransactionInput"
-          parameters:
-          - name: "parentTransaction"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "<init>_transaction1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "scriptBytes"
-            value:
-              sapientType: "ARRAY"
-              valueType: "byte[]"
-              uuid: "<init>_byte[]1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "outpoint"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.core.TransactionOutPoint"
-              uuid: "<init>_transactionOutPoint1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "value"
-            value:
-              sapientType: "UNKNOWN"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.base.Coin"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.base.Coin"
-              uuid: "<init>_coin1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        valueType: "org.bitcoinj.core.TransactionInput"
-        uuid: "target"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INPUT"
-      name: "sequence"
-      modelFingerprint: "CD0CD92783C2A2D7761C88E729B5307F"
-      index: 2
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "BASIC"
-        content: !<regular>
-          value: -1
-        suggestedContent: !<regular>
-          value: -1
-        valueType: "long"
-        uuid: "setSequenceNumber_long1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "value"
-      modelFingerprint: "2FA8228322760FBFC20CDE1983242629"
-      index: 3
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.base.Coin"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.base.Coin"
-        uuid: "<init>_coin1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "value"
-        name: "signum"
-        parameters: []
-        signature: "signum(): int"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: 1
-          suggestedContent: !<regular>
-            value: 1
-          valueType: "int"
-          uuid: "<init>_int1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Preconditions"
-      modelFingerprint: "EE07D40EFD4ADC96C83D317FAE9481C2"
-      index: 4
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.Preconditions"
-        uuid: "org.bitcoinj.base.internal.Preconditions"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.Preconditions"
-        name: "checkArgument"
-        parameters:
-        - name: "expression"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: true
-            valueType: "boolean"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "messageSupplier"
-          value:
-            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-            valueType: "java.util.function.Supplier"
-            genericValueType: "java.lang.String"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "checkArgument(boolean,Supplier): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "<init>_void1"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Preconditions"
-      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
-      index: 5
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.Preconditions"
-        uuid: "org.bitcoinj.base.internal.Preconditions"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.Preconditions"
-        name: "checkArgument"
-        parameters:
-        - name: "expression"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: false
-            valueType: "boolean"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "messageSupplier"
-          value:
-            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-            valueType: "java.util.function.Supplier"
-            genericValueType: "java.lang.String"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "checkArgument(boolean,Supplier): void"
-        returnValue:
-          sapientType: "EXCEPTION"
-          content: !<new>
-            target: "java.lang.IllegalArgumentException"
-            parameters: []
-            privateConstructor: false
-            createdByTargetCode: false
-          suggestedContent: !<new>
-            target: "java.lang.IllegalArgumentException"
-            parameters: []
-            privateConstructor: false
-            createdByTargetCode: false
-          valueType: "java.lang.IllegalArgumentException"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "3E9C76AB51311DE97AE9C2294CD5E1D6"
-      index: 6
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "EXCEPTION"
-        content: !<new>
-          target: "java.lang.IllegalArgumentException"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "java.lang.IllegalArgumentException"
-          parameters: []
-          privateConstructor: false
-          createdByTargetCode: false
-        valueType: "java.lang.IllegalArgumentException"
-        fixed: true
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
+    truncated: true
+    inputParameters: []
     uuid: "8c5ada03-cdc6-3d5f-920f-a0b81807366c"
-    deleted: false
+    deleted: true
     disabled: false
     ignoredBySystem: true
     prover: "DEFAULT"
@@ -7449,7 +4994,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "730A56EA6244E6E6F4AC9691C71085BC"
-    problemWasSolvedByProver: false
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -7738,13 +5283,11 @@ methods:
       filledByUser: false
     uuid: "be1784fd-76a1-3443-86aa-085c77de84d1"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
-    failureReason:
-      reason: "UNKNOWN_REASON"
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path2"
     pathIdForUser: "path3"
     testPathName: "setSequenceNumberWhenSequenceGreaterThanByteUtilsMAX_UNSIGNED_INTEGERThrowsIllegalArgumentException"
@@ -7755,7 +5298,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "CAE4DB78FEB2A3315AB1DAD1FFD08A8C"
-    problemWasSolvedByProver: false
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -8044,13 +5587,11 @@ methods:
       filledByUser: false
     uuid: "1056188a-ff6c-3a2e-b712-b608128db79d"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
-    failureReason:
-      reason: "UNKNOWN_REASON"
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "getOutpoint"
     returnType: "org.bitcoinj.core.TransactionOutPoint"
@@ -8312,7 +5853,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "68041019986276EDF5D420282D883A57"
-      index: 2
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -8463,6 +6004,8 @@ methods:
         sapientType: "ARRAY"
         content: !<array>
           values: {}
+        suggestedContent: !<array>
+          values: {}
         valueType: "byte[]"
         uuid: "setScriptBytes_byte[]1"
         fixed: false
@@ -8556,7 +6099,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "68041019986276EDF5D420282D883A57"
-      index: 3
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -8857,7 +6400,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "1EA74530E3EB752FE01AE224793AD81B"
-      index: 2
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -9118,7 +6661,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "3A21543F56248AC92654D6E439128AED"
-      index: 2
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -9423,7 +6966,7 @@ methods:
     - type: "FIELD"
       name: "outpoint"
       modelFingerprint: "57AF1D82D3F24C2FC9BA75D07934E1F9"
-      index: 3
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -9456,7 +6999,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "46D4E0AF665187599A50F1636C007229"
-      index: 4
+      index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -9759,7 +7302,7 @@ methods:
     - type: "FIELD"
       name: "outpoint"
       modelFingerprint: "57AF1D82D3F24C2FC9BA75D07934E1F9"
-      index: 3
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -9792,7 +7335,7 @@ methods:
     - type: "LOCAL_VARIABLE"
       name: "tx"
       modelFingerprint: "B302E1A656E1E22E75C96D7C0BBBA305"
-      index: 4
+      index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -9838,7 +7381,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "B7B6B61B2E1B94CCF62E5EAF75099423"
-      index: 5
+      index: 7
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -10091,7 +7634,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       modelFingerprint: "D8C8FD8B3614FE463954E0DE4B8F83A1"
-      index: 3
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -10134,7 +7677,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "E72FAEA21AC64BC712F6669CDCD57BBA"
-      index: 4
+      index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -10390,7 +7933,7 @@ methods:
     - type: "LOCAL_VARIABLE"
       name: "out"
       modelFingerprint: "3E02E546CE193FB906C191EBC3C74350"
-      index: 3
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -10423,7 +7966,7 @@ methods:
     - type: "FIELD"
       name: "outpoint"
       modelFingerprint: "5AEBD43A06E815D453C9C451138E4F1E"
-      index: 4
+      index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -10464,7 +8007,7 @@ methods:
     - type: "LOCAL_VARIABLE"
       name: "out"
       modelFingerprint: "B0FCDDC90C8D1F70C91C85A003AFDB75"
-      index: 5
+      index: 7
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -10550,7 +8093,7 @@ methods:
     - type: "LOCAL_VARIABLE"
       name: "out"
       modelFingerprint: "90C1EF9D816EA7EAC6D94900C15C821E"
-      index: 6
+      index: 8
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -10583,7 +8126,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "68041019986276EDF5D420282D883A57"
-      index: 7
+      index: 9
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -10852,7 +8395,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "3A21543F56248AC92654D6E439128AED"
-      index: 2
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -11081,7 +8624,7 @@ methods:
     - type: "FIELD"
       name: "outpoint"
       modelFingerprint: "E76C105113CD8985495B7A57603EFB53"
-      index: 2
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -11114,7 +8657,7 @@ methods:
     - type: "LOCAL_VARIABLE"
       name: "connectedOutput"
       modelFingerprint: "486D552F1543675D42E83ADAEA34CE40"
-      index: 3
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -11192,7 +8735,7 @@ methods:
     - type: "LOCAL_VARIABLE"
       name: "connectedOutput"
       modelFingerprint: "5510BA9C7D302EED14543E558DB1F67C"
-      index: 4
+      index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -11225,7 +8768,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "753659628F1B3F179A2EF0629F555437"
-      index: 5
+      index: 7
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -11472,7 +9015,7 @@ methods:
     - type: "FIELD"
       name: "outpoint"
       modelFingerprint: "E76C105113CD8985495B7A57603EFB53"
-      index: 2
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -11505,7 +9048,7 @@ methods:
     - type: "LOCAL_VARIABLE"
       name: "connectedOutput"
       modelFingerprint: "ADDE04AC9AB7F864121EA23612668FF1"
-      index: 3
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -11538,7 +9081,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "3A21543F56248AC92654D6E439128AED"
-      index: 4
+      index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -11784,7 +9327,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "3A21543F56248AC92654D6E439128AED"
-      index: 2
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -12012,7 +9555,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "3A21543F56248AC92654D6E439128AED"
-      index: 2
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -12240,7 +9783,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "3A21543F56248AC92654D6E439128AED"
-      index: 2
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -12279,12 +9822,12 @@ methods:
     priorityDefinedByUser: false
     filledByUser: false
     priority: "LOW"
-    modelFingerprint: "EADA5F16017DA6D80765A8EF07F6D0ED"
+    modelFingerprint: "6D0C9F5D1B7E3EA348B1062DF877A296"
     problemWasSolvedByProver: false
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
-      modelFingerprint: "26FD2D0E85B1C56E90B6BF6FCCB7874D"
+      modelFingerprint: "4AF75E40CF68CFE52C8DFBF982CE6742"
       index: 1
       ignored: false
       nestedInLoop: false
@@ -12296,17 +9839,7 @@ methods:
           parameters:
           - name: "parentTransaction"
             value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "org.bitcoinj.core.Transaction"
-                parameters: []
-                privateConstructor: false
-                createdByTargetCode: false
-              suggestedContent: !<new>
-                target: "org.bitcoinj.core.Transaction"
-                parameters: []
-                privateConstructor: false
-                createdByTargetCode: false
+              sapientType: "MOCK"
               valueType: "org.bitcoinj.core.Transaction"
               uuid: "<init>_transaction1"
               fixed: false
@@ -12316,25 +9849,9 @@ methods:
             value:
               sapientType: "ARRAY"
               content: !<array>
-                values:
-                  0:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 0
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+                values: {}
               suggestedContent: !<array>
-                values:
-                  0:
-                    sapientType: "BASIC"
-                    content: !<regular>
-                      value: 0
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
+                values: {}
               valueType: "byte[]"
               uuid: "<init>_byte[]1"
               fixed: false
@@ -12342,15 +9859,54 @@ methods:
               explicitCastNeeded: false
           - name: "outpoint"
             value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
+              sapientType: "OBJECT"
+              content: !<new>
                 target: "org.bitcoinj.core.TransactionOutPoint"
-                onlyPojoFunctions: false
-                builderPattern: false
+                parameters:
+                - name: "index"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "long"
+                    uuid: "<init>_transactionOutPoint1-index"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "arg1"
+                  value:
+                    sapientType: "MOCK"
+                    valueType: "org.bitcoinj.base.Sha256Hash"
+                    uuid: "<init>_transactionOutPoint1-arg1"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
+              suggestedContent: !<new>
+                target: "org.bitcoinj.core.TransactionOutPoint"
+                parameters:
+                - name: "index"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "long"
+                    uuid: "<init>_transactionOutPoint1-index"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "arg1"
+                  value:
+                    sapientType: "UNKNOWN"
+                    valueType: "org.bitcoinj.base.Sha256Hash"
+                    uuid: "<init>_transactionOutPoint1-arg1"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
               valueType: "org.bitcoinj.core.TransactionOutPoint"
               uuid: "<init>_transactionOutPoint1"
               fixed: false
-              nameForMock: "0"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "value"
@@ -12363,7 +9919,6 @@ methods:
               valueType: "org.bitcoinj.base.Coin"
               uuid: "<init>_coin1"
               fixed: false
-              nameForMock: "1000"
               equalsMethodPresent: false
               explicitCastNeeded: false
           privateConstructor: false
@@ -12373,17 +9928,7 @@ methods:
           parameters:
           - name: "parentTransaction"
             value:
-              sapientType: "OBJECT"
-              content: !<new>
-                target: "org.bitcoinj.core.Transaction"
-                parameters: []
-                privateConstructor: false
-                createdByTargetCode: false
-              suggestedContent: !<new>
-                target: "org.bitcoinj.core.Transaction"
-                parameters: []
-                privateConstructor: false
-                createdByTargetCode: false
+              sapientType: "UNKNOWN"
               valueType: "org.bitcoinj.core.Transaction"
               uuid: "<init>_transaction1"
               fixed: false
@@ -12392,22 +9937,6 @@ methods:
           - name: "scriptBytes"
             value:
               sapientType: "ARRAY"
-              content: !<array>
-                values:
-                  0:
-                    sapientType: "BASIC"
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
-              suggestedContent: !<array>
-                values:
-                  0:
-                    sapientType: "BASIC"
-                    valueType: "byte"
-                    fixed: false
-                    equalsMethodPresent: false
-                    explicitCastNeeded: false
               valueType: "byte[]"
               uuid: "<init>_byte[]1"
               fixed: false
@@ -12415,20 +9944,36 @@ methods:
               explicitCastNeeded: false
           - name: "outpoint"
             value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
+              sapientType: "UNKNOWN"
+              suggestedContent: !<new>
                 target: "org.bitcoinj.core.TransactionOutPoint"
-                onlyPojoFunctions: false
-                builderPattern: false
+                parameters:
+                - name: "index"
+                  value:
+                    sapientType: "BASIC"
+                    valueType: "long"
+                    uuid: "<init>_transactionOutPoint1-index"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "arg1"
+                  value:
+                    sapientType: "UNKNOWN"
+                    valueType: "org.bitcoinj.base.Sha256Hash"
+                    uuid: "<init>_transactionOutPoint1-arg1"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                privateConstructor: false
+                createdByTargetCode: false
               valueType: "org.bitcoinj.core.TransactionOutPoint"
               uuid: "<init>_transactionOutPoint1"
               fixed: false
-              nameForMock: "0"
               equalsMethodPresent: false
               explicitCastNeeded: false
           - name: "value"
             value:
-              sapientType: "MOCK"
+              sapientType: "UNKNOWN"
               suggestedContent: !<unknown_object>
                 target: "org.bitcoinj.base.Coin"
                 onlyPojoFunctions: false
@@ -12436,7 +9981,6 @@ methods:
               valueType: "org.bitcoinj.base.Coin"
               uuid: "<init>_coin1"
               fixed: false
-              nameForMock: "1000"
               equalsMethodPresent: false
               explicitCastNeeded: false
           privateConstructor: false
@@ -12450,7 +9994,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       name: "value"
-      modelFingerprint: "BD68CA36FC5885F8CD2197A36D7B609E"
+      modelFingerprint: "2FA8228322760FBFC20CDE1983242629"
       index: 2
       ignored: false
       nestedInLoop: false
@@ -12464,7 +10008,6 @@ methods:
         valueType: "org.bitcoinj.base.Coin"
         uuid: "<init>_coin1"
         fixed: false
-        nameForMock: "1000"
         equalsMethodPresent: false
         explicitCastNeeded: false
       methodExercised:
@@ -12532,107 +10075,39 @@ methods:
         access: 9
       staticReadMethodForField: false
       filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "fromTx"
-      modelFingerprint: "66B87445E3AD0F6C374E9FAACFD10B76"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "1544C3243427A58A5AE91A88CC628F77"
       index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
       value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.core.Transaction"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.core.Transaction"
-        uuid: "verify_transaction1"
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "java.lang.NullPointerException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "java.lang.NullPointerException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "java.lang.NullPointerException"
         fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "fromTx"
-        name: "getOutput"
-        parameters:
-        - name: "outpoint"
-          value:
-            sapientType: "MOCK"
-            suggestedContent: !<unknown_object>
-              target: "org.bitcoinj.core.TransactionOutPoint"
-              onlyPojoFunctions: false
-              builderPattern: false
-            valueType: "org.bitcoinj.core.TransactionOutPoint"
-            uuid: "<init>_transactionOutPoint1"
-            fixed: false
-            nameForMock: "0"
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "getOutput(TransactionOutPoint): TransactionOutput"
-        returnValue:
-          sapientType: "MOCK"
-          valueType: "org.bitcoinj.core.TransactionOutput"
-          uuid: "verify_transactionOutput1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INTERNAL"
-      name: "internalMethod"
-      modelFingerprint: "A5F8268E25C8F18727F57C6BACD33458"
-      index: 5
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      methodExercised:
-        target: "target"
-        name: "verify"
-        parameters:
-        - name: "output"
-          value:
-            sapientType: "MOCK"
-            valueType: "org.bitcoinj.core.TransactionOutput"
-            uuid: "verify_transactionOutput1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        throwsExceptions:
-        - "org.bitcoinj.core.VerificationException"
-        signature: "verify(TransactionOutput): void throws org.bitcoinj.core.VerificationException"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "verify_void1"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "68041019986276EDF5D420282D883A57"
-      index: 6
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "VOID"
-        fixed: true
         equalsMethodPresent: false
         explicitCastNeeded: false
       staticReadMethodForField: false
       filledByUser: false
     uuid: "643f20a7-23a0-3bf8-b652-405708f718e7"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
     failureReason:
-      reason: "UNKNOWN_REASON"
-    prover: "LLM"
+      reason: "OBJECT_REQUIRE_NON_NULL_PARAMETER_FAILURE"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "verify"
     returnType: "void"
@@ -14487,7 +11962,7 @@ methods:
       filledByUser: false
     - type: "LOCAL_VARIABLE"
       modelFingerprint: "380DE9CD4A5C8D9854B78E0ABA21BA01"
-      index: 2
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -14520,7 +11995,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "B7B6B61B2E1B94CCF62E5EAF75099423"
-      index: 3
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -14557,7 +12032,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "4657D488EC0525528B6BB5032FAFD9DA"
-    problemWasSolvedByProver: false
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -14812,7 +12287,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "20BC33842E8D4F16B701AA695E44BD5D"
-      index: 2
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -14827,13 +12302,11 @@ methods:
       filledByUser: false
     uuid: "acc384a7-2442-3705-be56-a2d70a22b75d"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
-    failureReason:
-      reason: "UNKNOWN_REASON"
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
 - method:
     name: "isStandard"
     returnType: "org.bitcoinj.wallet.DefaultRiskAnalysis$RuleViolation"
@@ -15041,7 +12514,7 @@ methods:
     - type: "STATIC"
       name: "DefaultRiskAnalysis"
       modelFingerprint: "C0D4EE3B2E5FF6A28342DF0F15359093"
-      index: 2
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -15121,7 +12594,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "79854FA37E8BE58D80C38D30187D8DFC"
-      index: 3
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -15531,7 +13004,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "1E13B90DF4F3DF0855F712ACB69E510C"
-    problemWasSolvedByProver: false
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -15723,7 +13196,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "D2873A5B20D8CF82ED0B4C070743DAAB"
-      index: 2
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -15749,7 +13222,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "3F1A55175654F579558ED81279B6C5C3"
-      index: 3
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -15776,7 +13249,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "03D34CCDE729EA697D1002B9F03E252A"
-      index: 4
+      index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -15804,7 +13277,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "2E554DB4A7587E6E1E803D19C2F0A448"
-      index: 5
+      index: 7
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -15832,7 +13305,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "E0B2184C63C8EE374A68A41A224D3A38"
-      index: 6
+      index: 8
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -15860,7 +13333,7 @@ methods:
     - type: "STATIC"
       name: "InternalUtils"
       modelFingerprint: "86EA6F60F639B91A060DD317CD237362"
-      index: 7
+      index: 9
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -15959,7 +13432,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "76C81CFB130E0500C56E3C5E7689206F"
-      index: 8
+      index: 10
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -15980,13 +13453,11 @@ methods:
       filledByUser: false
     uuid: "e24aff67-bfdf-303f-9d47-a79b8b5297ee"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
-    failureReason:
-      reason: "UNKNOWN_REASON"
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path3"
     pathIdForUser: "path3"
     testPathName: "toStringWhenIsOptInFullRBFNotAndFlagsNotIsEmpty"
@@ -15997,456 +13468,16 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "294AE9AF073E0E6E1A2B24582E98503B"
-    problemWasSolvedByProver: false
-    truncated: false
-    inputParameters:
-    - type: "CONSTRUCTOR"
-      modelFingerprint: "F2E47E786D52653898E153269C846BE3"
-      index: 1
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "OBJECT"
-        content: !<new>
-          target: "org.bitcoinj.core.TransactionInput"
-          parameters:
-          - name: "parentTransaction"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "<init>_transaction1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "scriptBytes"
-            value:
-              sapientType: "ARRAY"
-              content: !<array>
-                values: {}
-              suggestedContent: !<array>
-                values: {}
-              valueType: "byte[]"
-              uuid: "<init>_byte[]1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "outpoint"
-            value:
-              sapientType: "MOCK"
-              valueType: "org.bitcoinj.core.TransactionOutPoint"
-              uuid: "<init>_transactionOutPoint1"
-              fixed: false
-              nameForMock: "<init>_transactionOutPoint1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "value"
-            value:
-              sapientType: "MOCK"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.base.Coin"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.base.Coin"
-              uuid: "<init>_coin1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        suggestedContent: !<new>
-          target: "org.bitcoinj.core.TransactionInput"
-          parameters:
-          - name: "parentTransaction"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.core.Transaction"
-              uuid: "<init>_transaction1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "scriptBytes"
-            value:
-              sapientType: "ARRAY"
-              valueType: "byte[]"
-              uuid: "<init>_byte[]1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "outpoint"
-            value:
-              sapientType: "UNKNOWN"
-              valueType: "org.bitcoinj.core.TransactionOutPoint"
-              uuid: "<init>_transactionOutPoint1"
-              fixed: false
-              nameForMock: "<init>_transactionOutPoint1"
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          - name: "value"
-            value:
-              sapientType: "UNKNOWN"
-              suggestedContent: !<unknown_object>
-                target: "org.bitcoinj.base.Coin"
-                onlyPojoFunctions: false
-                builderPattern: false
-              valueType: "org.bitcoinj.base.Coin"
-              uuid: "<init>_coin1"
-              fixed: false
-              equalsMethodPresent: false
-              explicitCastNeeded: false
-          privateConstructor: false
-          createdByTargetCode: false
-        valueType: "org.bitcoinj.core.TransactionInput"
-        uuid: "target"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "LOCAL_VARIABLE"
-      name: "value"
-      modelFingerprint: "2FA8228322760FBFC20CDE1983242629"
-      index: 2
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        suggestedContent: !<unknown_object>
-          target: "org.bitcoinj.base.Coin"
-          onlyPojoFunctions: false
-          builderPattern: false
-        valueType: "org.bitcoinj.base.Coin"
-        uuid: "<init>_coin1"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "value"
-        name: "signum"
-        parameters: []
-        signature: "signum(): int"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: 1
-          suggestedContent: !<regular>
-            value: 1
-          valueType: "int"
-          uuid: "<init>_int1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "Preconditions"
-      modelFingerprint: "EE07D40EFD4ADC96C83D317FAE9481C2"
-      index: 3
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "MOCK"
-        valueType: "org.bitcoinj.base.internal.Preconditions"
-        uuid: "org.bitcoinj.base.internal.Preconditions"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.Preconditions"
-        name: "checkArgument"
-        parameters:
-        - name: "expression"
-          value:
-            sapientType: "BASIC"
-            content: !<regular>
-              value: true
-            valueType: "boolean"
-            fixed: true
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        - name: "messageSupplier"
-          value:
-            sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
-            valueType: "java.util.function.Supplier"
-            genericValueType: "java.lang.String"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "checkArgument(boolean,Supplier): void"
-        returnValue:
-          sapientType: "VOID"
-          valueType: "void"
-          uuid: "<init>_void1"
-          fixed: true
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 9
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INTERNAL"
-      name: "internalMethod"
-      modelFingerprint: "D2873A5B20D8CF82ED0B4C070743DAAB"
-      index: 4
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      methodExercised:
-        target: "target"
-        name: "isCoinBase"
-        parameters: []
-        signature: "isCoinBase(): boolean"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: false
-          suggestedContent: !<regular>
-            value: false
-          valueType: "boolean"
-          uuid: "toString_boolean1"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INTERNAL"
-      name: "internalMethod"
-      modelFingerprint: "3F1A55175654F579558ED81279B6C5C3"
-      index: 5
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 1
-      methodExercised:
-        target: "target"
-        name: "getScriptSig"
-        parameters: []
-        throwsExceptions:
-        - "org.bitcoinj.script.ScriptException"
-        signature: "getScriptSig(): Script throws org.bitcoinj.script.ScriptException"
-        returnValue:
-          sapientType: "MOCK"
-          valueType: "org.bitcoinj.script.Script"
-          uuid: "toString_script1"
-          fixed: false
-          nameForMock: "toString_script1"
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INTERNAL"
-      name: "internalMethod"
-      modelFingerprint: "03D34CCDE729EA697D1002B9F03E252A"
-      index: 6
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 1
-      methodExercised:
-        target: "target"
-        name: "hasWitness"
-        parameters: []
-        signature: "hasWitness(): boolean"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: true
-          suggestedContent: !<regular>
-            value: true
-          valueType: "boolean"
-          uuid: "toString_boolean2"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INTERNAL"
-      name: "internalMethod"
-      modelFingerprint: "2E554DB4A7587E6E1E803D19C2F0A448"
-      index: 7
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 1
-      methodExercised:
-        target: "target"
-        name: "hasSequence"
-        parameters: []
-        signature: "hasSequence(): boolean"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: true
-          suggestedContent: !<regular>
-            value: true
-          valueType: "boolean"
-          uuid: "toString_boolean3"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "INTERNAL"
-      name: "internalMethod"
-      modelFingerprint: "5447C72CE7D1A772718ADDF35C2DEC68"
-      index: 8
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 1
-      methodExercised:
-        target: "target"
-        name: "isOptInFullRBF"
-        parameters: []
-        signature: "isOptInFullRBF(): boolean"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: false
-          suggestedContent: !<regular>
-            value: false
-          valueType: "boolean"
-          uuid: "toString_boolean4"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 1
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "STATIC"
-      name: "InternalUtils"
-      modelFingerprint: "DE7BDBA7FCE29CDF1466A898E7946DEC"
-      index: 9
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      idsTryCatchBlockSurrounding:
-      - 1
-      value:
-        sapientType: "REAL"
-        valueType: "org.bitcoinj.base.internal.InternalUtils"
-        uuid: "org.bitcoinj.base.internal.InternalUtils"
-        fixed: false
-        equalsMethodPresent: false
-        explicitCastNeeded: false
-      methodExercised:
-        target: "org.bitcoinj.base.internal.InternalUtils"
-        name: "commaJoin"
-        parameters:
-        - name: "strings"
-          value:
-            sapientType: "ARRAY"
-            content: !<array>
-              values:
-                0:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: "witness"
-                  valueType: "java.lang.String"
-                  fixed: true
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                1:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: "sequence: ffffffff"
-                  suggestedContent: !<regular>
-                    value: "sequence: ffffffff"
-                  valueType: "java.lang.String"
-                  uuid: "toString_string2"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                2:
-                  sapientType: "NULL"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            suggestedContent: !<array>
-              values:
-                0:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: "witness"
-                  valueType: "java.lang.String"
-                  fixed: true
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                1:
-                  sapientType: "BASIC"
-                  content: !<regular>
-                    value: "sequence: ffffffff"
-                  suggestedContent: !<regular>
-                    value: "sequence: ffffffff"
-                  valueType: "java.lang.String"
-                  uuid: "toString_string2"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-                2:
-                  sapientType: "NULL"
-                  fixed: false
-                  equalsMethodPresent: false
-                  explicitCastNeeded: false
-            valueType: "java.lang.String[]"
-            uuid: "toString_string[]1"
-            fixed: false
-            equalsMethodPresent: false
-            explicitCastNeeded: false
-        signature: "commaJoin(String[]): String"
-        returnValue:
-          sapientType: "BASIC"
-          content: !<regular>
-            value: "witness, sequence: ffffffff"
-          valueType: "java.lang.String"
-          uuid: "toString_string3"
-          fixed: false
-          equalsMethodPresent: false
-          explicitCastNeeded: false
-        access: 137
-      staticReadMethodForField: false
-      filledByUser: false
-    - type: "RESULT"
-      name: "result"
-      modelFingerprint: "0A44B9EEB10E186D1617E7D8B62F11A8"
-      index: 10
-      ignored: false
-      nestedInLoop: false
-      nestedInRecursion: false
-      value:
-        sapientType: "BASIC"
-        content: !<regular>
-          value: "TxIn for [<init>_transactionOutPoint1]: toString_script1 (witness,\
-            \ sequence: ffffffff)"
-        suggestedContent: !<regular>
-          value: "TxIn for [<init>_transactionOutPoint1]: toString_script1 (witness,\
-            \ sequence: ffffffff)"
-        valueType: "java.lang.String"
-        uuid: "toString_string4"
-        fixed: false
-        equalsMethodPresent: true
-        explicitCastNeeded: false
-      staticReadMethodForField: false
-      filledByUser: false
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
     uuid: "98c95888-0693-3887-af9c-1407e21f5636"
-    deleted: false
-    disabled: true
+    deleted: true
+    disabled: false
     ignoredBySystem: true
-    failureReason:
-      reason: "UNKNOWN_REASON"
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path4"
     pathIdForUser: "path4"
     testPathName: "toStringWhenIsOptInFullRBFAndFlagsNotIsEmpty"
@@ -16557,7 +13588,7 @@ methods:
     filledByUser: false
     priority: "LOW"
     modelFingerprint: "9824FA99615701701BA39A703DCBE6CB"
-    problemWasSolvedByProver: false
+    problemWasSolvedByProver: true
     truncated: false
     inputParameters:
     - type: "CONSTRUCTOR"
@@ -16749,7 +13780,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "D2873A5B20D8CF82ED0B4C070743DAAB"
-      index: 2
+      index: 4
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -16775,7 +13806,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "3F1A55175654F579558ED81279B6C5C3"
-      index: 3
+      index: 5
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -16802,7 +13833,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "2E0B9E30762B843CDF208C63E68D95DD"
-      index: 4
+      index: 6
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -16830,7 +13861,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "6E7592497118B6C6BAE384BC8E144C3D"
-      index: 5
+      index: 7
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -16858,7 +13889,7 @@ methods:
     - type: "INTERNAL"
       name: "internalMethod"
       modelFingerprint: "5447C72CE7D1A772718ADDF35C2DEC68"
-      index: 6
+      index: 8
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -16886,7 +13917,7 @@ methods:
     - type: "STATIC"
       name: "InternalUtils"
       modelFingerprint: "CF820EEEB371BF1C3BA05AB448E8328B"
-      index: 7
+      index: 9
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -16961,7 +13992,7 @@ methods:
     - type: "RESULT"
       name: "result"
       modelFingerprint: "34AC69D9F96D113A4B5085DB3C56FFC7"
-      index: 8
+      index: 10
       ignored: false
       nestedInLoop: false
       nestedInRecursion: false
@@ -16980,13 +14011,11 @@ methods:
       filledByUser: false
     uuid: "061b5247-9952-34cf-9a22-22438c844f30"
     deleted: false
-    disabled: true
+    disabled: false
     ignoredBySystem: false
-    failureReason:
-      reason: "UNKNOWN_REASON"
     prover: "DEFAULT"
     disabledStatusUpdatedByUser: false
-    disabledStatusUpdatedBySystem: true
+    disabledStatusUpdatedBySystem: false
   - pathId: "path10"
     pathIdForUser: "path10"
     testPathName: "toStringWhenCaughtScriptException"
