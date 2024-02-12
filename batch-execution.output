@@ -1,0 +1,394 @@
+Start time: 2024-02-12 19:42:28 minutes
+End time: 2024-02-12 19:45:07 minutes
+Export time: 2024-02-12 19:45:19 minutes
+
+Total execution time: 2 minutes
+------------------------------------------------
+Number of source files processed: 1
+Number of test files generated: 1
+Number of test files not able to be analyzed (error in model creation): 0
+Number of test files with generation error: 0
+Number of test files with compilation error: 0
+Percentage of test files with compilation error: 0
+------------------------------------------------
+Number of paths identified on source files: 69
+Number of paths with uncommentable compilation error: 0
+Number of paths untestable: 5
+Number of paths with generation error: 0
+Number of paths in files with run phase completed: 69
+------------------------------------------------
+Number of test cases created: 69
+Number of test cases success: 42
+Number of test cases failed: 27
+Number of test cases disabled: 0
+Number of test cases timeout: 0
+Number of test cases commented: 0
+Number of test tried LLM: 10
+Number of test tried LLM and had a success response: 1
+Number of test tried LLM and had a error response: 9
+Number of test used LLM: 0
+Number of test used LLM and solver checked result: 0
+Number of test used Z3 and solver checked result: 50
+Number of test used LLM and had a test execution success: 0
+Number of test used LLM and had a test execution commented: 0
+Number of test used LLM and had a test execution NOT Success (failed, skipped, timeout): 0
+Number of test cases with model failure with reason and Success: 4
+Number of test cases WITHOUT TODO and Fail: 12
+------------------------------------------------
+Overall method coverage: 60.00%
+Overall line coverage: 49.84%
+------------------------------------------------
+Absolute percentage of test success (available paths): 60.86%
+Absolute percentage of test failed (available paths): 39.13%
+Absolute percentage of test disabled (available paths): 0%
+------------------------------------------------
+Relative percentage of test success (testable): 64.61%
+Relative percentage of test failed (testable): 35.38%
+Relative percentage of test disabled (testable): 0%
+------------------------------------------------
+Paths identified 
+
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::addCoinbaseTransactionWhenHeightGreaterThanOrEqualsToBlockBLOCK_HEIGHT_GENESIS (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::addTransaction1WhenRunSanityChecksAndTransactionsSizeNotGreaterThan0 (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::addTransaction1WhenTNotIsCoinBaseThrowsRuntimeException (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::addTransaction1WhenTransactionsSizeGreaterThan0AndTIsCoinBaseThrowsRuntimeException (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::addTransactionTest (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::bitcoinSerializeToStreamWhenTransactionsIsNotEmpty (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::bitcoinSerializeToStreamWhenTransactionsIsNull (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkProofOfWorkWhenContextGetIsRelaxProofOfWork (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkProofOfWorkWhenHCompareToTargetNotGreaterThan0 (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkProofOfWorkWhenNotThrowException (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkProofOfWorkWhenThrowExceptionThrowsVerificationException (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkWitnessRootWhenTxHasWitnessesThrowsVerificationException (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkWitnessRootWhenTxNotHasWitnesses (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkWitnessRootWhenWitnessGetPushCountNotEquals1ThrowsVerificationException (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkWitnessRootWhenWitnessReservedLengthNotEquals32ThrowsVerificationException (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkWitnessRootWhenWitnessRootHashEqualsWitnessCommitment (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkWitnessRootWhenWitnessRootHashNotEqualsWitnessCommitmentThrowsVerificationException (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::cloneAsHeaderWhenDefaultBranch (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createGenesis1Test (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createGenesisTest (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlock1WhenPrevOutIsNullAndTimeCompareToBitcoinTimeLessThan0AndBGetVersionEqualsVersion (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlock1WhenPrevOutIsNullAndTimeCompareToBitcoinTimeLessThan0AndCaughtVerificationExceptiThrowsRuntimeException (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlock1WhenTimeCompareToBitcoinTimeGreaterThanOrEqualsTo0AndBGetVersionNotEqualsVersionThrowsRuntimeException (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlock1WhenTimeCompareToBitcoinTimeGreaterThanOrEqualsTo0AndCaughtVerificationExceptionThrowsRuntimeException (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlock2Test (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlock3Test (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlock4Test (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlockTest (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlockWithCoinbase1Test (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlockWithCoinbaseTest (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getDifficultyTargetAsIntegerTest (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getHashAsStringTest (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getHashWhenCaughtIOExceptionThrowsRuntimeException (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getHashWhenHashIsNull (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getMerkleRootWhenLeftLessThanLevelSize (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getTimeSecondsTest (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getTimeTest (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getTransactionsWhenTransactionsIsNotNull (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getTransactionsWhenTransactionsIsNull (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getWitnessRootWhenLeftLessThanLevelSize (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getWitnessRootWhenLevelSizeGreaterThan1AndLeftLessThanLevelSize (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getWorkTest (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::hasTransactionsWhenThisTransactionsIsEmpty (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::hasTransactionsWhenThisTransactionsNotIsEmpty (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::isBIP34WhenVersionGreaterThanOrEqualsToBLOCK_VERSION_BIP34 (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::isBIP34WhenVersionLessThanBLOCK_VERSION_BIP34 (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::isBIP65WhenVersionGreaterThanOrEqualsToBLOCK_VERSION_BIP65 (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::isBIP65WhenVersionLessThanBLOCK_VERSION_BIP65 (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::isBIP66WhenVersionGreaterThanOrEqualsToBLOCK_VERSION_BIP66 (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::isBIP66WhenVersionLessThanBLOCK_VERSION_BIP66 (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::messageSizeWhenTransactionsIsNotEmpty (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::readWhenDefaultBranch (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::readWhenPayloadNotHasRemainingAndDefaultBranch (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::setDifficultyTargetTest (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::setMerkleRootTest (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::setNonceTest (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::setPrevBlockHashTest (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::setTimeTest (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::solveWhenCheckProofOfWorkFalse (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::solveWhenWatchElapsedCompareToWarningThresholdNotGreaterThan0AndCaughtVerificationExceptionThrowsRuntimeException (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::solveWhenWatchElapsedCompareToWarningThresholdNotGreaterThan0ThrowsRuntimeException (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::timeTest (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::toStringWhenBipsIsEmptyAndTransactionsIsNotNullAndTransactionsSizeGreaterThan0AndTransactionsIsNotEmpty (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::toStringWhenTransactionsIsNotEmpty (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::unCacheTest (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::verifyHeaderTest (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::verifyTest (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::verifyTransactionsThrowsNullPointerException (path identified)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::writeHeaderTest (path identified)
+------------------------------------------------
+Paths untestable 
+
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::addCoinbaseTransactionWhenHeightGreaterThanOrEqualsToBlockBLOCK_HEIGHT_GENESIS (path untestable)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlock1WhenPrevOutIsNullAndTimeCompareToBitcoinTimeLessThan0AndBGetVersionEqualsVersion (path untestable)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlock1WhenPrevOutIsNullAndTimeCompareToBitcoinTimeLessThan0AndCaughtVerificationExceptiThrowsRuntimeException (path untestable)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlock1WhenTimeCompareToBitcoinTimeGreaterThanOrEqualsTo0AndCaughtVerificationExceptionThrowsRuntimeException (path untestable)
+------------------------------------------------
+Paths run completed 
+
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::addCoinbaseTransactionWhenHeightGreaterThanOrEqualsToBlockBLOCK_HEIGHT_GENESIS (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::addTransaction1WhenRunSanityChecksAndTransactionsSizeNotGreaterThan0 (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::addTransaction1WhenTNotIsCoinBaseThrowsRuntimeException (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::addTransaction1WhenTransactionsSizeGreaterThan0AndTIsCoinBaseThrowsRuntimeException (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::addTransactionTest (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::bitcoinSerializeToStreamWhenTransactionsIsNotEmpty (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::bitcoinSerializeToStreamWhenTransactionsIsNull (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkProofOfWorkWhenContextGetIsRelaxProofOfWork (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkProofOfWorkWhenHCompareToTargetNotGreaterThan0 (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkProofOfWorkWhenNotThrowException (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkProofOfWorkWhenThrowExceptionThrowsVerificationException (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkWitnessRootWhenTxHasWitnessesThrowsVerificationException (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkWitnessRootWhenTxNotHasWitnesses (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkWitnessRootWhenWitnessGetPushCountNotEquals1ThrowsVerificationException (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkWitnessRootWhenWitnessReservedLengthNotEquals32ThrowsVerificationException (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkWitnessRootWhenWitnessRootHashEqualsWitnessCommitment (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkWitnessRootWhenWitnessRootHashNotEqualsWitnessCommitmentThrowsVerificationException (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::cloneAsHeaderWhenDefaultBranch (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createGenesis1Test (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createGenesisTest (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlock1WhenPrevOutIsNullAndTimeCompareToBitcoinTimeLessThan0AndBGetVersionEqualsVersion (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlock1WhenPrevOutIsNullAndTimeCompareToBitcoinTimeLessThan0AndCaughtVerificationExceptiThrowsRuntimeException (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlock1WhenTimeCompareToBitcoinTimeGreaterThanOrEqualsTo0AndBGetVersionNotEqualsVersionThrowsRuntimeException (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlock1WhenTimeCompareToBitcoinTimeGreaterThanOrEqualsTo0AndCaughtVerificationExceptionThrowsRuntimeException (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlock2Test (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlock3Test (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlock4Test (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlockTest (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlockWithCoinbase1Test (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlockWithCoinbaseTest (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getDifficultyTargetAsIntegerTest (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getHashAsStringTest (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getHashWhenCaughtIOExceptionThrowsRuntimeException (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getHashWhenHashIsNull (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getMerkleRootWhenLeftLessThanLevelSize (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getTimeSecondsTest (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getTimeTest (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getTransactionsWhenTransactionsIsNotNull (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getTransactionsWhenTransactionsIsNull (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getWitnessRootWhenLeftLessThanLevelSize (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getWitnessRootWhenLevelSizeGreaterThan1AndLeftLessThanLevelSize (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getWorkTest (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::hasTransactionsWhenThisTransactionsIsEmpty (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::hasTransactionsWhenThisTransactionsNotIsEmpty (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::isBIP34WhenVersionGreaterThanOrEqualsToBLOCK_VERSION_BIP34 (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::isBIP34WhenVersionLessThanBLOCK_VERSION_BIP34 (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::isBIP65WhenVersionGreaterThanOrEqualsToBLOCK_VERSION_BIP65 (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::isBIP65WhenVersionLessThanBLOCK_VERSION_BIP65 (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::isBIP66WhenVersionGreaterThanOrEqualsToBLOCK_VERSION_BIP66 (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::isBIP66WhenVersionLessThanBLOCK_VERSION_BIP66 (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::messageSizeWhenTransactionsIsNotEmpty (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::readWhenDefaultBranch (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::readWhenPayloadNotHasRemainingAndDefaultBranch (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::setDifficultyTargetTest (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::setMerkleRootTest (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::setNonceTest (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::setPrevBlockHashTest (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::setTimeTest (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::solveWhenCheckProofOfWorkFalse (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::solveWhenWatchElapsedCompareToWarningThresholdNotGreaterThan0AndCaughtVerificationExceptionThrowsRuntimeException (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::solveWhenWatchElapsedCompareToWarningThresholdNotGreaterThan0ThrowsRuntimeException (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::timeTest (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::toStringWhenBipsIsEmptyAndTransactionsIsNotNullAndTransactionsSizeGreaterThan0AndTransactionsIsNotEmpty (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::toStringWhenTransactionsIsNotEmpty (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::unCacheTest (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::verifyHeaderTest (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::verifyTest (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::verifyTransactionsThrowsNullPointerException (path run completed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::writeHeaderTest (path run completed)
+------------------------------------------------
+------------------------------------------------
+Test cases failed 
+
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::addCoinbaseTransactionWhenHeightGreaterThanOrEqualsToBlockBLOCK_HEIGHT_GENESIS - UNTESTABLE -(test failed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::addTransaction1WhenRunSanityChecksAndTransactionsSizeNotGreaterThan0(test failed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::addTransaction1WhenTransactionsSizeGreaterThan0AndTIsCoinBaseThrowsRuntimeException(test failed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkProofOfWorkWhenHCompareToTargetNotGreaterThan0(test failed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkProofOfWorkWhenNotThrowException(test failed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkProofOfWorkWhenThrowExceptionThrowsVerificationException(test failed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkWitnessRootWhenTxHasWitnessesThrowsVerificationException(test failed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkWitnessRootWhenTxNotHasWitnesses(test failed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::cloneAsHeaderWhenDefaultBranch(test failed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createGenesis1Test(test failed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createGenesisTest(test failed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlock1WhenPrevOutIsNullAndTimeCompareToBitcoinTimeLessThan0AndBGetVersionEqualsVersion - UNTESTABLE -(test failed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlock1WhenPrevOutIsNullAndTimeCompareToBitcoinTimeLessThan0AndCaughtVerificationExceptiThrowsRuntimeException - UNTESTABLE -(test failed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlock1WhenTimeCompareToBitcoinTimeGreaterThanOrEqualsTo0AndCaughtVerificationExceptionThrowsRuntimeException - UNTESTABLE -(test failed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlock2Test(test failed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlock3Test(test failed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlockTest(test failed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getMerkleRootWhenLeftLessThanLevelSize(test failed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getTransactionsWhenTransactionsIsNull(test failed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getWitnessRootWhenLeftLessThanLevelSize(test failed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getWitnessRootWhenLevelSizeGreaterThan1AndLeftLessThanLevelSize(test failed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getWorkTest(test failed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::readWhenDefaultBranch(test failed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::readWhenPayloadNotHasRemainingAndDefaultBranch(test failed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::solveWhenWatchElapsedCompareToWarningThresholdNotGreaterThan0AndCaughtVerificationExceptionThrowsRuntimeException(test failed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::solveWhenWatchElapsedCompareToWarningThresholdNotGreaterThan0ThrowsRuntimeException(test failed)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::verifyTransactionsThrowsNullPointerException(test failed)
+------------------------------------------------
+Test cases success 
+
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::addTransaction1WhenTNotIsCoinBaseThrowsRuntimeException (test success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::addTransactionTest (test success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::bitcoinSerializeToStreamWhenTransactionsIsNotEmpty (test success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::bitcoinSerializeToStreamWhenTransactionsIsNull (test success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkProofOfWorkWhenContextGetIsRelaxProofOfWork (test success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkWitnessRootWhenWitnessGetPushCountNotEquals1ThrowsVerificationException (test success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkWitnessRootWhenWitnessReservedLengthNotEquals32ThrowsVerificationException (test success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkWitnessRootWhenWitnessRootHashEqualsWitnessCommitment (test success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkWitnessRootWhenWitnessRootHashNotEqualsWitnessCommitmentThrowsVerificationException (test success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlock1WhenTimeCompareToBitcoinTimeGreaterThanOrEqualsTo0AndBGetVersionNotEqualsVersionThrowsRuntimeException (test success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlock4Test (test success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlockWithCoinbase1Test (test success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlockWithCoinbaseTest (test success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getDifficultyTargetAsIntegerTest (test success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getHashAsStringTest (test success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getHashWhenCaughtIOExceptionThrowsRuntimeException (test success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getHashWhenHashIsNull (test success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getTimeSecondsTest (test success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getTimeTest (test success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getTransactionsWhenTransactionsIsNotNull (test success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::hasTransactionsWhenThisTransactionsIsEmpty (test success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::hasTransactionsWhenThisTransactionsNotIsEmpty (test success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::isBIP34WhenVersionGreaterThanOrEqualsToBLOCK_VERSION_BIP34 (test success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::isBIP34WhenVersionLessThanBLOCK_VERSION_BIP34 (test success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::isBIP65WhenVersionGreaterThanOrEqualsToBLOCK_VERSION_BIP65 (test success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::isBIP65WhenVersionLessThanBLOCK_VERSION_BIP65 (test success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::isBIP66WhenVersionGreaterThanOrEqualsToBLOCK_VERSION_BIP66 (test success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::isBIP66WhenVersionLessThanBLOCK_VERSION_BIP66 (test success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::messageSizeWhenTransactionsIsNotEmpty (test success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::setDifficultyTargetTest (test success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::setMerkleRootTest (test success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::setNonceTest (test success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::setPrevBlockHashTest (test success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::setTimeTest (test success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::solveWhenCheckProofOfWorkFalse (test success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::timeTest (test success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::toStringWhenBipsIsEmptyAndTransactionsIsNotNullAndTransactionsSizeGreaterThan0AndTransactionsIsNotEmpty (test success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::toStringWhenTransactionsIsNotEmpty (test success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::unCacheTest (test success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::verifyHeaderTest (test success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::verifyTest (test success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::writeHeaderTest (test success)
+------------------------------------------------
+Test cases tried LLM 
+
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::addTransaction1WhenTransactionsSizeGreaterThan0AndTIsCoinBaseThrowsRuntimeException (Tried LLM)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkWitnessRootWhenTxHasWitnessesThrowsVerificationException (Tried LLM)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkWitnessRootWhenTxNotHasWitnesses (Tried LLM)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlock2Test (Tried LLM)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlock3Test (Tried LLM)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getMerkleRootWhenLeftLessThanLevelSize (Tried LLM)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getTimeTest (Tried LLM)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getWitnessRootWhenLeftLessThanLevelSize (Tried LLM)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getWitnessRootWhenLevelSizeGreaterThan1AndLeftLessThanLevelSize (Tried LLM)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::readWhenDefaultBranch (Tried LLM)
+------------------------------------------------
+Test cases tried LLM and had a success response 
+
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getWitnessRootWhenLevelSizeGreaterThan1AndLeftLessThanLevelSize (Tried LLM and Success)
+------------------------------------------------
+Test cases tried LLM and had a error response 
+
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::addTransaction1WhenTransactionsSizeGreaterThan0AndTIsCoinBaseThrowsRuntimeException (Tried LLM and Error)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkWitnessRootWhenTxHasWitnessesThrowsVerificationException (Tried LLM and Error)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkWitnessRootWhenTxNotHasWitnesses (Tried LLM and Error)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlock2Test (Tried LLM and Error)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlock3Test (Tried LLM and Error)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getMerkleRootWhenLeftLessThanLevelSize (Tried LLM and Error)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getTimeTest (Tried LLM and Error)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getWitnessRootWhenLeftLessThanLevelSize (Tried LLM and Error)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::readWhenDefaultBranch (Tried LLM and Error)
+------------------------------------------------
+Test cases WITHOUT TODO and Fail 
+
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::addTransaction1WhenRunSanityChecksAndTransactionsSizeNotGreaterThan0 (Without TODO and fail)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkProofOfWorkWhenHCompareToTargetNotGreaterThan0 (Without TODO and fail)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkProofOfWorkWhenNotThrowException (Without TODO and fail)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkProofOfWorkWhenThrowExceptionThrowsVerificationException (Without TODO and fail)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::cloneAsHeaderWhenDefaultBranch (Without TODO and fail)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createGenesis1Test (Without TODO and fail)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createGenesisTest (Without TODO and fail)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlockTest (Without TODO and fail)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getTransactionsWhenTransactionsIsNull (Without TODO and fail)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getWorkTest (Without TODO and fail)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::readWhenPayloadNotHasRemainingAndDefaultBranch (Without TODO and fail)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::solveWhenWatchElapsedCompareToWarningThresholdNotGreaterThan0ThrowsRuntimeException (Without TODO and fail)
+------------------------------------------------
+
+Test grouped by failure reason
+
+Test cases with model failure reason and Success: 
+
+Summary: 
+
+PRIVATE_METHOD_TODO_COMMENT (2)
+VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED (1)
+METHOD_WITHOUT_EXPRESSION_SUPPORT (1)
+
+Details: 
+
+PRIVATE_METHOD_TODO_COMMENT (2)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::verifyTest (Failure reason and Success)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::verifyHeaderTest (Failure reason and Success)
+
+VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED (1)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlock1WhenTimeCompareToBitcoinTimeGreaterThanOrEqualsTo0AndBGetVersionNotEqualsVersionThrowsRuntimeException (Failure reason and Success)
+
+METHOD_WITHOUT_EXPRESSION_SUPPORT (1)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getTimeTest (Failure reason and Success)
+
+Test cases with model failure reason and Fail: 
+
+Summary: 
+
+UNKNOWN (12)
+PROVER_COULD_NOT_SOLVE_THE_PROBLEM (6)
+VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED (4)
+METHOD_WITHOUT_EXPRESSION_SUPPORT (3)
+DEPENDENCY_TO_THROW_EXCEPTION_NOT_FOUND (1)
+EXTERNAL_FIELD_WITHOUT_ACCESS (1)
+
+Details: 
+
+UNKNOWN (12)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getTransactionsWhenTransactionsIsNull (Failure reason and Fail)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createGenesisTest (Failure reason and Fail)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::addTransaction1WhenRunSanityChecksAndTransactionsSizeNotGreaterThan0 (Failure reason and Fail)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createGenesis1Test (Failure reason and Fail)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::cloneAsHeaderWhenDefaultBranch (Failure reason and Fail)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkProofOfWorkWhenNotThrowException (Failure reason and Fail)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlockTest (Failure reason and Fail)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkProofOfWorkWhenThrowExceptionThrowsVerificationException (Failure reason and Fail)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkProofOfWorkWhenHCompareToTargetNotGreaterThan0 (Failure reason and Fail)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::readWhenPayloadNotHasRemainingAndDefaultBranch (Failure reason and Fail)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::solveWhenWatchElapsedCompareToWarningThresholdNotGreaterThan0ThrowsRuntimeException (Failure reason and Fail)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getWorkTest (Failure reason and Fail)
+
+PROVER_COULD_NOT_SOLVE_THE_PROBLEM (6)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getWitnessRootWhenLeftLessThanLevelSize (Failure reason and Fail)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getWitnessRootWhenLevelSizeGreaterThan1AndLeftLessThanLevelSize (Failure reason and Fail)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::addTransaction1WhenTransactionsSizeGreaterThan0AndTIsCoinBaseThrowsRuntimeException (Failure reason and Fail)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkWitnessRootWhenTxHasWitnessesThrowsVerificationException (Failure reason and Fail)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::getMerkleRootWhenLeftLessThanLevelSize (Failure reason and Fail)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::checkWitnessRootWhenTxNotHasWitnesses (Failure reason and Fail)
+
+VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED (4)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlock1WhenPrevOutIsNullAndTimeCompareToBitcoinTimeLessThan0AndCaughtVerificationExceptiThrowsRuntimeException (Failure reason and Fail)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::addCoinbaseTransactionWhenHeightGreaterThanOrEqualsToBlockBLOCK_HEIGHT_GENESIS (Failure reason and Fail)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlock1WhenPrevOutIsNullAndTimeCompareToBitcoinTimeLessThan0AndBGetVersionEqualsVersion (Failure reason and Fail)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlock1WhenTimeCompareToBitcoinTimeGreaterThanOrEqualsTo0AndCaughtVerificationExceptionThrowsRuntimeException (Failure reason and Fail)
+
+METHOD_WITHOUT_EXPRESSION_SUPPORT (3)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::readWhenDefaultBranch (Failure reason and Fail)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlock2Test (Failure reason and Fail)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::createNextBlock3Test (Failure reason and Fail)
+
+DEPENDENCY_TO_THROW_EXCEPTION_NOT_FOUND (1)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::solveWhenWatchElapsedCompareToWarningThresholdNotGreaterThan0AndCaughtVerificationExceptionThrowsRuntimeException (Failure reason and Fail)
+
+EXTERNAL_FIELD_WITHOUT_ACCESS (1)
+org.bitcoinj.core.BlockSapientGeneratedJunit4Test::verifyTransactionsThrowsNullPointerException (Failure reason and Fail)
+
