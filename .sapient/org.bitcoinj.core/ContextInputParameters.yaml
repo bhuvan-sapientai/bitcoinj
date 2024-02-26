@@ -1,0 +1,604 @@
+---
+modelFingerprint: "9401F73E0AB23598FA7A21044391B5AA"
+methods:
+- method:
+    name: "get"
+    returnType: "org.bitcoinj.core.Context"
+    signature: "get() : org.bitcoinj.core.Context"
+    instructionFingerprint: "3B7F4D5924A523CBD85C7BF0AA289A1E"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "getWhenLastConstructedIsNullThrowsIllegalStateException"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "C8E17FDC1709520D4A91ED017734C7D3"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "C262F051BA9BA7DCBC7C99F8381610FE"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "java.lang.IllegalStateException"
+          parameters:
+          - name: "s"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "You must construct a Context object before using bitcoinj!"
+              valueType: "java.lang.String"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "java.lang.IllegalStateException"
+          parameters:
+          - name: "s"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "You must construct a Context object before using bitcoinj!"
+              valueType: "java.lang.String"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "java.lang.IllegalStateException"
+        uuid: "get_illegalStateException1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "e036bddf-937a-3650-9e04-f9db4fc7f5f6"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "enableStrictMode"
+    returnType: "void"
+    signature: "enableStrictMode() : void"
+    instructionFingerprint: "0E3F1AE2AC567BE4ECFA037345CB28EE"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "enableStrictModeTest"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "6E13917948F4503330A129503ABFC98B"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "VOID"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "75314fee-fe7b-30a2-87e6-72443018f845"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "getOrCreate"
+    returnType: "org.bitcoinj.core.Context"
+    signature: "getOrCreate() : org.bitcoinj.core.Context"
+    tryCatchBlocks:
+    - idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.lang.IllegalStateException"
+    instructionFingerprint: "6ACBE3E4FE9EBAB4D44D64BC6B5C93C5"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "getOrCreateTest"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "817D3A4C1941FBD2204BA82D1AEE0C6E"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC"
+      name: "Context"
+      modelFingerprint: "48D221517E861357B3439FCF8D5FC88D"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 1
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.core.Context"
+        uuid: "org.bitcoinj.core.Context"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.core.Context"
+        name: "get"
+        parameters: []
+        signature: "get(): Context"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.core.Context"
+          uuid: "getOrCreate_context1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "A9503CE94F17276AC5D7929808D7C5F6"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.core.Context"
+        uuid: "getOrCreate_context1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "7ebba1ee-4173-3b5d-87a3-e5c7afab1a1f"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path2"
+    pathIdForUser: "path2"
+    testPathName: "getOrCreateWhenCaughtIllegalStateException"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "34821D771454A294F05F68A201909DE8"
+    problemWasSolvedByProver: true
+    catchBlockExercised:
+      idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.lang.IllegalStateException"
+    truncated: false
+    inputParameters:
+    - type: "STATIC"
+      name: "Context"
+      modelFingerprint: "E693A0F7BC32F6711D1C6C3C1BC5E38E"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      idsTryCatchBlockSurrounding:
+      - 1
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.core.Context"
+        uuid: "org.bitcoinj.core.Context"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.core.Context"
+        name: "get"
+        parameters: []
+        signature: "get(): Context"
+        returnValue:
+          sapientType: "EXCEPTION"
+          content: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.lang.IllegalStateException"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.lang.IllegalStateException"
+          uuid: "getOrCreate_context1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "101D1A5FBFDC9EC118F6E1EEF43011E2"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.Context"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.Context"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.core.Context"
+        uuid: "getOrCreate_context2"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "0f5f9a71-516e-3093-8f88-8bf0d4c77f02"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "getOrCreate"
+    returnType: "org.bitcoinj.core.Context"
+    signature: "getOrCreate(org.bitcoinj.core.NetworkParameters) : org.bitcoinj.core.Context"
+    tryCatchBlocks:
+    - idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.lang.IllegalStateException"
+    instructionFingerprint: "EC2668532D394853660042FB67EA190B"
+    parametersTypes:
+    - "org.bitcoinj.core.NetworkParameters"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "getOrCreate1Test"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "8CBC91D13E80DD11D6AB9107AA9D808A"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "params"
+      modelFingerprint: "B668779CA341827ABE80AF8E4B98FDFF"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.core.NetworkParameters"
+        uuid: "getOrCreate_networkParameters1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Context"
+      modelFingerprint: "4F4F33A2DB5120156178710C75B781EA"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.core.Context"
+        uuid: "org.bitcoinj.core.Context"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.core.Context"
+        name: "getOrCreate"
+        parameters: []
+        signature: "getOrCreate(): Context"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.core.Context"
+          uuid: "getOrCreate_context1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "A9503CE94F17276AC5D7929808D7C5F6"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.core.Context"
+        uuid: "getOrCreate_context1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "5efa0cff-0919-3077-ab23-22ccdc20b3b8"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "propagate"
+    returnType: "void"
+    signature: "propagate(org.bitcoinj.core.Context) : void"
+    instructionFingerprint: "DA0C7E543C80C07DEA5546406BEE3056"
+    parametersTypes:
+    - "org.bitcoinj.core.Context"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "propagateTest"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "F98257BF5AB98202A6DEC12895034ACA"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "context"
+      modelFingerprint: "CFC53EC57044F48335424AB6EE27A919"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.Context"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.Context"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.core.Context"
+        uuid: "propagate_context1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "VOID"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "0d42f23a-6f1c-3106-a642-f13b9e1c45f3"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "getConfidenceTable"
+    returnType: "org.bitcoinj.core.TxConfidenceTable"
+    signature: "getConfidenceTable() : org.bitcoinj.core.TxConfidenceTable"
+    instructionFingerprint: "107B5F9983C0E794D820652B685A0722"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "getConfidenceTableTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(int,org.bitcoinj.base.Coin,boolean,boolean) : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "F68552BEE2BCCD894910926311D71C7A"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "c182c71c-3efd-368e-ae02-69a267994a23"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "getEventHorizon"
+    returnType: "int"
+    signature: "getEventHorizon() : int"
+    instructionFingerprint: "1E0EBC2BE097A1403DB7E70C23823075"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "getEventHorizonTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(int,org.bitcoinj.base.Coin,boolean,boolean) : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "2C1A722876AABE869575F2B29542D297"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "344c2331-23ea-33cd-9952-a08d4222361d"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "getFeePerKb"
+    returnType: "org.bitcoinj.base.Coin"
+    signature: "getFeePerKb() : org.bitcoinj.base.Coin"
+    instructionFingerprint: "027C769C1748E45991FC54D93E56B6E1"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "getFeePerKbTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(int,org.bitcoinj.base.Coin,boolean,boolean) : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "D2C55636044139F60719242AB3DC7A56"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "8a6ba541-a60a-3502-b29c-dbaea26ea8f3"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "isEnsureMinRequiredFee"
+    returnType: "boolean"
+    signature: "isEnsureMinRequiredFee() : boolean"
+    instructionFingerprint: "AFA5B104BB31FB7D9121D570B187A6DA"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "isEnsureMinRequiredFeeWhenEnsureMinRequiredFee"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(int,org.bitcoinj.base.Coin,boolean,boolean) : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "3A2C20FFD4C0FF6BDA2A271014B5A7F8"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "3aeae7f8-4d00-3ca2-b3b2-70f27a5896b3"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path2"
+    pathIdForUser: "path2"
+    testPathName: "isEnsureMinRequiredFeeWhenNotEnsureMinRequiredFee"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(int,org.bitcoinj.base.Coin,boolean,boolean) : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "8043C50749DD2C9C9D5381329F4CDA96"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "72cbed0a-29a2-3241-b689-38b17d32f304"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "isRelaxProofOfWork"
+    returnType: "boolean"
+    signature: "isRelaxProofOfWork() : boolean"
+    instructionFingerprint: "D9A25AA598B6D4776E492DC9BC3EB41E"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "isRelaxProofOfWorkWhenRelaxProofOfWork"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(int,org.bitcoinj.base.Coin,boolean,boolean) : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "125491946B7B02B54C343C7F3116A7FA"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "b34b6de0-628b-3dbe-9acd-4a2558eef04d"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path2"
+    pathIdForUser: "path2"
+    testPathName: "isRelaxProofOfWorkWhenNotRelaxProofOfWork"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(int,org.bitcoinj.base.Coin,boolean,boolean) : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "17A4C1A8E44933B4068560E986558A92"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "e2ffc5c0-4a3d-3452-ad56-36e0c677bf50"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false

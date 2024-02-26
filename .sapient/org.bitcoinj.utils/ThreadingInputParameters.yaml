@@ -1,0 +1,581 @@
+---
+modelFingerprint: "8E497F7B98000220B4BDB4D33798554C"
+methods:
+- method:
+    name: "waitForUserCode"
+    returnType: "void"
+    signature: "waitForUserCode() : void"
+    instructionFingerprint: "EF3DBA6A33927D5D2000CFF024E94873"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "waitForUserCodeTest"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "FC68006988B54FCB1177BC4BA3EF6DF3"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "VOID"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "854b3f0b-2915-393d-9545-bcce0ce2d7ea"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    disabledReason: "Potential harmful system call (CompletableFuture.join) detected;\
+      \ Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "lock"
+    returnType: "java.util.concurrent.locks.ReentrantLock"
+    signature: "lock(java.lang.Class) : java.util.concurrent.locks.ReentrantLock"
+    instructionFingerprint: "1ACA9F408E097942789603C47F0E6D6C"
+    parametersTypes:
+    - "java.lang.Class"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "lockTest"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "CA03C33BD5ACAF2159A79D832CDA35BF"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "clazz"
+      modelFingerprint: "1F605CF9A7515292212D7464BDF2928E"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "CLASS"
+        content: !<regular>
+          value: "java.lang.Object"
+        valueType: "java.lang.Class"
+        uuid: "lock_class1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Threading"
+      modelFingerprint: "842A725988BE23BF631EFDD153404099"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.utils.Threading"
+        uuid: "org.bitcoinj.utils.Threading"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.utils.Threading"
+        name: "lock"
+        parameters:
+        - name: "name"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "Object lock"
+            suggestedContent: !<regular>
+              value: "Object lock"
+            valueType: "java.lang.String"
+            uuid: "lock_string2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "lock(String): ReentrantLock"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<new>
+            target: "java.util.concurrent.locks.ReentrantLock"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          suggestedContent: !<new>
+            target: "java.util.concurrent.locks.ReentrantLock"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "java.util.concurrent.locks.ReentrantLock"
+          uuid: "lock_reentrantLock1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "F1B954AC657731003C93FF1C671503A6"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "java.util.concurrent.locks.ReentrantLock"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "java.util.concurrent.locks.ReentrantLock"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "java.util.concurrent.locks.ReentrantLock"
+        uuid: "lock_reentrantLock1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "df989bdd-bf46-3e9a-9d63-d54a2b5bf6c3"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "lock"
+    returnType: "java.util.concurrent.locks.ReentrantLock"
+    signature: "lock(java.lang.String) : java.util.concurrent.locks.ReentrantLock"
+    instructionFingerprint: "15858A979AB99F9128D8743B9F40D030"
+    parametersTypes:
+    - "java.lang.String"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "lock1WhenPlatformUtilsNotIsAndroidRuntime"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "D12A5B4BA28880FEF575EED0F65B1DCE"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "name"
+      modelFingerprint: "A5A677781F1AA239DD8FD18CBAF96F68"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "A"
+        suggestedContent: !<regular>
+          value: "A"
+        valueType: "java.lang.String"
+        uuid: "lock_string1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "PlatformUtils"
+      modelFingerprint: "38E10FB1C4F0A28C2077A4287FF064E2"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "REAL"
+        valueType: "org.bitcoinj.base.internal.PlatformUtils"
+        uuid: "org.bitcoinj.base.internal.PlatformUtils"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.PlatformUtils"
+        name: "isAndroidRuntime"
+        parameters: []
+        signature: "isAndroidRuntime(): boolean"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: false
+          valueType: "boolean"
+          uuid: "lock_boolean1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "214882BD9E9AE1EA212CC6B9C4E47FEF"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<method_return_from_value>
+          target: "java.util.concurrent.locks.ReentrantLock"
+          localVariableValue:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "com.google.common.util.concurrent.CycleDetectingLockFactory"
+              method: "newInstance"
+              methodParameters:
+              - value:
+                  sapientType: "ENUM"
+                  content: !<regular>
+                    value: "THROW"
+                  valueType: "com.google.common.util.concurrent.CycleDetectingLockFactory$Policies"
+                  uuid: "Enum-com.google.common.util.concurrent.CycleDetectingLockFactory$Policies-THROW"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            suggestedContent: !<static_method_return>
+              target: "com.google.common.util.concurrent.CycleDetectingLockFactory"
+              method: "newInstance"
+              methodParameters:
+              - value:
+                  sapientType: "ENUM"
+                  content: !<regular>
+                    value: "THROW"
+                  valueType: "com.google.common.util.concurrent.CycleDetectingLockFactory$Policies"
+                  uuid: "Enum-com.google.common.util.concurrent.CycleDetectingLockFactory$Policies-THROW"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "com.google.common.util.concurrent.CycleDetectingLockFactory"
+            uuid: "setPolicy_cycleDetectingLockFactory1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          methodParameters:
+          - name: "lockName"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "A"
+              suggestedContent: !<regular>
+                value: "A"
+              valueType: "java.lang.String"
+              uuid: "lock_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          methodName: "newReentrantLock"
+        suggestedContent: !<method_return_from_value>
+          target: "java.util.concurrent.locks.ReentrantLock"
+          localVariableValue:
+            sapientType: "OBJECT"
+            suggestedContent: !<static_method_return>
+              target: "com.google.common.util.concurrent.CycleDetectingLockFactory"
+              method: "newInstance"
+              methodParameters:
+              - value:
+                  sapientType: "ENUM"
+                  content: !<regular>
+                    value: "THROW"
+                  valueType: "com.google.common.util.concurrent.CycleDetectingLockFactory$Policies"
+                  uuid: "Enum-com.google.common.util.concurrent.CycleDetectingLockFactory$Policies-THROW"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "com.google.common.util.concurrent.CycleDetectingLockFactory"
+            uuid: "setPolicy_cycleDetectingLockFactory1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          methodParameters:
+          - name: "lockName"
+            value:
+              sapientType: "BASIC"
+              suggestedContent: !<regular>
+                value: "A"
+              valueType: "java.lang.String"
+              uuid: "lock_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          methodName: "newReentrantLock"
+        valueType: "java.util.concurrent.locks.ReentrantLock"
+        uuid: "lock_reentrantLock1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "c8797ac2-3ff2-3636-b136-78c3f8e09094"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "warnOnLockCycles"
+    returnType: "void"
+    signature: "warnOnLockCycles() : void"
+    instructionFingerprint: "470C6DB5EB7D96A514C140C387C92F7C"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "warnOnLockCyclesTest"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "8461F672846B9DA640E7CFE7D724C3CD"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "VOID"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "c709ef01-e2a5-3bd3-a000-165e7ea4587b"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "throwOnLockCycles"
+    returnType: "void"
+    signature: "throwOnLockCycles() : void"
+    instructionFingerprint: "8EF9143FA079788B7B6C04380BAAB78F"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "throwOnLockCyclesTest"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "EFDBA0E41E1C0F79544E7C16F47CA503"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "VOID"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "1b7c8f1c-c415-3464-8cb6-3edf54bfde7c"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "ignoreLockCycles"
+    returnType: "void"
+    signature: "ignoreLockCycles() : void"
+    instructionFingerprint: "DFF7ACEEA93F405BC75471560B41B0C7"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "ignoreLockCyclesTest"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "AE81C666F13EE8C5F61E42D1B1338A97"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "VOID"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "5ce10835-ac42-3f12-8f8f-0f4ad46215c3"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "setPolicy"
+    returnType: "void"
+    signature: "setPolicy(com.google.common.util.concurrent.CycleDetectingLockFactory$Policy)\
+      \ : void"
+    instructionFingerprint: "F66C03A1CA09066860E2027C52D42228"
+    parametersTypes:
+    - "com.google.common.util.concurrent.CycleDetectingLockFactory$Policy"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "setPolicyTest"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "03A93D7BE878574C2A2DEE4C99F6B3FD"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "policy"
+      modelFingerprint: "9A3BBBEFCDA44ABE2A75DB7EE257D395"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "ENUM"
+        content: !<regular>
+          value: "THROW"
+        valueType: "com.google.common.util.concurrent.CycleDetectingLockFactory$Policies"
+        uuid: "Enum-com.google.common.util.concurrent.CycleDetectingLockFactory$Policies-THROW"
+        fixed: true
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "VOID"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATE_VERIFICATION_FIELD"
+      name: "policy"
+      modelFingerprint: "C0700BC578E0AFE6BCD44A6E98EAE061"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "ENUM"
+        content: !<regular>
+          value: "THROW"
+        valueType: "com.google.common.util.concurrent.CycleDetectingLockFactory$Policies"
+        uuid: "Enum-com.google.common.util.concurrent.CycleDetectingLockFactory$Policies-THROW"
+        fixed: true
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      readMethodForField: "getPolicy"
+      staticReadMethodForField: true
+      readMethodModifier: "PUBLIC"
+      filledByUser: false
+    uuid: "fe424d28-b206-364e-b0bc-652243091ec0"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "getPolicy"
+    returnType: "com.google.common.util.concurrent.CycleDetectingLockFactory$Policy"
+    signature: "getPolicy() : com.google.common.util.concurrent.CycleDetectingLockFactory$Policy"
+    instructionFingerprint: "805CD8EB4EC3BC84CB889B32AE571575"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "getPolicyTest"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "99763398F884DC25EEF9A5AB35038114"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "E0007F845704678CEA84607499427AB9"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "ENUM"
+        content: !<regular>
+          value: "THROW"
+        valueType: "com.google.common.util.concurrent.CycleDetectingLockFactory$Policies"
+        uuid: "Enum-com.google.common.util.concurrent.CycleDetectingLockFactory$Policies-THROW"
+        fixed: true
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "24082d81-f972-3165-924d-5598e3d763e8"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false

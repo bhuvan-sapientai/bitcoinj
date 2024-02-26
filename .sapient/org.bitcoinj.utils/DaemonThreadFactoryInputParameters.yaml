@@ -1,0 +1,198 @@
+---
+modelFingerprint: "E82DC196F41EA8B6A637631E39D0629B"
+methods:
+- method:
+    name: "newThread"
+    returnType: "java.lang.Thread"
+    signature: "newThread(java.lang.Runnable) : java.lang.Thread"
+    instructionFingerprint: "B5FDA2A6E70300BD10AAAEF4830E62AF"
+    parametersTypes:
+    - "java.lang.Runnable"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "newThreadWhenNameIsNotNull"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(java.lang.String) : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "2AA7ED25F0A9227F4D1E168E3E7464A6"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "51C9A0906CC45E6D885ABAB71A497B99"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.utils.DaemonThreadFactory"
+          parameters:
+          - name: "name"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "valid_value"
+              suggestedContent: !<regular>
+                value: "valid_value"
+              valueType: "java.lang.String"
+              uuid: "<init>_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.utils.DaemonThreadFactory"
+          parameters:
+          - name: "name"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "valid_value"
+              suggestedContent: !<regular>
+                value: "valid_value"
+              valueType: "java.lang.String"
+              uuid: "<init>_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.utils.DaemonThreadFactory"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "runnable"
+      modelFingerprint: "6B6FF45F728B33C165DB3DCA1CC09774"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "java.lang.Runnable"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "java.lang.Runnable"
+        uuid: "newThread_runnable1"
+        fixed: false
+        nameForMock: "valid_value"
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "324981929E3B9905F4C160AC645ADA91"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<method_return_from_value>
+          target: "java.lang.Thread"
+          localVariableValue:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "java.util.concurrent.Executors"
+              method: "defaultThreadFactory"
+              methodParameters: []
+            suggestedContent: !<static_method_return>
+              target: "java.util.concurrent.Executors"
+              method: "defaultThreadFactory"
+              methodParameters: []
+            valueType: "java.util.concurrent.ThreadFactory"
+            uuid: "newThread_threadFactory1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          methodParameters:
+          - name: "arg0"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "java.lang.Runnable"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "java.lang.Runnable"
+              uuid: "newThread_runnable1"
+              fixed: false
+              nameForMock: "valid_value"
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          methodName: "newThread"
+        suggestedContent: !<method_return_from_value>
+          target: "java.lang.Thread"
+          localVariableValue:
+            sapientType: "OBJECT"
+            suggestedContent: !<static_method_return>
+              target: "java.util.concurrent.Executors"
+              method: "defaultThreadFactory"
+              methodParameters: []
+            valueType: "java.util.concurrent.ThreadFactory"
+            uuid: "newThread_threadFactory1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          methodParameters:
+          - name: "arg0"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "java.lang.Runnable"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "java.lang.Runnable"
+              uuid: "newThread_runnable1"
+              fixed: false
+              nameForMock: "valid_value"
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          methodName: "newThread"
+        valueType: "java.lang.Thread"
+        uuid: "newThread_thread1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "c9c9f9bd-5803-3ebe-a7ea-facc30c0b334"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path2"
+    pathIdForUser: "path2"
+    testPathName: "newThreadWhenNameIsNull"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(java.lang.String) : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "0EB57CFF026039BC1C6F64DDABD333ED"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "4573f098-5771-385b-b002-a6b6c27e9f05"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false

@@ -1,0 +1,3216 @@
+---
+modelFingerprint: "E0485D8FD3D999AC7210227EA0762E29"
+methods:
+- method:
+    name: "findKeyFromPubKeyHash"
+    returnType: "org.bitcoinj.crypto.ECKey"
+    signature: "findKeyFromPubKeyHash(byte[],org.bitcoinj.base.ScriptType) : org.bitcoinj.crypto.ECKey"
+    instructionFingerprint: "7B61F04A87A80EDBC3A5F5D0FAA2CF95"
+    parametersTypes:
+    - "byte[]"
+    - "org.bitcoinj.base.ScriptType"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "findKeyFromPubKeyHashWhenKeyIsNull"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.wallet.KeyBag,org.bitcoinj.crypto.AesKey)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "4CA9EFC1B8C3526A3ABEA9C3DE094A8C"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "5F30E18AAC3E8FB97DA8DD2327D941A1"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.wallet.DecryptingKeyBag"
+          parameters:
+          - name: "target"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.wallet.KeyBag"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.wallet.KeyBag"
+              uuid: "<init>_keyBag1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "aesKey"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.crypto.AesKey"
+              uuid: "<init>_aesKey1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.wallet.DecryptingKeyBag"
+          parameters:
+          - name: "target"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.wallet.KeyBag"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.wallet.KeyBag"
+              uuid: "<init>_keyBag1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "aesKey"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.crypto.AesKey"
+              uuid: "<init>_aesKey1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.wallet.DecryptingKeyBag"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "pubKeyHash"
+      modelFingerprint: "E93ACF48A2476635AC21AD157B987CAF"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "ARRAY"
+        content: !<array>
+          values: {}
+        suggestedContent: !<array>
+          values: {}
+        valueType: "byte[]"
+        uuid: "findKeyFromPubKeyHash_byte[]1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "scriptType"
+      modelFingerprint: "87123FDA125AA825FE20A1F8775A8754"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "ENUM"
+        content: !<regular>
+          value: "P2PKH"
+        valueType: "org.bitcoinj.base.ScriptType"
+        uuid: "findKeyFromPubKeyHash_scriptType1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "target"
+      modelFingerprint: "B73B66D32EEEA5BFDBCE7E301F31C942"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.wallet.KeyBag"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.wallet.KeyBag"
+        uuid: "<init>_keyBag1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.target"
+        name: "findKeyFromPubKeyHash"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            suggestedContent: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "findKeyFromPubKeyHash_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "arg1"
+          value:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "P2PKH"
+            valueType: "org.bitcoinj.base.ScriptType"
+            uuid: "findKeyFromPubKeyHash_scriptType1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "findKeyFromPubKeyHash(byte[],ScriptType): ECKey"
+        returnValue:
+          sapientType: "NULL"
+          valueType: "org.bitcoinj.crypto.ECKey"
+          uuid: "findKeyFromPubKeyHash_eCKey1"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "06245C8FA6438FEEF64CA217AF2B3EE1"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        valueType: "org.bitcoinj.crypto.ECKey"
+        uuid: "maybeDecrypt_eCKey1"
+        fixed: true
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "3e0844fc-0454-36bc-ad62-c03333a4359b"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path4"
+    pathIdForUser: "path2"
+    testPathName: "findKeyFromPubKeyHashWhenKeyNotIsEncrypted"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.wallet.KeyBag,org.bitcoinj.crypto.AesKey)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "96EBAAEEA24525F305C783F11380DF0B"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "5F30E18AAC3E8FB97DA8DD2327D941A1"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.wallet.DecryptingKeyBag"
+          parameters:
+          - name: "target"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.wallet.KeyBag"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.wallet.KeyBag"
+              uuid: "<init>_keyBag1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "aesKey"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.crypto.AesKey"
+              uuid: "<init>_aesKey1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.wallet.DecryptingKeyBag"
+          parameters:
+          - name: "target"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.wallet.KeyBag"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.wallet.KeyBag"
+              uuid: "<init>_keyBag1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "aesKey"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.crypto.AesKey"
+              uuid: "<init>_aesKey1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.wallet.DecryptingKeyBag"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "pubKeyHash"
+      modelFingerprint: "E93ACF48A2476635AC21AD157B987CAF"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "ARRAY"
+        content: !<array>
+          values: {}
+        suggestedContent: !<array>
+          values: {}
+        valueType: "byte[]"
+        uuid: "findKeyFromPubKeyHash_byte[]1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "scriptType"
+      modelFingerprint: "87123FDA125AA825FE20A1F8775A8754"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "ENUM"
+        content: !<regular>
+          value: "P2PKH"
+        valueType: "org.bitcoinj.base.ScriptType"
+        uuid: "findKeyFromPubKeyHash_scriptType1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "target"
+      modelFingerprint: "7B3D87CC11D8AC47B3E936620E7DEA0E"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.wallet.KeyBag"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.wallet.KeyBag"
+        uuid: "<init>_keyBag1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.target"
+        name: "findKeyFromPubKeyHash"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            suggestedContent: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "findKeyFromPubKeyHash_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "arg1"
+          value:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "P2PKH"
+            valueType: "org.bitcoinj.base.ScriptType"
+            uuid: "findKeyFromPubKeyHash_scriptType1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "findKeyFromPubKeyHash(byte[],ScriptType): ECKey"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.crypto.ECKey"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.bitcoinj.crypto.ECKey"
+          uuid: "findKeyFromPubKeyHash_eCKey1"
+          fixed: false
+          equalsMethodPresent: true
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "key"
+      modelFingerprint: "0E530C99AB70EE9D491C5AA5A9DDADEE"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.crypto.ECKey"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.crypto.ECKey"
+        uuid: "findKeyFromPubKeyHash_eCKey1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      methodExercised:
+        target: "key"
+        name: "isEncrypted"
+        parameters: []
+        signature: "isEncrypted(): boolean"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: false
+          suggestedContent: !<regular>
+            value: false
+          valueType: "boolean"
+          uuid: "maybeDecrypt_boolean1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "89A88F6F7D53B9E2280D6AF040EB14BF"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.crypto.ECKey"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.crypto.ECKey"
+        uuid: "findKeyFromPubKeyHash_eCKey1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "78bbd9b7-7717-3f50-9697-12e79ca26734"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path2"
+    pathIdForUser: "path3"
+    testPathName: "findKeyFromPubKeyHashWhenAesKeyIsNullThrowsECKeyKeyIsEncryptedException"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.wallet.KeyBag,org.bitcoinj.crypto.AesKey)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "093CD7BD2E7D28721B30619C75EE96C9"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "D9CB3381764E6D2B8286119D40647259"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.wallet.DecryptingKeyBag"
+          parameters:
+          - name: "target"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.wallet.KeyBag"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.wallet.KeyBag"
+              uuid: "<init>_keyBag1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "aesKey"
+            value:
+              sapientType: "NULL"
+              valueType: "org.bitcoinj.crypto.AesKey"
+              uuid: "<init>_aesKey1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.wallet.DecryptingKeyBag"
+          parameters:
+          - name: "target"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.wallet.KeyBag"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.wallet.KeyBag"
+              uuid: "<init>_keyBag1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "aesKey"
+            value:
+              sapientType: "NULL"
+              valueType: "org.bitcoinj.crypto.AesKey"
+              uuid: "<init>_aesKey1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.wallet.DecryptingKeyBag"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "pubKeyHash"
+      modelFingerprint: "E93ACF48A2476635AC21AD157B987CAF"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "ARRAY"
+        content: !<array>
+          values: {}
+        suggestedContent: !<array>
+          values: {}
+        valueType: "byte[]"
+        uuid: "findKeyFromPubKeyHash_byte[]1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "scriptType"
+      modelFingerprint: "87123FDA125AA825FE20A1F8775A8754"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "ENUM"
+        content: !<regular>
+          value: "P2PKH"
+        valueType: "org.bitcoinj.base.ScriptType"
+        uuid: "findKeyFromPubKeyHash_scriptType1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "target"
+      modelFingerprint: "A2C7A9830EA684F8CA6ACD9F67F7197B"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.wallet.KeyBag"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.wallet.KeyBag"
+        uuid: "<init>_keyBag1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.target"
+        name: "findKeyFromPubKeyHash"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            suggestedContent: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "findKeyFromPubKeyHash_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "arg1"
+          value:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "P2PKH"
+            valueType: "org.bitcoinj.base.ScriptType"
+            uuid: "findKeyFromPubKeyHash_scriptType1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "findKeyFromPubKeyHash(byte[],ScriptType): ECKey"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.crypto.ECKey"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.bitcoinj.crypto.ECKey"
+          uuid: "findKeyFromPubKeyHash_eCKey1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "key"
+      modelFingerprint: "610E8DB7B91193C0CE2593494B7F9AB5"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.crypto.ECKey"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.crypto.ECKey"
+        uuid: "findKeyFromPubKeyHash_eCKey1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "key"
+        name: "isEncrypted"
+        parameters: []
+        signature: "isEncrypted(): boolean"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: true
+          suggestedContent: !<regular>
+            value: true
+          valueType: "boolean"
+          uuid: "maybeDecrypt_boolean1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "E693FEC55CE33EA5DEA8526262D3A904"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "org.bitcoinj.crypto.ECKey$KeyIsEncryptedException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.crypto.ECKey$KeyIsEncryptedException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.crypto.ECKey$KeyIsEncryptedException"
+        uuid: "maybeDecrypt_eCKey.KeyIsEncryptedException1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "abbaf156-aef6-3779-a475-04cbad1d73cf"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path3"
+    pathIdForUser: "path4"
+    testPathName: "findKeyFromPubKeyHashWhenAesKeyIsNotNull"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.wallet.KeyBag,org.bitcoinj.crypto.AesKey)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "7960D4AE50FE92D9455AB9BDC5274B32"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "5F30E18AAC3E8FB97DA8DD2327D941A1"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.wallet.DecryptingKeyBag"
+          parameters:
+          - name: "target"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.wallet.KeyBag"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.wallet.KeyBag"
+              uuid: "<init>_keyBag1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "aesKey"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.crypto.AesKey"
+              uuid: "<init>_aesKey1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.wallet.DecryptingKeyBag"
+          parameters:
+          - name: "target"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.wallet.KeyBag"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.wallet.KeyBag"
+              uuid: "<init>_keyBag1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "aesKey"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.crypto.AesKey"
+              uuid: "<init>_aesKey1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.wallet.DecryptingKeyBag"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "pubKeyHash"
+      modelFingerprint: "E93ACF48A2476635AC21AD157B987CAF"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "ARRAY"
+        content: !<array>
+          values: {}
+        suggestedContent: !<array>
+          values: {}
+        valueType: "byte[]"
+        uuid: "findKeyFromPubKeyHash_byte[]1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "scriptType"
+      modelFingerprint: "87123FDA125AA825FE20A1F8775A8754"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "ENUM"
+        content: !<regular>
+          value: "P2PKH"
+        valueType: "org.bitcoinj.base.ScriptType"
+        uuid: "findKeyFromPubKeyHash_scriptType1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "target"
+      modelFingerprint: "A2C7A9830EA684F8CA6ACD9F67F7197B"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.wallet.KeyBag"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.wallet.KeyBag"
+        uuid: "<init>_keyBag1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.target"
+        name: "findKeyFromPubKeyHash"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            suggestedContent: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "findKeyFromPubKeyHash_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "arg1"
+          value:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "P2PKH"
+            valueType: "org.bitcoinj.base.ScriptType"
+            uuid: "findKeyFromPubKeyHash_scriptType1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "findKeyFromPubKeyHash(byte[],ScriptType): ECKey"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.crypto.ECKey"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.bitcoinj.crypto.ECKey"
+          uuid: "findKeyFromPubKeyHash_eCKey1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "key"
+      modelFingerprint: "610E8DB7B91193C0CE2593494B7F9AB5"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.crypto.ECKey"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.crypto.ECKey"
+        uuid: "findKeyFromPubKeyHash_eCKey1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "key"
+        name: "isEncrypted"
+        parameters: []
+        signature: "isEncrypted(): boolean"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: true
+          suggestedContent: !<regular>
+            value: true
+          valueType: "boolean"
+          uuid: "maybeDecrypt_boolean1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "key"
+      modelFingerprint: "8D257042B616AE6F878B51543940A34F"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.crypto.ECKey"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.crypto.ECKey"
+        uuid: "findKeyFromPubKeyHash_eCKey1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "key"
+        name: "decrypt"
+        parameters:
+        - name: "aesKey"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.crypto.AesKey"
+            uuid: "<init>_aesKey1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        throwsExceptions:
+        - "org.bitcoinj.crypto.KeyCrypterException"
+        signature: "decrypt(AesKey): ECKey throws org.bitcoinj.crypto.KeyCrypterException"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.crypto.ECKey"
+          uuid: "maybeDecrypt_eCKey1"
+          fixed: false
+          equalsMethodPresent: true
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "C726D6CBC072210C06F6D234FCFBB032"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.crypto.ECKey"
+        uuid: "maybeDecrypt_eCKey1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "82511563-8c7c-3127-9d47-29a79df21ef4"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "findKeyFromPubKey"
+    returnType: "org.bitcoinj.crypto.ECKey"
+    signature: "findKeyFromPubKey(byte[]) : org.bitcoinj.crypto.ECKey"
+    instructionFingerprint: "27FEE609E8D365B4718BDA61E1821C57"
+    parametersTypes:
+    - "byte[]"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "findKeyFromPubKeyWhenKeyIsNull"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.wallet.KeyBag,org.bitcoinj.crypto.AesKey)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "59781E3375D900BFEACC02BF514C8E7E"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "5F30E18AAC3E8FB97DA8DD2327D941A1"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.wallet.DecryptingKeyBag"
+          parameters:
+          - name: "target"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.wallet.KeyBag"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.wallet.KeyBag"
+              uuid: "<init>_keyBag1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "aesKey"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.crypto.AesKey"
+              uuid: "<init>_aesKey1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.wallet.DecryptingKeyBag"
+          parameters:
+          - name: "target"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.wallet.KeyBag"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.wallet.KeyBag"
+              uuid: "<init>_keyBag1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "aesKey"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.crypto.AesKey"
+              uuid: "<init>_aesKey1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.wallet.DecryptingKeyBag"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "pubKey"
+      modelFingerprint: "4896771F3F9CB9E845DE91D546DE6AB8"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "ARRAY"
+        content: !<array>
+          values: {}
+        suggestedContent: !<array>
+          values: {}
+        valueType: "byte[]"
+        uuid: "findKeyFromPubKey_byte[]1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "target"
+      modelFingerprint: "2A995F54B59ACA97011BA6DE398F5472"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.wallet.KeyBag"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.wallet.KeyBag"
+        uuid: "<init>_keyBag1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.target"
+        name: "findKeyFromPubKey"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            suggestedContent: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "findKeyFromPubKey_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "findKeyFromPubKey(byte[]): ECKey"
+        returnValue:
+          sapientType: "NULL"
+          valueType: "org.bitcoinj.crypto.ECKey"
+          uuid: "findKeyFromPubKey_eCKey1"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "06245C8FA6438FEEF64CA217AF2B3EE1"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        valueType: "org.bitcoinj.crypto.ECKey"
+        uuid: "maybeDecrypt_eCKey1"
+        fixed: true
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "3d7d7bf6-29c5-3904-a6b8-511994e0c3a7"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path4"
+    pathIdForUser: "path2"
+    testPathName: "findKeyFromPubKeyWhenKeyNotIsEncrypted"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.wallet.KeyBag,org.bitcoinj.crypto.AesKey)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "71A7B359E25068DD6FCAE671726957B0"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "5F30E18AAC3E8FB97DA8DD2327D941A1"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.wallet.DecryptingKeyBag"
+          parameters:
+          - name: "target"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.wallet.KeyBag"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.wallet.KeyBag"
+              uuid: "<init>_keyBag1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "aesKey"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.crypto.AesKey"
+              uuid: "<init>_aesKey1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.wallet.DecryptingKeyBag"
+          parameters:
+          - name: "target"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.wallet.KeyBag"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.wallet.KeyBag"
+              uuid: "<init>_keyBag1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "aesKey"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.crypto.AesKey"
+              uuid: "<init>_aesKey1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.wallet.DecryptingKeyBag"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "pubKey"
+      modelFingerprint: "4896771F3F9CB9E845DE91D546DE6AB8"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "ARRAY"
+        content: !<array>
+          values: {}
+        suggestedContent: !<array>
+          values: {}
+        valueType: "byte[]"
+        uuid: "findKeyFromPubKey_byte[]1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "target"
+      modelFingerprint: "7136B1D8CD0A699A9396DAD258469085"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.wallet.KeyBag"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.wallet.KeyBag"
+        uuid: "<init>_keyBag1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.target"
+        name: "findKeyFromPubKey"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            suggestedContent: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "findKeyFromPubKey_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "findKeyFromPubKey(byte[]): ECKey"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.crypto.ECKey"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.bitcoinj.crypto.ECKey"
+          uuid: "findKeyFromPubKey_eCKey1"
+          fixed: false
+          equalsMethodPresent: true
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "key"
+      modelFingerprint: "0E530C99AB70EE9D491C5AA5A9DDADEE"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.crypto.ECKey"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.crypto.ECKey"
+        uuid: "findKeyFromPubKey_eCKey1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      methodExercised:
+        target: "key"
+        name: "isEncrypted"
+        parameters: []
+        signature: "isEncrypted(): boolean"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: false
+          suggestedContent: !<regular>
+            value: false
+          valueType: "boolean"
+          uuid: "maybeDecrypt_boolean1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "89A88F6F7D53B9E2280D6AF040EB14BF"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.crypto.ECKey"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.crypto.ECKey"
+        uuid: "findKeyFromPubKey_eCKey1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "4ecc54fc-dd2e-3fa8-80db-d0e24e14dd0e"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path2"
+    pathIdForUser: "path3"
+    testPathName: "findKeyFromPubKeyWhenAesKeyIsNullThrowsECKeyKeyIsEncryptedException"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.wallet.KeyBag,org.bitcoinj.crypto.AesKey)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "26374AFAA68E2BD705859CD9E0345956"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "D9CB3381764E6D2B8286119D40647259"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.wallet.DecryptingKeyBag"
+          parameters:
+          - name: "target"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.wallet.KeyBag"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.wallet.KeyBag"
+              uuid: "<init>_keyBag1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "aesKey"
+            value:
+              sapientType: "NULL"
+              valueType: "org.bitcoinj.crypto.AesKey"
+              uuid: "<init>_aesKey1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.wallet.DecryptingKeyBag"
+          parameters:
+          - name: "target"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.wallet.KeyBag"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.wallet.KeyBag"
+              uuid: "<init>_keyBag1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "aesKey"
+            value:
+              sapientType: "NULL"
+              valueType: "org.bitcoinj.crypto.AesKey"
+              uuid: "<init>_aesKey1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.wallet.DecryptingKeyBag"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "pubKey"
+      modelFingerprint: "4896771F3F9CB9E845DE91D546DE6AB8"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "ARRAY"
+        content: !<array>
+          values: {}
+        suggestedContent: !<array>
+          values: {}
+        valueType: "byte[]"
+        uuid: "findKeyFromPubKey_byte[]1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "target"
+      modelFingerprint: "B5C63E72DF6F4B9A28BB593DA770E9BD"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.wallet.KeyBag"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.wallet.KeyBag"
+        uuid: "<init>_keyBag1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.target"
+        name: "findKeyFromPubKey"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            suggestedContent: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "findKeyFromPubKey_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "findKeyFromPubKey(byte[]): ECKey"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.crypto.ECKey"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.bitcoinj.crypto.ECKey"
+          uuid: "findKeyFromPubKey_eCKey1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "key"
+      modelFingerprint: "610E8DB7B91193C0CE2593494B7F9AB5"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.crypto.ECKey"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.crypto.ECKey"
+        uuid: "findKeyFromPubKey_eCKey1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "key"
+        name: "isEncrypted"
+        parameters: []
+        signature: "isEncrypted(): boolean"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: true
+          suggestedContent: !<regular>
+            value: true
+          valueType: "boolean"
+          uuid: "maybeDecrypt_boolean1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "E693FEC55CE33EA5DEA8526262D3A904"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "org.bitcoinj.crypto.ECKey$KeyIsEncryptedException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.crypto.ECKey$KeyIsEncryptedException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.crypto.ECKey$KeyIsEncryptedException"
+        uuid: "maybeDecrypt_eCKey.KeyIsEncryptedException1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "1efcc87a-1fa8-39ea-ba9b-2eacdc689274"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path3"
+    pathIdForUser: "path4"
+    testPathName: "findKeyFromPubKeyWhenAesKeyIsNotNull"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.wallet.KeyBag,org.bitcoinj.crypto.AesKey)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "0D38CA5E8D65C2F5ACFE8C29932CFE43"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "5F30E18AAC3E8FB97DA8DD2327D941A1"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.wallet.DecryptingKeyBag"
+          parameters:
+          - name: "target"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.wallet.KeyBag"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.wallet.KeyBag"
+              uuid: "<init>_keyBag1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "aesKey"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.crypto.AesKey"
+              uuid: "<init>_aesKey1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.wallet.DecryptingKeyBag"
+          parameters:
+          - name: "target"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.wallet.KeyBag"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.wallet.KeyBag"
+              uuid: "<init>_keyBag1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "aesKey"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.crypto.AesKey"
+              uuid: "<init>_aesKey1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.wallet.DecryptingKeyBag"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "pubKey"
+      modelFingerprint: "4896771F3F9CB9E845DE91D546DE6AB8"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "ARRAY"
+        content: !<array>
+          values: {}
+        suggestedContent: !<array>
+          values: {}
+        valueType: "byte[]"
+        uuid: "findKeyFromPubKey_byte[]1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "target"
+      modelFingerprint: "B5C63E72DF6F4B9A28BB593DA770E9BD"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.wallet.KeyBag"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.wallet.KeyBag"
+        uuid: "<init>_keyBag1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.target"
+        name: "findKeyFromPubKey"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            suggestedContent: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "findKeyFromPubKey_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "findKeyFromPubKey(byte[]): ECKey"
+        returnValue:
+          sapientType: "MOCK"
+          suggestedContent: !<unknown_object>
+            target: "org.bitcoinj.crypto.ECKey"
+            onlyPojoFunctions: false
+            builderPattern: false
+          valueType: "org.bitcoinj.crypto.ECKey"
+          uuid: "findKeyFromPubKey_eCKey1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "key"
+      modelFingerprint: "610E8DB7B91193C0CE2593494B7F9AB5"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.crypto.ECKey"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.crypto.ECKey"
+        uuid: "findKeyFromPubKey_eCKey1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "key"
+        name: "isEncrypted"
+        parameters: []
+        signature: "isEncrypted(): boolean"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: true
+          suggestedContent: !<regular>
+            value: true
+          valueType: "boolean"
+          uuid: "maybeDecrypt_boolean1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "key"
+      modelFingerprint: "8D257042B616AE6F878B51543940A34F"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.crypto.ECKey"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.crypto.ECKey"
+        uuid: "findKeyFromPubKey_eCKey1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "key"
+        name: "decrypt"
+        parameters:
+        - name: "aesKey"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.crypto.AesKey"
+            uuid: "<init>_aesKey1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        throwsExceptions:
+        - "org.bitcoinj.crypto.KeyCrypterException"
+        signature: "decrypt(AesKey): ECKey throws org.bitcoinj.crypto.KeyCrypterException"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.crypto.ECKey"
+          uuid: "maybeDecrypt_eCKey1"
+          fixed: false
+          equalsMethodPresent: true
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "C726D6CBC072210C06F6D234FCFBB032"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.crypto.ECKey"
+        uuid: "maybeDecrypt_eCKey1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "5df3db22-c0f6-37ab-84c0-e993c59b2f74"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "findRedeemDataFromScriptHash"
+    returnType: "org.bitcoinj.wallet.RedeemData"
+    signature: "findRedeemDataFromScriptHash(byte[]) : org.bitcoinj.wallet.RedeemData"
+    instructionFingerprint: "2AD25C8FF5838EEFDC9F011478D8EEAB"
+    parametersTypes:
+    - "byte[]"
+  paths:
+  - pathId: "path5"
+    pathIdForUser: "path1"
+    testPathName: "findRedeemDataFromScriptHashWhenRedeemDataKeysIsEmpty"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.wallet.KeyBag,org.bitcoinj.crypto.AesKey)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "E8B242872EF04CB86E0ACAD93F612C34"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "eef7abbb-da93-3b4f-921f-39a229c2f6fe"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path1"
+    pathIdForUser: "path2"
+    testPathName: "findRedeemDataFromScriptHashWhenKeyIsNull"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.wallet.KeyBag,org.bitcoinj.crypto.AesKey)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "327B7005CB6FF9C25FCAED6FEAFA65B9"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "5F30E18AAC3E8FB97DA8DD2327D941A1"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.wallet.DecryptingKeyBag"
+          parameters:
+          - name: "target"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.wallet.KeyBag"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.wallet.KeyBag"
+              uuid: "<init>_keyBag1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "aesKey"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.crypto.AesKey"
+              uuid: "<init>_aesKey1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.wallet.DecryptingKeyBag"
+          parameters:
+          - name: "target"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.wallet.KeyBag"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.wallet.KeyBag"
+              uuid: "<init>_keyBag1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "aesKey"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.crypto.AesKey"
+              uuid: "<init>_aesKey1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.wallet.DecryptingKeyBag"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "scriptHash"
+      modelFingerprint: "44F1B60A27158B32E73F0F8CF1C6DD48"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "ARRAY"
+        content: !<array>
+          values: {}
+        suggestedContent: !<array>
+          values: {}
+        valueType: "byte[]"
+        uuid: "findRedeemDataFromScriptHash_byte[]1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "target"
+      modelFingerprint: "59E4A4F20F3F2DE8292FED3F7E751F55"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.wallet.KeyBag"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.wallet.KeyBag"
+        uuid: "<init>_keyBag1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.target"
+        name: "findRedeemDataFromScriptHash"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            suggestedContent: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "findRedeemDataFromScriptHash_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "findRedeemDataFromScriptHash(byte[]): RedeemData"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.wallet.RedeemData"
+            method: "of"
+            methodParameters:
+            - name: "keys"
+              value:
+                sapientType: "COLLECTION"
+                content: !<collection>
+                  collectionClass: "java.util.ArrayList"
+                  parameters: []
+                  values:
+                  - sapientType: "NULL"
+                    valueType: "org.bitcoinj.crypto.ECKey"
+                    uuid: "maybeDecrypt_object1"
+                    fixed: true
+                    collectionUuid: "maybeDecrypt_list3"
+                    equalsMethodPresent: false
+                    explicitCastNeeded: true
+                suggestedContent: !<collection>
+                  collectionClass: "java.util.ArrayList"
+                  parameters: []
+                  values:
+                  - sapientType: "NULL"
+                    valueType: "org.bitcoinj.crypto.ECKey"
+                    uuid: "maybeDecrypt_object1"
+                    fixed: true
+                    collectionUuid: "maybeDecrypt_list3"
+                    equalsMethodPresent: false
+                    explicitCastNeeded: true
+                valueType: "java.util.List"
+                uuid: "maybeDecrypt_list3"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "redeemScript"
+              value:
+                sapientType: "MOCK"
+                valueType: "org.bitcoinj.script.Script"
+                uuid: "maybeDecrypt_script3"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.wallet.RedeemData"
+            method: "of"
+            methodParameters:
+            - name: "keys"
+              value:
+                sapientType: "COLLECTION"
+                suggestedContent: !<collection>
+                  collectionClass: "java.util.ArrayList"
+                  parameters: []
+                  values:
+                  - sapientType: "NULL"
+                    valueType: "org.bitcoinj.crypto.ECKey"
+                    uuid: "maybeDecrypt_object1"
+                    fixed: true
+                    collectionUuid: "maybeDecrypt_list3"
+                    equalsMethodPresent: false
+                    explicitCastNeeded: true
+                valueType: "java.util.List"
+                uuid: "maybeDecrypt_list3"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "redeemScript"
+              value:
+                sapientType: "UNKNOWN"
+                valueType: "org.bitcoinj.script.Script"
+                uuid: "maybeDecrypt_script3"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          valueType: "org.bitcoinj.wallet.RedeemData"
+          uuid: "findRedeemDataFromScriptHash_redeemData1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "RedeemData"
+      modelFingerprint: "CBB5408B5F27552F8B569B4131B74658"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.wallet.RedeemData"
+        uuid: "org.bitcoinj.wallet.RedeemData"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.wallet.RedeemData"
+        name: "of"
+        parameters:
+        - name: "keys"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              collectionClass: "java.util.ArrayList"
+              parameters: []
+              values:
+              - sapientType: "NULL"
+                valueType: "org.bitcoinj.crypto.ECKey"
+                uuid: "maybeDecrypt_eCKey1"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            suggestedContent: !<collection>
+              collectionClass: "java.util.ArrayList"
+              parameters: []
+              values:
+              - sapientType: "NULL"
+                valueType: "org.bitcoinj.crypto.ECKey"
+                uuid: "maybeDecrypt_eCKey1"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            valueType: "java.util.List"
+            genericValueType: "org.bitcoinj.crypto.ECKey"
+            uuid: "maybeDecrypt_arrayList1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "redeemScript"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.script.Script"
+            uuid: "maybeDecrypt_script3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "of(List,Script): RedeemData"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.wallet.RedeemData"
+          uuid: "maybeDecrypt_redeemData1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "E72FAEA21AC64BC712F6669CDCD57BBA"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.wallet.RedeemData"
+        uuid: "maybeDecrypt_redeemData1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "0fb967ea-5cf9-3b00-b91a-83e3da7223c3"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path4"
+    pathIdForUser: "path3"
+    testPathName: "findRedeemDataFromScriptHashWhenKeyNotIsEncrypted"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.wallet.KeyBag,org.bitcoinj.crypto.AesKey)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "214EE665C5A00BFD60FDFCA6A33D9302"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "5F30E18AAC3E8FB97DA8DD2327D941A1"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.wallet.DecryptingKeyBag"
+          parameters:
+          - name: "target"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.wallet.KeyBag"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.wallet.KeyBag"
+              uuid: "<init>_keyBag1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "aesKey"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.crypto.AesKey"
+              uuid: "<init>_aesKey1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.wallet.DecryptingKeyBag"
+          parameters:
+          - name: "target"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.wallet.KeyBag"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.wallet.KeyBag"
+              uuid: "<init>_keyBag1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "aesKey"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.crypto.AesKey"
+              uuid: "<init>_aesKey1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.wallet.DecryptingKeyBag"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "scriptHash"
+      modelFingerprint: "44F1B60A27158B32E73F0F8CF1C6DD48"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "ARRAY"
+        content: !<array>
+          values: {}
+        suggestedContent: !<array>
+          values: {}
+        valueType: "byte[]"
+        uuid: "findRedeemDataFromScriptHash_byte[]1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "target"
+      modelFingerprint: "1072CD1DE078B2D00EF2AF0AC8887FAC"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.wallet.KeyBag"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.wallet.KeyBag"
+        uuid: "<init>_keyBag1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.target"
+        name: "findRedeemDataFromScriptHash"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            suggestedContent: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "findRedeemDataFromScriptHash_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "findRedeemDataFromScriptHash(byte[]): RedeemData"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.wallet.RedeemData"
+            method: "of"
+            methodParameters:
+            - name: "keys"
+              value:
+                sapientType: "COLLECTION"
+                content: !<collection>
+                  collectionClass: "java.util.ArrayList"
+                  parameters: []
+                  values:
+                  - sapientType: "MOCK"
+                    suggestedContent: !<unknown_object>
+                      target: "org.bitcoinj.crypto.ECKey"
+                      onlyPojoFunctions: false
+                      builderPattern: false
+                    valueType: "org.bitcoinj.crypto.ECKey"
+                    uuid: "maybeDecrypt_object1"
+                    fixed: false
+                    collectionUuid: "maybeDecrypt_list3"
+                    equalsMethodPresent: false
+                    explicitCastNeeded: true
+                suggestedContent: !<collection>
+                  collectionClass: "java.util.ArrayList"
+                  parameters: []
+                  values:
+                  - sapientType: "MOCK"
+                    suggestedContent: !<unknown_object>
+                      target: "org.bitcoinj.crypto.ECKey"
+                      onlyPojoFunctions: false
+                      builderPattern: false
+                    valueType: "org.bitcoinj.crypto.ECKey"
+                    uuid: "maybeDecrypt_object1"
+                    fixed: false
+                    collectionUuid: "maybeDecrypt_list3"
+                    equalsMethodPresent: false
+                    explicitCastNeeded: true
+                valueType: "java.util.List"
+                uuid: "maybeDecrypt_list3"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "redeemScript"
+              value:
+                sapientType: "MOCK"
+                valueType: "org.bitcoinj.script.Script"
+                uuid: "maybeDecrypt_script3"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.wallet.RedeemData"
+            method: "of"
+            methodParameters:
+            - name: "keys"
+              value:
+                sapientType: "COLLECTION"
+                suggestedContent: !<collection>
+                  collectionClass: "java.util.ArrayList"
+                  parameters: []
+                  values:
+                  - sapientType: "UNKNOWN"
+                    suggestedContent: !<unknown_object>
+                      target: "org.bitcoinj.crypto.ECKey"
+                      onlyPojoFunctions: false
+                      builderPattern: false
+                    valueType: "org.bitcoinj.crypto.ECKey"
+                    uuid: "maybeDecrypt_object1"
+                    fixed: false
+                    collectionUuid: "maybeDecrypt_list3"
+                    equalsMethodPresent: false
+                    explicitCastNeeded: true
+                valueType: "java.util.List"
+                uuid: "maybeDecrypt_list3"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "redeemScript"
+              value:
+                sapientType: "UNKNOWN"
+                valueType: "org.bitcoinj.script.Script"
+                uuid: "maybeDecrypt_script3"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          valueType: "org.bitcoinj.wallet.RedeemData"
+          uuid: "findRedeemDataFromScriptHash_redeemData1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "key"
+      modelFingerprint: "1D1C45787C63F8F3BC5DBD38CF4E01A5"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.crypto.ECKey"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.crypto.ECKey"
+        uuid: "maybeDecrypt_object1"
+        fixed: false
+        collectionUuid: "maybeDecrypt_list3"
+        equalsMethodPresent: false
+        explicitCastNeeded: true
+      methodExercised:
+        target: "key"
+        name: "isEncrypted"
+        parameters: []
+        signature: "isEncrypted(): boolean"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: false
+          suggestedContent: !<regular>
+            value: false
+          valueType: "boolean"
+          uuid: "maybeDecrypt_boolean2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "RedeemData"
+      modelFingerprint: "07B44238814CCEF49B4F559CC84CCAF6"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.wallet.RedeemData"
+        uuid: "org.bitcoinj.wallet.RedeemData"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.wallet.RedeemData"
+        name: "of"
+        parameters:
+        - name: "keys"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              collectionClass: "java.util.ArrayList"
+              parameters: []
+              values:
+              - sapientType: "MOCK"
+                suggestedContent: !<unknown_object>
+                  target: "org.bitcoinj.crypto.ECKey"
+                  onlyPojoFunctions: false
+                  builderPattern: false
+                valueType: "org.bitcoinj.crypto.ECKey"
+                uuid: "maybeDecrypt_object1"
+                fixed: false
+                collectionUuid: "maybeDecrypt_list3"
+                equalsMethodPresent: false
+                explicitCastNeeded: true
+            suggestedContent: !<collection>
+              collectionClass: "java.util.ArrayList"
+              parameters: []
+              values:
+              - sapientType: "MOCK"
+                suggestedContent: !<unknown_object>
+                  target: "org.bitcoinj.crypto.ECKey"
+                  onlyPojoFunctions: false
+                  builderPattern: false
+                valueType: "org.bitcoinj.crypto.ECKey"
+                uuid: "maybeDecrypt_object1"
+                fixed: false
+                collectionUuid: "maybeDecrypt_list3"
+                equalsMethodPresent: false
+                explicitCastNeeded: true
+            valueType: "java.util.List"
+            genericValueType: "org.bitcoinj.crypto.ECKey"
+            uuid: "maybeDecrypt_arrayList1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "redeemScript"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.script.Script"
+            uuid: "maybeDecrypt_script3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "of(List,Script): RedeemData"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.wallet.RedeemData"
+          uuid: "maybeDecrypt_redeemData1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "E72FAEA21AC64BC712F6669CDCD57BBA"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.wallet.RedeemData"
+        uuid: "maybeDecrypt_redeemData1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "e32c1ee9-0c0e-3c15-8bcc-1afa0d2f3717"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path2"
+    pathIdForUser: "path4"
+    testPathName: "findRedeemDataFromScriptHashWhenAesKeyIsNullThrowsECKeyKeyIsEncryptedException"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.wallet.KeyBag,org.bitcoinj.crypto.AesKey)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "7F2B1D34B9B035EADB953054A116D272"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "D9CB3381764E6D2B8286119D40647259"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.wallet.DecryptingKeyBag"
+          parameters:
+          - name: "target"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.wallet.KeyBag"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.wallet.KeyBag"
+              uuid: "<init>_keyBag1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "aesKey"
+            value:
+              sapientType: "NULL"
+              valueType: "org.bitcoinj.crypto.AesKey"
+              uuid: "<init>_aesKey1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.wallet.DecryptingKeyBag"
+          parameters:
+          - name: "target"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.wallet.KeyBag"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.wallet.KeyBag"
+              uuid: "<init>_keyBag1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "aesKey"
+            value:
+              sapientType: "NULL"
+              valueType: "org.bitcoinj.crypto.AesKey"
+              uuid: "<init>_aesKey1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.wallet.DecryptingKeyBag"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "scriptHash"
+      modelFingerprint: "F6F3BC8BE56743B0468E3580C74339A8"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "ARRAY"
+        content: !<array>
+          values: {}
+        suggestedContent: !<array>
+          values: {}
+        valueType: "byte[]"
+        uuid: "findRedeemDataFromScriptHash_byte[]1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "target"
+      modelFingerprint: "D4C9F7A125AB3B87D3942C7D20FA21E4"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.wallet.KeyBag"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.wallet.KeyBag"
+        uuid: "<init>_keyBag1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.target"
+        name: "findRedeemDataFromScriptHash"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            suggestedContent: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "findRedeemDataFromScriptHash_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "findRedeemDataFromScriptHash(byte[]): RedeemData"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.wallet.RedeemData"
+            method: "of"
+            methodParameters:
+            - name: "keys"
+              value:
+                sapientType: "COLLECTION"
+                content: !<collection>
+                  collectionClass: "java.util.ArrayList"
+                  parameters: []
+                  values:
+                  - sapientType: "MOCK"
+                    suggestedContent: !<unknown_object>
+                      target: "org.bitcoinj.crypto.ECKey"
+                      onlyPojoFunctions: false
+                      builderPattern: false
+                    valueType: "org.bitcoinj.crypto.ECKey"
+                    uuid: "maybeDecrypt_object1"
+                    fixed: false
+                    collectionUuid: "maybeDecrypt_list3"
+                    equalsMethodPresent: false
+                    explicitCastNeeded: true
+                suggestedContent: !<collection>
+                  collectionClass: "java.util.ArrayList"
+                  parameters: []
+                  values:
+                  - sapientType: "MOCK"
+                    suggestedContent: !<unknown_object>
+                      target: "org.bitcoinj.crypto.ECKey"
+                      onlyPojoFunctions: false
+                      builderPattern: false
+                    valueType: "org.bitcoinj.crypto.ECKey"
+                    uuid: "maybeDecrypt_object1"
+                    fixed: false
+                    collectionUuid: "maybeDecrypt_list3"
+                    equalsMethodPresent: false
+                    explicitCastNeeded: true
+                valueType: "java.util.List"
+                uuid: "maybeDecrypt_list3"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "redeemScript"
+              value:
+                sapientType: "MOCK"
+                valueType: "org.bitcoinj.script.Script"
+                uuid: "findRedeemDataFromScriptHash_redeemData1-redeemScript"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.wallet.RedeemData"
+            method: "of"
+            methodParameters:
+            - name: "keys"
+              value:
+                sapientType: "COLLECTION"
+                suggestedContent: !<collection>
+                  collectionClass: "java.util.ArrayList"
+                  parameters: []
+                  values:
+                  - sapientType: "UNKNOWN"
+                    suggestedContent: !<unknown_object>
+                      target: "org.bitcoinj.crypto.ECKey"
+                      onlyPojoFunctions: false
+                      builderPattern: false
+                    valueType: "org.bitcoinj.crypto.ECKey"
+                    uuid: "maybeDecrypt_object1"
+                    fixed: false
+                    collectionUuid: "maybeDecrypt_list3"
+                    equalsMethodPresent: false
+                    explicitCastNeeded: true
+                valueType: "java.util.List"
+                uuid: "maybeDecrypt_list3"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "redeemScript"
+              value:
+                sapientType: "UNKNOWN"
+                valueType: "org.bitcoinj.script.Script"
+                uuid: "findRedeemDataFromScriptHash_redeemData1-redeemScript"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          valueType: "org.bitcoinj.wallet.RedeemData"
+          uuid: "findRedeemDataFromScriptHash_redeemData1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "key"
+      modelFingerprint: "610E8DB7B91193C0CE2593494B7F9AB5"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.crypto.ECKey"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.crypto.ECKey"
+        uuid: "maybeDecrypt_object1"
+        fixed: false
+        collectionUuid: "maybeDecrypt_list3"
+        equalsMethodPresent: false
+        explicitCastNeeded: true
+      methodExercised:
+        target: "key"
+        name: "isEncrypted"
+        parameters: []
+        signature: "isEncrypted(): boolean"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: true
+          suggestedContent: !<regular>
+            value: true
+          valueType: "boolean"
+          uuid: "maybeDecrypt_boolean2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "E693FEC55CE33EA5DEA8526262D3A904"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "EXCEPTION"
+        content: !<new>
+          target: "org.bitcoinj.crypto.ECKey$KeyIsEncryptedException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.crypto.ECKey$KeyIsEncryptedException"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.crypto.ECKey$KeyIsEncryptedException"
+        uuid: "maybeDecrypt_eCKey.KeyIsEncryptedException1"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "3c1f3b56-8350-39d8-a8d3-99a55c0bd742"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path3"
+    pathIdForUser: "path5"
+    testPathName: "findRedeemDataFromScriptHashWhenAesKeyIsNotNull"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.wallet.KeyBag,org.bitcoinj.crypto.AesKey)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "22885DBBA49604B9CF1765AF775F756E"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "5F30E18AAC3E8FB97DA8DD2327D941A1"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.wallet.DecryptingKeyBag"
+          parameters:
+          - name: "target"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.wallet.KeyBag"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.wallet.KeyBag"
+              uuid: "<init>_keyBag1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "aesKey"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.crypto.AesKey"
+              uuid: "<init>_aesKey1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.wallet.DecryptingKeyBag"
+          parameters:
+          - name: "target"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.wallet.KeyBag"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.wallet.KeyBag"
+              uuid: "<init>_keyBag1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "aesKey"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.crypto.AesKey"
+              uuid: "<init>_aesKey1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.wallet.DecryptingKeyBag"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "scriptHash"
+      modelFingerprint: "44F1B60A27158B32E73F0F8CF1C6DD48"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "ARRAY"
+        content: !<array>
+          values: {}
+        suggestedContent: !<array>
+          values: {}
+        valueType: "byte[]"
+        uuid: "findRedeemDataFromScriptHash_byte[]1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "target"
+      modelFingerprint: "1072CD1DE078B2D00EF2AF0AC8887FAC"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.wallet.KeyBag"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.wallet.KeyBag"
+        uuid: "<init>_keyBag1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.target"
+        name: "findRedeemDataFromScriptHash"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            suggestedContent: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "findRedeemDataFromScriptHash_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "findRedeemDataFromScriptHash(byte[]): RedeemData"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.wallet.RedeemData"
+            method: "of"
+            methodParameters:
+            - name: "keys"
+              value:
+                sapientType: "COLLECTION"
+                content: !<collection>
+                  collectionClass: "java.util.ArrayList"
+                  parameters: []
+                  values:
+                  - sapientType: "MOCK"
+                    suggestedContent: !<unknown_object>
+                      target: "org.bitcoinj.crypto.ECKey"
+                      onlyPojoFunctions: false
+                      builderPattern: false
+                    valueType: "org.bitcoinj.crypto.ECKey"
+                    uuid: "maybeDecrypt_object1"
+                    fixed: false
+                    collectionUuid: "maybeDecrypt_list3"
+                    equalsMethodPresent: false
+                    explicitCastNeeded: true
+                suggestedContent: !<collection>
+                  collectionClass: "java.util.ArrayList"
+                  parameters: []
+                  values:
+                  - sapientType: "MOCK"
+                    suggestedContent: !<unknown_object>
+                      target: "org.bitcoinj.crypto.ECKey"
+                      onlyPojoFunctions: false
+                      builderPattern: false
+                    valueType: "org.bitcoinj.crypto.ECKey"
+                    uuid: "maybeDecrypt_object1"
+                    fixed: false
+                    collectionUuid: "maybeDecrypt_list3"
+                    equalsMethodPresent: false
+                    explicitCastNeeded: true
+                valueType: "java.util.List"
+                uuid: "maybeDecrypt_list3"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "redeemScript"
+              value:
+                sapientType: "MOCK"
+                valueType: "org.bitcoinj.script.Script"
+                uuid: "maybeDecrypt_script3"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.wallet.RedeemData"
+            method: "of"
+            methodParameters:
+            - name: "keys"
+              value:
+                sapientType: "COLLECTION"
+                suggestedContent: !<collection>
+                  collectionClass: "java.util.ArrayList"
+                  parameters: []
+                  values:
+                  - sapientType: "UNKNOWN"
+                    suggestedContent: !<unknown_object>
+                      target: "org.bitcoinj.crypto.ECKey"
+                      onlyPojoFunctions: false
+                      builderPattern: false
+                    valueType: "org.bitcoinj.crypto.ECKey"
+                    uuid: "maybeDecrypt_object1"
+                    fixed: false
+                    collectionUuid: "maybeDecrypt_list3"
+                    equalsMethodPresent: false
+                    explicitCastNeeded: true
+                valueType: "java.util.List"
+                uuid: "maybeDecrypt_list3"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "redeemScript"
+              value:
+                sapientType: "UNKNOWN"
+                valueType: "org.bitcoinj.script.Script"
+                uuid: "maybeDecrypt_script3"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          valueType: "org.bitcoinj.wallet.RedeemData"
+          uuid: "findRedeemDataFromScriptHash_redeemData1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "key"
+      modelFingerprint: "610E8DB7B91193C0CE2593494B7F9AB5"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.crypto.ECKey"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.crypto.ECKey"
+        uuid: "maybeDecrypt_object1"
+        fixed: false
+        collectionUuid: "maybeDecrypt_list3"
+        equalsMethodPresent: false
+        explicitCastNeeded: true
+      methodExercised:
+        target: "key"
+        name: "isEncrypted"
+        parameters: []
+        signature: "isEncrypted(): boolean"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: true
+          suggestedContent: !<regular>
+            value: true
+          valueType: "boolean"
+          uuid: "maybeDecrypt_boolean2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      name: "key"
+      modelFingerprint: "D1261D52CA9E70C7E58B5EF0BB3F0402"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.crypto.ECKey"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.crypto.ECKey"
+        uuid: "maybeDecrypt_object1"
+        fixed: false
+        collectionUuid: "maybeDecrypt_list3"
+        equalsMethodPresent: false
+        explicitCastNeeded: true
+      methodExercised:
+        target: "key"
+        name: "decrypt"
+        parameters:
+        - name: "aesKey"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.crypto.AesKey"
+            uuid: "<init>_aesKey1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        throwsExceptions:
+        - "org.bitcoinj.crypto.KeyCrypterException"
+        signature: "decrypt(AesKey): ECKey throws org.bitcoinj.crypto.KeyCrypterException"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.crypto.ECKey"
+          uuid: "maybeDecrypt_eCKey1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "RedeemData"
+      modelFingerprint: "76B94A33E5CD32DFA3177C53877041E3"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.wallet.RedeemData"
+        uuid: "org.bitcoinj.wallet.RedeemData"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.wallet.RedeemData"
+        name: "of"
+        parameters:
+        - name: "keys"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              collectionClass: "java.util.ArrayList"
+              parameters: []
+              values:
+              - sapientType: "MOCK"
+                valueType: "org.bitcoinj.crypto.ECKey"
+                uuid: "maybeDecrypt_eCKey1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            suggestedContent: !<collection>
+              collectionClass: "java.util.ArrayList"
+              parameters: []
+              values:
+              - sapientType: "MOCK"
+                valueType: "org.bitcoinj.crypto.ECKey"
+                uuid: "maybeDecrypt_eCKey1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            valueType: "java.util.List"
+            genericValueType: "org.bitcoinj.crypto.ECKey"
+            uuid: "maybeDecrypt_arrayList1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "redeemScript"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.script.Script"
+            uuid: "maybeDecrypt_script3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "of(List,Script): RedeemData"
+        returnValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.wallet.RedeemData"
+          uuid: "maybeDecrypt_redeemData1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "E72FAEA21AC64BC712F6669CDCD57BBA"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.wallet.RedeemData"
+        uuid: "maybeDecrypt_redeemData1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "a6d40181-ac68-3236-a9df-d3031ae980dc"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false

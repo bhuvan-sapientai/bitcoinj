@@ -1,0 +1,3030 @@
+---
+modelFingerprint: "F890D9D0C91C9090724BD0CF1A10E5B1"
+methods:
+- method:
+    name: "read"
+    returnType: "org.bitcoinj.core.RejectMessage"
+    signature: "read(java.nio.ByteBuffer) : org.bitcoinj.core.RejectMessage"
+    throwsExceptions:
+    - "java.nio.BufferUnderflowException"
+    - "org.bitcoinj.core.ProtocolException"
+    instructionFingerprint: "828B2E4962BA1A27B0BB8FB179AD48EF"
+    parametersTypes:
+    - "java.nio.ByteBuffer"
+  paths:
+  - pathId: "path3"
+    pathIdForUser: "path1"
+    testPathName: "readWhenMessageEqualsBlock"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "2DB1B8B67C124215F1F374A059FCF429"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "a915cbcc-a04a-3dbc-a1ec-ff78f4504ac2"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path1"
+    pathIdForUser: "path2"
+    testPathName: "readWhenMessageEqualsTx"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "EFC12D705BA56CF1058C6EA44A1C9C20"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "payload"
+      modelFingerprint: "C871D067662095A198DE0F4DE90B3DF9"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "java.nio.ByteBuffer"
+          method: "allocateDirect"
+          methodParameters:
+          - name: "capacity"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "int"
+              uuid: "read_byteBuffer1-capacity"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "java.nio.ByteBuffer"
+          method: "allocateDirect"
+          methodParameters:
+          - name: "capacity"
+            value:
+              sapientType: "BASIC"
+              valueType: "int"
+              uuid: "read_byteBuffer1-capacity"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "java.nio.ByteBuffer"
+        uuid: "read_byteBuffer1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Buffers"
+      modelFingerprint: "F049E31448F6F859ACD416CC5B12FEBA"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.internal.Buffers"
+        uuid: "org.bitcoinj.base.internal.Buffers"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Buffers"
+        name: "readLengthPrefixedString"
+        parameters:
+        - name: "buf"
+          value:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "java.nio.ByteBuffer"
+              method: "allocateDirect"
+              methodParameters:
+              - name: "capacity"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "int"
+                  uuid: "read_byteBuffer1-capacity"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            suggestedContent: !<static_method_return>
+              target: "java.nio.ByteBuffer"
+              method: "allocateDirect"
+              methodParameters:
+              - name: "capacity"
+                value:
+                  sapientType: "BASIC"
+                  valueType: "int"
+                  uuid: "read_byteBuffer1-capacity"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "java.nio.ByteBuffer"
+            uuid: "read_byteBuffer1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        throwsExceptions:
+        - "java.nio.BufferUnderflowException"
+        signature: "readLengthPrefixedString(ByteBuffer): String throws java.nio.BufferUnderflowException"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "tx"
+          suggestedContent: !<regular>
+            value: "tx"
+          valueType: "java.lang.String"
+          uuid: "read_string1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "RejectMessage.RejectCode"
+      modelFingerprint: "6DF2B8E4A1E19750AFDF3C9112B11007"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.core.RejectMessage$RejectCode"
+        uuid: "org.bitcoinj.core.RejectMessage$RejectCode"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.core.RejectMessage$RejectCode"
+        name: "fromCode"
+        parameters:
+        - name: "code"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            suggestedContent: !<regular>
+              value: 1
+            valueType: "byte"
+            uuid: "read_byte1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "fromCode(byte): RejectMessage$RejectCode"
+        returnValue:
+          sapientType: "ENUM"
+          content: !<regular>
+            value: "MALFORMED"
+          valueType: "org.bitcoinj.core.RejectMessage$RejectCode"
+          uuid: "read_rejectMessage.RejectCode1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 8
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Buffers"
+      modelFingerprint: "D7A645E41F1CD907B70088578DAB2157"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.internal.Buffers"
+        uuid: "org.bitcoinj.base.internal.Buffers"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Buffers"
+        name: "readLengthPrefixedString"
+        parameters:
+        - name: "buf"
+          value:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "java.nio.ByteBuffer"
+              method: "allocateDirect"
+              methodParameters:
+              - name: "capacity"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "int"
+                  uuid: "read_byteBuffer1-capacity"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            suggestedContent: !<static_method_return>
+              target: "java.nio.ByteBuffer"
+              method: "allocateDirect"
+              methodParameters:
+              - name: "capacity"
+                value:
+                  sapientType: "BASIC"
+                  valueType: "int"
+                  uuid: "read_byteBuffer1-capacity"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "java.nio.ByteBuffer"
+            uuid: "read_byteBuffer1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        throwsExceptions:
+        - "java.nio.BufferUnderflowException"
+        signature: "readLengthPrefixedString(ByteBuffer): String throws java.nio.BufferUnderflowException"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "return_of_readLengthPrefixedString1"
+          valueType: "java.lang.String"
+          uuid: "read_string2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Sha256Hash"
+      modelFingerprint: "FE8AFC5F0A7542FA6DAEAB922EF814F1"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.Sha256Hash"
+        uuid: "org.bitcoinj.base.Sha256Hash"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "read"
+        parameters:
+        - name: "buf"
+          value:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "java.nio.ByteBuffer"
+              method: "allocateDirect"
+              methodParameters:
+              - name: "capacity"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "int"
+                  uuid: "read_byteBuffer1-capacity"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            suggestedContent: !<static_method_return>
+              target: "java.nio.ByteBuffer"
+              method: "allocateDirect"
+              methodParameters:
+              - name: "capacity"
+                value:
+                  sapientType: "BASIC"
+                  valueType: "int"
+                  uuid: "read_byteBuffer1-capacity"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "java.nio.ByteBuffer"
+            uuid: "read_byteBuffer1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        throwsExceptions:
+        - "java.nio.BufferUnderflowException"
+        signature: "read(ByteBuffer): Sha256Hash throws java.nio.BufferUnderflowException"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.base.Sha256Hash"
+            method: "read"
+            methodParameters:
+            - name: "buf"
+              value:
+                sapientType: "OBJECT"
+                content: !<static_method_return>
+                  target: "java.nio.ByteBuffer"
+                  method: "allocateDirect"
+                  methodParameters:
+                  - name: "capacity"
+                    value:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 64
+                      valueType: "int"
+                      fixed: true
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                suggestedContent: !<static_method_return>
+                  target: "java.nio.ByteBuffer"
+                  method: "allocateDirect"
+                  methodParameters:
+                  - name: "capacity"
+                    value:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 64
+                      valueType: "int"
+                      fixed: true
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                valueType: "java.nio.ByteBuffer"
+                uuid: "read_sha256Hash1-buf"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.base.Sha256Hash"
+            method: "read"
+            methodParameters:
+            - name: "buf"
+              value:
+                sapientType: "UNKNOWN"
+                suggestedContent: !<static_method_return>
+                  target: "java.nio.ByteBuffer"
+                  method: "allocateDirect"
+                  methodParameters:
+                  - name: "capacity"
+                    value:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 64
+                      valueType: "int"
+                      fixed: true
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                valueType: "java.nio.ByteBuffer"
+                uuid: "read_sha256Hash1-buf"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          valueType: "org.bitcoinj.base.Sha256Hash"
+          uuid: "read_sha256Hash1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "306D43AA0C352240E2559F1FC81FB61D"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.RejectMessage"
+          parameters:
+          - name: "code"
+            value:
+              sapientType: "ENUM"
+              content: !<regular>
+                value: "MALFORMED"
+              valueType: "org.bitcoinj.core.RejectMessage$RejectCode"
+              uuid: "read_rejectMessage.RejectCode1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessageHash"
+            value:
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "org.bitcoinj.base.Sha256Hash"
+                method: "read"
+                methodParameters:
+                - name: "buf"
+                  value:
+                    sapientType: "OBJECT"
+                    content: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          content: !<regular>
+                            value: 64
+                          valueType: "int"
+                          fixed: true
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    suggestedContent: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          content: !<regular>
+                            value: 64
+                          valueType: "int"
+                          fixed: true
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    valueType: "java.nio.ByteBuffer"
+                    uuid: "read_sha256Hash1-buf"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.base.Sha256Hash"
+                method: "read"
+                methodParameters:
+                - name: "buf"
+                  value:
+                    sapientType: "UNKNOWN"
+                    suggestedContent: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          content: !<regular>
+                            value: 64
+                          valueType: "int"
+                          fixed: true
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    valueType: "java.nio.ByteBuffer"
+                    uuid: "read_sha256Hash1-buf"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              valueType: "org.bitcoinj.base.Sha256Hash"
+              uuid: "read_sha256Hash1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessage"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "tx"
+              suggestedContent: !<regular>
+                value: "tx"
+              valueType: "java.lang.String"
+              uuid: "read_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "reason"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "return_of_readLengthPrefixedString1"
+              valueType: "java.lang.String"
+              uuid: "read_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.RejectMessage"
+          parameters:
+          - name: "code"
+            value:
+              sapientType: "ENUM"
+              valueType: "org.bitcoinj.core.RejectMessage$RejectCode"
+              uuid: "read_rejectMessage.RejectCode1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessageHash"
+            value:
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "org.bitcoinj.base.Sha256Hash"
+                method: "read"
+                methodParameters:
+                - name: "buf"
+                  value:
+                    sapientType: "OBJECT"
+                    content: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          content: !<regular>
+                            value: 64
+                          valueType: "int"
+                          fixed: true
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    suggestedContent: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          content: !<regular>
+                            value: 64
+                          valueType: "int"
+                          fixed: true
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    valueType: "java.nio.ByteBuffer"
+                    uuid: "read_sha256Hash1-buf"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.base.Sha256Hash"
+                method: "read"
+                methodParameters:
+                - name: "buf"
+                  value:
+                    sapientType: "UNKNOWN"
+                    suggestedContent: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          content: !<regular>
+                            value: 64
+                          valueType: "int"
+                          fixed: true
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    valueType: "java.nio.ByteBuffer"
+                    uuid: "read_sha256Hash1-buf"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              valueType: "org.bitcoinj.base.Sha256Hash"
+              uuid: "read_sha256Hash1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessage"
+            value:
+              sapientType: "BASIC"
+              suggestedContent: !<regular>
+                value: "tx"
+              valueType: "java.lang.String"
+              uuid: "read_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "reason"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "return_of_readLengthPrefixedString1"
+              valueType: "java.lang.String"
+              uuid: "read_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.core.RejectMessage"
+        uuid: "read_rejectMessage1"
+        fixed: true
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "2d6649f8-c557-3067-98c4-0d6fc7f7c485"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path2"
+    pathIdForUser: "path3"
+    testPathName: "readWhenMessageNotEqualsTx"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "179767BAA486ED4450ACEB3B80417244"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "payload"
+      modelFingerprint: "C871D067662095A198DE0F4DE90B3DF9"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "java.nio.ByteBuffer"
+          method: "allocateDirect"
+          methodParameters:
+          - name: "capacity"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "int"
+              uuid: "read_byteBuffer1-capacity"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "java.nio.ByteBuffer"
+          method: "allocateDirect"
+          methodParameters:
+          - name: "capacity"
+            value:
+              sapientType: "BASIC"
+              valueType: "int"
+              uuid: "read_byteBuffer1-capacity"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "java.nio.ByteBuffer"
+        uuid: "read_byteBuffer1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Buffers"
+      modelFingerprint: "B07B30B8BF0012ED58AA303A8C97580B"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.internal.Buffers"
+        uuid: "org.bitcoinj.base.internal.Buffers"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Buffers"
+        name: "readLengthPrefixedString"
+        parameters:
+        - name: "buf"
+          value:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "java.nio.ByteBuffer"
+              method: "allocateDirect"
+              methodParameters:
+              - name: "capacity"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "int"
+                  uuid: "read_byteBuffer1-capacity"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            suggestedContent: !<static_method_return>
+              target: "java.nio.ByteBuffer"
+              method: "allocateDirect"
+              methodParameters:
+              - name: "capacity"
+                value:
+                  sapientType: "BASIC"
+                  valueType: "int"
+                  uuid: "read_byteBuffer1-capacity"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "java.nio.ByteBuffer"
+            uuid: "read_byteBuffer1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        throwsExceptions:
+        - "java.nio.BufferUnderflowException"
+        signature: "readLengthPrefixedString(ByteBuffer): String throws java.nio.BufferUnderflowException"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "A"
+          suggestedContent: !<regular>
+            value: "A"
+          valueType: "java.lang.String"
+          uuid: "read_string1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "RejectMessage.RejectCode"
+      modelFingerprint: "2890A72A6093B7A7E99B92D26F74A941"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.core.RejectMessage$RejectCode"
+        uuid: "org.bitcoinj.core.RejectMessage$RejectCode"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.core.RejectMessage$RejectCode"
+        name: "fromCode"
+        parameters:
+        - name: "code"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            uuid: "read_byte1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "fromCode(byte): RejectMessage$RejectCode"
+        returnValue:
+          sapientType: "ENUM"
+          content: !<regular>
+            value: "MALFORMED"
+          valueType: "org.bitcoinj.core.RejectMessage$RejectCode"
+          uuid: "read_rejectMessage.RejectCode1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 8
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "Buffers"
+      modelFingerprint: "D7A645E41F1CD907B70088578DAB2157"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.internal.Buffers"
+        uuid: "org.bitcoinj.base.internal.Buffers"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Buffers"
+        name: "readLengthPrefixedString"
+        parameters:
+        - name: "buf"
+          value:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "java.nio.ByteBuffer"
+              method: "allocateDirect"
+              methodParameters:
+              - name: "capacity"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "int"
+                  uuid: "read_byteBuffer1-capacity"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            suggestedContent: !<static_method_return>
+              target: "java.nio.ByteBuffer"
+              method: "allocateDirect"
+              methodParameters:
+              - name: "capacity"
+                value:
+                  sapientType: "BASIC"
+                  valueType: "int"
+                  uuid: "read_byteBuffer1-capacity"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "java.nio.ByteBuffer"
+            uuid: "read_byteBuffer1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        throwsExceptions:
+        - "java.nio.BufferUnderflowException"
+        signature: "readLengthPrefixedString(ByteBuffer): String throws java.nio.BufferUnderflowException"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "return_of_readLengthPrefixedString1"
+          valueType: "java.lang.String"
+          uuid: "read_string2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "FF6D1115B2E84974B249A12EC35D00B7"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.RejectMessage"
+          parameters:
+          - name: "code"
+            value:
+              sapientType: "ENUM"
+              content: !<regular>
+                value: "MALFORMED"
+              valueType: "org.bitcoinj.core.RejectMessage$RejectCode"
+              uuid: "read_rejectMessage.RejectCode1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessageHash"
+            value:
+              sapientType: "NULL"
+              valueType: "org.bitcoinj.base.Sha256Hash"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessage"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "A"
+              suggestedContent: !<regular>
+                value: "A"
+              valueType: "java.lang.String"
+              uuid: "read_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "reason"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "return_of_readLengthPrefixedString1"
+              valueType: "java.lang.String"
+              uuid: "read_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.RejectMessage"
+          parameters:
+          - name: "code"
+            value:
+              sapientType: "ENUM"
+              content: !<regular>
+                value: "MALFORMED"
+              valueType: "org.bitcoinj.core.RejectMessage$RejectCode"
+              uuid: "read_rejectMessage.RejectCode1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessageHash"
+            value:
+              sapientType: "NULL"
+              valueType: "org.bitcoinj.base.Sha256Hash"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessage"
+            value:
+              sapientType: "BASIC"
+              suggestedContent: !<regular>
+                value: "A"
+              valueType: "java.lang.String"
+              uuid: "read_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "reason"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "return_of_readLengthPrefixedString1"
+              valueType: "java.lang.String"
+              uuid: "read_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: true
+        valueType: "org.bitcoinj.core.RejectMessage"
+        uuid: "read_rejectMessage1"
+        fixed: true
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "331e14b9-8aba-3d2e-9e2b-46463b7cf0d3"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "bitcoinSerializeToStream"
+    returnType: "void"
+    signature: "bitcoinSerializeToStream(java.io.OutputStream) : void"
+    throwsExceptions:
+    - "java.io.IOException"
+    instructionFingerprint: "5CC685B9E9282CC0012F94A5BBDB6A47"
+    parametersTypes:
+    - "java.io.OutputStream"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "bitcoinSerializeToStreamWhenTxEqualsRejectedMessage"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.core.RejectMessage$RejectCode,org.bitcoinj.base.Sha256Hash,java.lang.String,java.lang.String)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "B6163CE6296BB43C7E96D23E2ABCEAA0"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "249AA5D9B5776C54A7E49DA97C516406"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.RejectMessage"
+          parameters:
+          - name: "code"
+            value:
+              sapientType: "ENUM"
+              content: !<regular>
+                value: "INVALID"
+              suggestedContent: !<regular>
+                value: "INVALID"
+              valueType: "org.bitcoinj.core.RejectMessage$RejectCode"
+              uuid: "<init>_rejectMessage.RejectCode1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessageHash"
+            value:
+              sapientType: "MOCK"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.base.Sha256Hash"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.base.Sha256Hash"
+              uuid: "<init>_sha256Hash1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessage"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "tx"
+              suggestedContent: !<regular>
+                value: "tx"
+              valueType: "java.lang.String"
+              uuid: "<init>_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "reason"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "reason1"
+              suggestedContent: !<regular>
+                value: "reason1"
+              valueType: "java.lang.String"
+              uuid: "<init>_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.RejectMessage"
+          parameters:
+          - name: "code"
+            value:
+              sapientType: "ENUM"
+              content: !<regular>
+                value: "INVALID"
+              suggestedContent: !<regular>
+                value: "INVALID"
+              valueType: "org.bitcoinj.core.RejectMessage$RejectCode"
+              uuid: "<init>_rejectMessage.RejectCode1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessageHash"
+            value:
+              sapientType: "UNKNOWN"
+              suggestedContent: !<unknown_object>
+                target: "org.bitcoinj.base.Sha256Hash"
+                onlyPojoFunctions: false
+                builderPattern: false
+              valueType: "org.bitcoinj.base.Sha256Hash"
+              uuid: "<init>_sha256Hash1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessage"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "tx"
+              suggestedContent: !<regular>
+                value: "tx"
+              valueType: "java.lang.String"
+              uuid: "<init>_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "reason"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "reason1"
+              suggestedContent: !<regular>
+                value: "reason1"
+              valueType: "java.lang.String"
+              uuid: "<init>_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.core.RejectMessage"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "stream"
+      modelFingerprint: "29A897032AF431B5497C8E1DF49E25FC"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "java.io.ByteArrayOutputStream"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "java.io.ByteArrayOutputStream"
+          parameters: []
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "java.io.OutputStream"
+        uuid: "bitcoinSerializeToStream_outputStream1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "VarInt"
+      modelFingerprint: "E72CB8F8DDC1292F5386E4360978C41F"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "REAL"
+        valueType: "org.bitcoinj.base.VarInt"
+        uuid: "org.bitcoinj.base.VarInt"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.VarInt"
+        name: "of"
+        parameters:
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 2
+            valueType: "long"
+            originalValueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "of(long): VarInt"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.base.VarInt"
+            method: "of"
+            methodParameters:
+            - value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 2
+                valueType: "long"
+                originalValueType: "int"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.base.VarInt"
+            method: "of"
+            methodParameters:
+            - value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 2
+                valueType: "long"
+                originalValueType: "int"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          valueType: "org.bitcoinj.base.VarInt"
+          uuid: "bitcoinSerializeToStream_varInt1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "DEEC4212B6941F2F9FDEA7EAFDAD047D"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.base.VarInt"
+          method: "of"
+          methodParameters:
+          - value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 2
+              valueType: "long"
+              originalValueType: "int"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.VarInt"
+          method: "of"
+          methodParameters:
+          - value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 2
+              valueType: "long"
+              originalValueType: "int"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "org.bitcoinj.base.VarInt"
+        uuid: "bitcoinSerializeToStream_varInt1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.VarInt"
+        name: "serialize"
+        parameters: []
+        signature: "serialize(): byte[]"
+        returnValue:
+          sapientType: "ARRAY"
+          content: !<array>
+            values:
+              0:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 2
+                valueType: "byte"
+                uuid: "bitcoinSerializeToStream_byte[]2-item0"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<array>
+            values:
+              0:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 2
+                valueType: "byte"
+                uuid: "bitcoinSerializeToStream_byte[]2-item0"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          valueType: "byte[]"
+          uuid: "bitcoinSerializeToStream_byte[]2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "VarInt"
+      modelFingerprint: "8E19D1B2F15F9B62D62B2826B6AEB3A6"
+      index: 5
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "REAL"
+        valueType: "org.bitcoinj.base.VarInt"
+        uuid: "org.bitcoinj.base.VarInt"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.VarInt"
+        name: "of"
+        parameters:
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 7
+            valueType: "long"
+            originalValueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "of(long): VarInt"
+        returnValue:
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.base.VarInt"
+            method: "of"
+            methodParameters:
+            - value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 7
+                valueType: "long"
+                originalValueType: "int"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<static_method_return>
+            target: "org.bitcoinj.base.VarInt"
+            method: "of"
+            methodParameters:
+            - value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 7
+                valueType: "long"
+                originalValueType: "int"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          valueType: "org.bitcoinj.base.VarInt"
+          uuid: "bitcoinSerializeToStream_varInt2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "2CC03F85E97CA57209BA39616DE63754"
+      index: 6
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "org.bitcoinj.base.VarInt"
+          method: "of"
+          methodParameters:
+          - value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 7
+              valueType: "long"
+              originalValueType: "int"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "org.bitcoinj.base.VarInt"
+          method: "of"
+          methodParameters:
+          - value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 7
+              valueType: "long"
+              originalValueType: "int"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "org.bitcoinj.base.VarInt"
+        uuid: "bitcoinSerializeToStream_varInt2"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.VarInt"
+        name: "serialize"
+        parameters: []
+        signature: "serialize(): byte[]"
+        returnValue:
+          sapientType: "ARRAY"
+          content: !<array>
+            values:
+              0:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 7
+                valueType: "byte"
+                uuid: "bitcoinSerializeToStream_byte[]4-item0"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          suggestedContent: !<array>
+            values:
+              0:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 7
+                valueType: "byte"
+                uuid: "bitcoinSerializeToStream_byte[]4-item0"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          valueType: "byte[]"
+          uuid: "bitcoinSerializeToStream_byte[]4"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "rejectedMessageHash"
+      modelFingerprint: "2EA8AED7E4767EB9F664D3D12BC1B091"
+      index: 7
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        suggestedContent: !<unknown_object>
+          target: "org.bitcoinj.base.Sha256Hash"
+          onlyPojoFunctions: false
+          builderPattern: false
+        valueType: "org.bitcoinj.base.Sha256Hash"
+        uuid: "<init>_sha256Hash1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.rejectedMessageHash"
+        name: "serialize"
+        parameters: []
+        signature: "serialize(): byte[]"
+        returnValue:
+          sapientType: "ARRAY"
+          content: !<array>
+            values: {}
+          suggestedContent: !<array>
+            values: {}
+          valueType: "byte[]"
+          uuid: "bitcoinSerializeToStream_byte[]5"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 1
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 8
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "VOID"
+        fixed: true
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "37e1b398-87dc-30b8-9f81-7e1ab7a10ced"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path2"
+    pathIdForUser: "path2"
+    testPathName: "bitcoinSerializeToStreamWhenTxNotEqualsRejectedMessage"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.core.RejectMessage$RejectCode,org.bitcoinj.base.Sha256Hash,java.lang.String,java.lang.String)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "A78736525C932CF56C638019A2BBF54A"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "e3bc3bbd-ab0d-32c1-81cb-49775fa8e3ca"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "rejectedMessage"
+    returnType: "java.lang.String"
+    signature: "rejectedMessage() : java.lang.String"
+    instructionFingerprint: "96DEB7273A6D91108E0C2D28D1B0BB65"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "rejectedMessageTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.core.RejectMessage$RejectCode,org.bitcoinj.base.Sha256Hash,java.lang.String,java.lang.String)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "6AD1C974866F1381C2DDA304EA6E3A51"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "F09630516050234343A3BF65AB14FFC8"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.RejectMessage"
+          parameters:
+          - name: "code"
+            value:
+              sapientType: "ENUM"
+              content: !<regular>
+                value: "MALFORMED"
+              valueType: "org.bitcoinj.core.RejectMessage$RejectCode"
+              uuid: "<init>_rejectMessage.RejectCode1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessageHash"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.base.Sha256Hash"
+              uuid: "<init>_sha256Hash1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessage"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "rejectedMessage1"
+              valueType: "java.lang.String"
+              uuid: "<init>_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "reason"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "reason1"
+              valueType: "java.lang.String"
+              uuid: "<init>_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.RejectMessage"
+          parameters:
+          - name: "code"
+            value:
+              sapientType: "ENUM"
+              valueType: "org.bitcoinj.core.RejectMessage$RejectCode"
+              uuid: "<init>_rejectMessage.RejectCode1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessageHash"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.base.Sha256Hash"
+              uuid: "<init>_sha256Hash1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessage"
+            value:
+              sapientType: "BASIC"
+              valueType: "java.lang.String"
+              uuid: "<init>_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "reason"
+            value:
+              sapientType: "BASIC"
+              valueType: "java.lang.String"
+              uuid: "<init>_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.core.RejectMessage"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D1F433D4EB9F8805FF391E82DAB508AB"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "rejectedMessage1"
+        valueType: "java.lang.String"
+        uuid: "<init>_string1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "a0a40d6a-fa19-3b92-884d-99287d87346f"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "getRejectedMessage"
+    returnType: "java.lang.String"
+    signature: "getRejectedMessage() : java.lang.String"
+    instructionFingerprint: "5A33573A7F3868A348DD03A5C4D75896"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "getRejectedMessageTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.core.RejectMessage$RejectCode,org.bitcoinj.base.Sha256Hash,java.lang.String,java.lang.String)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "743201DDC4ACB07811B3B21320B9124D"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "F09630516050234343A3BF65AB14FFC8"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.RejectMessage"
+          parameters:
+          - name: "code"
+            value:
+              sapientType: "ENUM"
+              content: !<regular>
+                value: "MALFORMED"
+              valueType: "org.bitcoinj.core.RejectMessage$RejectCode"
+              uuid: "<init>_rejectMessage.RejectCode1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessageHash"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.base.Sha256Hash"
+              uuid: "<init>_sha256Hash1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessage"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "rejectedMessage1"
+              valueType: "java.lang.String"
+              uuid: "<init>_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "reason"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "reason1"
+              valueType: "java.lang.String"
+              uuid: "<init>_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.RejectMessage"
+          parameters:
+          - name: "code"
+            value:
+              sapientType: "ENUM"
+              valueType: "org.bitcoinj.core.RejectMessage$RejectCode"
+              uuid: "<init>_rejectMessage.RejectCode1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessageHash"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.base.Sha256Hash"
+              uuid: "<init>_sha256Hash1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessage"
+            value:
+              sapientType: "BASIC"
+              valueType: "java.lang.String"
+              uuid: "<init>_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "reason"
+            value:
+              sapientType: "BASIC"
+              valueType: "java.lang.String"
+              uuid: "<init>_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.core.RejectMessage"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D1F433D4EB9F8805FF391E82DAB508AB"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "rejectedMessage1"
+        valueType: "java.lang.String"
+        uuid: "<init>_string1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "9b79bcba-eedc-3879-b064-f1932b444c3d"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "rejectedMessageHash"
+    returnType: "org.bitcoinj.base.Sha256Hash"
+    signature: "rejectedMessageHash() : org.bitcoinj.base.Sha256Hash"
+    instructionFingerprint: "3D7571C741214B1CCD68177A97226104"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "rejectedMessageHashTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.core.RejectMessage$RejectCode,org.bitcoinj.base.Sha256Hash,java.lang.String,java.lang.String)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "0C0C20D4BD795B6EB2B056FF5F692191"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "71C3A81C224FB98ADBCC0B1A921DA411"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.RejectMessage"
+          parameters:
+          - name: "code"
+            value:
+              sapientType: "ENUM"
+              content: !<regular>
+                value: "MALFORMED"
+              valueType: "org.bitcoinj.core.RejectMessage$RejectCode"
+              uuid: "<init>_rejectMessage.RejectCode1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessageHash"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.base.Sha256Hash"
+              uuid: "<init>_sha256Hash1"
+              fixed: false
+              equalsMethodPresent: true
+              explicitCastNeeded: false
+          - name: "rejectedMessage"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "rejectedMessage1"
+              valueType: "java.lang.String"
+              uuid: "<init>_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "reason"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "reason1"
+              valueType: "java.lang.String"
+              uuid: "<init>_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.RejectMessage"
+          parameters:
+          - name: "code"
+            value:
+              sapientType: "ENUM"
+              valueType: "org.bitcoinj.core.RejectMessage$RejectCode"
+              uuid: "<init>_rejectMessage.RejectCode1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessageHash"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.base.Sha256Hash"
+              uuid: "<init>_sha256Hash1"
+              fixed: false
+              equalsMethodPresent: true
+              explicitCastNeeded: false
+          - name: "rejectedMessage"
+            value:
+              sapientType: "BASIC"
+              valueType: "java.lang.String"
+              uuid: "<init>_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "reason"
+            value:
+              sapientType: "BASIC"
+              valueType: "java.lang.String"
+              uuid: "<init>_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.core.RejectMessage"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D5F995FF16038F8C8CEB6ED663606C67"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.Sha256Hash"
+        uuid: "<init>_sha256Hash1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "de6cf383-7f9b-378c-8a29-766fcb0c49a9"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "getRejectedObjectHash"
+    returnType: "org.bitcoinj.base.Sha256Hash"
+    signature: "getRejectedObjectHash() : org.bitcoinj.base.Sha256Hash"
+    instructionFingerprint: "430AF16F7C7CB1A969A14684DE0C8019"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "getRejectedObjectHashTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.core.RejectMessage$RejectCode,org.bitcoinj.base.Sha256Hash,java.lang.String,java.lang.String)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "52A5A72C4F78FEB5FC7F09C0466D8255"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "71C3A81C224FB98ADBCC0B1A921DA411"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.RejectMessage"
+          parameters:
+          - name: "code"
+            value:
+              sapientType: "ENUM"
+              content: !<regular>
+                value: "MALFORMED"
+              valueType: "org.bitcoinj.core.RejectMessage$RejectCode"
+              uuid: "<init>_rejectMessage.RejectCode1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessageHash"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.base.Sha256Hash"
+              uuid: "<init>_sha256Hash1"
+              fixed: false
+              equalsMethodPresent: true
+              explicitCastNeeded: false
+          - name: "rejectedMessage"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "rejectedMessage1"
+              valueType: "java.lang.String"
+              uuid: "<init>_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "reason"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "reason1"
+              valueType: "java.lang.String"
+              uuid: "<init>_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.RejectMessage"
+          parameters:
+          - name: "code"
+            value:
+              sapientType: "ENUM"
+              valueType: "org.bitcoinj.core.RejectMessage$RejectCode"
+              uuid: "<init>_rejectMessage.RejectCode1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessageHash"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.base.Sha256Hash"
+              uuid: "<init>_sha256Hash1"
+              fixed: false
+              equalsMethodPresent: true
+              explicitCastNeeded: false
+          - name: "rejectedMessage"
+            value:
+              sapientType: "BASIC"
+              valueType: "java.lang.String"
+              uuid: "<init>_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "reason"
+            value:
+              sapientType: "BASIC"
+              valueType: "java.lang.String"
+              uuid: "<init>_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.core.RejectMessage"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D5F995FF16038F8C8CEB6ED663606C67"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "MOCK"
+        valueType: "org.bitcoinj.base.Sha256Hash"
+        uuid: "<init>_sha256Hash1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "de2d0bf5-a7af-316d-9508-d4f58480c1ed"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "code"
+    returnType: "org.bitcoinj.core.RejectMessage$RejectCode"
+    signature: "code() : org.bitcoinj.core.RejectMessage$RejectCode"
+    instructionFingerprint: "413E6D1ACCDC5A7D3D75ABC3E82226F7"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "codeTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.core.RejectMessage$RejectCode,org.bitcoinj.base.Sha256Hash,java.lang.String,java.lang.String)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "D05F4908EA47F8D4FDE6E37E7517791A"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "F09630516050234343A3BF65AB14FFC8"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.RejectMessage"
+          parameters:
+          - name: "code"
+            value:
+              sapientType: "ENUM"
+              content: !<regular>
+                value: "MALFORMED"
+              valueType: "org.bitcoinj.core.RejectMessage$RejectCode"
+              uuid: "<init>_rejectMessage.RejectCode1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessageHash"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.base.Sha256Hash"
+              uuid: "<init>_sha256Hash1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessage"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "rejectedMessage1"
+              valueType: "java.lang.String"
+              uuid: "<init>_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "reason"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "reason1"
+              valueType: "java.lang.String"
+              uuid: "<init>_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.RejectMessage"
+          parameters:
+          - name: "code"
+            value:
+              sapientType: "ENUM"
+              valueType: "org.bitcoinj.core.RejectMessage$RejectCode"
+              uuid: "<init>_rejectMessage.RejectCode1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessageHash"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.base.Sha256Hash"
+              uuid: "<init>_sha256Hash1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessage"
+            value:
+              sapientType: "BASIC"
+              valueType: "java.lang.String"
+              uuid: "<init>_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "reason"
+            value:
+              sapientType: "BASIC"
+              valueType: "java.lang.String"
+              uuid: "<init>_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.core.RejectMessage"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "EF88D18FC5596FAB44EE02EE8F61A081"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "ENUM"
+        content: !<regular>
+          value: "MALFORMED"
+        valueType: "org.bitcoinj.core.RejectMessage$RejectCode"
+        uuid: "<init>_rejectMessage.RejectCode1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "d056b304-7a03-36ec-808e-bfed4857464d"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "getReasonCode"
+    returnType: "org.bitcoinj.core.RejectMessage$RejectCode"
+    signature: "getReasonCode() : org.bitcoinj.core.RejectMessage$RejectCode"
+    instructionFingerprint: "98B287153157190820BA9EC06051A834"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "getReasonCodeTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.core.RejectMessage$RejectCode,org.bitcoinj.base.Sha256Hash,java.lang.String,java.lang.String)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "4357EBE78BC60E0EE0226682997C98EF"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "F09630516050234343A3BF65AB14FFC8"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.RejectMessage"
+          parameters:
+          - name: "code"
+            value:
+              sapientType: "ENUM"
+              content: !<regular>
+                value: "MALFORMED"
+              valueType: "org.bitcoinj.core.RejectMessage$RejectCode"
+              uuid: "<init>_rejectMessage.RejectCode1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessageHash"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.base.Sha256Hash"
+              uuid: "<init>_sha256Hash1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessage"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "rejectedMessage1"
+              valueType: "java.lang.String"
+              uuid: "<init>_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "reason"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "reason1"
+              valueType: "java.lang.String"
+              uuid: "<init>_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.RejectMessage"
+          parameters:
+          - name: "code"
+            value:
+              sapientType: "ENUM"
+              valueType: "org.bitcoinj.core.RejectMessage$RejectCode"
+              uuid: "<init>_rejectMessage.RejectCode1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessageHash"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.base.Sha256Hash"
+              uuid: "<init>_sha256Hash1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessage"
+            value:
+              sapientType: "BASIC"
+              valueType: "java.lang.String"
+              uuid: "<init>_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "reason"
+            value:
+              sapientType: "BASIC"
+              valueType: "java.lang.String"
+              uuid: "<init>_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.core.RejectMessage"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "EF88D18FC5596FAB44EE02EE8F61A081"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "ENUM"
+        content: !<regular>
+          value: "MALFORMED"
+        valueType: "org.bitcoinj.core.RejectMessage$RejectCode"
+        uuid: "<init>_rejectMessage.RejectCode1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "186b03ba-31cd-3d7e-bcee-8b0f1bba0b9b"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "reason"
+    returnType: "java.lang.String"
+    signature: "reason() : java.lang.String"
+    instructionFingerprint: "B3D2F3095899429F5E8B59F94C32CB1A"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "reasonTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.core.RejectMessage$RejectCode,org.bitcoinj.base.Sha256Hash,java.lang.String,java.lang.String)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "6AD1C974866F1381C2DDA304EA6E3A51"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "F09630516050234343A3BF65AB14FFC8"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.RejectMessage"
+          parameters:
+          - name: "code"
+            value:
+              sapientType: "ENUM"
+              content: !<regular>
+                value: "MALFORMED"
+              valueType: "org.bitcoinj.core.RejectMessage$RejectCode"
+              uuid: "<init>_rejectMessage.RejectCode1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessageHash"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.base.Sha256Hash"
+              uuid: "<init>_sha256Hash1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessage"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "rejectedMessage1"
+              valueType: "java.lang.String"
+              uuid: "<init>_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "reason"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "reason1"
+              valueType: "java.lang.String"
+              uuid: "<init>_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.RejectMessage"
+          parameters:
+          - name: "code"
+            value:
+              sapientType: "ENUM"
+              valueType: "org.bitcoinj.core.RejectMessage$RejectCode"
+              uuid: "<init>_rejectMessage.RejectCode1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessageHash"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.base.Sha256Hash"
+              uuid: "<init>_sha256Hash1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessage"
+            value:
+              sapientType: "BASIC"
+              valueType: "java.lang.String"
+              uuid: "<init>_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "reason"
+            value:
+              sapientType: "BASIC"
+              valueType: "java.lang.String"
+              uuid: "<init>_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.core.RejectMessage"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D1F433D4EB9F8805FF391E82DAB508AB"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "reason1"
+        valueType: "java.lang.String"
+        uuid: "<init>_string2"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "273e527c-5d07-3902-9d7c-d1a9fc22feaa"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "getReasonString"
+    returnType: "java.lang.String"
+    signature: "getReasonString() : java.lang.String"
+    instructionFingerprint: "EB60FF5B76653D31286F447D0693AA81"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "getReasonStringTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.core.RejectMessage$RejectCode,org.bitcoinj.base.Sha256Hash,java.lang.String,java.lang.String)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "65B47E0997DAA2F616A86BFF2F989E12"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "F09630516050234343A3BF65AB14FFC8"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.RejectMessage"
+          parameters:
+          - name: "code"
+            value:
+              sapientType: "ENUM"
+              content: !<regular>
+                value: "MALFORMED"
+              valueType: "org.bitcoinj.core.RejectMessage$RejectCode"
+              uuid: "<init>_rejectMessage.RejectCode1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessageHash"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.base.Sha256Hash"
+              uuid: "<init>_sha256Hash1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessage"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "rejectedMessage1"
+              valueType: "java.lang.String"
+              uuid: "<init>_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "reason"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "reason1"
+              valueType: "java.lang.String"
+              uuid: "<init>_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.RejectMessage"
+          parameters:
+          - name: "code"
+            value:
+              sapientType: "ENUM"
+              valueType: "org.bitcoinj.core.RejectMessage$RejectCode"
+              uuid: "<init>_rejectMessage.RejectCode1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessageHash"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.base.Sha256Hash"
+              uuid: "<init>_sha256Hash1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessage"
+            value:
+              sapientType: "BASIC"
+              valueType: "java.lang.String"
+              uuid: "<init>_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "reason"
+            value:
+              sapientType: "BASIC"
+              valueType: "java.lang.String"
+              uuid: "<init>_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.core.RejectMessage"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D1F433D4EB9F8805FF391E82DAB508AB"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "reason1"
+        valueType: "java.lang.String"
+        uuid: "<init>_string2"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "7336d466-458b-35aa-a3c0-1f92511c376c"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "toString"
+    returnType: "java.lang.String"
+    signature: "toString() : java.lang.String"
+    instructionFingerprint: "8B4C342DBBC4407B60C0AE273CEE7AFD"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "toStringWhenRejectedMessageHashIsNotNull"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.core.RejectMessage$RejectCode,org.bitcoinj.base.Sha256Hash,java.lang.String,java.lang.String)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "DB11791E7753C1A3CC251BACD1A565BB"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "BEC1DB04A1D6913BB0BD5AFA55ABAE25"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.core.RejectMessage"
+          parameters:
+          - name: "code"
+            value:
+              sapientType: "ENUM"
+              content: !<regular>
+                value: "MALFORMED"
+              suggestedContent: !<regular>
+                value: "MALFORMED"
+              valueType: "org.bitcoinj.core.RejectMessage$RejectCode"
+              uuid: "<init>_rejectMessage.RejectCode1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessageHash"
+            value:
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "org.bitcoinj.base.Sha256Hash"
+                method: "read"
+                methodParameters:
+                - name: "buf"
+                  value:
+                    sapientType: "OBJECT"
+                    content: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          content: !<regular>
+                            value: 64
+                          valueType: "int"
+                          fixed: true
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    suggestedContent: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          content: !<regular>
+                            value: 64
+                          valueType: "int"
+                          fixed: true
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    valueType: "java.nio.ByteBuffer"
+                    uuid: "<init>_sha256Hash1-buf"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.base.Sha256Hash"
+                method: "read"
+                methodParameters:
+                - name: "buf"
+                  value:
+                    sapientType: "UNKNOWN"
+                    suggestedContent: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          content: !<regular>
+                            value: 64
+                          valueType: "int"
+                          fixed: true
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    valueType: "java.nio.ByteBuffer"
+                    uuid: "<init>_sha256Hash1-buf"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              valueType: "org.bitcoinj.base.Sha256Hash"
+              uuid: "<init>_sha256Hash1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessage"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Test message"
+              suggestedContent: !<regular>
+                value: "Test message"
+              valueType: "java.lang.String"
+              uuid: "<init>_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "reason"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Invalid format"
+              suggestedContent: !<regular>
+                value: "Invalid format"
+              valueType: "java.lang.String"
+              uuid: "<init>_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.core.RejectMessage"
+          parameters:
+          - name: "code"
+            value:
+              sapientType: "ENUM"
+              content: !<regular>
+                value: "MALFORMED"
+              suggestedContent: !<regular>
+                value: "MALFORMED"
+              valueType: "org.bitcoinj.core.RejectMessage$RejectCode"
+              uuid: "<init>_rejectMessage.RejectCode1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessageHash"
+            value:
+              sapientType: "OBJECT"
+              content: !<static_method_return>
+                target: "org.bitcoinj.base.Sha256Hash"
+                method: "read"
+                methodParameters:
+                - name: "buf"
+                  value:
+                    sapientType: "OBJECT"
+                    content: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          content: !<regular>
+                            value: 64
+                          valueType: "int"
+                          fixed: true
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    suggestedContent: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          content: !<regular>
+                            value: 64
+                          valueType: "int"
+                          fixed: true
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    valueType: "java.nio.ByteBuffer"
+                    uuid: "<init>_sha256Hash1-buf"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              suggestedContent: !<static_method_return>
+                target: "org.bitcoinj.base.Sha256Hash"
+                method: "read"
+                methodParameters:
+                - name: "buf"
+                  value:
+                    sapientType: "UNKNOWN"
+                    suggestedContent: !<static_method_return>
+                      target: "java.nio.ByteBuffer"
+                      method: "allocateDirect"
+                      methodParameters:
+                      - name: "capacity"
+                        value:
+                          sapientType: "BASIC"
+                          content: !<regular>
+                            value: 64
+                          valueType: "int"
+                          fixed: true
+                          equalsMethodPresent: false
+                          explicitCastNeeded: false
+                    valueType: "java.nio.ByteBuffer"
+                    uuid: "<init>_sha256Hash1-buf"
+                    fixed: false
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+              valueType: "org.bitcoinj.base.Sha256Hash"
+              uuid: "<init>_sha256Hash1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "rejectedMessage"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Test message"
+              suggestedContent: !<regular>
+                value: "Test message"
+              valueType: "java.lang.String"
+              uuid: "<init>_string1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "reason"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: "Invalid format"
+              suggestedContent: !<regular>
+                value: "Invalid format"
+              valueType: "java.lang.String"
+              uuid: "<init>_string2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.core.RejectMessage"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "890BC7048366C1B5466E5D77CB2BA7F2"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "Reject: null null for reason 'null' (null)"
+        valueType: "java.lang.String"
+        uuid: "toString_string1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "3c2a2659-1610-37fb-a611-5e70478e1ca0"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "equals"
+    returnType: "boolean"
+    signature: "equals(java.lang.Object) : boolean"
+    instructionFingerprint: "B6BB60E70006EB537AE4B4A171B1594D"
+    parametersTypes:
+    - "java.lang.Object"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "equalsWhenThisEqualsO"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.core.RejectMessage$RejectCode,org.bitcoinj.base.Sha256Hash,java.lang.String,java.lang.String)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "8DD9EB4CEC3E9A0C828FFCAA19A3A036"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "5b7cf5ba-f3cc-35d0-9b4a-3392d3a68eed"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path6"
+    pathIdForUser: "path2"
+    testPathName: "equalsWhenOIsNull"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.core.RejectMessage$RejectCode,org.bitcoinj.base.Sha256Hash,java.lang.String,java.lang.String)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "1835B6E6E29BB635C06DC5D057C6B2C9"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "a2108c4d-bcbc-39b5-8254-0588b654f131"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path2"
+    pathIdForUser: "path3"
+    testPathName: "equalsWhenGetClassNotEqualsOGetClass"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.core.RejectMessage$RejectCode,org.bitcoinj.base.Sha256Hash,java.lang.String,java.lang.String)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "AF5322AE6D77949E3D054BF9E26B8C82"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "6e6a0f87-c9aa-3e31-af0a-46c9467f5ce0"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path5"
+    pathIdForUser: "path4"
+    testPathName: "equalsWhenRejectedMessageNotEqualsOtherRejectedMessage"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.core.RejectMessage$RejectCode,org.bitcoinj.base.Sha256Hash,java.lang.String,java.lang.String)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "4F0230A406A514A18C69249743294189"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "0ea1531c-4f26-350a-887e-608d63c44127"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path3"
+    pathIdForUser: "path5"
+    testPathName: "equalsWhenRejectedMessageHashEqualsOtherRejectedMessageHash"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.core.RejectMessage$RejectCode,org.bitcoinj.base.Sha256Hash,java.lang.String,java.lang.String)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "A04AF9B626AAFF0E153302CF566F0396"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "2e3e6b77-6fef-3231-8392-34092e47b85e"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path4"
+    pathIdForUser: "path6"
+    testPathName: "equalsWhenRejectedMessageHashNotEqualsOtherRejectedMessageHash"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(org.bitcoinj.core.RejectMessage$RejectCode,org.bitcoinj.base.Sha256Hash,java.lang.String,java.lang.String)\
+      \ : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "05981D7EFCE5608497E1EC5774FC8EC6"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "a4663253-5c85-3d8e-af27-0d095a42518c"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false

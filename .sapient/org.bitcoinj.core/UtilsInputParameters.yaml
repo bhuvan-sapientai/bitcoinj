@@ -1,0 +1,234 @@
+---
+modelFingerprint: "1858A61A160FEC0CC3E2674963DFBFBB"
+methods:
+- method:
+    name: "toString"
+    returnType: "java.lang.String"
+    signature: "toString(java.util.List<byte[]>) : java.lang.String"
+    instructionFingerprint: "B4483A980E7895E07A8B21995973F247"
+    parametersTypes:
+    - "java.util.List"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "toStringWhenStackIsNotEmpty"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "7DA06E3236D0EFE29F202C284C97571A"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "stack"
+      modelFingerprint: "CCEF80C042B96828EA04EF90D21E5ED4"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "COLLECTION"
+        content: !<collection>
+          collectionClass: "java.util.ArrayList"
+          parameters: []
+          values:
+          - sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            suggestedContent: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "toString_object1"
+            fixed: false
+            collectionUuid: "toString_list1"
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        suggestedContent: !<collection>
+          collectionClass: "java.util.ArrayList"
+          parameters: []
+          values:
+          - sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            suggestedContent: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "toString_object1"
+            fixed: false
+            collectionUuid: "toString_list1"
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        valueType: "java.util.List"
+        genericValueType: "byte[]"
+        uuid: "toString_list1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "STATIC"
+      name: "ByteUtils"
+      modelFingerprint: "27396EDB8B838A68D84EEB8A161D9DDF"
+      index: 2
+      ignored: false
+      nestedInLoop: true
+      nestedInRecursion: false
+      value:
+        sapientType: "REAL"
+        valueType: "org.bitcoinj.base.internal.ByteUtils"
+        uuid: "org.bitcoinj.base.internal.ByteUtils"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "org.bitcoinj.base.internal.ByteUtils"
+        name: "formatHex"
+        parameters:
+        - name: "bytes"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            suggestedContent: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "toString_object1"
+            fixed: false
+            collectionUuid: "toString_list1"
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "formatHex(byte[]): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: ""
+          valueType: "java.lang.String"
+          uuid: "toString_string1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        access: 9
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "FIELD"
+      name: "SPACE_JOINER"
+      modelFingerprint: "E4BBF74805FE1E63416097825AFD6073"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_field_return>
+          target: "org.bitcoinj.base.internal.InternalUtils"
+          fieldName: "SPACE_JOINER"
+        suggestedContent: !<static_field_return>
+          target: "org.bitcoinj.base.internal.InternalUtils"
+          fieldName: "SPACE_JOINER"
+        valueType: "org.bitcoinj.base.internal.InternalUtils$Joiner"
+        uuid: "toString_internalUtils.Joiner1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      methodExercised:
+        target: "this.SPACE_JOINER"
+        name: "join"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              collectionClass: "java.util.ArrayList"
+              parameters: []
+              values:
+              - sapientType: "BASIC"
+                content: !<regular>
+                  value: "[]"
+                valueType: "java.lang.String"
+                uuid: "toString_arrayList1-item0"
+                fixed: true
+                collectionUuid: "toString_arrayList1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            suggestedContent: !<collection>
+              collectionClass: "java.util.ArrayList"
+              parameters: []
+              values:
+              - sapientType: "BASIC"
+                content: !<regular>
+                  value: "[]"
+                valueType: "java.lang.String"
+                uuid: "toString_arrayList1-item0"
+                fixed: true
+                collectionUuid: "toString_arrayList1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            valueType: "java.util.List"
+            genericValueType: "java.lang.String"
+            uuid: "toString_arrayList1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        signature: "join(List): String"
+        returnValue:
+          sapientType: "BASIC"
+          content: !<regular>
+            value: "[]"
+          valueType: "java.lang.String"
+          uuid: "toString_string3"
+          fixed: false
+          equalsMethodPresent: true
+          explicitCastNeeded: false
+        access: 1025
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "BEA2A0DE112B64A2C6833ED5E65A3436"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: "[]"
+        valueType: "java.lang.String"
+        uuid: "toString_string3"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "b4f8e8ae-065d-3a8b-8ceb-54d9c73bc4b3"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path2"
+    pathIdForUser: "path2"
+    testPathName: "toStringWhenStackIsEmpty"
+    nameDefinedByUser: false
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "D48A184591F9BECFFBF04424F7F941A7"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "cd95d024-f151-3719-ac6c-d5cc921b329d"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    variablesCouldNotBeIsolated: "SPACE_JOINER"
+    failureReason:
+      reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
+      source: "return InternalUtils.SPACE_JOINER.join(parts);"
+      lineNumber: 64
+      details: "A variable could not be isolated or mocked when calling a method -\
+        \ Variable name: SPACE_JOINER - Method: join"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false

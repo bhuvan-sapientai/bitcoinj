@@ -1,0 +1,319 @@
+---
+modelFingerprint: "C37F7BEC029F40E282A113E99A48EAA2"
+methods:
+- method:
+    name: "getPeer"
+    returnType: "java.net.InetSocketAddress"
+    signature: "getPeer() : java.net.InetSocketAddress"
+    instructionFingerprint: "24C393DEC820C3DFBC74D7E4FD697BA4"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "getPeerWhenPnseedIndexGreaterThanOrEqualsToSeedAddrsSize"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(int[],org.bitcoinj.core.NetworkParameters) : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "7117955EB28C48ECF062A270962F3590"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "62A0BA89C4E016A396D07B58B927D162"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.net.discovery.SeedPeers"
+          parameters:
+          - name: "seedAddrInts"
+            value:
+              sapientType: "NULL"
+              valueType: "int[]"
+              uuid: "<init>_int[]1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "params"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.core.NetworkParameters"
+              uuid: "<init>_networkParameters1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.net.discovery.SeedPeers"
+          parameters:
+          - name: "seedAddrInts"
+            value:
+              sapientType: "NULL"
+              valueType: "int[]"
+              uuid: "<init>_int[]1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "params"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.core.NetworkParameters"
+              uuid: "<init>_networkParameters1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.net.discovery.SeedPeers"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "6D25B5A1CD1AC7BFD29E06E5041B19CC"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "NULL"
+        valueType: "java.net.InetSocketAddress"
+        uuid: "nextPeer_inetSocketAddress1"
+        fixed: true
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "29045a5a-75bd-3a9b-92fb-e6d2c2819094"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "getPeers"
+    returnType: "java.util.List"
+    signature: "getPeers(long,java.time.Duration) : java.util.List<java.net.InetSocketAddress>"
+    instructionFingerprint: "12AB4B70251E55BB920658EB094D0906"
+    parametersTypes:
+    - "long"
+    - "java.time.Duration"
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "getPeersWhenServicesNotEquals0"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(int[],org.bitcoinj.core.NetworkParameters) : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "447D3ECF6372C04593DBD5DC96B27EAD"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "62A0BA89C4E016A396D07B58B927D162"
+      index: 1
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<new>
+          target: "org.bitcoinj.net.discovery.SeedPeers"
+          parameters:
+          - name: "seedAddrInts"
+            value:
+              sapientType: "NULL"
+              valueType: "int[]"
+              uuid: "<init>_int[]1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "params"
+            value:
+              sapientType: "MOCK"
+              valueType: "org.bitcoinj.core.NetworkParameters"
+              uuid: "<init>_networkParameters1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        suggestedContent: !<new>
+          target: "org.bitcoinj.net.discovery.SeedPeers"
+          parameters:
+          - name: "seedAddrInts"
+            value:
+              sapientType: "NULL"
+              valueType: "int[]"
+              uuid: "<init>_int[]1"
+              fixed: true
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          - name: "params"
+            value:
+              sapientType: "UNKNOWN"
+              valueType: "org.bitcoinj.core.NetworkParameters"
+              uuid: "<init>_networkParameters1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+          privateConstructor: false
+          createdByTargetCode: false
+        valueType: "org.bitcoinj.net.discovery.SeedPeers"
+        uuid: "target"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "services"
+      modelFingerprint: "25301E9122629AE431338279392F6424"
+      index: 2
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "BASIC"
+        content: !<regular>
+          value: 1
+        suggestedContent: !<regular>
+          value: 1
+        valueType: "long"
+        uuid: "getPeers_long1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "INPUT"
+      name: "timeout"
+      modelFingerprint: "56FF28DDA68F2DB8B71AE2A0D84E5A0E"
+      index: 3
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "OBJECT"
+        content: !<static_method_return>
+          target: "java.time.Duration"
+          method: "ofDays"
+          methodParameters:
+          - name: "days"
+            value:
+              sapientType: "BASIC"
+              content: !<regular>
+                value: 0
+              valueType: "long"
+              uuid: "getPeers_duration1-days"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        suggestedContent: !<static_method_return>
+          target: "java.time.Duration"
+          method: "ofDays"
+          methodParameters:
+          - name: "days"
+            value:
+              sapientType: "BASIC"
+              valueType: "long"
+              uuid: "getPeers_duration1-days"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+        valueType: "java.time.Duration"
+        uuid: "getPeers_duration1"
+        fixed: false
+        equalsMethodPresent: false
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "120C81C2160409BC5A5FCD6F87281532"
+      index: 4
+      ignored: false
+      nestedInLoop: false
+      nestedInRecursion: false
+      value:
+        sapientType: "COLLECTION"
+        content: !<collection>
+          collectionClass: "java.util.LinkedList"
+          parameters: []
+          values: []
+        suggestedContent: !<collection>
+          collectionClass: "java.util.LinkedList"
+          parameters: []
+          values: []
+        valueType: "java.util.List"
+        genericValueType: "java.net.InetSocketAddress"
+        uuid: "getPeers_list1"
+        fixed: false
+        equalsMethodPresent: true
+        explicitCastNeeded: false
+      staticReadMethodForField: false
+      filledByUser: false
+    uuid: "76a92274-e20a-3c7a-86ab-707999f7356a"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+  - pathId: "path2"
+    pathIdForUser: "path2"
+    testPathName: "getPeersWhenServicesEquals0"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(int[],org.bitcoinj.core.NetworkParameters) : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "99B838D1BC03E26AAA7D94A8DEB6D526"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "01871894-a455-3b2c-9f3b-96d9cbdd8588"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+- method:
+    name: "shutdown"
+    returnType: "void"
+    signature: "shutdown() : void"
+    instructionFingerprint: "79448D591F19BF2AC7674DF616A5D56D"
+    parametersTypes: []
+  paths:
+  - pathId: "path1"
+    pathIdForUser: "path1"
+    testPathName: "shutdownTest"
+    nameDefinedByUser: false
+    constructorSignature: "<init>(int[],org.bitcoinj.core.NetworkParameters) : void"
+    priorityDefinedByUser: false
+    filledByUser: false
+    priority: "LOW"
+    modelFingerprint: "D44071DD1039C98ED037379BA1D82027"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "44bbdf6d-2273-33b9-9af3-ad536c3b1188"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
