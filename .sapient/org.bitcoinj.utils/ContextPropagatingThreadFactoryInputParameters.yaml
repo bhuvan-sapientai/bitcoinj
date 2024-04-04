@@ -1,0 +1,120 @@
+---
+modelFingerprint: "894211D05990BA49317149D2E1E59292"
+methods:
+- method:
+    name: "newThread"
+    signature: "newThread(java.lang.Runnable) : java.lang.Thread"
+    sourceCodeSignature: "Thread newThread(final Runnable r)"
+    instructionFingerprint: "171490001C114DCE8FD954C77D889611"
+  paths:
+  - pathId: "path1"
+    testPathName: "newThreadWhenHandlerIsNotNull"
+    constructorSignature: "<init>(java.lang.String,int) : void"
+    modelFingerprint: "9B763BF7304E99F6EC2492B9595B2354"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "BFAE350C15714DE56F23DF6C06FF0C85"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "r"
+      modelFingerprint: "E19F7DDCD869EDBB675FEEDF46089F9F"
+      index: 2
+      valueUuid: "newThread_runnable1"
+    - type: "STATIC"
+      name: "Context"
+      modelFingerprint: "8844008653DC641C2374B8DCFBDA516E"
+      index: 3
+      valueUuid: "uuid1"
+      methodExercised:
+        target: "org.bitcoinj.core.Context"
+        name: "get"
+        parameters: []
+        signature: "get(): Context"
+        returnValueUuid: "newThread_context1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "FE91365485E969818FBA0CF1B52CAE3A"
+      index: 4
+      valueUuid: "newThread_thread1"
+    uuid: "581615ec-fb96-3fea-b947-52c6c3049d90"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    variablesCouldNotBeIsolated: "thread"
+    failureReason:
+      reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
+      source: "thread.setUncaughtExceptionHandler(handler);"
+      lineNumber: 59
+      details: "A variable could not be isolated or mocked when calling a method -\
+        \ Variable name: thread - Method: setUncaughtExceptionHandler"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.utils.ContextPropagatingThreadFactory"
+        parameters:
+        - name: "name"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "name1"
+            valueType: "java.lang.String"
+            uuid: "<init>_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "priority"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "int"
+            uuid: "<init>_int1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.utils.ContextPropagatingThreadFactory"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.lang.Runnable"
+      uuid: "newThread_runnable1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.core.Context"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.core.Context"
+        method: "get"
+        methodParameters: []
+      valueType: "org.bitcoinj.core.Context"
+      uuid: "newThread_context1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.lang.Thread"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.Thread"
+      uuid: "newThread_thread1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false

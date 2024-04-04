@@ -1,0 +1,4857 @@
+---
+modelFingerprint: "0D1712F3482ADB5D3AB801116712839F"
+methods:
+- method:
+    name: "fromBase58"
+    signature: "fromBase58(org.bitcoinj.base.Network,java.lang.String) : org.bitcoinj.crypto.DumpedPrivateKey"
+    sourceCodeSignature: "DumpedPrivateKey fromBase58(@Nullable Network network, String\
+      \ base58)"
+    instructionFingerprint: "041D91443ADE5222C6190E666A3EEEDF"
+  paths:
+  - pathId: "path5"
+    testPathName: "fromBase58WhenNetworksGetIsEmptyThrowsAddressFormatExceptionInvalidPrefix"
+    modelFingerprint: "5C882B5557BD047BE37A4288E5EC9BC5"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "8ffc1aec-4b0f-3225-ac3f-3a846c51a5a8"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path9"
+    testPathName: "fromBase58WhenVersionNotEqualsParamsGetDumpedPrivateKeyHeaderThrowsAddressFormatExceptionWrongNetwork"
+    modelFingerprint: "F5A2022566F8CECD79FDA14FE4C8234E"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "network"
+      modelFingerprint: "21265044845AADF4BB42838860E37312"
+      index: 1
+      valueUuid: "fromBase58_network1"
+    - type: "INPUT"
+      name: "base58"
+      modelFingerprint: "F163E6DA421F77ADCD437F545EF20C21"
+      index: 2
+      valueUuid: "fromBase58_string1"
+    - type: "STATIC"
+      name: "Base58"
+      modelFingerprint: "53938451B7EA04AD884B3293F95D72FF"
+      index: 3
+      valueUuid: "uuid1"
+      methodExercised:
+        target: "org.bitcoinj.base.Base58"
+        name: "decodeChecked"
+        parameters:
+        - name: "input"
+          valueUuid: "fromBase58_string1"
+        throwsExceptions:
+        - "org.bitcoinj.base.exceptions.AddressFormatException"
+        signature: "decodeChecked(String): byte[] throws org.bitcoinj.base.exceptions.AddressFormatException"
+        returnValueUuid: "fromBase58_byte[]1"
+        access: 9
+    - type: "STATIC"
+      name: "NetworkParameters"
+      modelFingerprint: "B72FCE3881B8A13CF96B18382171A48E"
+      index: 4
+      valueUuid: "uuid2"
+      methodExercised:
+        target: "org.bitcoinj.core.NetworkParameters"
+        name: "of"
+        parameters:
+        - name: "network"
+          valueUuid: "fromBase58_network1"
+        signature: "of(Network): NetworkParameters"
+        returnValueUuid: "fromBase58_networkParameters1"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      name: "params"
+      modelFingerprint: "83E0CBF77C2FE9B6F2BA40B04B3BCE82"
+      index: 5
+      valueUuid: "fromBase58_networkParameters1"
+      methodExercised:
+        target: "params"
+        name: "getDumpedPrivateKeyHeader"
+        parameters: []
+        signature: "getDumpedPrivateKeyHeader(): int"
+        returnValueUuid: "fromBase58_int4"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "EA9C2A38461E9430618D01CF8EDCF19F"
+      index: 6
+      valueUuid: "fromBase58_addressFormatException.WrongNetwork1"
+    uuid: "26136c5c-c65d-3a7d-8830-42141a37ced6"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Network"
+      uuid: "fromBase58_network1"
+      fixed: false
+      nameForMock: "mainnet"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "KwDiBf89QgGbjEhKnhXJuH7LrciVrZi3qYZpzzcVN6vJbKwF7a4m"
+      valueType: "java.lang.String"
+      uuid: "fromBase58_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Base58"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            uuid: "fromBase58_byte1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "fromBase58_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "KwDiBf89QgGbjEhKnhXJuH7LrciVrZi3qYZpzzcVN6vJbKwF7a4m"
+      valueType: "java.lang.String"
+      uuid: "fromBase58_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "fromBase58_networkParameters1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Network"
+      uuid: "fromBase58_network1"
+      fixed: false
+      nameForMock: "mainnet"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "fromBase58_networkParameters1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 1
+      valueType: "int"
+      uuid: "fromBase58_int4"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "org.bitcoinj.base.exceptions.AddressFormatException$WrongNetwork"
+        parameters:
+        - name: "versionHeader"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            uuid: "fromBase58_int2"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.base.exceptions.AddressFormatException$WrongNetwork"
+      uuid: "fromBase58_addressFormatException.WrongNetwork1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+  - pathId: "path4"
+    testPathName: "fromBase58WhenVersionNotEqualsPGetDumpedPrivateKeyHeaderThrowsAddressFormatExceptionInvalidPrefix"
+    modelFingerprint: "0BA45E28FD0FD62BC96BD1F90DA112AF"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "network"
+      modelFingerprint: "ACB5FAC6B170F244F321473B2F03FC87"
+      index: 1
+      valueUuid: "fromBase58_network1"
+    - type: "INPUT"
+      name: "base58"
+      modelFingerprint: "D7BAE30C5DD79A0EE2F51B888FFB6F7B"
+      index: 2
+      valueUuid: "fromBase58_string1"
+    - type: "STATIC"
+      name: "Base58"
+      modelFingerprint: "A9DFEA51CE1AB5914B1C0B0C70AB087B"
+      index: 3
+      valueUuid: "uuid5"
+      methodExercised:
+        target: "org.bitcoinj.base.Base58"
+        name: "decodeChecked"
+        parameters:
+        - name: "input"
+          valueUuid: "fromBase58_string1"
+        throwsExceptions:
+        - "org.bitcoinj.base.exceptions.AddressFormatException"
+        signature: "decodeChecked(String): byte[] throws org.bitcoinj.base.exceptions.AddressFormatException"
+        returnValueUuid: "fromBase58_byte[]1"
+        access: 9
+    - type: "STATIC"
+      name: "Networks"
+      modelFingerprint: "409C6A3E452E7F120A08FD21FD0D7813"
+      index: 4
+      valueUuid: "uuid6"
+      methodExercised:
+        target: "org.bitcoinj.params.Networks"
+        name: "get"
+        parameters: []
+        signature: "get(): Set"
+        returnValueUuid: "fromBase58_set1"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      name: "p"
+      modelFingerprint: "7E6C0F1401C90538CF2ABDB1B6EA841E"
+      index: 5
+      valueUuid: "fromBase58_object1"
+      methodExercised:
+        target: "p"
+        name: "getDumpedPrivateKeyHeader"
+        parameters: []
+        signature: "getDumpedPrivateKeyHeader(): int"
+        returnValueUuid: "fromBase58_int3"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "345EA59770EA09A38E45080BAB29FCE3"
+      index: 6
+      valueUuid: "fromBase58_addressFormatException.InvalidPrefix1"
+    uuid: "7e09a9e8-c8bf-35bf-a350-e9526dfcae8c"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "NULL"
+      valueType: "org.bitcoinj.base.Network"
+      uuid: "fromBase58_network1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "A"
+      valueType: "java.lang.String"
+      uuid: "fromBase58_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Base58"
+      uuid: "uuid5"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            uuid: "fromBase58_byte1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "fromBase58_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "A"
+      valueType: "java.lang.String"
+      uuid: "fromBase58_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.params.Networks"
+      uuid: "uuid6"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        collectionClass: "java.util.HashSet"
+        parameters: []
+        values:
+        - sapientType: "MOCK"
+          valueType: "org.bitcoinj.core.NetworkParameters"
+          uuid: "fromBase58_object1"
+          fixed: false
+          collectionUuid: "fromBase58_set1"
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+      valueType: "java.util.Set"
+      genericValueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "fromBase58_set1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "fromBase58_object1"
+      fixed: false
+      collectionUuid: "fromBase58_set1"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 9
+      valueType: "int"
+      uuid: "fromBase58_int3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidPrefix"
+        parameters:
+        - name: "message"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "No network found for version 8"
+            valueType: "java.lang.String"
+            uuid: "fromBase58_string2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidPrefix"
+      uuid: "fromBase58_addressFormatException.InvalidPrefix1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+  - pathId: "path6"
+    testPathName: "fromBase58WhenDefaultBranchThrowsAddressFormatExceptionInvalidDataLength"
+    modelFingerprint: "51627A97995CE47578E7B549994EB4AC"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "network"
+      modelFingerprint: "21265044845AADF4BB42838860E37312"
+      index: 1
+      valueUuid: "fromBase58_network1"
+    - type: "INPUT"
+      name: "base58"
+      modelFingerprint: "0DBC4726852F99162B88F9C8B974CB59"
+      index: 2
+      valueUuid: "fromBase58_string1"
+    - type: "STATIC"
+      name: "Base58"
+      modelFingerprint: "7370996F24EEB8ED9535DD35E3BD2E71"
+      index: 3
+      valueUuid: "uuid1"
+      methodExercised:
+        target: "org.bitcoinj.base.Base58"
+        name: "decodeChecked"
+        parameters:
+        - name: "input"
+          valueUuid: "fromBase58_string1"
+        throwsExceptions:
+        - "org.bitcoinj.base.exceptions.AddressFormatException"
+        signature: "decodeChecked(String): byte[] throws org.bitcoinj.base.exceptions.AddressFormatException"
+        returnValueUuid: "fromBase58_byte[]1"
+        access: 9
+    - type: "STATIC"
+      name: "NetworkParameters"
+      modelFingerprint: "7E4DDABB805EEFE545C0DCB9527B2443"
+      index: 4
+      valueUuid: "uuid2"
+      methodExercised:
+        target: "org.bitcoinj.core.NetworkParameters"
+        name: "of"
+        parameters:
+        - name: "network"
+          valueUuid: "fromBase58_network1"
+        signature: "of(Network): NetworkParameters"
+        returnValueUuid: "fromBase58_networkParameters1"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      name: "params"
+      modelFingerprint: "D6823E0972B1949C98CB4DD31E5716B4"
+      index: 5
+      valueUuid: "fromBase58_networkParameters1"
+      methodExercised:
+        target: "params"
+        name: "getDumpedPrivateKeyHeader"
+        parameters: []
+        signature: "getDumpedPrivateKeyHeader(): int"
+        returnValueUuid: "fromBase58_int3"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "3A6D58FD7E4FFD1ADEC49659B12354D9"
+      index: 6
+      valueUuid: "<init>_addressFormatException.InvalidDataLength1"
+    uuid: "ffa61a27-94f2-3c92-b2f9-4f488d4526ce"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Network"
+      uuid: "fromBase58_network1"
+      fixed: false
+      nameForMock: "mainnet"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "L3ATLJZJLJZJLJZJLJZJLJZJLJZJLJZJLJZJLJZJLJZJLJZJLJZ"
+      valueType: "java.lang.String"
+      uuid: "fromBase58_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Base58"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          1:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          2:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          3:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          4:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          5:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          6:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          7:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          8:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          9:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          10:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          11:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          12:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          13:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          14:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          15:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          16:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          17:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          18:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          19:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          20:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          21:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          22:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          23:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          24:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          25:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          26:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          27:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          28:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          29:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          30:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          31:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "fromBase58_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "L3ATLJZJLJZJLJZJLJZJLJZJLJZJLJZJLJZJLJZJLJZJLJZJLJZ"
+      valueType: "java.lang.String"
+      uuid: "fromBase58_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "fromBase58_networkParameters1"
+      fixed: false
+      nameForMock: "mainnet"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Network"
+      uuid: "fromBase58_network1"
+      fixed: false
+      nameForMock: "mainnet"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "fromBase58_networkParameters1"
+      fixed: false
+      nameForMock: "mainnet"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 128
+      valueType: "int"
+      uuid: "fromBase58_int3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidDataLength"
+        parameters:
+        - name: "message"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "Wrong number of bytes for a private key (32 or 33): 0"
+            valueType: "java.lang.String"
+            uuid: "<init>_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidDataLength"
+      uuid: "<init>_addressFormatException.InvalidDataLength1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+  - pathId: "path7"
+    testPathName: "fromBase58WhenDefaultBranch"
+    modelFingerprint: "BD434DD82ED947CC3CDC3AA7B2295BD5"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "network"
+      modelFingerprint: "21265044845AADF4BB42838860E37312"
+      index: 1
+      valueUuid: "fromBase58_network1"
+    - type: "INPUT"
+      name: "base58"
+      modelFingerprint: "34E63649A472FF5BA017A89ECAA937B9"
+      index: 2
+      valueUuid: "fromBase58_string1"
+    - type: "STATIC"
+      name: "Base58"
+      modelFingerprint: "7EA013F6D3DBDD4A7CA0D14415E227C6"
+      index: 3
+      valueUuid: "uuid1"
+      methodExercised:
+        target: "org.bitcoinj.base.Base58"
+        name: "decodeChecked"
+        parameters:
+        - name: "input"
+          valueUuid: "fromBase58_string1"
+        throwsExceptions:
+        - "org.bitcoinj.base.exceptions.AddressFormatException"
+        signature: "decodeChecked(String): byte[] throws org.bitcoinj.base.exceptions.AddressFormatException"
+        returnValueUuid: "fromBase58_byte[]1"
+        access: 9
+    - type: "STATIC"
+      name: "NetworkParameters"
+      modelFingerprint: "7E4DDABB805EEFE545C0DCB9527B2443"
+      index: 4
+      valueUuid: "uuid2"
+      methodExercised:
+        target: "org.bitcoinj.core.NetworkParameters"
+        name: "of"
+        parameters:
+        - name: "network"
+          valueUuid: "fromBase58_network1"
+        signature: "of(Network): NetworkParameters"
+        returnValueUuid: "fromBase58_networkParameters1"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      name: "params"
+      modelFingerprint: "10A79E220AC130B140BF044BDD4CBCEB"
+      index: 5
+      valueUuid: "fromBase58_networkParameters1"
+      methodExercised:
+        target: "params"
+        name: "getDumpedPrivateKeyHeader"
+        parameters: []
+        signature: "getDumpedPrivateKeyHeader(): int"
+        returnValueUuid: "fromBase58_int3"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "2987863E715F871C200EDCF9ACF086C7"
+      index: 6
+      valueUuid: "fromBase58_dumpedPrivateKey1"
+    uuid: "dac65800-d6b1-3668-b6a2-79c54ec6f30a"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Network"
+      uuid: "fromBase58_network1"
+      fixed: false
+      nameForMock: "mainnet"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "KwDiBf89QgGbjEhKnhXJuH7LrciVrZi3qYZBd3CqnjgV"
+      valueType: "java.lang.String"
+      uuid: "fromBase58_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Base58"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "fromBase58_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "KwDiBf89QgGbjEhKnhXJuH7LrciVrZi3qYZBd3CqnjgV"
+      valueType: "java.lang.String"
+      uuid: "fromBase58_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "fromBase58_networkParameters1"
+      fixed: false
+      nameForMock: "NetworkParameters"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Network"
+      uuid: "fromBase58_network1"
+      fixed: false
+      nameForMock: "mainnet"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "fromBase58_networkParameters1"
+      fixed: false
+      nameForMock: "NetworkParameters"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "fromBase58_int3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.DumpedPrivateKey"
+        parameters:
+        - name: "network"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Network"
+            uuid: "fromBase58_network1"
+            fixed: false
+            nameForMock: "mainnet"
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "bytes"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item0"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 1
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                2:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 2
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item2"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                3:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item3"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                4:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 4
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item4"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                5:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 5
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item5"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                6:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 6
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item6"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                7:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 7
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item7"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                8:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 8
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item8"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                9:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 9
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item9"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                10:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 10
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item10"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                11:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 11
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item11"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                12:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 12
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item12"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                13:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 13
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item13"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                14:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 14
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item14"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                15:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 15
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item15"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                16:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 16
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item16"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                17:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 17
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item17"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                18:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 18
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item18"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                19:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 19
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item19"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                20:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 20
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item20"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                21:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 21
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item21"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                22:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 22
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item22"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                23:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 23
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item23"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                24:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 24
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item24"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                25:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 25
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item25"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                26:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 26
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item26"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                27:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 27
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item27"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                28:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 28
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item28"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                29:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 29
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item29"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                30:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 30
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item30"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                31:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 31
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item31"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                32:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 32
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item32"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "byte[]"
+            uuid: "fromBase58_byte[]2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: true
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.crypto.DumpedPrivateKey"
+      uuid: "fromBase58_dumpedPrivateKey1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path8"
+    testPathName: "fromBase58WhenVersionEqualsParamsGetDumpedPrivateKeyHeaderAndDefaultBranch"
+    modelFingerprint: "70D66ACA514C149C7D08010CC0C67D9A"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "4e0296e6-81c7-3592-9e53-2c2801536622"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path1"
+    testPathName: "fromBase58WhenVersionEqualsPGetDumpedPrivateKeyHeaderAndDefaultBranchThrowsAddressFormatExceptionInvalidDataLength"
+    modelFingerprint: "872FE0A30DA1F6E5BAB966788C3E1959"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "network"
+      modelFingerprint: "CBB9B8BEDF8E53E9BA4E7E8BB9AE16F1"
+      index: 1
+      valueUuid: "fromBase58_network1"
+    - type: "INPUT"
+      name: "base58"
+      modelFingerprint: "D7BAE30C5DD79A0EE2F51B888FFB6F7B"
+      index: 2
+      valueUuid: "fromBase58_string1"
+    - type: "STATIC"
+      name: "Base58"
+      modelFingerprint: "3C21A8C9803DFB5A862CCEFC80EFD886"
+      index: 3
+      valueUuid: "uuid1"
+      methodExercised:
+        target: "org.bitcoinj.base.Base58"
+        name: "decodeChecked"
+        parameters:
+        - name: "input"
+          valueUuid: "fromBase58_string1"
+        throwsExceptions:
+        - "org.bitcoinj.base.exceptions.AddressFormatException"
+        signature: "decodeChecked(String): byte[] throws org.bitcoinj.base.exceptions.AddressFormatException"
+        returnValueUuid: "fromBase58_byte[]1"
+        access: 9
+    - type: "STATIC"
+      name: "Networks"
+      modelFingerprint: "9DA9AA6CCBCBC5D4DBBD70C6E220DB45"
+      index: 4
+      valueUuid: "uuid2"
+      methodExercised:
+        target: "org.bitcoinj.params.Networks"
+        name: "get"
+        parameters: []
+        signature: "get(): Set"
+        returnValueUuid: "fromBase58_set1"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      name: "p"
+      modelFingerprint: "8FE4AD2C9DB47242F15674A5BA0CF049"
+      index: 5
+      valueUuid: "fromBase58_set1-0"
+      methodExercised:
+        target: "p"
+        name: "getDumpedPrivateKeyHeader"
+        parameters: []
+        signature: "getDumpedPrivateKeyHeader(): int"
+        returnValueUuid: "fromBase58_int3"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      name: "p"
+      modelFingerprint: "DF6A03953FEB3131211436D0CEFADC68"
+      index: 6
+      valueUuid: "fromBase58_set1-0"
+      methodExercised:
+        target: "p"
+        name: "network"
+        parameters: []
+        signature: "network(): Network"
+        returnValueUuid: "fromBase58_network2"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "3A6D58FD7E4FFD1ADEC49659B12354D9"
+      index: 7
+      valueUuid: "<init>_addressFormatException.InvalidDataLength1"
+    uuid: "300529ff-f3e9-35c4-9ee9-36efe8815233"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    variablesCouldNotBeIsolated: "p"
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "NULL"
+      valueType: "org.bitcoinj.base.Network"
+      uuid: "fromBase58_network1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "A"
+      valueType: "java.lang.String"
+      uuid: "fromBase58_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Base58"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "fromBase58_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "A"
+      valueType: "java.lang.String"
+      uuid: "fromBase58_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.params.Networks"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        collectionClass: "java.util.HashSet"
+        parameters: []
+        values:
+        - sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.core.NetworkParameters"
+            method: "fromID"
+            methodParameters:
+            - name: "id"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: "id1"
+                valueType: "java.lang.String"
+                uuid: "fromBase58_set1-0-id"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          valueType: "org.bitcoinj.core.NetworkParameters"
+          uuid: "fromBase58_set1-0"
+          fixed: false
+          collectionUuid: "fromBase58_set1"
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+      valueType: "java.util.Set"
+      genericValueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "fromBase58_set1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.core.NetworkParameters"
+        method: "fromID"
+        methodParameters:
+        - name: "id"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "id1"
+            valueType: "java.lang.String"
+            uuid: "fromBase58_set1-0-id"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "fromBase58_set1-0"
+      fixed: false
+      collectionUuid: "fromBase58_set1"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 1
+      valueType: "int"
+      uuid: "fromBase58_int3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.core.NetworkParameters"
+        method: "fromID"
+        methodParameters:
+        - name: "id"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "id1"
+            valueType: "java.lang.String"
+            uuid: "fromBase58_set1-0-id"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "fromBase58_set1-0"
+      fixed: false
+      collectionUuid: "fromBase58_set1"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Network"
+      uuid: "fromBase58_network2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidDataLength"
+        parameters:
+        - name: "message"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "Wrong number of bytes for a private key (32 or 33): 0"
+            valueType: "java.lang.String"
+            uuid: "<init>_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidDataLength"
+      uuid: "<init>_addressFormatException.InvalidDataLength1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "fromBase58WhenVersionEqualsPGetDumpedPrivateKeyHeaderAndDefaultBranch"
+    modelFingerprint: "C08731274AB89AE52408F3811CB82E1D"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "network"
+      modelFingerprint: "CBB9B8BEDF8E53E9BA4E7E8BB9AE16F1"
+      index: 1
+      valueUuid: "fromBase58_network1"
+    - type: "INPUT"
+      name: "base58"
+      modelFingerprint: "D7BAE30C5DD79A0EE2F51B888FFB6F7B"
+      index: 2
+      valueUuid: "fromBase58_string1"
+    - type: "STATIC"
+      name: "Base58"
+      modelFingerprint: "3C21A8C9803DFB5A862CCEFC80EFD886"
+      index: 3
+      valueUuid: "uuid1"
+      methodExercised:
+        target: "org.bitcoinj.base.Base58"
+        name: "decodeChecked"
+        parameters:
+        - name: "input"
+          valueUuid: "fromBase58_string1"
+        throwsExceptions:
+        - "org.bitcoinj.base.exceptions.AddressFormatException"
+        signature: "decodeChecked(String): byte[] throws org.bitcoinj.base.exceptions.AddressFormatException"
+        returnValueUuid: "fromBase58_byte[]1"
+        access: 9
+    - type: "STATIC"
+      name: "Networks"
+      modelFingerprint: "9DA9AA6CCBCBC5D4DBBD70C6E220DB45"
+      index: 4
+      valueUuid: "uuid2"
+      methodExercised:
+        target: "org.bitcoinj.params.Networks"
+        name: "get"
+        parameters: []
+        signature: "get(): Set"
+        returnValueUuid: "fromBase58_set1"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      name: "p"
+      modelFingerprint: "8FE4AD2C9DB47242F15674A5BA0CF049"
+      index: 5
+      valueUuid: "fromBase58_set1-0"
+      methodExercised:
+        target: "p"
+        name: "getDumpedPrivateKeyHeader"
+        parameters: []
+        signature: "getDumpedPrivateKeyHeader(): int"
+        returnValueUuid: "fromBase58_int3"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      name: "p"
+      modelFingerprint: "DF6A03953FEB3131211436D0CEFADC68"
+      index: 6
+      valueUuid: "fromBase58_set1-0"
+      methodExercised:
+        target: "p"
+        name: "network"
+        parameters: []
+        signature: "network(): Network"
+        returnValueUuid: "fromBase58_network2"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "DB96FF119CDE8B79FDA543C6AC92E5B3"
+      index: 7
+      valueUuid: "fromBase58_dumpedPrivateKey1"
+    uuid: "383d88b9-8c60-3753-a6ca-6a76e8547478"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    variablesCouldNotBeIsolated: "p"
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "NULL"
+      valueType: "org.bitcoinj.base.Network"
+      uuid: "fromBase58_network1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "A"
+      valueType: "java.lang.String"
+      uuid: "fromBase58_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Base58"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "fromBase58_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "A"
+      valueType: "java.lang.String"
+      uuid: "fromBase58_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.params.Networks"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        collectionClass: "java.util.HashSet"
+        parameters: []
+        values:
+        - sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.core.NetworkParameters"
+            method: "fromID"
+            methodParameters:
+            - name: "id"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: "id1"
+                valueType: "java.lang.String"
+                uuid: "fromBase58_set1-0-id"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          valueType: "org.bitcoinj.core.NetworkParameters"
+          uuid: "fromBase58_set1-0"
+          fixed: false
+          collectionUuid: "fromBase58_set1"
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+      valueType: "java.util.Set"
+      genericValueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "fromBase58_set1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.core.NetworkParameters"
+        method: "fromID"
+        methodParameters:
+        - name: "id"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "id1"
+            valueType: "java.lang.String"
+            uuid: "fromBase58_set1-0-id"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "fromBase58_set1-0"
+      fixed: false
+      collectionUuid: "fromBase58_set1"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 1
+      valueType: "int"
+      uuid: "fromBase58_int3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.core.NetworkParameters"
+        method: "fromID"
+        methodParameters:
+        - name: "id"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "id1"
+            valueType: "java.lang.String"
+            uuid: "fromBase58_set1-0-id"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "fromBase58_set1-0"
+      fixed: false
+      collectionUuid: "fromBase58_set1"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Network"
+      uuid: "fromBase58_network2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.DumpedPrivateKey"
+        parameters:
+        - name: "network"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Network"
+            uuid: "fromBase58_network2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "bytes"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item0"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 1
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                2:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 2
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item2"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                3:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item3"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                4:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 4
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item4"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                5:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 5
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item5"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                6:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 6
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item6"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                7:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 7
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item7"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                8:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 8
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item8"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                9:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 9
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item9"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                10:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 10
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item10"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                11:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 11
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item11"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                12:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 12
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item12"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                13:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 13
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item13"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                14:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 14
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item14"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                15:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 15
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item15"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                16:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 16
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item16"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                17:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 17
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item17"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                18:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 18
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item18"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                19:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 19
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item19"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                20:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 20
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item20"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                21:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 21
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item21"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                22:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 22
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item22"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                23:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 23
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item23"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                24:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 24
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item24"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                25:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 25
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item25"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                26:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 26
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item26"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                27:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 27
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item27"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                28:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 28
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item28"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                29:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 29
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item29"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                30:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 30
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item30"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                31:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 31
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item31"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                32:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 32
+                  valueType: "byte"
+                  uuid: "fromBase58_byte[]2Item32"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "byte[]"
+            uuid: "fromBase58_byte[]2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: true
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.crypto.DumpedPrivateKey"
+      uuid: "fromBase58_dumpedPrivateKey1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path3"
+    testPathName: "fromBase58WhenNetworksGetIsNotEmptyAndVersionEqualsPGetDumpedPrivateKeyHeaderAndDefaultBranch"
+    modelFingerprint: "A9DA8D7D564F127DA6367FF3A8B7F8BF"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "d1ffc9fb-49c1-3d3f-ae17-c342820840b5"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "fromBase58"
+    signature: "fromBase58(org.bitcoinj.core.NetworkParameters,java.lang.String) :\
+      \ org.bitcoinj.crypto.DumpedPrivateKey"
+    sourceCodeSignature: "DumpedPrivateKey fromBase58(@Nullable NetworkParameters\
+      \ params, String base58)"
+    instructionFingerprint: "9F3261AFB695B3E6B94C6C231222927B"
+  paths:
+  - pathId: "path1"
+    testPathName: "fromBase581WhenParamsIsNull"
+    modelFingerprint: "3AB5B2526BD51D85445C63BE7B5A9932"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "params"
+      modelFingerprint: "C2A0CAAFDE1A1BBBB45644B91D3EFF5B"
+      index: 1
+      valueUuid: "fromBase58_networkParameters1"
+    - type: "INPUT"
+      name: "base58"
+      modelFingerprint: "24E5428CF33AB042F66CEED9FCCA9E35"
+      index: 2
+      valueUuid: "fromBase58_string1"
+    - type: "STATIC"
+      name: "DumpedPrivateKey"
+      modelFingerprint: "22E662603D56919D5181BEDA792826CA"
+      index: 3
+      valueUuid: "uuid20"
+      methodExercised:
+        target: "org.bitcoinj.crypto.DumpedPrivateKey"
+        name: "fromBase58"
+        parameters:
+        - name: "network"
+          valueUuid: "uuid19"
+        - name: "base58"
+          valueUuid: "fromBase58_string1"
+        signature: "fromBase58(Network,String): DumpedPrivateKey"
+        returnValueUuid: "fromBase58_dumpedPrivateKey1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "ABEAB47BE2801DA0AE80675577C1B43A"
+      index: 4
+      valueUuid: "fromBase58_dumpedPrivateKey1"
+    uuid: "7db4cc0f-2240-39ef-8ec1-ef3bf4e46c71"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "NULL"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "fromBase58_networkParameters1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "base58"
+      valueType: "java.lang.String"
+      uuid: "fromBase58_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.DumpedPrivateKey"
+      uuid: "uuid20"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.DumpedPrivateKey"
+      uuid: "fromBase58_dumpedPrivateKey1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "NULL"
+      valueType: "org.bitcoinj.base.Network"
+      uuid: "uuid19"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "base58"
+      valueType: "java.lang.String"
+      uuid: "fromBase58_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.DumpedPrivateKey"
+      uuid: "fromBase58_dumpedPrivateKey1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "fromBase581WhenParamsIsNotNull"
+    modelFingerprint: "00C6799339285E87FA9F123878E3B2E3"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "params"
+      modelFingerprint: "00E8B0A409051C389A8EA4BD13728A98"
+      index: 1
+      valueUuid: "fromBase58_networkParameters1"
+    - type: "INPUT"
+      name: "base58"
+      modelFingerprint: "24E5428CF33AB042F66CEED9FCCA9E35"
+      index: 2
+      valueUuid: "fromBase58_string1"
+    - type: "LOCAL_VARIABLE"
+      name: "params"
+      modelFingerprint: "D3F477F2203E38AED3675605B36AEDBC"
+      index: 3
+      valueUuid: "fromBase58_networkParameters1"
+      methodExercised:
+        target: "params"
+        name: "network"
+        parameters: []
+        signature: "network(): Network"
+        returnValueUuid: "fromBase58_network1"
+        access: 1
+    - type: "STATIC"
+      name: "DumpedPrivateKey"
+      modelFingerprint: "B683FCF1DC095D1102757D39C4BD4ECB"
+      index: 4
+      valueUuid: "uuid21"
+      methodExercised:
+        target: "org.bitcoinj.crypto.DumpedPrivateKey"
+        name: "fromBase58"
+        parameters:
+        - name: "network"
+          valueUuid: "fromBase58_network1"
+        - name: "base58"
+          valueUuid: "fromBase58_string1"
+        signature: "fromBase58(Network,String): DumpedPrivateKey"
+        returnValueUuid: "fromBase58_dumpedPrivateKey1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "ABEAB47BE2801DA0AE80675577C1B43A"
+      index: 5
+      valueUuid: "fromBase58_dumpedPrivateKey1"
+    uuid: "f6c172d6-f6c4-3102-9bf3-d914858795c8"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "fromBase58_networkParameters1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "base58"
+      valueType: "java.lang.String"
+      uuid: "fromBase58_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "fromBase58_networkParameters1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Network"
+      uuid: "fromBase58_network1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.DumpedPrivateKey"
+      uuid: "uuid21"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.DumpedPrivateKey"
+      uuid: "fromBase58_dumpedPrivateKey1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Network"
+      uuid: "fromBase58_network1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "base58"
+      valueType: "java.lang.String"
+      uuid: "fromBase58_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.DumpedPrivateKey"
+      uuid: "fromBase58_dumpedPrivateKey1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "toBase58"
+    signature: "toBase58() : java.lang.String"
+    sourceCodeSignature: "String toBase58()"
+    instructionFingerprint: "CD255CAF346FB401F592488D77C72E6A"
+  paths:
+  - pathId: "path1"
+    testPathName: "toBase58Test"
+    constructorSignature: "<init>(org.bitcoinj.base.Network,byte[],boolean) : void"
+    modelFingerprint: "546895C941E7730985F8FC2B9654F2B1"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "6117D0D57EDA35EB14096D07325F3CD1"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EE07D40EFD4ADC96C83D317FAE9481C2"
+      index: 2
+      valueUuid: "uuid3"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid1"
+        - name: "messageSupplier"
+          valueUuid: "uuid2"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "encode_void1"
+        access: 9
+    - type: "STATIC"
+      name: "NetworkParameters"
+      modelFingerprint: "E4642B721DA2D6C423A8A59B1B367A2C"
+      index: 3
+      valueUuid: "uuid4"
+      methodExercised:
+        target: "org.bitcoinj.core.NetworkParameters"
+        name: "of"
+        parameters:
+        - name: "network"
+          valueUuid: "<init>_network2"
+        signature: "of(Network): NetworkParameters"
+        returnValueUuid: "toBase58_networkParameters1"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      name: "params"
+      modelFingerprint: "6EF633B558215F006ACB2DAE1042828F"
+      index: 4
+      valueUuid: "toBase58_networkParameters1"
+      methodExercised:
+        target: "params"
+        name: "getDumpedPrivateKeyHeader"
+        parameters: []
+        signature: "getDumpedPrivateKeyHeader(): int"
+        returnValueUuid: "toBase58_int1"
+        access: 1
+    - type: "STATIC"
+      name: "Base58"
+      modelFingerprint: "5AE79FB307FA09FA5A1839DDBAB50F6D"
+      index: 5
+      valueUuid: "uuid5"
+      methodExercised:
+        target: "org.bitcoinj.base.Base58"
+        name: "encodeChecked"
+        parameters:
+        - name: "version"
+          valueUuid: "toBase58_int1"
+        - name: "payload"
+          valueUuid: "<init>_byte[]2"
+        signature: "encodeChecked(int,byte[]): String"
+        returnValueUuid: "toBase58_string1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "4394A60A74953BB0AC2DFF07BF40656C"
+      index: 6
+      valueUuid: "toBase58_string1"
+    uuid: "46194f1b-99a4-3203-97b3-9dfd7f9bcf1d"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.DumpedPrivateKey"
+        parameters:
+        - name: "network"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Network"
+            uuid: "<init>_network1"
+            fixed: false
+            nameForMock: "mainnet"
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "keyBytes"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 1
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 2
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                2:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                3:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 4
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                4:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 5
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                5:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 6
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                6:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 7
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                7:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 8
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                8:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 9
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                9:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 10
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                10:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 11
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                11:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 12
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                12:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 13
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                13:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 14
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                14:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 15
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                15:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 16
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                16:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 17
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                17:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 18
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                18:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 19
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                19:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 20
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                20:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 21
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                21:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 22
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                22:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 23
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                23:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 24
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                24:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 25
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                25:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 26
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                26:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 27
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                27:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 28
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                28:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 29
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                29:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 30
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                30:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 31
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                31:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 32
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "compressed"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            uuid: "<init>_boolean1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.DumpedPrivateKey"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "encode_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "uuid4"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "toBase58_networkParameters1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.util.Objects"
+        method: "requireNonNull"
+        methodParameters:
+        - value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Network"
+            uuid: "<init>_network1"
+            fixed: false
+            nameForMock: "mainnet"
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.Network"
+      uuid: "<init>_network2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "toBase58_networkParameters1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "toBase58_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Base58"
+      uuid: "uuid5"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "return_of_encodeChecked1"
+      valueType: "java.lang.String"
+      uuid: "toBase58_string1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "toBase58_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item0"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          1:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 2
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          2:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 3
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          3:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 4
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          4:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 5
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item4"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          5:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 6
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item5"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          6:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 7
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item6"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          7:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 8
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item7"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          8:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 9
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item8"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          9:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 10
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item9"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          10:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 11
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item10"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          11:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 12
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item11"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          12:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 13
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item12"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          13:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 14
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item13"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          14:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 15
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item14"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          15:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 16
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item15"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          16:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 17
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item16"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          17:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 18
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item17"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          18:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 19
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item18"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          19:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 20
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item19"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          20:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 21
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item20"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          21:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 22
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item21"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          22:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 23
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item22"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          23:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 24
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item23"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          24:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 25
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item24"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          25:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 26
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item25"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          26:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 27
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item26"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          27:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 28
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item27"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          28:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 29
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item28"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          29:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 30
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item29"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          30:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 31
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item30"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          31:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 32
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item31"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "<init>_byte[]2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "return_of_encodeChecked1"
+      valueType: "java.lang.String"
+      uuid: "toBase58_string1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "getKey"
+    signature: "getKey() : org.bitcoinj.crypto.ECKey"
+    sourceCodeSignature: "ECKey getKey()"
+    instructionFingerprint: "03F9F107BE900B76BEE16995738657E1"
+  paths:
+  - pathId: "path1"
+    testPathName: "getKeyTest"
+    constructorSignature: "<init>(org.bitcoinj.base.Network,byte[],boolean) : void"
+    modelFingerprint: "698F513A62F9C1A20A5CCB79758DA4E2"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "6117D0D57EDA35EB14096D07325F3CD1"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EE07D40EFD4ADC96C83D317FAE9481C2"
+      index: 2
+      valueUuid: "uuid3"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid1"
+        - name: "messageSupplier"
+          valueUuid: "uuid2"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "encode_void1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "B454CCC74F31A478C47FB8F0E6525840"
+      index: 3
+      methodExercised:
+        target: "target"
+        name: "isPubKeyCompressed"
+        parameters: []
+        signature: "isPubKeyCompressed(): boolean"
+        returnValueUuid: "getKey_boolean1"
+        access: 1
+    - type: "STATIC"
+      name: "ECKey"
+      modelFingerprint: "02478B6BE3B8D28DAF4BCFCD92212D3E"
+      index: 4
+      valueUuid: "uuid4"
+      methodExercised:
+        target: "org.bitcoinj.crypto.ECKey"
+        name: "fromPrivate"
+        parameters:
+        - name: "privKeyBytes"
+          valueUuid: "getKey_byte[]1"
+        - name: "compressed"
+          valueUuid: "getKey_boolean1"
+        signature: "fromPrivate(byte[],boolean): ECKey"
+        returnValueUuid: "getKey_eCKey1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "4057741E40216835FC3926A4D534D02D"
+      index: 5
+      valueUuid: "getKey_eCKey1"
+    uuid: "a377c75a-5e17-3222-adbe-6e7d38993c02"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.DumpedPrivateKey"
+        parameters:
+        - name: "network"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Network"
+            uuid: "<init>_network1"
+            fixed: false
+            nameForMock: "main"
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "keyBytes"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 1
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 2
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                2:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                3:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 4
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                4:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 5
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                5:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 6
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                6:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 7
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                7:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 8
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                8:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 9
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                9:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 10
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                10:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 11
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                11:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 12
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                12:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 13
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                13:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 14
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                14:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 15
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                15:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 16
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                16:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 17
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                17:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 18
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                18:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 19
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                19:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 20
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                20:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 21
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                21:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 22
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                22:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 23
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                23:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 24
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                24:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 25
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                25:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 26
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                26:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 27
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                27:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 28
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                28:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 29
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                29:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 30
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                30:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 31
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                31:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 32
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "compressed"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            uuid: "<init>_boolean1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.DumpedPrivateKey"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "encode_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "getKey_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "uuid4"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "getKey_eCKey1"
+      fixed: false
+      nameForMock: "ECKey"
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "byte"
+            uuid: "getKey_byte[]1-item0"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          1:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 2
+            valueType: "byte"
+            uuid: "getKey_byte[]1-item1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          2:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 3
+            valueType: "byte"
+            uuid: "getKey_byte[]1-item2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          3:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 4
+            valueType: "byte"
+            uuid: "getKey_byte[]1-item3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          4:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 5
+            valueType: "byte"
+            uuid: "getKey_byte[]1-item4"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          5:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 6
+            valueType: "byte"
+            uuid: "getKey_byte[]1-item5"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          6:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 7
+            valueType: "byte"
+            uuid: "getKey_byte[]1-item6"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          7:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 8
+            valueType: "byte"
+            uuid: "getKey_byte[]1-item7"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          8:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 9
+            valueType: "byte"
+            uuid: "getKey_byte[]1-item8"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          9:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 10
+            valueType: "byte"
+            uuid: "getKey_byte[]1-item9"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          10:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 11
+            valueType: "byte"
+            uuid: "getKey_byte[]1-item10"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          11:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 12
+            valueType: "byte"
+            uuid: "getKey_byte[]1-item11"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          12:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 13
+            valueType: "byte"
+            uuid: "getKey_byte[]1-item12"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          13:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 14
+            valueType: "byte"
+            uuid: "getKey_byte[]1-item13"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          14:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 15
+            valueType: "byte"
+            uuid: "getKey_byte[]1-item14"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          15:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 16
+            valueType: "byte"
+            uuid: "getKey_byte[]1-item15"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          16:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 17
+            valueType: "byte"
+            uuid: "getKey_byte[]1-item16"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          17:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 18
+            valueType: "byte"
+            uuid: "getKey_byte[]1-item17"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          18:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 19
+            valueType: "byte"
+            uuid: "getKey_byte[]1-item18"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          19:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 20
+            valueType: "byte"
+            uuid: "getKey_byte[]1-item19"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          20:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 21
+            valueType: "byte"
+            uuid: "getKey_byte[]1-item20"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          21:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 22
+            valueType: "byte"
+            uuid: "getKey_byte[]1-item21"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          22:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 23
+            valueType: "byte"
+            uuid: "getKey_byte[]1-item22"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          23:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 24
+            valueType: "byte"
+            uuid: "getKey_byte[]1-item23"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          24:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 25
+            valueType: "byte"
+            uuid: "getKey_byte[]1-item24"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          25:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 26
+            valueType: "byte"
+            uuid: "getKey_byte[]1-item25"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          26:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 27
+            valueType: "byte"
+            uuid: "getKey_byte[]1-item26"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          27:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 28
+            valueType: "byte"
+            uuid: "getKey_byte[]1-item27"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          28:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 29
+            valueType: "byte"
+            uuid: "getKey_byte[]1-item28"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          29:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 30
+            valueType: "byte"
+            uuid: "getKey_byte[]1-item29"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          30:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 31
+            valueType: "byte"
+            uuid: "getKey_byte[]1-item30"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          31:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 32
+            valueType: "byte"
+            uuid: "getKey_byte[]1-item31"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "getKey_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "getKey_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "getKey_eCKey1"
+      fixed: false
+      nameForMock: "ECKey"
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "isPubKeyCompressed"
+    signature: "isPubKeyCompressed() : boolean"
+    sourceCodeSignature: "boolean isPubKeyCompressed()"
+    instructionFingerprint: "BEF34E1BD1591D0B170C002C7BF038DD"
+  paths:
+  - pathId: "path1"
+    testPathName: "isPubKeyCompressedWhen32IndexOfBytesEquals1"
+    constructorSignature: "<init>(org.bitcoinj.base.Network,byte[],boolean) : void"
+    modelFingerprint: "056A9FC7D70940D8D0C4C272D852B19F"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "AECD2B65864FF87E07AFC6E73768D954"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EE07D40EFD4ADC96C83D317FAE9481C2"
+      index: 2
+      valueUuid: "uuid33"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid31"
+        - name: "messageSupplier"
+          valueUuid: "uuid32"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "encode_void2"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "753659628F1B3F179A2EF0629F555437"
+      index: 3
+      valueUuid: "uuid34"
+    uuid: "f6f91d22-38a0-3b18-941c-9fb0a5c7d7d7"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.DumpedPrivateKey"
+        parameters:
+        - name: "network"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Network"
+            uuid: "<init>_network1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "keyBytes"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "compressed"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            uuid: "<init>_boolean1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.DumpedPrivateKey"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid33"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "encode_void2"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid31"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid32"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid34"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "isPubKeyCompressedWhen32IndexOfBytesNotEquals1"
+    constructorSignature: "<init>(org.bitcoinj.base.Network,byte[],boolean) : void"
+    modelFingerprint: "59F844A731CFA1C3180247D4169FC68F"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "DCD77F2E2DD25231791FCF93471CAFF6"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
+      index: 2
+      valueUuid: "uuid4"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid1"
+        - name: "messageSupplier"
+          valueUuid: "uuid2"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "uuid3"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "3A21543F56248AC92654D6E439128AED"
+      index: 3
+      valueUuid: "uuid5"
+    uuid: "3eaafa4b-9675-3dcf-9ef0-5452df8e13df"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.DumpedPrivateKey"
+        parameters:
+        - name: "network"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Network"
+            uuid: "<init>_network1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "keyBytes"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "compressed"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            uuid: "<init>_boolean1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.DumpedPrivateKey"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid4"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.IllegalArgumentException"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.IllegalArgumentException"
+      uuid: "uuid3"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "uuid5"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "toString"
+    signature: "toString() : java.lang.String"
+    sourceCodeSignature: "String toString()"
+    instructionFingerprint: "3A36058C02EBE88BC70431728109ACF3"
+  paths:
+  - pathId: "path1"
+    testPathName: "toStringTest"
+    constructorSignature: "<init>(org.bitcoinj.base.Network,byte[],boolean) : void"
+    modelFingerprint: "7F32A9A12B06A05C4A2812D5C85BF339"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "AE6EE8327AF445B0CD079314B90E6185"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EE07D40EFD4ADC96C83D317FAE9481C2"
+      index: 2
+      valueUuid: "uuid3"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid1"
+        - name: "messageSupplier"
+          valueUuid: "uuid2"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "encode_void1"
+        access: 9
+    - type: "STATIC"
+      name: "NetworkParameters"
+      modelFingerprint: "E4642B721DA2D6C423A8A59B1B367A2C"
+      index: 3
+      valueUuid: "uuid4"
+      methodExercised:
+        target: "org.bitcoinj.core.NetworkParameters"
+        name: "of"
+        parameters:
+        - name: "network"
+          valueUuid: "<init>_network2"
+        signature: "of(Network): NetworkParameters"
+        returnValueUuid: "toBase58_networkParameters1"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      name: "params"
+      modelFingerprint: "6EF633B558215F006ACB2DAE1042828F"
+      index: 4
+      valueUuid: "toBase58_networkParameters1"
+      methodExercised:
+        target: "params"
+        name: "getDumpedPrivateKeyHeader"
+        parameters: []
+        signature: "getDumpedPrivateKeyHeader(): int"
+        returnValueUuid: "toBase58_int1"
+        access: 1
+    - type: "STATIC"
+      name: "Base58"
+      modelFingerprint: "E76715215828931E636A052AF7195982"
+      index: 5
+      valueUuid: "uuid5"
+      methodExercised:
+        target: "org.bitcoinj.base.Base58"
+        name: "encodeChecked"
+        parameters:
+        - name: "version"
+          valueUuid: "toBase58_int1"
+        - name: "payload"
+          valueUuid: "<init>_byte[]2"
+        signature: "encodeChecked(int,byte[]): String"
+        returnValueUuid: "toBase58_string1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "4394A60A74953BB0AC2DFF07BF40656C"
+      index: 6
+      valueUuid: "toBase58_string1"
+    uuid: "363d3698-f34c-39ad-914f-376a19498023"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.DumpedPrivateKey"
+        parameters:
+        - name: "network"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Network"
+            uuid: "<init>_network1"
+            fixed: false
+            nameForMock: "mainnet"
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "keyBytes"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 1
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 2
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                2:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 3
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                3:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 4
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                4:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 5
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                5:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 6
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                6:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 7
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                7:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 8
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                8:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 9
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                9:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 10
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                10:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 11
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                11:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 12
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                12:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 13
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                13:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 14
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                14:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 15
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                15:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 16
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                16:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 17
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                17:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 18
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                18:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 19
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                19:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 20
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                20:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 21
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                21:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 22
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                22:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 23
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                23:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 24
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                24:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 25
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                25:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 26
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                26:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 27
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                27:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 28
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                28:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 29
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                29:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 30
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                30:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 31
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                31:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 32
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "compressed"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: true
+            valueType: "boolean"
+            uuid: "<init>_boolean1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.DumpedPrivateKey"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "encode_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "uuid4"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "toBase58_networkParameters1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.util.Objects"
+        method: "requireNonNull"
+        methodParameters:
+        - value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Network"
+            uuid: "<init>_network1"
+            fixed: false
+            nameForMock: "mainnet"
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.Network"
+      uuid: "<init>_network2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "toBase58_networkParameters1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "toBase58_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Base58"
+      uuid: "uuid5"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "return_of_encodeChecked1"
+      valueType: "java.lang.String"
+      uuid: "toBase58_string1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "toBase58_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item0"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          1:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 2
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          2:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 3
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          3:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 4
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          4:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 5
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item4"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          5:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 6
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item5"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          6:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 7
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item6"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          7:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 8
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item7"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          8:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 9
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item8"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          9:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 10
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item9"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          10:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 11
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item10"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          11:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 12
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item11"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          12:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 13
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item12"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          13:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 14
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item13"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          14:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 15
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item14"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          15:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 16
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item15"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          16:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 17
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item16"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          17:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 18
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item17"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          18:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 19
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item18"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          19:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 20
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item19"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          20:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 21
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item20"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          21:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 22
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item21"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          22:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 23
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item22"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          23:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 24
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item23"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          24:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 25
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item24"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          25:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 26
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item25"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          26:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 27
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item26"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          27:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 28
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item27"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          28:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 29
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item28"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          29:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 30
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item29"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          30:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 31
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item30"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          31:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 32
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item31"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          32:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "byte"
+            uuid: "<init>_byte[]2-item32"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "<init>_byte[]2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "return_of_encodeChecked1"
+      valueType: "java.lang.String"
+      uuid: "toBase58_string1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false

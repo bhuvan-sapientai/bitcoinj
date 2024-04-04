@@ -1,0 +1,862 @@
+---
+modelFingerprint: "73E0701556F78DDEF953A8233A0451B5"
+methods:
+- method:
+    name: "read"
+    signature: "read(java.nio.ByteBuffer) : org.bitcoinj.core.AddressV2Message"
+    sourceCodeSignature: "AddressV2Message read(ByteBuffer payload)"
+    instructionFingerprint: "1FC7BF1FDEBF657D374F88BC25EE16EB"
+  paths:
+  - pathId: "path1"
+    testPathName: "readTest"
+    modelFingerprint: "7331572FBADD83F6538445944202811C"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "payload"
+      modelFingerprint: "D30B43598E2900E2880BDD9712DAE751"
+      index: 1
+      valueUuid: "read_byteBuffer1"
+    - type: "STATIC"
+      name: "AddressMessage"
+      modelFingerprint: "C2C23C2E43C42BFA83EF47F322D00BF0"
+      index: 2
+      valueUuid: "uuid2"
+      methodExercised:
+        target: "org.bitcoinj.core.AddressMessage"
+        name: "readAddresses"
+        parameters:
+        - name: "i"
+          valueUuid: "read_byteBuffer1"
+        - name: "payload"
+          valueUuid: "uuid1"
+        throwsExceptions:
+        - "java.nio.BufferUnderflowException"
+        - "org.bitcoinj.core.ProtocolException"
+        signature: "readAddresses(ByteBuffer,int): List throws java.nio.BufferUnderflowException,org.bitcoinj.core.ProtocolException"
+        returnValueUuid: "read_list1"
+        access: 12
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "5D8195613ACDDD87984C5D83BDA22D83"
+      index: 3
+      valueUuid: "read_addressV2Message1"
+    uuid: "db344e3b-696d-3b02-8e35-1aaa5300bde6"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "read_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.AddressMessage"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        parameters: []
+        values: []
+      valueType: "java.util.List"
+      genericValueType: "org.bitcoinj.core.PeerAddress"
+      uuid: "read_list1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "read_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 2
+      valueType: "int"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.AddressV2Message"
+        parameters:
+        - name: "addresses"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              parameters: []
+              values: []
+            valueType: "java.util.List"
+            genericValueType: "org.bitcoinj.core.PeerAddress"
+            uuid: "read_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: true
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.core.AddressV2Message"
+      uuid: "read_addressV2Message1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "addAddress"
+    signature: "addAddress(org.bitcoinj.core.PeerAddress) : void"
+    sourceCodeSignature: "void addAddress(PeerAddress address)"
+    instructionFingerprint: "DBC79961865E93A51F3F8EFAE8BD078A"
+  paths:
+  - pathId: "path1"
+    testPathName: "addAddressTest"
+    constructorSignature: "read(java.nio.ByteBuffer) : org.bitcoinj.core.AddressV2Message"
+    modelFingerprint: "897D8C4E02BE46BD0267987042ED29B0"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "9ABE7F04EB78BFC04115C3F331ED28FA"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "address"
+      modelFingerprint: "9976514D3804C50346CCDD3222444811"
+      index: 2
+      valueUuid: "addAddress_peerAddress1"
+    - type: "STATIC"
+      name: "AddressMessage"
+      modelFingerprint: "56BA29C722DDFE8724306F9670FC5498"
+      index: 3
+      valueUuid: "uuid4"
+      methodExercised:
+        target: "org.bitcoinj.core.AddressMessage"
+        name: "readAddresses"
+        parameters:
+        - name: "i"
+          valueUuid: "read_byteBuffer1"
+        - name: "payload"
+          valueUuid: "uuid3"
+        throwsExceptions:
+        - "java.nio.BufferUnderflowException"
+        - "org.bitcoinj.core.ProtocolException"
+        signature: "readAddresses(ByteBuffer,int): List throws java.nio.BufferUnderflowException,org.bitcoinj.core.ProtocolException"
+        returnValueUuid: "read_list1"
+        access: 12
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 4
+      valueUuid: "uuid5"
+    uuid: "5b004286-994d-3a7c-8b07-af8074a341ed"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.core.AddressV2Message"
+        method: "read"
+        methodParameters:
+        - name: "payload"
+          value:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "java.nio.ByteBuffer"
+              method: "allocateDirect"
+              methodParameters:
+              - name: "capacity"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 64
+                  valueType: "int"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "java.nio.ByteBuffer"
+            uuid: "read_byteBuffer1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.core.AddressV2Message"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.PeerAddress"
+      uuid: "addAddress_peerAddress1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.AddressMessage"
+      uuid: "uuid4"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        collectionClass: "java.util.ArrayList"
+        parameters: []
+        values:
+        - sapientType: "MOCK"
+          valueType: "org.bitcoinj.core.PeerAddress"
+          uuid: "addAddress_peerAddress1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+      valueType: "java.util.List"
+      genericValueType: "org.bitcoinj.core.PeerAddress"
+      uuid: "read_list1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "read_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 2
+      valueType: "int"
+      uuid: "uuid3"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      uuid: "uuid5"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "bitcoinSerializeToStream"
+    signature: "bitcoinSerializeToStream(java.io.OutputStream) : void"
+    sourceCodeSignature: "void bitcoinSerializeToStream(OutputStream stream)"
+    instructionFingerprint: "64FD5C41E0D4C5E7F07B5B6C5A713CDA"
+  paths:
+  - pathId: "path1"
+    testPathName: "bitcoinSerializeToStreamWhenAddressesIsNull"
+    constructorSignature: "read(java.nio.ByteBuffer) : org.bitcoinj.core.AddressV2Message"
+    modelFingerprint: "A42370B08851A1084E72ED2C7A52CEE8"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "9ABE7F04EB78BFC04115C3F331ED28FA"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "stream"
+      modelFingerprint: "62A0F6327B9BDABF5EA7E91E5D90569E"
+      index: 2
+      valueUuid: "bitcoinSerializeToStream_outputStream1"
+    - type: "STATIC"
+      name: "AddressMessage"
+      modelFingerprint: "74E6D6F2DEE245DB4861D9A2B68515EB"
+      index: 3
+      valueUuid: "uuid7"
+      methodExercised:
+        target: "org.bitcoinj.core.AddressMessage"
+        name: "readAddresses"
+        parameters:
+        - name: "i"
+          valueUuid: "read_byteBuffer1"
+        - name: "payload"
+          valueUuid: "uuid6"
+        throwsExceptions:
+        - "java.nio.BufferUnderflowException"
+        - "org.bitcoinj.core.ProtocolException"
+        signature: "readAddresses(ByteBuffer,int): List throws java.nio.BufferUnderflowException,org.bitcoinj.core.ProtocolException"
+        returnValueUuid: "read_list1"
+        access: 12
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 4
+      valueUuid: "uuid8"
+    uuid: "d1825f21-e53f-3657-9fc6-3e103d22dcf4"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.core.AddressV2Message"
+        method: "read"
+        methodParameters:
+        - name: "payload"
+          value:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "java.nio.ByteBuffer"
+              method: "allocateDirect"
+              methodParameters:
+              - name: "capacity"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 64
+                  valueType: "int"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "java.nio.ByteBuffer"
+            uuid: "read_byteBuffer1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.core.AddressV2Message"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.io.ByteArrayOutputStream"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.io.OutputStream"
+      uuid: "bitcoinSerializeToStream_outputStream1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.AddressMessage"
+      uuid: "uuid7"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "NULL"
+      valueType: "java.util.List"
+      genericValueType: "org.bitcoinj.core.PeerAddress"
+      uuid: "read_list1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "read_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 2
+      valueType: "int"
+      uuid: "uuid6"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      uuid: "uuid8"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "bitcoinSerializeToStreamWhenAddressesIsNotEmpty"
+    constructorSignature: "read(java.nio.ByteBuffer) : org.bitcoinj.core.AddressV2Message"
+    modelFingerprint: "4DE027776FA77D64F7A95F536B10CF6F"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "069D764C584F07CEBB8BE3FF8313E55F"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "stream"
+      modelFingerprint: "29A897032AF431B5497C8E1DF49E25FC"
+      index: 2
+      valueUuid: "bitcoinSerializeToStream_outputStream1"
+    - type: "STATIC"
+      name: "AddressMessage"
+      modelFingerprint: "8DB3F4A91CC45023130D40454EA5F8B5"
+      index: 3
+      valueUuid: "uuid2"
+      methodExercised:
+        target: "org.bitcoinj.core.AddressMessage"
+        name: "readAddresses"
+        parameters:
+        - name: "i"
+          valueUuid: "read_byteBuffer1"
+        - name: "payload"
+          valueUuid: "uuid1"
+        throwsExceptions:
+        - "java.nio.BufferUnderflowException"
+        - "org.bitcoinj.core.ProtocolException"
+        signature: "readAddresses(ByteBuffer,int): List throws java.nio.BufferUnderflowException,org.bitcoinj.core.ProtocolException"
+        returnValueUuid: "read_list1"
+        access: 12
+    - type: "STATIC"
+      name: "VarInt"
+      modelFingerprint: "54C3A14A93FEB21BA9565DD4804E4A11"
+      index: 4
+      valueUuid: "uuid3"
+      methodExercised:
+        target: "org.bitcoinj.base.VarInt"
+        name: "of"
+        parameters:
+        - name: "value"
+          valueUuid: "bitcoinSerializeToStream_long1"
+        signature: "of(long): VarInt"
+        returnValueUuid: "bitcoinSerializeToStream_varInt1"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "CC85204A567BE17A1D1BFFD5A0DE208E"
+      index: 5
+      valueUuid: "bitcoinSerializeToStream_varInt1"
+      methodExercised:
+        target: "org.bitcoinj.base.VarInt"
+        name: "serialize"
+        parameters: []
+        signature: "serialize(): byte[]"
+        returnValueUuid: "bitcoinSerializeToStream_byte[]1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      name: "addr"
+      modelFingerprint: "C2171F6F6451CB403DE56FFACB9451E2"
+      index: 6
+      valueUuid: "bitcoinSerializeToStream_object1"
+      methodExercised:
+        target: "addr"
+        name: "serialize"
+        parameters:
+        - name: "protocolVariant"
+          valueUuid: "uuid4"
+        signature: "serialize(int): byte[]"
+        returnValueUuid: "bitcoinSerializeToStream_byte[]2"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 7
+      valueUuid: "uuid5"
+    uuid: "cbfc6dcd-0ed6-3348-ac4d-e41641a475c8"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.core.AddressV2Message"
+        method: "read"
+        methodParameters:
+        - name: "payload"
+          value:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "java.nio.ByteBuffer"
+              method: "allocateDirect"
+              methodParameters:
+              - name: "capacity"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 64
+                  valueType: "int"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "java.nio.ByteBuffer"
+            uuid: "read_byteBuffer1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.core.AddressV2Message"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.io.ByteArrayOutputStream"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.io.OutputStream"
+      uuid: "bitcoinSerializeToStream_outputStream1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.AddressMessage"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        collectionClass: "java.util.ArrayList"
+        parameters: []
+        values:
+        - sapientType: "MOCK"
+          valueType: "org.bitcoinj.core.PeerAddress"
+          uuid: "bitcoinSerializeToStream_object1"
+          fixed: false
+          collectionUuid: "read_list1"
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+      valueType: "java.util.List"
+      genericValueType: "org.bitcoinj.core.PeerAddress"
+      uuid: "read_list1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "read_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 2
+      valueType: "int"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.VarInt"
+      uuid: "uuid3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.VarInt"
+      uuid: "bitcoinSerializeToStream_varInt1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 1
+      valueType: "long"
+      originalValueType: "int"
+      uuid: "bitcoinSerializeToStream_long1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.VarInt"
+      uuid: "bitcoinSerializeToStream_varInt1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "bitcoinSerializeToStream_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.PeerAddress"
+      uuid: "bitcoinSerializeToStream_object1"
+      fixed: false
+      collectionUuid: "read_list1"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "bitcoinSerializeToStream_byte[]2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 2
+      valueType: "int"
+      uuid: "uuid4"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      uuid: "uuid5"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+  - pathId: "path3"
+    testPathName: "bitcoinSerializeToStreamWhenAddressesIsEmpty"
+    constructorSignature: "read(java.nio.ByteBuffer) : org.bitcoinj.core.AddressV2Message"
+    modelFingerprint: "DD7C14F0872ADC4908A7093F66D42AF2"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "35afdd86-5f5e-308a-90c4-f21907ff06dd"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.io.OutputStream.write(byte[]) : void"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "toString"
+    signature: "toString() : java.lang.String"
+    sourceCodeSignature: "String toString()"
+    instructionFingerprint: "544F8FD3B904A1FBF13813BE5C757BBD"
+  paths:
+  - pathId: "path1"
+    testPathName: "toStringTest"
+    constructorSignature: "read(java.nio.ByteBuffer) : org.bitcoinj.core.AddressV2Message"
+    modelFingerprint: "27E93DDC45B175CD585167BAF0F6FD68"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "9ABE7F04EB78BFC04115C3F331ED28FA"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "AddressMessage"
+      modelFingerprint: "C2C23C2E43C42BFA83EF47F322D00BF0"
+      index: 2
+      valueUuid: "uuid19"
+      methodExercised:
+        target: "org.bitcoinj.core.AddressMessage"
+        name: "readAddresses"
+        parameters:
+        - name: "i"
+          valueUuid: "read_byteBuffer1"
+        - name: "payload"
+          valueUuid: "uuid18"
+        throwsExceptions:
+        - "java.nio.BufferUnderflowException"
+        - "org.bitcoinj.core.ProtocolException"
+        signature: "readAddresses(ByteBuffer,int): List throws java.nio.BufferUnderflowException,org.bitcoinj.core.ProtocolException"
+        returnValueUuid: "read_list1"
+        access: 12
+    - type: "LOCAL_VARIABLE"
+      name: "SPACE_JOINER"
+      modelFingerprint: "CF2793A7EB25BC52736A5A0561939B14"
+      index: 3
+      valueUuid: "toString_internalUtils.Joiner1"
+      methodExercised:
+        target: "other.SPACE_JOINER"
+        name: "join"
+        parameters:
+        - name: "arg0"
+          valueUuid: "read_list1"
+        signature: "join(List): String"
+        returnValueUuid: "toString_string1"
+        access: 1025
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "F5790789A141F13DAE3D0887780FB679"
+      index: 4
+      valueUuid: "toString_string2"
+    uuid: "363d3698-f34c-39ad-914f-376a19498023"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    variablesCouldNotBeIsolated: "SPACE_JOINER"
+    failureReason:
+      reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
+      source: "return \\\"addrv2: \\\" + InternalUtils.SPACE_JOINER.join(addresses);"
+      lineNumber: 69
+      details: "A variable could not be isolated or mocked when calling a method -\
+        \ Variable name: SPACE_JOINER - Method: join"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.core.AddressV2Message"
+        method: "read"
+        methodParameters:
+        - name: "payload"
+          value:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "java.nio.ByteBuffer"
+              method: "allocateDirect"
+              methodParameters:
+              - name: "capacity"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 64
+                  valueType: "int"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "java.nio.ByteBuffer"
+            uuid: "read_byteBuffer1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.core.AddressV2Message"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.AddressMessage"
+      uuid: "uuid19"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        parameters: []
+        values: []
+      valueType: "java.util.List"
+      genericValueType: "org.bitcoinj.core.PeerAddress"
+      uuid: "read_list1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "read_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 2
+      valueType: "int"
+      uuid: "uuid18"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_field_return>
+        target: "org.bitcoinj.base.internal.InternalUtils"
+        fieldName: "SPACE_JOINER"
+      valueType: "org.bitcoinj.base.internal.InternalUtils$Joiner"
+      uuid: "toString_internalUtils.Joiner1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "A"
+      valueType: "java.lang.String"
+      uuid: "toString_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        parameters: []
+        values: []
+      valueType: "java.util.List"
+      genericValueType: "org.bitcoinj.core.PeerAddress"
+      uuid: "read_list1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "addrv2: A"
+      valueType: "java.lang.String"
+      uuid: "toString_string2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false

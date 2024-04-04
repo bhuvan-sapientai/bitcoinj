@@ -1,0 +1,855 @@
+---
+modelFingerprint: "167722DF6907F11029F23D6C213FC28F"
+methods:
+- method:
+    name: "read"
+    signature: "read(java.nio.ByteBuffer) : org.bitcoinj.core.GetHeadersMessage"
+    sourceCodeSignature: "GetHeadersMessage read(ByteBuffer payload)"
+    instructionFingerprint: "E5DACDA2A2ADC0EE395D8109975AB4E9"
+  paths:
+  - pathId: "path1"
+    testPathName: "read1WhenStartCountGreaterThan500ThrowsProtocolException"
+    modelFingerprint: "0F1C0628FD12FB898AB1A5BCF8502E45"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "payload"
+      modelFingerprint: "D30B43598E2900E2880BDD9712DAE751"
+      index: 1
+      valueUuid: "read_byteBuffer1"
+    - type: "STATIC"
+      name: "ByteUtils"
+      modelFingerprint: "3BB706928262EB63C8175FAA631197B9"
+      index: 2
+      valueUuid: "uuid1"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.ByteUtils"
+        name: "readUint32"
+        parameters:
+        - name: "buf"
+          valueUuid: "read_byteBuffer1"
+        throwsExceptions:
+        - "java.nio.BufferUnderflowException"
+        signature: "readUint32(ByteBuffer): long throws java.nio.BufferUnderflowException"
+        returnValueUuid: "read_long1"
+        access: 9
+    - type: "STATIC"
+      name: "VarInt"
+      modelFingerprint: "5E92D544C5565BF042F406F470017DD5"
+      index: 3
+      valueUuid: "uuid2"
+      methodExercised:
+        target: "org.bitcoinj.base.VarInt"
+        name: "read"
+        parameters:
+        - name: "value"
+          valueUuid: "read_byteBuffer1"
+        throwsExceptions:
+        - "java.nio.BufferUnderflowException"
+        signature: "read(ByteBuffer): VarInt throws java.nio.BufferUnderflowException"
+        returnValueUuid: "read_varInt1"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      name: "startCountVarInt"
+      modelFingerprint: "B43C3ADB283FA5163913ABBABB5EC75C"
+      index: 4
+      valueUuid: "read_varInt1"
+      methodExercised:
+        target: "startCountVarInt"
+        name: "fitsInt"
+        parameters: []
+        signature: "fitsInt(): boolean"
+        returnValueUuid: "read_boolean1"
+        access: 1
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "3D0E364D028507E0FB885F547F95618C"
+      index: 5
+      valueUuid: "uuid4"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "check"
+        parameters:
+        - name: "expression"
+          valueUuid: "read_boolean1"
+        - name: "exceptionSupplier"
+          valueUuid: "uuid3"
+        throwsExceptions:
+        - "java.lang.Throwable"
+        signature: "check(boolean,Supplier): void throws java.lang.Throwable"
+        returnValueUuid: "read_void1"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      name: "startCountVarInt"
+      modelFingerprint: "B9613399F5875212F3CCA307CA3A940F"
+      index: 6
+      valueUuid: "read_varInt1"
+      methodExercised:
+        target: "startCountVarInt"
+        name: "intValue"
+        parameters: []
+        throwsExceptions:
+        - "java.lang.ArithmeticException"
+        signature: "intValue(): int throws java.lang.ArithmeticException"
+        returnValueUuid: "read_int1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "256EA9AD6A25206EE3FAA4A18E7C2475"
+      index: 7
+      valueUuid: "read_protocolException1"
+    uuid: "86e0d287-5510-3b35-b2bc-a4afd75ec5c7"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "read_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.ByteUtils"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "long"
+      uuid: "read_long1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "read_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.VarInt"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.VarInt"
+      uuid: "read_varInt1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "read_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.VarInt"
+      uuid: "read_varInt1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "read_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid4"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "read_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "read_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      uuid: "uuid3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.VarInt"
+      uuid: "read_varInt1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 2008
+      valueType: "int"
+      uuid: "read_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "org.bitcoinj.core.ProtocolException"
+        parameters:
+        - name: "msg"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "Number of locators cannot be > 500, received: 2008"
+            valueType: "java.lang.String"
+            uuid: "read_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.core.ProtocolException"
+      uuid: "read_protocolException1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "read1WhenILessThanStartCount"
+    modelFingerprint: "D9EF1D707375E4B467B8CA3CFF7486A8"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "payload"
+      modelFingerprint: "D30B43598E2900E2880BDD9712DAE751"
+      index: 1
+      valueUuid: "read_byteBuffer1"
+    - type: "STATIC"
+      name: "ByteUtils"
+      modelFingerprint: "3BB706928262EB63C8175FAA631197B9"
+      index: 2
+      valueUuid: "uuid5"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.ByteUtils"
+        name: "readUint32"
+        parameters:
+        - name: "buf"
+          valueUuid: "read_byteBuffer1"
+        throwsExceptions:
+        - "java.nio.BufferUnderflowException"
+        signature: "readUint32(ByteBuffer): long throws java.nio.BufferUnderflowException"
+        returnValueUuid: "read_long1"
+        access: 9
+    - type: "STATIC"
+      name: "VarInt"
+      modelFingerprint: "5E92D544C5565BF042F406F470017DD5"
+      index: 3
+      valueUuid: "uuid6"
+      methodExercised:
+        target: "org.bitcoinj.base.VarInt"
+        name: "read"
+        parameters:
+        - name: "value"
+          valueUuid: "read_byteBuffer1"
+        throwsExceptions:
+        - "java.nio.BufferUnderflowException"
+        signature: "read(ByteBuffer): VarInt throws java.nio.BufferUnderflowException"
+        returnValueUuid: "read_varInt1"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      name: "startCountVarInt"
+      modelFingerprint: "B43C3ADB283FA5163913ABBABB5EC75C"
+      index: 4
+      valueUuid: "read_varInt1"
+      methodExercised:
+        target: "startCountVarInt"
+        name: "fitsInt"
+        parameters: []
+        signature: "fitsInt(): boolean"
+        returnValueUuid: "read_boolean1"
+        access: 1
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "3D0E364D028507E0FB885F547F95618C"
+      index: 5
+      valueUuid: "uuid8"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "check"
+        parameters:
+        - name: "expression"
+          valueUuid: "read_boolean1"
+        - name: "exceptionSupplier"
+          valueUuid: "uuid7"
+        throwsExceptions:
+        - "java.lang.Throwable"
+        signature: "check(boolean,Supplier): void throws java.lang.Throwable"
+        returnValueUuid: "read_void1"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      name: "startCountVarInt"
+      modelFingerprint: "E18E8389FB67DC1989D76FFF7E8C92E6"
+      index: 6
+      valueUuid: "read_varInt1"
+      methodExercised:
+        target: "startCountVarInt"
+        name: "intValue"
+        parameters: []
+        throwsExceptions:
+        - "java.lang.ArithmeticException"
+        signature: "intValue(): int throws java.lang.ArithmeticException"
+        returnValueUuid: "read_int1"
+        access: 1
+    - type: "STATIC"
+      name: "Sha256Hash"
+      modelFingerprint: "76F0EAC04B681A4E46775234C19CBF42"
+      index: 7
+      valueUuid: "uuid9"
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "read"
+        parameters:
+        - name: "buf"
+          valueUuid: "read_byteBuffer1"
+        throwsExceptions:
+        - "java.nio.BufferUnderflowException"
+        signature: "read(ByteBuffer): Sha256Hash throws java.nio.BufferUnderflowException"
+        returnValueUuid: "read_sha256Hash1"
+        access: 9
+    - type: "STATIC"
+      name: "Sha256Hash"
+      modelFingerprint: "76F0EAC04B681A4E46775234C19CBF42"
+      index: 8
+      valueUuid: "uuid10"
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "read"
+        parameters:
+        - name: "buf"
+          valueUuid: "read_byteBuffer1"
+        throwsExceptions:
+        - "java.nio.BufferUnderflowException"
+        signature: "read(ByteBuffer): Sha256Hash throws java.nio.BufferUnderflowException"
+        returnValueUuid: "read_sha256Hash2"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "711FACDC4FA03CC6CD019B084CEFDCA3"
+      index: 9
+      valueUuid: "read_getHeadersMessage1"
+    uuid: "d661fd02-25e3-3539-a62f-d00e938c58b4"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "ERROR_RECALCULATING_SUGGESTED_VALUES"
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "read_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.ByteUtils"
+      uuid: "uuid5"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "long"
+      uuid: "read_long1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "read_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.VarInt"
+      uuid: "uuid6"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.VarInt"
+      uuid: "read_varInt1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "read_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.VarInt"
+      uuid: "read_varInt1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "read_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid8"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "read_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "read_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      uuid: "uuid7"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.VarInt"
+      uuid: "read_varInt1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 1
+      valueType: "int"
+      uuid: "read_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "uuid9"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "read_sha256Hash1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "read_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "uuid10"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "read_sha256Hash2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "read_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.GetHeadersMessage"
+        parameters:
+        - name: "protocolVersion"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "read_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "locator"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "org.bitcoinj.core.BlockLocator"
+              parameters:
+              - name: "hashes"
+                value:
+                  sapientType: "COLLECTION"
+                  content: !<collection>
+                    collectionClass: "java.util.ArrayList"
+                    parameters: []
+                    values:
+                    - sapientType: "MOCK"
+                      valueType: "org.bitcoinj.base.Sha256Hash"
+                      uuid: "read_sha256Hash1"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                  valueType: "java.util.List"
+                  genericValueType: "org.bitcoinj.base.Sha256Hash"
+                  uuid: "read_arrayList1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: true
+            valueType: "org.bitcoinj.core.BlockLocator"
+            uuid: "read_blockLocator1"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "stopHash"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Sha256Hash"
+            uuid: "read_sha256Hash2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.core.GetHeadersMessage"
+      uuid: "read_getHeadersMessage1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path3"
+    testPathName: "read1WhenINotLessThanStartCount"
+    modelFingerprint: "342016D664220FCD0E90BA0451F70F05"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "88d24c25-844d-3e28-b514-17eebe9b2ad3"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "toString"
+    signature: "toString() : java.lang.String"
+    sourceCodeSignature: "String toString()"
+    instructionFingerprint: "14983F0D72BE5E6A4FFD28CA77C87048"
+  paths:
+  - pathId: "path1"
+    testPathName: "toStringTest"
+    constructorSignature: "<init>(long,org.bitcoinj.core.BlockLocator,org.bitcoinj.base.Sha256Hash)\
+      \ : void"
+    modelFingerprint: "77D92B775607CA266877DBC2D5BFC4FE"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "C700201F1C9B9D8DB6ACDCEA295CC0BC"
+      index: 1
+      valueUuid: "target"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "F66A6F294CAE9A822C6464F745636C08"
+      index: 2
+      valueUuid: "toString_string2"
+    uuid: "363d3698-f34c-39ad-914f-376a19498023"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.GetHeadersMessage"
+        parameters:
+        - name: "protocolVersion"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "<init>_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "locator"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.core.BlockLocator"
+            uuid: "<init>_blockLocator1"
+            fixed: false
+            nameForMock: "<init>_blockLocator1"
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "stopHash"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Sha256Hash"
+            uuid: "<init>_sha256Hash1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.core.GetHeadersMessage"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "getheaders: <init>_blockLocator1"
+      valueType: "java.lang.String"
+      uuid: "toString_string2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "equals"
+    signature: "equals(java.lang.Object) : boolean"
+    sourceCodeSignature: "boolean equals(Object o)"
+    instructionFingerprint: "155910FD61FF2D4FA537D1BF2A8C7670"
+  paths:
+  - pathId: "path1"
+    testPathName: "equalsWhenThisEqualsO"
+    constructorSignature: "<init>(long,org.bitcoinj.core.BlockLocator,org.bitcoinj.base.Sha256Hash)\
+      \ : void"
+    modelFingerprint: "A445F7EC8E3A9E743F875587A468A5E3"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "5b7cf5ba-f3cc-35d0-9b4a-3392d3a68eed"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path6"
+    testPathName: "equalsWhenOIsNull"
+    constructorSignature: "<init>(long,org.bitcoinj.core.BlockLocator,org.bitcoinj.base.Sha256Hash)\
+      \ : void"
+    modelFingerprint: "D7D7B8474B6DC73CC859B80A7728380E"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "a2108c4d-bcbc-39b5-8254-0588b654f131"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path2"
+    testPathName: "equalsWhenGetClassNotEqualsOGetClass"
+    constructorSignature: "<init>(long,org.bitcoinj.core.BlockLocator,org.bitcoinj.base.Sha256Hash)\
+      \ : void"
+    modelFingerprint: "19F65AC2293EDB22B42CDEB3006E843F"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "6e6a0f87-c9aa-3e31-af0a-46c9467f5ce0"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path5"
+    testPathName: "equalsWhenVersionNotEqualsOtherVersion"
+    constructorSignature: "<init>(long,org.bitcoinj.core.BlockLocator,org.bitcoinj.base.Sha256Hash)\
+      \ : void"
+    modelFingerprint: "11BDA4B752C470BBD7D3F79B22C2A1ED"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "ece8e896-afd2-30aa-ab8c-e979ae7dae9e"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path3"
+    testPathName: "equalsWhenStopHashEqualsOtherStopHashThrowsNullPointerException"
+    constructorSignature: "<init>(long,org.bitcoinj.core.BlockLocator,org.bitcoinj.base.Sha256Hash)\
+      \ : void"
+    modelFingerprint: "A090EF1DBC3440B2DE36843C73AEE832"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "9e4cc0d9-563e-3b57-9fee-d9d6e499f79b"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "EXTERNAL_FIELD_WITHOUT_ACCESS"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path4"
+    testPathName: "equalsWhenStopHashNotEqualsOtherStopHash"
+    constructorSignature: "<init>(long,org.bitcoinj.core.BlockLocator,org.bitcoinj.base.Sha256Hash)\
+      \ : void"
+    modelFingerprint: "E0FAECB888D5327E07AED45FC72F6E9F"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "0713f033-8bd1-32fe-82c9-0ab49a9ff13d"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []

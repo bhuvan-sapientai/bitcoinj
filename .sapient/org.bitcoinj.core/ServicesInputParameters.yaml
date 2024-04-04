@@ -1,0 +1,1901 @@
+---
+modelFingerprint: "ED7C4C6767A3433E6A98A793D66F9E7D"
+methods:
+- method:
+    name: "of"
+    signature: "of(long) : org.bitcoinj.core.Services"
+    sourceCodeSignature: "Services of(long bits)"
+    instructionFingerprint: "7D247F0F5E9D10E42380DF5FAF75C80B"
+  paths:
+  - pathId: "path1"
+    testPathName: "ofTest"
+    modelFingerprint: "8E3F203E874A061DE53B6A113FBEB6A1"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "bits"
+      modelFingerprint: "56B5FA9553F5B2F088AB5F2F8C27F127"
+      index: 1
+      valueUuid: "of_long1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "3CF299A942F49AB1E02162CF99C19AE5"
+      index: 2
+      valueUuid: "of_services1"
+    uuid: "3155f475-158f-3510-8516-db6562387204"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "long"
+      uuid: "of_long1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.Services"
+        parameters:
+        - name: "bits"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "of_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: true
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.core.Services"
+      uuid: "of_services1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "none"
+    signature: "none() : org.bitcoinj.core.Services"
+    sourceCodeSignature: "Services none()"
+    instructionFingerprint: "2E0C9EAF5D87E413425FBDE970947261"
+  paths:
+  - pathId: "path1"
+    testPathName: "noneTest"
+    modelFingerprint: "BB3AF0EC1E5E7A17C48ABE840FDD4BBB"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D0B07BC7562B1D310E6277EF44B97639"
+      index: 1
+      valueUuid: "none_services1"
+    uuid: "7ef024fb-dd14-348c-bb93-ea4260fa7df5"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.Services"
+        parameters:
+        - name: "bits"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: true
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.core.Services"
+      uuid: "none_services1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "read"
+    signature: "read(java.nio.ByteBuffer) : org.bitcoinj.core.Services"
+    sourceCodeSignature: "Services read(ByteBuffer buf)"
+    instructionFingerprint: "ECE25D742671DBDBEEB2012AB1780B7E"
+  paths:
+  - pathId: "path1"
+    testPathName: "readTest"
+    modelFingerprint: "A83964D20AE5C5976B776C651E484810"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "buf"
+      modelFingerprint: "F5548A5A779A5FF33C4787E1C3AD9239"
+      index: 1
+      valueUuid: "read_byteBuffer1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "554558354F38D9B9C100664128802F35"
+      index: 2
+      valueUuid: "read_services1"
+    uuid: "db344e3b-696d-3b02-8e35-1aaa5300bde6"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "read_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.Services"
+        parameters:
+        - name: "bits"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "read_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: true
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.core.Services"
+      uuid: "read_services1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "bits"
+    signature: "bits() : long"
+    sourceCodeSignature: "long bits()"
+    instructionFingerprint: "9A70FBF51BE534F77ABD9513B8872B48"
+  paths:
+  - pathId: "path1"
+    testPathName: "bitsTest"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "F89CD009EE2D0DE0DA190AE62355FF1D"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "8CADD6C5892D810668F6EA57F528C4AD"
+      index: 1
+      valueUuid: "target"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "804632FC35F3D360B4AE3373F0AFA52B"
+      index: 2
+      valueUuid: "of_long1"
+    uuid: "178b56ae-48d8-313f-b80c-f3a29a972a32"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.core.Services"
+        method: "of"
+        methodParameters:
+        - name: "bits"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "of_long1"
+            fixed: false
+            equalsMethodPresent: true
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.core.Services"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "long"
+      uuid: "of_long1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "hasAny"
+    signature: "hasAny() : boolean"
+    sourceCodeSignature: "boolean hasAny()"
+    instructionFingerprint: "02BCC88BDA3032BF63CA04C6D074047C"
+  paths:
+  - pathId: "path1"
+    testPathName: "hasAnyWhenBitsNotEquals0"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "5BFEB0AB2C764C448BEF37004FE6AB6C"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "F473BC394C4774B83FDBB68C7C008A1B"
+      index: 1
+      valueUuid: "target"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "753659628F1B3F179A2EF0629F555437"
+      index: 2
+      valueUuid: "uuid1"
+    uuid: "93772c36-5780-31a9-9bb7-cc95344eb867"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.core.Services"
+        method: "of"
+        methodParameters:
+        - name: "bits"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "long"
+            uuid: "of_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.core.Services"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "hasAnyWhenBitsEquals0"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "E787AB79CCB72FB1A6B3C583B21938D8"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "7940A68A3C039AD258C6CC2735023B60"
+      index: 1
+      valueUuid: "target"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "3A21543F56248AC92654D6E439128AED"
+      index: 2
+      valueUuid: "uuid2"
+    uuid: "4d3691d1-e797-3ac1-a332-39497c106159"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.core.Services"
+        method: "of"
+        methodParameters:
+        - name: "bits"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "of_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.core.Services"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "uuid2"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "has"
+    signature: "has(long) : boolean"
+    sourceCodeSignature: "boolean has(long bitmask)"
+    instructionFingerprint: "7C1864B60EAFB88C0FB9217766C06AC6"
+  paths:
+  - pathId: "path1"
+    testPathName: "hasWhenBitsAndBitmaskEqualsBitmask"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "1839CBA6F6C123965A3A805B8091BC58"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "7BE2202688FCE94EA651F832EEF29676"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "bitmask"
+      modelFingerprint: "1D2085E690C7AE9FF2C64641B5166D71"
+      index: 2
+      valueUuid: "has_long1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "753659628F1B3F179A2EF0629F555437"
+      index: 3
+      valueUuid: "uuid1"
+    uuid: "711c1202-be2f-3257-9a83-1334fa377a87"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.core.Services"
+        method: "of"
+        methodParameters:
+        - name: "bits"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1092
+            valueType: "long"
+            uuid: "of_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.core.Services"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 1092
+      valueType: "long"
+      uuid: "has_long1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "hasWhenBitsAndBitmaskNotEqualsBitmask"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "48253D896442310BB2B0293FB75E502F"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "72760FF360DD36BBB082282AA1DD3131"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "bitmask"
+      modelFingerprint: "ED1EDA8D930FD9769B912147F4B501C7"
+      index: 2
+      valueUuid: "has_long1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "3A21543F56248AC92654D6E439128AED"
+      index: 3
+      valueUuid: "uuid1"
+    uuid: "587bc310-f3bc-3aae-9d37-59e189334df5"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.core.Services"
+        method: "of"
+        methodParameters:
+        - name: "bits"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "of_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.core.Services"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 2
+      valueType: "long"
+      uuid: "has_long1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "anyOf"
+    signature: "anyOf(long) : boolean"
+    sourceCodeSignature: "boolean anyOf(long bitmask)"
+    instructionFingerprint: "D71EACB05AEE8D456BCE06CAF1EEC620"
+  paths:
+  - pathId: "path1"
+    testPathName: "anyOfWhenBitsAndBitmaskNotEquals0"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "A57A46D07C3F9C062CC72127C1D6D9D4"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "C0DD9E74A32FDEF2AEECDA0552B24D64"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "bitmask"
+      modelFingerprint: "1D2085E690C7AE9FF2C64641B5166D71"
+      index: 2
+      valueUuid: "anyOf_long1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "753659628F1B3F179A2EF0629F555437"
+      index: 3
+      valueUuid: "uuid1"
+    uuid: "a9728329-4398-3d9c-b998-05028ef306ac"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.core.Services"
+        method: "of"
+        methodParameters:
+        - name: "bits"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1024
+            valueType: "long"
+            uuid: "of_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.core.Services"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 1092
+      valueType: "long"
+      uuid: "anyOf_long1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "anyOfWhenBitsAndBitmaskEquals0"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "12E04D3DC25D628AB209B08CA0FEBE41"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "72760FF360DD36BBB082282AA1DD3131"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "bitmask"
+      modelFingerprint: "D84DD3F6A90295777152CFE215D5E360"
+      index: 2
+      valueUuid: "anyOf_long1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "3A21543F56248AC92654D6E439128AED"
+      index: 3
+      valueUuid: "uuid1"
+    uuid: "ea1f51c5-5cc9-3632-b46f-e3b3b0933a74"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.core.Services"
+        method: "of"
+        methodParameters:
+        - name: "bits"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "of_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.core.Services"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "long"
+      uuid: "anyOf_long1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "write"
+    signature: "write(java.nio.ByteBuffer) : java.nio.ByteBuffer"
+    sourceCodeSignature: "ByteBuffer write(ByteBuffer buf)"
+    instructionFingerprint: "16383C0078A2B6AA6DE37280891A8552"
+  paths:
+  - pathId: "path1"
+    testPathName: "writeTest"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "2E3663044658E59E6156DAAB2D26111A"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "72760FF360DD36BBB082282AA1DD3131"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "buf"
+      modelFingerprint: "88349328A64E3633806DF95A0261611B"
+      index: 2
+      valueUuid: "write_byteBuffer1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "5D6E5FE0C67AA614B6A4E47A230639AA"
+      index: 3
+      valueUuid: "write_byteBuffer1"
+    uuid: "74367ac6-67d1-3ba8-9bdd-4aafa43d4139"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.core.Services"
+        method: "of"
+        methodParameters:
+        - name: "bits"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "of_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.core.Services"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "write_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "write_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "serialize"
+    signature: "serialize() : byte[]"
+    sourceCodeSignature: "byte[] serialize()"
+    instructionFingerprint: "8770ABE876AE777909F925FCDA4A2459"
+  paths:
+  - pathId: "path1"
+    testPathName: "serializeTest"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "AB621A61BC37FF8073622D23151661E8"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "F473BC394C4774B83FDBB68C7C008A1B"
+      index: 1
+      valueUuid: "target"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "850A205E812E0C52C13403E663D22E64"
+      index: 2
+      valueUuid: "serialize_byte[]1"
+    uuid: "9d328af1-2293-3544-bbbc-a0683c1f9fbe"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "UNKNOWN_REASON"
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.core.Services"
+        method: "of"
+        methodParameters:
+        - name: "bits"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "long"
+            uuid: "of_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.core.Services"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            uuid: "serialize_byte[]1-item0"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          1:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            uuid: "serialize_byte[]1-item1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          2:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            uuid: "serialize_byte[]1-item2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          3:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            uuid: "serialize_byte[]1-item3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          4:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            uuid: "serialize_byte[]1-item4"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          5:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            uuid: "serialize_byte[]1-item5"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          6:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            uuid: "serialize_byte[]1-item6"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          7:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            uuid: "serialize_byte[]1-item7"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "serialize_byte[]1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "toString"
+    signature: "toString() : java.lang.String"
+    sourceCodeSignature: "String toString()"
+    instructionFingerprint: "D996D220868F5DF06003C60581863F3B"
+  paths:
+  - pathId: "path1"
+    testPathName: "toStringWhenBitsNotEquals0"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "7D44E3B24759D2577BDB45DBA7354484"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "BC8DA871DAA01DF161BF3CE87FC89FBB"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "InternalUtils"
+      modelFingerprint: "423F50C89937DC798753FA7C4C29450E"
+      index: 2
+      valueUuid: "uuid2"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.InternalUtils"
+        name: "joiner"
+        parameters:
+        - name: "delimiter"
+          valueUuid: "uuid1"
+        signature: "joiner(String): InternalUtils$Joiner"
+        returnValueUuid: "toString_internalUtils.Joiner1"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "E3E55CC656242C38FB10EEF39D7013D8"
+      index: 3
+      valueUuid: "toString_internalUtils.Joiner1"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.InternalUtils$Joiner"
+        name: "join"
+        parameters:
+        - name: "arg0"
+          valueUuid: "toString_linkedList1"
+        signature: "join(List): String"
+        returnValueUuid: "toString_string3"
+        access: 1025
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "A2384A070C8594AC9B4976B6E4923C6F"
+      index: 4
+      valueUuid: "toString_string3"
+    uuid: "de65989e-bf16-36ed-8772-7ccb6b0fc53a"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.core.Services"
+        method: "of"
+        methodParameters:
+        - name: "bits"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "of_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.core.Services"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.InternalUtils"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.InternalUtils$Joiner"
+      uuid: "toString_internalUtils.Joiner1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: ", "
+      valueType: "java.lang.String"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.InternalUtils$Joiner"
+      uuid: "toString_internalUtils.Joiner1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "return_of_join1"
+      valueType: "java.lang.String"
+      uuid: "toString_string3"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        collectionClass: "java.util.LinkedList"
+        parameters: []
+        values:
+        - sapientType: "BASIC"
+          content: !<regular>
+            value: "NETWORK"
+          valueType: "java.lang.String"
+          uuid: "toString_linkedList1-item0"
+          fixed: true
+          collectionUuid: "toString_linkedList1"
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        - sapientType: "BASIC"
+          content: !<regular>
+            value: "BLOOM"
+          valueType: "java.lang.String"
+          uuid: "toString_linkedList1-item1"
+          fixed: true
+          collectionUuid: "toString_linkedList1"
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        - sapientType: "BASIC"
+          content: !<regular>
+            value: "WITNESS"
+          valueType: "java.lang.String"
+          uuid: "toString_linkedList1-item2"
+          fixed: true
+          collectionUuid: "toString_linkedList1"
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        - sapientType: "BASIC"
+          content: !<regular>
+            value: "COMPACT_FILTERS"
+          valueType: "java.lang.String"
+          uuid: "toString_linkedList1-item3"
+          fixed: true
+          collectionUuid: "toString_linkedList1"
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        - sapientType: "BASIC"
+          content: !<regular>
+            value: "NETWORK_LIMITED"
+          valueType: "java.lang.String"
+          uuid: "toString_linkedList1-item4"
+          fixed: true
+          collectionUuid: "toString_linkedList1"
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        - sapientType: "BASIC"
+          content: !<regular>
+            value: "P2P_V2"
+          valueType: "java.lang.String"
+          uuid: "toString_linkedList1-item5"
+          fixed: true
+          collectionUuid: "toString_linkedList1"
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        - sapientType: "BASIC"
+          content: !<regular>
+            value: "remaining: 1111111111111111111111111111111111111111111111111111111111111111"
+          valueType: "java.lang.String"
+          uuid: "toString_string2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+      valueType: "java.util.List"
+      genericValueType: "java.lang.String"
+      uuid: "toString_linkedList1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "return_of_join1"
+      valueType: "java.lang.String"
+      uuid: "toString_string3"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "toStringWhenBitsEquals0"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "D3D30323C0CA447A029DAB056894BB02"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "dd0121ef-7aea-3507-9701-9dfac7aad458"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path3"
+    testPathName: "toStringWhenBitsAndNODE_P2P_V2NotEqualsNODE_P2P_V2AndBitsNotEquals0"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "587B89238FD1036C43F05BEA8F022981"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "b22c87fa-24a6-3ae7-9340-83e0a2be589d"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path4"
+    testPathName: "toStringWhenBitsAndNODE_P2P_V2NotEqualsNODE_P2P_V2AndBitsEquals0"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "B677BF3ACA7511303707329FF5271E0D"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "fd009240-0753-3ee5-aa9e-4f07ed66edbe"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path5"
+    testPathName: "toStringWhenBitsAndNODE_P2P_V2EqualsNODE_P2P_V2AndBitsNotEquals0"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "697C52D2E5617EF5A8F16684A7017B62"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "607cfb6d-8542-3dec-ac47-b8da5db3dc9a"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path6"
+    testPathName: "toStringWhenBitsAndNODE_P2P_V2EqualsNODE_P2P_V2AndBitsEquals0"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "4D0C68D319BACE8F9C4191FADAB95003"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "de0fbb49-4909-3704-85b2-eeffd9ceba16"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path7"
+    testPathName: "toStringWhenBitsAndNODE_NETWORK_LIMITEDNotEqualsNODE_NETWORK_LIMITEDAndBitsAndNODE_P2P_V2NotEqualsNODE_P2P_V2AndBitsNot"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "C4F45F0696C14F3F3193C9AE964B5B38"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "bc99cb2a-0262-359d-8fa3-a808e9dd74d7"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path8"
+    testPathName: "toStringWhenBitsAndNODE_NETWORK_LIMITEDNotEqualsNODE_NETWORK_LIMITEDAndBitsAndNODE_P2P_V2NotEqualsNODE_P2P_V2AndBitsEqu"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "173AB4010F65A1FE37E878C949BA26B6"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "c46c9d5f-9ec0-3b36-b40a-07a8c421b97c"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path9"
+    testPathName: "toStringWhenBitsAndNODE_P2P_V2EqualsNODE_P2P_V2AndBitsNotEquals02"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "9292D365315F3C84932550B6A5554485"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "4e6c808a-075c-378f-abb3-0e3f3a3f5bcd"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path10"
+    testPathName: "toStringWhenBitsAndNODE_NETWORK_LIMITEDEqualsNODE_NETWORK_LIMITEDAndBitsAndNODE_P2P_V2EqualsNODE_P2P_V2AndBitsEquals0"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "96DF0548B2BBE8602CE4ABB1A24A69B9"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "e1c20638-37f2-39d9-9003-f683b9977626"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path11"
+    testPathName: "toStringWhenBitsAndNODE_NETWORK_LIMITEDEqualsNODE_NETWORK_LIMITEDAndBitsAndNODE_P2P_V2NotEqualsNODE_P2P_V2AndBitsNotEqu"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "A6497D274EAE9E98914A58655FE0A80C"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "5d164365-5081-3bed-bfd9-d5a4676ef6c0"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path12"
+    testPathName: "toStringWhenBitsAndNODE_P2P_V2NotEqualsNODE_P2P_V2AndBitsEquals02"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "2C49F8362A374A2FDF62E56872AE46C5"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "62659080-efce-3c10-94c6-5c00c2b12efe"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path13"
+    testPathName: "toStringWhenBitsAndNODE_NETWORK_LIMITEDNotEqualsNODE_NETWORK_LIMITEDAndBitsAndNODE_P2P_V2EqualsNODE_P2P_V2AndBitsNotEqu"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "DA6AA866B0DA6AFC3457EA5CDD41B98C"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "8e261c48-566c-3bbb-8cb3-cbab379df746"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path14"
+    testPathName: "toStringWhenBitsAndNODE_P2P_V2EqualsNODE_P2P_V2AndBitsEquals02"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "E264BF16B3990491301DD2D6174271D7"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "9f386409-ed16-3e60-bb7f-d53cc5409aa1"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path15"
+    testPathName: "toStringWhenBitsAndNODE_P2P_V2NotEqualsNODE_P2P_V2AndBitsNotEquals02"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "17A798EB0DBFA2F0C9CF99D7AF723FF1"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "73a9001d-6d68-3e50-9872-3423dd67e04b"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path16"
+    testPathName: "toStringWhenBitsAndNODE_P2P_V2NotEqualsNODE_P2P_V2AndBitsEquals03"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "91042A43E656B529C6EB3B0251736EBA"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "1de0cc16-a4fa-3767-b139-c880ea432e71"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path17"
+    testPathName: "toStringWhenBitsAndNODE_P2P_V2EqualsNODE_P2P_V2AndBitsNotEquals03"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "076CB93B32B1F56B657E6820C90825EB"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "40934282-a5c3-3700-9547-c739be7c270e"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path18"
+    testPathName: "toStringWhenBitsAndNODE_COMPACT_FILTERSEqualsNODE_COMPACT_FILTERSAndBitsAndNODE_NETWORK_LIMITEDEqualsNODE_NETWORK_LIMIT"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "BC8A8037CF0407A902F77718107EA852"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "cf2192ab-3a47-360a-a561-ea7740414e47"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path19"
+    testPathName: "toStringWhenBitsAndNODE_P2P_V2NotEqualsNODE_P2P_V2AndBitsNotEquals03"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "7B42CC4A3AA6D4F72C23DFE05048D0B5"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "05068bbb-d3fc-3322-b300-c13675316201"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path20"
+    testPathName: "toStringWhenBitsAndNODE_P2P_V2NotEqualsNODE_P2P_V2AndBitsEquals04"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "A8B74F7F63E0A3EA8801EBE0A4E323F7"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "8cc83357-9ee8-30a6-8676-4237895fdb7a"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path21"
+    testPathName: "toStringWhenBitsAndNODE_P2P_V2EqualsNODE_P2P_V2AndBitsNotEquals04"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "8D6085FE52D3C35B215166D9F54206BE"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "a33b5b7d-3bdc-3acb-bb64-6f8ab0a97c52"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path22"
+    testPathName: "toStringWhenBitsAndNODE_P2P_V2EqualsNODE_P2P_V2AndBitsEquals03"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "4835C10ACC4AFE4FCD334E60C5F60F9E"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "1bf2db4e-78f7-345e-9ac4-c09c465ce161"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path23"
+    testPathName: "toStringWhenBitsAndNODE_P2P_V2NotEqualsNODE_P2P_V2AndBitsNotEquals04"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "C9F1BDA8430AEAE5C229EF7D8A454028"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "3227ace1-0a67-30d8-b59a-c87760c279a5"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path24"
+    testPathName: "toStringWhenBitsAndNODE_P2P_V2NotEqualsNODE_P2P_V2AndBitsEquals05"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "5BAE194908519AAFBD521ADC7C92752C"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "223983cf-61dc-3aea-ae14-cddb2ef48e90"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path25"
+    testPathName: "toStringWhenBitsAndNODE_P2P_V2EqualsNODE_P2P_V2AndBitsNotEquals05"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "735493C9C020C98CF9A14CB8BBD3A44B"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "cb56090a-ae7b-3dad-ad58-c11b4e065f32"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path26"
+    testPathName: "toStringWhenBitsAndNODE_COMPACT_FILTERSNotEqualsNODE_COMPACT_FILTERSAndBitsAndNODE_NETWORK_LIMITEDEqualsNODE_NETWORK_LI"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "3D005965B11702EE4951C53F20771E17"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "29032f0d-5d2a-3623-b399-56542a9de52f"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path27"
+    testPathName: "toStringWhenBitsAndNODE_P2P_V2NotEqualsNODE_P2P_V2AndBitsNotEquals05"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "FFB1A9EF92151C4A3E0C38BC3666C779"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "dd4720ca-bd02-345d-ae43-bdd62bafce20"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path28"
+    testPathName: "toStringWhenBitsAndNODE_P2P_V2NotEqualsNODE_P2P_V2AndBitsEquals06"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "72E40E6085DC9E45B8E6FC95966C3412"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "bff31738-b77c-3dac-80b6-2e6ec0080d6a"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path29"
+    testPathName: "toStringWhenBitsAndNODE_P2P_V2EqualsNODE_P2P_V2AndBitsNotEquals06"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "2B6BAA36C1580AD4F77E93F789644509"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "09970a2d-f030-39d1-b211-67fbcb24058a"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path30"
+    testPathName: "toStringWhenBitsAndNODE_P2P_V2EqualsNODE_P2P_V2AndBitsEquals04"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "A38020B2E270CB35FBE0D5F9A7272838"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "24dd054e-f4a2-303e-b3f8-7c8ef90f9907"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path31"
+    testPathName: "toStringWhenBitsAndNODE_P2P_V2NotEqualsNODE_P2P_V2AndBitsNotEquals06"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "D17D3EC7C767D3652E832B97497C569B"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "dca91c83-6c1f-3b73-986b-3aa9678f926c"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path32"
+    testPathName: "toStringWhenBitsAndNODE_P2P_V2NotEqualsNODE_P2P_V2AndBitsEquals07"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "4897446F9A05BDD2CCBF110BB414D0CD"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "24dc4aea-2a1d-34db-89ce-1a6b57e810bc"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path33"
+    testPathName: "toStringWhenBitsAndNODE_P2P_V2EqualsNODE_P2P_V2AndBitsNotEquals07"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "437C58E10D42F457670B9E7C30105DBA"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "52e314b1-146f-3766-81ff-8a426e90e1fa"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path34"
+    testPathName: "toStringWhenBitsAndNODE_NETWORK_LIMITEDEqualsNODE_NETWORK_LIMITEDAndBitsAndNODE_P2P_V2EqualsNODE_P2P_V2AndBitsEquals02"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "5CA3D5C11ACF2D31B2594680D0E7EF59"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "14f4ce69-a1b1-398f-b1ac-820009d6cf99"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path35"
+    testPathName: "toStringWhenBitsAndNODE_P2P_V2NotEqualsNODE_P2P_V2AndBitsNotEquals07"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "4A5E24A131CB34BCC6096A280E7E3842"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "b5242394-5981-3d2f-9790-5fdb63dd09b7"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path36"
+    testPathName: "toStringWhenBitsAndNODE_P2P_V2NotEqualsNODE_P2P_V2AndBitsEquals08"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "6B1B539F1295B7CE006D0AFA4E3D8360"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "f79f02a0-9370-30ec-a70d-d94db5734afb"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path37"
+    testPathName: "toStringWhenBitsAndNODE_P2P_V2EqualsNODE_P2P_V2AndBitsNotEquals08"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "7E34E87D716C9E2629AC7A0CF3381059"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "576b24aa-fe54-3b56-91f1-ce09a5d59ecb"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path38"
+    testPathName: "toStringWhenBitsAndNODE_P2P_V2EqualsNODE_P2P_V2AndBitsEquals05"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "5ABA3768B6CB796B24F5586791C22E61"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "c8360ad9-afc5-348f-865c-c7b5d09a30fe"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path39"
+    testPathName: "toStringWhenBitsAndNODE_P2P_V2NotEqualsNODE_P2P_V2AndBitsNotEquals08"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "F3D70A3C178398A288706F9ED173AA70"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "c30f210d-1672-3034-ac01-f244929463a8"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path40"
+    testPathName: "toStringWhenBitsAndNODE_P2P_V2NotEqualsNODE_P2P_V2AndBitsEquals09"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "82087FB8335EEAE84320B4FBDA1EA8D1"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "c893ee3e-1d94-3f14-ab34-b8f278310708"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path41"
+    testPathName: "toStringWhenBitsAndNODE_P2P_V2EqualsNODE_P2P_V2AndBitsNotEquals09"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "7763E132A926FC497B2D74E413D0B61A"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "2304b883-4bf4-3e90-83c5-d39d46a31ef4"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path42"
+    testPathName: "toStringWhenBitsAndNODE_NETWORK_LIMITEDEqualsNODE_NETWORK_LIMITEDAndBitsAndNODE_P2P_V2EqualsNODE_P2P_V2AndBitsEquals03"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "FA68F1BC360651880AFAFC36D08525E6"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "729f93ee-5d44-324a-b356-a35fb4cc0fad"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path43"
+    testPathName: "toStringWhenBitsAndNODE_P2P_V2NotEqualsNODE_P2P_V2AndBitsNotEquals09"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "25384B91A9B7AFBB1B8B5F4A0446B125"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "ade0383f-f933-3385-9e6e-361a33e69771"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path44"
+    testPathName: "toStringWhenBitsAndNODE_P2P_V2NotEqualsNODE_P2P_V2AndBitsEquals010"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "6BEE0BD9CB76EEAAFB03F4EB924D779F"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "dd7766cf-a21f-3174-a6ad-cfa47d5ddefc"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path45"
+    testPathName: "toStringWhenBitsAndNODE_P2P_V2EqualsNODE_P2P_V2AndBitsNotEquals010"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "F0220D7316BB8ABA935329ABC8F1FFB8"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "0ce4a82b-23e4-30ca-89aa-efd6ec674f87"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path46"
+    testPathName: "toStringWhenBitsAndNODE_P2P_V2EqualsNODE_P2P_V2AndBitsEquals06"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "F10EBFE4C75E8AE9D55CA053D677F510"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "4c0eb25d-a5ad-3acc-a90d-c1747432db9e"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path47"
+    testPathName: "toStringWhenBitsAndNODE_P2P_V2NotEqualsNODE_P2P_V2AndBitsNotEquals010"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "3BBAA4F56BD9A0EAB3510985CEC4CB73"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "0eb7976a-dac9-3827-9476-a5f3139e2c8f"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path48"
+    testPathName: "toStringWhenBitsAndNODE_P2P_V2NotEqualsNODE_P2P_V2AndBitsEquals011"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "B5C77F5668548B5D9DA241FAC676A8A8"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "21510f2a-6acb-3682-ae68-a2c548aaccf0"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path49"
+    testPathName: "toStringWhenBitsAndNODE_P2P_V2EqualsNODE_P2P_V2AndBitsNotEquals011"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "25005B79F3E41E7514AF0310660C1505"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "e7d8b5c0-a9d4-34c0-8b42-d4a44fe58a56"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path50"
+    testPathName: "toStringWhenBitsAndNODE_NETWORK_LIMITEDEqualsNODE_NETWORK_LIMITEDAndBitsAndNODE_P2P_V2EqualsNODE_P2P_V2AndBitsEquals04"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "C38D0F69913C9030BAD87BD8ECAE6690"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "07b75ea1-910a-3a02-abe3-465be48f5d53"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "equals"
+    signature: "equals(java.lang.Object) : boolean"
+    sourceCodeSignature: "boolean equals(final Object o)"
+    instructionFingerprint: "A9BFE479BA165971013AFBC657C5A638"
+  paths:
+  - pathId: "path1"
+    testPathName: "equalsWhenThisEqualsO"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "6DFEE2DBDE62D1C43C459E0016F92705"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "5b7cf5ba-f3cc-35d0-9b4a-3392d3a68eed"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path5"
+    testPathName: "equalsWhenOIsNull"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "08A50B88C5E8D8BCEED73AA4269B8B15"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "a2108c4d-bcbc-39b5-8254-0588b654f131"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path2"
+    testPathName: "equalsWhenGetClassNotEqualsOGetClass"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "D693265D08C9ADA1E558102262B1B381"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "6e6a0f87-c9aa-3e31-af0a-46c9467f5ce0"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path3"
+    testPathName: "equalsWhenThisBitsEqualsOBits"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "C3E9ACA6C7204D294B2C089D921DF72B"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "5c8dac40-505a-3c9c-ade2-ae9dceb3a83d"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path4"
+    testPathName: "equalsWhenThisBitsNotEqualsOBits"
+    constructorSignature: "of(long) : org.bitcoinj.core.Services"
+    modelFingerprint: "5B4499E611902578E18C81820F5D01E0"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "ae624a7d-8805-3006-8bdb-9533e8565398"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []

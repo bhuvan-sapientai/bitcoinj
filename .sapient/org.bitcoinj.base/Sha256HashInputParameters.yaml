@@ -1,0 +1,4300 @@
+---
+modelFingerprint: "7866D6520F8B8D14E866B031B07A5F45"
+methods:
+- method:
+    name: "wrap"
+    signature: "wrap(byte[]) : org.bitcoinj.base.Sha256Hash"
+    sourceCodeSignature: "Sha256Hash wrap(byte[] rawHashBytes)"
+    instructionFingerprint: "7DD71B1D948BBFB6CD95B1B5566BF4EB"
+  paths:
+  - pathId: "path1"
+    testPathName: "wrapWhenDefaultBranch"
+    modelFingerprint: "F6955E6140E02CE817ED979F7CFD13A5"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "rawHashBytes"
+      modelFingerprint: "920B1C0EB196EDB9826C011B6C5D9152"
+      index: 1
+      valueUuid: "<clinit>_byte[]1"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EE07D40EFD4ADC96C83D317FAE9481C2"
+      index: 2
+      valueUuid: "uuid3"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid1"
+        - name: "messageSupplier"
+          valueUuid: "uuid2"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "<init>_void2"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "EE46B1A77FCE3FD448F3DE02297A6BB9"
+      index: 3
+      valueUuid: "wrap_sha256Hash2"
+    uuid: "4df030c0-1a62-3804-8470-eaebd2a652a6"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "UNKNOWN_REASON"
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "NULL"
+      valueType: "byte[]"
+      uuid: "<clinit>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void2"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.base.Sha256Hash"
+        parameters:
+        - name: "rawHashBytes"
+          value:
+            sapientType: "NULL"
+            valueType: "byte[]"
+            uuid: "<clinit>_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: true
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "wrap_sha256Hash2"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "wrapWhenDefaultBranchThrowsIllegalArgumentException"
+    modelFingerprint: "F6854612A83E595565F050216928FCD2"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "rawHashBytes"
+      modelFingerprint: "920B1C0EB196EDB9826C011B6C5D9152"
+      index: 1
+      valueUuid: "<clinit>_byte[]1"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
+      index: 2
+      valueUuid: "uuid7"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid4"
+        - name: "messageSupplier"
+          valueUuid: "uuid5"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "uuid6"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "3E9C76AB51311DE97AE9C2294CD5E1D6"
+      index: 3
+      valueUuid: "uuid8"
+    uuid: "8a7c5755-a137-3326-a97b-1044966d9973"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "UNKNOWN_REASON"
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "NULL"
+      valueType: "byte[]"
+      uuid: "<clinit>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid7"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.IllegalArgumentException"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.IllegalArgumentException"
+      uuid: "uuid6"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "uuid4"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid5"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.IllegalArgumentException"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.IllegalArgumentException"
+      uuid: "uuid8"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "wrap"
+    signature: "wrap(java.lang.String) : org.bitcoinj.base.Sha256Hash"
+    sourceCodeSignature: "Sha256Hash wrap(String hexString)"
+    instructionFingerprint: "C1A6609E9D44960ECCAF8B7ED4106D9F"
+  paths:
+  - pathId: "path1"
+    testPathName: "wrap1Test"
+    modelFingerprint: "38A238092C6D086AEFDE2F81E94EA2A3"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "hexString"
+      modelFingerprint: "20C50CF44E6FD1E3D9A0A6858FC3DAF5"
+      index: 1
+      valueUuid: "wrap_string1"
+    - type: "STATIC"
+      name: "ByteUtils"
+      modelFingerprint: "8DF576773E02A5B41413AB96E7673A12"
+      index: 2
+      valueUuid: "uuid9"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.ByteUtils"
+        name: "parseHex"
+        parameters:
+        - name: "string"
+          valueUuid: "wrap_string1"
+        signature: "parseHex(String): byte[]"
+        returnValueUuid: "wrap_byte[]1"
+        access: 9
+    - type: "STATIC"
+      name: "Sha256Hash"
+      modelFingerprint: "33B6FF417092E0DA2389537A8F9656D4"
+      index: 3
+      valueUuid: "uuid10"
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "wrap"
+        parameters:
+        - name: "rawHashBytes"
+          valueUuid: "wrap_byte[]1"
+        signature: "wrap(byte[]): Sha256Hash"
+        returnValueUuid: "wrap_sha256Hash2"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D5F995FF16038F8C8CEB6ED663606C67"
+      index: 4
+      valueUuid: "wrap_sha256Hash2"
+    uuid: "8e6fb3b1-f009-3bdd-83ef-3241bcee11da"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "A"
+      valueType: "java.lang.String"
+      uuid: "wrap_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.ByteUtils"
+      uuid: "uuid9"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "wrap_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "A"
+      valueType: "java.lang.String"
+      uuid: "wrap_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "uuid10"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "wrap_sha256Hash2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "wrap_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "wrap_sha256Hash2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "wrapReversed"
+    signature: "wrapReversed(byte[]) : org.bitcoinj.base.Sha256Hash"
+    sourceCodeSignature: "Sha256Hash wrapReversed(byte[] rawHashBytes)"
+    instructionFingerprint: "5571B448A4499CF796E496FB143C998C"
+  paths:
+  - pathId: "path1"
+    testPathName: "wrapReversedTest"
+    modelFingerprint: "563FBE510FAEA34FB5DC627021B2FA4A"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "rawHashBytes"
+      modelFingerprint: "5C1F508A82DCAFEB8EF5EEA516ACF69D"
+      index: 1
+      valueUuid: "wrapReversed_byte[]1"
+    - type: "STATIC"
+      name: "ByteUtils"
+      modelFingerprint: "DA04F1711DB88BA3FAA8D1F3BF82DAB0"
+      index: 2
+      valueUuid: "uuid11"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.ByteUtils"
+        name: "reverseBytes"
+        parameters:
+        - name: "i"
+          valueUuid: "wrapReversed_byte[]1"
+        signature: "reverseBytes(byte[]): byte[]"
+        returnValueUuid: "wrapReversed_byte[]2"
+        access: 9
+    - type: "STATIC"
+      name: "Sha256Hash"
+      modelFingerprint: "2886BDE4CBC2A2D00EF78CF2C999DA73"
+      index: 3
+      valueUuid: "uuid12"
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "wrap"
+        parameters:
+        - name: "rawHashBytes"
+          valueUuid: "wrapReversed_byte[]2"
+        signature: "wrap(byte[]): Sha256Hash"
+        returnValueUuid: "wrapReversed_sha256Hash1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D5F995FF16038F8C8CEB6ED663606C67"
+      index: 4
+      valueUuid: "wrapReversed_sha256Hash1"
+    uuid: "fd3bec15-10d9-388a-beea-b2e9df9f3abd"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "wrapReversed_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.ByteUtils"
+      uuid: "uuid11"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "wrapReversed_byte[]2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "wrapReversed_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "uuid12"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "wrapReversed_sha256Hash1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "wrapReversed_byte[]2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "wrapReversed_sha256Hash1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "read"
+    signature: "read(java.nio.ByteBuffer) : org.bitcoinj.base.Sha256Hash"
+    sourceCodeSignature: "Sha256Hash read(ByteBuffer buf)"
+    instructionFingerprint: "2A3B597464E0551857F38A77944FEA8D"
+  paths:
+  - pathId: "path1"
+    testPathName: "readTest"
+    modelFingerprint: "2226D149CFC0A69D83BF998C999F9791"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "buf"
+      modelFingerprint: "F5548A5A779A5FF33C4787E1C3AD9239"
+      index: 1
+      valueUuid: "read_byteBuffer1"
+    - type: "STATIC"
+      name: "Sha256Hash"
+      modelFingerprint: "5CB0F741162E9DEBCD6BB1F360E3F6EE"
+      index: 2
+      valueUuid: "uuid1"
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "wrapReversed"
+        parameters:
+        - name: "rawHashBytes"
+          valueUuid: "read_byte[]1"
+        signature: "wrapReversed(byte[]): Sha256Hash"
+        returnValueUuid: "read_sha256Hash1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D5F995FF16038F8C8CEB6ED663606C67"
+      index: 3
+      valueUuid: "read_sha256Hash1"
+    uuid: "db344e3b-696d-3b02-8e35-1aaa5300bde6"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "read_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "read_sha256Hash1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          1:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          2:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          3:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          4:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          5:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          6:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          7:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          8:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          9:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          10:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          11:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          12:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          13:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          14:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          15:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          16:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          17:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          18:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          19:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          20:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          21:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          22:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          23:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          24:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          25:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          26:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          27:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          28:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          29:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          30:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          31:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "read_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "read_sha256Hash1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "of"
+    signature: "of(byte[]) : org.bitcoinj.base.Sha256Hash"
+    sourceCodeSignature: "Sha256Hash of(byte[] contents)"
+    tryCatchBlocks:
+    - idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.security.NoSuchAlgorithmException"
+    instructionFingerprint: "590E997AEC171F1FC63F1C1C3A18E77A"
+  paths:
+  - pathId: "path1"
+    testPathName: "ofTest"
+    modelFingerprint: "9697A7BA767031BC9EEBF5830FAB66A4"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "contents"
+      modelFingerprint: "BE5763FC2DC1BD52F7135282F507B225"
+      index: 1
+      valueUuid: "of_byte[]1"
+    - type: "STATIC"
+      name: "Sha256Hash"
+      modelFingerprint: "EB3D159357FB4F85F302114DFC9C614C"
+      index: 2
+      valueUuid: "uuid14"
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "hash"
+        parameters:
+        - name: "input"
+          valueUuid: "of_byte[]1"
+        signature: "hash(byte[]): byte[]"
+        returnValueUuid: "of_byte[]2"
+        access: 9
+    - type: "STATIC"
+      name: "Sha256Hash"
+      modelFingerprint: "33B6FF417092E0DA2389537A8F9656D4"
+      index: 3
+      valueUuid: "uuid15"
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "wrap"
+        parameters:
+        - name: "rawHashBytes"
+          valueUuid: "of_byte[]2"
+        signature: "wrap(byte[]): Sha256Hash"
+        returnValueUuid: "of_sha256Hash1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D5F995FF16038F8C8CEB6ED663606C67"
+      index: 4
+      valueUuid: "of_sha256Hash1"
+    uuid: "3155f475-158f-3510-8516-db6562387204"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "of_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "uuid14"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "of_byte[]2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "of_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "uuid15"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "of_sha256Hash1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "of_byte[]2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "of_sha256Hash1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "twiceOf"
+    signature: "twiceOf(byte[]) : org.bitcoinj.base.Sha256Hash"
+    sourceCodeSignature: "Sha256Hash twiceOf(byte[] contents)"
+    tryCatchBlocks:
+    - idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.security.NoSuchAlgorithmException"
+    instructionFingerprint: "DCA58354D86C5C481A1E926FD089E28E"
+  paths:
+  - pathId: "path1"
+    testPathName: "twiceOfTest"
+    modelFingerprint: "67CAD3C9F693033036C2453ADB602211"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "contents"
+      modelFingerprint: "BE5763FC2DC1BD52F7135282F507B225"
+      index: 1
+      valueUuid: "twiceOf_byte[]1"
+    - type: "STATIC"
+      name: "Sha256Hash"
+      modelFingerprint: "E04FC5531F5A705A24AF5B2292221258"
+      index: 2
+      valueUuid: "uuid16"
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "hashTwice"
+        parameters:
+        - name: "input"
+          valueUuid: "twiceOf_byte[]1"
+        signature: "hashTwice(byte[]): byte[]"
+        returnValueUuid: "twiceOf_byte[]2"
+        access: 9
+    - type: "STATIC"
+      name: "Sha256Hash"
+      modelFingerprint: "33B6FF417092E0DA2389537A8F9656D4"
+      index: 3
+      valueUuid: "uuid17"
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "wrap"
+        parameters:
+        - name: "rawHashBytes"
+          valueUuid: "twiceOf_byte[]2"
+        signature: "wrap(byte[]): Sha256Hash"
+        returnValueUuid: "twiceOf_sha256Hash1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D5F995FF16038F8C8CEB6ED663606C67"
+      index: 4
+      valueUuid: "twiceOf_sha256Hash1"
+    uuid: "4224631c-1351-3487-b57c-83be3d1c5f2a"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "uuid16"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "uuid17"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "twiceOf_sha256Hash1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "twiceOf_sha256Hash1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "twiceOf"
+    signature: "twiceOf(byte[],byte[]) : org.bitcoinj.base.Sha256Hash"
+    sourceCodeSignature: "Sha256Hash twiceOf(byte[] content1, byte[] content2)"
+    tryCatchBlocks:
+    - idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.security.NoSuchAlgorithmException"
+    instructionFingerprint: "987FD50DD7B7A15CE2BD9D1ADB2BE0C1"
+  paths:
+  - pathId: "path1"
+    testPathName: "twiceOf1Test"
+    modelFingerprint: "5E1FC324F586A4E4DF728FCCB3843385"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "content1"
+      modelFingerprint: "C427AEBC15660DC4B976B900153988AF"
+      index: 1
+      valueUuid: "twiceOf_byte[]1"
+    - type: "INPUT"
+      name: "content2"
+      modelFingerprint: "B98183D76A6E123E32F07A3C742B160F"
+      index: 2
+      valueUuid: "twiceOf_byte[]2"
+    - type: "STATIC"
+      name: "Sha256Hash"
+      modelFingerprint: "7AE243ECFCBBB2D4F1748957860A09D4"
+      index: 3
+      valueUuid: "uuid18"
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "hashTwice"
+        parameters:
+        - name: "input1"
+          valueUuid: "twiceOf_byte[]1"
+        - name: "input2"
+          valueUuid: "twiceOf_byte[]2"
+        signature: "hashTwice(byte[],byte[]): byte[]"
+        returnValueUuid: "twiceOf_byte[]3"
+        access: 9
+    - type: "STATIC"
+      name: "Sha256Hash"
+      modelFingerprint: "33B6FF417092E0DA2389537A8F9656D4"
+      index: 4
+      valueUuid: "uuid19"
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "wrap"
+        parameters:
+        - name: "rawHashBytes"
+          valueUuid: "twiceOf_byte[]3"
+        signature: "wrap(byte[]): Sha256Hash"
+        returnValueUuid: "twiceOf_sha256Hash1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D5F995FF16038F8C8CEB6ED663606C67"
+      index: 5
+      valueUuid: "twiceOf_sha256Hash1"
+    uuid: "8834aef1-a40b-3166-93a5-4454c46dba80"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "uuid18"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "uuid19"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "twiceOf_sha256Hash1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "twiceOf_sha256Hash1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "of"
+    signature: "of(java.io.File) : org.bitcoinj.base.Sha256Hash"
+    sourceCodeSignature: "Sha256Hash of(File file)"
+    tryCatchBlocks:
+    - idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.security.NoSuchAlgorithmException"
+    instructionFingerprint: "AA3E1C2BA28C053B2DE1064EA416364B"
+  paths:
+  - pathId: "path1"
+    testPathName: "of1Test"
+    modelFingerprint: "80AF62F38625ACCE2CFF7D933EFFBE36"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "file"
+      modelFingerprint: "8A5A0F22DD9C1795C4DF7630ED5A969D"
+      index: 1
+      valueUuid: "of_file1"
+    - type: "STATIC"
+      name: "Sha256Hash"
+      modelFingerprint: "7598F2E943901B06B3817725B3AEB691"
+      index: 2
+      valueUuid: "uuid1"
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "of"
+        parameters:
+        - name: "contents"
+          valueUuid: "of_byte[]1"
+        signature: "of(byte[]): Sha256Hash"
+        returnValueUuid: "of_sha256Hash1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "1C2AC5411D79052D18B0F430E4C7DD07"
+      index: 3
+      valueUuid: "of_sha256Hash1"
+    uuid: "2d9e451b-59ca-3da9-a6c7-f80da9bfa12e"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.io.File.toPath() : java.nio.file.Path"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.io.File"
+        parameters:
+        - name: "pathname"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "pathname1"
+            valueType: "java.lang.String"
+            uuid: "of_file1-pathname"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.io.File"
+      uuid: "of_file1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "of_sha256Hash1"
+      fixed: false
+      nameForMock: "Sha256Hash"
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "of_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "of_sha256Hash1"
+      fixed: false
+      nameForMock: "Sha256Hash"
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "newDigest"
+    signature: "newDigest() : java.security.MessageDigest"
+    sourceCodeSignature: "MessageDigest newDigest()"
+    tryCatchBlocks:
+    - idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.security.NoSuchAlgorithmException"
+    instructionFingerprint: "8A19A071F62C4F1BF34EDF6A8902E305"
+  paths:
+  - pathId: "path1"
+    testPathName: "newDigestTest"
+    modelFingerprint: "1311F76846F948196A1DFA03AD0FFE35"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "C2EE43DCFA31213221BAA7B9FC887413"
+      index: 1
+      valueUuid: "newDigest_messageDigest1"
+    uuid: "864b40bf-1d57-3bcc-af03-b58d82f51832"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.security.MessageDigest"
+        method: "getInstance"
+        methodParameters:
+        - value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "SHA-256"
+            valueType: "java.lang.String"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.security.MessageDigest"
+      uuid: "newDigest_messageDigest1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "newDigestWhenCaughtNoSuchAlgorithmExceptionThrowsRuntimeException"
+    modelFingerprint: "0A3625649DC1E87D58FDF5187AAF3A48"
+    problemWasSolvedByProver: true
+    catchBlockExercised:
+      idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.security.NoSuchAlgorithmException"
+    truncated: false
+    inputParameters:
+    - type: "STATIC"
+      name: "MessageDigest"
+      modelFingerprint: "69462B9CC1D16395A413E551AB08D3B4"
+      index: 1
+      idsTryCatchBlockSurrounding:
+      - 1
+      valueUuid: "uuid2"
+      methodExercised:
+        target: "java.security.MessageDigest"
+        name: "getInstance"
+        parameters:
+        - name: "md"
+          valueUuid: "uuid1"
+        throwsExceptions:
+        - "java.security.NoSuchAlgorithmException"
+        signature: "getInstance(String): MessageDigest throws java.security.NoSuchAlgorithmException"
+        returnValueUuid: "newDigest_messageDigest1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "201035FFDDACCAB018FA392F27046821"
+      index: 2
+      valueUuid: "newDigest_runtimeException1"
+    uuid: "daff8898-8ab8-3bae-a579-334acf567191"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "MOCK"
+      valueType: "java.security.MessageDigest"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.security.NoSuchAlgorithmException"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.security.NoSuchAlgorithmException"
+      uuid: "newDigest_messageDigest1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "SHA-256"
+      valueType: "java.lang.String"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.RuntimeException"
+        parameters:
+        - name: "cause"
+          value:
+            sapientType: "EXCEPTION"
+            content: !<new>
+              target: "java.security.NoSuchAlgorithmException"
+              parameters: []
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "java.security.NoSuchAlgorithmException"
+            uuid: "newDigest_messageDigest1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "java.lang.RuntimeException"
+      uuid: "newDigest_runtimeException1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "hash"
+    signature: "hash(byte[]) : byte[]"
+    sourceCodeSignature: "byte[] hash(byte[] input)"
+    tryCatchBlocks:
+    - idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.security.NoSuchAlgorithmException"
+    instructionFingerprint: "4B6E76E89E500AB896BBAE44E5941AAA"
+  paths:
+  - pathId: "path1"
+    testPathName: "hashTest"
+    modelFingerprint: "86DA6032BB7879394A4EDE89B355E855"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "input"
+      modelFingerprint: "68E3083EC24107B5F413E2319428B6C2"
+      index: 1
+      valueUuid: "hash_byte[]1"
+    - type: "STATIC"
+      name: "Sha256Hash"
+      modelFingerprint: "E234C8FA209EDE5B90E5F98942DBE5CC"
+      index: 2
+      valueUuid: "uuid24"
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "hash"
+        parameters:
+        - name: "input"
+          valueUuid: "hash_byte[]1"
+        - name: "offset"
+          valueUuid: "uuid23"
+        - name: "length"
+          valueUuid: "hash_int1"
+        signature: "hash(byte[],int,int): byte[]"
+        returnValueUuid: "hash_byte[]2"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "740324D8AEEA83F5639543B37CAABC19"
+      index: 3
+      valueUuid: "hash_byte[]2"
+    uuid: "9d300d6c-ecd3-35df-b3af-b16008977eae"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "hash_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "uuid24"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "hash_byte[]2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "hash_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "uuid23"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "hash_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "hash_byte[]2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "hash"
+    signature: "hash(byte[],int,int) : byte[]"
+    sourceCodeSignature: "byte[] hash(byte[] input, int offset, int length)"
+    tryCatchBlocks:
+    - idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.security.NoSuchAlgorithmException"
+    instructionFingerprint: "92FFB89DF338FD37110538843DE80800"
+  paths:
+  - pathId: "path1"
+    testPathName: "hash1Test"
+    modelFingerprint: "BE43E75C97CF42C81EB2CA8E1BA0514B"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "input"
+      modelFingerprint: "160285FD932AED38E895D47DDFA16A26"
+      index: 1
+      valueUuid: "hash_byte[]1"
+    - type: "INPUT"
+      name: "offset"
+      modelFingerprint: "50F3967790793FB32EEE755BEBABA84A"
+      index: 2
+      valueUuid: "hash_int1"
+    - type: "INPUT"
+      name: "length"
+      modelFingerprint: "932DA830D2B6D1590319F7BA9641C623"
+      index: 3
+      valueUuid: "hash_int2"
+    - type: "STATIC"
+      name: "Sha256Hash"
+      modelFingerprint: "7C476B28A9C01FBBE1E1ACFD637D9055"
+      index: 4
+      valueUuid: "uuid1"
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "newDigest"
+        parameters: []
+        signature: "newDigest(): MessageDigest"
+        returnValueUuid: "hash_messageDigest1"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      name: "digest"
+      modelFingerprint: "E7CF17AE7DEBBDB0C737ED12926AE6D9"
+      index: 5
+      valueUuid: "hash_messageDigest1"
+      methodExercised:
+        target: "digest"
+        name: "update"
+        parameters:
+        - name: "input"
+          valueUuid: "hash_byte[]1"
+        - name: "offset"
+          valueUuid: "hash_int1"
+        - name: "len"
+          valueUuid: "hash_int2"
+        signature: "update(byte[],int,int): void"
+        returnValueUuid: "hash_void1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      name: "digest"
+      modelFingerprint: "DBD6EAF72917FE40B7F22A17591B1240"
+      index: 6
+      valueUuid: "hash_messageDigest1"
+      methodExercised:
+        target: "digest"
+        name: "digest"
+        parameters: []
+        signature: "digest(): byte[]"
+        returnValueUuid: "hash_byte[]2"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "420AB11124BCB9A5E2141E2524BEBE97"
+      index: 7
+      valueUuid: "hash_byte[]2"
+    uuid: "9a6afea5-f150-33e0-b814-a790d8114e7d"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "hash_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "hash_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 10
+      valueType: "int"
+      uuid: "hash_int2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.security.MessageDigest"
+      uuid: "hash_messageDigest1"
+      fixed: false
+      nameForMock: "MessageDigest"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.security.MessageDigest"
+      uuid: "hash_messageDigest1"
+      fixed: false
+      nameForMock: "MessageDigest"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "hash_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "hash_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "hash_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 10
+      valueType: "int"
+      uuid: "hash_int2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.security.MessageDigest"
+      uuid: "hash_messageDigest1"
+      fixed: false
+      nameForMock: "MessageDigest"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "NULL"
+      valueType: "byte[]"
+      uuid: "hash_byte[]2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "NULL"
+      valueType: "byte[]"
+      uuid: "hash_byte[]2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "hashTwice"
+    signature: "hashTwice(byte[]) : byte[]"
+    sourceCodeSignature: "byte[] hashTwice(byte[] input)"
+    tryCatchBlocks:
+    - idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.security.NoSuchAlgorithmException"
+    instructionFingerprint: "23F005949B2646ED3A89BB2A9435F432"
+  paths:
+  - pathId: "path1"
+    testPathName: "hashTwiceTest"
+    modelFingerprint: "2DA7BC32D558AF8A44B2916A35827D21"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "input"
+      modelFingerprint: "68E3083EC24107B5F413E2319428B6C2"
+      index: 1
+      valueUuid: "hashTwice_byte[]1"
+    - type: "STATIC"
+      name: "Sha256Hash"
+      modelFingerprint: "F8167ED652399425B4405369DE4F0B05"
+      index: 2
+      valueUuid: "uuid27"
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "hashTwice"
+        parameters:
+        - name: "input"
+          valueUuid: "hashTwice_byte[]1"
+        - name: "offset"
+          valueUuid: "uuid26"
+        - name: "length"
+          valueUuid: "hashTwice_int1"
+        signature: "hashTwice(byte[],int,int): byte[]"
+        returnValueUuid: "hashTwice_byte[]2"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "740324D8AEEA83F5639543B37CAABC19"
+      index: 3
+      valueUuid: "hashTwice_byte[]2"
+    uuid: "78ac4700-6677-322b-be13-ba4d455f88c9"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "hashTwice_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "uuid27"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "hashTwice_byte[]2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "hashTwice_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "uuid26"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "hashTwice_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "hashTwice_byte[]2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "hashTwice"
+    signature: "hashTwice(byte[],byte[]) : byte[]"
+    sourceCodeSignature: "byte[] hashTwice(byte[] input1, byte[] input2)"
+    tryCatchBlocks:
+    - idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.security.NoSuchAlgorithmException"
+    instructionFingerprint: "29AFB1C04F4C7397B3F8321DF7FCC915"
+  paths:
+  - pathId: "path1"
+    testPathName: "hashTwice1Test"
+    modelFingerprint: "967A4E3DD9DC3FD2F5AD45C43349340B"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "input1"
+      modelFingerprint: "9FA2635B54007173CDEE7C468AA0FD3E"
+      index: 1
+      valueUuid: "hashTwice_byte[]1"
+    - type: "INPUT"
+      name: "input2"
+      modelFingerprint: "693F9541E53E78ED74F757A46550ECD5"
+      index: 2
+      valueUuid: "hashTwice_byte[]2"
+    - type: "STATIC"
+      name: "Sha256Hash"
+      modelFingerprint: "7C476B28A9C01FBBE1E1ACFD637D9055"
+      index: 3
+      valueUuid: "uuid1"
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "newDigest"
+        parameters: []
+        signature: "newDigest(): MessageDigest"
+        returnValueUuid: "hashTwice_messageDigest1"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      name: "digest"
+      modelFingerprint: "F21482847FE1A8052CCF466CE5516075"
+      index: 4
+      valueUuid: "hashTwice_messageDigest1"
+      methodExercised:
+        target: "digest"
+        name: "update"
+        parameters:
+        - name: "input"
+          valueUuid: "hashTwice_byte[]1"
+        signature: "update(byte[]): void"
+        returnValueUuid: "hashTwice_void1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      name: "digest"
+      modelFingerprint: "F86CA4E77136AF52D2154E6824CF4834"
+      index: 5
+      valueUuid: "hashTwice_messageDigest1"
+      methodExercised:
+        target: "digest"
+        name: "update"
+        parameters:
+        - name: "input"
+          valueUuid: "hashTwice_byte[]2"
+        signature: "update(byte[]): void"
+        returnValueUuid: "hashTwice_void2"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      name: "digest"
+      modelFingerprint: "3D73D0EC9825AD0AC2B3B1FA484FCAFE"
+      index: 6
+      valueUuid: "hashTwice_messageDigest1"
+      methodExercised:
+        target: "digest"
+        name: "digest"
+        parameters: []
+        signature: "digest(): byte[]"
+        returnValueUuid: "hashTwice_byte[]3"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      name: "digest"
+      modelFingerprint: "BC268B9CFD6D3B2A84F475749A9AA86F"
+      index: 7
+      valueUuid: "hashTwice_messageDigest1"
+      methodExercised:
+        target: "digest"
+        name: "digest"
+        parameters:
+        - name: "input"
+          valueUuid: "hashTwice_byte[]3"
+        signature: "digest(byte[]): byte[]"
+        returnValueUuid: "hashTwice_byte[]4"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "420AB11124BCB9A5E2141E2524BEBE97"
+      index: 8
+      valueUuid: "hashTwice_byte[]4"
+    uuid: "f1ea7207-d566-3229-8475-08f8e2dc7b5b"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          1:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 2
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          2:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 3
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "hashTwice_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 4
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          1:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 5
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          2:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 6
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "hashTwice_byte[]2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.security.MessageDigest"
+      uuid: "hashTwice_messageDigest1"
+      fixed: false
+      nameForMock: "MessageDigest"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.security.MessageDigest"
+      uuid: "hashTwice_messageDigest1"
+      fixed: false
+      nameForMock: "MessageDigest"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "hashTwice_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          1:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 2
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          2:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 3
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "hashTwice_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.security.MessageDigest"
+      uuid: "hashTwice_messageDigest1"
+      fixed: false
+      nameForMock: "MessageDigest"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "hashTwice_void2"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 4
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          1:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 5
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          2:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 6
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "hashTwice_byte[]2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.security.MessageDigest"
+      uuid: "hashTwice_messageDigest1"
+      fixed: false
+      nameForMock: "MessageDigest"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "NULL"
+      valueType: "byte[]"
+      uuid: "hashTwice_byte[]3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.security.MessageDigest"
+      uuid: "hashTwice_messageDigest1"
+      fixed: false
+      nameForMock: "MessageDigest"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "NULL"
+      valueType: "byte[]"
+      uuid: "hashTwice_byte[]4"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "NULL"
+      valueType: "byte[]"
+      uuid: "hashTwice_byte[]3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "NULL"
+      valueType: "byte[]"
+      uuid: "hashTwice_byte[]4"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "hashTwice"
+    signature: "hashTwice(byte[],int,int) : byte[]"
+    sourceCodeSignature: "byte[] hashTwice(byte[] input, int offset, int length)"
+    tryCatchBlocks:
+    - idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.security.NoSuchAlgorithmException"
+    instructionFingerprint: "D3D07236EB956AE005BB27F041167300"
+  paths:
+  - pathId: "path1"
+    testPathName: "hashTwice2Test"
+    modelFingerprint: "69830D6DE454AEFC70D21220C394C85A"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "input"
+      modelFingerprint: "31E764E38B187D23082B82C51F361082"
+      index: 1
+      valueUuid: "hashTwice_byte[]1"
+    - type: "INPUT"
+      name: "offset"
+      modelFingerprint: "CE54242AD935D48AF0BA03B577FAB81E"
+      index: 2
+      valueUuid: "hashTwice_int1"
+    - type: "INPUT"
+      name: "length"
+      modelFingerprint: "8AE05FEFB40801A952622E806B6936F2"
+      index: 3
+      valueUuid: "hashTwice_int2"
+    - type: "STATIC"
+      name: "Sha256Hash"
+      modelFingerprint: "EC8A458EE94671920D6C5D15D5C5E1D8"
+      index: 4
+      valueUuid: "uuid29"
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "newDigest"
+        parameters: []
+        signature: "newDigest(): MessageDigest"
+        returnValueUuid: "hashTwice_messageDigest1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "740324D8AEEA83F5639543B37CAABC19"
+      index: 5
+      valueUuid: "hashTwice_byte[]3"
+    uuid: "e0cf1989-1a7e-3adc-aa06-c46ee43c16df"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.security.MessageDigest.update(byte[],int,int)\
+        \ : void"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "hashTwice_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "hashTwice_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "hashTwice_int2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "uuid29"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.security.MessageDigest"
+      uuid: "hashTwice_messageDigest1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "hashTwice_byte[]3"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "hashTwice"
+    signature: "hashTwice(byte[],int,int,byte[],int,int) : byte[]"
+    sourceCodeSignature: "byte[] hashTwice(byte[] input1, int offset1, int length1,\
+      \ byte[] input2, int offset2, int length2)"
+    tryCatchBlocks:
+    - idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.security.NoSuchAlgorithmException"
+    instructionFingerprint: "B36EC9ED1A7F2C82AC9C9ED437963555"
+  paths:
+  - pathId: "path1"
+    testPathName: "hashTwice3Test"
+    modelFingerprint: "64A306309C78575FD815BC1629C3E75A"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "input1"
+      modelFingerprint: "9FA2635B54007173CDEE7C468AA0FD3E"
+      index: 1
+      valueUuid: "hashTwice_byte[]1"
+    - type: "INPUT"
+      name: "offset1"
+      modelFingerprint: "FAA79CB5705DC9A2E7750782C095AD7F"
+      index: 2
+      valueUuid: "hashTwice_int1"
+    - type: "INPUT"
+      name: "length1"
+      modelFingerprint: "923324BCCB68C9A207EBF0E8B0046451"
+      index: 3
+      valueUuid: "hashTwice_int2"
+    - type: "INPUT"
+      name: "input2"
+      modelFingerprint: "693F9541E53E78ED74F757A46550ECD5"
+      index: 4
+      valueUuid: "hashTwice_byte[]2"
+    - type: "INPUT"
+      name: "offset2"
+      modelFingerprint: "35709A1646679B188ACD1E44C4132E77"
+      index: 5
+      valueUuid: "hashTwice_int3"
+    - type: "INPUT"
+      name: "length2"
+      modelFingerprint: "9097F6093B02BCFA99578E321DDF4BEA"
+      index: 6
+      valueUuid: "hashTwice_int4"
+    - type: "STATIC"
+      name: "Sha256Hash"
+      modelFingerprint: "7C476B28A9C01FBBE1E1ACFD637D9055"
+      index: 7
+      valueUuid: "uuid1"
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "newDigest"
+        parameters: []
+        signature: "newDigest(): MessageDigest"
+        returnValueUuid: "hashTwice_messageDigest1"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      name: "digest"
+      modelFingerprint: "FDB7CC9C9195B2A959FC267449FD0307"
+      index: 8
+      valueUuid: "hashTwice_messageDigest1"
+      methodExercised:
+        target: "digest"
+        name: "update"
+        parameters:
+        - name: "input"
+          valueUuid: "hashTwice_byte[]1"
+        - name: "offset"
+          valueUuid: "hashTwice_int1"
+        - name: "len"
+          valueUuid: "hashTwice_int2"
+        signature: "update(byte[],int,int): void"
+        returnValueUuid: "hashTwice_void1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      name: "digest"
+      modelFingerprint: "411038EA3A90A1C3D599419F183C85F8"
+      index: 9
+      valueUuid: "hashTwice_messageDigest1"
+      methodExercised:
+        target: "digest"
+        name: "update"
+        parameters:
+        - name: "input"
+          valueUuid: "hashTwice_byte[]2"
+        - name: "offset"
+          valueUuid: "hashTwice_int3"
+        - name: "len"
+          valueUuid: "hashTwice_int4"
+        signature: "update(byte[],int,int): void"
+        returnValueUuid: "hashTwice_void2"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      name: "digest"
+      modelFingerprint: "3D73D0EC9825AD0AC2B3B1FA484FCAFE"
+      index: 10
+      valueUuid: "hashTwice_messageDigest1"
+      methodExercised:
+        target: "digest"
+        name: "digest"
+        parameters: []
+        signature: "digest(): byte[]"
+        returnValueUuid: "hashTwice_byte[]3"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      name: "digest"
+      modelFingerprint: "BC268B9CFD6D3B2A84F475749A9AA86F"
+      index: 11
+      valueUuid: "hashTwice_messageDigest1"
+      methodExercised:
+        target: "digest"
+        name: "digest"
+        parameters:
+        - name: "input"
+          valueUuid: "hashTwice_byte[]3"
+        signature: "digest(byte[]): byte[]"
+        returnValueUuid: "hashTwice_byte[]4"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "420AB11124BCB9A5E2141E2524BEBE97"
+      index: 12
+      valueUuid: "hashTwice_byte[]4"
+    uuid: "53265721-292c-3c17-bad2-9687731ea2a7"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          1:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 2
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          2:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 3
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "hashTwice_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "hashTwice_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 3
+      valueType: "int"
+      uuid: "hashTwice_int2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 4
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          1:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 5
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          2:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 6
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "hashTwice_byte[]2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "hashTwice_int3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 3
+      valueType: "int"
+      uuid: "hashTwice_int4"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.security.MessageDigest"
+      uuid: "hashTwice_messageDigest1"
+      fixed: false
+      nameForMock: "MessageDigest"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.security.MessageDigest"
+      uuid: "hashTwice_messageDigest1"
+      fixed: false
+      nameForMock: "MessageDigest"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "hashTwice_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          1:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 2
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          2:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 3
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "hashTwice_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "hashTwice_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 3
+      valueType: "int"
+      uuid: "hashTwice_int2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.security.MessageDigest"
+      uuid: "hashTwice_messageDigest1"
+      fixed: false
+      nameForMock: "MessageDigest"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "hashTwice_void2"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 4
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          1:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 5
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          2:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 6
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "hashTwice_byte[]2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "hashTwice_int3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 3
+      valueType: "int"
+      uuid: "hashTwice_int4"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.security.MessageDigest"
+      uuid: "hashTwice_messageDigest1"
+      fixed: false
+      nameForMock: "MessageDigest"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "NULL"
+      valueType: "byte[]"
+      uuid: "hashTwice_byte[]3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.security.MessageDigest"
+      uuid: "hashTwice_messageDigest1"
+      fixed: false
+      nameForMock: "MessageDigest"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "NULL"
+      valueType: "byte[]"
+      uuid: "hashTwice_byte[]4"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "NULL"
+      valueType: "byte[]"
+      uuid: "hashTwice_byte[]3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "NULL"
+      valueType: "byte[]"
+      uuid: "hashTwice_byte[]4"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "equals"
+    signature: "equals(java.lang.Object) : boolean"
+    sourceCodeSignature: "boolean equals(Object o)"
+    instructionFingerprint: "28331C901689FEDC721ADAF800C2EE92"
+  paths:
+  - pathId: "path1"
+    testPathName: "equalsWhenThisEqualsO"
+    constructorSignature: "twiceOf(byte[],byte[]) : org.bitcoinj.base.Sha256Hash"
+    modelFingerprint: "65D07810E47FF93F7F387D1C5A6FD4A5"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "5b7cf5ba-f3cc-35d0-9b4a-3392d3a68eed"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path4"
+    testPathName: "equalsWhenOIsNull"
+    constructorSignature: "twiceOf(byte[],byte[]) : org.bitcoinj.base.Sha256Hash"
+    modelFingerprint: "7449BEF3356F9AE47052C7E2CF2C610C"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "a2108c4d-bcbc-39b5-8254-0588b654f131"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path2"
+    testPathName: "equalsWhenGetClassNotEqualsOGetClass"
+    constructorSignature: "twiceOf(byte[],byte[]) : org.bitcoinj.base.Sha256Hash"
+    modelFingerprint: "3C10855CEE508C05B110812EE94C466D"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "6e6a0f87-c9aa-3e31-af0a-46c9467f5ce0"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path3"
+    testPathName: "equalsWhenGetClassEqualsOGetClass"
+    constructorSignature: "twiceOf(byte[],byte[]) : org.bitcoinj.base.Sha256Hash"
+    modelFingerprint: "E386440C44275DAE2663E11946AC83FA"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "4b4f1e22-35ee-3a71-b90c-8976fef45b2b"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "toString"
+    signature: "toString() : java.lang.String"
+    sourceCodeSignature: "String toString()"
+    instructionFingerprint: "B2E3D5D7D5BC679D5AC76C3545FA3CAC"
+  paths:
+  - pathId: "path1"
+    testPathName: "toStringTest"
+    constructorSignature: "twiceOf(byte[],byte[]) : org.bitcoinj.base.Sha256Hash"
+    modelFingerprint: "FE1BC3F23D76100A33BD98B71A493DB6"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "85919D51E192945581D7926963927784"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "Sha256Hash"
+      modelFingerprint: "7AE243ECFCBBB2D4F1748957860A09D4"
+      index: 2
+      valueUuid: "uuid42"
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "hashTwice"
+        parameters:
+        - name: "input1"
+          valueUuid: "twiceOf_byte[]1"
+        - name: "input2"
+          valueUuid: "twiceOf_byte[]2"
+        signature: "hashTwice(byte[],byte[]): byte[]"
+        returnValueUuid: "twiceOf_byte[]3"
+        access: 9
+    - type: "STATIC"
+      name: "Sha256Hash"
+      modelFingerprint: "CEBE22911E18CAB985D94F461E798AED"
+      index: 3
+      valueUuid: "uuid43"
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "wrap"
+        parameters:
+        - name: "rawHashBytes"
+          valueUuid: "twiceOf_byte[]3"
+        signature: "wrap(byte[]): Sha256Hash"
+        returnValueUuid: "twiceOf_sha256Hash1"
+        access: 9
+    - type: "STATIC"
+      name: "ByteUtils"
+      modelFingerprint: "B13123DC143DCAD0D1061A99E7BF116B"
+      index: 4
+      valueUuid: "uuid44"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.ByteUtils"
+        name: "formatHex"
+        parameters:
+        - name: "bytes"
+          valueUuid: "<clinit>_byte[]1"
+        signature: "formatHex(byte[]): String"
+        returnValueUuid: "toString_string1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D1F433D4EB9F8805FF391E82DAB508AB"
+      index: 5
+      valueUuid: "toString_string1"
+    uuid: "363d3698-f34c-39ad-914f-376a19498023"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "UNKNOWN_REASON"
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.Sha256Hash"
+        method: "twiceOf"
+        methodParameters:
+        - name: "content1"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "twiceOf_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "content2"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "twiceOf_byte[]2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "uuid42"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "uuid43"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "twiceOf_sha256Hash1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.ByteUtils"
+      uuid: "uuid44"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "return_of_formatHex1"
+      valueType: "java.lang.String"
+      uuid: "toString_string1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "NULL"
+      valueType: "byte[]"
+      uuid: "<clinit>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "return_of_formatHex1"
+      valueType: "java.lang.String"
+      uuid: "toString_string1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "toBigInteger"
+    signature: "toBigInteger() : java.math.BigInteger"
+    sourceCodeSignature: "BigInteger toBigInteger()"
+    instructionFingerprint: "18F1A56C822FB4BDE781AAD51EEB89EC"
+  paths:
+  - pathId: "path1"
+    testPathName: "toBigIntegerTest"
+    constructorSignature: "twiceOf(byte[],byte[]) : org.bitcoinj.base.Sha256Hash"
+    modelFingerprint: "C06D44B0CA6FD98253B349F050DF763B"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "85919D51E192945581D7926963927784"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "Sha256Hash"
+      modelFingerprint: "7AE243ECFCBBB2D4F1748957860A09D4"
+      index: 2
+      valueUuid: "uuid45"
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "hashTwice"
+        parameters:
+        - name: "input1"
+          valueUuid: "twiceOf_byte[]1"
+        - name: "input2"
+          valueUuid: "twiceOf_byte[]2"
+        signature: "hashTwice(byte[],byte[]): byte[]"
+        returnValueUuid: "twiceOf_byte[]3"
+        access: 9
+    - type: "STATIC"
+      name: "Sha256Hash"
+      modelFingerprint: "CEBE22911E18CAB985D94F461E798AED"
+      index: 3
+      valueUuid: "uuid46"
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "wrap"
+        parameters:
+        - name: "rawHashBytes"
+          valueUuid: "twiceOf_byte[]3"
+        signature: "wrap(byte[]): Sha256Hash"
+        returnValueUuid: "twiceOf_sha256Hash1"
+        access: 9
+    - type: "STATIC"
+      name: "ByteUtils"
+      modelFingerprint: "44CC23EB165867604F63AD90317C96A0"
+      index: 4
+      valueUuid: "uuid47"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.ByteUtils"
+        name: "bytesToBigInteger"
+        parameters:
+        - name: "bytes"
+          valueUuid: "<clinit>_byte[]1"
+        signature: "bytesToBigInteger(byte[]): BigInteger"
+        returnValueUuid: "toBigInteger_bigInteger1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "39858E7460629D8C6301CCF0A20F4ABA"
+      index: 5
+      valueUuid: "toBigInteger_bigInteger1"
+    uuid: "1f842de1-beeb-323a-86bc-a9b438a7a3f9"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "UNKNOWN_REASON"
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.Sha256Hash"
+        method: "twiceOf"
+        methodParameters:
+        - name: "content1"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "twiceOf_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "content2"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "twiceOf_byte[]2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "uuid45"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "uuid46"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "twiceOf_sha256Hash1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.ByteUtils"
+      uuid: "uuid47"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "java.math.BigInteger"
+      uuid: "toBigInteger_bigInteger1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "NULL"
+      valueType: "byte[]"
+      uuid: "<clinit>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "java.math.BigInteger"
+      uuid: "toBigInteger_bigInteger1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "getBytes"
+    signature: "getBytes() : byte[]"
+    sourceCodeSignature: "byte[] getBytes()"
+    instructionFingerprint: "773AD1DB7192A9EF4688E9E253725F0B"
+  paths:
+  - pathId: "path1"
+    testPathName: "getBytesTest"
+    constructorSignature: "twiceOf(byte[],byte[]) : org.bitcoinj.base.Sha256Hash"
+    modelFingerprint: "549D4FC1932B29EFA0ACFA7FD87D42A1"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "f89e7b07-fc15-38a9-aee1-70a3f82876a8"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "serialize"
+    signature: "serialize() : byte[]"
+    sourceCodeSignature: "byte[] serialize()"
+    instructionFingerprint: "6CED7305C83FD675209745CFBDEBCBBC"
+  paths:
+  - pathId: "path1"
+    testPathName: "serializeTest"
+    constructorSignature: "twiceOf(byte[],byte[]) : org.bitcoinj.base.Sha256Hash"
+    modelFingerprint: "7700CA98BDB54195660CAE98DC064767"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "85919D51E192945581D7926963927784"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "Sha256Hash"
+      modelFingerprint: "7AE243ECFCBBB2D4F1748957860A09D4"
+      index: 2
+      valueUuid: "uuid50"
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "hashTwice"
+        parameters:
+        - name: "input1"
+          valueUuid: "twiceOf_byte[]1"
+        - name: "input2"
+          valueUuid: "twiceOf_byte[]2"
+        signature: "hashTwice(byte[],byte[]): byte[]"
+        returnValueUuid: "twiceOf_byte[]3"
+        access: 9
+    - type: "STATIC"
+      name: "Sha256Hash"
+      modelFingerprint: "CEBE22911E18CAB985D94F461E798AED"
+      index: 3
+      valueUuid: "uuid51"
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "wrap"
+        parameters:
+        - name: "rawHashBytes"
+          valueUuid: "twiceOf_byte[]3"
+        signature: "wrap(byte[]): Sha256Hash"
+        returnValueUuid: "twiceOf_sha256Hash1"
+        access: 9
+    - type: "STATIC"
+      name: "ByteUtils"
+      modelFingerprint: "3CB16891E00090D7A9EEF5710A28F5B3"
+      index: 4
+      valueUuid: "uuid52"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.ByteUtils"
+        name: "reverseBytes"
+        parameters:
+        - name: "i"
+          valueUuid: "<clinit>_byte[]1"
+        signature: "reverseBytes(byte[]): byte[]"
+        returnValueUuid: "serialize_byte[]1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "740324D8AEEA83F5639543B37CAABC19"
+      index: 5
+      valueUuid: "serialize_byte[]1"
+    uuid: "9d328af1-2293-3544-bbbc-a0683c1f9fbe"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "UNKNOWN_REASON"
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.Sha256Hash"
+        method: "twiceOf"
+        methodParameters:
+        - name: "content1"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "twiceOf_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "content2"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "twiceOf_byte[]2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "uuid50"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "uuid51"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "twiceOf_sha256Hash1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.ByteUtils"
+      uuid: "uuid52"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "serialize_byte[]1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "NULL"
+      valueType: "byte[]"
+      uuid: "<clinit>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "serialize_byte[]1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "getReversedBytes"
+    signature: "getReversedBytes() : byte[]"
+    sourceCodeSignature: "byte[] getReversedBytes()"
+    instructionFingerprint: "5329859E0E633F4AE1F00B555258CC07"
+  paths:
+  - pathId: "path1"
+    testPathName: "getReversedBytesTest"
+    constructorSignature: "twiceOf(byte[],byte[]) : org.bitcoinj.base.Sha256Hash"
+    modelFingerprint: "FF20FDA8CE9A136D6D81A198643FAAB4"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "85919D51E192945581D7926963927784"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "Sha256Hash"
+      modelFingerprint: "7AE243ECFCBBB2D4F1748957860A09D4"
+      index: 2
+      valueUuid: "uuid53"
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "hashTwice"
+        parameters:
+        - name: "input1"
+          valueUuid: "twiceOf_byte[]1"
+        - name: "input2"
+          valueUuid: "twiceOf_byte[]2"
+        signature: "hashTwice(byte[],byte[]): byte[]"
+        returnValueUuid: "twiceOf_byte[]3"
+        access: 9
+    - type: "STATIC"
+      name: "Sha256Hash"
+      modelFingerprint: "CEBE22911E18CAB985D94F461E798AED"
+      index: 3
+      valueUuid: "uuid54"
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "wrap"
+        parameters:
+        - name: "rawHashBytes"
+          valueUuid: "twiceOf_byte[]3"
+        signature: "wrap(byte[]): Sha256Hash"
+        returnValueUuid: "twiceOf_sha256Hash1"
+        access: 9
+    - type: "STATIC"
+      name: "ByteUtils"
+      modelFingerprint: "3CB16891E00090D7A9EEF5710A28F5B3"
+      index: 4
+      valueUuid: "uuid55"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.ByteUtils"
+        name: "reverseBytes"
+        parameters:
+        - name: "i"
+          valueUuid: "<clinit>_byte[]1"
+        signature: "reverseBytes(byte[]): byte[]"
+        returnValueUuid: "serialize_byte[]1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "740324D8AEEA83F5639543B37CAABC19"
+      index: 5
+      valueUuid: "serialize_byte[]1"
+    uuid: "af8de4b5-d82f-350a-889c-fa470726d745"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "UNKNOWN_REASON"
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.Sha256Hash"
+        method: "twiceOf"
+        methodParameters:
+        - name: "content1"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "twiceOf_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "content2"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "twiceOf_byte[]2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "uuid53"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "uuid54"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "twiceOf_sha256Hash1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.ByteUtils"
+      uuid: "uuid55"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "serialize_byte[]1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "NULL"
+      valueType: "byte[]"
+      uuid: "<clinit>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "serialize_byte[]1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "write"
+    signature: "write(java.nio.ByteBuffer) : java.nio.ByteBuffer"
+    sourceCodeSignature: "ByteBuffer write(ByteBuffer buf)"
+    instructionFingerprint: "4B1EB24021791641CD9131C39A8A933C"
+  paths:
+  - pathId: "path1"
+    testPathName: "writeTest"
+    constructorSignature: "twiceOf(byte[],byte[]) : org.bitcoinj.base.Sha256Hash"
+    modelFingerprint: "0B1B5AA5F5148E6633014B878B5DE7B3"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "8892A6C9B3ED6B35F285B6F9364F9217"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "buf"
+      modelFingerprint: "88349328A64E3633806DF95A0261611B"
+      index: 2
+      valueUuid: "write_byteBuffer1"
+    - type: "STATIC"
+      name: "Sha256Hash"
+      modelFingerprint: "73DAC19CC23DB0296B83BEF2B236DC49"
+      index: 3
+      valueUuid: "uuid1"
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "hashTwice"
+        parameters:
+        - name: "input1"
+          valueUuid: "twiceOf_byte[]1"
+        - name: "input2"
+          valueUuid: "twiceOf_byte[]2"
+        signature: "hashTwice(byte[],byte[]): byte[]"
+        returnValueUuid: "twiceOf_byte[]3"
+        access: 9
+    - type: "STATIC"
+      name: "Sha256Hash"
+      modelFingerprint: "CEBE22911E18CAB985D94F461E798AED"
+      index: 4
+      valueUuid: "uuid2"
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "wrap"
+        parameters:
+        - name: "rawHashBytes"
+          valueUuid: "twiceOf_byte[]3"
+        signature: "wrap(byte[]): Sha256Hash"
+        returnValueUuid: "twiceOf_sha256Hash1"
+        access: 9
+    - type: "STATIC"
+      name: "ByteUtils"
+      modelFingerprint: "ABF748E6AF6F4C7CBD4C4F17BF100AF3"
+      index: 5
+      valueUuid: "uuid3"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.ByteUtils"
+        name: "reverseBytes"
+        parameters:
+        - name: "i"
+          valueUuid: "<clinit>_byte[]1"
+        signature: "reverseBytes(byte[]): byte[]"
+        returnValueUuid: "serialize_byte[]1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "5D6E5FE0C67AA614B6A4E47A230639AA"
+      index: 6
+      valueUuid: "write_byteBuffer1"
+    uuid: "74367ac6-67d1-3ba8-9bdd-4aafa43d4139"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "UNKNOWN_REASON"
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.Sha256Hash"
+        method: "twiceOf"
+        methodParameters:
+        - name: "content1"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "twiceOf_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "content2"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "twiceOf_byte[]2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "write_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "twiceOf_sha256Hash1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.ByteUtils"
+      uuid: "uuid3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "serialize_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "NULL"
+      valueType: "byte[]"
+      uuid: "<clinit>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "write_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "compareTo"
+    signature: "compareTo(org.bitcoinj.base.Sha256Hash) : int"
+    sourceCodeSignature: "int compareTo(final Sha256Hash other)"
+    instructionFingerprint: "A5184EA5F7E1E05E8008CE5A9091BE0F"
+  paths:
+  - pathId: "path1"
+    testPathName: "compareToWhenThisByteGreaterThanOtherByte"
+    constructorSignature: "twiceOf(byte[],byte[]) : org.bitcoinj.base.Sha256Hash"
+    modelFingerprint: "E507372D0F8E6B6C9C0AB4AE9C2DABF6"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "69DAB8AD8C8FFACD65DD24762A2D41AF"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "other"
+      modelFingerprint: "25EE57BB066CADA0EFDC070755C16B6D"
+      index: 2
+      valueUuid: "compareTo_sha256Hash1"
+    - type: "STATIC"
+      name: "Sha256Hash"
+      modelFingerprint: "E0DA9873D6A74CA05227562337D5D096"
+      index: 3
+      valueUuid: "uuid1"
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "hashTwice"
+        parameters:
+        - name: "input1"
+          valueUuid: "twiceOf_byte[]1"
+        - name: "input2"
+          valueUuid: "twiceOf_byte[]2"
+        signature: "hashTwice(byte[],byte[]): byte[]"
+        returnValueUuid: "twiceOf_byte[]3"
+        access: 9
+    - type: "STATIC"
+      name: "Sha256Hash"
+      modelFingerprint: "18C7296704D142F0EF9C7F0CD7CD6174"
+      index: 4
+      valueUuid: "uuid2"
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "wrap"
+        parameters:
+        - name: "rawHashBytes"
+          valueUuid: "twiceOf_byte[]3"
+        signature: "wrap(byte[]): Sha256Hash"
+        returnValueUuid: "twiceOf_sha256Hash1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "07B9F5C7EDC82C98858A3592D8BDC804"
+      index: 5
+      valueUuid: "uuid3"
+    uuid: "44e07f67-963f-3a27-9290-b547f1375318"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.Sha256Hash"
+        method: "twiceOf"
+        methodParameters:
+        - name: "content1"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "byte[]"
+            uuid: "twiceOf_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "content2"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "byte[]"
+            uuid: "twiceOf_byte[]2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.Sha256Hash"
+        method: "read"
+        methodParameters:
+        - name: "buf"
+          value:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "java.nio.ByteBuffer"
+              method: "allocateDirect"
+              methodParameters:
+              - name: "capacity"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 64
+                  valueType: "int"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "java.nio.ByteBuffer"
+            uuid: "compareTo_sha256Hash1-buf"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "compareTo_sha256Hash1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "twiceOf_sha256Hash1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 1
+      valueType: "int"
+      uuid: "uuid3"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "compareToWhenThisByteLessThanOtherByte"
+    constructorSignature: "twiceOf(byte[],byte[]) : org.bitcoinj.base.Sha256Hash"
+    modelFingerprint: "A1050A7B4C38D54E458C8F9D31E20B32"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "69DAB8AD8C8FFACD65DD24762A2D41AF"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "other"
+      modelFingerprint: "25EE57BB066CADA0EFDC070755C16B6D"
+      index: 2
+      valueUuid: "compareTo_sha256Hash1"
+    - type: "STATIC"
+      name: "Sha256Hash"
+      modelFingerprint: "E0DA9873D6A74CA05227562337D5D096"
+      index: 3
+      valueUuid: "uuid1"
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "hashTwice"
+        parameters:
+        - name: "input1"
+          valueUuid: "twiceOf_byte[]1"
+        - name: "input2"
+          valueUuid: "twiceOf_byte[]2"
+        signature: "hashTwice(byte[],byte[]): byte[]"
+        returnValueUuid: "twiceOf_byte[]3"
+        access: 9
+    - type: "STATIC"
+      name: "Sha256Hash"
+      modelFingerprint: "18C7296704D142F0EF9C7F0CD7CD6174"
+      index: 4
+      valueUuid: "uuid2"
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "wrap"
+        parameters:
+        - name: "rawHashBytes"
+          valueUuid: "twiceOf_byte[]3"
+        signature: "wrap(byte[]): Sha256Hash"
+        returnValueUuid: "twiceOf_sha256Hash1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "E7B3BE5AC36FECF744FC9BF7388A79A5"
+      index: 5
+      valueUuid: "uuid3"
+    uuid: "e3ac1708-671d-3cbd-a87a-ed5dcaebdffd"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.Sha256Hash"
+        method: "twiceOf"
+        methodParameters:
+        - name: "content1"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "byte[]"
+            uuid: "twiceOf_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "content2"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "byte[]"
+            uuid: "twiceOf_byte[]2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.Sha256Hash"
+        method: "read"
+        methodParameters:
+        - name: "buf"
+          value:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "java.nio.ByteBuffer"
+              method: "allocateDirect"
+              methodParameters:
+              - name: "capacity"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 64
+                  valueType: "int"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "java.nio.ByteBuffer"
+            uuid: "compareTo_sha256Hash1-buf"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "compareTo_sha256Hash1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "twiceOf_sha256Hash1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: -1
+      valueType: "int"
+      uuid: "uuid3"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path3"
+    testPathName: "compareToWhenThisByteNotLessThanOtherByte"
+    constructorSignature: "twiceOf(byte[],byte[]) : org.bitcoinj.base.Sha256Hash"
+    modelFingerprint: "BE5473456EF38F5283D8B2BFEB783CF6"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "69DAB8AD8C8FFACD65DD24762A2D41AF"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "other"
+      modelFingerprint: "25EE57BB066CADA0EFDC070755C16B6D"
+      index: 2
+      valueUuid: "compareTo_sha256Hash1"
+    - type: "STATIC"
+      name: "Sha256Hash"
+      modelFingerprint: "E0DA9873D6A74CA05227562337D5D096"
+      index: 3
+      valueUuid: "uuid1"
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "hashTwice"
+        parameters:
+        - name: "input1"
+          valueUuid: "twiceOf_byte[]1"
+        - name: "input2"
+          valueUuid: "twiceOf_byte[]2"
+        signature: "hashTwice(byte[],byte[]): byte[]"
+        returnValueUuid: "twiceOf_byte[]3"
+        access: 9
+    - type: "STATIC"
+      name: "Sha256Hash"
+      modelFingerprint: "18C7296704D142F0EF9C7F0CD7CD6174"
+      index: 4
+      valueUuid: "uuid2"
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "wrap"
+        parameters:
+        - name: "rawHashBytes"
+          valueUuid: "twiceOf_byte[]3"
+        signature: "wrap(byte[]): Sha256Hash"
+        returnValueUuid: "twiceOf_sha256Hash1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "158A76FAE4C1E5741587C22A6148B6F0"
+      index: 5
+      valueUuid: "uuid3"
+    uuid: "51259a53-7681-3584-a930-5f0b5fa7bf75"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.Sha256Hash"
+        method: "twiceOf"
+        methodParameters:
+        - name: "content1"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "byte[]"
+            uuid: "twiceOf_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "content2"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "byte"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "byte[]"
+            uuid: "twiceOf_byte[]2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.Sha256Hash"
+        method: "read"
+        methodParameters:
+        - name: "buf"
+          value:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "java.nio.ByteBuffer"
+              method: "allocateDirect"
+              methodParameters:
+              - name: "capacity"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 64
+                  valueType: "int"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "java.nio.ByteBuffer"
+            uuid: "compareTo_sha256Hash1-buf"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "compareTo_sha256Hash1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "twiceOf_sha256Hash1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "twiceOf_byte[]3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "uuid3"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false

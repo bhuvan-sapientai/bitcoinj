@@ -1,0 +1,327 @@
+---
+modelFingerprint: "91710B184A911A65392CB39CDA33130C"
+methods:
+- method:
+    name: "select"
+    signature: "select(org.bitcoinj.base.Coin,java.util.List<org.bitcoinj.core.TransactionOutput>)\
+      \ : org.bitcoinj.wallet.CoinSelection"
+    sourceCodeSignature: "CoinSelection select(Coin target, List<TransactionOutput>\
+      \ candidates)"
+    instructionFingerprint: "F079CC09BDD7BB4A9298C5D43C3CE51A"
+  paths:
+  - pathId: "path1"
+    testPathName: "selectWhenSpentNotContainsOutputGetOutPointFor"
+    constructorSignature: "<init>(org.bitcoinj.wallet.CoinSelector,java.util.List<org.bitcoinj.core.TransactionOutPoint>)\
+      \ : void"
+    modelFingerprint: "3A75DB815A1C9830FB9EB6C1FE27D66C"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "180EB5ACDF7F8AAA6FE68C872C5CD050"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "target"
+      modelFingerprint: "C0A367A4650CCC2A29CCC62180F6C513"
+      index: 2
+      valueUuid: "select_coin1"
+    - type: "INPUT"
+      name: "candidates"
+      modelFingerprint: "6B2F6D80F3E781D5B8308C7F19349316"
+      index: 3
+      valueUuid: "select_list1"
+    - type: "LOCAL_VARIABLE"
+      name: "output"
+      modelFingerprint: "C224710DCFC71AC2E6171BA2D22BAD36"
+      index: 4
+      valueUuid: "select_list1-0"
+      methodExercised:
+        target: "output"
+        name: "getOutPointFor"
+        parameters: []
+        signature: "getOutPointFor(): TransactionOutPoint"
+        returnValueUuid: "lambda$select$0_transactionOutPoint1"
+        access: 1
+    - type: "STATIC"
+      name: "StreamUtils"
+      modelFingerprint: "79790DA89EEA4CBA399C7CB8EF4F8885"
+      index: 5
+      valueUuid: "uuid1"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.StreamUtils"
+        name: "toUnmodifiableList"
+        parameters: []
+        signature: "toUnmodifiableList(): Collector"
+        returnValueUuid: "select_collector1"
+        access: 9
+    - type: "FIELD"
+      name: "delegate"
+      modelFingerprint: "D8ADCDE036E9CF5DB4648A07A65707C4"
+      index: 6
+      valueUuid: "<init>_coinSelector1"
+      methodExercised:
+        target: "this.delegate"
+        name: "select"
+        parameters:
+        - name: "arg0"
+          valueUuid: "select_coin1"
+        - name: "arg1"
+          valueUuid: "select_object1"
+        signature: "select(Coin,List): CoinSelection"
+        returnValueUuid: "select_coinSelection1"
+        access: 1025
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "6607C101ACC0EF1064FDD24381B8E72C"
+      index: 7
+      valueUuid: "select_coinSelection1"
+    uuid: "9e2ce5b6-94bc-30f3-943d-762a6bc97ad7"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "COLLECTION_CONTAINS_EXPRESSION_FAILURE"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.wallet.FilteringCoinSelector"
+        parameters:
+        - name: "delegate"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.wallet.CoinSelector"
+            uuid: "<init>_coinSelector1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "excludedOutPoints"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              collectionClass: "java.util.ArrayList"
+              parameters: []
+              values:
+              - sapientType: "OBJECT"
+                content: !<new>
+                  target: "org.bitcoinj.core.TransactionOutPoint"
+                  parameters:
+                  - name: "index"
+                    value:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 0
+                      valueType: "long"
+                      uuid: "<init>_list1-0-index"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                  - name: "hash"
+                    value:
+                      sapientType: "MOCK"
+                      valueType: "org.bitcoinj.base.Sha256Hash"
+                      uuid: "<init>_list1-0-hash"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                  privateConstructor: false
+                  createdByTargetCode: false
+                valueType: "org.bitcoinj.core.TransactionOutPoint"
+                uuid: "<init>_list1-0"
+                fixed: false
+                collectionUuid: "<init>_list1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            valueType: "java.util.List"
+            genericValueType: "org.bitcoinj.core.TransactionOutPoint"
+            uuid: "<init>_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.wallet.FilteringCoinSelector"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.Coin"
+        method: "valueOf"
+        methodParameters:
+        - name: "satoshis"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "select_coin1-satoshis"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.Coin"
+      uuid: "select_coin1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        collectionClass: "java.util.ArrayList"
+        parameters: []
+        values:
+        - sapientType: "OBJECT"
+          content: !<new>
+            target: "org.bitcoinj.core.TransactionOutput"
+            parameters:
+            - name: "parent"
+              value:
+                sapientType: "MOCK"
+                valueType: "org.bitcoinj.core.Transaction"
+                uuid: "select_list1-0-parent"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "value"
+              value:
+                sapientType: "MOCK"
+                valueType: "org.bitcoinj.base.Coin"
+                uuid: "select_list1-0-value"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "scriptBytes"
+              value:
+                sapientType: "ARRAY"
+                content: !<array>
+                  values: {}
+                valueType: "byte[]"
+                uuid: "select_list1-0-scriptBytes"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "org.bitcoinj.core.TransactionOutput"
+          uuid: "select_list1-0"
+          fixed: false
+          collectionUuid: "select_list1"
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+      valueType: "java.util.List"
+      genericValueType: "org.bitcoinj.core.TransactionOutput"
+      uuid: "select_list1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.TransactionOutput"
+        parameters:
+        - name: "parent"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.core.Transaction"
+            uuid: "select_list1-0-parent"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Coin"
+            uuid: "select_list1-0-value"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "scriptBytes"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "select_list1-0-scriptBytes"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.core.TransactionOutput"
+      uuid: "select_list1-0"
+      fixed: false
+      collectionUuid: "select_list1"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.TransactionOutPoint"
+      uuid: "lambda$select$0_transactionOutPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.StreamUtils"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.internal.StreamUtils"
+        method: "toUnmodifiableList"
+        methodParameters: []
+      valueType: "java.util.stream.Collector"
+      uuid: "select_collector1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.wallet.CoinSelector"
+      uuid: "<init>_coinSelector1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.wallet.CoinSelection"
+      uuid: "select_coinSelection1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.Coin"
+        method: "valueOf"
+        methodParameters:
+        - name: "satoshis"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "select_coin1-satoshis"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.Coin"
+      uuid: "select_coin1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        parameters: []
+        values: []
+      valueType: "java.util.List"
+      uuid: "select_object1"
+      fixed: false
+      collectionUuid: "select_list2"
+      equalsMethodPresent: false
+      explicitCastNeeded: true
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.wallet.CoinSelection"
+      uuid: "select_coinSelection1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false

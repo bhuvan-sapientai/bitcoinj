@@ -1,0 +1,2672 @@
+---
+modelFingerprint: "9D04368F20536CEA0A4A388600762888"
+methods:
+- method:
+    name: "redeemP2WPKH"
+    signature: "redeemP2WPKH(org.bitcoinj.crypto.TransactionSignature,org.bitcoinj.crypto.ECKey)\
+      \ : org.bitcoinj.core.TransactionWitness"
+    sourceCodeSignature: "TransactionWitness redeemP2WPKH(@Nullable TransactionSignature\
+      \ signature, ECKey pubKey)"
+    instructionFingerprint: "A904ADFDC350DEAFC9912EC20B6313B2"
+  paths:
+  - pathId: "path1"
+    testPathName: "redeemP2WPKHWhenSignatureIsNotNull"
+    modelFingerprint: "3A2B531E3D2688F274F2614DF15D8080"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "signature"
+      modelFingerprint: "D6FF5362EF74DD424606B60D8F915DFF"
+      index: 1
+      valueUuid: "redeemP2WPKH_transactionSignature1"
+    - type: "INPUT"
+      name: "pubKey"
+      modelFingerprint: "124C17BD92B84F7B89270970D3E9BA4F"
+      index: 2
+      valueUuid: "redeemP2WPKH_eCKey1"
+    - type: "LOCAL_VARIABLE"
+      name: "pubKey"
+      modelFingerprint: "01AE41460FE247E9DE28530EB1979D92"
+      index: 3
+      valueUuid: "redeemP2WPKH_eCKey1"
+      methodExercised:
+        target: "pubKey"
+        name: "isCompressed"
+        parameters: []
+        signature: "isCompressed(): boolean"
+        returnValueUuid: "redeemP2WPKH_boolean1"
+        access: 1
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "A3C9A66787E8779386C502876A29BDCE"
+      index: 4
+      valueUuid: "uuid2"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "redeemP2WPKH_boolean1"
+        - name: "messageSupplier"
+          valueUuid: "uuid1"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "redeemP2WPKH_void1"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      name: "signature"
+      modelFingerprint: "A499290BE996013F9DA20F1935954C52"
+      index: 5
+      valueUuid: "redeemP2WPKH_transactionSignature1"
+      methodExercised:
+        target: "signature"
+        name: "encodeToBitcoin"
+        parameters: []
+        signature: "encodeToBitcoin(): byte[]"
+        returnValueUuid: "redeemP2WPKH_byte[]1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      name: "pubKey"
+      modelFingerprint: "E8CC71C57D5FE22B7EA34F376F4790D1"
+      index: 6
+      valueUuid: "redeemP2WPKH_eCKey1"
+      methodExercised:
+        target: "pubKey"
+        name: "getPubKey"
+        parameters: []
+        signature: "getPubKey(): byte[]"
+        returnValueUuid: "redeemP2WPKH_byte[]2"
+        access: 1
+    - type: "STATIC"
+      name: "TransactionWitness"
+      modelFingerprint: "3F8AC61093168BC799274E4B33E07075"
+      index: 7
+      valueUuid: "uuid3"
+      methodExercised:
+        target: "org.bitcoinj.core.TransactionWitness"
+        name: "of"
+        parameters:
+        - name: "pushes"
+          valueUuid: "redeemP2WPKH_arrayList1"
+        signature: "of(List): TransactionWitness"
+        returnValueUuid: "redeemP2WPKH_transactionWitness1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "547E349CA74B26FA04A30D4688635DBB"
+      index: 8
+      valueUuid: "redeemP2WPKH_transactionWitness1"
+    uuid: "848b5418-f65f-3400-a9e9-12dec4a0a36f"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.TransactionSignature"
+      uuid: "redeemP2WPKH_transactionSignature1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "redeemP2WPKH_eCKey1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "redeemP2WPKH_eCKey1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "redeemP2WPKH_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "redeemP2WPKH_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "redeemP2WPKH_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.TransactionSignature"
+      uuid: "redeemP2WPKH_transactionSignature1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "redeemP2WPKH_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "redeemP2WPKH_eCKey1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "redeemP2WPKH_byte[]2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.TransactionWitness"
+      uuid: "uuid3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.TransactionWitness"
+      uuid: "redeemP2WPKH_transactionWitness1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        collectionClass: "java.util.ArrayList"
+        parameters:
+        - name: "initialCapacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 2
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        values:
+        - sapientType: "ARRAY"
+          content: !<array>
+            values: {}
+          valueType: "byte[]"
+          uuid: "redeemP2WPKH_byte[]1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        - sapientType: "ARRAY"
+          content: !<array>
+            values: {}
+          valueType: "byte[]"
+          uuid: "redeemP2WPKH_byte[]2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+      valueType: "java.util.List"
+      genericValueType: "byte[]"
+      uuid: "redeemP2WPKH_arrayList1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.TransactionWitness"
+      uuid: "redeemP2WPKH_transactionWitness1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "redeemP2WPKHWhenSignatureIsNull"
+    modelFingerprint: "41E119C7EF3179ECB8D478EDF77CB766"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "signature"
+      modelFingerprint: "A3EE7AD72C9FD6B41123472FC7CAB5E8"
+      index: 1
+      valueUuid: "redeemP2WPKH_transactionSignature1"
+    - type: "INPUT"
+      name: "pubKey"
+      modelFingerprint: "124C17BD92B84F7B89270970D3E9BA4F"
+      index: 2
+      valueUuid: "redeemP2WPKH_eCKey1"
+    - type: "LOCAL_VARIABLE"
+      name: "pubKey"
+      modelFingerprint: "01AE41460FE247E9DE28530EB1979D92"
+      index: 3
+      valueUuid: "redeemP2WPKH_eCKey1"
+      methodExercised:
+        target: "pubKey"
+        name: "isCompressed"
+        parameters: []
+        signature: "isCompressed(): boolean"
+        returnValueUuid: "redeemP2WPKH_boolean1"
+        access: 1
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "A3C9A66787E8779386C502876A29BDCE"
+      index: 4
+      valueUuid: "uuid5"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "redeemP2WPKH_boolean1"
+        - name: "messageSupplier"
+          valueUuid: "uuid4"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "redeemP2WPKH_void1"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      name: "pubKey"
+      modelFingerprint: "E8CC71C57D5FE22B7EA34F376F4790D1"
+      index: 5
+      valueUuid: "redeemP2WPKH_eCKey1"
+      methodExercised:
+        target: "pubKey"
+        name: "getPubKey"
+        parameters: []
+        signature: "getPubKey(): byte[]"
+        returnValueUuid: "redeemP2WPKH_byte[]2"
+        access: 1
+    - type: "STATIC"
+      name: "TransactionWitness"
+      modelFingerprint: "4A8B735B8DBE543422297FF5E66C179F"
+      index: 6
+      valueUuid: "uuid6"
+      methodExercised:
+        target: "org.bitcoinj.core.TransactionWitness"
+        name: "of"
+        parameters:
+        - name: "pushes"
+          valueUuid: "redeemP2WPKH_arrayList1"
+        signature: "of(List): TransactionWitness"
+        returnValueUuid: "redeemP2WPKH_transactionWitness1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "547E349CA74B26FA04A30D4688635DBB"
+      index: 7
+      valueUuid: "redeemP2WPKH_transactionWitness1"
+    uuid: "fe971f55-5e80-3116-bec7-96642e064bb6"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "NULL"
+      valueType: "org.bitcoinj.crypto.TransactionSignature"
+      uuid: "redeemP2WPKH_transactionSignature1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "redeemP2WPKH_eCKey1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "redeemP2WPKH_eCKey1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "redeemP2WPKH_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid5"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "redeemP2WPKH_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "redeemP2WPKH_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid4"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "redeemP2WPKH_eCKey1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "redeemP2WPKH_byte[]2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.TransactionWitness"
+      uuid: "uuid6"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.TransactionWitness"
+      uuid: "redeemP2WPKH_transactionWitness1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        collectionClass: "java.util.ArrayList"
+        parameters:
+        - name: "initialCapacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 2
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        values:
+        - sapientType: "ARRAY"
+          content: !<array>
+            values: {}
+          valueType: "byte[]"
+          uuid: "redeemP2WPKH_byte[]1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        - sapientType: "ARRAY"
+          content: !<array>
+            values: {}
+          valueType: "byte[]"
+          uuid: "redeemP2WPKH_byte[]2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+      valueType: "java.util.List"
+      genericValueType: "byte[]"
+      uuid: "redeemP2WPKH_arrayList1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.TransactionWitness"
+      uuid: "redeemP2WPKH_transactionWitness1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "redeemP2WSH"
+    signature: "redeemP2WSH(org.bitcoinj.script.Script,org.bitcoinj.crypto.TransactionSignature[])\
+      \ : org.bitcoinj.core.TransactionWitness"
+    sourceCodeSignature: "TransactionWitness redeemP2WSH(Script witnessScript, TransactionSignature...\
+      \ signatures)"
+    instructionFingerprint: "BF7CA76222E6EA7C0199D08E8252ED19"
+  paths:
+  - pathId: "path1"
+    testPathName: "redeemP2WSHWhenSignaturesIsNotEmpty"
+    modelFingerprint: "6E571B45BF4833935010E56397172675"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "witnessScript"
+      modelFingerprint: "F3F9F4B257742C26C8E21A750C00D938"
+      index: 1
+      valueUuid: "redeemP2WSH_script1"
+    - type: "INPUT"
+      name: "signatures"
+      modelFingerprint: "6A8D87399CC2D19597BD99DC135BE495"
+      index: 2
+      valueUuid: "redeemP2WSH_transactionSignature[]1"
+    - type: "LOCAL_VARIABLE"
+      name: "signature"
+      modelFingerprint: "A499290BE996013F9DA20F1935954C52"
+      index: 3
+      valueUuid: "redeemP2WSH_transactionSignature1"
+      methodExercised:
+        target: "signature"
+        name: "encodeToBitcoin"
+        parameters: []
+        signature: "encodeToBitcoin(): byte[]"
+        returnValueUuid: "redeemP2WSH_byte[]2"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      name: "witnessScript"
+      modelFingerprint: "280CC392358DF97C8BC44D0972C6F349"
+      index: 4
+      valueUuid: "redeemP2WSH_script1"
+      methodExercised:
+        target: "witnessScript"
+        name: "program"
+        parameters: []
+        signature: "program(): byte[]"
+        returnValueUuid: "redeemP2WSH_byte[]3"
+        access: 1
+    - type: "STATIC"
+      name: "TransactionWitness"
+      modelFingerprint: "F39245A2F43F24350598577DC7AEA5AB"
+      index: 5
+      valueUuid: "uuid1"
+      methodExercised:
+        target: "org.bitcoinj.core.TransactionWitness"
+        name: "of"
+        parameters:
+        - name: "pushes"
+          valueUuid: "redeemP2WSH_arrayList1"
+        signature: "of(List): TransactionWitness"
+        returnValueUuid: "redeemP2WSH_transactionWitness1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "547E349CA74B26FA04A30D4688635DBB"
+      index: 6
+      valueUuid: "redeemP2WSH_transactionWitness1"
+    - type: "STATE_VERIFICATION_PARAMETER"
+      name: "signatures"
+      modelFingerprint: "D50A2CAA9FE6ECAC7E6A2405940147A4"
+      index: 7
+      valueUuid: "redeemP2WSH_transactionSignature[]2"
+      originalValueUuid: "redeemP2WSH_transactionSignature[]1"
+    uuid: "d46e6454-f8cb-3644-a826-e4429686af60"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.script.Script"
+      uuid: "redeemP2WSH_script1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.crypto.TransactionSignature"
+            uuid: "redeemP2WSH_transactionSignature1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.crypto.TransactionSignature[]"
+      uuid: "redeemP2WSH_transactionSignature[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.TransactionSignature"
+      uuid: "redeemP2WSH_transactionSignature1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "redeemP2WSH_byte[]2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.script.Script"
+      uuid: "redeemP2WSH_script1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "redeemP2WSH_byte[]3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.TransactionWitness"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.TransactionWitness"
+      uuid: "redeemP2WSH_transactionWitness1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        collectionClass: "java.util.ArrayList"
+        parameters:
+        - name: "initialCapacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 3
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        values:
+        - sapientType: "ARRAY"
+          content: !<array>
+            values: {}
+          valueType: "byte[]"
+          uuid: "redeemP2WSH_byte[]1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        - sapientType: "ARRAY"
+          content: !<array>
+            values: {}
+          valueType: "byte[]"
+          uuid: "redeemP2WSH_byte[]2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        - sapientType: "ARRAY"
+          content: !<array>
+            values: {}
+          valueType: "byte[]"
+          uuid: "redeemP2WSH_byte[]3"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+      valueType: "java.util.List"
+      genericValueType: "byte[]"
+      uuid: "redeemP2WSH_arrayList1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.TransactionWitness"
+      uuid: "redeemP2WSH_transactionWitness1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.crypto.TransactionSignature"
+            uuid: "redeemP2WSH_transactionSignature1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.crypto.TransactionSignature[]"
+      uuid: "redeemP2WSH_transactionSignature[]2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "redeemP2WSHWhenSignaturesIsEmpty"
+    modelFingerprint: "F1FC8082631BD0D9CB3BDD0C43516A3C"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "b3712190-9be9-3bdc-8836-6997351daa79"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "of"
+    signature: "of(java.util.List<byte[]>) : org.bitcoinj.core.TransactionWitness"
+    sourceCodeSignature: "TransactionWitness of(List<byte[]> pushes)"
+    instructionFingerprint: "1EC6D792A0EF8D9AA737FD69FFB7C01B"
+  paths:
+  - pathId: "path1"
+    testPathName: "ofThrowsNullPointerException"
+    modelFingerprint: "1D05E1A4B3F40507D5CBF7A6DA85E4A2"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "pushes"
+      modelFingerprint: "A1A285AA4E703C36684BFC2DF245CF00"
+      index: 1
+      valueUuid: "<clinit>_list1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "1544C3243427A58A5AE91A88CC628F77"
+      index: 2
+      valueUuid: "uuid9"
+    uuid: "946fac9c-df07-3dcd-9b8a-4a56705e4fba"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "REAL_METHOD_TODO_COMMENT"
+      details: "REAL_METHOD_TODO_COMMENT"
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "NULL"
+      valueType: "java.util.List"
+      genericValueType: "byte[]"
+      uuid: "<clinit>_list1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.NullPointerException"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.NullPointerException"
+      uuid: "uuid9"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "of"
+    signature: "of(byte[][]) : org.bitcoinj.core.TransactionWitness"
+    sourceCodeSignature: "TransactionWitness of(byte[]... pushes)"
+    instructionFingerprint: "1E4BF5D32DC3FB888828A441CB60E5EF"
+  paths:
+  - pathId: "path1"
+    testPathName: "of1Test"
+    modelFingerprint: "77E40F42D451BBFAFABA8A3C0A30BF44"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "pushes"
+      modelFingerprint: "C5A18A728383157B995DA3FBAD424A4A"
+      index: 1
+      valueUuid: "of_byte[][]1"
+    - type: "STATIC"
+      name: "TransactionWitness"
+      modelFingerprint: "7C11A9B5B15CB7B25C0F970C44E4C0F5"
+      index: 2
+      valueUuid: "uuid10"
+      methodExercised:
+        target: "org.bitcoinj.core.TransactionWitness"
+        name: "of"
+        parameters:
+        - name: "pushes"
+          valueUuid: "of_list1"
+        signature: "of(List): TransactionWitness"
+        returnValueUuid: "of_transactionWitness2"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "547E349CA74B26FA04A30D4688635DBB"
+      index: 3
+      valueUuid: "of_transactionWitness2"
+    uuid: "2d9e451b-59ca-3da9-a6c7-f80da9bfa12e"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[][]"
+      uuid: "of_byte[][]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.TransactionWitness"
+      uuid: "uuid10"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.TransactionWitness"
+      uuid: "of_transactionWitness2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        parameters: []
+        values: []
+      valueType: "java.util.List"
+      genericValueType: "byte[]"
+      uuid: "of_list1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.TransactionWitness"
+      uuid: "of_transactionWitness2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "read"
+    signature: "read(java.nio.ByteBuffer) : org.bitcoinj.core.TransactionWitness"
+    sourceCodeSignature: "TransactionWitness read(ByteBuffer payload)"
+    instructionFingerprint: "85DD8A913DCDAB9483B133B8F63DFABB"
+  paths:
+  - pathId: "path1"
+    testPathName: "readWhenDefaultBranch"
+    modelFingerprint: "433D9DABBD82F58052E2EBE4D55EA29B"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "payload"
+      modelFingerprint: "D30B43598E2900E2880BDD9712DAE751"
+      index: 1
+      valueUuid: "read_byteBuffer1"
+    - type: "STATIC"
+      name: "VarInt"
+      modelFingerprint: "5E92D544C5565BF042F406F470017DD5"
+      index: 2
+      valueUuid: "uuid11"
+      methodExercised:
+        target: "org.bitcoinj.base.VarInt"
+        name: "read"
+        parameters:
+        - name: "value"
+          valueUuid: "read_byteBuffer1"
+        throwsExceptions:
+        - "java.nio.BufferUnderflowException"
+        signature: "read(ByteBuffer): VarInt throws java.nio.BufferUnderflowException"
+        returnValueUuid: "read_varInt1"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      name: "pushCountVarInt"
+      modelFingerprint: "B43C3ADB283FA5163913ABBABB5EC75C"
+      index: 3
+      valueUuid: "read_varInt1"
+      methodExercised:
+        target: "pushCountVarInt"
+        name: "fitsInt"
+        parameters: []
+        signature: "fitsInt(): boolean"
+        returnValueUuid: "read_boolean1"
+        access: 1
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "3D0E364D028507E0FB885F547F95618C"
+      index: 4
+      valueUuid: "uuid13"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "check"
+        parameters:
+        - name: "expression"
+          valueUuid: "read_boolean1"
+        - name: "exceptionSupplier"
+          valueUuid: "uuid12"
+        throwsExceptions:
+        - "java.lang.Throwable"
+        signature: "check(boolean,Supplier): void throws java.lang.Throwable"
+        returnValueUuid: "read_void1"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      name: "pushCountVarInt"
+      modelFingerprint: "E18E8389FB67DC1989D76FFF7E8C92E6"
+      index: 5
+      valueUuid: "read_varInt1"
+      methodExercised:
+        target: "pushCountVarInt"
+        name: "intValue"
+        parameters: []
+        throwsExceptions:
+        - "java.lang.ArithmeticException"
+        signature: "intValue(): int throws java.lang.ArithmeticException"
+        returnValueUuid: "read_int1"
+        access: 1
+    - type: "STATIC"
+      name: "Buffers"
+      modelFingerprint: "A4936A7F0FF953D4777CB889AB70B2D8"
+      index: 6
+      valueUuid: "uuid14"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Buffers"
+        name: "readLengthPrefixedBytes"
+        parameters:
+        - name: "buf"
+          valueUuid: "read_byteBuffer1"
+        throwsExceptions:
+        - "java.nio.BufferUnderflowException"
+        signature: "readLengthPrefixedBytes(ByteBuffer): byte[] throws java.nio.BufferUnderflowException"
+        returnValueUuid: "read_byte[]1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "6466FC66C65BE2717306BB02DED76E75"
+      index: 7
+      valueUuid: "read_transactionWitness1"
+    uuid: "d7d7c181-85f8-3d2b-b5a1-c1ddd262297c"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "ERROR_RECALCULATING_SUGGESTED_VALUES"
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "read_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.VarInt"
+      uuid: "uuid11"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.VarInt"
+      uuid: "read_varInt1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "read_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.VarInt"
+      uuid: "read_varInt1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "read_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid13"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "read_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "read_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      uuid: "uuid12"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.VarInt"
+      uuid: "read_varInt1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 1
+      valueType: "int"
+      uuid: "read_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Buffers"
+      uuid: "uuid14"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "read_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "read_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.TransactionWitness"
+        parameters:
+        - name: "push"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              collectionClass: "java.util.ArrayList"
+              parameters:
+              - name: "initialCapacity"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 1
+                  valueType: "int"
+                  uuid: "read_int2"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              values:
+              - sapientType: "ARRAY"
+                content: !<array>
+                  values: {}
+                valueType: "byte[]"
+                uuid: "read_byte[]1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            valueType: "java.util.List"
+            genericValueType: "byte[]"
+            uuid: "read_arrayList1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: true
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.core.TransactionWitness"
+      uuid: "read_transactionWitness1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "readWhenYNotLessThanPushCountAndDefaultBranch"
+    modelFingerprint: "8AD703D14C55B394D907EA95CB2E74C6"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "50691e51-1e26-3d22-8ba0-430c154ba6c4"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "getPush"
+    signature: "getPush(int) : byte[]"
+    sourceCodeSignature: "byte[] getPush(int i)"
+    instructionFingerprint: "B79359420E6D6869FE46AE470D98751E"
+  paths:
+  - pathId: "path1"
+    testPathName: "getPushTest"
+    constructorSignature: "of(java.util.List<byte[]>) : org.bitcoinj.core.TransactionWitness"
+    modelFingerprint: "4090EFCBE3C320A52B674D5BD164899A"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "1F76E089DE3BD510C7BC61ADCEA821F3"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "i"
+      modelFingerprint: "B8B7122586FD9C24540DFABF8C1F6CEC"
+      index: 2
+      valueUuid: "getPush_int1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "740324D8AEEA83F5639543B37CAABC19"
+      index: 3
+      valueUuid: "getPush_byte[]1"
+    uuid: "91c4a99d-7a18-35fa-926f-93c6fa805429"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.core.TransactionWitness"
+        method: "of"
+        methodParameters:
+        - name: "pushes"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              collectionClass: "java.util.ArrayList"
+              parameters: []
+              values:
+              - sapientType: "ARRAY"
+                content: !<array>
+                  values: {}
+                valueType: "byte[]"
+                uuid: "<init>_object1"
+                fixed: false
+                collectionUuid: "of_list1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              - sapientType: "ARRAY"
+                content: !<array>
+                  values: {}
+                valueType: "byte[]"
+                uuid: "getPush_byte[]1"
+                fixed: false
+                collectionUuid: "of_list1"
+                equalsMethodPresent: true
+                explicitCastNeeded: false
+            valueType: "java.util.List"
+            genericValueType: "byte[]"
+            uuid: "of_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.core.TransactionWitness"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 1
+      valueType: "int"
+      uuid: "getPush_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "getPush_byte[]1"
+      fixed: false
+      collectionUuid: "of_list1"
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "getPushCount"
+    signature: "getPushCount() : int"
+    sourceCodeSignature: "int getPushCount()"
+    instructionFingerprint: "6435F2A8D19620C8C4FEF4859C3D557C"
+  paths:
+  - pathId: "path1"
+    testPathName: "getPushCountTest"
+    constructorSignature: "of(java.util.List<byte[]>) : org.bitcoinj.core.TransactionWitness"
+    modelFingerprint: "94AB6846CAF1555FDF53AFFD7BE26F43"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "F15DB42B5A128DCD479004ECA066D9D5"
+      index: 1
+      valueUuid: "target"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "E2A8AB981A1505AD6737DABDF7241F1F"
+      index: 2
+      valueUuid: "getPushCount_int1"
+    uuid: "a2bf3b9b-c78f-381f-a368-c4049790a3f0"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.core.TransactionWitness"
+        method: "of"
+        methodParameters:
+        - name: "pushes"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              collectionClass: "java.util.ArrayList"
+              parameters: []
+              values:
+              - sapientType: "ARRAY"
+                content: !<array>
+                  values: {}
+                valueType: "byte[]"
+                uuid: "<init>_object1"
+                fixed: false
+                collectionUuid: "of_list1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            valueType: "java.util.List"
+            genericValueType: "byte[]"
+            uuid: "of_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.core.TransactionWitness"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 1
+      valueType: "int"
+      uuid: "getPushCount_int1"
+      fixed: false
+      collectionUuid: "of_list1"
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "write"
+    signature: "write(java.nio.ByteBuffer) : java.nio.ByteBuffer"
+    sourceCodeSignature: "ByteBuffer write(ByteBuffer buf)"
+    instructionFingerprint: "815C7981C7C5D979A3DBE6C0FB878D29"
+  paths:
+  - pathId: "path1"
+    testPathName: "writeWhenPushesIsNotEmpty"
+    constructorSignature: "of(java.util.List<byte[]>) : org.bitcoinj.core.TransactionWitness"
+    modelFingerprint: "928F652F40488B00B4AA39969EB54667"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "F542DB0BE96AF4B950302287AA71CF17"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "buf"
+      modelFingerprint: "D9502874ABE1CA67297A590F5B7E0FB1"
+      index: 2
+      valueUuid: "write_byteBuffer1"
+    - type: "STATIC"
+      name: "VarInt"
+      modelFingerprint: "02175266A5DCD007BB33ED98CBA6FB71"
+      index: 3
+      valueUuid: "uuid2"
+      methodExercised:
+        target: "org.bitcoinj.base.VarInt"
+        name: "of"
+        parameters:
+        - name: "value"
+          valueUuid: "uuid1"
+        signature: "of(long): VarInt"
+        returnValueUuid: "write_varInt1"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "C7EE3634DF31B632E1DBC6E1A40173B7"
+      index: 4
+      valueUuid: "write_varInt1"
+      methodExercised:
+        target: "org.bitcoinj.base.VarInt"
+        name: "write"
+        parameters:
+        - name: "buf"
+          valueUuid: "write_byteBuffer1"
+        throwsExceptions:
+        - "java.nio.BufferOverflowException"
+        signature: "write(ByteBuffer): ByteBuffer throws java.nio.BufferOverflowException"
+        returnValueUuid: "write_byteBuffer2"
+        access: 1
+    - type: "STATIC"
+      name: "Buffers"
+      modelFingerprint: "84FBC5AD79808889FA5B8A29FC649C42"
+      index: 5
+      valueUuid: "uuid3"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Buffers"
+        name: "writeLengthPrefixedBytes"
+        parameters:
+        - name: "buf"
+          valueUuid: "write_byteBuffer1"
+        - name: "bytes"
+          valueUuid: "of_list1-0"
+        throwsExceptions:
+        - "java.nio.BufferOverflowException"
+        signature: "writeLengthPrefixedBytes(ByteBuffer,byte[]): ByteBuffer throws\
+          \ java.nio.BufferOverflowException"
+        returnValueUuid: "write_byteBuffer3"
+        access: 9
+    - type: "STATIC"
+      name: "Buffers"
+      modelFingerprint: "FB33B43AC10B6AEA2EFC0616D45D0AE7"
+      index: 6
+      valueUuid: "uuid4"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Buffers"
+        name: "writeLengthPrefixedBytes"
+        parameters:
+        - name: "buf"
+          valueUuid: "write_byteBuffer1"
+        - name: "bytes"
+          valueUuid: "of_list1-1"
+        throwsExceptions:
+        - "java.nio.BufferOverflowException"
+        signature: "writeLengthPrefixedBytes(ByteBuffer,byte[]): ByteBuffer throws\
+          \ java.nio.BufferOverflowException"
+        returnValueUuid: "write_byteBuffer4"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D443FCA5982459A6B11BB072DD2161AA"
+      index: 7
+      valueUuid: "write_byteBuffer1"
+    uuid: "46390a57-25fa-372f-b5f9-33562d858327"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "UNKNOWN_REASON"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.core.TransactionWitness"
+        method: "of"
+        methodParameters:
+        - name: "pushes"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              collectionClass: "java.util.ArrayList"
+              parameters: []
+              values:
+              - sapientType: "ARRAY"
+                content: !<array>
+                  values:
+                    0:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 0
+                      valueType: "byte"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                valueType: "byte[]"
+                uuid: "of_list1-0"
+                fixed: false
+                collectionUuid: "of_list1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              - sapientType: "ARRAY"
+                content: !<array>
+                  values:
+                    0:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 0
+                      valueType: "byte"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                valueType: "byte[]"
+                uuid: "of_list1-1"
+                fixed: false
+                collectionUuid: "of_list1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            valueType: "java.util.List"
+            genericValueType: "byte[]"
+            uuid: "of_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.core.TransactionWitness"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            uuid: "write_byteBuffer1-capacity"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "write_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.VarInt"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.VarInt"
+      uuid: "write_varInt1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 2
+      valueType: "long"
+      originalValueType: "int"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.VarInt"
+      uuid: "write_varInt1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "write_byteBuffer2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            uuid: "write_byteBuffer1-capacity"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "write_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Buffers"
+      uuid: "uuid3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "write_byteBuffer3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            uuid: "write_byteBuffer1-capacity"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "write_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "of_list1-0"
+      fixed: false
+      collectionUuid: "of_list1"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Buffers"
+      uuid: "uuid4"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "write_byteBuffer4"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            uuid: "write_byteBuffer1-capacity"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "write_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "of_list1-1"
+      fixed: false
+      collectionUuid: "of_list1"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            uuid: "write_byteBuffer1-capacity"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "write_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "writeWhenPushesIsEmpty"
+    constructorSignature: "of(java.util.List<byte[]>) : org.bitcoinj.core.TransactionWitness"
+    modelFingerprint: "2FC2442C6B6E5E70026DCFEF44CE63A5"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "77eab095-a4c8-34d9-9e51-066a5f4001e1"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "serialize"
+    signature: "serialize() : byte[]"
+    sourceCodeSignature: "byte[] serialize()"
+    instructionFingerprint: "1E4120832A666FA0DF1DFFB56176D17C"
+  paths:
+  - pathId: "path1"
+    testPathName: "serializeTest"
+    constructorSignature: "of(java.util.List<byte[]>) : org.bitcoinj.core.TransactionWitness"
+    modelFingerprint: "0F0ECD26F8C82E7A01FEA0E2EAA4D6BD"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "138320D78AAC562A46A5F49AC3127FA9"
+      index: 1
+      valueUuid: "target"
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "A7F5D8310F589CA66561283650397386"
+      index: 2
+      methodExercised:
+        target: "target"
+        name: "messageSize"
+        parameters: []
+        signature: "messageSize(): int"
+        returnValueUuid: "serialize_int1"
+        access: 1
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "1E8ED981EA5F01770FE22926D3664FA1"
+      index: 3
+      methodExercised:
+        target: "target"
+        name: "write"
+        parameters:
+        - name: "buf"
+          valueUuid: "serialize_byteBuffer1"
+        throwsExceptions:
+        - "java.nio.BufferOverflowException"
+        signature: "write(ByteBuffer): ByteBuffer throws java.nio.BufferOverflowException"
+        returnValueUuid: "serialize_byteBuffer2"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "740324D8AEEA83F5639543B37CAABC19"
+      index: 4
+      valueUuid: "serialize_byte[]1"
+    uuid: "9d328af1-2293-3544-bbbc-a0683c1f9fbe"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.nio.ByteBuffer.array() : byte[]"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.core.TransactionWitness"
+        method: "of"
+        methodParameters:
+        - name: "pushes"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              collectionClass: "java.util.ArrayList"
+              parameters: []
+              values:
+              - sapientType: "ARRAY"
+                content: !<array>
+                  values:
+                    0:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 0
+                      valueType: "byte"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                valueType: "byte[]"
+                uuid: "of_list1-0"
+                fixed: false
+                collectionUuid: "of_list1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              - sapientType: "ARRAY"
+                content: !<array>
+                  values:
+                    0:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 0
+                      valueType: "byte"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                valueType: "byte[]"
+                uuid: "of_list1-1"
+                fixed: false
+                collectionUuid: "of_list1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              - sapientType: "ARRAY"
+                content: !<array>
+                  values:
+                    0:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 0
+                      valueType: "byte"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                valueType: "byte[]"
+                uuid: "of_list1-2"
+                fixed: false
+                collectionUuid: "of_list1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            valueType: "java.util.List"
+            genericValueType: "byte[]"
+            uuid: "of_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.core.TransactionWitness"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "serialize_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "serialize_byteBuffer2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocate"
+        methodParameters:
+        - value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            uuid: "serialize_int1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "serialize_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "serialize_byte[]1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "messageSize"
+    signature: "messageSize() : int"
+    sourceCodeSignature: "int messageSize()"
+    instructionFingerprint: "515E857FCBB76ED4FDD29CB2025AF354"
+  paths:
+  - pathId: "path1"
+    testPathName: "messageSizeWhenPushesIsNotEmpty"
+    constructorSignature: "of(java.util.List<byte[]>) : org.bitcoinj.core.TransactionWitness"
+    modelFingerprint: "D773611C81694B06E862BD5BC6C3DF99"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "7EA0663ECF810449F15A236BFE29C4CE"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "VarInt"
+      modelFingerprint: "CF1E4259846B302B0909F0FED1C3AB5C"
+      index: 2
+      valueUuid: "uuid2"
+      methodExercised:
+        target: "org.bitcoinj.base.VarInt"
+        name: "sizeOf"
+        parameters:
+        - name: "value"
+          valueUuid: "uuid1"
+        signature: "sizeOf(long): int"
+        returnValueUuid: "messageSize_int2"
+        access: 9
+    - type: "STATIC"
+      name: "VarInt"
+      modelFingerprint: "A937533046888DD38ACD7C60CEC13549"
+      index: 3
+      valueUuid: "uuid4"
+      methodExercised:
+        target: "org.bitcoinj.base.VarInt"
+        name: "sizeOf"
+        parameters:
+        - name: "value"
+          valueUuid: "uuid3"
+        signature: "sizeOf(long): int"
+        returnValueUuid: "messageSize_int4"
+        access: 9
+    - type: "STATIC"
+      name: "VarInt"
+      modelFingerprint: "CF1E4259846B302B0909F0FED1C3AB5C"
+      index: 4
+      valueUuid: "uuid6"
+      methodExercised:
+        target: "org.bitcoinj.base.VarInt"
+        name: "sizeOf"
+        parameters:
+        - name: "value"
+          valueUuid: "uuid5"
+        signature: "sizeOf(long): int"
+        returnValueUuid: "messageSize_int10"
+        access: 9
+    - type: "STATIC"
+      name: "VarInt"
+      modelFingerprint: "CF1E4259846B302B0909F0FED1C3AB5C"
+      index: 5
+      valueUuid: "uuid8"
+      methodExercised:
+        target: "org.bitcoinj.base.VarInt"
+        name: "sizeOf"
+        parameters:
+        - name: "value"
+          valueUuid: "uuid7"
+        signature: "sizeOf(long): int"
+        returnValueUuid: "messageSize_int16"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "38FFE86CFEA7EF74DAFFE4F290BFA7BE"
+      index: 6
+      valueUuid: "messageSize_int20"
+    uuid: "198e0ef0-e6d5-3daa-9f95-2e02390f74a3"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.core.TransactionWitness"
+        method: "of"
+        methodParameters:
+        - name: "pushes"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              collectionClass: "java.util.ArrayList"
+              parameters: []
+              values:
+              - sapientType: "ARRAY"
+                content: !<array>
+                  values:
+                    0:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 1
+                      valueType: "byte"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                    1:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 2
+                      valueType: "byte"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                    2:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 3
+                      valueType: "byte"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                valueType: "byte[]"
+                uuid: "of_list1-0"
+                fixed: false
+                collectionUuid: "of_list1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              - sapientType: "ARRAY"
+                content: !<array>
+                  values:
+                    0:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 4
+                      valueType: "byte"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                    1:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 5
+                      valueType: "byte"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                    2:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 6
+                      valueType: "byte"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                valueType: "byte[]"
+                uuid: "of_list1-1"
+                fixed: false
+                collectionUuid: "of_list1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              - sapientType: "ARRAY"
+                content: !<array>
+                  values:
+                    0:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 7
+                      valueType: "byte"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                    1:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 8
+                      valueType: "byte"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                    2:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 9
+                      valueType: "byte"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                valueType: "byte[]"
+                uuid: "of_list1-2"
+                fixed: false
+                collectionUuid: "of_list1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            valueType: "java.util.List"
+            genericValueType: "byte[]"
+            uuid: "of_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.core.TransactionWitness"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.VarInt"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 1
+      valueType: "int"
+      uuid: "messageSize_int2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 3
+      valueType: "long"
+      originalValueType: "int"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.VarInt"
+      uuid: "uuid4"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 11
+      valueType: "int"
+      uuid: "messageSize_int4"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 3
+      valueType: "long"
+      originalValueType: "int"
+      uuid: "uuid3"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.VarInt"
+      uuid: "uuid6"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 1
+      valueType: "int"
+      uuid: "messageSize_int10"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 3
+      valueType: "long"
+      originalValueType: "int"
+      uuid: "uuid5"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.VarInt"
+      uuid: "uuid8"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 1
+      valueType: "int"
+      uuid: "messageSize_int16"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 3
+      valueType: "long"
+      originalValueType: "int"
+      uuid: "uuid7"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 23
+      valueType: "int"
+      uuid: "messageSize_int20"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "messageSizeWhenPushesIsEmpty"
+    constructorSignature: "of(java.util.List<byte[]>) : org.bitcoinj.core.TransactionWitness"
+    modelFingerprint: "D385524F8F204BA789160D7141EFFCC9"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "e09fc3d2-21a1-396e-a8d9-14d666298824"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "getMessageSize"
+    signature: "getMessageSize() : int"
+    sourceCodeSignature: "int getMessageSize()"
+    instructionFingerprint: "B1B472F4BCC5E3913747E9E363253B22"
+  paths:
+  - pathId: "path1"
+    testPathName: "getMessageSizeTest"
+    constructorSignature: "of(java.util.List<byte[]>) : org.bitcoinj.core.TransactionWitness"
+    modelFingerprint: "BEEE414C33A54A7E1C1B4873B0FC3544"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "F15DB42B5A128DCD479004ECA066D9D5"
+      index: 1
+      valueUuid: "target"
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "F7F49182F3B6C681BB76C422C9E4B5D0"
+      index: 2
+      methodExercised:
+        target: "target"
+        name: "messageSize"
+        parameters: []
+        signature: "messageSize(): int"
+        returnValueUuid: "getMessageSize_int1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "ACBCF6744C1A4F89BFBA83521C7CE3BD"
+      index: 3
+      valueUuid: "getMessageSize_int1"
+    uuid: "435d64f5-8fca-31bf-b014-13944bac4d4c"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.core.TransactionWitness"
+        method: "of"
+        methodParameters:
+        - name: "pushes"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              collectionClass: "java.util.ArrayList"
+              parameters: []
+              values:
+              - sapientType: "ARRAY"
+                content: !<array>
+                  values: {}
+                valueType: "byte[]"
+                uuid: "<init>_object1"
+                fixed: false
+                collectionUuid: "of_list1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            valueType: "java.util.List"
+            genericValueType: "byte[]"
+            uuid: "of_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.core.TransactionWitness"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "getMessageSize_int1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "getMessageSize_int1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "toString"
+    signature: "toString() : java.lang.String"
+    sourceCodeSignature: "String toString()"
+    instructionFingerprint: "26583F7827B08D92E29236EED4D350F1"
+  paths:
+  - pathId: "path3"
+    testPathName: "toStringWhenPushesIsEmpty"
+    constructorSignature: "of(java.util.List<byte[]>) : org.bitcoinj.core.TransactionWitness"
+    modelFingerprint: "C6F215919B5007EEB6B650ACA9AA28AA"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "e6355e02-ffe7-36cf-882f-9b4527452410"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    variablesCouldNotBeIsolated: "SPACE_JOINER"
+    failureReason:
+      reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
+      source: "return InternalUtils.SPACE_JOINER.join(stringPushes);"
+      lineNumber: 175
+      details: "A variable could not be isolated or mocked when calling a method -\
+        \ Variable name: SPACE_JOINER - Method: join"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path1"
+    testPathName: "toStringWhenPushLengthEquals0"
+    constructorSignature: "of(java.util.List<byte[]>) : org.bitcoinj.core.TransactionWitness"
+    modelFingerprint: "BA0368FCA360A8098136D572B5014773"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "6097E30B2E89D59B5F7FE4FF69DDAC72"
+      index: 1
+      valueUuid: "target"
+    - type: "LOCAL_VARIABLE"
+      name: "SPACE_JOINER"
+      modelFingerprint: "9CC52C750176FD9B5D47F3D0AEB7DFBF"
+      index: 2
+      valueUuid: "toString_internalUtils.Joiner1"
+      methodExercised:
+        target: "other.SPACE_JOINER"
+        name: "join"
+        parameters:
+        - name: "arg0"
+          valueUuid: "toString_arrayList1"
+        signature: "join(List): String"
+        returnValueUuid: "toString_string1"
+        access: 1025
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D1F433D4EB9F8805FF391E82DAB508AB"
+      index: 3
+      valueUuid: "toString_string1"
+    uuid: "6ecbda3c-3734-3c94-b31a-d398eb9ec8be"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    variablesCouldNotBeIsolated: "SPACE_JOINER"
+    failureReason:
+      reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
+      source: "return InternalUtils.SPACE_JOINER.join(stringPushes);"
+      lineNumber: 175
+      details: "A variable could not be isolated or mocked when calling a method -\
+        \ Variable name: SPACE_JOINER - Method: join"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.core.TransactionWitness"
+        method: "of"
+        methodParameters:
+        - name: "pushes"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              parameters: []
+              values: []
+            valueType: "java.util.List"
+            genericValueType: "byte[]"
+            uuid: "of_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.core.TransactionWitness"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_field_return>
+        target: "org.bitcoinj.base.internal.InternalUtils"
+        fieldName: "SPACE_JOINER"
+      valueType: "org.bitcoinj.base.internal.InternalUtils$Joiner"
+      uuid: "toString_internalUtils.Joiner1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "return_of_join1"
+      valueType: "java.lang.String"
+      uuid: "toString_string1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        collectionClass: "java.util.ArrayList"
+        parameters:
+        - name: "initialCapacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            uuid: "toString_int1"
+            fixed: false
+            collectionUuid: "of_list1"
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        values:
+        - sapientType: "BASIC"
+          content: !<regular>
+            value: "EMPTY"
+          valueType: "java.lang.String"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+      valueType: "java.util.List"
+      genericValueType: "java.lang.String"
+      uuid: "toString_arrayList1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "return_of_join1"
+      valueType: "java.lang.String"
+      uuid: "toString_string1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "toStringWhenPushLengthNotEquals0"
+    constructorSignature: "of(java.util.List<byte[]>) : org.bitcoinj.core.TransactionWitness"
+    modelFingerprint: "E2785741E1DF2C8F14161E4A9D72387C"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "6097E30B2E89D59B5F7FE4FF69DDAC72"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "ByteUtils"
+      modelFingerprint: "E1E3AE19B3CAE57E7E9D0194D0C34513"
+      index: 2
+      valueUuid: "uuid24"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.ByteUtils"
+        name: "formatHex"
+        parameters:
+        - name: "bytes"
+          valueUuid: "toString_object1"
+        signature: "formatHex(byte[]): String"
+        returnValueUuid: "toString_string1"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      name: "SPACE_JOINER"
+      modelFingerprint: "B5CDC6AF06119408A5CB0964CFA713ED"
+      index: 3
+      valueUuid: "toString_internalUtils.Joiner1"
+      methodExercised:
+        target: "other.SPACE_JOINER"
+        name: "join"
+        parameters:
+        - name: "arg0"
+          valueUuid: "toString_arrayList1"
+        signature: "join(List): String"
+        returnValueUuid: "toString_string2"
+        access: 1025
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D1F433D4EB9F8805FF391E82DAB508AB"
+      index: 4
+      valueUuid: "toString_string2"
+    uuid: "065a56d0-4ec0-38eb-a24f-b51c11ce350a"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    variablesCouldNotBeIsolated: "SPACE_JOINER"
+    failureReason:
+      reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
+      source: "return InternalUtils.SPACE_JOINER.join(stringPushes);"
+      lineNumber: 175
+      details: "A variable could not be isolated or mocked when calling a method -\
+        \ Variable name: SPACE_JOINER - Method: join"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.core.TransactionWitness"
+        method: "of"
+        methodParameters:
+        - name: "pushes"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              parameters: []
+              values: []
+            valueType: "java.util.List"
+            genericValueType: "byte[]"
+            uuid: "of_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.core.TransactionWitness"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.ByteUtils"
+      uuid: "uuid24"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "return_of_formatHex1"
+      valueType: "java.lang.String"
+      uuid: "toString_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "toString_object1"
+      fixed: false
+      collectionUuid: "of_list1"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_field_return>
+        target: "org.bitcoinj.base.internal.InternalUtils"
+        fieldName: "SPACE_JOINER"
+      valueType: "org.bitcoinj.base.internal.InternalUtils$Joiner"
+      uuid: "toString_internalUtils.Joiner1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "return_of_join1"
+      valueType: "java.lang.String"
+      uuid: "toString_string2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        collectionClass: "java.util.ArrayList"
+        parameters:
+        - name: "initialCapacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            uuid: "toString_int1"
+            fixed: false
+            collectionUuid: "of_list1"
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        values:
+        - sapientType: "BASIC"
+          content: !<regular>
+            value: "return_of_formatHex1"
+          valueType: "java.lang.String"
+          uuid: "toString_string1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+      valueType: "java.util.List"
+      genericValueType: "java.lang.String"
+      uuid: "toString_arrayList1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "return_of_join1"
+      valueType: "java.lang.String"
+      uuid: "toString_string2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "equals"
+    signature: "equals(java.lang.Object) : boolean"
+    sourceCodeSignature: "boolean equals(Object o)"
+    instructionFingerprint: "8058FC55A769D265F7A453B780F9AA92"
+  paths:
+  - pathId: "path1"
+    testPathName: "equalsWhenThisEqualsO"
+    constructorSignature: "of(java.util.List<byte[]>) : org.bitcoinj.core.TransactionWitness"
+    modelFingerprint: "C18334907A863C66A6CE342784265239"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "5b7cf5ba-f3cc-35d0-9b4a-3392d3a68eed"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path6"
+    testPathName: "equalsWhenOIsNull"
+    constructorSignature: "of(java.util.List<byte[]>) : org.bitcoinj.core.TransactionWitness"
+    modelFingerprint: "9616363A145E40D005563346AA1E839E"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "a2108c4d-bcbc-39b5-8254-0588b654f131"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path2"
+    testPathName: "equalsWhenGetClassNotEqualsOGetClass"
+    constructorSignature: "of(java.util.List<byte[]>) : org.bitcoinj.core.TransactionWitness"
+    modelFingerprint: "DAE77D4CD2142B379FC035A9F9564D8A"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "6e6a0f87-c9aa-3e31-af0a-46c9467f5ce0"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path3"
+    testPathName: "equalsWhenPushesSizeNotEqualsOtherPushesSize"
+    constructorSignature: "of(java.util.List<byte[]>) : org.bitcoinj.core.TransactionWitness"
+    modelFingerprint: "FDAC57FB91617D55F7F7EE6391FC00B1"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "cc769441-4fd1-3a74-bb0c-0f52ee9d4807"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path4"
+    testPathName: "equalsWhenArraysNotEqualsPushesGetIOtherPushesGetI"
+    constructorSignature: "of(java.util.List<byte[]>) : org.bitcoinj.core.TransactionWitness"
+    modelFingerprint: "15CAF3A7470B9DE01FF5C4E5B64E9AF0"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "979bbe66-ee8d-3b2e-bb00-73f89135ef58"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path5"
+    testPathName: "equalsWhenArraysEqualsPushesGetIOtherPushesGetI"
+    constructorSignature: "of(java.util.List<byte[]>) : org.bitcoinj.core.TransactionWitness"
+    modelFingerprint: "C2FD15D1C23A3636755446A18F711035"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "1786d682-a1a4-3433-9445-457d7c8e4764"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []

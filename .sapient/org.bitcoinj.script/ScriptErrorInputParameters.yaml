@@ -1,0 +1,125 @@
+---
+modelFingerprint: "5C914E0FE010620EC5F20F1E61F5C812"
+methods:
+- method:
+    name: "getMnemonic"
+    signature: "getMnemonic() : java.lang.String"
+    sourceCodeSignature: "String getMnemonic()"
+    instructionFingerprint: "8B45978C54CEFBB1FBAA0554AD0CF0C2"
+  paths:
+  - pathId: "path1"
+    testPathName: "getMnemonicTest"
+    constructorSignature: "valueOf(java.lang.String) : org.bitcoinj.script.ScriptError"
+    modelFingerprint: "1AC1DE43C66724A3C920AB9CADE30C84"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "fd820074-8915-37ce-90cf-7dec1a476a3e"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "ENUM_SELF_FIELD_ACCESS"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "fromMnemonic"
+    signature: "fromMnemonic(java.lang.String) : org.bitcoinj.script.ScriptError"
+    sourceCodeSignature: "ScriptError fromMnemonic(String name)"
+    instructionFingerprint: "B6FF8C6E03FD921282C6B822C0708445"
+  paths:
+  - pathId: "path1"
+    testPathName: "fromMnemonicWhenErrIsNullThrowsIllegalArgumentException"
+    modelFingerprint: "BEF5EBCA2CB21CBBA89303E25EED9F36"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "name"
+      modelFingerprint: "7ACB4C7EBF6D36049913B220FC88F117"
+      index: 1
+      valueUuid: "fromMnemonic_string1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "6B9D3C6328E35A62BE46837C1246B79B"
+      index: 2
+      valueUuid: "fromMnemonic_illegalArgumentException1"
+    uuid: "02f68c12-5a0e-3dca-af97-5694b8b4e8da"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "J"
+      valueType: "java.lang.String"
+      uuid: "fromMnemonic_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.IllegalArgumentException"
+        parameters:
+        - name: "s"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "J is not a valid name"
+            valueType: "java.lang.String"
+            uuid: "fromMnemonic_string2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "java.lang.IllegalArgumentException"
+      uuid: "fromMnemonic_illegalArgumentException1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "fromMnemonicWhenErrIsNotNull"
+    modelFingerprint: "171BC2D741673E6B12A72DEF91A94E86"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "name"
+      modelFingerprint: "3830444B9B8AF74B18598135ED0CC485"
+      index: 1
+      valueUuid: "fromMnemonic_string1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "E8D717724AA1ED7E85C91A784DC2F249"
+      index: 2
+      valueUuid: "fromMnemonic_scriptError1"
+    uuid: "1917e9f8-0714-38f6-afb9-d52c8973b4ef"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "OK"
+      valueType: "java.lang.String"
+      uuid: "fromMnemonic_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ENUM"
+      content: !<regular>
+        value: "SCRIPT_ERR_OK"
+      valueType: "org.bitcoinj.script.ScriptError"
+      uuid: "fromMnemonic_scriptError1"
+      fixed: false
+      collectionUuid: "<clinit>_hashMap1"
+      equalsMethodPresent: true
+      explicitCastNeeded: false

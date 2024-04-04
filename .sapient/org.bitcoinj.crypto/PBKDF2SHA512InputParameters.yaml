@@ -1,0 +1,1088 @@
+---
+modelFingerprint: "FA12DC558E13D1F22F4180F77C97D7FF"
+methods:
+- method:
+    name: "derive"
+    signature: "derive(java.lang.String,java.lang.String,int,int) : byte[]"
+    sourceCodeSignature: "byte[] derive(String P, String S, int c, int dkLen)"
+    tryCatchBlocks:
+    - idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.io.IOException"
+      - "java.security.NoSuchAlgorithmException"
+      - "java.security.InvalidKeyException"
+    instructionFingerprint: "1026614B902D78206E500B443692609C"
+  paths:
+  - pathId: "path5"
+    testPathName: "deriveWhenCNotGreaterThan0ThrowsIllegalArgumentException"
+    modelFingerprint: "EF5B00E1E426C96C2BC26D7F592127CA"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "P"
+      modelFingerprint: "765EEBA9EEB660F0DD9478D95F6CDE2F"
+      index: 1
+      valueUuid: "derive_string1"
+    - type: "INPUT"
+      name: "S"
+      modelFingerprint: "5B490030B5589AF3F027D253569E05CA"
+      index: 2
+      valueUuid: "derive_string2"
+    - type: "INPUT"
+      name: "c"
+      modelFingerprint: "6E5B3F4CB294C610D29D7F928AE4A780"
+      index: 3
+      valueUuid: "derive_int1"
+    - type: "INPUT"
+      name: "dkLen"
+      modelFingerprint: "01388DECB76981EE83917AC7CC5B6DDE"
+      index: 4
+      valueUuid: "derive_int2"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
+      index: 5
+      valueUuid: "uuid4"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid1"
+        - name: "messageSupplier"
+          valueUuid: "uuid2"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "uuid3"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "3E9C76AB51311DE97AE9C2294CD5E1D6"
+      index: 6
+      valueUuid: "uuid5"
+    uuid: "4e65e438-c2cc-36eb-b7b6-206502cbfb7c"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "P1"
+      valueType: "java.lang.String"
+      uuid: "derive_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "S1"
+      valueType: "java.lang.String"
+      uuid: "derive_string2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: -1
+      valueType: "int"
+      uuid: "derive_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "derive_int2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid4"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.IllegalArgumentException"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.IllegalArgumentException"
+      uuid: "uuid3"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.IllegalArgumentException"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.IllegalArgumentException"
+      uuid: "uuid5"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+  - pathId: "path4"
+    testPathName: "deriveWhenDkLenNotGreaterThan0ThrowsIllegalArgumentException"
+    modelFingerprint: "48B5B4C3ADFEB0B5AC5DEA4089A4616B"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "P"
+      modelFingerprint: "765EEBA9EEB660F0DD9478D95F6CDE2F"
+      index: 1
+      valueUuid: "derive_string1"
+    - type: "INPUT"
+      name: "S"
+      modelFingerprint: "5B490030B5589AF3F027D253569E05CA"
+      index: 2
+      valueUuid: "derive_string2"
+    - type: "INPUT"
+      name: "c"
+      modelFingerprint: "383DA45DED240906D641A46A729760D1"
+      index: 3
+      valueUuid: "derive_int1"
+    - type: "INPUT"
+      name: "dkLen"
+      modelFingerprint: "12897A6C3C59C2CD6C1CA57AA1058A14"
+      index: 4
+      valueUuid: "derive_int2"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EE07D40EFD4ADC96C83D317FAE9481C2"
+      index: 5
+      valueUuid: "uuid3"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid1"
+        - name: "messageSupplier"
+          valueUuid: "uuid2"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "derive_void1"
+        access: 9
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
+      index: 6
+      valueUuid: "uuid7"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid4"
+        - name: "messageSupplier"
+          valueUuid: "uuid5"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "uuid6"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "3E9C76AB51311DE97AE9C2294CD5E1D6"
+      index: 7
+      valueUuid: "uuid8"
+    uuid: "f73eb3cd-3938-3e7b-a3e8-d45af4579767"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "P1"
+      valueType: "java.lang.String"
+      uuid: "derive_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "S1"
+      valueType: "java.lang.String"
+      uuid: "derive_string2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 1
+      valueType: "int"
+      uuid: "derive_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: -1
+      valueType: "int"
+      uuid: "derive_int2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "derive_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid7"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.IllegalArgumentException"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.IllegalArgumentException"
+      uuid: "uuid6"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "uuid4"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid5"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.IllegalArgumentException"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.IllegalArgumentException"
+      uuid: "uuid8"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+  - pathId: "path3"
+    testPathName: "deriveWhenIGreaterThanL"
+    modelFingerprint: "D3386E3450FC83C8981996A37E9E453A"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "b50c7f9a-c382-33f1-aaf4-d8f578d3738d"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path8"
+    testPathName: "deriveWhenCaughtIOExceptionOrNoSuchAlgorithmExceptionOrInvalidKeyExceptionThrowsRuntimeException"
+    modelFingerprint: "6BD79314088776B055D4A429D29681D9"
+    problemWasSolvedByProver: false
+    catchBlockExercised:
+      idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.io.IOException"
+      - "java.security.NoSuchAlgorithmException"
+      - "java.security.InvalidKeyException"
+    truncated: true
+    inputParameters: []
+    uuid: "4bc625c3-b56e-3226-bc87-96614689bf8b"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path1"
+    testPathName: "deriveWhenJEquals0"
+    modelFingerprint: "9382DA68E6644E693E9CF5BBABD021A5"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "4922b028-2b71-37bc-b873-0c59d2903f0f"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.lang.String.getBytes(java.nio.charset.Charset)\
+        \ : byte[]"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path6"
+    testPathName: "deriveWhenJEquals0AndCaughtIOExceptionOrNoSuchAlgorithmExceptionOrInvalidKeyExceptionThrowsRuntimeException"
+    modelFingerprint: "03F362D158D19119D319D0B1D9E029DA"
+    problemWasSolvedByProver: false
+    catchBlockExercised:
+      idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.io.IOException"
+      - "java.security.NoSuchAlgorithmException"
+      - "java.security.InvalidKeyException"
+    truncated: true
+    inputParameters: []
+    uuid: "f094ba67-8d2f-32f2-b59a-046b60a68dd5"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.lang.String.getBytes(java.nio.charset.Charset)\
+        \ : byte[]"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path2"
+    testPathName: "deriveWhenKLessThanU_XORLength"
+    modelFingerprint: "809439F54B276A3374DA745DAA59710F"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "P"
+      modelFingerprint: "765EEBA9EEB660F0DD9478D95F6CDE2F"
+      index: 1
+      valueUuid: "derive_string1"
+    - type: "INPUT"
+      name: "S"
+      modelFingerprint: "5B490030B5589AF3F027D253569E05CA"
+      index: 2
+      valueUuid: "derive_string2"
+    - type: "INPUT"
+      name: "c"
+      modelFingerprint: "1EE84B7A2C08F2B7CF87406C5E64DFBF"
+      index: 3
+      valueUuid: "derive_int1"
+    - type: "INPUT"
+      name: "dkLen"
+      modelFingerprint: "2F389A63DC8B048A0D60156AF416E72F"
+      index: 4
+      valueUuid: "derive_int2"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EE07D40EFD4ADC96C83D317FAE9481C2"
+      index: 5
+      valueUuid: "uuid3"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid1"
+        - name: "messageSupplier"
+          valueUuid: "uuid2"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "derive_void1"
+        access: 9
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EE07D40EFD4ADC96C83D317FAE9481C2"
+      index: 6
+      valueUuid: "uuid6"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid4"
+        - name: "messageSupplier"
+          valueUuid: "uuid5"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "derive_void2"
+        access: 9
+    - type: "STATIC"
+      name: "ByteUtils"
+      modelFingerprint: "E3F6D781FE1380531663DAE916F73432"
+      index: 7
+      idsTryCatchBlockSurrounding:
+      - 1
+      valueUuid: "uuid7"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.ByteUtils"
+        name: "concat"
+        parameters:
+        - name: "b1"
+          valueUuid: "F_byte[]2"
+        - name: "b2"
+          valueUuid: "INT_byte[]1"
+        signature: "concat(byte[],byte[]): byte[]"
+        returnValueUuid: "F_byte[]3"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "0DF84C852C0B1DB2CD6E7531C3A5C2D7"
+      index: 8
+      valueUuid: "derive_byte[]1"
+    uuid: "3060f228-bd9a-3b1d-9e16-ced38010f96e"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "P1"
+      valueType: "java.lang.String"
+      uuid: "derive_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "S1"
+      valueType: "java.lang.String"
+      uuid: "derive_string2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 2
+      valueType: "int"
+      uuid: "derive_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 1
+      valueType: "int"
+      uuid: "derive_int2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "derive_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid6"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "derive_void2"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid4"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid5"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.ByteUtils"
+      uuid: "uuid7"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 83
+            valueType: "byte"
+            uuid: "F_byte[]3-item0"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          1:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 49
+            valueType: "byte"
+            uuid: "F_byte[]3-item1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          2:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            uuid: "F_byte[]3-item2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          3:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            uuid: "F_byte[]3-item3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          4:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            uuid: "F_byte[]3-item4"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          5:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "byte"
+            uuid: "F_byte[]3-item5"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "F_byte[]3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 83
+            valueType: "byte"
+            uuid: "F_byte[]2-item0"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          1:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 49
+            valueType: "byte"
+            uuid: "F_byte[]2-item1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "F_byte[]2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            uuid: "INT_byte[]1-item0"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          1:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            uuid: "INT_byte[]1-item1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          2:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            uuid: "INT_byte[]1-item2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          3:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "byte"
+            uuid: "INT_byte[]1-item3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "INT_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: -44
+            valueType: "byte"
+            uuid: "derive_byte[]1-item0"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "derive_byte[]1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path7"
+    testPathName: "deriveWhenKLessThanU_XORLengthAndCaughtIOExceptionOrNoSuchAlgorithmExceptionOrInvalidKeyExceptionThrowsRuntimeException"
+    modelFingerprint: "19D9A71CC2C2903BD397657AD2BB8B79"
+    problemWasSolvedByProver: false
+    catchBlockExercised:
+      idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.io.IOException"
+      - "java.security.NoSuchAlgorithmException"
+      - "java.security.InvalidKeyException"
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "P"
+      modelFingerprint: "F988B12FBBECDF4F8B9F54C0449CDCE6"
+      index: 1
+      valueUuid: "derive_string1"
+    - type: "INPUT"
+      name: "S"
+      modelFingerprint: "451AF7AE9D36C28F1ED026557D6BAE5D"
+      index: 2
+      valueUuid: "derive_string2"
+    - type: "INPUT"
+      name: "c"
+      modelFingerprint: "383DA45DED240906D641A46A729760D1"
+      index: 3
+      valueUuid: "derive_int1"
+    - type: "INPUT"
+      name: "dkLen"
+      modelFingerprint: "7CAF0C75030717B6C67A5D5BB98E3CBF"
+      index: 4
+      valueUuid: "derive_int2"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EE07D40EFD4ADC96C83D317FAE9481C2"
+      index: 5
+      valueUuid: "uuid3"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid1"
+        - name: "messageSupplier"
+          valueUuid: "uuid2"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "derive_void1"
+        access: 9
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EE07D40EFD4ADC96C83D317FAE9481C2"
+      index: 6
+      valueUuid: "uuid6"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid4"
+        - name: "messageSupplier"
+          valueUuid: "uuid5"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "derive_void2"
+        access: 9
+    - type: "STATIC"
+      name: "ByteUtils"
+      modelFingerprint: "53678711E07263629940F298B3A165D9"
+      index: 7
+      idsTryCatchBlockSurrounding:
+      - 1
+      valueUuid: "uuid7"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.ByteUtils"
+        name: "concat"
+        parameters:
+        - name: "b1"
+          valueUuid: "F_byte[]2"
+        - name: "b2"
+          valueUuid: "INT_byte[]1"
+        signature: "concat(byte[],byte[]): byte[]"
+        returnValueUuid: "F_byte[]3"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      name: "baos"
+      modelFingerprint: "75EC0F6044E2A2D27AC670304C8BFE28"
+      index: 8
+      idsTryCatchBlockSurrounding:
+      - 1
+      valueUuid: "derive_byteArrayOutputStream1"
+      methodExercised:
+        target: "baos"
+        name: "write"
+        parameters:
+        - name: "b"
+          valueUuid: "F_byte[]4"
+        throwsExceptions:
+        - "java.io.IOException"
+        signature: "write(byte[]): void throws java.io.IOException"
+        returnValueUuid: "derive_void3"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "86516F64129E874C29870AA604BEEAAC"
+      index: 9
+      valueUuid: "derive_runtimeException1"
+    uuid: "1e26360d-137e-3978-b018-4b5a879346ca"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "REFLECTION_CALL_FAILURE"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "password"
+      valueType: "java.lang.String"
+      uuid: "derive_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "salt"
+      valueType: "java.lang.String"
+      uuid: "derive_string2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 1
+      valueType: "int"
+      uuid: "derive_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 64
+      valueType: "int"
+      uuid: "derive_int2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "derive_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid6"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "derive_void2"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid4"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid5"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.ByteUtils"
+      uuid: "uuid7"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "F_byte[]3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 115
+            valueType: "byte"
+            uuid: "F_byte[]2-item0"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          1:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 97
+            valueType: "byte"
+            uuid: "F_byte[]2-item1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          2:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 108
+            valueType: "byte"
+            uuid: "F_byte[]2-item2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          3:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 116
+            valueType: "byte"
+            uuid: "F_byte[]2-item3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "F_byte[]2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            uuid: "INT_byte[]1-item0"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          1:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            uuid: "INT_byte[]1-item1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          2:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            uuid: "INT_byte[]1-item2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          3:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "byte"
+            uuid: "INT_byte[]1-item3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "INT_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.io.ByteArrayOutputStream"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "java.io.ByteArrayOutputStream"
+      uuid: "derive_byteArrayOutputStream1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "derive_void3"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "F_byte[]4"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.RuntimeException"
+        parameters:
+        - name: "cause"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "java.lang.Exception"
+              parameters: []
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "java.lang.Exception"
+            uuid: "derive_exception1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "java.lang.RuntimeException"
+      uuid: "derive_runtimeException1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false

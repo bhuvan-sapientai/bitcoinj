@@ -1,0 +1,631 @@
+---
+modelFingerprint: "DD25F80A138D55E037E4AAE3B9DFA239"
+methods:
+- method:
+    name: "trackSuccess"
+    signature: "trackSuccess() : void"
+    sourceCodeSignature: "void trackSuccess()"
+    instructionFingerprint: "DD51E98D2458BE7C69DA89FD20061619"
+  paths:
+  - pathId: "path1"
+    testPathName: "trackSuccessTest"
+    constructorSignature: "<init>(org.bitcoinj.utils.ExponentialBackoff$Params) :\
+      \ void"
+    modelFingerprint: "1DE6BFAF4FA02C5A416823056DA6B953"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "09804A2925F5260A27E65AC6F4F05FDE"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "TimeUtils"
+      modelFingerprint: "395487F60C1C4BD4BBDD54A9D0F8C51F"
+      index: 2
+      valueUuid: "uuid1"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.TimeUtils"
+        name: "currentTime"
+        parameters: []
+        signature: "currentTime(): Instant"
+        returnValueUuid: "trackSuccess_instant1"
+        access: 9
+    - type: "STATIC"
+      name: "TimeUtils"
+      modelFingerprint: "D1F9F62F8A23F665231CD8004609ACB6"
+      index: 3
+      valueUuid: "uuid2"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.TimeUtils"
+        name: "currentTime"
+        parameters: []
+        signature: "currentTime(): Instant"
+        returnValueUuid: "trackSuccess_instant2"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 4
+      valueUuid: "uuid3"
+    uuid: "b77d6e2a-af77-32b7-8a05-30ba4c7b60e5"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_CALL_INSTRUCTION_ACCESS_IGNORE_DEPENDENCY_CALLS"
+      source: "backoff = params.initialInterval;"
+      lineNumber: 81
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.utils.ExponentialBackoff"
+        parameters:
+        - name: "params"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.utils.ExponentialBackoff$Params"
+            uuid: "<init>_exponentialBackoff.Params1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.utils.ExponentialBackoff"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.TimeUtils"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.internal.TimeUtils"
+        method: "currentTime"
+        methodParameters: []
+      valueType: "java.time.Instant"
+      uuid: "trackSuccess_instant1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.TimeUtils"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.internal.TimeUtils"
+        method: "currentTime"
+        methodParameters: []
+      valueType: "java.time.Instant"
+      uuid: "trackSuccess_instant2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      uuid: "uuid3"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "trackFailure"
+    signature: "trackFailure() : void"
+    sourceCodeSignature: "void trackFailure()"
+    instructionFingerprint: "8C6575B4D8512C4BEBDE6084692A0D07"
+  paths:
+  - pathId: "path1"
+    testPathName: "trackFailureWhenBackoffCompareToParamsMaximumIntervalGreaterThan0"
+    constructorSignature: "<init>(org.bitcoinj.utils.ExponentialBackoff$Params) :\
+      \ void"
+    modelFingerprint: "AFC2938EEA80BCE8705944BAF9425CCF"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "09804A2925F5260A27E65AC6F4F05FDE"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "TimeUtils"
+      modelFingerprint: "395487F60C1C4BD4BBDD54A9D0F8C51F"
+      index: 2
+      valueUuid: "uuid4"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.TimeUtils"
+        name: "currentTime"
+        parameters: []
+        signature: "currentTime(): Instant"
+        returnValueUuid: "trackSuccess_instant1"
+        access: 9
+    - type: "STATIC"
+      name: "TimeUtils"
+      modelFingerprint: "DE8115B17F872F333FA5D0170F58D46F"
+      index: 3
+      valueUuid: "uuid5"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.TimeUtils"
+        name: "currentTime"
+        parameters: []
+        signature: "currentTime(): Instant"
+        returnValueUuid: "trackFailure_instant1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 4
+      valueUuid: "uuid6"
+    uuid: "812e1600-1008-3380-8ccb-18e4f7bb25fb"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_CALL_INSTRUCTION_ACCESS_IGNORE_DEPENDENCY_CALLS"
+      source: "backoff = params.initialInterval;"
+      lineNumber: 81
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.utils.ExponentialBackoff"
+        parameters:
+        - name: "params"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.utils.ExponentialBackoff$Params"
+            uuid: "<init>_exponentialBackoff.Params1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.utils.ExponentialBackoff"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.TimeUtils"
+      uuid: "uuid4"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.internal.TimeUtils"
+        method: "currentTime"
+        methodParameters: []
+      valueType: "java.time.Instant"
+      uuid: "trackSuccess_instant1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.TimeUtils"
+      uuid: "uuid5"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.time.Instant"
+        method: "ofEpochSecond"
+        methodParameters:
+        - name: "epochSecond"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1700000000
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.time.Instant"
+      uuid: "trackFailure_instant1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      uuid: "uuid6"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "retryTime"
+    signature: "retryTime() : java.time.Instant"
+    sourceCodeSignature: "Instant retryTime()"
+    instructionFingerprint: "616C43DD7B97B00C7B9D65E6CE5C5179"
+  paths:
+  - pathId: "path1"
+    testPathName: "retryTimeTest"
+    constructorSignature: "<init>(org.bitcoinj.utils.ExponentialBackoff$Params) :\
+      \ void"
+    modelFingerprint: "1774B7879634F5FC8E6F70D028933F4B"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "09804A2925F5260A27E65AC6F4F05FDE"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "TimeUtils"
+      modelFingerprint: "D1F9F62F8A23F665231CD8004609ACB6"
+      index: 2
+      valueUuid: "uuid7"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.TimeUtils"
+        name: "currentTime"
+        parameters: []
+        signature: "currentTime(): Instant"
+        returnValueUuid: "trackSuccess_instant1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "DFB56601C331FFE5B584AE1048966ABE"
+      index: 3
+      valueUuid: "trackSuccess_instant1"
+    uuid: "ccd040e4-311d-30d2-8f98-78ba3d2f5437"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_CALL_INSTRUCTION_ACCESS_IGNORE_DEPENDENCY_CALLS"
+      source: "backoff = params.initialInterval;"
+      lineNumber: 81
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.utils.ExponentialBackoff"
+        parameters:
+        - name: "params"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.utils.ExponentialBackoff$Params"
+            uuid: "<init>_exponentialBackoff.Params1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.utils.ExponentialBackoff"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.TimeUtils"
+      uuid: "uuid7"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.internal.TimeUtils"
+        method: "currentTime"
+        methodParameters: []
+      valueType: "java.time.Instant"
+      uuid: "trackSuccess_instant1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.internal.TimeUtils"
+        method: "currentTime"
+        methodParameters: []
+      valueType: "java.time.Instant"
+      uuid: "trackSuccess_instant1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "getRetryTime"
+    signature: "getRetryTime() : long"
+    sourceCodeSignature: "long getRetryTime()"
+    instructionFingerprint: "AC86F9E74E52BBA881B2FA904859BB9B"
+  paths:
+  - pathId: "path1"
+    testPathName: "getRetryTimeTest"
+    constructorSignature: "<init>(org.bitcoinj.utils.ExponentialBackoff$Params) :\
+      \ void"
+    modelFingerprint: "9BBF63F6C6B843876D2A09E2CB310CA2"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "09804A2925F5260A27E65AC6F4F05FDE"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "TimeUtils"
+      modelFingerprint: "395487F60C1C4BD4BBDD54A9D0F8C51F"
+      index: 2
+      valueUuid: "uuid8"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.TimeUtils"
+        name: "currentTime"
+        parameters: []
+        signature: "currentTime(): Instant"
+        returnValueUuid: "trackSuccess_instant1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "BE282E9484D29DB78AA07CF947EE8765"
+      index: 3
+      valueUuid: "getRetryTime_long1"
+    uuid: "1841a798-331a-3eb9-b2cd-d7600dfa9716"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_CALL_INSTRUCTION_ACCESS_IGNORE_DEPENDENCY_CALLS"
+      source: "backoff = params.initialInterval;"
+      lineNumber: 81
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.utils.ExponentialBackoff"
+        parameters:
+        - name: "params"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.utils.ExponentialBackoff$Params"
+            uuid: "<init>_exponentialBackoff.Params1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.utils.ExponentialBackoff"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.TimeUtils"
+      uuid: "uuid8"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.internal.TimeUtils"
+        method: "currentTime"
+        methodParameters: []
+      valueType: "java.time.Instant"
+      uuid: "trackSuccess_instant1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 1712214258590
+      valueType: "long"
+      uuid: "getRetryTime_long1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "compareTo"
+    signature: "compareTo(org.bitcoinj.utils.ExponentialBackoff) : int"
+    sourceCodeSignature: "int compareTo(ExponentialBackoff other)"
+    instructionFingerprint: "35DD719A27A9685F0A52ECA3321FB0D6"
+  paths:
+  - pathId: "path1"
+    testPathName: "compareToTest"
+    constructorSignature: "<init>(org.bitcoinj.utils.ExponentialBackoff$Params) :\
+      \ void"
+    modelFingerprint: "2CCB98A27CD9BDBC58797C1C83DACCD3"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "09804A2925F5260A27E65AC6F4F05FDE"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "other"
+      modelFingerprint: "640E46BBCF201F798B8CBB9F3195F28C"
+      index: 2
+      valueUuid: "compareTo_exponentialBackoff1"
+    - type: "STATIC"
+      name: "TimeUtils"
+      modelFingerprint: "DE8115B17F872F333FA5D0170F58D46F"
+      index: 3
+      valueUuid: "uuid9"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.TimeUtils"
+        name: "currentTime"
+        parameters: []
+        signature: "currentTime(): Instant"
+        returnValueUuid: "trackSuccess_instant1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "ACBCF6744C1A4F89BFBA83521C7CE3BD"
+      index: 4
+      valueUuid: "compareTo_int1"
+    uuid: "af5f6332-26a2-3749-8f9a-ac87ce6fe7cf"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_CALL_INSTRUCTION_ACCESS_IGNORE_DEPENDENCY_CALLS"
+      source: "backoff = params.initialInterval;"
+      lineNumber: 81
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.utils.ExponentialBackoff"
+        parameters:
+        - name: "params"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.utils.ExponentialBackoff$Params"
+            uuid: "<init>_exponentialBackoff.Params1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.utils.ExponentialBackoff"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.utils.ExponentialBackoff"
+        parameters:
+        - name: "params"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.utils.ExponentialBackoff$Params"
+            uuid: "compareTo_exponentialBackoff1-params"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.utils.ExponentialBackoff"
+      uuid: "compareTo_exponentialBackoff1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.TimeUtils"
+      uuid: "uuid9"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.time.Instant"
+        method: "ofEpochSecond"
+        methodParameters:
+        - name: "epochSecond"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1700000000
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.time.Instant"
+      uuid: "trackSuccess_instant1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "compareTo_int1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "toString"
+    signature: "toString() : java.lang.String"
+    sourceCodeSignature: "String toString()"
+    instructionFingerprint: "5844E48F729177846801D859CE604860"
+  paths:
+  - pathId: "path1"
+    testPathName: "toStringTest"
+    constructorSignature: "<init>(org.bitcoinj.utils.ExponentialBackoff$Params) :\
+      \ void"
+    modelFingerprint: "484B97608EB784A1E54DB7C6542A0B04"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "09804A2925F5260A27E65AC6F4F05FDE"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "TimeUtils"
+      modelFingerprint: "395487F60C1C4BD4BBDD54A9D0F8C51F"
+      index: 2
+      valueUuid: "uuid10"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.TimeUtils"
+        name: "currentTime"
+        parameters: []
+        signature: "currentTime(): Instant"
+        returnValueUuid: "trackSuccess_instant1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "7C1EE9161BAF84194905948CE1667B68"
+      index: 3
+      valueUuid: "toString_string1"
+    uuid: "363d3698-f34c-39ad-914f-376a19498023"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_CALL_INSTRUCTION_ACCESS_IGNORE_DEPENDENCY_CALLS"
+      source: "backoff = params.initialInterval;"
+      lineNumber: 81
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.utils.ExponentialBackoff"
+        parameters:
+        - name: "params"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.utils.ExponentialBackoff$Params"
+            uuid: "<init>_exponentialBackoff.Params1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.utils.ExponentialBackoff"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.TimeUtils"
+      uuid: "uuid10"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.internal.TimeUtils"
+        method: "currentTime"
+        methodParameters: []
+      valueType: "java.time.Instant"
+      uuid: "trackSuccess_instant1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "ExponentialBackoff retry=2024-04-04T07:04:18.844334Z backoff=2 ms"
+      valueType: "java.lang.String"
+      uuid: "toString_string1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false

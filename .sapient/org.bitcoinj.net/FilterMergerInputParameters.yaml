@@ -1,0 +1,633 @@
+---
+modelFingerprint: "5017262DC6BE158F29D2B129EC8D2186"
+methods:
+- method:
+    name: "calculate"
+    signature: "calculate(java.util.List<org.bitcoinj.core.PeerFilterProvider>) :\
+      \ org.bitcoinj.net.FilterMerger$Result"
+    sourceCodeSignature: "Result calculate(List<PeerFilterProvider> providerList)"
+    instructionFingerprint: "0FE604137BD49AE73F658FB0B0563F49"
+  paths:
+  - pathId: "path3"
+    testPathName: "calculateWhenBegunProvidersIsNotEmpty"
+    constructorSignature: "<init>(double) : void"
+    modelFingerprint: "8E82F2647F915D4C5DD3D75DC1E63A9A"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "45dbb564-fcc5-3832-86ad-97f557c1d9e4"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "METHOD_CALL_INSTRUCTION_UNSOLVABLE"
+      source: "private final int bloomFilterTweak = new Random().nextInt();"
+      lineNumber: 47
+      details: "Method java.util.Random::nextInt has a unrepeatable behavior"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path6"
+    testPathName: "calculateWhenBegunProvidersIsEmpty"
+    constructorSignature: "<init>(double) : void"
+    modelFingerprint: "87548B8E027958E0E11B6A70015230BF"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "7cdb8590-1c89-3ac8-9c83-f2c5de30fa51"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "METHOD_CALL_INSTRUCTION_UNSOLVABLE"
+      source: "private final int bloomFilterTweak = new Random().nextInt();"
+      lineNumber: 47
+      details: "Method java.util.Random::nextInt has a unrepeatable behavior"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path1"
+    testPathName: "calculateWhenFilterNotEqualsLastFilterAndBegunProvidersIsNotEmpty"
+    constructorSignature: "<init>(double) : void"
+    modelFingerprint: "66FA1543EB8F2B41CA2BD6E88EFE07AE"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "CBE4A20232FFDC05FE4D85502DBDFC4E"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "providerList"
+      modelFingerprint: "D576A87F7F30434B05084068122FAB8E"
+      index: 2
+      valueUuid: "calculate_list1"
+    - type: "LOCAL_VARIABLE"
+      name: "provider"
+      modelFingerprint: "66FA61214907786662BD1052C749B998"
+      index: 3
+      valueUuid: "calculate_object1"
+      methodExercised:
+        target: "provider"
+        name: "beginBloomFilterCalculation"
+        parameters: []
+        signature: "beginBloomFilterCalculation(): void"
+        returnValueUuid: "calculate_void1"
+        access: 1025
+    - type: "LOCAL_VARIABLE"
+      name: "p"
+      modelFingerprint: "4A2546FEB23975E5C6470D5FA5108E62"
+      index: 4
+      valueUuid: "calculate_object2"
+      methodExercised:
+        target: "p"
+        name: "earliestKeyCreationTime"
+        parameters: []
+        signature: "earliestKeyCreationTime(): Instant"
+        returnValueUuid: "calculate_instant2"
+        access: 1025
+    - type: "STATIC"
+      name: "TimeUtils"
+      modelFingerprint: "8F5A9F6E00B5079845776F3F2AA2BA9F"
+      index: 5
+      valueUuid: "uuid1"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.TimeUtils"
+        name: "earlier"
+        parameters:
+        - name: "time1"
+          valueUuid: "calculate_instant1"
+        - name: "time2"
+          valueUuid: "calculate_instant2"
+        signature: "earlier(Instant,Instant): Instant"
+        returnValueUuid: "calculate_instant3"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      name: "p"
+      modelFingerprint: "88AF2034FDC2F83008F580E0FE5487D1"
+      index: 6
+      valueUuid: "calculate_object2"
+      methodExercised:
+        target: "p"
+        name: "getBloomFilterElementCount"
+        parameters: []
+        signature: "getBloomFilterElementCount(): int"
+        returnValueUuid: "calculate_int2"
+        access: 1025
+    - type: "LOCAL_VARIABLE"
+      name: "p"
+      modelFingerprint: "CA2D90E0309F5E9EBE7001CA1413EAE0"
+      index: 7
+      valueUuid: "calculate_object3"
+      methodExercised:
+        target: "p"
+        name: "getBloomFilter"
+        parameters:
+        - name: "arg0"
+          valueUuid: "calculate_int4"
+        - name: "arg1"
+          valueUuid: "<init>_double1"
+        - name: "arg2"
+          valueUuid: "<init>_int1"
+        signature: "getBloomFilter(int,double,int): BloomFilter"
+        returnValueUuid: "calculate_bloomFilter2"
+        access: 1025
+    - type: "LOCAL_VARIABLE"
+      name: "filter"
+      modelFingerprint: "54CD0074B7AEEECB787912ACC06305F4"
+      index: 8
+      valueUuid: "calculate_bloomFilter1"
+      methodExercised:
+        target: "filter"
+        name: "merge"
+        parameters:
+        - name: "i"
+          valueUuid: "calculate_bloomFilter2"
+        signature: "merge(BloomFilter): void"
+        returnValueUuid: "calculate_void2"
+        access: 33
+    - type: "LOCAL_VARIABLE"
+      name: "provider"
+      modelFingerprint: "B1109ACA92256777F3A5F4F9CAA54425"
+      index: 9
+      valueUuid: "calculate_object1"
+      methodExercised:
+        target: "provider"
+        name: "endBloomFilterCalculation"
+        parameters: []
+        signature: "endBloomFilterCalculation(): void"
+        returnValueUuid: "calculate_void3"
+        access: 1025
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D86D15F101A0BB1BDFD8C807B74067B6"
+      index: 10
+      valueUuid: "calculate_filterMerger.Result1"
+    - type: "STATE_VERIFICATION_FIELD"
+      name: "lastFilter"
+      modelFingerprint: "C1F2153C5AF411DD720C779285EC274A"
+      index: 11
+      valueUuid: "calculate_bloomFilter1"
+      readMethodForField: "getLastFilter"
+      readMethodModifier: "PUBLIC"
+    uuid: "974f6ce3-fb3d-379b-8bfb-4bedd1091387"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    variablesCouldNotBeIsolated: "filter"
+    failureReason:
+      reason: "METHOD_CALL_INSTRUCTION_UNSOLVABLE"
+      source: "private final int bloomFilterTweak = new Random().nextInt();"
+      lineNumber: 47
+      details: "Method java.util.Random::nextInt has a unrepeatable behavior"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.net.FilterMerger"
+        parameters:
+        - name: "bloomFilterFPRate"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0.0
+            valueType: "double"
+            uuid: "<init>_double1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.net.FilterMerger"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        parameters: []
+        values: []
+      valueType: "java.util.List"
+      genericValueType: "org.bitcoinj.core.PeerFilterProvider"
+      uuid: "calculate_list1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.PeerFilterProvider"
+      uuid: "calculate_object1"
+      fixed: false
+      collectionUuid: "calculate_linkedList1"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "calculate_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.PeerFilterProvider"
+      uuid: "calculate_object2"
+      fixed: false
+      collectionUuid: "calculate_list2"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.time.Instant"
+        method: "ofEpochSecond"
+        methodParameters:
+        - name: "epochSecond"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1700000000
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.time.Instant"
+      uuid: "calculate_instant2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.TimeUtils"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.time.Instant"
+        method: "ofEpochSecond"
+        methodParameters:
+        - name: "epochSecond"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1700000000
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.time.Instant"
+      uuid: "calculate_instant3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_field_return>
+        target: "java.time.Instant"
+        fieldName: "MAX"
+      valueType: "java.time.Instant"
+      uuid: "calculate_instant1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.time.Instant"
+        method: "ofEpochSecond"
+        methodParameters:
+        - name: "epochSecond"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1700000000
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.time.Instant"
+      uuid: "calculate_instant2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.PeerFilterProvider"
+      uuid: "calculate_object2"
+      fixed: false
+      collectionUuid: "calculate_list2"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "calculate_int2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.PeerFilterProvider"
+      uuid: "calculate_object3"
+      fixed: false
+      collectionUuid: "calculate_list2"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.BloomFilter"
+      uuid: "calculate_bloomFilter2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "calculate_int4"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0.0
+      valueType: "double"
+      uuid: "<init>_double1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "<init>_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.BloomFilter"
+        parameters:
+        - name: "elements"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            uuid: "calculate_int4"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "falsePositiveRate"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0.0
+            valueType: "double"
+            uuid: "<init>_double1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "randomNonce"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            uuid: "<init>_int1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "updateFlag"
+          value:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "UPDATE_ALL"
+            valueType: "org.bitcoinj.core.BloomFilter$BloomUpdate"
+            uuid: "Enum-org.bitcoinj.core.BloomFilter$BloomUpdate-UPDATE_ALL"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.core.BloomFilter"
+      uuid: "calculate_bloomFilter1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "calculate_void2"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.BloomFilter"
+      uuid: "calculate_bloomFilter2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.PeerFilterProvider"
+      uuid: "calculate_object1"
+      fixed: false
+      collectionUuid: "calculate_linkedList1"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "calculate_void3"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.net.FilterMerger$Result"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.net.FilterMerger$Result"
+      uuid: "calculate_filterMerger.Result1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.BloomFilter"
+        parameters:
+        - name: "elements"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            uuid: "calculate_int4"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "falsePositiveRate"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0.0
+            valueType: "double"
+            uuid: "<init>_double1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "randomNonce"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            uuid: "<init>_int1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "updateFlag"
+          value:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "UPDATE_ALL"
+            valueType: "org.bitcoinj.core.BloomFilter$BloomUpdate"
+            uuid: "Enum-org.bitcoinj.core.BloomFilter$BloomUpdate-UPDATE_ALL"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.core.BloomFilter"
+      uuid: "calculate_bloomFilter1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "calculateWhenProvidersIsEmptyAndFilterNotEqualsLastFilterAndBegunProvidersIsNotEmpty"
+    constructorSignature: "<init>(double) : void"
+    modelFingerprint: "6C4D3037AC115BBE80CA58C3396B82C8"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "87dad279-66d6-3c7e-a014-177e5df44b40"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    variablesCouldNotBeIsolated: "filter"
+    failureReason:
+      reason: "METHOD_CALL_INSTRUCTION_UNSOLVABLE"
+      source: "private final int bloomFilterTweak = new Random().nextInt();"
+      lineNumber: 47
+      details: "Method java.util.Random::nextInt has a unrepeatable behavior"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path4"
+    testPathName: "calculateWhenFilterNotEqualsLastFilterAndBegunProvidersIsEmpty"
+    constructorSignature: "<init>(double) : void"
+    modelFingerprint: "00948D55094EE52B53F978F1083FB1D4"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "e2d579f1-6fd9-3d08-881b-2c33047dae32"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    variablesCouldNotBeIsolated: "filter"
+    failureReason:
+      reason: "METHOD_CALL_INSTRUCTION_UNSOLVABLE"
+      source: "private final int bloomFilterTweak = new Random().nextInt();"
+      lineNumber: 47
+      details: "Method java.util.Random::nextInt has a unrepeatable behavior"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path5"
+    testPathName: "calculateWhenProvidersIsEmptyAndFilterNotEqualsLastFilterAndBegunProvidersIsEmpty"
+    constructorSignature: "<init>(double) : void"
+    modelFingerprint: "CEDB83A5C077FCD8C364C1D5861EEC5D"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "7aef5c91-b0a7-3725-ad36-57281ca2b633"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    variablesCouldNotBeIsolated: "filter"
+    failureReason:
+      reason: "METHOD_CALL_INSTRUCTION_UNSOLVABLE"
+      source: "private final int bloomFilterTweak = new Random().nextInt();"
+      lineNumber: 47
+      details: "Method java.util.Random::nextInt has a unrepeatable behavior"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "setBloomFilterFPRate"
+    signature: "setBloomFilterFPRate(double) : void"
+    sourceCodeSignature: "void setBloomFilterFPRate(double bloomFilterFPRate)"
+    instructionFingerprint: "F7B6BD564FCD75B691C7C670249BD3EB"
+  paths:
+  - pathId: "path1"
+    testPathName: "setBloomFilterFPRateTest"
+    constructorSignature: "<init>(double) : void"
+    modelFingerprint: "F636C203CFA9BFC57558737EE1F40039"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "a9e11ba2-813c-3e88-b4ca-ab33a17fb70d"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_CALL_INSTRUCTION_UNSOLVABLE"
+      source: "private final int bloomFilterTweak = new Random().nextInt();"
+      lineNumber: 47
+      details: "Method java.util.Random::nextInt has a unrepeatable behavior"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "getBloomFilterFPRate"
+    signature: "getBloomFilterFPRate() : double"
+    sourceCodeSignature: "double getBloomFilterFPRate()"
+    instructionFingerprint: "991CFBBB7956E74EFD34CC52770017ED"
+  paths:
+  - pathId: "path1"
+    testPathName: "getBloomFilterFPRateTest"
+    constructorSignature: "<init>(double) : void"
+    modelFingerprint: "BFA5C0F72782EDBC1F79A239ED18FAA8"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "b127f3e1-bf40-33e0-95ce-62ff47d981f8"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_CALL_INSTRUCTION_UNSOLVABLE"
+      source: "private final int bloomFilterTweak = new Random().nextInt();"
+      lineNumber: 47
+      details: "Method java.util.Random::nextInt has a unrepeatable behavior"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "getLastFilter"
+    signature: "getLastFilter() : org.bitcoinj.core.BloomFilter"
+    sourceCodeSignature: "BloomFilter getLastFilter()"
+    instructionFingerprint: "E90CBDD4EB314827D07872E39920518E"
+  paths:
+  - pathId: "path1"
+    testPathName: "getLastFilterTest"
+    constructorSignature: "<init>(double) : void"
+    modelFingerprint: "FFD179B5F9906C5FE59E4950D9F9E468"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "1b6e3024-395f-3c61-b829-85373ba8bc03"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_CALL_INSTRUCTION_UNSOLVABLE"
+      source: "private final int bloomFilterTweak = new Random().nextInt();"
+      lineNumber: 47
+      details: "Method java.util.Random::nextInt has a unrepeatable behavior"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []

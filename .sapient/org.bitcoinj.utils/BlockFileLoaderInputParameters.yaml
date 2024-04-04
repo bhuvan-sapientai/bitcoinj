@@ -1,0 +1,1521 @@
+---
+modelFingerprint: "2270959769F0EF689271D3322DB1D083"
+methods:
+- method:
+    name: "getReferenceClientBlockFileList"
+    signature: "getReferenceClientBlockFileList(java.io.File) : java.util.List<java.io.File>"
+    sourceCodeSignature: "List<File> getReferenceClientBlockFileList(File blocksDir)"
+    instructionFingerprint: "8CF467B071AA0BCE2335CB08B162ACFA"
+  paths:
+  - pathId: "path1"
+    testPathName: "getReferenceClientBlockFileListWhenFileNotExists"
+    modelFingerprint: "A24AE233CF898968F5A20473C7092038"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "blocksDir"
+      modelFingerprint: "3B087E3AA6B1E684A77045AF778B6017"
+      index: 1
+      valueUuid: "getReferenceClientBlockFileList_file1"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "A3C9A66787E8779386C502876A29BDCE"
+      index: 2
+      valueUuid: "uuid2"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "getReferenceClientBlockFileList_boolean1"
+        - name: "messageSupplier"
+          valueUuid: "uuid1"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "getReferenceClientBlockFileList_void1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "9483AC8E995A1DEB536A957A35F74DAE"
+      index: 3
+      valueUuid: "getReferenceClientBlockFileList_linkedList1"
+    uuid: "63245f9e-f000-3313-9d0c-c439bcebbd0d"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    variablesCouldNotBeIsolated: "file"
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.io.File.isDirectory() : boolean"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.io.File"
+        parameters:
+        - name: "pathname"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "pathname1"
+            valueType: "java.lang.String"
+            uuid: "getReferenceClientBlockFileList_file1-pathname"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.io.File"
+      uuid: "getReferenceClientBlockFileList_file1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "getReferenceClientBlockFileList_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "getReferenceClientBlockFileList_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        collectionClass: "java.util.LinkedList"
+        parameters: []
+        values: []
+      valueType: "java.util.List"
+      genericValueType: "java.io.File"
+      uuid: "getReferenceClientBlockFileList_linkedList1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "getReferenceClientBlockFileListWhenFileExists"
+    modelFingerprint: "7E0C32DC8E703B3624F0831E70064814"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "blocksDir"
+      modelFingerprint: "3B087E3AA6B1E684A77045AF778B6017"
+      index: 1
+      valueUuid: "getReferenceClientBlockFileList_file1"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "A3C9A66787E8779386C502876A29BDCE"
+      index: 2
+      valueUuid: "uuid4"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "getReferenceClientBlockFileList_boolean1"
+        - name: "messageSupplier"
+          valueUuid: "uuid3"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "getReferenceClientBlockFileList_void1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "E2933B0932349A9F8E3B9EF8E70FF32F"
+      index: 3
+      valueUuid: "getReferenceClientBlockFileList_linkedList1"
+    uuid: "4704d881-b0c5-34b3-8a51-99a6ef09ab3e"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    variablesCouldNotBeIsolated: "file"
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.io.File.isDirectory() : boolean"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.io.File"
+        parameters:
+        - name: "pathname"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "pathname1"
+            valueType: "java.lang.String"
+            uuid: "getReferenceClientBlockFileList_file1-pathname"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.io.File"
+      uuid: "getReferenceClientBlockFileList_file1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid4"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "getReferenceClientBlockFileList_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "getReferenceClientBlockFileList_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        collectionClass: "java.util.LinkedList"
+        parameters: []
+        values:
+        - sapientType: "OBJECT"
+          content: !<new>
+            target: "java.io.File"
+            parameters:
+            - name: "parent"
+              value:
+                sapientType: "OBJECT"
+                content: !<new>
+                  target: "java.io.File"
+                  parameters:
+                  - name: "pathname"
+                    value:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: "pathname1"
+                      valueType: "java.lang.String"
+                      uuid: "getReferenceClientBlockFileList_file1-pathname"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                  privateConstructor: false
+                  createdByTargetCode: false
+                valueType: "java.io.File"
+                uuid: "getReferenceClientBlockFileList_file1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "child"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: "blk00000.dat"
+                valueType: "java.lang.String"
+                uuid: "getReferenceClientBlockFileList_string1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            privateConstructor: false
+            createdByTargetCode: true
+          valueType: "java.io.File"
+          uuid: "getReferenceClientBlockFileList_file2"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+      valueType: "java.util.List"
+      genericValueType: "java.io.File"
+      uuid: "getReferenceClientBlockFileList_linkedList1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "getReferenceClientBlockFileList"
+    signature: "getReferenceClientBlockFileList() : java.util.List<java.io.File>"
+    sourceCodeSignature: "List<File> getReferenceClientBlockFileList()"
+    instructionFingerprint: "AD57C7D0FF9F942415AD06A14758CAE0"
+  paths:
+  - pathId: "path1"
+    testPathName: "getReferenceClientBlockFileList1Test"
+    modelFingerprint: "6B204200F1CDF6AE36FF4B3C753400FA"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC"
+      name: "BlockFileLoader"
+      modelFingerprint: "4F3A1B6DD43B7A39502478AECD020F14"
+      index: 1
+      valueUuid: "uuid5"
+      methodExercised:
+        target: "org.bitcoinj.utils.BlockFileLoader"
+        name: "defaultBlocksDir"
+        parameters: []
+        signature: "defaultBlocksDir(): File"
+        returnValueUuid: "getReferenceClientBlockFileList_file1"
+        access: 9
+    - type: "STATIC"
+      name: "BlockFileLoader"
+      modelFingerprint: "4BA99FCF255E59E645576B320B9F62AF"
+      index: 2
+      valueUuid: "uuid6"
+      methodExercised:
+        target: "org.bitcoinj.utils.BlockFileLoader"
+        name: "getReferenceClientBlockFileList"
+        parameters:
+        - name: "blocksDir"
+          valueUuid: "getReferenceClientBlockFileList_file1"
+        signature: "getReferenceClientBlockFileList(File): List"
+        returnValueUuid: "getReferenceClientBlockFileList_list1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "9D83D7D302F841E2776AFA34BF892A48"
+      index: 3
+      valueUuid: "getReferenceClientBlockFileList_list1"
+    uuid: "6014283f-7ec9-3602-8e31-dca00cf9b8e8"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.utils.BlockFileLoader"
+      uuid: "uuid5"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.io.File"
+        parameters:
+        - name: "pathname"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "pathname1"
+            valueType: "java.lang.String"
+            uuid: "getReferenceClientBlockFileList_file1-pathname"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.io.File"
+      uuid: "getReferenceClientBlockFileList_file1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.utils.BlockFileLoader"
+      uuid: "uuid6"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        parameters: []
+        values: []
+      valueType: "java.util.List"
+      genericValueType: "java.io.File"
+      uuid: "getReferenceClientBlockFileList_list1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.io.File"
+        parameters:
+        - name: "pathname"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "pathname1"
+            valueType: "java.lang.String"
+            uuid: "getReferenceClientBlockFileList_file1-pathname"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.io.File"
+      uuid: "getReferenceClientBlockFileList_file1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        parameters: []
+        values: []
+      valueType: "java.util.List"
+      genericValueType: "java.io.File"
+      uuid: "getReferenceClientBlockFileList_list1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "defaultBlocksDir"
+    signature: "defaultBlocksDir() : java.io.File"
+    sourceCodeSignature: "File defaultBlocksDir()"
+    instructionFingerprint: "BCC3A8B4B5F3DEBFEDCE69CF3618931B"
+  paths:
+  - pathId: "path1"
+    testPathName: "defaultBlocksDirWhenDefaultBlocksDirNotIsDirectoryThrowsRuntimeException"
+    modelFingerprint: "9A8A91DBCDB0A9132B97D752C16C3D10"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC"
+      name: "AppDataDirectory"
+      modelFingerprint: "D4F65DC752F46B1309E4D9D102B3C93E"
+      index: 1
+      valueUuid: "uuid8"
+      methodExercised:
+        target: "org.bitcoinj.utils.AppDataDirectory"
+        name: "getPath"
+        parameters:
+        - name: "applicationDataDirectory"
+          valueUuid: "uuid7"
+        signature: "getPath(String): Path"
+        returnValueUuid: "defaultBlocksDir_path1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "29FB3CCA56DFB88C1468F66B2EEA7BE6"
+      index: 2
+      valueUuid: "defaultBlocksDir_runtimeException1"
+    uuid: "505d86e5-1de9-3050-9118-f73ef98b6060"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.utils.AppDataDirectory"
+      uuid: "uuid8"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.utils.AppDataDirectory"
+        method: "getPath"
+        methodParameters:
+        - value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "Bitcoin"
+            valueType: "java.lang.String"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.file.Path"
+      uuid: "defaultBlocksDir_path1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "Bitcoin"
+      valueType: "java.lang.String"
+      uuid: "uuid7"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.RuntimeException"
+        parameters:
+        - name: "message"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "Default blocks directory not found"
+            valueType: "java.lang.String"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "java.lang.RuntimeException"
+      uuid: "defaultBlocksDir_runtimeException1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "iterator"
+    signature: "iterator() : java.util.Iterator<org.bitcoinj.core.Block>"
+    sourceCodeSignature: "Iterator<Block> iterator()"
+    instructionFingerprint: "9BC9CB79FD2B7751F92B53E352A36654"
+  paths:
+  - pathId: "path1"
+    testPathName: "iteratorTest"
+    constructorSignature: "<init>(org.bitcoinj.base.Network,java.io.File) : void"
+    modelFingerprint: "592C27B73848B87609D90F5506E5436D"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "283F6954C8EF3C61DE80191286F1D3C7"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "B615FD3336067FFAD5DFC8769E2A2209"
+      index: 2
+      valueUuid: "uuid3"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "getReferenceClientBlockFileList_boolean1"
+        - name: "messageSupplier"
+          valueUuid: "uuid1"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "uuid2"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "811452692A86A0A5F43BBDCAD4921113"
+      index: 3
+      methodExercised:
+        target: "target"
+        name: "stream"
+        parameters: []
+        signature: "stream(): Stream"
+        returnValueUuid: "iterator_stream1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "46BEE0A18AD32DCA21F552945D89A0F0"
+      index: 4
+      valueUuid: "iterator_iterator1"
+    uuid: "78c09fb6-edcf-3ce7-9932-6ef4ffc152b3"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.utils.BlockFileLoader"
+        parameters:
+        - name: "network"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Network"
+            uuid: "<init>_network1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "blocksDir"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "java.io.File"
+              parameters:
+              - name: "pathname"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: "pathname1"
+                  valueType: "java.lang.String"
+                  uuid: "<init>_file1-pathname"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "java.io.File"
+            uuid: "<init>_file1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.utils.BlockFileLoader"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.IllegalArgumentException"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.IllegalArgumentException"
+      uuid: "uuid2"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "getReferenceClientBlockFileList_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.util.stream.Stream"
+        method: "empty"
+        methodParameters: []
+      valueType: "java.util.stream.Stream"
+      uuid: "iterator_stream1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ITERATOR"
+      content: !<iterator>
+        collectionValue:
+          sapientType: "COLLECTION"
+          content: !<collection>
+            parameters: []
+            values: []
+          valueType: "java.util.List"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+      valueType: "java.util.Iterator"
+      genericValueType: "org.bitcoinj.core.Block"
+      uuid: "iterator_iterator1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "stream"
+    signature: "stream() : java.util.stream.Stream<org.bitcoinj.core.Block>"
+    sourceCodeSignature: "Stream<Block> stream()"
+    instructionFingerprint: "9F495A9E98A05B94663D223A929F46ED"
+  paths:
+  - pathId: "path1"
+    testPathName: "streamTest"
+    constructorSignature: "<init>(org.bitcoinj.base.Network,java.io.File) : void"
+    modelFingerprint: "E2C0D8777762F564F9D071F257FE10FA"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "283F6954C8EF3C61DE80191286F1D3C7"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "B615FD3336067FFAD5DFC8769E2A2209"
+      index: 2
+      valueUuid: "uuid3"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "getReferenceClientBlockFileList_boolean1"
+        - name: "messageSupplier"
+          valueUuid: "uuid1"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "uuid2"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "E46A8CEE1B2C92E1C1BA850F54E95937"
+      index: 3
+      methodExercised:
+        target: "target"
+        name: "fileBlockStream"
+        parameters:
+        - name: "file"
+          valueUuid: "streamBuffers_file1"
+        signature: "fileBlockStream(File): Stream"
+        returnValueUuid: "streamBuffers_stream3"
+        access: 4
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "1544C3243427A58A5AE91A88CC628F77"
+      index: 4
+      valueUuid: "uuid4"
+    uuid: "b4af2388-e781-3800-820a-b8ede09bd914"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.utils.BlockFileLoader"
+        parameters:
+        - name: "network"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Network"
+            uuid: "<init>_network1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "blocksDir"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "java.io.File"
+              parameters:
+              - name: "pathname"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: "pathname1"
+                  valueType: "java.lang.String"
+                  uuid: "<init>_file1-pathname"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "java.io.File"
+            uuid: "<init>_file1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.utils.BlockFileLoader"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.IllegalArgumentException"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.IllegalArgumentException"
+      uuid: "uuid2"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "getReferenceClientBlockFileList_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.util.stream.Stream"
+        method: "empty"
+        methodParameters: []
+      valueType: "java.util.stream.Stream"
+      uuid: "streamBuffers_stream3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.io.File"
+        parameters:
+        - name: "pathname"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "pathname1"
+            valueType: "java.lang.String"
+            uuid: "streamBuffers_file1-pathname"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.io.File"
+      uuid: "streamBuffers_file1"
+      fixed: false
+      collectionUuid: "list1"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.NullPointerException"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.NullPointerException"
+      uuid: "uuid4"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "streamBuffers"
+    signature: "streamBuffers() : java.util.stream.Stream<java.nio.ByteBuffer>"
+    sourceCodeSignature: "Stream<ByteBuffer> streamBuffers()"
+    instructionFingerprint: "3E66324EAC71CB636D4B04993F54D231"
+  paths:
+  - pathId: "path1"
+    testPathName: "streamBuffersTest"
+    constructorSignature: "<init>(org.bitcoinj.base.Network,java.io.File) : void"
+    modelFingerprint: "5821DA8BA92CF1D62E361097AA158D16"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "283F6954C8EF3C61DE80191286F1D3C7"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "B615FD3336067FFAD5DFC8769E2A2209"
+      index: 2
+      valueUuid: "uuid3"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "getReferenceClientBlockFileList_boolean1"
+        - name: "messageSupplier"
+          valueUuid: "uuid1"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "uuid2"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "E46A8CEE1B2C92E1C1BA850F54E95937"
+      index: 3
+      methodExercised:
+        target: "target"
+        name: "fileBlockStream"
+        parameters:
+        - name: "file"
+          valueUuid: "streamBuffers_file1"
+        signature: "fileBlockStream(File): Stream"
+        returnValueUuid: "streamBuffers_stream3"
+        access: 4
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "A75CC75576B62AD7DE7CA01C0206668C"
+      index: 4
+      valueUuid: "streamBuffers_stream2"
+    uuid: "3e917d90-34e0-3792-88c5-f9e7ccb945d0"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.utils.BlockFileLoader"
+        parameters:
+        - name: "network"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Network"
+            uuid: "<init>_network1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "blocksDir"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "java.io.File"
+              parameters:
+              - name: "pathname"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: "pathname1"
+                  valueType: "java.lang.String"
+                  uuid: "<init>_file1-pathname"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "java.io.File"
+            uuid: "<init>_file1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.utils.BlockFileLoader"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.IllegalArgumentException"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.IllegalArgumentException"
+      uuid: "uuid2"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "getReferenceClientBlockFileList_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.util.stream.Stream"
+        method: "empty"
+        methodParameters: []
+      valueType: "java.util.stream.Stream"
+      uuid: "streamBuffers_stream3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.io.File"
+        parameters:
+        - name: "pathname"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "pathname1"
+            valueType: "java.lang.String"
+            uuid: "streamBuffers_file1-pathname"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.io.File"
+      uuid: "streamBuffers_file1"
+      fixed: false
+      collectionUuid: "list1"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.util.stream.Stream"
+      uuid: "streamBuffers_stream2"
+      fixed: false
+      collectionUuid: "list1"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "fileBlockStream"
+    signature: "fileBlockStream(java.io.File) : java.util.stream.Stream<java.nio.ByteBuffer>"
+    sourceCodeSignature: "Stream<ByteBuffer> fileBlockStream(File file)"
+    tryCatchBlocks:
+    - idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.io.FileNotFoundException"
+    instructionFingerprint: "D4BBB744665F8CAFC14FC62B607D6F25"
+  paths:
+  - pathId: "path1"
+    testPathName: "fileBlockStreamTest"
+    constructorSignature: "<init>(org.bitcoinj.base.Network,java.io.File) : void"
+    modelFingerprint: "AB41E6CEA08AAFE0DFA2E0B07F391AF0"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "283F6954C8EF3C61DE80191286F1D3C7"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "file"
+      modelFingerprint: "03F891C65DE698FEC5B4CA633C72E8D1"
+      index: 2
+      valueUuid: "fileBlockStream_file1"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "B615FD3336067FFAD5DFC8769E2A2209"
+      index: 3
+      valueUuid: "uuid3"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "getReferenceClientBlockFileList_boolean1"
+        - name: "messageSupplier"
+          valueUuid: "uuid1"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "uuid2"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "54F7B1548AE41315823A650B3B9420B8"
+      index: 4
+      methodExercised:
+        target: "target"
+        name: "fileBlockSpliterator"
+        parameters:
+        - name: "file"
+          valueUuid: "fileBlockStream_file1"
+        signature: "fileBlockSpliterator(File): Spliterator"
+        returnValueUuid: "fileBlockStream_spliterator1"
+        access: 4
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "C753BC527FB9F94CD92387C5F4B57BA4"
+      index: 5
+      valueUuid: "fileBlockStream_stream1"
+    uuid: "e7371402-39fb-3b8c-a2b7-40c698f1f1a1"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.utils.BlockFileLoader"
+        parameters:
+        - name: "network"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Network"
+            uuid: "<init>_network1"
+            fixed: false
+            nameForMock: "main"
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "blocksDir"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "java.io.File"
+              parameters:
+              - name: "pathname"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: "pathname1"
+                  valueType: "java.lang.String"
+                  uuid: "<init>_file1-pathname"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "java.io.File"
+            uuid: "<init>_file1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.utils.BlockFileLoader"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.io.File"
+        parameters:
+        - name: "pathname"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "pathname1"
+            valueType: "java.lang.String"
+            uuid: "fileBlockStream_file1-pathname"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.io.File"
+      uuid: "fileBlockStream_file1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.IllegalArgumentException"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.IllegalArgumentException"
+      uuid: "uuid2"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "getReferenceClientBlockFileList_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.util.Spliterator"
+      uuid: "fileBlockStream_spliterator1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.io.File"
+        parameters:
+        - name: "pathname"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "pathname1"
+            valueType: "java.lang.String"
+            uuid: "fileBlockStream_file1-pathname"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.io.File"
+      uuid: "fileBlockStream_file1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.util.stream.Stream"
+        method: "empty"
+        methodParameters: []
+      valueType: "java.util.stream.Stream"
+      uuid: "fileBlockStream_stream1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "fileBlockSpliterator"
+    signature: "fileBlockSpliterator(java.io.File) : java.util.Spliterator<java.nio.ByteBuffer>"
+    sourceCodeSignature: "Spliterator<ByteBuffer> fileBlockSpliterator(File file)"
+    tryCatchBlocks:
+    - idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.io.FileNotFoundException"
+    instructionFingerprint: "5EE3CBD76FD20B84970C04DF5E36AA94"
+  paths:
+  - pathId: "path1"
+    testPathName: "fileBlockSpliteratorTest"
+    constructorSignature: "<init>(org.bitcoinj.base.Network,java.io.File) : void"
+    modelFingerprint: "3D7334CF8C8ACBC9F92042CE6B0225B1"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "283F6954C8EF3C61DE80191286F1D3C7"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "file"
+      modelFingerprint: "03F891C65DE698FEC5B4CA633C72E8D1"
+      index: 2
+      valueUuid: "fileBlockSpliterator_file1"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "B615FD3336067FFAD5DFC8769E2A2209"
+      index: 3
+      valueUuid: "uuid3"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "getReferenceClientBlockFileList_boolean1"
+        - name: "messageSupplier"
+          valueUuid: "uuid1"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "uuid2"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "65E155052CD2C09B46DE56978138FF0B"
+      index: 4
+      valueUuid: "fileBlockSpliterator_spliterator1"
+    uuid: "068381fa-c8ce-32df-8cb7-791fd56199fe"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.utils.BlockFileLoader"
+        parameters:
+        - name: "network"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Network"
+            uuid: "<init>_network1"
+            fixed: false
+            nameForMock: "example_network"
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "blocksDir"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "java.io.File"
+              parameters:
+              - name: "pathname"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: "pathname1"
+                  valueType: "java.lang.String"
+                  uuid: "<init>_file1-pathname"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "java.io.File"
+            uuid: "<init>_file1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.utils.BlockFileLoader"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.io.File"
+        parameters:
+        - name: "pathname"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "pathname1"
+            valueType: "java.lang.String"
+            uuid: "fileBlockSpliterator_file1-pathname"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.io.File"
+      uuid: "fileBlockSpliterator_file1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.IllegalArgumentException"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.IllegalArgumentException"
+      uuid: "uuid2"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "getReferenceClientBlockFileList_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.util.Spliterator"
+      uuid: "fileBlockSpliterator_spliterator1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "fileBlockSpliteratorWhenCaughtFileNotFoundExceptionThrowsRuntimeException"
+    constructorSignature: "<init>(org.bitcoinj.base.Network,java.io.File) : void"
+    modelFingerprint: "B1C79B6F1AA18F4087F3A1EA9CBB8A86"
+    problemWasSolvedByProver: false
+    catchBlockExercised:
+      idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.io.FileNotFoundException"
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "283F6954C8EF3C61DE80191286F1D3C7"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "file"
+      modelFingerprint: "03F891C65DE698FEC5B4CA633C72E8D1"
+      index: 2
+      valueUuid: "fileBlockSpliterator_file1"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "B615FD3336067FFAD5DFC8769E2A2209"
+      index: 3
+      valueUuid: "uuid3"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "getReferenceClientBlockFileList_boolean1"
+        - name: "messageSupplier"
+          valueUuid: "uuid1"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "uuid2"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "4513B850E6E9DA7DA856021169AB6E06"
+      index: 4
+      valueUuid: "fileBlockSpliterator_runtimeException1"
+    uuid: "d86a23e3-c244-33f3-b317-b2c8e501f35f"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.utils.BlockFileLoader"
+        parameters:
+        - name: "network"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Network"
+            uuid: "<init>_network1"
+            fixed: false
+            nameForMock: "example_network"
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "blocksDir"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "java.io.File"
+              parameters:
+              - name: "pathname"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: "pathname1"
+                  valueType: "java.lang.String"
+                  uuid: "<init>_file1-pathname"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "java.io.File"
+            uuid: "<init>_file1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.utils.BlockFileLoader"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.io.File"
+        parameters:
+        - name: "pathname"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "pathname1"
+            valueType: "java.lang.String"
+            uuid: "fileBlockSpliterator_file1-pathname"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.io.File"
+      uuid: "fileBlockSpliterator_file1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.IllegalArgumentException"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.IllegalArgumentException"
+      uuid: "uuid2"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "getReferenceClientBlockFileList_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.RuntimeException"
+        parameters:
+        - name: "cause"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "java.io.FileNotFoundException"
+              parameters: []
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "java.io.FileNotFoundException"
+            uuid: "fileBlockSpliterator_fileNotFoundException1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "java.lang.RuntimeException"
+      uuid: "fileBlockSpliterator_runtimeException1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false

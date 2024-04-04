@@ -1,0 +1,1195 @@
+---
+modelFingerprint: "911FD184A9502A8388B069EFEEC8B9E8"
+methods:
+- method:
+    name: "openConnection"
+    signature: "openConnection(java.net.SocketAddress,org.bitcoinj.net.StreamConnection)\
+      \ : org.bitcoinj.utils.ListenableCompletableFuture<java.net.SocketAddress>"
+    sourceCodeSignature: "ListenableCompletableFuture<SocketAddress> openConnection(SocketAddress\
+      \ serverAddress, StreamConnection connection)"
+    tryCatchBlocks:
+    - idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.io.IOException"
+    instructionFingerprint: "2B34887FADB85186296F0EF035CF5D03"
+  paths:
+  - pathId: "path1"
+    testPathName: "openConnectionWhenIsRunningNotThrowsIllegalStateException"
+    constructorSignature: "<init>(javax.net.SocketFactory) : void"
+    modelFingerprint: "2811889C6AF37A51DDA87C5DB3DD841E"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "2FB0D460CCDC61545EB2356A073EADC8"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "serverAddress"
+      modelFingerprint: "CF0EB3DEA07F1171B2E1DFD1E85D42CB"
+      index: 2
+      valueUuid: "openConnection_socketAddress1"
+    - type: "INPUT"
+      name: "connection"
+      modelFingerprint: "C453A5F8EB06108289088AA7A602A9A1"
+      index: 3
+      valueUuid: "openConnection_streamConnection1"
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "EAE5DD9BE8BBFC7789A0E098A4C6B20A"
+      index: 4
+      idsTryCatchBlockSurrounding:
+      - 1
+      methodExercised:
+        target: "target"
+        name: "isRunning"
+        parameters: []
+        signature: "isRunning(): boolean"
+        returnValueUuid: "openConnection_boolean1"
+        access: 17
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "C9C68C9339F812BC8DEC7C1D6145A135"
+      index: 5
+      valueUuid: "openConnection_illegalStateException1"
+    uuid: "2bb3f3f2-19d9-3686-8409-b9ef5ffc97ff"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.net.BlockingClientManager"
+        parameters:
+        - name: "socketFactory"
+          value:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "javax.net.SocketFactory"
+              method: "getDefault"
+              methodParameters: []
+            valueType: "javax.net.SocketFactory"
+            uuid: "<init>_socketFactory1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.net.BlockingClientManager"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.net.SocketAddress"
+      uuid: "openConnection_socketAddress1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.net.StreamConnection"
+      uuid: "openConnection_streamConnection1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "openConnection_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.IllegalStateException"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "java.lang.IllegalStateException"
+      uuid: "openConnection_illegalStateException1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "openConnectionWhenIsRunning"
+    constructorSignature: "<init>(javax.net.SocketFactory) : void"
+    modelFingerprint: "727B2BF9BB04D2FDA13783B5E1DA6EF4"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "2FB0D460CCDC61545EB2356A073EADC8"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "serverAddress"
+      modelFingerprint: "CF0EB3DEA07F1171B2E1DFD1E85D42CB"
+      index: 2
+      valueUuid: "openConnection_socketAddress1"
+    - type: "INPUT"
+      name: "connection"
+      modelFingerprint: "C453A5F8EB06108289088AA7A602A9A1"
+      index: 3
+      valueUuid: "openConnection_streamConnection1"
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "5AA553E98DA4C3D57ED30564C215F872"
+      index: 4
+      idsTryCatchBlockSurrounding:
+      - 1
+      methodExercised:
+        target: "target"
+        name: "isRunning"
+        parameters: []
+        signature: "isRunning(): boolean"
+        returnValueUuid: "openConnection_boolean1"
+        access: 17
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "4816A6B25CB854B22DA5497CD6484E37"
+      index: 5
+      idsTryCatchBlockSurrounding:
+      - 1
+      valueUuid: "openConnection_blockingClient1"
+      methodExercised:
+        target: "org.bitcoinj.net.BlockingClient"
+        name: "getConnectFuture"
+        parameters: []
+        signature: "getConnectFuture(): ListenableCompletableFuture"
+        returnValueUuid: "openConnection_listenableCompletableFuture1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "DEFB0D4F3747C0A15397EE79A0D80C37"
+      index: 6
+      valueUuid: "openConnection_listenableCompletableFuture1"
+    uuid: "78ebb428-2cae-3916-9c06-f91746d86a49"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    variablesCouldNotBeIsolated: "object of type BlockingClient"
+    failureReason:
+      reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
+      source: "return new BlockingClient(serverAddress, connection, connectTimeout,\
+        \ socketFactory, clients).getConnectFuture();"
+      lineNumber: 62
+      details: "A variable could not be isolated or mocked when calling a method -\
+        \ Variable name: object of type BlockingClient - Method: getConnectFuture"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.net.BlockingClientManager"
+        parameters:
+        - name: "socketFactory"
+          value:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "javax.net.SocketFactory"
+              method: "getDefault"
+              methodParameters: []
+            valueType: "javax.net.SocketFactory"
+            uuid: "<init>_socketFactory1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.net.BlockingClientManager"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.net.SocketAddress"
+      uuid: "openConnection_socketAddress1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.net.StreamConnection"
+      uuid: "openConnection_streamConnection1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "openConnection_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.net.BlockingClient"
+        parameters:
+        - name: "serverAddress"
+          value:
+            sapientType: "MOCK"
+            valueType: "java.net.SocketAddress"
+            uuid: "openConnection_socketAddress1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "connection"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.net.StreamConnection"
+            uuid: "openConnection_streamConnection1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "connectTimeout"
+          value:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "java.time.Duration"
+              method: "ofSeconds"
+              methodParameters:
+              - value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 1
+                  valueType: "long"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "java.time.Duration"
+            uuid: "<init>_duration1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "socketFactory"
+          value:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "javax.net.SocketFactory"
+              method: "getDefault"
+              methodParameters: []
+            valueType: "javax.net.SocketFactory"
+            uuid: "<init>_socketFactory1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "clientSet"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              parameters: []
+              values: []
+            valueType: "java.util.Set"
+            genericValueType: "org.bitcoinj.net.BlockingClient"
+            uuid: "<init>_set1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        thrownExceptions:
+        - "java.io.IOException"
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.net.BlockingClient"
+      uuid: "openConnection_blockingClient1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<method_return_from_value>
+        target: "org.bitcoinj.utils.ListenableCompletableFuture"
+        localVariableValue:
+          sapientType: "OBJECT"
+          content: !<new>
+            target: "org.bitcoinj.net.BlockingClient"
+            parameters:
+            - name: "serverAddress"
+              value:
+                sapientType: "MOCK"
+                valueType: "java.net.SocketAddress"
+                uuid: "openConnection_socketAddress1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "connection"
+              value:
+                sapientType: "MOCK"
+                valueType: "org.bitcoinj.net.StreamConnection"
+                uuid: "openConnection_streamConnection1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "connectTimeout"
+              value:
+                sapientType: "OBJECT"
+                content: !<static_method_return>
+                  target: "java.time.Duration"
+                  method: "ofSeconds"
+                  methodParameters:
+                  - value:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 1
+                      valueType: "long"
+                      fixed: true
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                valueType: "java.time.Duration"
+                uuid: "<init>_duration1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "socketFactory"
+              value:
+                sapientType: "OBJECT"
+                content: !<static_method_return>
+                  target: "javax.net.SocketFactory"
+                  method: "getDefault"
+                  methodParameters: []
+                valueType: "javax.net.SocketFactory"
+                uuid: "<init>_socketFactory1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "clientSet"
+              value:
+                sapientType: "COLLECTION"
+                content: !<collection>
+                  parameters: []
+                  values: []
+                valueType: "java.util.Set"
+                genericValueType: "org.bitcoinj.net.BlockingClient"
+                uuid: "<init>_set1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            privateConstructor: false
+            thrownExceptions:
+            - "java.io.IOException"
+            createdByTargetCode: true
+          valueType: "org.bitcoinj.net.BlockingClient"
+          uuid: "openConnection_blockingClient1"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        methodParameters: []
+        methodName: "getConnectFuture"
+      valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
+      genericValueType: "java.net.SocketAddress"
+      uuid: "openConnection_listenableCompletableFuture1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<method_return_from_value>
+        target: "org.bitcoinj.utils.ListenableCompletableFuture"
+        localVariableValue:
+          sapientType: "OBJECT"
+          content: !<new>
+            target: "org.bitcoinj.net.BlockingClient"
+            parameters:
+            - name: "serverAddress"
+              value:
+                sapientType: "MOCK"
+                valueType: "java.net.SocketAddress"
+                uuid: "openConnection_socketAddress1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "connection"
+              value:
+                sapientType: "MOCK"
+                valueType: "org.bitcoinj.net.StreamConnection"
+                uuid: "openConnection_streamConnection1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "connectTimeout"
+              value:
+                sapientType: "OBJECT"
+                content: !<static_method_return>
+                  target: "java.time.Duration"
+                  method: "ofSeconds"
+                  methodParameters:
+                  - value:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 1
+                      valueType: "long"
+                      fixed: true
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                valueType: "java.time.Duration"
+                uuid: "<init>_duration1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "socketFactory"
+              value:
+                sapientType: "OBJECT"
+                content: !<static_method_return>
+                  target: "javax.net.SocketFactory"
+                  method: "getDefault"
+                  methodParameters: []
+                valueType: "javax.net.SocketFactory"
+                uuid: "<init>_socketFactory1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "clientSet"
+              value:
+                sapientType: "COLLECTION"
+                content: !<collection>
+                  parameters: []
+                  values: []
+                valueType: "java.util.Set"
+                genericValueType: "org.bitcoinj.net.BlockingClient"
+                uuid: "<init>_set1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            privateConstructor: false
+            thrownExceptions:
+            - "java.io.IOException"
+            createdByTargetCode: true
+          valueType: "org.bitcoinj.net.BlockingClient"
+          uuid: "openConnection_blockingClient1"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        methodParameters: []
+        methodName: "getConnectFuture"
+      valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
+      genericValueType: "java.net.SocketAddress"
+      uuid: "openConnection_listenableCompletableFuture1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+  - pathId: "path3"
+    testPathName: "openConnectionWhenCaughtIOExceptionThrowsRuntimeException"
+    constructorSignature: "<init>(javax.net.SocketFactory) : void"
+    modelFingerprint: "D3C921DCAD54B1DE3EC002D7C3B2DDB9"
+    problemWasSolvedByProver: false
+    catchBlockExercised:
+      idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.io.IOException"
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "2FB0D460CCDC61545EB2356A073EADC8"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "serverAddress"
+      modelFingerprint: "CF0EB3DEA07F1171B2E1DFD1E85D42CB"
+      index: 2
+      valueUuid: "openConnection_socketAddress1"
+    - type: "INPUT"
+      name: "connection"
+      modelFingerprint: "C453A5F8EB06108289088AA7A602A9A1"
+      index: 3
+      valueUuid: "openConnection_streamConnection1"
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "5AA553E98DA4C3D57ED30564C215F872"
+      index: 4
+      idsTryCatchBlockSurrounding:
+      - 1
+      methodExercised:
+        target: "target"
+        name: "isRunning"
+        parameters: []
+        signature: "isRunning(): boolean"
+        returnValueUuid: "openConnection_boolean1"
+        access: 17
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "4816A6B25CB854B22DA5497CD6484E37"
+      index: 5
+      idsTryCatchBlockSurrounding:
+      - 1
+      valueUuid: "openConnection_blockingClient1"
+      methodExercised:
+        target: "org.bitcoinj.net.BlockingClient"
+        name: "getConnectFuture"
+        parameters: []
+        signature: "getConnectFuture(): ListenableCompletableFuture"
+        returnValueUuid: "openConnection_listenableCompletableFuture1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "94DACB5B92004D157EBFD5F33FF06466"
+      index: 6
+      valueUuid: "openConnection_runtimeException1"
+    uuid: "2848bd70-59ca-38e3-af92-ac1e0b5d6268"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    variablesCouldNotBeIsolated: "object of type BlockingClient"
+    failureReason:
+      reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
+      source: "return new BlockingClient(serverAddress, connection, connectTimeout,\
+        \ socketFactory, clients).getConnectFuture();"
+      lineNumber: 62
+      details: "A variable could not be isolated or mocked when calling a method -\
+        \ Variable name: object of type BlockingClient - Method: getConnectFuture"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.net.BlockingClientManager"
+        parameters:
+        - name: "socketFactory"
+          value:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "javax.net.SocketFactory"
+              method: "getDefault"
+              methodParameters: []
+            valueType: "javax.net.SocketFactory"
+            uuid: "<init>_socketFactory1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.net.BlockingClientManager"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.net.SocketAddress"
+      uuid: "openConnection_socketAddress1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.net.StreamConnection"
+      uuid: "openConnection_streamConnection1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "openConnection_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.net.BlockingClient"
+        parameters:
+        - name: "serverAddress"
+          value:
+            sapientType: "MOCK"
+            valueType: "java.net.SocketAddress"
+            uuid: "openConnection_socketAddress1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "connection"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.net.StreamConnection"
+            uuid: "openConnection_streamConnection1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "connectTimeout"
+          value:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "java.time.Duration"
+              method: "ofSeconds"
+              methodParameters:
+              - value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 1
+                  valueType: "long"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "java.time.Duration"
+            uuid: "<init>_duration1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "socketFactory"
+          value:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "javax.net.SocketFactory"
+              method: "getDefault"
+              methodParameters: []
+            valueType: "javax.net.SocketFactory"
+            uuid: "<init>_socketFactory1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "clientSet"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              parameters: []
+              values: []
+            valueType: "java.util.Set"
+            genericValueType: "org.bitcoinj.net.BlockingClient"
+            uuid: "<init>_set1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        thrownExceptions:
+        - "java.io.IOException"
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.net.BlockingClient"
+      uuid: "openConnection_blockingClient1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<method_return_from_value>
+        target: "org.bitcoinj.utils.ListenableCompletableFuture"
+        localVariableValue:
+          sapientType: "OBJECT"
+          content: !<new>
+            target: "org.bitcoinj.net.BlockingClient"
+            parameters:
+            - name: "serverAddress"
+              value:
+                sapientType: "MOCK"
+                valueType: "java.net.SocketAddress"
+                uuid: "openConnection_socketAddress1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "connection"
+              value:
+                sapientType: "MOCK"
+                valueType: "org.bitcoinj.net.StreamConnection"
+                uuid: "openConnection_streamConnection1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "connectTimeout"
+              value:
+                sapientType: "OBJECT"
+                content: !<static_method_return>
+                  target: "java.time.Duration"
+                  method: "ofSeconds"
+                  methodParameters:
+                  - value:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 1
+                      valueType: "long"
+                      fixed: true
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                valueType: "java.time.Duration"
+                uuid: "<init>_duration1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "socketFactory"
+              value:
+                sapientType: "OBJECT"
+                content: !<static_method_return>
+                  target: "javax.net.SocketFactory"
+                  method: "getDefault"
+                  methodParameters: []
+                valueType: "javax.net.SocketFactory"
+                uuid: "<init>_socketFactory1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "clientSet"
+              value:
+                sapientType: "COLLECTION"
+                content: !<collection>
+                  parameters: []
+                  values: []
+                valueType: "java.util.Set"
+                genericValueType: "org.bitcoinj.net.BlockingClient"
+                uuid: "<init>_set1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            privateConstructor: false
+            thrownExceptions:
+            - "java.io.IOException"
+            createdByTargetCode: true
+          valueType: "org.bitcoinj.net.BlockingClient"
+          uuid: "openConnection_blockingClient1"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        methodParameters: []
+        methodName: "getConnectFuture"
+      valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
+      genericValueType: "java.net.SocketAddress"
+      uuid: "openConnection_listenableCompletableFuture1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.RuntimeException"
+        parameters:
+        - name: "cause"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "java.io.IOException"
+              parameters: []
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "java.io.IOException"
+            uuid: "openConnection_iOException1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "java.lang.RuntimeException"
+      uuid: "openConnection_runtimeException1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "setConnectTimeout"
+    signature: "setConnectTimeout(java.time.Duration) : void"
+    sourceCodeSignature: "void setConnectTimeout(Duration connectTimeout)"
+    instructionFingerprint: "23CDB607D93364084419DC1283D25974"
+  paths:
+  - pathId: "path1"
+    testPathName: "setConnectTimeoutTest"
+    constructorSignature: "<init>(javax.net.SocketFactory) : void"
+    modelFingerprint: "745D5A48C32D115349A791754776CA69"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "86ee629c-0ba2-3621-be0c-9253221b22d7"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "setConnectTimeoutMillis"
+    signature: "setConnectTimeoutMillis(int) : void"
+    sourceCodeSignature: "void setConnectTimeoutMillis(int connectTimeoutMillis)"
+    instructionFingerprint: "A3B691738AACC6C019B1528FD0EDE8B1"
+  paths:
+  - pathId: "path1"
+    testPathName: "setConnectTimeoutMillisTest"
+    constructorSignature: "<init>(javax.net.SocketFactory) : void"
+    modelFingerprint: "1F6C935D5E5C54F5E5ACFD6D2558598D"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "2FB0D460CCDC61545EB2356A073EADC8"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "connectTimeoutMillis"
+      modelFingerprint: "9A7AB1F13BCF7C7428B7DE01FF424B23"
+      index: 2
+      valueUuid: "setConnectTimeoutMillis_int1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 3
+      valueUuid: "uuid2"
+    uuid: "8117fc59-e007-3a51-9f07-287c570ddca2"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.net.BlockingClientManager"
+        parameters:
+        - name: "socketFactory"
+          value:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "javax.net.SocketFactory"
+              method: "getDefault"
+              methodParameters: []
+            valueType: "javax.net.SocketFactory"
+            uuid: "<init>_socketFactory1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.net.BlockingClientManager"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "setConnectTimeoutMillis_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      uuid: "uuid2"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "startUp"
+    signature: "startUp() : void"
+    sourceCodeSignature: "void startUp()"
+    instructionFingerprint: "E0B001E5449FD53A648D3ECA46734173"
+  paths:
+  - pathId: "path1"
+    testPathName: "startUpTest"
+    constructorSignature: "<init>(javax.net.SocketFactory) : void"
+    modelFingerprint: "4238467E276263FEBDFCD3B454D55527"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "2263fba1-f6f2-301f-a5ac-47af05cd8a71"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "shutDown"
+    signature: "shutDown() : void"
+    sourceCodeSignature: "void shutDown()"
+    instructionFingerprint: "4AAA96B515D6470B59D28CCA9475D658"
+  paths:
+  - pathId: "path1"
+    testPathName: "shutDownWhenClientsIsEmpty"
+    constructorSignature: "<init>(javax.net.SocketFactory) : void"
+    modelFingerprint: "6795EA041244325D8D055F56782C018C"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "2FB0D460CCDC61545EB2356A073EADC8"
+      index: 1
+      valueUuid: "target"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 2
+      valueUuid: "uuid4"
+    uuid: "2eae9292-3a4e-3aef-a658-61695265ca34"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.net.BlockingClientManager"
+        parameters:
+        - name: "socketFactory"
+          value:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "javax.net.SocketFactory"
+              method: "getDefault"
+              methodParameters: []
+            valueType: "javax.net.SocketFactory"
+            uuid: "<init>_socketFactory1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.net.BlockingClientManager"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      uuid: "uuid4"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "getConnectedClientCount"
+    signature: "getConnectedClientCount() : int"
+    sourceCodeSignature: "int getConnectedClientCount()"
+    instructionFingerprint: "01FAD5876E712787DE18D18069FB4145"
+  paths:
+  - pathId: "path1"
+    testPathName: "getConnectedClientCountTest"
+    constructorSignature: "<init>(javax.net.SocketFactory) : void"
+    modelFingerprint: "7401A58E6ABD63A834B2526C1F874C32"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "2FB0D460CCDC61545EB2356A073EADC8"
+      index: 1
+      valueUuid: "target"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "8E4E4A3F04320A5F313F9B77CB2C7276"
+      index: 2
+      valueUuid: "getConnectedClientCount_int1"
+    uuid: "29f86e68-48e9-3bd0-a806-f49162deede6"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.net.BlockingClientManager"
+        parameters:
+        - name: "socketFactory"
+          value:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "javax.net.SocketFactory"
+              method: "getDefault"
+              methodParameters: []
+            valueType: "javax.net.SocketFactory"
+            uuid: "<init>_socketFactory1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.net.BlockingClientManager"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "getConnectedClientCount_int1"
+      fixed: false
+      collectionUuid: "<init>_set1"
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "closeConnections"
+    signature: "closeConnections(int) : void"
+    sourceCodeSignature: "void closeConnections(int n)"
+    instructionFingerprint: "C463BA87903C2D04A73BCEF7AC39FF53"
+  paths:
+  - pathId: "path1"
+    testPathName: "closeConnectionsWhenIsRunningNotThrowsIllegalStateException"
+    constructorSignature: "<init>(javax.net.SocketFactory) : void"
+    modelFingerprint: "8A58EBF5859D5A666C0FE5712AAD8177"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "2FB0D460CCDC61545EB2356A073EADC8"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "n"
+      modelFingerprint: "43FF1B00F05DA28F6E213F582B4F7378"
+      index: 2
+      valueUuid: "closeConnections_int1"
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "EAE5DD9BE8BBFC7789A0E098A4C6B20A"
+      index: 3
+      methodExercised:
+        target: "target"
+        name: "isRunning"
+        parameters: []
+        signature: "isRunning(): boolean"
+        returnValueUuid: "closeConnections_boolean1"
+        access: 17
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "C9C68C9339F812BC8DEC7C1D6145A135"
+      index: 4
+      valueUuid: "closeConnections_illegalStateException1"
+    uuid: "7dcf31f4-d43b-3c66-8329-8b5ae2429a58"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.net.BlockingClientManager"
+        parameters:
+        - name: "socketFactory"
+          value:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "javax.net.SocketFactory"
+              method: "getDefault"
+              methodParameters: []
+            valueType: "javax.net.SocketFactory"
+            uuid: "<init>_socketFactory1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.net.BlockingClientManager"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "closeConnections_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "closeConnections_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.IllegalStateException"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "java.lang.IllegalStateException"
+      uuid: "closeConnections_illegalStateException1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+  - pathId: "path3"
+    testPathName: "closeConnectionsWhenNNotGreaterThan0"
+    constructorSignature: "<init>(javax.net.SocketFactory) : void"
+    modelFingerprint: "164E5DC52F1DA0B2753F94BEE634BC75"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "f5239ed7-b6e3-377d-9879-72fa939cb54b"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path2"
+    testPathName: "closeConnectionsWhenItNotHasNext"
+    constructorSignature: "<init>(javax.net.SocketFactory) : void"
+    modelFingerprint: "53ECF07E0A9CAE265293963FB6E9C2AB"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "2FB0D460CCDC61545EB2356A073EADC8"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "n"
+      modelFingerprint: "18B1FC6250871CD699E852EB134CF850"
+      index: 2
+      valueUuid: "closeConnections_int1"
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "5AA553E98DA4C3D57ED30564C215F872"
+      index: 3
+      methodExercised:
+        target: "target"
+        name: "isRunning"
+        parameters: []
+        signature: "isRunning(): boolean"
+        returnValueUuid: "closeConnections_boolean1"
+        access: 17
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 4
+      valueUuid: "uuid6"
+    uuid: "586cd0cd-f9a3-335f-91d9-98362a4c8115"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.net.BlockingClientManager"
+        parameters:
+        - name: "socketFactory"
+          value:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "javax.net.SocketFactory"
+              method: "getDefault"
+              methodParameters: []
+            valueType: "javax.net.SocketFactory"
+            uuid: "<init>_socketFactory1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.net.BlockingClientManager"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 1
+      valueType: "int"
+      uuid: "closeConnections_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "closeConnections_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      uuid: "uuid6"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false

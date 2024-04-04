@@ -1,0 +1,103 @@
+---
+modelFingerprint: "E82DC196F41EA8B6A637631E39D0629B"
+methods:
+- method:
+    name: "newThread"
+    signature: "newThread(java.lang.Runnable) : java.lang.Thread"
+    sourceCodeSignature: "Thread newThread(@Nonnull Runnable runnable)"
+    instructionFingerprint: "B5FDA2A6E70300BD10AAAEF4830E62AF"
+  paths:
+  - pathId: "path1"
+    testPathName: "newThreadWhenNameIsNotNull"
+    constructorSignature: "<init>(java.lang.String) : void"
+    modelFingerprint: "3469EE1D91D2F2E511ACF1E92F947B24"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "B35F492ED6A50C55408626D900A6BD02"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "runnable"
+      modelFingerprint: "290CCB8247553C9EC1AC4D15EF665462"
+      index: 2
+      valueUuid: "newThread_runnable1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "FD59C6C6A5A5AED9ED2DA9C5742D6B2C"
+      index: 3
+      valueUuid: "newThread_thread1"
+    uuid: "c9c9f9bd-5803-3ebe-a7ea-facc30c0b334"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    variablesCouldNotBeIsolated: "object of type ThreadFactory"
+    failureReason:
+      reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
+      source: "Thread thread = Executors.defaultThreadFactory().newThread(runnable);"
+      lineNumber: 38
+      details: "A variable could not be isolated or mocked when calling a method -\
+        \ Variable name: object of type ThreadFactory - Method: newThread"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.utils.DaemonThreadFactory"
+        parameters:
+        - name: "name"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "A"
+            valueType: "java.lang.String"
+            uuid: "<init>_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.utils.DaemonThreadFactory"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.lang.Runnable"
+      uuid: "newThread_runnable1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.lang.Thread"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.Thread"
+      uuid: "newThread_thread1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "newThreadWhenNameIsNull"
+    constructorSignature: "<init>(java.lang.String) : void"
+    modelFingerprint: "0EB57CFF026039BC1C6F64DDABD333ED"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "4573f098-5771-385b-b002-a6b6c27e9f05"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    variablesCouldNotBeIsolated: "object of type ThreadFactory"
+    failureReason:
+      reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
+      source: "Thread thread = Executors.defaultThreadFactory().newThread(runnable);"
+      lineNumber: 38
+      details: "A variable could not be isolated or mocked when calling a method -\
+        \ Variable name: object of type ThreadFactory - Method: newThread"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []

@@ -1,0 +1,277 @@
+---
+modelFingerprint: "43B67138806256B3974D3A14B091AC39"
+methods:
+- method:
+    name: "getOpCodeName"
+    signature: "getOpCodeName(int) : java.lang.String"
+    sourceCodeSignature: "String getOpCodeName(int opcode)"
+    instructionFingerprint: "CFF738A053AD8460F77E3933E9AF7884"
+  paths:
+  - pathId: "path1"
+    testPathName: "getOpCodeNameWhenOpCodeMapContainsKeyOpcode"
+    modelFingerprint: "C634E5F9AF6DEE1FE41B0E54E9748F3E"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "opcode"
+      modelFingerprint: "5FD67A31D22A966826ABC78776B9E01E"
+      index: 1
+      valueUuid: "getOpCodeName_int1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D1F433D4EB9F8805FF391E82DAB508AB"
+      index: 2
+      valueUuid: "getOpCodeName_string1"
+    uuid: "30d5902b-94ed-3293-b781-8d63e65c6e22"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: com.google.common.collect.BiMap.containsKey(java.lang.Integer)\
+        \ : boolean"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 1
+      valueType: "int"
+      uuid: "getOpCodeName_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "result1"
+      valueType: "java.lang.String"
+      uuid: "getOpCodeName_string1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "getOpCodeNameWhenOpCodeMapNotContainsKeyOpcode"
+    modelFingerprint: "5D59905EE705020B99016A1ECB6425A7"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "opcode"
+      modelFingerprint: "9EC5FFDB027954E89937740D070598BB"
+      index: 1
+      valueUuid: "getOpCodeName_int1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "82245F88A11618713333D5CDFC9DB611"
+      index: 2
+      valueUuid: "getOpCodeName_string1"
+    uuid: "2aa90f3b-f3a1-32db-9c54-b9d4fe395a83"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: com.google.common.collect.BiMap.containsKey(java.lang.Integer)\
+        \ : boolean"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "getOpCodeName_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "NON_OP(0)"
+      valueType: "java.lang.String"
+      uuid: "getOpCodeName_string1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "getPushDataName"
+    signature: "getPushDataName(int) : java.lang.String"
+    sourceCodeSignature: "String getPushDataName(int opcode)"
+    instructionFingerprint: "38D00DAE1940BD6AA782C34D7F1B1DFF"
+  paths:
+  - pathId: "path1"
+    testPathName: "getPushDataNameWhenOpCodeMapContainsKeyOpcode"
+    modelFingerprint: "C634E5F9AF6DEE1FE41B0E54E9748F3E"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "opcode"
+      modelFingerprint: "5FD67A31D22A966826ABC78776B9E01E"
+      index: 1
+      valueUuid: "getPushDataName_int1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D1F433D4EB9F8805FF391E82DAB508AB"
+      index: 2
+      valueUuid: "getPushDataName_string1"
+    uuid: "2085f4ca-53bf-3a20-bd24-b2d70ca47c0a"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: com.google.common.collect.BiMap.containsKey(java.lang.Integer)\
+        \ : boolean"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 1
+      valueType: "int"
+      uuid: "getPushDataName_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "result1"
+      valueType: "java.lang.String"
+      uuid: "getPushDataName_string1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "getPushDataNameWhenOpCodeMapNotContainsKeyOpcode"
+    modelFingerprint: "E5E7F8D722C55B98A8FD8C919B170846"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "opcode"
+      modelFingerprint: "66A26AEC2ECE837758702C03369DABAE"
+      index: 1
+      valueUuid: "getPushDataName_int1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "241B6FB3F222E7D063226568DFE8F128"
+      index: 2
+      valueUuid: "getPushDataName_string1"
+    uuid: "85c350a7-2bb3-3cca-8669-ccbfa2236fd6"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: com.google.common.collect.BiMap.containsKey(java.lang.Integer)\
+        \ : boolean"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 2
+      valueType: "int"
+      uuid: "getPushDataName_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "PUSHDATA(2)"
+      valueType: "java.lang.String"
+      uuid: "getPushDataName_string1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "getOpCode"
+    signature: "getOpCode(java.lang.String) : int"
+    sourceCodeSignature: "int getOpCode(String opCodeName)"
+    instructionFingerprint: "0FA7160CE3128086A9CF096774CE626D"
+  paths:
+  - pathId: "path1"
+    testPathName: "getOpCodeWhenOpCodeNameMapContainsKeyOpCodeName"
+    modelFingerprint: "0C463F345EC0A30267B64CF4E7B1052C"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "opCodeName"
+      modelFingerprint: "29A1B2674EECA421598875F3EA7D320C"
+      index: 1
+      valueUuid: "getOpCode_string1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "E5C3AD67D07515CC69793E85E383B533"
+      index: 2
+      valueUuid: "getOpCode_int1"
+    uuid: "98749a8d-84cf-3675-aca0-3f4fb869e089"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "NOP3"
+      valueType: "java.lang.String"
+      uuid: "getOpCode_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 178
+      valueType: "int"
+      uuid: "getOpCode_int1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "getOpCodeWhenOpCodeNameMapNotContainsKeyOpCodeName"
+    modelFingerprint: "C88D8DA32137DAA8B014CF760A1FD79C"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "opCodeName"
+      modelFingerprint: "CF983F00F748679A2E5DBBA98B1C6A51"
+      index: 1
+      valueUuid: "getOpCode_string1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "DEFB82E119BEB06D142FAEB10EEE9273"
+      index: 2
+      valueUuid: "uuid1"
+    uuid: "f3edb0c5-7f4d-37de-aff4-a880aaa93b92"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "B"
+      valueType: "java.lang.String"
+      uuid: "getOpCode_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 255
+      valueType: "int"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false

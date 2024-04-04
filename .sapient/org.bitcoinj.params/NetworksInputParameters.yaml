@@ -1,0 +1,261 @@
+---
+modelFingerprint: "0124469417FAAEAC3A78B74CCC229878"
+methods:
+- method:
+    name: "get"
+    signature: "get() : java.util.Set<org.bitcoinj.core.NetworkParameters>"
+    sourceCodeSignature: "Set<NetworkParameters> get()"
+    instructionFingerprint: "842156AC686B29F38656875F9A3503C7"
+  paths:
+  - pathId: "path1"
+    testPathName: "getTest"
+    modelFingerprint: "BBFAF17E1BA988BE2B7CE11ACEFB9AAF"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "2CC84E3A206E96D4392F3C9656F10302"
+      index: 1
+      valueUuid: "unmodifiableSet_set1"
+    uuid: "9c25887d-767d-38e9-b5ae-c2e4012c49be"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "UNKNOWN_REASON"
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        parameters: []
+        values: []
+      valueType: "java.util.Set"
+      genericValueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "unmodifiableSet_set1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "find"
+    signature: "find(org.bitcoinj.base.Network) : java.util.Optional<org.bitcoinj.core.NetworkParameters>"
+    sourceCodeSignature: "Optional<NetworkParameters> find(Network network)"
+    instructionFingerprint: "4BAEE670148D20DF5BE45CDC59A00E69"
+  paths:
+  - pathId: "path1"
+    testPathName: "findTest"
+    modelFingerprint: "381D8399C5754918129F744B370CCBE7"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "network"
+      modelFingerprint: "ECD5777B98096C66D018424DBD7F2C5A"
+      index: 1
+      valueUuid: "find_network1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "F5E0476166507DEF809C9BC952B02728"
+      index: 2
+      valueUuid: "find_optional1"
+    uuid: "2065002a-9c1f-335e-ba7c-3ceed12bc7e9"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Network"
+      uuid: "find_network1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OPTIONAL"
+      content: !<optional>
+        value:
+          sapientType: "NULL"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        target: "java.util.Optional"
+      valueType: "java.util.Optional"
+      genericValueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "find_optional1"
+      fixed: false
+      collectionUuid: "find_list1"
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "register"
+    signature: "register(org.bitcoinj.core.NetworkParameters) : void"
+    sourceCodeSignature: "void register(NetworkParameters network)"
+    instructionFingerprint: "8958E30E2D39D4C3907135D4C78A395C"
+  paths:
+  - pathId: "path1"
+    testPathName: "registerTest"
+    modelFingerprint: "382F27A63B68702836F6BAD60EA1062E"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "network"
+      modelFingerprint: "C0EA9F513ABE7730747D75C453DF21D4"
+      index: 1
+      valueUuid: "register_networkParameters1"
+    - type: "STATIC"
+      name: "Networks"
+      modelFingerprint: "C8476CC865A5B2A2DBE762B5F72B010C"
+      index: 2
+      valueUuid: "uuid1"
+      methodExercised:
+        target: "org.bitcoinj.params.Networks"
+        name: "register"
+        parameters:
+        - name: "networks"
+          valueUuid: "register_set1"
+        signature: "register(Set): void"
+        returnValueUuid: "register_void1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 3
+      valueUuid: "uuid2"
+    uuid: "853913a6-18ed-366c-8d01-10d393fd970e"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "register_networkParameters1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.params.Networks"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "register_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        parameters: []
+        values:
+        - sapientType: "MOCK"
+          valueType: "org.bitcoinj.core.NetworkParameters"
+          uuid: "register_networkParameters1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+      valueType: "java.util.Set"
+      genericValueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "register_set1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      uuid: "uuid2"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "register"
+    signature: "register(java.util.Collection<org.bitcoinj.core.NetworkParameters>)\
+      \ : void"
+    sourceCodeSignature: "void register(Collection<NetworkParameters> networks)"
+    instructionFingerprint: "BA4CFF26913935C09229F45A41686C20"
+  paths:
+  - pathId: "path1"
+    testPathName: "register1Test"
+    modelFingerprint: "1BA9554C0A7DB7FD248A283BD39502A8"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "networks"
+      modelFingerprint: "737D81D97CBD9CD20A499C84D353E267"
+      index: 1
+      valueUuid: "register_collection1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 2
+      valueUuid: "uuid3"
+    uuid: "d036466a-5481-3f16-a70d-5c58cf6e4044"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        parameters: []
+        values: []
+      valueType: "java.util.Collection"
+      genericValueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "register_collection1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      uuid: "uuid3"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "unregister"
+    signature: "unregister(org.bitcoinj.core.NetworkParameters) : void"
+    sourceCodeSignature: "void unregister(NetworkParameters network)"
+    instructionFingerprint: "BC22814314E761E66851B7F9B19E2C4C"
+  paths:
+  - pathId: "path1"
+    testPathName: "unregisterTest"
+    modelFingerprint: "79A404D066A495F52723BA34576B11DC"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "network"
+      modelFingerprint: "C0EA9F513ABE7730747D75C453DF21D4"
+      index: 1
+      valueUuid: "unregister_networkParameters1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 2
+      valueUuid: "uuid4"
+    uuid: "220cfd37-bc9b-3cdd-89af-f28e72691dcb"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "unregister_networkParameters1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      uuid: "uuid4"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false

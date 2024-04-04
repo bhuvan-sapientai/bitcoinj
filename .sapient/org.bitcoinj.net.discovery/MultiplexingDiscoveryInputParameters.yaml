@@ -1,0 +1,2662 @@
+---
+modelFingerprint: "B2D89DB88D94AABE13AB1231EC224FB7"
+methods:
+- method:
+    name: "forServices"
+    signature: "forServices(org.bitcoinj.base.Network,long) : org.bitcoinj.net.discovery.MultiplexingDiscovery"
+    sourceCodeSignature: "MultiplexingDiscovery forServices(Network network, long\
+      \ services)"
+    instructionFingerprint: "DF48E4B84B80555B80CC082211E29CD2"
+  paths:
+  - pathId: "path1"
+    testPathName: "forServicesTest"
+    modelFingerprint: "418847C90D53ED26F0024E3B0873BACB"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "network"
+      modelFingerprint: "ECD5777B98096C66D018424DBD7F2C5A"
+      index: 1
+      valueUuid: "forServices_network1"
+    - type: "INPUT"
+      name: "services"
+      modelFingerprint: "909050AB7B1EF8A162245F33E8EE0D3E"
+      index: 2
+      valueUuid: "forServices_long1"
+    - type: "STATIC"
+      name: "MultiplexingDiscovery"
+      modelFingerprint: "01C72921BECA4DE279FB82ECCE6C2CB1"
+      index: 3
+      valueUuid: "uuid3"
+      methodExercised:
+        target: "org.bitcoinj.net.discovery.MultiplexingDiscovery"
+        name: "forServices"
+        parameters:
+        - name: "network"
+          valueUuid: "forServices_network1"
+        - name: "services"
+          valueUuid: "forServices_long1"
+        - name: "parallelQueries"
+          valueUuid: "uuid1"
+        - name: "shufflePeers"
+          valueUuid: "uuid2"
+        signature: "forServices(Network,long,boolean,boolean): MultiplexingDiscovery"
+        returnValueUuid: "forServices_multiplexingDiscovery1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "329ABE53E8AE15AB3502085E7D45A122"
+      index: 4
+      valueUuid: "forServices_multiplexingDiscovery1"
+    uuid: "bf6499da-0a80-393c-ae42-5f5d2ea9d6f4"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Network"
+      uuid: "forServices_network1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "long"
+      uuid: "forServices_long1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.net.discovery.MultiplexingDiscovery"
+      uuid: "uuid3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.net.discovery.MultiplexingDiscovery"
+      uuid: "forServices_multiplexingDiscovery1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Network"
+      uuid: "forServices_network1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "long"
+      uuid: "forServices_long1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid2"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.net.discovery.MultiplexingDiscovery"
+      uuid: "forServices_multiplexingDiscovery1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "forServices"
+    signature: "forServices(org.bitcoinj.base.Network,long,boolean,boolean) : org.bitcoinj.net.discovery.MultiplexingDiscovery"
+    sourceCodeSignature: "MultiplexingDiscovery forServices(Network network, long\
+      \ services, boolean parallelQueries, boolean shufflePeers)"
+    instructionFingerprint: "11CC3301656E6B9A202AA0C4776A0466"
+  paths:
+  - pathId: "path4"
+    testPathName: "forServices1WhenDefaultBranchThrowsIllegalArgumentException"
+    modelFingerprint: "3F4CBCF7D330B12195E25CD570FD0212"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "cc6214d1-b954-3a6c-9bf3-19e2c8ceda82"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path1"
+    testPathName: "forServices1WhenDefaultBranch"
+    modelFingerprint: "4F51FFFC39C8EE0E27147C5FAA46D696"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "network"
+      modelFingerprint: "ECD5777B98096C66D018424DBD7F2C5A"
+      index: 1
+      valueUuid: "forServices_network1"
+    - type: "INPUT"
+      name: "services"
+      modelFingerprint: "909050AB7B1EF8A162245F33E8EE0D3E"
+      index: 2
+      valueUuid: "forServices_long1"
+    - type: "INPUT"
+      name: "parallelQueries"
+      modelFingerprint: "5F6ED7807F94A190BD74DB9C987969F3"
+      index: 3
+      valueUuid: "forServices_boolean1"
+    - type: "INPUT"
+      name: "shufflePeers"
+      modelFingerprint: "51E55DD1055BFC76DF0319D2C71CEFF0"
+      index: 4
+      valueUuid: "forServices_boolean2"
+    - type: "STATIC"
+      name: "NetworkParameters"
+      modelFingerprint: "D30C934CC9807B6FCC7A18BF98BD72E7"
+      index: 5
+      valueUuid: "uuid9"
+      methodExercised:
+        target: "org.bitcoinj.core.NetworkParameters"
+        name: "of"
+        parameters:
+        - name: "network"
+          valueUuid: "forServices_network1"
+        signature: "of(Network): NetworkParameters"
+        returnValueUuid: "forServices_networkParameters1"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "02EBE3767727D37D6826A2734DEEFF42"
+      index: 6
+      valueUuid: "forServices_networkParameters1"
+      methodExercised:
+        target: "org.bitcoinj.core.NetworkParameters"
+        name: "getDnsSeeds"
+        parameters: []
+        signature: "getDnsSeeds(): String[]"
+        returnValueUuid: "forServices_string[]1"
+        access: 1
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "60A6CF81A4B62FC26CAD9062FF6E1448"
+      index: 7
+      valueUuid: "uuid11"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid10"
+        signature: "checkArgument(boolean): void"
+        returnValueUuid: "<init>_void1"
+        access: 9
+    - type: "STATIC"
+      name: "NetworkParameters"
+      modelFingerprint: "A7C0BDDF05E6EFE02EB4F8BA87B413C1"
+      index: 8
+      valueUuid: "uuid12"
+      methodExercised:
+        target: "org.bitcoinj.core.NetworkParameters"
+        name: "of"
+        parameters:
+        - name: "network"
+          valueUuid: "forServices_network1"
+        signature: "of(Network): NetworkParameters"
+        returnValueUuid: "<init>_networkParameters1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "807C80C3B93040AAF948FC0BD24DBE1F"
+      index: 9
+      valueUuid: "forServices_multiplexingDiscovery1"
+    uuid: "898aacca-031f-3e9c-bf3d-68650c274db7"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_CALL_INSTRUCTION_CONSTRUCTION_FAILURE"
+      source: "discoveries.add(new DnsSeedDiscovery(network, dnsSeed));"
+      lineNumber: 82
+      details: "No constructor found to create an object without any exception for\
+        \ class org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Network"
+      uuid: "forServices_network1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "long"
+      uuid: "forServices_long1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "forServices_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "forServices_boolean2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "uuid9"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "forServices_networkParameters1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Network"
+      uuid: "forServices_network1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "forServices_networkParameters1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "return_of_getDnsSeedsItem1"
+            valueType: "java.lang.String"
+            uuid: "forServices_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.lang.String[]"
+      uuid: "forServices_string[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid11"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid10"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "uuid12"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "<init>_networkParameters1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Network"
+      uuid: "forServices_network1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.net.discovery.MultiplexingDiscovery"
+        parameters:
+        - name: "network"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Network"
+            uuid: "forServices_network1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "seeds"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              collectionClass: "java.util.ArrayList"
+              parameters: []
+              values:
+              - sapientType: "OBJECT"
+                content: !<new>
+                  target: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                  parameters:
+                  - name: "network"
+                    value:
+                      sapientType: "MOCK"
+                      valueType: "org.bitcoinj.base.Network"
+                      uuid: "forServices_network1"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                  - name: "hostname"
+                    value:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: "return_of_getDnsSeedsItem1"
+                      valueType: "java.lang.String"
+                      uuid: "forServices_string1"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                  privateConstructor: false
+                  createdByTargetCode: true
+                valueType: "org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+                uuid: "forServices_dnsDiscovery.DnsSeedDiscovery1"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            valueType: "java.util.List"
+            genericValueType: "org.bitcoinj.net.discovery.PeerDiscovery"
+            uuid: "forServices_arrayList1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "parallelQueries"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            uuid: "forServices_boolean1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "shufflePeers"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            uuid: "forServices_boolean2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: true
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.net.discovery.MultiplexingDiscovery"
+      uuid: "forServices_multiplexingDiscovery1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+  - pathId: "path3"
+    testPathName: "forServices1WhenDnsSeedsIsEmptyAndDefaultBranchThrowsIllegalArgumentException"
+    modelFingerprint: "2B0E32D0830FBD57C1A6FFEC3E06559D"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "network"
+      modelFingerprint: "ECD5777B98096C66D018424DBD7F2C5A"
+      index: 1
+      valueUuid: "forServices_network1"
+    - type: "INPUT"
+      name: "services"
+      modelFingerprint: "909050AB7B1EF8A162245F33E8EE0D3E"
+      index: 2
+      valueUuid: "forServices_long1"
+    - type: "INPUT"
+      name: "parallelQueries"
+      modelFingerprint: "5F6ED7807F94A190BD74DB9C987969F3"
+      index: 3
+      valueUuid: "forServices_boolean1"
+    - type: "INPUT"
+      name: "shufflePeers"
+      modelFingerprint: "51E55DD1055BFC76DF0319D2C71CEFF0"
+      index: 4
+      valueUuid: "forServices_boolean2"
+    - type: "STATIC"
+      name: "NetworkParameters"
+      modelFingerprint: "D30C934CC9807B6FCC7A18BF98BD72E7"
+      index: 5
+      valueUuid: "uuid13"
+      methodExercised:
+        target: "org.bitcoinj.core.NetworkParameters"
+        name: "of"
+        parameters:
+        - name: "network"
+          valueUuid: "forServices_network1"
+        signature: "of(Network): NetworkParameters"
+        returnValueUuid: "forServices_networkParameters1"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "2E7BAB34F51A6BC05D87FCFCEC85CCFB"
+      index: 6
+      valueUuid: "forServices_networkParameters1"
+      methodExercised:
+        target: "org.bitcoinj.core.NetworkParameters"
+        name: "getDnsSeeds"
+        parameters: []
+        signature: "getDnsSeeds(): String[]"
+        returnValueUuid: "forServices_string[]1"
+        access: 1
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "0EDE48F21AC2F1945BA699E11FE35975"
+      index: 7
+      valueUuid: "uuid16"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid14"
+        signature: "checkArgument(boolean): void"
+        returnValueUuid: "uuid15"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "3E9C76AB51311DE97AE9C2294CD5E1D6"
+      index: 8
+      valueUuid: "uuid17"
+    uuid: "38163baf-b63c-3b9b-b185-05ec350b48a6"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Network"
+      uuid: "forServices_network1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "long"
+      uuid: "forServices_long1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "forServices_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "forServices_boolean2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "uuid13"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "forServices_networkParameters1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Network"
+      uuid: "forServices_network1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "forServices_networkParameters1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "java.lang.String[]"
+      uuid: "forServices_string[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid16"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.IllegalArgumentException"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.IllegalArgumentException"
+      uuid: "uuid15"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "uuid14"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.IllegalArgumentException"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.IllegalArgumentException"
+      uuid: "uuid17"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "forServices1WhenDnsSeedsIsEmptyAndDefaultBranch"
+    modelFingerprint: "9B05F70083F3E2DF7F048B6FD28014EF"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "d777278a-7102-3890-a0ba-d871dcc80ae1"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "forServices"
+    signature: "forServices(org.bitcoinj.core.NetworkParameters,long) : org.bitcoinj.net.discovery.MultiplexingDiscovery"
+    sourceCodeSignature: "MultiplexingDiscovery forServices(NetworkParameters params,\
+      \ long services)"
+    instructionFingerprint: "58112E28B278B77F4C9BD100E3BB2514"
+  paths:
+  - pathId: "path1"
+    testPathName: "forServices2Test"
+    modelFingerprint: "05A9A670976F3F27C9A1D496D313583F"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "params"
+      modelFingerprint: "00E8B0A409051C389A8EA4BD13728A98"
+      index: 1
+      valueUuid: "forServices_networkParameters1"
+    - type: "INPUT"
+      name: "services"
+      modelFingerprint: "909050AB7B1EF8A162245F33E8EE0D3E"
+      index: 2
+      valueUuid: "forServices_long1"
+    - type: "LOCAL_VARIABLE"
+      name: "params"
+      modelFingerprint: "D3F477F2203E38AED3675605B36AEDBC"
+      index: 3
+      valueUuid: "forServices_networkParameters1"
+      methodExercised:
+        target: "params"
+        name: "network"
+        parameters: []
+        signature: "network(): Network"
+        returnValueUuid: "forServices_network1"
+        access: 1
+    - type: "STATIC"
+      name: "MultiplexingDiscovery"
+      modelFingerprint: "4EA7EA9B9F7A71CF233978DFCC241F46"
+      index: 4
+      valueUuid: "uuid22"
+      methodExercised:
+        target: "org.bitcoinj.net.discovery.MultiplexingDiscovery"
+        name: "forServices"
+        parameters:
+        - name: "network"
+          valueUuid: "forServices_network1"
+        - name: "services"
+          valueUuid: "forServices_long1"
+        signature: "forServices(Network,long): MultiplexingDiscovery"
+        returnValueUuid: "forServices_multiplexingDiscovery1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "329ABE53E8AE15AB3502085E7D45A122"
+      index: 5
+      valueUuid: "forServices_multiplexingDiscovery1"
+    uuid: "a3d5d6ee-30fd-3760-8c05-1d94aced277c"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "forServices_networkParameters1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "long"
+      uuid: "forServices_long1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "forServices_networkParameters1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Network"
+      uuid: "forServices_network1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.net.discovery.MultiplexingDiscovery"
+      uuid: "uuid22"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.net.discovery.MultiplexingDiscovery"
+      uuid: "forServices_multiplexingDiscovery1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Network"
+      uuid: "forServices_network1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "long"
+      uuid: "forServices_long1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.net.discovery.MultiplexingDiscovery"
+      uuid: "forServices_multiplexingDiscovery1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "forServices"
+    signature: "forServices(org.bitcoinj.core.NetworkParameters,long,boolean,boolean)\
+      \ : org.bitcoinj.net.discovery.MultiplexingDiscovery"
+    sourceCodeSignature: "MultiplexingDiscovery forServices(NetworkParameters params,\
+      \ long services, boolean parallelQueries, boolean shufflePeers)"
+    instructionFingerprint: "E493710C83B1D2D7FF310A08DD0BDC0E"
+  paths:
+  - pathId: "path1"
+    testPathName: "forServices3Test"
+    modelFingerprint: "12A40414739B1CB4DB3116BFB9A02009"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "params"
+      modelFingerprint: "00E8B0A409051C389A8EA4BD13728A98"
+      index: 1
+      valueUuid: "forServices_networkParameters1"
+    - type: "INPUT"
+      name: "services"
+      modelFingerprint: "909050AB7B1EF8A162245F33E8EE0D3E"
+      index: 2
+      valueUuid: "forServices_long1"
+    - type: "INPUT"
+      name: "parallelQueries"
+      modelFingerprint: "5F6ED7807F94A190BD74DB9C987969F3"
+      index: 3
+      valueUuid: "forServices_boolean1"
+    - type: "INPUT"
+      name: "shufflePeers"
+      modelFingerprint: "51E55DD1055BFC76DF0319D2C71CEFF0"
+      index: 4
+      valueUuid: "forServices_boolean2"
+    - type: "LOCAL_VARIABLE"
+      name: "params"
+      modelFingerprint: "D3F477F2203E38AED3675605B36AEDBC"
+      index: 5
+      valueUuid: "forServices_networkParameters1"
+      methodExercised:
+        target: "params"
+        name: "network"
+        parameters: []
+        signature: "network(): Network"
+        returnValueUuid: "forServices_network1"
+        access: 1
+    - type: "STATIC"
+      name: "MultiplexingDiscovery"
+      modelFingerprint: "99B8E11DC861D02C833945D955F4AD1F"
+      index: 6
+      valueUuid: "uuid23"
+      methodExercised:
+        target: "org.bitcoinj.net.discovery.MultiplexingDiscovery"
+        name: "forServices"
+        parameters:
+        - name: "network"
+          valueUuid: "forServices_network1"
+        - name: "services"
+          valueUuid: "forServices_long1"
+        - name: "parallelQueries"
+          valueUuid: "forServices_boolean1"
+        - name: "shufflePeers"
+          valueUuid: "forServices_boolean2"
+        signature: "forServices(Network,long,boolean,boolean): MultiplexingDiscovery"
+        returnValueUuid: "forServices_multiplexingDiscovery1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "329ABE53E8AE15AB3502085E7D45A122"
+      index: 7
+      valueUuid: "forServices_multiplexingDiscovery1"
+    uuid: "aaaf9c80-1d2a-3386-bace-38f2052d5259"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "forServices_networkParameters1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "long"
+      uuid: "forServices_long1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "forServices_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "forServices_boolean2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "forServices_networkParameters1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Network"
+      uuid: "forServices_network1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.net.discovery.MultiplexingDiscovery"
+      uuid: "uuid23"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.net.discovery.MultiplexingDiscovery"
+      uuid: "forServices_multiplexingDiscovery1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Network"
+      uuid: "forServices_network1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "long"
+      uuid: "forServices_long1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "forServices_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "forServices_boolean2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.net.discovery.MultiplexingDiscovery"
+      uuid: "forServices_multiplexingDiscovery1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "getPeers"
+    signature: "getPeers(long,java.time.Duration) : java.util.List<java.net.InetSocketAddress>"
+    sourceCodeSignature: "List<InetSocketAddress> getPeers(final long services, final\
+      \ Duration timeout)"
+    tryCatchBlocks:
+    - idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.util.concurrent.ExecutionException"
+    - idExternalInstruction: 0
+      id: 2
+      catchExceptions:
+      - "java.lang.InterruptedException"
+    instructionFingerprint: "A487575F4BB32098ACAE219954769CA9"
+  paths:
+  - pathId: "path3"
+    testPathName: "getPeersWhenAddrsSizeEquals0ThrowsPeerDiscoveryException"
+    constructorSignature: "<init>(org.bitcoinj.base.Network,java.util.List<org.bitcoinj.net.discovery.PeerDiscovery>)\
+      \ : void"
+    modelFingerprint: "8BCB9E0B5990B446CF510B424889C34F"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "c22e0e5f-bdd1-32d8-9f81-565eab13badb"
+    deleted: true
+    disabled: true
+    ignoredBySystem: true
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.time.Duration.toMillis() : long"
+    disabledReason: "Potential harmful system call (Future.isCancelled, Future.get,\
+      \ ExecutorService.invokeAll) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path7"
+    testPathName: "getPeersWhenCaughtExecutionExceptionAndAddrsSizeEquals0ThrowsPeerDiscoveryException"
+    constructorSignature: "<init>(org.bitcoinj.base.Network,java.util.List<org.bitcoinj.net.discovery.PeerDiscovery>)\
+      \ : void"
+    modelFingerprint: "FC8E41E7A23CA88AB4B74ABC29FC3F13"
+    problemWasSolvedByProver: false
+    catchBlockExercised:
+      idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.util.concurrent.ExecutionException"
+    truncated: true
+    inputParameters: []
+    uuid: "9f581b09-40e7-35f4-a4a4-1446889b083b"
+    deleted: true
+    disabled: true
+    ignoredBySystem: true
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.time.Duration.toMillis() : long"
+    disabledReason: "Potential harmful system call (ExecutorService.invokeAll) detected;\
+      \ Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path1"
+    testPathName: "getPeersWhenParallelQueriesAndAddrsSizeEquals0ThrowsPeerDiscoveryException"
+    constructorSignature: "<init>(org.bitcoinj.base.Network,java.util.List<org.bitcoinj.net.discovery.PeerDiscovery>)\
+      \ : void"
+    modelFingerprint: "E293ACE42AC4A7847BDDC2A441FE4E99"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "C3E8A5EC74BF850DCEDD5343B09A2028"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "services"
+      modelFingerprint: "909050AB7B1EF8A162245F33E8EE0D3E"
+      index: 2
+      valueUuid: "getPeers_long1"
+    - type: "INPUT"
+      name: "timeout"
+      modelFingerprint: "56FF28DDA68F2DB8B71AE2A0D84E5A0E"
+      index: 3
+      valueUuid: "getPeers_duration1"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "60A6CF81A4B62FC26CAD9062FF6E1448"
+      index: 4
+      valueUuid: "uuid31"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid30"
+        signature: "checkArgument(boolean): void"
+        returnValueUuid: "<init>_void1"
+        access: 9
+    - type: "STATIC"
+      name: "NetworkParameters"
+      modelFingerprint: "26D75008394095BEC03E1D0136B8EDFD"
+      index: 5
+      valueUuid: "uuid32"
+      methodExercised:
+        target: "org.bitcoinj.core.NetworkParameters"
+        name: "of"
+        parameters:
+        - name: "network"
+          valueUuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
+        signature: "of(BitcoinNetwork): NetworkParameters"
+        returnValueUuid: "<init>_networkParameters1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "7E17A2383030FB578B8E7A092491BE70"
+      index: 6
+      methodExercised:
+        target: "target"
+        name: "createExecutor"
+        parameters: []
+        signature: "createExecutor(): ExecutorService"
+        returnValueUuid: "getPeers_executorService1"
+        access: 4
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "B850A1E5D0D8F91559D5FC65910A279A"
+      index: 7
+      valueUuid: "getPeers_peerDiscoveryException1"
+    uuid: "51d29f99-c2a3-3857-ad64-2975622c153d"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.time.Duration.toMillis() : long"
+    disabledReason: "Potential harmful system call (Future.isCancelled, ExecutorService.invokeAll)\
+      \ detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.net.discovery.MultiplexingDiscovery"
+        parameters:
+        - name: "network"
+          value:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "REGTEST"
+            valueType: "org.bitcoinj.base.BitcoinNetwork"
+            uuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "seeds"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              parameters: []
+              values: []
+            valueType: "java.util.List"
+            genericValueType: "org.bitcoinj.net.discovery.PeerDiscovery"
+            uuid: "<init>_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.net.discovery.MultiplexingDiscovery"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "long"
+      uuid: "getPeers_long1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.time.Duration"
+        method: "ofDays"
+        methodParameters:
+        - name: "days"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "getPeers_duration1-days"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.time.Duration"
+      uuid: "getPeers_duration1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid31"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid30"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "uuid32"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.core.NetworkParameters"
+        method: "of"
+        methodParameters:
+        - value:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "REGTEST"
+            valueType: "org.bitcoinj.base.BitcoinNetwork"
+            uuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "<init>_networkParameters1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ENUM"
+      content: !<regular>
+        value: "REGTEST"
+      valueType: "org.bitcoinj.base.BitcoinNetwork"
+      uuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.util.concurrent.ExecutorService"
+      uuid: "getPeers_executorService1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "org.bitcoinj.net.discovery.PeerDiscoveryException"
+        parameters:
+        - name: "message"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "message1"
+            valueType: "java.lang.String"
+            uuid: "getPeers_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.net.discovery.PeerDiscoveryException"
+      uuid: "getPeers_peerDiscoveryException1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "getPeersWhenShufflePeers"
+    constructorSignature: "<init>(org.bitcoinj.base.Network,java.util.List<org.bitcoinj.net.discovery.PeerDiscovery>)\
+      \ : void"
+    modelFingerprint: "BA6C3E781A938CD0E803B3A0A10845E6"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "C3E8A5EC74BF850DCEDD5343B09A2028"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "services"
+      modelFingerprint: "909050AB7B1EF8A162245F33E8EE0D3E"
+      index: 2
+      valueUuid: "getPeers_long1"
+    - type: "INPUT"
+      name: "timeout"
+      modelFingerprint: "56FF28DDA68F2DB8B71AE2A0D84E5A0E"
+      index: 3
+      valueUuid: "getPeers_duration1"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "60A6CF81A4B62FC26CAD9062FF6E1448"
+      index: 4
+      valueUuid: "uuid34"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid33"
+        signature: "checkArgument(boolean): void"
+        returnValueUuid: "<init>_void1"
+        access: 9
+    - type: "STATIC"
+      name: "NetworkParameters"
+      modelFingerprint: "26D75008394095BEC03E1D0136B8EDFD"
+      index: 5
+      valueUuid: "uuid35"
+      methodExercised:
+        target: "org.bitcoinj.core.NetworkParameters"
+        name: "of"
+        parameters:
+        - name: "network"
+          valueUuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
+        signature: "of(BitcoinNetwork): NetworkParameters"
+        returnValueUuid: "<init>_networkParameters1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "7E17A2383030FB578B8E7A092491BE70"
+      index: 6
+      methodExercised:
+        target: "target"
+        name: "createExecutor"
+        parameters: []
+        signature: "createExecutor(): ExecutorService"
+        returnValueUuid: "getPeers_executorService1"
+        access: 4
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "C7A4E6D356E1197E3489A0B78E0C0D24"
+      index: 7
+      valueUuid: "getPeers_arrayList2"
+    uuid: "281eaeaf-48ef-3350-b942-88718ed432fd"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.time.Duration.toMillis() : long"
+    disabledReason: "Potential harmful system call (Future.isCancelled, Future.get,\
+      \ ExecutorService.shutdown, ExecutorService.invokeAll, ExecutorService.shutdownNow)\
+      \ detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.net.discovery.MultiplexingDiscovery"
+        parameters:
+        - name: "network"
+          value:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "REGTEST"
+            valueType: "org.bitcoinj.base.BitcoinNetwork"
+            uuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "seeds"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              parameters: []
+              values: []
+            valueType: "java.util.List"
+            genericValueType: "org.bitcoinj.net.discovery.PeerDiscovery"
+            uuid: "<init>_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.net.discovery.MultiplexingDiscovery"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "long"
+      uuid: "getPeers_long1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.time.Duration"
+        method: "ofDays"
+        methodParameters:
+        - name: "days"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "getPeers_duration1-days"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.time.Duration"
+      uuid: "getPeers_duration1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid34"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid33"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "uuid35"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.core.NetworkParameters"
+        method: "of"
+        methodParameters:
+        - value:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "REGTEST"
+            valueType: "org.bitcoinj.base.BitcoinNetwork"
+            uuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "<init>_networkParameters1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ENUM"
+      content: !<regular>
+        value: "REGTEST"
+      valueType: "org.bitcoinj.base.BitcoinNetwork"
+      uuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.util.concurrent.ExecutorService"
+      uuid: "getPeers_executorService1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        parameters: []
+        values: []
+      valueType: "java.util.List"
+      genericValueType: "java.net.InetSocketAddress"
+      uuid: "getPeers_arrayList2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path4"
+    testPathName: "getPeersWhenAddrsSizeNotEquals0AndShufflePeers"
+    constructorSignature: "<init>(org.bitcoinj.base.Network,java.util.List<org.bitcoinj.net.discovery.PeerDiscovery>)\
+      \ : void"
+    modelFingerprint: "9965B4F33E24E6FBA26CE4BA4453DEF0"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "25e10953-675f-33a6-aeda-ad1c96f4b8b6"
+    deleted: true
+    disabled: true
+    ignoredBySystem: true
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.time.Duration.toMillis() : long"
+    disabledReason: "Potential harmful system call (Future.isCancelled, Future.get,\
+      \ ExecutorService.shutdown, ExecutorService.invokeAll, ExecutorService.shutdownNow)\
+      \ detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path5"
+    testPathName: "getPeersWhenParallelQueriesAndCaughtExecutionExceptionAndAddrsSizeEquals0ThrowsPeerDiscoveryException"
+    constructorSignature: "<init>(org.bitcoinj.base.Network,java.util.List<org.bitcoinj.net.discovery.PeerDiscovery>)\
+      \ : void"
+    modelFingerprint: "23740AB6BC2E074F6191871BBAAB5CDB"
+    problemWasSolvedByProver: false
+    catchBlockExercised:
+      idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.util.concurrent.ExecutionException"
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "C33D3C38BE7CF2C30869CFD64D255B27"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "services"
+      modelFingerprint: "F8877380B48E1EA586A3ED00B6298812"
+      index: 2
+      valueUuid: "getPeers_long1"
+    - type: "INPUT"
+      name: "timeout"
+      modelFingerprint: "C304D31D903CF45A2122BD364F57A445"
+      index: 3
+      valueUuid: "getPeers_duration1"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "60A6CF81A4B62FC26CAD9062FF6E1448"
+      index: 4
+      valueUuid: "uuid2"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid1"
+        signature: "checkArgument(boolean): void"
+        returnValueUuid: "<init>_void1"
+        access: 9
+    - type: "STATIC"
+      name: "NetworkParameters"
+      modelFingerprint: "5C08FFCD14A097AC29710BFA25883951"
+      index: 5
+      valueUuid: "uuid3"
+      methodExercised:
+        target: "org.bitcoinj.core.NetworkParameters"
+        name: "of"
+        parameters:
+        - name: "network"
+          valueUuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
+        signature: "of(BitcoinNetwork): NetworkParameters"
+        returnValueUuid: "<init>_networkParameters1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "7E17A2383030FB578B8E7A092491BE70"
+      index: 6
+      methodExercised:
+        target: "target"
+        name: "createExecutor"
+        parameters: []
+        signature: "createExecutor(): ExecutorService"
+        returnValueUuid: "getPeers_executorService1"
+        access: 4
+    - type: "FIELD"
+      name: "vThreadPool"
+      modelFingerprint: "21179280D939870BFF860B542F018410"
+      index: 7
+      idsTryCatchBlockSurrounding:
+      - 2
+      valueUuid: "getPeers_executorService1"
+      methodExercised:
+        target: "this.vThreadPool"
+        name: "invokeAll"
+        parameters:
+        - name: "arg0"
+          valueUuid: "getPeers_arrayList1"
+        - name: "arg1"
+          valueUuid: "getPeers_long2"
+        - name: "arg2"
+          valueUuid: "Enum-java.util.concurrent.TimeUnit-MILLISECONDS"
+        throwsExceptions:
+        - "java.lang.InterruptedException"
+        signature: "invokeAll(List,long,TimeUnit): List throws java.lang.InterruptedException"
+        returnValueUuid: "getPeers_list1"
+        access: 1025
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "0B8AAA46A5F4F5FF8CD7BEE1957D49DF"
+      index: 8
+      valueUuid: "getPeers_peerDiscoveryException1"
+    uuid: "bedae1ab-56a9-386a-af42-c9a753de6250"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "DEPENDENCY_TO_THROW_EXCEPTION_NOT_FOUND"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.net.discovery.MultiplexingDiscovery"
+        parameters:
+        - name: "network"
+          value:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "REGTEST"
+            valueType: "org.bitcoinj.base.BitcoinNetwork"
+            uuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "seeds"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              collectionClass: "java.util.ArrayList"
+              parameters: []
+              values: []
+            valueType: "java.util.List"
+            genericValueType: "org.bitcoinj.net.discovery.PeerDiscovery"
+            uuid: "<init>_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+        propertiesMap:
+          vThreadPool:
+            sapientType: "MOCK"
+            valueType: "java.util.concurrent.ExecutorService"
+            uuid: "getPeers_executorService1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.net.discovery.MultiplexingDiscovery"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 1
+      valueType: "long"
+      uuid: "getPeers_long1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.time.Duration"
+        method: "ofDays"
+        methodParameters:
+        - name: "days"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "getPeers_duration1-days"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.time.Duration"
+      uuid: "getPeers_duration1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "uuid3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.core.NetworkParameters"
+        method: "of"
+        methodParameters:
+        - value:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "REGTEST"
+            valueType: "org.bitcoinj.base.BitcoinNetwork"
+            uuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "<init>_networkParameters1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ENUM"
+      content: !<regular>
+        value: "REGTEST"
+      valueType: "org.bitcoinj.base.BitcoinNetwork"
+      uuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.util.concurrent.ExecutorService"
+      uuid: "getPeers_executorService1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.util.concurrent.ExecutorService"
+      uuid: "getPeers_executorService1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        collectionClass: "java.util.ArrayList"
+        parameters: []
+        values: []
+      valueType: "java.util.List"
+      genericValueType: "java.util.concurrent.Future<java.util.List<java.net.InetSocketAddress>>"
+      uuid: "getPeers_list1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        collectionClass: "java.util.ArrayList"
+        parameters: []
+        values: []
+      valueType: "java.util.List"
+      genericValueType: "java.util.concurrent.Callable<java.util.List<java.net.InetSocketAddress>>"
+      uuid: "getPeers_arrayList1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "long"
+      uuid: "getPeers_long2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ENUM"
+      content: !<regular>
+        value: "MILLISECONDS"
+      valueType: "java.util.concurrent.TimeUnit"
+      uuid: "Enum-java.util.concurrent.TimeUnit-MILLISECONDS"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "org.bitcoinj.net.discovery.PeerDiscoveryException"
+        parameters:
+        - name: "message"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "No peer discovery returned any results in 0 ms. Check internet\
+                \ connection?"
+            valueType: "java.lang.String"
+            uuid: "getPeers_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.net.discovery.PeerDiscoveryException"
+      uuid: "getPeers_peerDiscoveryException1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+  - pathId: "path6"
+    testPathName: "getPeersWhenCaughtExecutionExceptionAndParallelQueriesAndAddrsSizeEquals0ThrowsPeerDiscoveryException"
+    constructorSignature: "<init>(org.bitcoinj.base.Network,java.util.List<org.bitcoinj.net.discovery.PeerDiscovery>)\
+      \ : void"
+    modelFingerprint: "6DD87C7D280C8E5C1F9B93B6EA3BFC88"
+    problemWasSolvedByProver: false
+    catchBlockExercised:
+      idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.util.concurrent.ExecutionException"
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "C33D3C38BE7CF2C30869CFD64D255B27"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "services"
+      modelFingerprint: "3B4C04593D70BBB43DC0D1620008502B"
+      index: 2
+      valueUuid: "getPeers_long1"
+    - type: "INPUT"
+      name: "timeout"
+      modelFingerprint: "C304D31D903CF45A2122BD364F57A445"
+      index: 3
+      valueUuid: "getPeers_duration1"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "60A6CF81A4B62FC26CAD9062FF6E1448"
+      index: 4
+      valueUuid: "uuid2"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid1"
+        signature: "checkArgument(boolean): void"
+        returnValueUuid: "<init>_void1"
+        access: 9
+    - type: "STATIC"
+      name: "NetworkParameters"
+      modelFingerprint: "5C08FFCD14A097AC29710BFA25883951"
+      index: 5
+      valueUuid: "uuid3"
+      methodExercised:
+        target: "org.bitcoinj.core.NetworkParameters"
+        name: "of"
+        parameters:
+        - name: "network"
+          valueUuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
+        signature: "of(BitcoinNetwork): NetworkParameters"
+        returnValueUuid: "<init>_networkParameters1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "7E17A2383030FB578B8E7A092491BE70"
+      index: 6
+      methodExercised:
+        target: "target"
+        name: "createExecutor"
+        parameters: []
+        signature: "createExecutor(): ExecutorService"
+        returnValueUuid: "getPeers_executorService1"
+        access: 4
+    - type: "FIELD"
+      name: "vThreadPool"
+      modelFingerprint: "21179280D939870BFF860B542F018410"
+      index: 7
+      idsTryCatchBlockSurrounding:
+      - 2
+      valueUuid: "getPeers_executorService1"
+      methodExercised:
+        target: "this.vThreadPool"
+        name: "invokeAll"
+        parameters:
+        - name: "arg0"
+          valueUuid: "getPeers_arrayList1"
+        - name: "arg1"
+          valueUuid: "getPeers_long2"
+        - name: "arg2"
+          valueUuid: "Enum-java.util.concurrent.TimeUnit-MILLISECONDS"
+        throwsExceptions:
+        - "java.lang.InterruptedException"
+        signature: "invokeAll(List,long,TimeUnit): List throws java.lang.InterruptedException"
+        returnValueUuid: "getPeers_list1"
+        access: 1025
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "0B8AAA46A5F4F5FF8CD7BEE1957D49DF"
+      index: 8
+      valueUuid: "getPeers_peerDiscoveryException1"
+    uuid: "465ee7d3-758b-3ef4-b38b-1eb319998f3d"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "DEPENDENCY_TO_THROW_EXCEPTION_NOT_FOUND"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.net.discovery.MultiplexingDiscovery"
+        parameters:
+        - name: "network"
+          value:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "REGTEST"
+            valueType: "org.bitcoinj.base.BitcoinNetwork"
+            uuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "seeds"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              collectionClass: "java.util.ArrayList"
+              parameters: []
+              values: []
+            valueType: "java.util.List"
+            genericValueType: "org.bitcoinj.net.discovery.PeerDiscovery"
+            uuid: "<init>_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+        propertiesMap:
+          vThreadPool:
+            sapientType: "MOCK"
+            valueType: "java.util.concurrent.ExecutorService"
+            uuid: "getPeers_executorService1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.net.discovery.MultiplexingDiscovery"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 123456789
+      valueType: "long"
+      uuid: "getPeers_long1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.time.Duration"
+        method: "ofDays"
+        methodParameters:
+        - name: "days"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "getPeers_duration1-days"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.time.Duration"
+      uuid: "getPeers_duration1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "uuid3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.core.NetworkParameters"
+        method: "of"
+        methodParameters:
+        - value:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "REGTEST"
+            valueType: "org.bitcoinj.base.BitcoinNetwork"
+            uuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "<init>_networkParameters1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ENUM"
+      content: !<regular>
+        value: "REGTEST"
+      valueType: "org.bitcoinj.base.BitcoinNetwork"
+      uuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.util.concurrent.ExecutorService"
+      uuid: "getPeers_executorService1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.util.concurrent.ExecutorService"
+      uuid: "getPeers_executorService1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        collectionClass: "java.util.ArrayList"
+        parameters: []
+        values: []
+      valueType: "java.util.List"
+      genericValueType: "java.util.concurrent.Future<java.util.List<java.net.InetSocketAddress>>"
+      uuid: "getPeers_list1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        collectionClass: "java.util.ArrayList"
+        parameters: []
+        values: []
+      valueType: "java.util.List"
+      genericValueType: "java.util.concurrent.Callable<java.util.List<java.net.InetSocketAddress>>"
+      uuid: "getPeers_arrayList1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "long"
+      uuid: "getPeers_long2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ENUM"
+      content: !<regular>
+        value: "MILLISECONDS"
+      valueType: "java.util.concurrent.TimeUnit"
+      uuid: "Enum-java.util.concurrent.TimeUnit-MILLISECONDS"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "org.bitcoinj.net.discovery.PeerDiscoveryException"
+        parameters:
+        - name: "message"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "No peer discovery returned any results in 0 ms. Check internet\
+                \ connection?"
+            valueType: "java.lang.String"
+            uuid: "getPeers_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.net.discovery.PeerDiscoveryException"
+      uuid: "getPeers_peerDiscoveryException1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+  - pathId: "path8"
+    testPathName: "getPeersWhenCaughtInterruptedExceptionThrowsPeerDiscoveryException"
+    constructorSignature: "<init>(org.bitcoinj.base.Network,java.util.List<org.bitcoinj.net.discovery.PeerDiscovery>)\
+      \ : void"
+    modelFingerprint: "9233D4DC973337E2CD27BDCF0C6C335B"
+    problemWasSolvedByProver: false
+    catchBlockExercised:
+      idExternalInstruction: 0
+      id: 2
+      catchExceptions:
+      - "java.lang.InterruptedException"
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "C3E8A5EC74BF850DCEDD5343B09A2028"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "services"
+      modelFingerprint: "909050AB7B1EF8A162245F33E8EE0D3E"
+      index: 2
+      valueUuid: "getPeers_long1"
+    - type: "INPUT"
+      name: "timeout"
+      modelFingerprint: "56FF28DDA68F2DB8B71AE2A0D84E5A0E"
+      index: 3
+      valueUuid: "getPeers_duration1"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "60A6CF81A4B62FC26CAD9062FF6E1448"
+      index: 4
+      valueUuid: "uuid46"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid45"
+        signature: "checkArgument(boolean): void"
+        returnValueUuid: "<init>_void1"
+        access: 9
+    - type: "STATIC"
+      name: "NetworkParameters"
+      modelFingerprint: "26D75008394095BEC03E1D0136B8EDFD"
+      index: 5
+      valueUuid: "uuid47"
+      methodExercised:
+        target: "org.bitcoinj.core.NetworkParameters"
+        name: "of"
+        parameters:
+        - name: "network"
+          valueUuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
+        signature: "of(BitcoinNetwork): NetworkParameters"
+        returnValueUuid: "<init>_networkParameters1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "7E17A2383030FB578B8E7A092491BE70"
+      index: 6
+      methodExercised:
+        target: "target"
+        name: "createExecutor"
+        parameters: []
+        signature: "createExecutor(): ExecutorService"
+        returnValueUuid: "getPeers_executorService1"
+        access: 4
+    - type: "FIELD"
+      name: "vThreadPool"
+      modelFingerprint: "511625242BF7BD1AED97BB38F57D42D6"
+      index: 7
+      idsTryCatchBlockSurrounding:
+      - 2
+      valueUuid: "getPeers_executorService1"
+      methodExercised:
+        target: "this.vThreadPool"
+        name: "invokeAll"
+        parameters:
+        - name: "arg0"
+          valueUuid: "getPeers_arrayList1"
+        - name: "arg1"
+          valueUuid: "getPeers_long2"
+        - name: "arg2"
+          valueUuid: "Enum-java.util.concurrent.TimeUnit-MILLISECONDS"
+        throwsExceptions:
+        - "java.lang.InterruptedException"
+        signature: "invokeAll(List,long,TimeUnit): List throws java.lang.InterruptedException"
+        returnValueUuid: "getPeers_list1"
+        access: 1025
+    - type: "LOCAL_VARIABLE"
+      name: "future"
+      modelFingerprint: "8E622536064A21218CE94BB2A1DAE534"
+      index: 8
+      idsTryCatchBlockSurrounding:
+      - 1
+      - 2
+      valueUuid: "getPeers_future1"
+      methodExercised:
+        target: "future"
+        name: "get"
+        parameters: []
+        throwsExceptions:
+        - "java.lang.InterruptedException"
+        - "java.util.concurrent.ExecutionException"
+        signature: "get(): Object throws java.lang.InterruptedException,java.util.concurrent.ExecutionException"
+        returnValueUuid: "getPeers_object2"
+        access: 1025
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "1646F10646F8554ACBDF32262AAC2E3B"
+      index: 9
+      valueUuid: "getPeers_peerDiscoveryException1"
+    uuid: "a263ff40-06a2-368a-ab74-26894b1388f1"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.time.Duration.toMillis() : long"
+    disabledReason: "Potential harmful system call (Future.isCancelled, Future.get,\
+      \ ExecutorService.invokeAll, ExecutorService.shutdownNow) detected; Learn more:\
+      \ https://github.com/Sapient-AI/docs#disabled-generated-tests"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.net.discovery.MultiplexingDiscovery"
+        parameters:
+        - name: "network"
+          value:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "REGTEST"
+            valueType: "org.bitcoinj.base.BitcoinNetwork"
+            uuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "seeds"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              parameters: []
+              values: []
+            valueType: "java.util.List"
+            genericValueType: "org.bitcoinj.net.discovery.PeerDiscovery"
+            uuid: "<init>_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+        propertiesMap:
+          vThreadPool:
+            sapientType: "MOCK"
+            valueType: "java.util.concurrent.ExecutorService"
+            uuid: "getPeers_executorService1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.net.discovery.MultiplexingDiscovery"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "long"
+      uuid: "getPeers_long1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.time.Duration"
+        method: "ofDays"
+        methodParameters:
+        - name: "days"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "getPeers_duration1-days"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.time.Duration"
+      uuid: "getPeers_duration1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid46"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid45"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "uuid47"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.core.NetworkParameters"
+        method: "of"
+        methodParameters:
+        - value:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "REGTEST"
+            valueType: "org.bitcoinj.base.BitcoinNetwork"
+            uuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "<init>_networkParameters1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ENUM"
+      content: !<regular>
+        value: "REGTEST"
+      valueType: "org.bitcoinj.base.BitcoinNetwork"
+      uuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.util.concurrent.ExecutorService"
+      uuid: "getPeers_executorService1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.util.concurrent.ExecutorService"
+      uuid: "getPeers_executorService1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        parameters: []
+        values: []
+      valueType: "java.util.List"
+      genericValueType: "java.util.concurrent.Future<java.util.List<java.net.InetSocketAddress>>"
+      uuid: "getPeers_list1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        collectionClass: "java.util.ArrayList"
+        parameters: []
+        values:
+        - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+          valueType: "java.util.concurrent.Callable"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+      valueType: "java.util.List"
+      genericValueType: "java.util.concurrent.Callable<java.util.List<java.net.InetSocketAddress>>"
+      uuid: "getPeers_arrayList1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "long"
+      uuid: "getPeers_long2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ENUM"
+      content: !<regular>
+        value: "MILLISECONDS"
+      valueType: "java.util.concurrent.TimeUnit"
+      uuid: "Enum-java.util.concurrent.TimeUnit-MILLISECONDS"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.util.concurrent.Future"
+      uuid: "getPeers_future1"
+      fixed: false
+      collectionUuid: "getPeers_list1"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        parameters: []
+        values: []
+      valueType: "java.util.List"
+      uuid: "getPeers_object2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: true
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "org.bitcoinj.net.discovery.PeerDiscoveryException"
+        parameters:
+        - name: "arg0"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "java.lang.InterruptedException"
+              parameters: []
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "java.lang.InterruptedException"
+            uuid: "getPeers_interruptedException1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.net.discovery.PeerDiscoveryException"
+      uuid: "getPeers_peerDiscoveryException1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "createExecutor"
+    signature: "createExecutor() : java.util.concurrent.ExecutorService"
+    sourceCodeSignature: "ExecutorService createExecutor()"
+    instructionFingerprint: "5C6562A2EF6D3A9FEB4AA3C36DA1C50F"
+  paths:
+  - pathId: "path1"
+    testPathName: "createExecutorTest"
+    constructorSignature: "<init>(org.bitcoinj.base.Network,java.util.List<org.bitcoinj.net.discovery.PeerDiscovery>)\
+      \ : void"
+    modelFingerprint: "155DD738C4CBEC7A53861983B8AD195B"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "C33D3C38BE7CF2C30869CFD64D255B27"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "60A6CF81A4B62FC26CAD9062FF6E1448"
+      index: 2
+      valueUuid: "uuid2"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid1"
+        signature: "checkArgument(boolean): void"
+        returnValueUuid: "<init>_void1"
+        access: 9
+    - type: "STATIC"
+      name: "NetworkParameters"
+      modelFingerprint: "5C08FFCD14A097AC29710BFA25883951"
+      index: 3
+      valueUuid: "uuid3"
+      methodExercised:
+        target: "org.bitcoinj.core.NetworkParameters"
+        name: "of"
+        parameters:
+        - name: "network"
+          valueUuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
+        signature: "of(BitcoinNetwork): NetworkParameters"
+        returnValueUuid: "<init>_networkParameters1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "8ADA05C44EBA4547B9E98972A0609D18"
+      index: 4
+      valueUuid: "createExecutor_executorService1"
+    uuid: "57e52633-2497-3d26-a12d-63324ebc60fe"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.util.concurrent.Executors.newFixedThreadPool(int,org.bitcoinj.utils.ContextPropagatingThreadFactory)\
+        \ : java.util.concurrent.ExecutorService"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.net.discovery.MultiplexingDiscovery"
+        parameters:
+        - name: "network"
+          value:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "REGTEST"
+            valueType: "org.bitcoinj.base.BitcoinNetwork"
+            uuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "seeds"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              collectionClass: "java.util.ArrayList"
+              parameters: []
+              values: []
+            valueType: "java.util.List"
+            genericValueType: "org.bitcoinj.net.discovery.PeerDiscovery"
+            uuid: "<init>_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.net.discovery.MultiplexingDiscovery"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "uuid3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.core.NetworkParameters"
+        method: "of"
+        methodParameters:
+        - value:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "REGTEST"
+            valueType: "org.bitcoinj.base.BitcoinNetwork"
+            uuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "<init>_networkParameters1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ENUM"
+      content: !<regular>
+        value: "REGTEST"
+      valueType: "org.bitcoinj.base.BitcoinNetwork"
+      uuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.util.concurrent.ExecutorService"
+      uuid: "createExecutor_executorService1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "shutdown"
+    signature: "shutdown() : void"
+    sourceCodeSignature: "void shutdown()"
+    instructionFingerprint: "FAB5D879AE9FDC7E6EA59BC686FEEB96"
+  paths:
+  - pathId: "path1"
+    testPathName: "shutdownWhenTpIsNull"
+    constructorSignature: "<init>(org.bitcoinj.base.Network,java.util.List<org.bitcoinj.net.discovery.PeerDiscovery>)\
+      \ : void"
+    modelFingerprint: "37F4B76B94D73066D97C2C335BF0AA9A"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "C51DCB929FB0FF2BE4FB49006A98E4BC"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "60A6CF81A4B62FC26CAD9062FF6E1448"
+      index: 2
+      valueUuid: "uuid52"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid51"
+        signature: "checkArgument(boolean): void"
+        returnValueUuid: "<init>_void1"
+        access: 9
+    - type: "STATIC"
+      name: "NetworkParameters"
+      modelFingerprint: "26D75008394095BEC03E1D0136B8EDFD"
+      index: 3
+      valueUuid: "uuid53"
+      methodExercised:
+        target: "org.bitcoinj.core.NetworkParameters"
+        name: "of"
+        parameters:
+        - name: "network"
+          valueUuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
+        signature: "of(BitcoinNetwork): NetworkParameters"
+        returnValueUuid: "<init>_networkParameters1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 4
+      valueUuid: "uuid54"
+    uuid: "a73e8e99-f065-3aff-99c3-19a7c22917cd"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.net.discovery.MultiplexingDiscovery"
+        parameters:
+        - name: "network"
+          value:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "REGTEST"
+            valueType: "org.bitcoinj.base.BitcoinNetwork"
+            uuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "seeds"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              parameters: []
+              values: []
+            valueType: "java.util.List"
+            genericValueType: "org.bitcoinj.net.discovery.PeerDiscovery"
+            uuid: "<init>_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.net.discovery.MultiplexingDiscovery"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid52"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid51"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "uuid53"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.core.NetworkParameters"
+        method: "of"
+        methodParameters:
+        - value:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "REGTEST"
+            valueType: "org.bitcoinj.base.BitcoinNetwork"
+            uuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "<init>_networkParameters1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ENUM"
+      content: !<regular>
+        value: "REGTEST"
+      valueType: "org.bitcoinj.base.BitcoinNetwork"
+      uuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      uuid: "uuid54"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false

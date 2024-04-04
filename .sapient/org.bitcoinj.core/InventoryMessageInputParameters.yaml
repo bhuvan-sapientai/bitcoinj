@@ -1,0 +1,545 @@
+---
+modelFingerprint: "57A795083C8D83FD516666111E1853E6"
+methods:
+- method:
+    name: "read"
+    signature: "read(java.nio.ByteBuffer) : org.bitcoinj.core.InventoryMessage"
+    sourceCodeSignature: "InventoryMessage read(ByteBuffer payload)"
+    instructionFingerprint: "6EC90136C0A7F0F694F569BE6DD9190C"
+  paths:
+  - pathId: "path1"
+    testPathName: "readTest"
+    modelFingerprint: "A8A4C512DA38B7015E40C70349578493"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "payload"
+      modelFingerprint: "D30B43598E2900E2880BDD9712DAE751"
+      index: 1
+      valueUuid: "read_byteBuffer1"
+    - type: "STATIC"
+      name: "ListMessage"
+      modelFingerprint: "86FBE83CB8C1352A7DB4ED151663AEFD"
+      index: 2
+      valueUuid: "uuid1"
+      methodExercised:
+        target: "org.bitcoinj.core.ListMessage"
+        name: "readItems"
+        parameters:
+        - name: "typeCode"
+          valueUuid: "read_byteBuffer1"
+        throwsExceptions:
+        - "java.nio.BufferUnderflowException"
+        - "org.bitcoinj.core.ProtocolException"
+        signature: "readItems(ByteBuffer): List throws java.nio.BufferUnderflowException,org.bitcoinj.core.ProtocolException"
+        returnValueUuid: "read_list1"
+        access: 12
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "FB486979138EF5206EBD3FBABF555080"
+      index: 3
+      valueUuid: "read_inventoryMessage1"
+    uuid: "db344e3b-696d-3b02-8e35-1aaa5300bde6"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "read_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.ListMessage"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        parameters: []
+        values: []
+      valueType: "java.util.List"
+      genericValueType: "org.bitcoinj.core.InventoryItem"
+      uuid: "read_list1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "read_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.InventoryMessage"
+        parameters:
+        - name: "items"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              parameters: []
+              values: []
+            valueType: "java.util.List"
+            genericValueType: "org.bitcoinj.core.InventoryItem"
+            uuid: "read_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.core.InventoryMessage"
+      uuid: "read_inventoryMessage1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "ofBlocks"
+    signature: "ofBlocks(org.bitcoinj.core.Block[]) : org.bitcoinj.core.InventoryMessage"
+    sourceCodeSignature: "InventoryMessage ofBlocks(Block... blocks)"
+    instructionFingerprint: "CE4354E5FF63E337E640C4F3529B1F9F"
+  paths:
+  - pathId: "path1"
+    testPathName: "ofBlocks1Test"
+    modelFingerprint: "DD0DED5B6AAE09019ADDBB4F06E4E6AF"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "blocks"
+      modelFingerprint: "4D2DA27D8581890DF9757C8C61DEB5F9"
+      index: 1
+      valueUuid: "ofBlocks_block[]1"
+    - type: "STATIC"
+      name: "InventoryMessage"
+      modelFingerprint: "14C64757CC1454763B66B9AD46694F3A"
+      index: 2
+      valueUuid: "uuid2"
+      methodExercised:
+        target: "org.bitcoinj.core.InventoryMessage"
+        name: "ofBlocks"
+        parameters:
+        - name: "blocks"
+          valueUuid: "ofBlocks_list1"
+        signature: "ofBlocks(List): InventoryMessage"
+        returnValueUuid: "ofBlocks_inventoryMessage1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "AF8422F97C7D9E2E610EC62EA0BBB58F"
+      index: 3
+      valueUuid: "ofBlocks_inventoryMessage1"
+    uuid: "0583fd9b-2306-3b91-8cf8-7e5df3e1748f"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "org.bitcoinj.core.Block[]"
+      uuid: "ofBlocks_block[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.InventoryMessage"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.InventoryMessage"
+      uuid: "ofBlocks_inventoryMessage1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        parameters: []
+        values: []
+      valueType: "java.util.List"
+      genericValueType: "org.bitcoinj.core.Block"
+      uuid: "ofBlocks_list1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.InventoryMessage"
+      uuid: "ofBlocks_inventoryMessage1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "ofTransactions"
+    signature: "ofTransactions(org.bitcoinj.core.Transaction[]) : org.bitcoinj.core.InventoryMessage"
+    sourceCodeSignature: "InventoryMessage ofTransactions(Transaction... transactions)"
+    instructionFingerprint: "9FD3937DE48D7DC104574F30F0676792"
+  paths:
+  - pathId: "path1"
+    testPathName: "ofTransactions1Test"
+    modelFingerprint: "B0EA998191DC4F4FDEDAC8A54092D353"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "transactions"
+      modelFingerprint: "B27CE518655ADB9A2DE36D1E343FE3F8"
+      index: 1
+      valueUuid: "ofTransactions_transaction[]1"
+    - type: "STATIC"
+      name: "InventoryMessage"
+      modelFingerprint: "2EA185A7F00C89A9A3EE752B2D78A382"
+      index: 2
+      valueUuid: "uuid3"
+      methodExercised:
+        target: "org.bitcoinj.core.InventoryMessage"
+        name: "ofTransactions"
+        parameters:
+        - name: "transactions"
+          valueUuid: "ofTransactions_list1"
+        signature: "ofTransactions(List): InventoryMessage"
+        returnValueUuid: "ofTransactions_inventoryMessage1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "AF8422F97C7D9E2E610EC62EA0BBB58F"
+      index: 3
+      valueUuid: "ofTransactions_inventoryMessage1"
+    uuid: "25f1b851-d259-32de-9021-8efa8340a556"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "org.bitcoinj.core.Transaction[]"
+      uuid: "ofTransactions_transaction[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.InventoryMessage"
+      uuid: "uuid3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.InventoryMessage"
+      uuid: "ofTransactions_inventoryMessage1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        parameters: []
+        values: []
+      valueType: "java.util.List"
+      genericValueType: "org.bitcoinj.core.Transaction"
+      uuid: "ofTransactions_list1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.InventoryMessage"
+      uuid: "ofTransactions_inventoryMessage1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "addBlock"
+    signature: "addBlock(org.bitcoinj.core.Block) : void"
+    sourceCodeSignature: "void addBlock(Block block)"
+    instructionFingerprint: "40ECB8E4DC5E60FC21FB4FE1E7A32953"
+  paths:
+  - pathId: "path1"
+    testPathName: "addBlockTest"
+    constructorSignature: "<init>(java.util.List<org.bitcoinj.core.InventoryItem>)\
+      \ : void"
+    modelFingerprint: "6AB8E0034D0D6782AF0918FE262CD4A6"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "6BD4A7E22DD5A26244743985E0BAB90C"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "block"
+      modelFingerprint: "76B91DC5BF34C3D963D8D8FB1FAD578A"
+      index: 2
+      valueUuid: "addBlock_block1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 3
+      valueUuid: "uuid4"
+    uuid: "40262172-b837-302c-8e81-d600e36bbd21"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.InventoryMessage"
+        parameters:
+        - name: "items"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              collectionClass: "java.util.ArrayList"
+              parameters: []
+              values:
+              - sapientType: "OBJECT"
+                content: !<new>
+                  target: "org.bitcoinj.core.InventoryItem"
+                  parameters:
+                  - name: "block"
+                    value:
+                      sapientType: "MOCK"
+                      valueType: "org.bitcoinj.core.Block"
+                      uuid: "addBlock_block1"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                  privateConstructor: false
+                  createdByTargetCode: true
+                valueType: "org.bitcoinj.core.InventoryItem"
+                uuid: "addBlock_inventoryItem1"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            valueType: "java.util.List"
+            genericValueType: "org.bitcoinj.core.InventoryItem"
+            uuid: "<init>_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.core.InventoryMessage"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "addBlock_block1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      uuid: "uuid4"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "addTransaction"
+    signature: "addTransaction(org.bitcoinj.core.Transaction) : void"
+    sourceCodeSignature: "void addTransaction(Transaction tx)"
+    instructionFingerprint: "0A3576D378A7A55D5138E072CAC116B7"
+  paths:
+  - pathId: "path1"
+    testPathName: "addTransactionTest"
+    constructorSignature: "<init>(java.util.List<org.bitcoinj.core.InventoryItem>)\
+      \ : void"
+    modelFingerprint: "296EF6A261DA21BDD9C4996335D54F7C"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "2267F8D52CAC068E054BBA74DFD18DC4"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "tx"
+      modelFingerprint: "F8B87C44786781D6A4ADD711C259C948"
+      index: 2
+      valueUuid: "addTransaction_transaction1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 3
+      valueUuid: "uuid5"
+    uuid: "7792ad1e-81d3-3ebb-862c-c536da819bb1"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.InventoryMessage"
+        parameters:
+        - name: "items"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              collectionClass: "java.util.ArrayList"
+              parameters: []
+              values:
+              - sapientType: "OBJECT"
+                content: !<new>
+                  target: "org.bitcoinj.core.InventoryItem"
+                  parameters:
+                  - name: "tx"
+                    value:
+                      sapientType: "MOCK"
+                      valueType: "org.bitcoinj.core.Transaction"
+                      uuid: "addTransaction_transaction1"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                  privateConstructor: false
+                  createdByTargetCode: true
+                valueType: "org.bitcoinj.core.InventoryItem"
+                uuid: "addTransaction_inventoryItem1"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            valueType: "java.util.List"
+            genericValueType: "org.bitcoinj.core.InventoryItem"
+            uuid: "<init>_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.core.InventoryMessage"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Transaction"
+      uuid: "addTransaction_transaction1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      uuid: "uuid5"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "with"
+    signature: "with(org.bitcoinj.core.Transaction[]) : org.bitcoinj.core.InventoryMessage"
+    sourceCodeSignature: "InventoryMessage with(Transaction... txns)"
+    instructionFingerprint: "B1C992914C8D3BF4BC1926954985315C"
+  paths:
+  - pathId: "path1"
+    testPathName: "withTest"
+    modelFingerprint: "A352166B3A214BD030E16BAD214A6A3C"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "txns"
+      modelFingerprint: "4C1C681BC7115CDC3F613D43215F3129"
+      index: 1
+      valueUuid: "with_transaction[]1"
+    - type: "STATIC"
+      name: "InventoryMessage"
+      modelFingerprint: "0F956D7DBEE7792C617C67A421B9BA6A"
+      index: 2
+      valueUuid: "uuid6"
+      methodExercised:
+        target: "org.bitcoinj.core.InventoryMessage"
+        name: "ofTransactions"
+        parameters:
+        - name: "transactions"
+          valueUuid: "with_transaction[]1"
+        signature: "ofTransactions(Transaction[]): InventoryMessage"
+        returnValueUuid: "with_inventoryMessage1"
+        access: 137
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "AF8422F97C7D9E2E610EC62EA0BBB58F"
+      index: 3
+      valueUuid: "with_inventoryMessage1"
+    uuid: "1007f368-7da2-3cb9-b820-1c034659e2c7"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "org.bitcoinj.core.Transaction[]"
+      uuid: "with_transaction[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.InventoryMessage"
+      uuid: "uuid6"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.InventoryMessage"
+      uuid: "with_inventoryMessage1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "org.bitcoinj.core.Transaction[]"
+      uuid: "with_transaction[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.InventoryMessage"
+      uuid: "with_inventoryMessage1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false

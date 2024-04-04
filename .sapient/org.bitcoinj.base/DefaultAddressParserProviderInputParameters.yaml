@@ -1,0 +1,309 @@
+---
+modelFingerprint: "981BF10F4375244C1CAFF62EA01D47E0"
+methods:
+- method:
+    name: "forKnownNetworks"
+    signature: "forKnownNetworks() : org.bitcoinj.base.AddressParser"
+    sourceCodeSignature: "AddressParser forKnownNetworks()"
+    instructionFingerprint: "14207B6311D4A279083C855622CF14EB"
+  paths:
+  - pathId: "path1"
+    testPathName: "forKnownNetworksTest"
+    constructorSignature: "<init>(java.util.List<org.bitcoinj.base.Network>,java.util.List<org.bitcoinj.base.Network>)\
+      \ : void"
+    modelFingerprint: "6C0EDCCF67D643CE5774D2BB6311449F"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "EFC25401227755A79A1D4B8D60BF9A00"
+      index: 1
+      valueUuid: "target"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "8C29864303C04C6EFCF3E6ECE19143EA"
+      index: 2
+      valueUuid: "forKnownNetworks_addressParser1"
+    uuid: "e87f8b02-7a25-3d4e-941a-232079c0f0fb"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.base.DefaultAddressParserProvider"
+        parameters:
+        - name: "segwitNetworks"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              parameters: []
+              values: []
+            valueType: "java.util.List"
+            genericValueType: "org.bitcoinj.base.Network"
+            uuid: "<init>_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "base58Networks"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              parameters: []
+              values: []
+            valueType: "java.util.List"
+            genericValueType: "org.bitcoinj.base.Network"
+            uuid: "<init>_list2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.base.DefaultAddressParserProvider"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "NOT_NULL"
+      valueType: "org.bitcoinj.base.AddressParser"
+      uuid: "forKnownNetworks_addressParser1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "forNetwork"
+    signature: "forNetwork(org.bitcoinj.base.Network) : org.bitcoinj.base.AddressParser"
+    sourceCodeSignature: "AddressParser forNetwork(Network network)"
+    instructionFingerprint: "A493CC972C959EE908420ED8668912BF"
+  paths:
+  - pathId: "path1"
+    testPathName: "forNetworkTest"
+    constructorSignature: "<init>(java.util.List<org.bitcoinj.base.Network>,java.util.List<org.bitcoinj.base.Network>)\
+      \ : void"
+    modelFingerprint: "46841208158CC461E2EAD72C95E75604"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "EFC25401227755A79A1D4B8D60BF9A00"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "network"
+      modelFingerprint: "ECD5777B98096C66D018424DBD7F2C5A"
+      index: 2
+      valueUuid: "forNetwork_network1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "8C29864303C04C6EFCF3E6ECE19143EA"
+      index: 3
+      valueUuid: "forNetwork_addressParser1"
+    uuid: "5179ed00-a049-390f-bfaf-11b6120eb4d8"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.base.DefaultAddressParserProvider"
+        parameters:
+        - name: "segwitNetworks"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              parameters: []
+              values: []
+            valueType: "java.util.List"
+            genericValueType: "org.bitcoinj.base.Network"
+            uuid: "<init>_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "base58Networks"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              parameters: []
+              values: []
+            valueType: "java.util.List"
+            genericValueType: "org.bitcoinj.base.Network"
+            uuid: "<init>_list2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.base.DefaultAddressParserProvider"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Network"
+      uuid: "forNetwork_network1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "NOT_NULL"
+      valueType: "org.bitcoinj.base.AddressParser"
+      uuid: "forNetwork_addressParser1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "fromNetworks"
+    signature: "fromNetworks() : org.bitcoinj.base.DefaultAddressParserProvider"
+    sourceCodeSignature: "DefaultAddressParserProvider fromNetworks()"
+    instructionFingerprint: "58E02F82584ACB9EA45FFC3A7BDC282F"
+  paths:
+  - pathId: "path1"
+    testPathName: "fromNetworksTest"
+    modelFingerprint: "A21CD0FC8415B84528A4B1D95CB224FD"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "STATIC"
+      name: "Networks"
+      modelFingerprint: "409C6A3E452E7F120A08FD21FD0D7813"
+      index: 1
+      valueUuid: "uuid1"
+      methodExercised:
+        target: "org.bitcoinj.params.Networks"
+        name: "get"
+        parameters: []
+        signature: "get(): Set"
+        returnValueUuid: "fromNetworks_set1"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "D3F477F2203E38AED3675605B36AEDBC"
+      index: 2
+      valueUuid: "fromNetworks_networkParameters1"
+      methodExercised:
+        target: "org.bitcoinj.core.NetworkParameters"
+        name: "network"
+        parameters: []
+        signature: "network(): Network"
+        returnValueUuid: "fromNetworks_network1"
+        access: 1
+    - type: "STATIC"
+      name: "StreamUtils"
+      modelFingerprint: "349E09A777804A0E302B8EC0AA3F351D"
+      index: 3
+      valueUuid: "uuid2"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.StreamUtils"
+        name: "toUnmodifiableList"
+        parameters: []
+        signature: "toUnmodifiableList(): Collector"
+        returnValueUuid: "fromNetworks_collector1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "99F3FCCA8686DBE608EABD0621AD4D0F"
+      index: 4
+      valueUuid: "fromNetworks_defaultAddressParserProvider1"
+    uuid: "5d91f3cf-df8f-39bd-ae91-3cf293f7795c"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.util.stream.Stream.collect(java.util.stream.Collector)\
+        \ : java.lang.Object"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.params.Networks"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        collectionClass: "java.util.HashSet"
+        parameters: []
+        values:
+        - sapientType: "MOCK"
+          valueType: "org.bitcoinj.core.NetworkParameters"
+          uuid: "fromNetworks_networkParameters1"
+          fixed: false
+          collectionUuid: "fromNetworks_set1"
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+      valueType: "java.util.Set"
+      genericValueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "fromNetworks_set1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "fromNetworks_networkParameters1"
+      fixed: false
+      collectionUuid: "fromNetworks_set1"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Network"
+      uuid: "fromNetworks_network1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.StreamUtils"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.internal.StreamUtils"
+        method: "toUnmodifiableList"
+        methodParameters: []
+      valueType: "java.util.stream.Collector"
+      uuid: "fromNetworks_collector1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.base.DefaultAddressParserProvider"
+        parameters:
+        - name: "segwitNetworks"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              parameters: []
+              values: []
+            valueType: "java.util.List"
+            uuid: "fromNetworks_object1"
+            fixed: false
+            collectionUuid: "fromNetworks_list1"
+            equalsMethodPresent: false
+            explicitCastNeeded: true
+        - name: "base58Networks"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              parameters: []
+              values: []
+            valueType: "java.util.List"
+            uuid: "fromNetworks_object1"
+            fixed: false
+            collectionUuid: "fromNetworks_list1"
+            equalsMethodPresent: false
+            explicitCastNeeded: true
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.base.DefaultAddressParserProvider"
+      uuid: "fromNetworks_defaultAddressParserProvider1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false

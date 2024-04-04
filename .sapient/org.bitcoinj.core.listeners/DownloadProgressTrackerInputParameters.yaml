@@ -1,0 +1,1274 @@
+---
+modelFingerprint: "87B68FE3100D563BCFD859694FC508C1"
+methods:
+- method:
+    name: "onChainDownloadStarted"
+    signature: "onChainDownloadStarted(org.bitcoinj.core.Peer,int) : void"
+    sourceCodeSignature: "void onChainDownloadStarted(Peer peer, int blocksLeft)"
+    instructionFingerprint: "2B0DFE23355707AE1B3A85CADAA70EFC"
+  paths:
+  - pathId: "path2"
+    testPathName: "onChainDownloadStartedWhenBlocksLeftEquals0"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "F70B8A2B624B5BEB05D74BCCB2ADBC00"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "peer"
+      modelFingerprint: "5E859A9CE888D47A0F0450E2CA7DDD53"
+      index: 2
+      valueUuid: "onChainDownloadStarted_peer1"
+    - type: "INPUT"
+      name: "blocksLeft"
+      modelFingerprint: "A4D40EFF23ACB9A5ABD38326205CD577"
+      index: 3
+      valueUuid: "onChainDownloadStarted_int1"
+    - type: "LOCAL_VARIABLE"
+      name: "peer"
+      modelFingerprint: "2EA64F04CA0C6BED31B47EABF914C16A"
+      index: 4
+      valueUuid: "onChainDownloadStarted_peer1"
+      methodExercised:
+        target: "peer"
+        name: "getBestHeight"
+        parameters: []
+        signature: "getBestHeight(): long"
+        returnValueUuid: "onChainDownloadStarted_long1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 5
+      valueUuid: "uuid1"
+    uuid: "c7705cdb-21b0-32b0-b24c-ddee486560ac"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    disabledReason: "Potential harmful system call (CompletableFuture.complete) detected;\
+      \ Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.listeners.DownloadProgressTracker"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.core.listeners.DownloadProgressTracker"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Peer"
+      uuid: "onChainDownloadStarted_peer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "onChainDownloadStarted_int1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Peer"
+      uuid: "onChainDownloadStarted_peer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "long"
+      uuid: "onChainDownloadStarted_long1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+  - pathId: "path3"
+    testPathName: "onChainDownloadStartedWhenBlocksLeftNotEquals0"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "3A4752995858C7549634A23EBEFD1871"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "24fff4d7-40d3-38fe-81ad-53e310024645"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path1"
+    testPathName: "onChainDownloadStartedWhenOriginalBlocksLeftEqualsMinus1AndBlocksLeftNotEquals0"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "98F6563FA0BE71A03E8FD1DB3AC253BA"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "peer"
+      modelFingerprint: "84A6FCADC2D9752DE9D2F2C7A89767FD"
+      index: 2
+      valueUuid: "onChainDownloadStarted_peer1"
+    - type: "INPUT"
+      name: "blocksLeft"
+      modelFingerprint: "F6D18CC239B2DE0F0481691D84EE1FE5"
+      index: 3
+      valueUuid: "onChainDownloadStarted_int1"
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "79DBD8FF7993665F75CFBD9AE5EA9539"
+      index: 4
+      methodExercised:
+        target: "target"
+        name: "startDownload"
+        parameters:
+        - name: "blocks"
+          valueUuid: "onChainDownloadStarted_int1"
+        signature: "startDownload(int): void"
+        returnValueUuid: "onChainDownloadStarted_void1"
+        access: 4
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 5
+      valueUuid: "uuid3"
+    uuid: "476ae901-11b1-3d40-9f94-29840d595e3f"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.listeners.DownloadProgressTracker"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.core.listeners.DownloadProgressTracker"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Peer"
+      uuid: "onChainDownloadStarted_peer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 1
+      valueType: "int"
+      uuid: "onChainDownloadStarted_int1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "onChainDownloadStarted_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 1
+      valueType: "int"
+      uuid: "onChainDownloadStarted_int1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      uuid: "uuid3"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "onBlocksDownloaded"
+    signature: "onBlocksDownloaded(org.bitcoinj.core.Peer,org.bitcoinj.core.Block,org.bitcoinj.core.FilteredBlock,int)\
+      \ : void"
+    sourceCodeSignature: "void onBlocksDownloaded(Peer peer, Block block, @Nullable\
+      \ FilteredBlock filteredBlock, int blocksLeft)"
+    instructionFingerprint: "19F69DE02431224EBFFA4A8F0310A6E9"
+  paths:
+  - pathId: "path1"
+    testPathName: "onBlocksDownloadedWhenLastPercentNotEquals100"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "13CFB478D280DE79E78DFEACB3FE1CC0"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "peer"
+      modelFingerprint: "36A59EA3501B7991F58C5AD626E9C56A"
+      index: 2
+      valueUuid: "onBlocksDownloaded_peer1"
+    - type: "INPUT"
+      name: "block"
+      modelFingerprint: "F52B8277B1F61C52EF5AC843048B644D"
+      index: 3
+      valueUuid: "onBlocksDownloaded_block1"
+    - type: "INPUT"
+      name: "filteredBlock"
+      modelFingerprint: "570581B2FB19E192ECBDF795BCCFE621"
+      index: 4
+      valueUuid: "onBlocksDownloaded_filteredBlock1"
+    - type: "INPUT"
+      name: "blocksLeft"
+      modelFingerprint: "98433FD4C46AF7EF8856974A679F8651"
+      index: 5
+      valueUuid: "onBlocksDownloaded_int1"
+    - type: "LOCAL_VARIABLE"
+      name: "block"
+      modelFingerprint: "85CCFB8270BD2D12882F2B51655525DD"
+      index: 6
+      valueUuid: "onBlocksDownloaded_block1"
+      methodExercised:
+        target: "block"
+        name: "time"
+        parameters: []
+        signature: "time(): Instant"
+        returnValueUuid: "onBlocksDownloaded_instant1"
+        access: 1
+    - type: "STATIC"
+      name: "TimeUtils"
+      modelFingerprint: "12264DB55653D7FA19CE4282E1D0CB29"
+      index: 7
+      valueUuid: "uuid1"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.TimeUtils"
+        name: "dateTimeFormat"
+        parameters:
+        - name: "time"
+          valueUuid: "onBlocksDownloaded_instant1"
+        signature: "dateTimeFormat(Instant): String"
+        returnValueUuid: "progress_string1"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      name: "peer"
+      modelFingerprint: "B91DC84C51E94029944399BC4A059C37"
+      index: 8
+      valueUuid: "onBlocksDownloaded_peer1"
+      methodExercised:
+        target: "peer"
+        name: "getBestHeight"
+        parameters: []
+        signature: "getBestHeight(): long"
+        returnValueUuid: "onBlocksDownloaded_long1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 9
+      valueUuid: "uuid2"
+    uuid: "29d1b1f7-4b93-38d0-b6dd-9025ee63d9b6"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.lang.String.format(java.util.Locale,java.lang.String,java.lang.Object[])\
+        \ : java.lang.String"
+    disabledReason: "Potential harmful system call (CompletableFuture.complete) detected;\
+      \ Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.listeners.DownloadProgressTracker"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.core.listeners.DownloadProgressTracker"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Peer"
+      uuid: "onBlocksDownloaded_peer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.Block"
+        parameters:
+        - name: "version"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "onBlocksDownloaded_block1-version"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "prevBlockHash"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Sha256Hash"
+            uuid: "onBlocksDownloaded_block1-prevBlockHash"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "merkleRoot"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Sha256Hash"
+            uuid: "onBlocksDownloaded_block1-merkleRoot"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "time"
+          value:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "java.time.Instant"
+              method: "ofEpochSecond"
+              methodParameters:
+              - name: "epochSecond"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 1700000000
+                  valueType: "int"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "java.time.Instant"
+            uuid: "onBlocksDownloaded_block1-time"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "difficultyTarget"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "onBlocksDownloaded_block1-difficultyTarget"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "nonce"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "onBlocksDownloaded_block1-nonce"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "transactions"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              parameters: []
+              values: []
+            valueType: "java.util.List"
+            uuid: "onBlocksDownloaded_block1-transactions"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "onBlocksDownloaded_block1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.FilteredBlock"
+        parameters:
+        - name: "header"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.core.Block"
+            uuid: "onBlocksDownloaded_filteredBlock1-header"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "pmt"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.core.PartialMerkleTree"
+            uuid: "onBlocksDownloaded_filteredBlock1-pmt"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.core.FilteredBlock"
+      uuid: "onBlocksDownloaded_filteredBlock1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "onBlocksDownloaded_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.Block"
+        parameters:
+        - name: "version"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "onBlocksDownloaded_block1-version"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "prevBlockHash"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Sha256Hash"
+            uuid: "onBlocksDownloaded_block1-prevBlockHash"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "merkleRoot"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Sha256Hash"
+            uuid: "onBlocksDownloaded_block1-merkleRoot"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "time"
+          value:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "java.time.Instant"
+              method: "ofEpochSecond"
+              methodParameters:
+              - name: "epochSecond"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 1700000000
+                  valueType: "int"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "java.time.Instant"
+            uuid: "onBlocksDownloaded_block1-time"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "difficultyTarget"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "onBlocksDownloaded_block1-difficultyTarget"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "nonce"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "onBlocksDownloaded_block1-nonce"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "transactions"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              parameters: []
+              values: []
+            valueType: "java.util.List"
+            uuid: "onBlocksDownloaded_block1-transactions"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "onBlocksDownloaded_block1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.time.Instant"
+        method: "ofEpochSecond"
+        methodParameters:
+        - name: "epochSecond"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1700000000
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.time.Instant"
+      uuid: "onBlocksDownloaded_instant1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.TimeUtils"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "<value>"
+      valueType: "java.lang.String"
+      uuid: "progress_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.time.Instant"
+        method: "ofEpochSecond"
+        methodParameters:
+        - name: "epochSecond"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1700000000
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.time.Instant"
+      uuid: "onBlocksDownloaded_instant1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Peer"
+      uuid: "onBlocksDownloaded_peer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "long"
+      uuid: "onBlocksDownloaded_long1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      uuid: "uuid2"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+  - pathId: "path3"
+    testPathName: "onBlocksDownloadedWhenBlocksLeftLessThan0"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "C4952EF239A43AB9D2B24DD67B184814"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "e661ceee-7a28-3e93-ac36-579dff75edbb"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path2"
+    testPathName: "onBlocksDownloadedWhenOriginalBlocksLeftLessThanOrEqualsTo0"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "7301AF92DB4327D16C9BC30BDFF2DD76"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "peer"
+      modelFingerprint: "84A6FCADC2D9752DE9D2F2C7A89767FD"
+      index: 2
+      valueUuid: "onBlocksDownloaded_peer1"
+    - type: "INPUT"
+      name: "block"
+      modelFingerprint: "76B91DC5BF34C3D963D8D8FB1FAD578A"
+      index: 3
+      valueUuid: "onBlocksDownloaded_block1"
+    - type: "INPUT"
+      name: "filteredBlock"
+      modelFingerprint: "7CC61330CA92B7AC26FBD85BEE8B1BA4"
+      index: 4
+      valueUuid: "onBlocksDownloaded_filteredBlock1"
+    - type: "INPUT"
+      name: "blocksLeft"
+      modelFingerprint: "497788F9C35695EAE564E7C482E207DE"
+      index: 5
+      valueUuid: "onBlocksDownloaded_int1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 6
+      valueUuid: "uuid7"
+    uuid: "dc7ddd0b-6f2f-3a20-b0c5-2d4b041ce9c1"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.listeners.DownloadProgressTracker"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.core.listeners.DownloadProgressTracker"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Peer"
+      uuid: "onBlocksDownloaded_peer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "onBlocksDownloaded_block1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.FilteredBlock"
+      uuid: "onBlocksDownloaded_filteredBlock1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 1
+      valueType: "int"
+      uuid: "onBlocksDownloaded_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      uuid: "uuid7"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "progress"
+    signature: "progress(double,int,java.time.Instant) : void"
+    sourceCodeSignature: "void progress(double pct, int blocksSoFar, Instant time)"
+    instructionFingerprint: "F1D6DEFECD7956FC21F112099FEE94A2"
+  paths:
+  - pathId: "path1"
+    testPathName: "progressTest"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "3D2628BCB2047CACA5DC53E11821369C"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "pct"
+      modelFingerprint: "655A92CCC65BF9EB7808C708A675B176"
+      index: 2
+      valueUuid: "progress_double1"
+    - type: "INPUT"
+      name: "blocksSoFar"
+      modelFingerprint: "0FF10F215B9FFD7F5144C19A971DACB5"
+      index: 3
+      valueUuid: "progress_int1"
+    - type: "INPUT"
+      name: "time"
+      modelFingerprint: "B6FB6B37DF72FBEDB10B501ABEF36E4F"
+      index: 4
+      valueUuid: "progress_instant1"
+    - type: "STATIC"
+      name: "TimeUtils"
+      modelFingerprint: "92AC9F41B480FBEA10AF149180161AF5"
+      index: 5
+      valueUuid: "uuid1"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.TimeUtils"
+        name: "dateTimeFormat"
+        parameters:
+        - name: "time"
+          valueUuid: "progress_instant1"
+        signature: "dateTimeFormat(Instant): String"
+        returnValueUuid: "progress_string1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 6
+      valueUuid: "uuid2"
+    uuid: "6abfa57a-80ca-32dc-8cb0-ae502a5c49b8"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.lang.String.format(java.util.Locale,java.lang.String,java.lang.Object[])\
+        \ : java.lang.String"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.listeners.DownloadProgressTracker"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.core.listeners.DownloadProgressTracker"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 50.0
+      valueType: "double"
+      uuid: "progress_double1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 100
+      valueType: "int"
+      uuid: "progress_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.time.Instant"
+        method: "now"
+        methodParameters: []
+      valueType: "java.time.Instant"
+      uuid: "progress_instant1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.TimeUtils"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "yyyy-MM-dd'T'HH:mm:ss'Z'"
+      valueType: "java.lang.String"
+      uuid: "progress_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.time.Instant"
+        method: "now"
+        methodParameters: []
+      valueType: "java.time.Instant"
+      uuid: "progress_instant1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      uuid: "uuid2"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "startDownload"
+    signature: "startDownload(int) : void"
+    sourceCodeSignature: "void startDownload(int blocks)"
+    instructionFingerprint: "7AB4ED829F6D70E0286D0B65FA71D452"
+  paths:
+  - pathId: "path1"
+    testPathName: "startDownloadWhenBlocksGreaterThan1000"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "142E0334CB04D38D5899C62135737FE9"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "blocks"
+      modelFingerprint: "22D72D7DBC48A3F868C8F5932AE339CA"
+      index: 2
+      valueUuid: "startDownload_int1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 3
+      valueUuid: "uuid10"
+    uuid: "9c051ceb-b702-323e-a6de-0081d896b232"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.listeners.DownloadProgressTracker"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.core.listeners.DownloadProgressTracker"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 2220
+      valueType: "int"
+      uuid: "startDownload_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      uuid: "uuid10"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "startDownloadWhenBlocksNotGreaterThan1000"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "E881D266F13B665797D38691F0DB66FC"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "blocks"
+      modelFingerprint: "174C64BD79011BB372C8A9B2F80E9749"
+      index: 2
+      valueUuid: "startDownload_int1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 3
+      valueUuid: "uuid11"
+    uuid: "b0849069-5208-347e-96f0-2cf739676e65"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.listeners.DownloadProgressTracker"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.core.listeners.DownloadProgressTracker"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 2
+      valueType: "int"
+      uuid: "startDownload_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      uuid: "uuid11"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "doneDownload"
+    signature: "doneDownload() : void"
+    sourceCodeSignature: "void doneDownload()"
+    instructionFingerprint: "B68BD3FDF605F07F6A8984E65EB97866"
+  paths:
+  - pathId: "path1"
+    testPathName: "doneDownloadTest"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "6E13917948F4503330A129503ABFC98B"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "f49f2752-0a6a-31e2-871e-0a13b57793d1"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "await"
+    signature: "await() : void"
+    sourceCodeSignature: "void await()"
+    tryCatchBlocks:
+    - idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.util.concurrent.ExecutionException"
+    instructionFingerprint: "79ACFE2ACF78BEC0B81DCDCF70F3A144"
+  paths:
+  - pathId: "path1"
+    testPathName: "awaitTest"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "6E13917948F4503330A129503ABFC98B"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 2
+      valueUuid: "uuid13"
+    uuid: "84c68135-608b-3db7-853e-6d5129146bc8"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    disabledReason: "Potential harmful system call (CompletableFuture.get) detected;\
+      \ Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.listeners.DownloadProgressTracker"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.core.listeners.DownloadProgressTracker"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      uuid: "uuid13"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "awaitWhenCaughtExecutionExceptionThrowsRuntimeException"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "46BD7465CFE92E2D23304A45507458EE"
+    problemWasSolvedByProver: false
+    catchBlockExercised:
+      idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.util.concurrent.ExecutionException"
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "FIELD"
+      name: "future"
+      modelFingerprint: "6457EBB50D1BFF4BDCEE96ADEB1B9C6B"
+      index: 2
+      idsTryCatchBlockSurrounding:
+      - 1
+      valueUuid: "<init>_completableFuture1"
+      methodExercised:
+        target: "this.future"
+        name: "get"
+        parameters: []
+        throwsExceptions:
+        - "java.lang.InterruptedException"
+        - "java.util.concurrent.ExecutionException"
+        signature: "get(): Object throws java.lang.InterruptedException,java.util.concurrent.ExecutionException"
+        returnValueUuid: "await_object1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "E9491B96F78ACED57D7C64CD24BF640E"
+      index: 3
+      valueUuid: "await_runtimeException1"
+    uuid: "a7012ca3-b62b-3882-bd5c-4541821c6dac"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "DEPENDENCY_TO_THROW_EXCEPTION_NOT_FOUND"
+    disabledReason: "Potential harmful system call (CompletableFuture.get) detected;\
+      \ Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.listeners.DownloadProgressTracker"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.core.listeners.DownloadProgressTracker"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.util.concurrent.CompletableFuture"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "java.util.concurrent.CompletableFuture"
+      genericValueType: "java.lang.Long"
+      uuid: "<init>_completableFuture1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<method_return_from_value>
+        target: "java.lang.Object"
+        localVariableValue:
+          sapientType: "OBJECT"
+          content: !<new>
+            target: "java.util.concurrent.CompletableFuture"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: true
+          valueType: "java.util.concurrent.CompletableFuture"
+          genericValueType: "java.lang.Long"
+          uuid: "<init>_completableFuture1"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        methodParameters: []
+        methodName: "get"
+      valueType: "java.lang.Object"
+      uuid: "await_object1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.RuntimeException"
+        parameters:
+        - name: "cause"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "java.util.concurrent.ExecutionException"
+              parameters:
+              - name: "cause"
+                value:
+                  sapientType: "OBJECT"
+                  content: !<new>
+                    target: "java.lang.Throwable"
+                    parameters: []
+                    privateConstructor: false
+                    createdByTargetCode: false
+                  valueType: "java.lang.Throwable"
+                  uuid: "await_executionException1-cause"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "java.util.concurrent.ExecutionException"
+            uuid: "await_executionException1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "java.lang.RuntimeException"
+      uuid: "await_runtimeException1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "getFuture"
+    signature: "getFuture() : org.bitcoinj.utils.ListenableCompletableFuture<java.lang.Long>"
+    sourceCodeSignature: "ListenableCompletableFuture<Long> getFuture()"
+    instructionFingerprint: "63E88492E5B8BDA742EBC61D488A15CA"
+  paths:
+  - pathId: "path1"
+    testPathName: "getFutureTest"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "EC41A26D44EA049295A1E8C6D3A52A97"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "ListenableCompletableFuture"
+      modelFingerprint: "331910C0811C17DC94E140AA667BD208"
+      index: 2
+      valueUuid: "uuid14"
+      methodExercised:
+        target: "org.bitcoinj.utils.ListenableCompletableFuture"
+        name: "of"
+        parameters:
+        - name: "listenable"
+          valueUuid: "<init>_completableFuture1"
+        signature: "of(CompletableFuture): ListenableCompletableFuture"
+        returnValueUuid: "getFuture_listenableCompletableFuture1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "0AF8AC7B760FBAD2B4E0D24C0E1E7E6F"
+      index: 3
+      valueUuid: "getFuture_listenableCompletableFuture1"
+    uuid: "5fd6d992-7311-370f-bf85-cc2f1c52273b"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.listeners.DownloadProgressTracker"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.core.listeners.DownloadProgressTracker"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
+      uuid: "uuid14"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.utils.ListenableCompletableFuture"
+        method: "of"
+        methodParameters:
+        - value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "java.util.concurrent.CompletableFuture"
+              parameters: []
+              privateConstructor: false
+              createdByTargetCode: true
+            valueType: "java.util.concurrent.CompletableFuture"
+            genericValueType: "java.lang.Long"
+            uuid: "<init>_completableFuture1"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
+      genericValueType: "java.lang.Long"
+      uuid: "getFuture_listenableCompletableFuture1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.util.concurrent.CompletableFuture"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "java.util.concurrent.CompletableFuture"
+      genericValueType: "java.lang.Long"
+      uuid: "<init>_completableFuture1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.utils.ListenableCompletableFuture"
+        method: "of"
+        methodParameters:
+        - value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "java.util.concurrent.CompletableFuture"
+              parameters: []
+              privateConstructor: false
+              createdByTargetCode: true
+            valueType: "java.util.concurrent.CompletableFuture"
+            genericValueType: "java.lang.Long"
+            uuid: "<init>_completableFuture1"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
+      genericValueType: "java.lang.Long"
+      uuid: "getFuture_listenableCompletableFuture1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false

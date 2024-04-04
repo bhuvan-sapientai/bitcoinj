@@ -1,0 +1,479 @@
+---
+modelFingerprint: "8D1B595CD09C375730FDECE6821FA881"
+methods:
+- method:
+    name: "checkArgument"
+    signature: "checkArgument(boolean) : void"
+    sourceCodeSignature: "void checkArgument(boolean expression)"
+    instructionFingerprint: "EB3267BC964D82C79E9D0AA0F7777BA9"
+  paths:
+  - pathId: "path1"
+    testPathName: "checkArgumentTest"
+    modelFingerprint: "A3DFADB9FEF920F6B408F15CF0C9008B"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "expression"
+      modelFingerprint: "A42535E34499040CDF49D4AA6A124359"
+      index: 1
+      valueUuid: "checkArgument_boolean1"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "3D0E364D028507E0FB885F547F95618C"
+      index: 2
+      valueUuid: "uuid2"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "check"
+        parameters:
+        - name: "expression"
+          valueUuid: "checkArgument_boolean1"
+        - name: "exceptionSupplier"
+          valueUuid: "uuid1"
+        signature: "check(boolean,Supplier): void"
+        returnValueUuid: "checkArgument_void1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 3
+      valueUuid: "uuid3"
+    uuid: "2ead23af-5259-31e8-8a5e-7c2f88d02218"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "checkArgument_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "checkArgument_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "checkArgument_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      uuid: "uuid3"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "checkArgument"
+    signature: "checkArgument(boolean,java.util.function.Supplier<java.lang.String>)\
+      \ : void"
+    sourceCodeSignature: "void checkArgument(boolean expression, Supplier<String>\
+      \ messageSupplier)"
+    instructionFingerprint: "768299AEF570237ACB5E3F364544E0AB"
+  paths:
+  - pathId: "path1"
+    testPathName: "checkArgument1Test"
+    modelFingerprint: "EA2C1F82915941C97A24B5882AE9BE3C"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "expression"
+      modelFingerprint: "A42535E34499040CDF49D4AA6A124359"
+      index: 1
+      valueUuid: "checkArgument_boolean1"
+    - type: "INPUT"
+      name: "messageSupplier"
+      modelFingerprint: "8A9FA8B468EB0D6577768F7EA20CDF77"
+      index: 2
+      valueUuid: "checkArgument_supplier1"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "3D0E364D028507E0FB885F547F95618C"
+      index: 3
+      valueUuid: "uuid5"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "check"
+        parameters:
+        - name: "expression"
+          valueUuid: "checkArgument_boolean1"
+        - name: "exceptionSupplier"
+          valueUuid: "uuid4"
+        signature: "check(boolean,Supplier): void"
+        returnValueUuid: "checkArgument_void1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 4
+      valueUuid: "uuid6"
+    uuid: "d4b3af31-e399-3bd7-9e52-b3d7961c6890"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "checkArgument_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.util.function.Supplier"
+      uuid: "checkArgument_supplier1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid5"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "checkArgument_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "checkArgument_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      uuid: "uuid4"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      uuid: "uuid6"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "checkState"
+    signature: "checkState(boolean) : void"
+    sourceCodeSignature: "void checkState(boolean expression)"
+    instructionFingerprint: "419FFD491151615D728BEBB7093BD258"
+  paths:
+  - pathId: "path1"
+    testPathName: "checkStateTest"
+    modelFingerprint: "A3DFADB9FEF920F6B408F15CF0C9008B"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "expression"
+      modelFingerprint: "A42535E34499040CDF49D4AA6A124359"
+      index: 1
+      valueUuid: "checkState_boolean1"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "3D0E364D028507E0FB885F547F95618C"
+      index: 2
+      valueUuid: "uuid8"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "check"
+        parameters:
+        - name: "expression"
+          valueUuid: "checkState_boolean1"
+        - name: "exceptionSupplier"
+          valueUuid: "uuid7"
+        signature: "check(boolean,Supplier): void"
+        returnValueUuid: "checkState_void1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 3
+      valueUuid: "uuid9"
+    uuid: "aeb415f5-6ced-3024-84b1-2c94b049cab0"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "checkState_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid8"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "checkState_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "checkState_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      uuid: "uuid7"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      uuid: "uuid9"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "checkState"
+    signature: "checkState(boolean,java.util.function.Supplier<java.lang.String>)\
+      \ : void"
+    sourceCodeSignature: "void checkState(boolean expression, Supplier<String> messageSupplier)"
+    instructionFingerprint: "11E8DCB2322FAFFB4FD19F7B421E585B"
+  paths:
+  - pathId: "path1"
+    testPathName: "checkState1Test"
+    modelFingerprint: "EA2C1F82915941C97A24B5882AE9BE3C"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "expression"
+      modelFingerprint: "A42535E34499040CDF49D4AA6A124359"
+      index: 1
+      valueUuid: "checkState_boolean1"
+    - type: "INPUT"
+      name: "messageSupplier"
+      modelFingerprint: "8A9FA8B468EB0D6577768F7EA20CDF77"
+      index: 2
+      valueUuid: "checkState_supplier1"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "3D0E364D028507E0FB885F547F95618C"
+      index: 3
+      valueUuid: "uuid11"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "check"
+        parameters:
+        - name: "expression"
+          valueUuid: "checkState_boolean1"
+        - name: "exceptionSupplier"
+          valueUuid: "uuid10"
+        signature: "check(boolean,Supplier): void"
+        returnValueUuid: "checkState_void1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 4
+      valueUuid: "uuid12"
+    uuid: "41b1270c-6fd2-3399-b508-a0ee60fbca09"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "checkState_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.util.function.Supplier"
+      uuid: "checkState_supplier1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid11"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "checkState_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "checkState_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      uuid: "uuid10"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      uuid: "uuid12"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "check"
+    signature: "check(boolean,java.util.function.Supplier<? extends java.lang.Throwable>java.lang.Throwable)\
+      \ : void"
+    sourceCodeSignature: "void check(boolean expression, Supplier<? extends X> exceptionSupplier)"
+    instructionFingerprint: "3AF785E5EFF47C1F8A1AF829E3D08679"
+  paths:
+  - pathId: "path1"
+    testPathName: "checkWhenNotExpressionThrowsThrowable"
+    modelFingerprint: "2C706C8F11B3740BB537D77EEE895D27"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "expression"
+      modelFingerprint: "13DAA909621B7EEED79A7E4F7DB93126"
+      index: 1
+      valueUuid: "check_boolean1"
+    - type: "INPUT"
+      name: "exceptionSupplier"
+      modelFingerprint: "CE6E71FA61FE8011DEEC297DE516BE99"
+      index: 2
+      valueUuid: "check_supplier1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "7C66E340C0F5EAAC7D97CB9C0818A07E"
+      index: 3
+      valueUuid: "check_object1"
+    uuid: "348a338f-59f9-3400-8dd3-e26b2666f6c7"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.util.function.Supplier.get() : java.lang.Object"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "check_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.util.function.Supplier"
+      uuid: "check_supplier1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.Throwable"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.Throwable"
+      uuid: "check_object1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: true
+  - pathId: "path2"
+    testPathName: "checkWhenExpression"
+    modelFingerprint: "BC42E948A5395850CD9B2612F1452DE7"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "expression"
+      modelFingerprint: "34915C62A66C7A4C0F81CD65F0E6E658"
+      index: 1
+      valueUuid: "check_boolean1"
+    - type: "INPUT"
+      name: "exceptionSupplier"
+      modelFingerprint: "CE6E71FA61FE8011DEEC297DE516BE99"
+      index: 2
+      valueUuid: "check_supplier1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 3
+      valueUuid: "uuid13"
+    uuid: "f3f17171-7bcc-3d21-a21d-8b48f084c96d"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "check_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.util.function.Supplier"
+      uuid: "check_supplier1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      uuid: "uuid13"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false

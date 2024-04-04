@@ -1,0 +1,178 @@
+---
+modelFingerprint: "C9531F44722F1BE2E4EA3E20A9138346"
+methods:
+- method:
+    name: "removeFromList"
+    signature: "removeFromList(java.lang.Object,java.util.List<? extends org.bitcoinj.utils.ListenerRegistration<java.lang.Object>>)\
+      \ : boolean"
+    sourceCodeSignature: "boolean removeFromList(T listener, List<? extends ListenerRegistration<T>>\
+      \ list)"
+    instructionFingerprint: "7775B2E44D94B017662E3CC41AC6B183"
+  paths:
+  - pathId: "path1"
+    testPathName: "removeFromListWhenRListenerEqualsListener"
+    modelFingerprint: "19CD263F7CC0828B672E4B062C26C4E6"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "listener"
+      modelFingerprint: "58175350D7D31E1437054E3605D1698C"
+      index: 1
+      valueUuid: "lambda$removeFromList$0_object2"
+    - type: "INPUT"
+      name: "list"
+      modelFingerprint: "3438CC900048BF97B5C4BB4E737A6643"
+      index: 2
+      valueUuid: "removeFromList_list1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "EA0E76310322BEC2C2E83642E092EF02"
+      index: 3
+      valueUuid: "removeFromList_boolean3"
+    - type: "STATE_VERIFICATION_PARAMETER"
+      name: "list"
+      modelFingerprint: "B0C918E36FF2116C262582DE4A9E5726"
+      index: 4
+      valueUuid: "removeFromList_list4"
+      originalValueUuid: "removeFromList_list1"
+    uuid: "6e6e00e4-4c77-3886-a8b5-2711d0dd31a1"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.lang.Object"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.Object"
+      uuid: "lambda$removeFromList$0_object2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        parameters: []
+        values: []
+      valueType: "java.util.List"
+      genericValueType: "? extends org.bitcoinj.utils.ListenerRegistration<java.lang.Object>"
+      uuid: "removeFromList_list1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "removeFromList_boolean3"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        parameters: []
+        values: []
+      valueType: "java.util.List"
+      genericValueType: "? extends org.bitcoinj.utils.ListenerRegistration<java.lang.Object>"
+      uuid: "removeFromList_list4"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "removeFromListWhenRListenerNotEqualsListener"
+    modelFingerprint: "A82A552C82863BA41FD335333B98A5DF"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "listener"
+      modelFingerprint: "58175350D7D31E1437054E3605D1698C"
+      index: 1
+      valueUuid: "removeFromList_object1"
+    - type: "INPUT"
+      name: "list"
+      modelFingerprint: "BE13A8FAE21CF13C3A9DA0C192930A88"
+      index: 2
+      valueUuid: "removeFromList_list1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "26F354D57EDB6DE30F14FF7FA23B655D"
+      index: 3
+      valueUuid: "removeFromList_boolean2"
+    uuid: "469cd85c-3ae7-33de-9206-c5c253c2a4a2"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.lang.Object"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.Object"
+      uuid: "removeFromList_object1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        collectionClass: "java.util.ArrayList"
+        parameters: []
+        values:
+        - sapientType: "OBJECT"
+          content: !<new>
+            target: "org.bitcoinj.utils.ListenerRegistration"
+            parameters:
+            - name: "listener"
+              value:
+                sapientType: "OBJECT"
+                content: !<new>
+                  target: "java.lang.Object"
+                  parameters: []
+                  privateConstructor: false
+                  createdByTargetCode: false
+                valueType: "java.lang.Object"
+                uuid: "lambda$removeFromList$0_object2"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "executor"
+              value:
+                sapientType: "MOCK"
+                valueType: "java.util.concurrent.Executor"
+                uuid: "removeFromList_listenerRegistration1-executor"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            privateConstructor: false
+            createdByTargetCode: false
+          valueType: "org.bitcoinj.utils.ListenerRegistration"
+          uuid: "removeFromList_listenerRegistration1"
+          fixed: false
+          collectionUuid: "removeFromList_list1"
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+      valueType: "java.util.List"
+      genericValueType: "? extends org.bitcoinj.utils.ListenerRegistration<java.lang.Object>"
+      uuid: "removeFromList_list1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "removeFromList_boolean2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false

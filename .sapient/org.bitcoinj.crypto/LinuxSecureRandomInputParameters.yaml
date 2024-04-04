@@ -1,0 +1,400 @@
+---
+modelFingerprint: "926E0E6F8B6EC4165A026DEE825BB42C"
+methods:
+- method:
+    name: "engineSetSeed"
+    signature: "engineSetSeed(byte[]) : void"
+    sourceCodeSignature: "void engineSetSeed(byte[] bytes)"
+    instructionFingerprint: "B05CD503A8C783BB14BC3B1081DEB4EA"
+  paths:
+  - pathId: "path1"
+    testPathName: "engineSetSeedTest"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "CDBA364F580CB6D1D94382A27737FB07"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "b8101c1f-1bc1-3c70-bbb8-071b1b30c601"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "engineNextBytes"
+    signature: "engineNextBytes(byte[]) : void"
+    sourceCodeSignature: "void engineNextBytes(byte[] bytes)"
+    tryCatchBlocks:
+    - idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.io.IOException"
+    instructionFingerprint: "CFE147EBD71E640A0BF4582B4246F6EA"
+  paths:
+  - pathId: "path1"
+    testPathName: "engineNextBytesTest"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "3B42E9D44B324FF9C53C94B2DD7F7667"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "bytes"
+      modelFingerprint: "2FBD4498B0C9F804016BF7776F9D88D2"
+      index: 2
+      valueUuid: "engineNextBytes_byte[]1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 3
+      valueUuid: "uuid1"
+    uuid: "fb538ea0-a1d8-30d7-986f-c5f6577d88d8"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.LinuxSecureRandom"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.LinuxSecureRandom"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "engineNextBytes_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "engineNextBytesWhenCaughtIOExceptionThrowsRuntimeException"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "EC48F1F1A84DB1574FFF75B5C8BA8A9D"
+    problemWasSolvedByProver: false
+    catchBlockExercised:
+      idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.io.IOException"
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "bytes"
+      modelFingerprint: "C18DFF1893793DB12D058430E7196295"
+      index: 2
+      valueUuid: "engineNextBytes_byte[]1"
+    - type: "FIELD"
+      name: "dis"
+      modelFingerprint: "C25F6DEAD4BA30962662030BA5569C33"
+      index: 3
+      idsTryCatchBlockSurrounding:
+      - 1
+      valueUuid: "<init>_dataInputStream1"
+      methodExercised:
+        target: "this.dis"
+        name: "readFully"
+        parameters:
+        - name: "b"
+          valueUuid: "engineNextBytes_byte[]1"
+        throwsExceptions:
+        - "java.io.IOException"
+        signature: "readFully(byte[]): void throws java.io.IOException"
+        returnValueUuid: "engineNextBytes_void1"
+        access: 17
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "94DACB5B92004D157EBFD5F33FF06466"
+      index: 4
+      valueUuid: "engineNextBytes_runtimeException1"
+    - type: "STATE_VERIFICATION_PARAMETER"
+      name: "bytes"
+      modelFingerprint: "4612714C8F584AD8B2EE18810718FB03"
+      index: 5
+      valueUuid: "engineNextBytes_byte[]2"
+      originalValueUuid: "engineNextBytes_byte[]1"
+    uuid: "c6c6ba76-88fa-34ee-bd4f-e4d29ed56953"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "UNKNOWN_REASON"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.LinuxSecureRandom"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.LinuxSecureRandom"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          1:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 2
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          2:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 3
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "engineNextBytes_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      content: !<inputStream>
+        inputStreamClass: "java.io.DataInputStream"
+        values: []
+        parameters:
+        - name: "in"
+          value:
+            sapientType: "INPUT_STREAM"
+            valueType: "java.io.FileInputStream"
+            uuid: "<clinit>_fileInputStream1"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.io.DataInputStream"
+      uuid: "<init>_dataInputStream1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      valueType: "java.io.IOException"
+      uuid: "engineNextBytes_void1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          1:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 2
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          2:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 3
+            valueType: "byte"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "engineNextBytes_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.RuntimeException"
+        parameters:
+        - name: "cause"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "java.io.IOException"
+              parameters: []
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "java.io.IOException"
+            uuid: "engineNextBytes_iOException1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "java.lang.RuntimeException"
+      uuid: "engineNextBytes_runtimeException1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 96
+            valueType: "byte"
+            uuid: "engineNextBytes_byte[]1-item0"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          1:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: -50
+            valueType: "byte"
+            uuid: "engineNextBytes_byte[]1-item1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          2:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 20
+            valueType: "byte"
+            uuid: "engineNextBytes_byte[]1-item2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "engineNextBytes_byte[]2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "engineGenerateSeed"
+    signature: "engineGenerateSeed(int) : byte[]"
+    sourceCodeSignature: "byte[] engineGenerateSeed(int i)"
+    tryCatchBlocks:
+    - idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.io.IOException"
+    instructionFingerprint: "7344E8BECDFB681ED07333F9E57320AF"
+  paths:
+  - pathId: "path1"
+    testPathName: "engineGenerateSeedTest"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "3BD53DF27656B565D173B143E6D67979"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "i"
+      modelFingerprint: "C64488AB26908F6F8814E3C747D18592"
+      index: 2
+      valueUuid: "engineGenerateSeed_int1"
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "B7BEF2740B336F209A5021A3C5864F15"
+      index: 3
+      methodExercised:
+        target: "target"
+        name: "engineNextBytes"
+        parameters:
+        - name: "bytes"
+          valueUuid: "engineGenerateSeed_byte[]1"
+        signature: "engineNextBytes(byte[]): void"
+        returnValueUuid: "engineGenerateSeed_void1"
+        access: 4
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "6F284CA220F919F7D0C6EB6C97E89FCE"
+      index: 4
+      valueUuid: "engineGenerateSeed_byte[]1"
+    uuid: "3679146c-32e8-3609-a6d6-f4630aa360c9"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.LinuxSecureRandom"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.LinuxSecureRandom"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "engineGenerateSeed_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "engineGenerateSeed_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "engineGenerateSeed_byte[]1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "engineGenerateSeed_byte[]1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false

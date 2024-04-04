@@ -1,0 +1,323 @@
+---
+modelFingerprint: "DC22DA5E571E53F8D92EFA01403F2796"
+methods:
+- method:
+    name: "completedFuture"
+    signature: "completedFuture(java.lang.Object) : org.bitcoinj.utils.ListenableCompletableFuture<java.lang.Object>"
+    sourceCodeSignature: "ListenableCompletableFuture<T> completedFuture(T value)"
+    instructionFingerprint: "E3E9B2772D7B58AA9B11E12B273A6379"
+  paths:
+  - pathId: "path1"
+    testPathName: "completedFutureTest"
+    modelFingerprint: "160FFCE6B25E1C402AA036C5FEAF2C80"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "value"
+      modelFingerprint: "718139F4601F12A322C1CD74BE17B261"
+      index: 1
+      valueUuid: "completedFuture_object1"
+    - type: "LOCAL_VARIABLE"
+      name: "future"
+      modelFingerprint: "3F900DC07FE7667EFA49086D648425D2"
+      index: 2
+      valueUuid: "completedFuture_listenableCompletableFuture1"
+      methodExercised:
+        target: "future"
+        name: "complete"
+        parameters:
+        - name: "value"
+          valueUuid: "completedFuture_object1"
+        signature: "complete(Object): boolean"
+        returnValueUuid: "completedFuture_boolean1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "91F6BDE92029FDE2FBE82A16F4ED428D"
+      index: 3
+      valueUuid: "completedFuture_listenableCompletableFuture1"
+    uuid: "0af4f151-a206-3e1e-99f2-c51543cfcb15"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    disabledReason: "Potential harmful system call (ListenableCompletableFuture.complete)\
+      \ detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.lang.Object"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.Object"
+      uuid: "completedFuture_object1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.utils.ListenableCompletableFuture"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
+      genericValueType: "java.lang.Object"
+      uuid: "completedFuture_listenableCompletableFuture1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "completedFuture_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.lang.Object"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.Object"
+      uuid: "completedFuture_object1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.utils.ListenableCompletableFuture"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
+      genericValueType: "java.lang.Object"
+      uuid: "completedFuture_listenableCompletableFuture1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "failedFuture"
+    signature: "failedFuture(java.lang.Throwable) : org.bitcoinj.utils.ListenableCompletableFuture<java.lang.Object>"
+    sourceCodeSignature: "ListenableCompletableFuture<T> failedFuture(Throwable throwable)"
+    instructionFingerprint: "0C502B76DDF99331E6BB0D92F5CE2CF6"
+  paths:
+  - pathId: "path1"
+    testPathName: "failedFutureTest"
+    modelFingerprint: "EB85EC5F34E685441AEE87AB757022EF"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "throwable"
+      modelFingerprint: "EA7E0F26358A652BA695C4360362E6AC"
+      index: 1
+      valueUuid: "failedFuture_throwable1"
+    - type: "STATIC"
+      name: "FutureUtils"
+      modelFingerprint: "3E82E41C4B0C477C6B48A2EB7017366A"
+      index: 2
+      valueUuid: "uuid1"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.FutureUtils"
+        name: "failedFuture"
+        parameters:
+        - name: "t"
+          valueUuid: "failedFuture_throwable1"
+        signature: "failedFuture(Throwable): CompletableFuture"
+        returnValueUuid: "failedFuture_completableFuture1"
+        access: 9
+    - type: "STATIC"
+      name: "ListenableCompletableFuture"
+      modelFingerprint: "8E3BE44704E01ED40C6BD74BBDAF8263"
+      index: 3
+      valueUuid: "uuid2"
+      methodExercised:
+        target: "org.bitcoinj.utils.ListenableCompletableFuture"
+        name: "of"
+        parameters:
+        - name: "future"
+          valueUuid: "failedFuture_completableFuture1"
+        signature: "of(CompletableFuture): ListenableCompletableFuture"
+        returnValueUuid: "failedFuture_listenableCompletableFuture1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "9BA8294550EBBA4DF3100F08311386CD"
+      index: 4
+      valueUuid: "failedFuture_listenableCompletableFuture1"
+    uuid: "7b6d3857-4849-3516-91fa-a7394d7a23c0"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.lang.Throwable"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.Throwable"
+      uuid: "failedFuture_throwable1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.FutureUtils"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.util.concurrent.CompletableFuture"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.util.concurrent.CompletableFuture"
+      uuid: "failedFuture_completableFuture1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.lang.Throwable"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.Throwable"
+      uuid: "failedFuture_throwable1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
+      uuid: "failedFuture_listenableCompletableFuture1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.util.concurrent.CompletableFuture"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.util.concurrent.CompletableFuture"
+      uuid: "failedFuture_completableFuture1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
+      uuid: "failedFuture_listenableCompletableFuture1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "of"
+    signature: "of(java.util.concurrent.CompletableFuture<java.lang.Object>) : org.bitcoinj.utils.ListenableCompletableFuture<java.lang.Object>"
+    sourceCodeSignature: "ListenableCompletableFuture<T> of(CompletableFuture<T> future)"
+    instructionFingerprint: "B52A54DB5F5354C858DCA8ABA43AA8DD"
+  paths:
+  - pathId: "path1"
+    testPathName: "ofWhenFutureInstanceOfListenableCompletableFuture"
+    modelFingerprint: "F371FB4BA77F678F206B4D2767CF3C19"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "future"
+      modelFingerprint: "BD252C20330473DDEA74A8E2C702B69C"
+      index: 1
+      valueUuid: "of_completableFuture1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "8ECD50C510FF87743E193635F9F1E548"
+      index: 2
+      valueUuid: "of_completableFuture1"
+    uuid: "9594db61-8963-3141-b97a-d932414a39db"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
+      genericValueType: "java.lang.Object"
+      uuid: "of_completableFuture1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
+      genericValueType: "java.lang.Object"
+      uuid: "of_completableFuture1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "ofWhenFutureNotInstanceOfListenableCompletableFuture"
+    modelFingerprint: "0BF60539D7019DBF4709307A4D43A209"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "future"
+      modelFingerprint: "813D5D2FCDBE5A42184A5B2714799352"
+      index: 1
+      valueUuid: "of_completableFuture1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "91F6BDE92029FDE2FBE82A16F4ED428D"
+      index: 2
+      valueUuid: "of_listenableCompletableFuture1"
+    uuid: "35a4cd9d-f207-3e44-ba1a-909ba8fe1555"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    disabledReason: "Potential harmful system call (CompletableFuture.whenComplete)\
+      \ detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.util.concurrent.CompletableFuture"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.util.concurrent.CompletableFuture"
+      genericValueType: "java.lang.Object"
+      uuid: "of_completableFuture1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.utils.ListenableCompletableFuture"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.utils.ListenableCompletableFuture"
+      genericValueType: "java.lang.Object"
+      uuid: "of_listenableCompletableFuture1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false

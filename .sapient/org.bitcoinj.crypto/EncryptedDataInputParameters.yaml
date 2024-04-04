@@ -1,0 +1,170 @@
+---
+modelFingerprint: "573BE9C1BC6F055D6BAEF037E65D9BA2"
+methods:
+- method:
+    name: "equals"
+    signature: "equals(java.lang.Object) : boolean"
+    sourceCodeSignature: "boolean equals(Object o)"
+    instructionFingerprint: "1E3E2A8003A9C8AC08894229387563FB"
+  paths:
+  - pathId: "path1"
+    testPathName: "equalsWhenThisEqualsO"
+    constructorSignature: "<init>(byte[],byte[]) : void"
+    modelFingerprint: "6E650D92DB621A1B7B33131C48B4BE64"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "5b7cf5ba-f3cc-35d0-9b4a-3392d3a68eed"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path6"
+    testPathName: "equalsWhenOIsNull"
+    constructorSignature: "<init>(byte[],byte[]) : void"
+    modelFingerprint: "3B9E82C66286177D340EE283ADC6C2D5"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "a2108c4d-bcbc-39b5-8254-0588b654f131"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path2"
+    testPathName: "equalsWhenGetClassNotEqualsOGetClass"
+    constructorSignature: "<init>(byte[],byte[]) : void"
+    modelFingerprint: "3D622CE47041E4B60FDDC820C335B605"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "6e6a0f87-c9aa-3e31-af0a-46c9467f5ce0"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path5"
+    testPathName: "equalsWhenArraysNotEqualsEncryptedBytesOtherEncryptedBytes"
+    constructorSignature: "<init>(byte[],byte[]) : void"
+    modelFingerprint: "87F35A49D616F56423A70C0E892EF76A"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "6abc77c7-3ae8-315b-b768-b239fd92e5f1"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path3"
+    testPathName: "equalsWhenArraysEqualsInitialisationVectorOtherInitialisationVector"
+    constructorSignature: "<init>(byte[],byte[]) : void"
+    modelFingerprint: "AC54C0CF2172A8BE7B714104D86571F0"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "18d44b1d-1102-3e4a-83e6-441470e2ac76"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path4"
+    testPathName: "equalsWhenArraysNotEqualsInitialisationVectorOtherInitialisationVector"
+    constructorSignature: "<init>(byte[],byte[]) : void"
+    modelFingerprint: "D55C9419DB6D9AD1DCD468A7DF287CB9"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "0b477f81-108e-3f87-84c9-3483b88228b8"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "toString"
+    signature: "toString() : java.lang.String"
+    sourceCodeSignature: "String toString()"
+    instructionFingerprint: "936AD1B94CBB8D8101AEFE67DD3F5C72"
+  paths:
+  - pathId: "path1"
+    testPathName: "toStringTest"
+    constructorSignature: "<init>(byte[],byte[]) : void"
+    modelFingerprint: "2B8A3A0A9E9AB0E359F73333895D8517"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "552391F5E72C44545507E0822426CD14"
+      index: 1
+      valueUuid: "target"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "93E1945F7F5F5A467D04E12E88167498"
+      index: 2
+      valueUuid: "toString_string3"
+    uuid: "363d3698-f34c-39ad-914f-376a19498023"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.EncryptedData"
+        parameters:
+        - name: "initialisationVector"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "encryptedBytes"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "<init>_byte[]2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.EncryptedData"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "EncryptedData [initialisationVector=[], encryptedPrivateKey=[]]"
+      valueType: "java.lang.String"
+      uuid: "toString_string3"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false

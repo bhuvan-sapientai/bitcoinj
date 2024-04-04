@@ -1,0 +1,1692 @@
+---
+modelFingerprint: "85156251A5CB62398AC8E68AAABEDB89"
+methods:
+- method:
+    name: "coinToFiat"
+    signature: "coinToFiat(org.bitcoinj.base.Coin) : org.bitcoinj.base.utils.Fiat"
+    sourceCodeSignature: "Fiat coinToFiat(Coin convertCoin)"
+    instructionFingerprint: "9E3ACF50DD709A10467326B8F97D3B32"
+  paths:
+  - pathId: "path1"
+    testPathName: "coinToFiatWhenConvertedCompareToBigIntegerValueOfLongMIN_VALUELessThan0ThrowsArithmeticException"
+    constructorSignature: "<init>(org.bitcoinj.base.Coin,org.bitcoinj.base.utils.Fiat)\
+      \ : void"
+    modelFingerprint: "E93965BFC73057F82E75A28F428CC61B"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "DE096BF2FA0383A4B0BA8404B828E8F3"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "convertCoin"
+      modelFingerprint: "9F4A1C3F68612D518B54DAA054978E48"
+      index: 2
+      valueUuid: "coinToFiat_coin1"
+    - type: "LOCAL_VARIABLE"
+      name: "coin"
+      modelFingerprint: "327572245A70E0E36C02005090ED835F"
+      index: 3
+      valueUuid: "<init>_coin1"
+      methodExercised:
+        target: "coin"
+        name: "isPositive"
+        parameters: []
+        signature: "isPositive(): boolean"
+        returnValueUuid: "<init>_boolean1"
+        access: 1
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EC797381EB3F1CEB737BF3036CCC1844"
+      index: 4
+      valueUuid: "uuid1"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "<init>_boolean1"
+        signature: "checkArgument(boolean): void"
+        returnValueUuid: "<init>_void1"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      name: "fiat"
+      modelFingerprint: "CDBEC22A5921814766CD07967A422E2F"
+      index: 5
+      valueUuid: "<init>_fiat1"
+      methodExercised:
+        target: "fiat"
+        name: "isPositive"
+        parameters: []
+        signature: "isPositive(): boolean"
+        returnValueUuid: "<init>_boolean2"
+        access: 1
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EC797381EB3F1CEB737BF3036CCC1844"
+      index: 6
+      valueUuid: "uuid2"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "<init>_boolean2"
+        signature: "checkArgument(boolean): void"
+        returnValueUuid: "<init>_void2"
+        access: 9
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
+      index: 7
+      valueUuid: "uuid6"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid3"
+        - name: "messageSupplier"
+          valueUuid: "uuid4"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "uuid5"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "BAEE9F34E043B6127937C23CF9DB64C0"
+      index: 8
+      valueUuid: "coinToFiat_arithmeticException1"
+    uuid: "04691d75-9585-35b0-899a-e9a92fea1c4c"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.utils.ExchangeRate"
+        parameters:
+        - name: "coin"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Coin"
+            uuid: "<init>_coin1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "fiat"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.utils.Fiat"
+            uuid: "<init>_fiat1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.utils.ExchangeRate"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.Coin"
+        method: "valueOf"
+        methodParameters:
+        - name: "satoshis"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "coinToFiat_coin1-satoshis"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.Coin"
+      uuid: "coinToFiat_coin1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Coin"
+      uuid: "<init>_coin1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "<init>_fiat1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void2"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid6"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.IllegalArgumentException"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.IllegalArgumentException"
+      uuid: "uuid5"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "uuid3"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid4"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.ArithmeticException"
+        parameters:
+        - name: "s"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "Overflow"
+            valueType: "java.lang.String"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "java.lang.ArithmeticException"
+      uuid: "coinToFiat_arithmeticException1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "coinToFiatWhenConvertedCompareToBigIntegerValueOfLongMIN_VALUENotLessThan0"
+    constructorSignature: "<init>(org.bitcoinj.base.Coin,org.bitcoinj.base.utils.Fiat)\
+      \ : void"
+    modelFingerprint: "93ED8FA2ACC3C5B2B2B7212A0D57F70F"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "DE096BF2FA0383A4B0BA8404B828E8F3"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "convertCoin"
+      modelFingerprint: "9F4A1C3F68612D518B54DAA054978E48"
+      index: 2
+      valueUuid: "coinToFiat_coin1"
+    - type: "LOCAL_VARIABLE"
+      name: "coin"
+      modelFingerprint: "327572245A70E0E36C02005090ED835F"
+      index: 3
+      valueUuid: "<init>_coin1"
+      methodExercised:
+        target: "coin"
+        name: "isPositive"
+        parameters: []
+        signature: "isPositive(): boolean"
+        returnValueUuid: "<init>_boolean1"
+        access: 1
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EC797381EB3F1CEB737BF3036CCC1844"
+      index: 4
+      valueUuid: "uuid7"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "<init>_boolean1"
+        signature: "checkArgument(boolean): void"
+        returnValueUuid: "<init>_void1"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      name: "fiat"
+      modelFingerprint: "CDBEC22A5921814766CD07967A422E2F"
+      index: 5
+      valueUuid: "<init>_fiat1"
+      methodExercised:
+        target: "fiat"
+        name: "isPositive"
+        parameters: []
+        signature: "isPositive(): boolean"
+        returnValueUuid: "<init>_boolean2"
+        access: 1
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EC797381EB3F1CEB737BF3036CCC1844"
+      index: 6
+      valueUuid: "uuid8"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "<init>_boolean2"
+        signature: "checkArgument(boolean): void"
+        returnValueUuid: "<init>_void2"
+        access: 9
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
+      index: 7
+      valueUuid: "uuid12"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid9"
+        - name: "messageSupplier"
+          valueUuid: "uuid10"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "uuid11"
+        access: 9
+    - type: "STATIC"
+      name: "Fiat"
+      modelFingerprint: "C66611DDA95B51CAE44F9FB899BDBB65"
+      index: 8
+      valueUuid: "uuid13"
+      methodExercised:
+        target: "org.bitcoinj.base.utils.Fiat"
+        name: "valueOf"
+        parameters:
+        - name: "currencyCode"
+          valueUuid: "coinToFiat_string1"
+        - name: "value"
+          valueUuid: "coinToFiat_long5"
+        signature: "valueOf(String,long): Fiat"
+        returnValueUuid: "coinToFiat_fiat1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D1BD64D689FD46C0D0A45873738164B8"
+      index: 9
+      valueUuid: "coinToFiat_fiat1"
+    uuid: "59ac1028-8ae4-3a1b-83b5-4831ab9452c9"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.utils.ExchangeRate"
+        parameters:
+        - name: "coin"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Coin"
+            uuid: "<init>_coin1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "fiat"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.utils.Fiat"
+            uuid: "<init>_fiat1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.utils.ExchangeRate"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.Coin"
+        method: "valueOf"
+        methodParameters:
+        - name: "satoshis"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "coinToFiat_coin1-satoshis"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.Coin"
+      uuid: "coinToFiat_coin1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Coin"
+      uuid: "<init>_coin1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid7"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "<init>_fiat1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid8"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void2"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid12"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.IllegalArgumentException"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.IllegalArgumentException"
+      uuid: "uuid11"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "uuid9"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid10"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "uuid13"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "coinToFiat_fiat1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "NULL"
+      valueType: "java.lang.String"
+      uuid: "coinToFiat_string1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "long"
+      uuid: "coinToFiat_long5"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "coinToFiat_fiat1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "fiatToCoin"
+    signature: "fiatToCoin(org.bitcoinj.base.utils.Fiat) : org.bitcoinj.base.Coin"
+    sourceCodeSignature: "Coin fiatToCoin(Fiat convertFiat)"
+    tryCatchBlocks:
+    - idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.lang.IllegalArgumentException"
+    instructionFingerprint: "CFD9CA64A42C834D48B7ADCE54C31D70"
+  paths:
+  - pathId: "path1"
+    testPathName: "fiatToCoinWhenConvertedCompareToBigIntegerValueOfLongMIN_VALUELessThan0ThrowsArithmeticException"
+    constructorSignature: "<init>(org.bitcoinj.base.Coin,org.bitcoinj.base.utils.Fiat)\
+      \ : void"
+    modelFingerprint: "CB0DC1FA6F20527E68CE35A125412AED"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "DE096BF2FA0383A4B0BA8404B828E8F3"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "convertFiat"
+      modelFingerprint: "B203AF18FC897E16BC7D2D71ABBA2FBB"
+      index: 2
+      valueUuid: "fiatToCoin_fiat1"
+    - type: "LOCAL_VARIABLE"
+      name: "coin"
+      modelFingerprint: "327572245A70E0E36C02005090ED835F"
+      index: 3
+      valueUuid: "<init>_coin1"
+      methodExercised:
+        target: "coin"
+        name: "isPositive"
+        parameters: []
+        signature: "isPositive(): boolean"
+        returnValueUuid: "<init>_boolean1"
+        access: 1
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EC797381EB3F1CEB737BF3036CCC1844"
+      index: 4
+      valueUuid: "uuid14"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "<init>_boolean1"
+        signature: "checkArgument(boolean): void"
+        returnValueUuid: "<init>_void1"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      name: "fiat"
+      modelFingerprint: "CDBEC22A5921814766CD07967A422E2F"
+      index: 5
+      valueUuid: "<init>_fiat1"
+      methodExercised:
+        target: "fiat"
+        name: "isPositive"
+        parameters: []
+        signature: "isPositive(): boolean"
+        returnValueUuid: "<init>_boolean2"
+        access: 1
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EC797381EB3F1CEB737BF3036CCC1844"
+      index: 6
+      valueUuid: "uuid15"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "<init>_boolean2"
+        signature: "checkArgument(boolean): void"
+        returnValueUuid: "<init>_void2"
+        access: 9
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
+      index: 7
+      valueUuid: "uuid19"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid16"
+        - name: "messageSupplier"
+          valueUuid: "uuid17"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "uuid18"
+        access: 9
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "A3C9A66787E8779386C502876A29BDCE"
+      index: 8
+      valueUuid: "uuid21"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "fiatToCoin_boolean1"
+        - name: "messageSupplier"
+          valueUuid: "uuid20"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "fiatToCoin_void1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "BAEE9F34E043B6127937C23CF9DB64C0"
+      index: 9
+      valueUuid: "fiatToCoin_arithmeticException1"
+    uuid: "22f98e93-4e38-36f4-a6f1-5b10ca6e1d70"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.utils.ExchangeRate"
+        parameters:
+        - name: "coin"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Coin"
+            uuid: "<init>_coin1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "fiat"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.utils.Fiat"
+            uuid: "<init>_fiat1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.utils.ExchangeRate"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.utils.Fiat"
+        method: "valueOf"
+        methodParameters:
+        - name: "currencyCode"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "currencyCode1"
+            valueType: "java.lang.String"
+            uuid: "fiatToCoin_string3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "fiatToCoin_long3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "fiatToCoin_fiat1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Coin"
+      uuid: "<init>_coin1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid14"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "<init>_fiat1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid15"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void2"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid19"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.IllegalArgumentException"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.IllegalArgumentException"
+      uuid: "uuid18"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "uuid16"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid17"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid21"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "fiatToCoin_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "fiatToCoin_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid20"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.ArithmeticException"
+        parameters:
+        - name: "s"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "Overflow"
+            valueType: "java.lang.String"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "java.lang.ArithmeticException"
+      uuid: "fiatToCoin_arithmeticException1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "fiatToCoinWhenConvertedCompareToBigIntegerValueOfLongMIN_VALUENotLessThan0"
+    constructorSignature: "<init>(org.bitcoinj.base.Coin,org.bitcoinj.base.utils.Fiat)\
+      \ : void"
+    modelFingerprint: "3D2BFCF59B5B56F87D5AF73034A21BDC"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "DE096BF2FA0383A4B0BA8404B828E8F3"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "convertFiat"
+      modelFingerprint: "B203AF18FC897E16BC7D2D71ABBA2FBB"
+      index: 2
+      valueUuid: "fiatToCoin_fiat1"
+    - type: "LOCAL_VARIABLE"
+      name: "coin"
+      modelFingerprint: "327572245A70E0E36C02005090ED835F"
+      index: 3
+      valueUuid: "<init>_coin1"
+      methodExercised:
+        target: "coin"
+        name: "isPositive"
+        parameters: []
+        signature: "isPositive(): boolean"
+        returnValueUuid: "<init>_boolean1"
+        access: 1
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EC797381EB3F1CEB737BF3036CCC1844"
+      index: 4
+      valueUuid: "uuid22"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "<init>_boolean1"
+        signature: "checkArgument(boolean): void"
+        returnValueUuid: "<init>_void1"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      name: "fiat"
+      modelFingerprint: "CDBEC22A5921814766CD07967A422E2F"
+      index: 5
+      valueUuid: "<init>_fiat1"
+      methodExercised:
+        target: "fiat"
+        name: "isPositive"
+        parameters: []
+        signature: "isPositive(): boolean"
+        returnValueUuid: "<init>_boolean2"
+        access: 1
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EC797381EB3F1CEB737BF3036CCC1844"
+      index: 6
+      valueUuid: "uuid23"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "<init>_boolean2"
+        signature: "checkArgument(boolean): void"
+        returnValueUuid: "<init>_void2"
+        access: 9
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
+      index: 7
+      valueUuid: "uuid27"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid24"
+        - name: "messageSupplier"
+          valueUuid: "uuid25"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "uuid26"
+        access: 9
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "A3C9A66787E8779386C502876A29BDCE"
+      index: 8
+      valueUuid: "uuid29"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "fiatToCoin_boolean1"
+        - name: "messageSupplier"
+          valueUuid: "uuid28"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "fiatToCoin_void1"
+        access: 9
+    - type: "STATIC"
+      name: "Coin"
+      modelFingerprint: "74FF841EF4FEBA0A21DA9867B5F49A57"
+      index: 9
+      idsTryCatchBlockSurrounding:
+      - 1
+      valueUuid: "uuid30"
+      methodExercised:
+        target: "org.bitcoinj.base.Coin"
+        name: "valueOf"
+        parameters:
+        - name: "satoshis"
+          valueUuid: "fiatToCoin_long6"
+        signature: "valueOf(long): Coin"
+        returnValueUuid: "fiatToCoin_coin1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "0BA4BF04ACA4335CDA636F583E8FE771"
+      index: 10
+      valueUuid: "fiatToCoin_coin1"
+    uuid: "8dd092b2-aba2-323a-a09c-62efd5aa7709"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.utils.ExchangeRate"
+        parameters:
+        - name: "coin"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Coin"
+            uuid: "<init>_coin1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "fiat"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.utils.Fiat"
+            uuid: "<init>_fiat1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.utils.ExchangeRate"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.utils.Fiat"
+        method: "valueOf"
+        methodParameters:
+        - name: "currencyCode"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "currencyCode1"
+            valueType: "java.lang.String"
+            uuid: "fiatToCoin_string3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "fiatToCoin_long3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "fiatToCoin_fiat1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Coin"
+      uuid: "<init>_coin1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid22"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "<init>_fiat1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid23"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void2"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid27"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.IllegalArgumentException"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.IllegalArgumentException"
+      uuid: "uuid26"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "uuid24"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid25"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid29"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "fiatToCoin_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "fiatToCoin_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid28"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Coin"
+      uuid: "uuid30"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Coin"
+      uuid: "fiatToCoin_coin1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "long"
+      uuid: "fiatToCoin_long6"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Coin"
+      uuid: "fiatToCoin_coin1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path3"
+    testPathName: "fiatToCoinWhenCaughtIllegalArgumentExceptionThrowsArithmeticException"
+    constructorSignature: "<init>(org.bitcoinj.base.Coin,org.bitcoinj.base.utils.Fiat)\
+      \ : void"
+    modelFingerprint: "C094B35937098118236981AEB8EF6E57"
+    problemWasSolvedByProver: false
+    catchBlockExercised:
+      idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.lang.IllegalArgumentException"
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "DE096BF2FA0383A4B0BA8404B828E8F3"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "convertFiat"
+      modelFingerprint: "B203AF18FC897E16BC7D2D71ABBA2FBB"
+      index: 2
+      valueUuid: "fiatToCoin_fiat1"
+    - type: "LOCAL_VARIABLE"
+      name: "coin"
+      modelFingerprint: "327572245A70E0E36C02005090ED835F"
+      index: 3
+      valueUuid: "<init>_coin1"
+      methodExercised:
+        target: "coin"
+        name: "isPositive"
+        parameters: []
+        signature: "isPositive(): boolean"
+        returnValueUuid: "<init>_boolean1"
+        access: 1
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EC797381EB3F1CEB737BF3036CCC1844"
+      index: 4
+      valueUuid: "uuid31"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "<init>_boolean1"
+        signature: "checkArgument(boolean): void"
+        returnValueUuid: "<init>_void1"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      name: "fiat"
+      modelFingerprint: "CDBEC22A5921814766CD07967A422E2F"
+      index: 5
+      valueUuid: "<init>_fiat1"
+      methodExercised:
+        target: "fiat"
+        name: "isPositive"
+        parameters: []
+        signature: "isPositive(): boolean"
+        returnValueUuid: "<init>_boolean2"
+        access: 1
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EC797381EB3F1CEB737BF3036CCC1844"
+      index: 6
+      valueUuid: "uuid32"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "<init>_boolean2"
+        signature: "checkArgument(boolean): void"
+        returnValueUuid: "<init>_void2"
+        access: 9
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "D2E579C66034555D6E24363DE5916136"
+      index: 7
+      valueUuid: "uuid36"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid33"
+        - name: "messageSupplier"
+          valueUuid: "uuid34"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "uuid35"
+        access: 9
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "A3C9A66787E8779386C502876A29BDCE"
+      index: 8
+      valueUuid: "uuid38"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "fiatToCoin_boolean1"
+        - name: "messageSupplier"
+          valueUuid: "uuid37"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "fiatToCoin_void1"
+        access: 9
+    - type: "STATIC"
+      name: "Coin"
+      modelFingerprint: "1DF8CD6BBFAB34176928C414F92D5A5C"
+      index: 9
+      idsTryCatchBlockSurrounding:
+      - 1
+      valueUuid: "uuid39"
+      methodExercised:
+        target: "org.bitcoinj.base.Coin"
+        name: "valueOf"
+        parameters:
+        - name: "satoshis"
+          valueUuid: "fiatToCoin_long6"
+        signature: "valueOf(long): Coin"
+        returnValueUuid: "fiatToCoin_coin1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "088198CA1C58AFB87341D499F4FF9C5B"
+      index: 10
+      valueUuid: "fiatToCoin_arithmeticException1"
+    uuid: "84ea7b22-74b9-3c90-98df-f4027aad1772"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.utils.ExchangeRate"
+        parameters:
+        - name: "coin"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Coin"
+            uuid: "<init>_coin1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "fiat"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.utils.Fiat"
+            uuid: "<init>_fiat1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.utils.ExchangeRate"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.utils.Fiat"
+        method: "valueOf"
+        methodParameters:
+        - name: "currencyCode"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "currencyCode1"
+            valueType: "java.lang.String"
+            uuid: "fiatToCoin_string3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "fiatToCoin_long3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "fiatToCoin_fiat1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Coin"
+      uuid: "<init>_coin1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid31"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "<init>_fiat1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid32"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void2"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid36"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.IllegalArgumentException"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.IllegalArgumentException"
+      uuid: "uuid35"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "uuid33"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid34"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid38"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "fiatToCoin_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "fiatToCoin_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid37"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Coin"
+      uuid: "uuid39"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Coin"
+      uuid: "fiatToCoin_coin1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "long"
+      uuid: "fiatToCoin_long6"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.ArithmeticException"
+        parameters:
+        - name: "s"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "s1"
+            valueType: "java.lang.String"
+            uuid: "fiatToCoin_string6"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "java.lang.ArithmeticException"
+      uuid: "fiatToCoin_arithmeticException1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "equals"
+    signature: "equals(java.lang.Object) : boolean"
+    sourceCodeSignature: "boolean equals(Object o)"
+    instructionFingerprint: "29FD6635F34986CBDE74EAFC6E436BF5"
+  paths:
+  - pathId: "path1"
+    testPathName: "equalsWhenThisEqualsO"
+    constructorSignature: "<init>(org.bitcoinj.base.Coin,org.bitcoinj.base.utils.Fiat)\
+      \ : void"
+    modelFingerprint: "54160B06D7DFCD1F6A4B99447A38D8FA"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "5b7cf5ba-f3cc-35d0-9b4a-3392d3a68eed"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path5"
+    testPathName: "equalsWhenOIsNull"
+    constructorSignature: "<init>(org.bitcoinj.base.Coin,org.bitcoinj.base.utils.Fiat)\
+      \ : void"
+    modelFingerprint: "E02B487C33EFEBB5E7311E9B3E76812D"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "a2108c4d-bcbc-39b5-8254-0588b654f131"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path2"
+    testPathName: "equalsWhenGetClassNotEqualsOGetClass"
+    constructorSignature: "<init>(org.bitcoinj.base.Coin,org.bitcoinj.base.utils.Fiat)\
+      \ : void"
+    modelFingerprint: "1FFEDDAC5941A02926F2A76873C156FA"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "6e6a0f87-c9aa-3e31-af0a-46c9467f5ce0"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path3"
+    testPathName: "equalsWhenObjectsEqualsThisFiatOtherFiat"
+    constructorSignature: "<init>(org.bitcoinj.base.Coin,org.bitcoinj.base.utils.Fiat)\
+      \ : void"
+    modelFingerprint: "D4F6EEE1D079F5E803489643584C4B33"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "cd420605-e62f-3b42-b925-99666712f927"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path4"
+    testPathName: "equalsWhenObjectsNotEqualsThisFiatOtherFiat"
+    constructorSignature: "<init>(org.bitcoinj.base.Coin,org.bitcoinj.base.utils.Fiat)\
+      \ : void"
+    modelFingerprint: "49A0AFD1D3876CD1EBDFB373B22A163D"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "359a15a7-c98f-3649-8af1-d39874169135"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []

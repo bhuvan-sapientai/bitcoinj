@@ -1,0 +1,672 @@
+---
+modelFingerprint: "FD1E9A9C8EDF33981AE3E51BA785EF3D"
+methods:
+- method:
+    name: "allowEmptyPeerChain"
+    signature: "allowEmptyPeerChain() : boolean"
+    sourceCodeSignature: "boolean allowEmptyPeerChain()"
+    instructionFingerprint: "261D3FEABCA5C971BC45B4FCBE1C7D1B"
+  paths:
+  - pathId: "path1"
+    testPathName: "allowEmptyPeerChainTest"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "C7A98EF9A4A0C49E26428282B0383F32"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "LOCAL_VARIABLE"
+      name: "network"
+      modelFingerprint: "79A3AD442D0330EFAEDA6D6422816802"
+      index: 2
+      valueUuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
+      methodExercised:
+        target: "network"
+        name: "id"
+        parameters: []
+        signature: "id(): String"
+        returnValueUuid: "<init>_string1"
+        access: 1025
+    - type: "STATIC"
+      name: "ByteUtils"
+      modelFingerprint: "4ADDC777649A2C2479F31278B58F66E8"
+      index: 3
+      valueUuid: "uuid2"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.ByteUtils"
+        name: "decodeCompactBits"
+        parameters:
+        - name: "compact"
+          valueUuid: "uuid1"
+        signature: "decodeCompactBits(long): BigInteger"
+        returnValueUuid: "<init>_bigInteger1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "753659628F1B3F179A2EF0629F555437"
+      index: 4
+      valueUuid: "uuid3"
+    uuid: "079b693f-5544-3b1d-9700-7a66938df0f6"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.params.RegTestParams"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.params.RegTestParams"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ENUM"
+      content: !<regular>
+        value: "REGTEST"
+      valueType: "org.bitcoinj.base.BitcoinNetwork"
+      uuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "org.bitcoin.regtest"
+      valueType: "java.lang.String"
+      uuid: "<init>_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.ByteUtils"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 57896037716911750921221705069588091649609539881711309849342236841432341020672
+      valueType: "java.math.BigInteger"
+      uuid: "<init>_bigInteger1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 545259519
+      valueType: "long"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid3"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "get"
+    signature: "get() : org.bitcoinj.params.RegTestParams"
+    sourceCodeSignature: "RegTestParams get()"
+    instructionFingerprint: "6DB674F51923A4C3E35E8F8296EAEFCC"
+  paths:
+  - pathId: "path1"
+    testPathName: "getWhenInstanceIsNull"
+    modelFingerprint: "CD559544AC78F8FF8093C575C7039B64"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "LOCAL_VARIABLE"
+      name: "network"
+      modelFingerprint: "79A3AD442D0330EFAEDA6D6422816802"
+      index: 1
+      valueUuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
+      methodExercised:
+        target: "network"
+        name: "id"
+        parameters: []
+        signature: "id(): String"
+        returnValueUuid: "<init>_string1"
+        access: 1025
+    - type: "STATIC"
+      name: "ByteUtils"
+      modelFingerprint: "4ADDC777649A2C2479F31278B58F66E8"
+      index: 2
+      valueUuid: "uuid5"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.ByteUtils"
+        name: "decodeCompactBits"
+        parameters:
+        - name: "compact"
+          valueUuid: "uuid4"
+        signature: "decodeCompactBits(long): BigInteger"
+        returnValueUuid: "<init>_bigInteger1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "292B74F0945631024386E5694B956DE1"
+      index: 3
+      valueUuid: "get_regTestParams1"
+    uuid: "32a8d14c-b4e9-37a4-9736-3367f8ecb089"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "ENUM"
+      content: !<regular>
+        value: "REGTEST"
+      valueType: "org.bitcoinj.base.BitcoinNetwork"
+      uuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "org.bitcoin.regtest"
+      valueType: "java.lang.String"
+      uuid: "<init>_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.ByteUtils"
+      uuid: "uuid5"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 57896037716911750921221705069588091649609539881711309849342236841432341020672
+      valueType: "java.math.BigInteger"
+      uuid: "<init>_bigInteger1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 545259519
+      valueType: "long"
+      uuid: "uuid4"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.params.RegTestParams"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.params.RegTestParams"
+      uuid: "get_regTestParams1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "getGenesisBlock"
+    signature: "getGenesisBlock() : org.bitcoinj.core.Block"
+    sourceCodeSignature: "Block getGenesisBlock()"
+    instructionFingerprint: "345C8D2F2512E6DD90C696DCA6259019"
+  paths:
+  - pathId: "path1"
+    testPathName: "getGenesisBlockWhenGenesisBlockIsNull"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "42BACA99084AECB23EE583933C4EAEF1"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "LOCAL_VARIABLE"
+      name: "network"
+      modelFingerprint: "79A3AD442D0330EFAEDA6D6422816802"
+      index: 2
+      valueUuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
+      methodExercised:
+        target: "network"
+        name: "id"
+        parameters: []
+        signature: "id(): String"
+        returnValueUuid: "<init>_string1"
+        access: 1025
+    - type: "STATIC"
+      name: "ByteUtils"
+      modelFingerprint: "4ADDC777649A2C2479F31278B58F66E8"
+      index: 3
+      valueUuid: "uuid7"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.ByteUtils"
+        name: "decodeCompactBits"
+        parameters:
+        - name: "compact"
+          valueUuid: "uuid6"
+        signature: "decodeCompactBits(long): BigInteger"
+        returnValueUuid: "<init>_bigInteger1"
+        access: 9
+    - type: "STATIC"
+      name: "Block"
+      modelFingerprint: "D626FF6130AEBF5927FFCBF06989B86A"
+      index: 4
+      valueUuid: "uuid10"
+      methodExercised:
+        target: "org.bitcoinj.core.Block"
+        name: "createGenesis"
+        parameters:
+        - name: "time"
+          valueUuid: "<clinit>_instant1"
+        - name: "difficultyTarget"
+          valueUuid: "uuid8"
+        - name: "nonce"
+          valueUuid: "uuid9"
+        signature: "createGenesis(Instant,long,long): Block"
+        returnValueUuid: "getGenesisBlock_block1"
+        access: 9
+    - type: "FIELD"
+      name: "genesisBlock"
+      modelFingerprint: "4F9D948030C25F1C389A54AA46D3DEA5"
+      index: 5
+      valueUuid: "getGenesisBlock_block1"
+      methodExercised:
+        target: "this.genesisBlock"
+        name: "getHash"
+        parameters: []
+        signature: "getHash(): Sha256Hash"
+        returnValueUuid: "getGenesisBlock_sha256Hash1"
+        access: 1
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "E88A69FE06892060EEE51ED32967AB4E"
+      index: 6
+      valueUuid: "uuid12"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkState"
+        parameters:
+        - name: "expression"
+          valueUuid: "getGenesisBlock_boolean1"
+        - name: "messageSupplier"
+          valueUuid: "uuid11"
+        signature: "checkState(boolean,Supplier): void"
+        returnValueUuid: "getGenesisBlock_void1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "52633277CE2FDD1F995D7DFD096FD9CB"
+      index: 7
+      valueUuid: "getGenesisBlock_block1"
+    uuid: "6af115c8-0813-3ff3-9b71-4c6682fe756c"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.params.RegTestParams"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+        propertiesMap:
+          genesisBlock:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "org.bitcoinj.core.Block"
+              method: "createGenesis"
+              methodParameters:
+              - value:
+                  sapientType: "OBJECT"
+                  content: !<static_method_return>
+                    target: "java.time.Instant"
+                    method: "ofEpochSecond"
+                    methodParameters:
+                    - value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: 1296688602
+                        valueType: "long"
+                        fixed: true
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                  valueType: "java.time.Instant"
+                  uuid: "<clinit>_instant1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 545259519
+                  valueType: "long"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 2
+                  valueType: "long"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "org.bitcoinj.core.Block"
+            uuid: "getGenesisBlock_block1"
+            fixed: false
+            equalsMethodPresent: true
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.params.RegTestParams"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ENUM"
+      content: !<regular>
+        value: "REGTEST"
+      valueType: "org.bitcoinj.base.BitcoinNetwork"
+      uuid: "Enum-org.bitcoinj.base.BitcoinNetwork-REGTEST"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "org.bitcoin.regtest"
+      valueType: "java.lang.String"
+      uuid: "<init>_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.ByteUtils"
+      uuid: "uuid7"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 57896037716911750921221705069588091649609539881711309849342236841432341020672
+      valueType: "java.math.BigInteger"
+      uuid: "<init>_bigInteger1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 545259519
+      valueType: "long"
+      uuid: "uuid6"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "uuid10"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.core.Block"
+        method: "createGenesis"
+        methodParameters:
+        - value:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "java.time.Instant"
+              method: "ofEpochSecond"
+              methodParameters:
+              - value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 1296688602
+                  valueType: "long"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "java.time.Instant"
+            uuid: "<clinit>_instant1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 545259519
+            valueType: "long"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 2
+            valueType: "long"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "getGenesisBlock_block1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.time.Instant"
+        method: "ofEpochSecond"
+        methodParameters:
+        - value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1296688602
+            valueType: "long"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.time.Instant"
+      uuid: "<clinit>_instant1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 545259519
+      valueType: "long"
+      uuid: "uuid8"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 2
+      valueType: "long"
+      uuid: "uuid9"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.core.Block"
+        method: "createGenesis"
+        methodParameters:
+        - value:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "java.time.Instant"
+              method: "ofEpochSecond"
+              methodParameters:
+              - value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 1296688602
+                  valueType: "long"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "java.time.Instant"
+            uuid: "<clinit>_instant1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 545259519
+            valueType: "long"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 2
+            valueType: "long"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "getGenesisBlock_block1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<method_return_from_value>
+        target: "org.bitcoinj.base.Sha256Hash"
+        localVariableValue:
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "org.bitcoinj.core.Block"
+            method: "createGenesis"
+            methodParameters:
+            - value:
+                sapientType: "OBJECT"
+                content: !<static_method_return>
+                  target: "java.time.Instant"
+                  method: "ofEpochSecond"
+                  methodParameters:
+                  - value:
+                      sapientType: "BASIC"
+                      content: !<regular>
+                        value: 1296688602
+                      valueType: "long"
+                      fixed: true
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                valueType: "java.time.Instant"
+                uuid: "<clinit>_instant1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 545259519
+                valueType: "long"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 2
+                valueType: "long"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+          valueType: "org.bitcoinj.core.Block"
+          uuid: "getGenesisBlock_block1"
+          fixed: false
+          equalsMethodPresent: true
+          explicitCastNeeded: false
+        methodParameters: []
+        methodName: "getHash"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "getGenesisBlock_sha256Hash1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid12"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "getGenesisBlock_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "getGenesisBlock_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid11"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.core.Block"
+        method: "createGenesis"
+        methodParameters:
+        - value:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "java.time.Instant"
+              method: "ofEpochSecond"
+              methodParameters:
+              - value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 1296688602
+                  valueType: "long"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "java.time.Instant"
+            uuid: "<clinit>_instant1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 545259519
+            valueType: "long"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 2
+            valueType: "long"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "getGenesisBlock_block1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false

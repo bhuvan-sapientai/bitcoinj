@@ -1,0 +1,209 @@
+---
+modelFingerprint: "94B8B43BFADF63B8AACEB575FBCCD36A"
+methods:
+- method:
+    name: "getHash"
+    signature: "getHash() : org.bitcoinj.base.Sha256Hash"
+    sourceCodeSignature: "Sha256Hash getHash()"
+    instructionFingerprint: "93FB29C5242E0095D9C11EC6739B9E55"
+  paths:
+  - pathId: "path1"
+    testPathName: "getHashTest"
+    constructorSignature: "<init>(org.bitcoinj.base.Sha256Hash,long) : void"
+    modelFingerprint: "F8FBFDADB8A8084F02DA02AC665D3E60"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "c152b292-9f41-3184-8d0c-c8dacb973313"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "getIndex"
+    signature: "getIndex() : long"
+    sourceCodeSignature: "long getIndex()"
+    instructionFingerprint: "C025D9C77EF22DD89741B3A3FCE4E43D"
+  paths:
+  - pathId: "path1"
+    testPathName: "getIndexTest"
+    constructorSignature: "<init>(org.bitcoinj.base.Sha256Hash,long) : void"
+    modelFingerprint: "591A4A8AAF0BD9DC556A00A895587852"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "1051d90e-6143-3be9-a736-0083704c4119"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "toString"
+    signature: "toString() : java.lang.String"
+    sourceCodeSignature: "String toString()"
+    instructionFingerprint: "AACA6648EF9392DFBA00BB0075BB63A5"
+  paths:
+  - pathId: "path1"
+    testPathName: "toStringTest"
+    constructorSignature: "<init>(org.bitcoinj.base.Sha256Hash,long) : void"
+    modelFingerprint: "9F852DB38E1D93E12502A1E3A60FC211"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "772487CFE1156628E43699045430540D"
+      index: 1
+      valueUuid: "target"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "A460F15A2153B8EE1838B9DAB81B3481"
+      index: 2
+      valueUuid: "toString_string1"
+    uuid: "363d3698-f34c-39ad-914f-376a19498023"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.store.StoredTransactionOutPoint"
+        parameters:
+        - name: "hash"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Sha256Hash"
+            uuid: "<init>_sha256Hash1"
+            fixed: false
+            nameForMock: "<init>_sha256Hash1"
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "index"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 2
+            valueType: "long"
+            uuid: "<init>_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.store.StoredTransactionOutPoint"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "Stored transaction out point: <init>_sha256Hash1:2"
+      valueType: "java.lang.String"
+      uuid: "toString_string1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "equals"
+    signature: "equals(java.lang.Object) : boolean"
+    sourceCodeSignature: "boolean equals(Object o)"
+    instructionFingerprint: "0A0873F7F4BB1E43D13C37999F53D735"
+  paths:
+  - pathId: "path1"
+    testPathName: "equalsWhenThisEqualsO"
+    constructorSignature: "<init>(org.bitcoinj.base.Sha256Hash,long) : void"
+    modelFingerprint: "7CFDE1790A477B9DC5D047E0D4C1CBC9"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "5b7cf5ba-f3cc-35d0-9b4a-3392d3a68eed"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path6"
+    testPathName: "equalsWhenOIsNull"
+    constructorSignature: "<init>(org.bitcoinj.base.Sha256Hash,long) : void"
+    modelFingerprint: "F01750CF8DB33D013CAB18DB3AC48FE7"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "a2108c4d-bcbc-39b5-8254-0588b654f131"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path2"
+    testPathName: "equalsWhenGetClassNotEqualsOGetClass"
+    constructorSignature: "<init>(org.bitcoinj.base.Sha256Hash,long) : void"
+    modelFingerprint: "D569BA636D2137A1371910A9C0EF07C4"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "6e6a0f87-c9aa-3e31-af0a-46c9467f5ce0"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path5"
+    testPathName: "equalsWhenGetIndexNotEqualsOtherGetIndex"
+    constructorSignature: "<init>(org.bitcoinj.base.Sha256Hash,long) : void"
+    modelFingerprint: "16F866E5AA736D79E59EAB70BFFC2D4A"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "e7d6b4b4-aaf8-3416-ac11-9b0242feff93"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path3"
+    testPathName: "equalsWhenObjectsEqualsGetHashOtherGetHash"
+    constructorSignature: "<init>(org.bitcoinj.base.Sha256Hash,long) : void"
+    modelFingerprint: "CD5B6CA3823A701E44B34617F428A753"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "445bc3c9-3512-3c12-b829-116de2148603"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path4"
+    testPathName: "equalsWhenObjectsNotEqualsGetHashOtherGetHash"
+    constructorSignature: "<init>(org.bitcoinj.base.Sha256Hash,long) : void"
+    modelFingerprint: "814AB4F044010C9061A455FE1FCD8910"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "439c6cfb-5fad-3618-8dfd-3233b387bdab"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []

@@ -1,0 +1,37 @@
+---
+modelFingerprint: "3D535A818CF748162B83B069A700067F"
+methods:
+- method:
+    name: "toUnmodifiableList"
+    signature: "toUnmodifiableList() : java.util.stream.Collector<java.lang.Object,?,java.util.List<java.lang.Object>>"
+    sourceCodeSignature: "Collector<T, ?, List<T>> toUnmodifiableList()"
+    instructionFingerprint: "CEF6876DEF7455BDF93D727254624533"
+  paths:
+  - pathId: "path1"
+    testPathName: "toUnmodifiableListTest"
+    modelFingerprint: "46EBA31116A50F967442B9E9B26DE4CE"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "F7584990B36F020F43991F5B37CB97D9"
+      index: 1
+      valueUuid: "toUnmodifiableList_collector2"
+    uuid: "6554c080-8d36-310b-b636-e7447d914541"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.util.stream.Collectors.collectingAndThen(java.util.List,java.util.function.Function)\
+        \ : java.util.stream.Collector"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "MOCK"
+      valueType: "java.util.stream.Collector"
+      uuid: "toUnmodifiableList_collector2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false

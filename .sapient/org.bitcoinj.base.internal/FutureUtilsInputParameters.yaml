@@ -1,0 +1,226 @@
+---
+modelFingerprint: "32854FA8EDAE9B9A6F11D0CBD06ED5B5"
+methods:
+- method:
+    name: "allAsList"
+    signature: "allAsList(java.util.List<? extends java.util.concurrent.CompletionStage<?\
+      \ extends java.lang.Object>>) : java.util.concurrent.CompletableFuture<java.util.List<java.lang.Object>>"
+    sourceCodeSignature: "CompletableFuture<List<T>> allAsList(List<? extends CompletionStage<?\
+      \ extends T>> stages)"
+    instructionFingerprint: "A46836317A83D134B519D391AB115AF8"
+  paths:
+  - pathId: "path1"
+    testPathName: "allAsListTest"
+    modelFingerprint: "F02F2E2AD7DC78232BCEACB169113516"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "stages"
+      modelFingerprint: "1216306D849F704F8E5D81FF99AB38C2"
+      index: 1
+      valueUuid: "allAsList_list1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "E5CF4790E717BE568D9DE070B05FB00C"
+      index: 2
+      valueUuid: "transformToListResult_completableFuture1"
+    uuid: "33a97d4c-0fd8-33da-ab65-fa4a8e25a2ec"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.util.concurrent.CompletableFuture.allOf(java.util.concurrent.CompletableFuture[])\
+        \ : java.util.concurrent.CompletableFuture"
+    disabledReason: "Potential harmful system call (CompletableFuture.thenApply) detected;\
+      \ Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        collectionClass: "java.util.ArrayList"
+        parameters: []
+        values: []
+      valueType: "java.util.List"
+      genericValueType: "? extends java.util.concurrent.CompletionStage<? extends\
+        \ java.lang.Object>"
+      uuid: "allAsList_list1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.util.concurrent.CompletableFuture"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.util.concurrent.CompletableFuture"
+      genericValueType: "java.util.List<java.lang.Object>"
+      uuid: "transformToListResult_completableFuture1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "successfulAsList"
+    signature: "successfulAsList(java.util.List<? extends java.util.concurrent.CompletionStage<?\
+      \ extends java.lang.Object>>) : java.util.concurrent.CompletableFuture<java.util.List<java.lang.Object>>"
+    sourceCodeSignature: "CompletableFuture<List<T>> successfulAsList(List<? extends\
+      \ CompletionStage<? extends T>> stages)"
+    instructionFingerprint: "E1031F5607BCEAFD5ADD8D94AE9F6304"
+  paths:
+  - pathId: "path1"
+    testPathName: "successfulAsListTest"
+    modelFingerprint: "AA25880E36D8DC38A16FDF25E3196074"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "stages"
+      modelFingerprint: "1216306D849F704F8E5D81FF99AB38C2"
+      index: 1
+      valueUuid: "successfulAsList_list1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "E5CF4790E717BE568D9DE070B05FB00C"
+      index: 2
+      valueUuid: "transformToListResult_completableFuture1"
+    uuid: "9e2f111f-9abd-3b28-a20a-678cdc496bfe"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.util.concurrent.CompletableFuture.allOf(java.util.concurrent.CompletableFuture[])\
+        \ : java.util.concurrent.CompletableFuture"
+    disabledReason: "Potential harmful system call (CompletableFuture.thenApply) detected;\
+      \ Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        collectionClass: "java.util.ArrayList"
+        parameters: []
+        values: []
+      valueType: "java.util.List"
+      genericValueType: "? extends java.util.concurrent.CompletionStage<? extends\
+        \ java.lang.Object>"
+      uuid: "successfulAsList_list1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.util.concurrent.CompletableFuture"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.util.concurrent.CompletableFuture"
+      genericValueType: "java.util.List<java.lang.Object>"
+      uuid: "transformToListResult_completableFuture1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "failedFuture"
+    signature: "failedFuture(java.lang.Throwable) : java.util.concurrent.CompletableFuture<java.lang.Object>"
+    sourceCodeSignature: "CompletableFuture<T> failedFuture(Throwable t)"
+    instructionFingerprint: "F9028BEA0C746D854F88F483D8248FD5"
+  paths:
+  - pathId: "path1"
+    testPathName: "failedFutureTest"
+    modelFingerprint: "591AE9409A6C4780FE17CF0CCE2847FC"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "t"
+      modelFingerprint: "46250BB1C43B77415D14E383D1C28F6E"
+      index: 1
+      valueUuid: "failedFuture_throwable1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "62DEEB759C0EF53E48BCB587E3F3793C"
+      index: 2
+      valueUuid: "failedFuture_completableFuture1"
+    uuid: "7b6d3857-4849-3516-91fa-a7394d7a23c0"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    disabledReason: "Potential harmful system call (CompletableFuture.completeExceptionally)\
+      \ detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests"
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.lang.Throwable"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.Throwable"
+      uuid: "failedFuture_throwable1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.util.concurrent.CompletableFuture"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "java.util.concurrent.CompletableFuture"
+      genericValueType: "java.lang.Object"
+      uuid: "failedFuture_completableFuture1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "genericArray"
+    signature: "genericArray(java.util.function.IntFunction<java.lang.Object[]>) :\
+      \ java.util.function.IntFunction<java.util.function.IntFunction[]>"
+    sourceCodeSignature: "IntFunction<R[]> genericArray(IntFunction<T[]> arrayCreator)"
+    instructionFingerprint: "BAA77336AB2EA43DA109A283B48B9028"
+  paths:
+  - pathId: "path1"
+    testPathName: "genericArrayTest"
+    modelFingerprint: "6F71998D3D4F6E41713CBFBA420F2281"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "arrayCreator"
+      modelFingerprint: "9BF4535B2CCF71269582858275D220BB"
+      index: 1
+      valueUuid: "genericArray_intFunction1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "8B244CFC4C2CAE4CFC49015911E33ED5"
+      index: 2
+      valueUuid: "genericArray_intFunction2"
+    uuid: "4eced493-4c1c-39bc-8d4c-2475c19eb72e"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "MOCK"
+      valueType: "java.util.function.IntFunction"
+      uuid: "genericArray_intFunction1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "NOT_NULL"
+      valueType: "java.util.function.IntFunction"
+      genericValueType: "java.util.function.IntFunction[]"
+      uuid: "genericArray_intFunction2"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false

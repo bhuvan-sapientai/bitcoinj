@@ -1,0 +1,1938 @@
+---
+modelFingerprint: "6FB6719602AD1474C0CE6A3925A4B6AB"
+methods:
+- method:
+    name: "read"
+    signature: "read(java.nio.ByteBuffer) : org.bitcoinj.core.FilteredBlock"
+    sourceCodeSignature: "FilteredBlock read(ByteBuffer payload)"
+    instructionFingerprint: "4EB41D9475290D7E21CF881A0247A03A"
+  paths:
+  - pathId: "path1"
+    testPathName: "readTest"
+    modelFingerprint: "113D1703FC27888ABA456E27BF46E086"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "payload"
+      modelFingerprint: "D30B43598E2900E2880BDD9712DAE751"
+      index: 1
+      valueUuid: "read_byteBuffer1"
+    - type: "STATIC"
+      name: "Buffers"
+      modelFingerprint: "65BE2B939DDFF0A10BFB62CE2EFFEE0D"
+      index: 2
+      valueUuid: "uuid2"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Buffers"
+        name: "readBytes"
+        parameters:
+        - name: "buf"
+          valueUuid: "read_byteBuffer1"
+        - name: "length"
+          valueUuid: "uuid1"
+        throwsExceptions:
+        - "java.nio.BufferUnderflowException"
+        signature: "readBytes(ByteBuffer,int): byte[] throws java.nio.BufferUnderflowException"
+        returnValueUuid: "read_byte[]1"
+        access: 9
+    - type: "STATIC"
+      name: "Block"
+      modelFingerprint: "6DA020F58E374AE48D1A4332F3061124"
+      index: 3
+      valueUuid: "uuid3"
+      methodExercised:
+        target: "org.bitcoinj.core.Block"
+        name: "read"
+        parameters:
+        - name: "payload"
+          valueUuid: "read_byteBuffer2"
+        throwsExceptions:
+        - "java.nio.BufferUnderflowException"
+        - "org.bitcoinj.core.ProtocolException"
+        signature: "read(ByteBuffer): Block throws java.nio.BufferUnderflowException,org.bitcoinj.core.ProtocolException"
+        returnValueUuid: "read_block1"
+        access: 9
+    - type: "STATIC"
+      name: "PartialMerkleTree"
+      modelFingerprint: "0EDAE7A4E79162015381A3D61F7720C2"
+      index: 4
+      valueUuid: "uuid4"
+      methodExercised:
+        target: "org.bitcoinj.core.PartialMerkleTree"
+        name: "read"
+        parameters:
+        - name: "i"
+          valueUuid: "read_byteBuffer1"
+        throwsExceptions:
+        - "java.nio.BufferUnderflowException"
+        - "org.bitcoinj.core.ProtocolException"
+        signature: "read(ByteBuffer): PartialMerkleTree throws java.nio.BufferUnderflowException,org.bitcoinj.core.ProtocolException"
+        returnValueUuid: "read_partialMerkleTree1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "2D25E1685E59C834C2817359B9678983"
+      index: 5
+      valueUuid: "read_filteredBlock1"
+    uuid: "db344e3b-696d-3b02-8e35-1aaa5300bde6"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "read_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Buffers"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "read_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "read_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 80
+      valueType: "int"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "uuid3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "read_block1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "wrap"
+        methodParameters:
+        - value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "read_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "read_byteBuffer2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.PartialMerkleTree"
+      uuid: "uuid4"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.PartialMerkleTree"
+      uuid: "read_partialMerkleTree1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "read_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.FilteredBlock"
+        parameters:
+        - name: "header"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.core.Block"
+            uuid: "read_block1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "pmt"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.core.PartialMerkleTree"
+            uuid: "read_partialMerkleTree1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.core.FilteredBlock"
+      uuid: "read_filteredBlock1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "bitcoinSerializeToStream"
+    signature: "bitcoinSerializeToStream(java.io.OutputStream) : void"
+    sourceCodeSignature: "void bitcoinSerializeToStream(OutputStream stream)"
+    instructionFingerprint: "8B1E9A7DEBEADAE8A953460FA1E3689B"
+  paths:
+  - pathId: "path1"
+    testPathName: "bitcoinSerializeToStreamWhenHeaderGetTransactionsIsNull"
+    constructorSignature: "<init>(org.bitcoinj.core.Block,org.bitcoinj.core.PartialMerkleTree)\
+      \ : void"
+    modelFingerprint: "BD797602BB3AE63567FAD94368C9ACAC"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "6E9900530F8C9C7B242C8E54A1061E48"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "stream"
+      modelFingerprint: "29A897032AF431B5497C8E1DF49E25FC"
+      index: 2
+      valueUuid: "bitcoinSerializeToStream_outputStream1"
+    - type: "FIELD"
+      name: "header"
+      modelFingerprint: "9B145FD8383BB8D3A09B88B873F53FE8"
+      index: 3
+      valueUuid: "<init>_block1"
+      methodExercised:
+        target: "this.header"
+        name: "getTransactions"
+        parameters: []
+        signature: "getTransactions(): List"
+        returnValueUuid: "bitcoinSerializeToStream_list1"
+        access: 1
+    - type: "FIELD"
+      name: "header"
+      modelFingerprint: "A957F4D633FBF498EEBD6ADB96712BDB"
+      index: 4
+      valueUuid: "<init>_block1"
+      methodExercised:
+        target: "this.header"
+        name: "bitcoinSerializeToStream"
+        parameters:
+        - name: "stream"
+          valueUuid: "bitcoinSerializeToStream_outputStream1"
+        throwsExceptions:
+        - "java.io.IOException"
+        signature: "bitcoinSerializeToStream(OutputStream): void throws java.io.IOException"
+        returnValueUuid: "bitcoinSerializeToStream_void1"
+        access: 4
+    - type: "FIELD"
+      name: "merkleTree"
+      modelFingerprint: "A9F787834BFEB00D0DC0C8D6C5CAD51F"
+      index: 5
+      valueUuid: "<init>_partialMerkleTree1"
+      methodExercised:
+        target: "this.merkleTree"
+        name: "serialize"
+        parameters: []
+        signature: "serialize(): byte[]"
+        returnValueUuid: "bitcoinSerializeToStream_byte[]1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 6
+      valueUuid: "uuid1"
+    uuid: "5efadba4-ba6a-3361-b05c-1ea6639b6230"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.FilteredBlock"
+        parameters:
+        - name: "header"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.core.Block"
+            uuid: "<init>_block1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "pmt"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.core.PartialMerkleTree"
+            uuid: "<init>_partialMerkleTree1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.core.FilteredBlock"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.io.ByteArrayOutputStream"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.io.OutputStream"
+      uuid: "bitcoinSerializeToStream_outputStream1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "<init>_block1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "NULL"
+      valueType: "java.util.List"
+      genericValueType: "org.bitcoinj.core.Transaction"
+      uuid: "bitcoinSerializeToStream_list1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "<init>_block1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "bitcoinSerializeToStream_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.io.ByteArrayOutputStream"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.io.OutputStream"
+      uuid: "bitcoinSerializeToStream_outputStream1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.PartialMerkleTree"
+      uuid: "<init>_partialMerkleTree1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "bitcoinSerializeToStream_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "bitcoinSerializeToStreamWhenHeaderGetTransactionsIsNotNull"
+    constructorSignature: "<init>(org.bitcoinj.core.Block,org.bitcoinj.core.PartialMerkleTree)\
+      \ : void"
+    modelFingerprint: "E06B6B91A69993807267FCE24859FBCA"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "6E9900530F8C9C7B242C8E54A1061E48"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "stream"
+      modelFingerprint: "29A897032AF431B5497C8E1DF49E25FC"
+      index: 2
+      valueUuid: "bitcoinSerializeToStream_outputStream1"
+    - type: "FIELD"
+      name: "header"
+      modelFingerprint: "D96EA3065E6F65C6B9E47725591216C1"
+      index: 3
+      valueUuid: "<init>_block1"
+      methodExercised:
+        target: "this.header"
+        name: "getTransactions"
+        parameters: []
+        signature: "getTransactions(): List"
+        returnValueUuid: "bitcoinSerializeToStream_list1"
+        access: 1
+    - type: "FIELD"
+      name: "header"
+      modelFingerprint: "DABFBA4F238FAD82BA61D6A902E2C5F9"
+      index: 4
+      valueUuid: "<init>_block1"
+      methodExercised:
+        target: "this.header"
+        name: "cloneAsHeader"
+        parameters: []
+        signature: "cloneAsHeader(): Block"
+        returnValueUuid: "bitcoinSerializeToStream_block1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "CA73C1AB6197AF6FFF0D8A3D6C8A91C6"
+      index: 5
+      valueUuid: "bitcoinSerializeToStream_block1"
+      methodExercised:
+        target: "org.bitcoinj.core.Block"
+        name: "bitcoinSerializeToStream"
+        parameters:
+        - name: "stream"
+          valueUuid: "bitcoinSerializeToStream_outputStream1"
+        throwsExceptions:
+        - "java.io.IOException"
+        signature: "bitcoinSerializeToStream(OutputStream): void throws java.io.IOException"
+        returnValueUuid: "bitcoinSerializeToStream_void1"
+        access: 4
+    - type: "FIELD"
+      name: "merkleTree"
+      modelFingerprint: "A9F787834BFEB00D0DC0C8D6C5CAD51F"
+      index: 6
+      valueUuid: "<init>_partialMerkleTree1"
+      methodExercised:
+        target: "this.merkleTree"
+        name: "serialize"
+        parameters: []
+        signature: "serialize(): byte[]"
+        returnValueUuid: "bitcoinSerializeToStream_byte[]1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 7
+      valueUuid: "uuid1"
+    uuid: "0c639f25-97e3-3ec6-87ea-a4bb21f09a7e"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.FilteredBlock"
+        parameters:
+        - name: "header"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.core.Block"
+            uuid: "<init>_block1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "pmt"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.core.PartialMerkleTree"
+            uuid: "<init>_partialMerkleTree1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.core.FilteredBlock"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.io.ByteArrayOutputStream"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.io.OutputStream"
+      uuid: "bitcoinSerializeToStream_outputStream1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "<init>_block1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        parameters: []
+        values: []
+      valueType: "java.util.List"
+      genericValueType: "org.bitcoinj.core.Transaction"
+      uuid: "bitcoinSerializeToStream_list1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "<init>_block1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "bitcoinSerializeToStream_block1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "bitcoinSerializeToStream_block1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "bitcoinSerializeToStream_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.io.ByteArrayOutputStream"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.io.OutputStream"
+      uuid: "bitcoinSerializeToStream_outputStream1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.PartialMerkleTree"
+      uuid: "<init>_partialMerkleTree1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "bitcoinSerializeToStream_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "getTransactionHashes"
+    signature: "getTransactionHashes() : java.util.List<org.bitcoinj.base.Sha256Hash>"
+    sourceCodeSignature: "List<Sha256Hash> getTransactionHashes()"
+    instructionFingerprint: "ED6403B069D558AF6DCE367313B10CF7"
+  paths:
+  - pathId: "path1"
+    testPathName: "getTransactionHashesWhenHeaderGetMerkleRootEqualsMerkleTreeGetTxnHashAndMerkleRootHashesMatched"
+    constructorSignature: "<init>(org.bitcoinj.core.Block,org.bitcoinj.core.PartialMerkleTree)\
+      \ : void"
+    modelFingerprint: "636AF4C2E246F022651F47925F3E4D66"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "ADBF2DC421BE15FCDA092F20B6518C22"
+      index: 1
+      valueUuid: "target"
+    - type: "FIELD"
+      name: "header"
+      modelFingerprint: "431A848B3D6D5160FFFBE3BD158A2CE5"
+      index: 2
+      valueUuid: "<init>_block1"
+      methodExercised:
+        target: "this.header"
+        name: "getMerkleRoot"
+        parameters: []
+        signature: "getMerkleRoot(): Sha256Hash"
+        returnValueUuid: "getTransactionHashes_sha256Hash1"
+        access: 1
+    - type: "FIELD"
+      name: "merkleTree"
+      modelFingerprint: "8CAFD9CABBCBF6776368BB9E692710E5"
+      index: 3
+      valueUuid: "<init>_partialMerkleTree1"
+      methodExercised:
+        target: "this.merkleTree"
+        name: "getTxnHashAndMerkleRoot"
+        parameters:
+        - name: "matchedHashesOut"
+          valueUuid: "getTransactionHashes_linkedList1"
+        throwsExceptions:
+        - "org.bitcoinj.core.VerificationException"
+        signature: "getTxnHashAndMerkleRoot(List): Sha256Hash throws org.bitcoinj.core.VerificationException"
+        returnValueUuid: "getTransactionHashes_sha256Hash1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "E59E64CBFC7EB6F06665F4BA9F8658AB"
+      index: 4
+      valueUuid: "getTransactionHashes_list1"
+    uuid: "57a966b8-9eb5-347d-8eb6-4456a30c15c5"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.FilteredBlock"
+        parameters:
+        - name: "header"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "org.bitcoinj.core.Block"
+              parameters:
+              - name: "version"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "long"
+                  uuid: "<init>_block1-version"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "prevBlockHash"
+                value:
+                  sapientType: "MOCK"
+                  valueType: "org.bitcoinj.base.Sha256Hash"
+                  uuid: "<init>_block1-prevBlockHash"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "merkleRoot"
+                value:
+                  sapientType: "MOCK"
+                  valueType: "org.bitcoinj.base.Sha256Hash"
+                  uuid: "getTransactionHashes_sha256Hash1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "time"
+                value:
+                  sapientType: "OBJECT"
+                  content: !<static_method_return>
+                    target: "java.time.Instant"
+                    method: "ofEpochSecond"
+                    methodParameters:
+                    - name: "epochSecond"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: 1700000000
+                        valueType: "int"
+                        fixed: true
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                  valueType: "java.time.Instant"
+                  uuid: "<init>_block1-time"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "difficultyTarget"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "long"
+                  uuid: "<init>_block1-difficultyTarget"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "nonce"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "long"
+                  uuid: "<init>_block1-nonce"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "transactions"
+                value:
+                  sapientType: "COLLECTION"
+                  content: !<collection>
+                    parameters: []
+                    values: []
+                  valueType: "java.util.List"
+                  uuid: "<init>_block1-transactions"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "org.bitcoinj.core.Block"
+            uuid: "<init>_block1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "pmt"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.core.PartialMerkleTree"
+            uuid: "<init>_partialMerkleTree1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.core.FilteredBlock"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.Block"
+        parameters:
+        - name: "version"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "<init>_block1-version"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "prevBlockHash"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Sha256Hash"
+            uuid: "<init>_block1-prevBlockHash"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "merkleRoot"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Sha256Hash"
+            uuid: "getTransactionHashes_sha256Hash1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "time"
+          value:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "java.time.Instant"
+              method: "ofEpochSecond"
+              methodParameters:
+              - name: "epochSecond"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 1700000000
+                  valueType: "int"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "java.time.Instant"
+            uuid: "<init>_block1-time"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "difficultyTarget"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "<init>_block1-difficultyTarget"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "nonce"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "<init>_block1-nonce"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "transactions"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              parameters: []
+              values: []
+            valueType: "java.util.List"
+            uuid: "<init>_block1-transactions"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "<init>_block1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "getTransactionHashes_sha256Hash1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.PartialMerkleTree"
+      uuid: "<init>_partialMerkleTree1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "getTransactionHashes_sha256Hash1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        collectionClass: "java.util.LinkedList"
+        parameters: []
+        values: []
+      valueType: "java.util.List"
+      genericValueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "getTransactionHashes_linkedList1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        collectionClass: "java.util.LinkedList"
+        parameters: []
+        values: []
+      valueType: "java.util.List"
+      genericValueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "getTransactionHashes_list1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "getTransactionHashesWhenHeaderGetMerkleRootNotEqualsMerkleTreeGetTxnHashAndMerkleRootHashesMThrowsVerificationException"
+    constructorSignature: "<init>(org.bitcoinj.core.Block,org.bitcoinj.core.PartialMerkleTree)\
+      \ : void"
+    modelFingerprint: "D0FF253C7C12E2236F5610437DEE8A04"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "ADBF2DC421BE15FCDA092F20B6518C22"
+      index: 1
+      valueUuid: "target"
+    - type: "FIELD"
+      name: "header"
+      modelFingerprint: "431A848B3D6D5160FFFBE3BD158A2CE5"
+      index: 2
+      valueUuid: "<init>_block1"
+      methodExercised:
+        target: "this.header"
+        name: "getMerkleRoot"
+        parameters: []
+        signature: "getMerkleRoot(): Sha256Hash"
+        returnValueUuid: "getTransactionHashes_sha256Hash1"
+        access: 1
+    - type: "FIELD"
+      name: "merkleTree"
+      modelFingerprint: "B393C62F1FF10407B0BF4E6A0CC95304"
+      index: 3
+      valueUuid: "<init>_partialMerkleTree1"
+      methodExercised:
+        target: "this.merkleTree"
+        name: "getTxnHashAndMerkleRoot"
+        parameters:
+        - name: "matchedHashesOut"
+          valueUuid: "getTransactionHashes_linkedList1"
+        throwsExceptions:
+        - "org.bitcoinj.core.VerificationException"
+        signature: "getTxnHashAndMerkleRoot(List): Sha256Hash throws org.bitcoinj.core.VerificationException"
+        returnValueUuid: "getTransactionHashes_sha256Hash2"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D80B25CC7513B1979ED4BEC3B24D87D1"
+      index: 4
+      valueUuid: "getTransactionHashes_verificationException1"
+    uuid: "4308c862-7aab-3179-9319-016d70190f4b"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.FilteredBlock"
+        parameters:
+        - name: "header"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "org.bitcoinj.core.Block"
+              parameters:
+              - name: "version"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "long"
+                  uuid: "<init>_block1-version"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "prevBlockHash"
+                value:
+                  sapientType: "MOCK"
+                  valueType: "org.bitcoinj.base.Sha256Hash"
+                  uuid: "<init>_block1-prevBlockHash"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "merkleRoot"
+                value:
+                  sapientType: "MOCK"
+                  valueType: "org.bitcoinj.base.Sha256Hash"
+                  uuid: "getTransactionHashes_sha256Hash1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "time"
+                value:
+                  sapientType: "OBJECT"
+                  content: !<static_method_return>
+                    target: "java.time.Instant"
+                    method: "ofEpochSecond"
+                    methodParameters:
+                    - name: "epochSecond"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: 1700000000
+                        valueType: "int"
+                        fixed: true
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                  valueType: "java.time.Instant"
+                  uuid: "<init>_block1-time"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "difficultyTarget"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "long"
+                  uuid: "<init>_block1-difficultyTarget"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "nonce"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "long"
+                  uuid: "<init>_block1-nonce"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "transactions"
+                value:
+                  sapientType: "COLLECTION"
+                  content: !<collection>
+                    parameters: []
+                    values: []
+                  valueType: "java.util.List"
+                  uuid: "<init>_block1-transactions"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "org.bitcoinj.core.Block"
+            uuid: "<init>_block1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "pmt"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.core.PartialMerkleTree"
+            uuid: "<init>_partialMerkleTree1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.core.FilteredBlock"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.Block"
+        parameters:
+        - name: "version"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "<init>_block1-version"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "prevBlockHash"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Sha256Hash"
+            uuid: "<init>_block1-prevBlockHash"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "merkleRoot"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Sha256Hash"
+            uuid: "getTransactionHashes_sha256Hash1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "time"
+          value:
+            sapientType: "OBJECT"
+            content: !<static_method_return>
+              target: "java.time.Instant"
+              method: "ofEpochSecond"
+              methodParameters:
+              - name: "epochSecond"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 1700000000
+                  valueType: "int"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "java.time.Instant"
+            uuid: "<init>_block1-time"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "difficultyTarget"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "<init>_block1-difficultyTarget"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "nonce"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "<init>_block1-nonce"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "transactions"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              parameters: []
+              values: []
+            valueType: "java.util.List"
+            uuid: "<init>_block1-transactions"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "<init>_block1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "getTransactionHashes_sha256Hash1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.PartialMerkleTree"
+      uuid: "<init>_partialMerkleTree1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "getTransactionHashes_sha256Hash2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        collectionClass: "java.util.LinkedList"
+        parameters: []
+        values: []
+      valueType: "java.util.List"
+      genericValueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "getTransactionHashes_linkedList1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "org.bitcoinj.core.VerificationException"
+        parameters:
+        - name: "msg"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "Merkle root of block header does not match merkle root of partial\
+                \ merkle tree."
+            valueType: "java.lang.String"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.core.VerificationException"
+      uuid: "getTransactionHashes_verificationException1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "getBlockHeader"
+    signature: "getBlockHeader() : org.bitcoinj.core.Block"
+    sourceCodeSignature: "Block getBlockHeader()"
+    instructionFingerprint: "2A269919F61794467FCFD1E5028734F9"
+  paths:
+  - pathId: "path1"
+    testPathName: "getBlockHeaderTest"
+    constructorSignature: "<init>(org.bitcoinj.core.Block,org.bitcoinj.core.PartialMerkleTree)\
+      \ : void"
+    modelFingerprint: "1F8DEFADEF395F23DF187DB2F93D4F06"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "6415F7CBAD0D5A8F5A41343B1CA3E8B3"
+      index: 1
+      valueUuid: "target"
+    - type: "FIELD"
+      name: "header"
+      modelFingerprint: "2825C443B19F12A68747131363E0311F"
+      index: 2
+      valueUuid: "<init>_block1"
+      methodExercised:
+        target: "this.header"
+        name: "cloneAsHeader"
+        parameters: []
+        signature: "cloneAsHeader(): Block"
+        returnValueUuid: "getBlockHeader_block1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "F181B7B35D01C9A08C82427531828E1A"
+      index: 3
+      valueUuid: "getBlockHeader_block1"
+    uuid: "09a7c168-7d8a-3a87-8efd-e8276ce35b99"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.FilteredBlock"
+        parameters:
+        - name: "header"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.core.Block"
+            uuid: "<init>_block1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "pmt"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.core.PartialMerkleTree"
+            uuid: "<init>_partialMerkleTree1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.core.FilteredBlock"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "<init>_block1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "getBlockHeader_block1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "getBlockHeader_block1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "getHash"
+    signature: "getHash() : org.bitcoinj.base.Sha256Hash"
+    sourceCodeSignature: "Sha256Hash getHash()"
+    instructionFingerprint: "6C4C158930591B6D7CB0E99B5FEDE2BF"
+  paths:
+  - pathId: "path1"
+    testPathName: "getHashTest"
+    constructorSignature: "<init>(org.bitcoinj.core.Block,org.bitcoinj.core.PartialMerkleTree)\
+      \ : void"
+    modelFingerprint: "35A7DB8860F8D5F2DD0E168E844F545B"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "6415F7CBAD0D5A8F5A41343B1CA3E8B3"
+      index: 1
+      valueUuid: "target"
+    - type: "FIELD"
+      name: "header"
+      modelFingerprint: "963DB7819DC327D0ED849287CCD6D5A5"
+      index: 2
+      valueUuid: "<init>_block1"
+      methodExercised:
+        target: "this.header"
+        name: "getHash"
+        parameters: []
+        signature: "getHash(): Sha256Hash"
+        returnValueUuid: "getHash_sha256Hash1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D5F995FF16038F8C8CEB6ED663606C67"
+      index: 3
+      valueUuid: "getHash_sha256Hash1"
+    uuid: "c152b292-9f41-3184-8d0c-c8dacb973313"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.FilteredBlock"
+        parameters:
+        - name: "header"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.core.Block"
+            uuid: "<init>_block1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "pmt"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.core.PartialMerkleTree"
+            uuid: "<init>_partialMerkleTree1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.core.FilteredBlock"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "<init>_block1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "getHash_sha256Hash1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "getHash_sha256Hash1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "provideTransaction"
+    signature: "provideTransaction(org.bitcoinj.core.Transaction) : boolean"
+    sourceCodeSignature: "boolean provideTransaction(Transaction tx)"
+    instructionFingerprint: "F36E2258DBA29BB2AEA5CA81B7C276DB"
+  paths:
+  - pathId: "path1"
+    testPathName: "provideTransactionWhenGetTransactionHashesContainsHash"
+    constructorSignature: "<init>(org.bitcoinj.core.Block,org.bitcoinj.core.PartialMerkleTree)\
+      \ : void"
+    modelFingerprint: "09D5F38B5CD7AF2DE29CB1462F806E8C"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "9440C02187B71D7FB5389A1EC759BA15"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "tx"
+      modelFingerprint: "1C61876916E8418690CE8C8C65DDF0B8"
+      index: 2
+      valueUuid: "provideTransaction_transaction1"
+    - type: "LOCAL_VARIABLE"
+      name: "tx"
+      modelFingerprint: "BE0F7713C30F357B3F69BE2AE4E4BC7A"
+      index: 3
+      valueUuid: "provideTransaction_transaction1"
+      methodExercised:
+        target: "tx"
+        name: "getTxId"
+        parameters: []
+        signature: "getTxId(): Sha256Hash"
+        returnValueUuid: "provideTransaction_sha256Hash1"
+        access: 1
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "81FBF2C61C867B61F01E823092F3B7DE"
+      index: 4
+      methodExercised:
+        target: "target"
+        name: "getTransactionHashes"
+        parameters: []
+        throwsExceptions:
+        - "org.bitcoinj.core.VerificationException"
+        signature: "getTransactionHashes(): List throws org.bitcoinj.core.VerificationException"
+        returnValueUuid: "provideTransaction_list1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "753659628F1B3F179A2EF0629F555437"
+      index: 5
+      valueUuid: "uuid7"
+    uuid: "be0ef020-8a2b-34f0-83de-35a732d3efb2"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.FilteredBlock"
+        parameters:
+        - name: "header"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.core.Block"
+            uuid: "<init>_block1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "pmt"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.core.PartialMerkleTree"
+            uuid: "<init>_partialMerkleTree1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.core.FilteredBlock"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Transaction"
+      uuid: "provideTransaction_transaction1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Transaction"
+      uuid: "provideTransaction_transaction1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "provideTransaction_sha256Hash1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        collectionClass: "java.util.ArrayList"
+        parameters: []
+        values:
+        - sapientType: "MOCK"
+          valueType: "org.bitcoinj.base.Sha256Hash"
+          uuid: "provideTransaction_sha256Hash1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+      valueType: "java.util.List"
+      genericValueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "provideTransaction_list1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid7"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "provideTransactionWhenGetTransactionHashesNotContainsHash"
+    constructorSignature: "<init>(org.bitcoinj.core.Block,org.bitcoinj.core.PartialMerkleTree)\
+      \ : void"
+    modelFingerprint: "9BED6F10D888C003DD0EBDAB7AD37177"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "9440C02187B71D7FB5389A1EC759BA15"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "tx"
+      modelFingerprint: "1C61876916E8418690CE8C8C65DDF0B8"
+      index: 2
+      valueUuid: "provideTransaction_transaction1"
+    - type: "LOCAL_VARIABLE"
+      name: "tx"
+      modelFingerprint: "BE0F7713C30F357B3F69BE2AE4E4BC7A"
+      index: 3
+      valueUuid: "provideTransaction_transaction1"
+      methodExercised:
+        target: "tx"
+        name: "getTxId"
+        parameters: []
+        signature: "getTxId(): Sha256Hash"
+        returnValueUuid: "provideTransaction_sha256Hash1"
+        access: 1
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "ECF9F30275B6A9FA616E013C757A1001"
+      index: 4
+      methodExercised:
+        target: "target"
+        name: "getTransactionHashes"
+        parameters: []
+        throwsExceptions:
+        - "org.bitcoinj.core.VerificationException"
+        signature: "getTransactionHashes(): List throws org.bitcoinj.core.VerificationException"
+        returnValueUuid: "provideTransaction_list1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "3A21543F56248AC92654D6E439128AED"
+      index: 5
+      valueUuid: "uuid8"
+    uuid: "e7d2886d-8e78-3575-a335-5bcb36e19f6f"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.FilteredBlock"
+        parameters:
+        - name: "header"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.core.Block"
+            uuid: "<init>_block1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "pmt"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.core.PartialMerkleTree"
+            uuid: "<init>_partialMerkleTree1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.core.FilteredBlock"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Transaction"
+      uuid: "provideTransaction_transaction1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Transaction"
+      uuid: "provideTransaction_transaction1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "provideTransaction_sha256Hash1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        parameters: []
+        values: []
+      valueType: "java.util.List"
+      genericValueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "provideTransaction_list1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "uuid8"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "getPartialMerkleTree"
+    signature: "getPartialMerkleTree() : org.bitcoinj.core.PartialMerkleTree"
+    sourceCodeSignature: "PartialMerkleTree getPartialMerkleTree()"
+    instructionFingerprint: "FE11AE650D2692235A9EB629ADECC44C"
+  paths:
+  - pathId: "path1"
+    testPathName: "getPartialMerkleTreeTest"
+    constructorSignature: "<init>(org.bitcoinj.core.Block,org.bitcoinj.core.PartialMerkleTree)\
+      \ : void"
+    modelFingerprint: "591429DA495F8DCFC7CF9DC80F140C46"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "8b895d01-5242-34b5-bfdf-7980da6c4ee6"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "getAssociatedTransactions"
+    signature: "getAssociatedTransactions() : java.util.Map<org.bitcoinj.base.Sha256Hash,org.bitcoinj.core.Transaction>"
+    sourceCodeSignature: "Map<Sha256Hash, Transaction> getAssociatedTransactions()"
+    instructionFingerprint: "98D4C43159333174C185E135DCF4749F"
+  paths:
+  - pathId: "path1"
+    testPathName: "getAssociatedTransactionsTest"
+    constructorSignature: "<init>(org.bitcoinj.core.Block,org.bitcoinj.core.PartialMerkleTree)\
+      \ : void"
+    modelFingerprint: "124E7A172D80FEAACAD691AB48856C50"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "9440C02187B71D7FB5389A1EC759BA15"
+      index: 1
+      valueUuid: "target"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "9832A7E4B49A3CD70630CAE7C7AD96F6"
+      index: 2
+      valueUuid: "getAssociatedTransactions_map1"
+    uuid: "b8c7d07f-19dc-34c1-a7c2-d0095d8b5cd5"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.FilteredBlock"
+        parameters:
+        - name: "header"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.core.Block"
+            uuid: "<init>_block1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "pmt"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.core.PartialMerkleTree"
+            uuid: "<init>_partialMerkleTree1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.core.FilteredBlock"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        collectionClass: "java.util.HashMap"
+        parameters: []
+        values: []
+      valueType: "java.util.Map"
+      genericValueType: "org.bitcoinj.base.Sha256Hash,org.bitcoinj.core.Transaction"
+      uuid: "getAssociatedTransactions_map1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "getTransactionCount"
+    signature: "getTransactionCount() : int"
+    sourceCodeSignature: "int getTransactionCount()"
+    instructionFingerprint: "DE832138AB5EB215853ABC9371BBA261"
+  paths:
+  - pathId: "path1"
+    testPathName: "getTransactionCountTest"
+    constructorSignature: "<init>(org.bitcoinj.core.Block,org.bitcoinj.core.PartialMerkleTree)\
+      \ : void"
+    modelFingerprint: "720BD6A30164AC3A55E9FF52A47A0487"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "E2CFA2E69E11FEA38837FE44124AEE26"
+      index: 1
+      valueUuid: "target"
+    - type: "FIELD"
+      name: "merkleTree"
+      modelFingerprint: "FCBC1F5D90116889E54DBD36A677BB94"
+      index: 2
+      valueUuid: "<init>_partialMerkleTree1"
+      methodExercised:
+        target: "this.merkleTree"
+        name: "getTransactionCount"
+        parameters: []
+        signature: "getTransactionCount(): int"
+        returnValueUuid: "getTransactionCount_int1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "ACBCF6744C1A4F89BFBA83521C7CE3BD"
+      index: 3
+      valueUuid: "getTransactionCount_int1"
+    uuid: "f1206cfa-ac32-350f-91f6-880147fc431c"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.FilteredBlock"
+        parameters:
+        - name: "header"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.core.Block"
+            uuid: "<init>_block1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "pmt"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.core.PartialMerkleTree"
+            uuid: "<init>_partialMerkleTree1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.core.FilteredBlock"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.PartialMerkleTree"
+      uuid: "<init>_partialMerkleTree1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "getTransactionCount_int1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "getTransactionCount_int1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "equals"
+    signature: "equals(java.lang.Object) : boolean"
+    sourceCodeSignature: "boolean equals(Object o)"
+    instructionFingerprint: "40B058EF3C926F4DAE359468C127D768"
+  paths:
+  - pathId: "path1"
+    testPathName: "equalsWhenThisEqualsO"
+    constructorSignature: "<init>(org.bitcoinj.core.Block,org.bitcoinj.core.PartialMerkleTree)\
+      \ : void"
+    modelFingerprint: "E144A31A0958D936084289166D41C0A7"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "5b7cf5ba-f3cc-35d0-9b4a-3392d3a68eed"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path4"
+    testPathName: "equalsWhenOIsNull"
+    constructorSignature: "<init>(org.bitcoinj.core.Block,org.bitcoinj.core.PartialMerkleTree)\
+      \ : void"
+    modelFingerprint: "DA6B2B115F8053E26A2AC24BFD119A45"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "a2108c4d-bcbc-39b5-8254-0588b654f131"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path2"
+    testPathName: "equalsWhenGetClassNotEqualsOGetClass"
+    constructorSignature: "<init>(org.bitcoinj.core.Block,org.bitcoinj.core.PartialMerkleTree)\
+      \ : void"
+    modelFingerprint: "914A72581DF6B2350502F8D9288D8527"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "6e6a0f87-c9aa-3e31-af0a-46c9467f5ce0"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path3"
+    testPathName: "equalsWhenAssociatedTransactionsNotEqualsOtherAssociatedTransactions"
+    constructorSignature: "<init>(org.bitcoinj.core.Block,org.bitcoinj.core.PartialMerkleTree)\
+      \ : void"
+    modelFingerprint: "2BB4F7AFADAA8E9B03CBAD3BC911AE1A"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "9da48a44-d9f7-3a75-9ccc-da36a091e1ea"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "toString"
+    signature: "toString() : java.lang.String"
+    sourceCodeSignature: "String toString()"
+    instructionFingerprint: "8C89316B247020FCC06600A83CBC27B3"
+  paths:
+  - pathId: "path1"
+    testPathName: "toStringTest"
+    constructorSignature: "<init>(org.bitcoinj.core.Block,org.bitcoinj.core.PartialMerkleTree)\
+      \ : void"
+    modelFingerprint: "55E1BC395E1639C2B99FD80F224075A1"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "9440C02187B71D7FB5389A1EC759BA15"
+      index: 1
+      valueUuid: "target"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "88C1B04F452CF7A27CF7A86891505582"
+      index: 2
+      valueUuid: "toString_string1"
+    uuid: "363d3698-f34c-39ad-914f-376a19498023"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.FilteredBlock"
+        parameters:
+        - name: "header"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.core.Block"
+            uuid: "<init>_block1"
+            fixed: false
+            nameForMock: "<init>_block1"
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "pmt"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.core.PartialMerkleTree"
+            uuid: "<init>_partialMerkleTree1"
+            fixed: false
+            nameForMock: "<init>_partialMerkleTree1"
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.core.FilteredBlock"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "FilteredBlock{merkleTree=<init>_partialMerkleTree1, header=<init>_block1}"
+      valueType: "java.lang.String"
+      uuid: "toString_string1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false

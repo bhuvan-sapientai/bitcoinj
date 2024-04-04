@@ -1,0 +1,699 @@
+---
+modelFingerprint: "324D8189901B9324D0384757F1E1DCBF"
+methods:
+- method:
+    name: "getPaymentProtocolId"
+    signature: "getPaymentProtocolId() : java.lang.String"
+    sourceCodeSignature: "String getPaymentProtocolId()"
+    instructionFingerprint: "6FA238686472D1FC963AF46392B8DA4B"
+  paths:
+  - pathId: "path1"
+    testPathName: "getPaymentProtocolIdTest"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "967F2B715ACDC7F71526EDC162A6B74D"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "LOCAL_VARIABLE"
+      name: "network"
+      modelFingerprint: "F42A84A1C096CAB19B00B16B1204FAEA"
+      index: 2
+      valueUuid: "<init>_mockAltNetwork1"
+      methodExercised:
+        target: "network"
+        name: "id"
+        parameters: []
+        signature: "id(): String"
+        returnValueUuid: "<init>_string1"
+        access: 1025
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "8EDA3F2AE365AC99A4FDAA03D44C0B66"
+      index: 3
+      valueUuid: "getPaymentProtocolId_string1"
+    uuid: "ea3e5383-6b88-3286-a893-340b435eee04"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.testing.MockAltNetworkParams"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.testing.MockAltNetworkParams"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.testing.MockAltNetwork"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.testing.MockAltNetwork"
+      uuid: "<init>_mockAltNetwork1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "mock.alt.network"
+      valueType: "java.lang.String"
+      uuid: "<init>_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "NULL"
+      valueType: "java.lang.String"
+      uuid: "getPaymentProtocolId_string1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "checkDifficultyTransitions"
+    signature: "checkDifficultyTransitions(org.bitcoinj.core.StoredBlock,org.bitcoinj.core.Block,org.bitcoinj.store.BlockStore)\
+      \ : void"
+    sourceCodeSignature: "void checkDifficultyTransitions(StoredBlock storedPrev,\
+      \ Block next, BlockStore blockStore)"
+    instructionFingerprint: "099D089703B27ACF99A89677013D701B"
+  paths:
+  - pathId: "path1"
+    testPathName: "checkDifficultyTransitionsTest"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "385FD7DEC040246402DDD96E122111A8"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "adee70c2-6e1e-3c84-8a42-d0441f901e89"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "getGenesisBlock"
+    signature: "getGenesisBlock() : org.bitcoinj.core.Block"
+    sourceCodeSignature: "Block getGenesisBlock()"
+    instructionFingerprint: "AF7DF15CB9F81EBBCB575F8E0DFA45E0"
+  paths:
+  - pathId: "path1"
+    testPathName: "getGenesisBlockTest"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "B722FA42E645D10B99BCB9C383CE4932"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "LOCAL_VARIABLE"
+      name: "network"
+      modelFingerprint: "F42A84A1C096CAB19B00B16B1204FAEA"
+      index: 2
+      valueUuid: "<init>_mockAltNetwork1"
+      methodExercised:
+        target: "network"
+        name: "id"
+        parameters: []
+        signature: "id(): String"
+        returnValueUuid: "<init>_string1"
+        access: 1025
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "1F47B8974FD68FCD895D57058D7D697F"
+      index: 3
+      valueUuid: "getGenesisBlock_block1"
+    uuid: "48efb277-67fd-3766-ba01-7ac5beacdee1"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.testing.MockAltNetworkParams"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.testing.MockAltNetworkParams"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.testing.MockAltNetwork"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.testing.MockAltNetwork"
+      uuid: "<init>_mockAltNetwork1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "mock.alt.network"
+      valueType: "java.lang.String"
+      uuid: "<init>_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "NULL"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "getGenesisBlock_block1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "getMaxMoney"
+    signature: "getMaxMoney() : org.bitcoinj.base.Coin"
+    sourceCodeSignature: "Coin getMaxMoney()"
+    instructionFingerprint: "A5E5FD2E22ADF7509E33C6986FE45F10"
+  paths:
+  - pathId: "path1"
+    testPathName: "getMaxMoneyTest"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "C190849FF3087FD9CE0E0F7C502DE5B3"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "LOCAL_VARIABLE"
+      name: "network"
+      modelFingerprint: "F42A84A1C096CAB19B00B16B1204FAEA"
+      index: 2
+      valueUuid: "<init>_mockAltNetwork1"
+      methodExercised:
+        target: "network"
+        name: "id"
+        parameters: []
+        signature: "id(): String"
+        returnValueUuid: "<init>_string1"
+        access: 1025
+    - type: "FIELD"
+      name: "network"
+      modelFingerprint: "74D16E06E9DE0090F1D3F238E9FCDA1B"
+      index: 3
+      valueUuid: "<init>_mockAltNetwork1"
+      methodExercised:
+        target: "this.network"
+        name: "maxMoney"
+        parameters: []
+        signature: "maxMoney(): Monetary"
+        returnValueUuid: "getMaxMoney_monetary1"
+        access: 1025
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "A54AFBAAF5F89BEC998E66FE6DE87370"
+      index: 4
+      valueUuid: "getMaxMoney_monetary1"
+    uuid: "417ee926-70c7-32d1-8d4b-27e23cc6c6fc"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.testing.MockAltNetworkParams"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.testing.MockAltNetworkParams"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.testing.MockAltNetwork"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.testing.MockAltNetwork"
+      uuid: "<init>_mockAltNetwork1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "mock.alt.network"
+      valueType: "java.lang.String"
+      uuid: "<init>_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.testing.MockAltNetwork"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.testing.MockAltNetwork"
+      uuid: "<init>_mockAltNetwork1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<method_return_from_value>
+        target: "org.bitcoinj.base.Monetary"
+        localVariableValue:
+          sapientType: "OBJECT"
+          content: !<new>
+            target: "org.bitcoinj.testing.MockAltNetwork"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: true
+          valueType: "org.bitcoinj.testing.MockAltNetwork"
+          uuid: "<init>_mockAltNetwork1"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        methodParameters: []
+        methodName: "maxMoney"
+      valueType: "org.bitcoinj.base.Coin"
+      uuid: "getMaxMoney_monetary1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: true
+    - sapientType: "OBJECT"
+      content: !<method_return_from_value>
+        target: "org.bitcoinj.base.Monetary"
+        localVariableValue:
+          sapientType: "OBJECT"
+          content: !<new>
+            target: "org.bitcoinj.testing.MockAltNetwork"
+            parameters: []
+            privateConstructor: false
+            createdByTargetCode: true
+          valueType: "org.bitcoinj.testing.MockAltNetwork"
+          uuid: "<init>_mockAltNetwork1"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        methodParameters: []
+        methodName: "maxMoney"
+      valueType: "org.bitcoinj.base.Coin"
+      uuid: "getMaxMoney_monetary1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: true
+- method:
+    name: "getMonetaryFormat"
+    signature: "getMonetaryFormat() : org.bitcoinj.base.utils.MonetaryFormat"
+    sourceCodeSignature: "MonetaryFormat getMonetaryFormat()"
+    instructionFingerprint: "E85914A01AE6738EE2FACD65817E102C"
+  paths:
+  - pathId: "path1"
+    testPathName: "getMonetaryFormatTest"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "D5D85F5E0FA9CA6DB512E382861A5ABE"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "LOCAL_VARIABLE"
+      name: "network"
+      modelFingerprint: "F42A84A1C096CAB19B00B16B1204FAEA"
+      index: 2
+      valueUuid: "<init>_mockAltNetwork1"
+      methodExercised:
+        target: "network"
+        name: "id"
+        parameters: []
+        signature: "id(): String"
+        returnValueUuid: "<init>_string1"
+        access: 1025
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "1903DBBC8C845C9C4BDB5DE14CE05878"
+      index: 3
+      valueUuid: "getMonetaryFormat_monetaryFormat1"
+    uuid: "44b0a5d5-40c6-34a5-b3f5-4656a6593207"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.testing.MockAltNetworkParams"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.testing.MockAltNetworkParams"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.testing.MockAltNetwork"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.testing.MockAltNetwork"
+      uuid: "<init>_mockAltNetwork1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "mock.alt.network"
+      valueType: "java.lang.String"
+      uuid: "<init>_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "NULL"
+      valueType: "org.bitcoinj.base.utils.MonetaryFormat"
+      uuid: "getMonetaryFormat_monetaryFormat1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "getUriScheme"
+    signature: "getUriScheme() : java.lang.String"
+    sourceCodeSignature: "String getUriScheme()"
+    instructionFingerprint: "B28B14132B81813DFF312C9F1C768FE2"
+  paths:
+  - pathId: "path1"
+    testPathName: "getUriSchemeTest"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "1B238533F9C6B4074C6934B6876ADB69"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "LOCAL_VARIABLE"
+      name: "network"
+      modelFingerprint: "F42A84A1C096CAB19B00B16B1204FAEA"
+      index: 2
+      valueUuid: "<init>_mockAltNetwork1"
+      methodExercised:
+        target: "network"
+        name: "id"
+        parameters: []
+        signature: "id(): String"
+        returnValueUuid: "<init>_string1"
+        access: 1025
+    - type: "FIELD"
+      name: "network"
+      modelFingerprint: "B4632705D9C180C5E8C382656C44BE6F"
+      index: 3
+      valueUuid: "<init>_mockAltNetwork1"
+      methodExercised:
+        target: "this.network"
+        name: "uriScheme"
+        parameters: []
+        signature: "uriScheme(): String"
+        returnValueUuid: "getUriScheme_string1"
+        access: 1025
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "C57BDCC74E9ADBC83E3E8D68A59EBBBF"
+      index: 4
+      valueUuid: "getUriScheme_string1"
+    uuid: "d7a93d1f-e116-30ad-a248-5f06628be860"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.testing.MockAltNetworkParams"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.testing.MockAltNetworkParams"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.testing.MockAltNetwork"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.testing.MockAltNetwork"
+      uuid: "<init>_mockAltNetwork1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "mock.alt.network"
+      valueType: "java.lang.String"
+      uuid: "<init>_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.testing.MockAltNetwork"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.testing.MockAltNetwork"
+      uuid: "<init>_mockAltNetwork1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "mockcoin"
+      valueType: "java.lang.String"
+      uuid: "getUriScheme_string1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "mockcoin"
+      valueType: "java.lang.String"
+      uuid: "getUriScheme_string1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "hasMaxMoney"
+    signature: "hasMaxMoney() : boolean"
+    sourceCodeSignature: "boolean hasMaxMoney()"
+    instructionFingerprint: "452DFABD340CCAD9DC03001722C1AA87"
+  paths:
+  - pathId: "path1"
+    testPathName: "hasMaxMoneyTest"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "D647429E80B8F5D1FA5E9687944DDAB7"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "LOCAL_VARIABLE"
+      name: "network"
+      modelFingerprint: "F42A84A1C096CAB19B00B16B1204FAEA"
+      index: 2
+      valueUuid: "<init>_mockAltNetwork1"
+      methodExercised:
+        target: "network"
+        name: "id"
+        parameters: []
+        signature: "id(): String"
+        returnValueUuid: "<init>_string1"
+        access: 1025
+    - type: "FIELD"
+      name: "network"
+      modelFingerprint: "003E824A9F706FF025DD106B6E30E171"
+      index: 3
+      valueUuid: "<init>_mockAltNetwork1"
+      methodExercised:
+        target: "this.network"
+        name: "hasMaxMoney"
+        parameters: []
+        signature: "hasMaxMoney(): boolean"
+        returnValueUuid: "hasMaxMoney_boolean1"
+        access: 1025
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "26F354D57EDB6DE30F14FF7FA23B655D"
+      index: 4
+      valueUuid: "hasMaxMoney_boolean1"
+    uuid: "acf77967-ab44-395e-9113-4ce8808d0613"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.testing.MockAltNetworkParams"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.testing.MockAltNetworkParams"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.testing.MockAltNetwork"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.testing.MockAltNetwork"
+      uuid: "<init>_mockAltNetwork1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "mock.alt.network"
+      valueType: "java.lang.String"
+      uuid: "<init>_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.testing.MockAltNetwork"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.testing.MockAltNetwork"
+      uuid: "<init>_mockAltNetwork1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "hasMaxMoney_boolean1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "hasMaxMoney_boolean1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "getSerializer"
+    signature: "getSerializer() : org.bitcoinj.core.BitcoinSerializer"
+    sourceCodeSignature: "BitcoinSerializer getSerializer()"
+    instructionFingerprint: "84D12A478631133B0E515CEB8A2AF592"
+  paths:
+  - pathId: "path1"
+    testPathName: "getSerializerTest"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "48031D45C6646FB1CD4FC7E4A2770B17"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "LOCAL_VARIABLE"
+      name: "network"
+      modelFingerprint: "F42A84A1C096CAB19B00B16B1204FAEA"
+      index: 2
+      valueUuid: "<init>_mockAltNetwork1"
+      methodExercised:
+        target: "network"
+        name: "id"
+        parameters: []
+        signature: "id(): String"
+        returnValueUuid: "<init>_string1"
+        access: 1025
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "E898FC1EDCFA0216E09D841A280A57B6"
+      index: 3
+      valueUuid: "getSerializer_bitcoinSerializer1"
+    uuid: "d1954e54-08e5-3cb6-8f79-2412c8d3937d"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.testing.MockAltNetworkParams"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.testing.MockAltNetworkParams"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.testing.MockAltNetwork"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.testing.MockAltNetwork"
+      uuid: "<init>_mockAltNetwork1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "mock.alt.network"
+      valueType: "java.lang.String"
+      uuid: "<init>_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "NULL"
+      valueType: "org.bitcoinj.core.BitcoinSerializer"
+      uuid: "getSerializer_bitcoinSerializer1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false

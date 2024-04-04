@@ -1,0 +1,817 @@
+---
+modelFingerprint: "80E441D5576BF34583ECF56CA84ECF3F"
+methods:
+- method:
+    name: "BeginTransaction"
+    signature: "BeginTransaction() : void"
+    sourceCodeSignature: "void BeginTransaction()"
+    instructionFingerprint: "8C740A2A9432B59FC9777E3D5365FDA5"
+  paths:
+  - pathId: "path1"
+    testPathName: "BeginTransactionTest"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "730F6005FE3584D610AAD9A2C810B6A8"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "FIELD"
+      name: "mapValues"
+      modelFingerprint: "F816B72EFF8CC854CF0B45BAAB853E75"
+      index: 2
+      valueUuid: "<init>_transactionalHashMap1"
+      methodExercised:
+        target: "this.mapValues"
+        name: "beginDatabaseBatchWrite"
+        parameters: []
+        signature: "beginDatabaseBatchWrite(): void"
+        returnValueUuid: "BeginTransaction_void1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 3
+      valueUuid: "uuid1"
+    uuid: "f2580bf9-57c5-38b8-b003-ac7734507635"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.store.TransactionalMultiKeyHashMap"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+        propertiesMap:
+          mapValues:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "org.bitcoinj.store.TransactionalHashMap"
+              parameters: []
+              privateConstructor: false
+              createdByTargetCode: true
+            valueType: "org.bitcoinj.store.TransactionalHashMap"
+            genericValueType: "java.lang.Object,java.lang.Object"
+            uuid: "<init>_transactionalHashMap1"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.store.TransactionalMultiKeyHashMap"
+      genericValueType: "java.lang.Object, java.lang.Object, java.lang.Object"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.store.TransactionalHashMap"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.store.TransactionalHashMap"
+      genericValueType: "java.lang.Object,java.lang.Object"
+      uuid: "<init>_transactionalHashMap1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "BeginTransaction_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "CommitTransaction"
+    signature: "CommitTransaction() : void"
+    sourceCodeSignature: "void CommitTransaction()"
+    instructionFingerprint: "2C243BEC0283D9A94C4792D6D644CECE"
+  paths:
+  - pathId: "path1"
+    testPathName: "CommitTransactionTest"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "3CA5EF2C5D4D6CBCB53DE46CFD28D403"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "FIELD"
+      name: "mapValues"
+      modelFingerprint: "84CDB6BB6F578DE47D658BDD210FFF55"
+      index: 2
+      valueUuid: "<init>_transactionalHashMap1"
+      methodExercised:
+        target: "this.mapValues"
+        name: "commitDatabaseBatchWrite"
+        parameters: []
+        signature: "commitDatabaseBatchWrite(): void"
+        returnValueUuid: "CommitTransaction_void1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 3
+      valueUuid: "uuid2"
+    uuid: "634b31cf-7a2f-3f9b-9203-5127ac44586f"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.store.TransactionalMultiKeyHashMap"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+        propertiesMap:
+          mapValues:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "org.bitcoinj.store.TransactionalHashMap"
+              parameters: []
+              privateConstructor: false
+              createdByTargetCode: true
+            valueType: "org.bitcoinj.store.TransactionalHashMap"
+            genericValueType: "java.lang.Object,java.lang.Object"
+            uuid: "<init>_transactionalHashMap1"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.store.TransactionalMultiKeyHashMap"
+      genericValueType: "java.lang.Object, java.lang.Object, java.lang.Object"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.store.TransactionalHashMap"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.store.TransactionalHashMap"
+      genericValueType: "java.lang.Object,java.lang.Object"
+      uuid: "<init>_transactionalHashMap1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "CommitTransaction_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      uuid: "uuid2"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "AbortTransaction"
+    signature: "AbortTransaction() : void"
+    sourceCodeSignature: "void AbortTransaction()"
+    instructionFingerprint: "A0F6F3D3E7156D317684280CF41001A8"
+  paths:
+  - pathId: "path1"
+    testPathName: "AbortTransactionTest"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "7888E7B72C862894D1043E19E82415AA"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "FIELD"
+      name: "mapValues"
+      modelFingerprint: "A33DE71525966E8AC6AA7B7E6FD8522E"
+      index: 2
+      valueUuid: "<init>_transactionalHashMap1"
+      methodExercised:
+        target: "this.mapValues"
+        name: "abortDatabaseBatchWrite"
+        parameters: []
+        signature: "abortDatabaseBatchWrite(): void"
+        returnValueUuid: "AbortTransaction_void1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 3
+      valueUuid: "uuid3"
+    uuid: "a1e67f11-404f-33fa-aa6c-c1875a1a5c52"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.store.TransactionalMultiKeyHashMap"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+        propertiesMap:
+          mapValues:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "org.bitcoinj.store.TransactionalHashMap"
+              parameters: []
+              privateConstructor: false
+              createdByTargetCode: true
+            valueType: "org.bitcoinj.store.TransactionalHashMap"
+            genericValueType: "java.lang.Object,java.lang.Object"
+            uuid: "<init>_transactionalHashMap1"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.store.TransactionalMultiKeyHashMap"
+      genericValueType: "java.lang.Object, java.lang.Object, java.lang.Object"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.store.TransactionalHashMap"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.store.TransactionalHashMap"
+      genericValueType: "java.lang.Object,java.lang.Object"
+      uuid: "<init>_transactionalHashMap1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "AbortTransaction_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      uuid: "uuid3"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "get"
+    signature: "get(java.lang.Object) : java.lang.Object"
+    sourceCodeSignature: "ValueType get(UniqueKeyType key)"
+    instructionFingerprint: "FABC326CE17DBE637C1B86A1F7235272"
+  paths:
+  - pathId: "path1"
+    testPathName: "getTest"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "B62102D7E55CC4C21C2978199AC5145F"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "key"
+      modelFingerprint: "BB10A065F1B4C22BDC52BA18FF97EC6E"
+      index: 2
+      valueUuid: "get_object1"
+    - type: "FIELD"
+      name: "mapValues"
+      modelFingerprint: "A0CC4FC67DE41FC008613896418EC12B"
+      index: 3
+      valueUuid: "<init>_transactionalHashMap1"
+      methodExercised:
+        target: "this.mapValues"
+        name: "get"
+        parameters:
+        - name: "value"
+          valueUuid: "get_object1"
+        signature: "get(Object): Object"
+        returnValueUuid: "get_object2"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "CFEA7BD95337D41CD47C95A00CCF58BB"
+      index: 4
+      valueUuid: "get_object2"
+    uuid: "9c25887d-767d-38e9-b5ae-c2e4012c49be"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.store.TransactionalMultiKeyHashMap"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+        propertiesMap:
+          mapValues:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.store.TransactionalHashMap"
+            genericValueType: "java.lang.Object,java.lang.Object"
+            uuid: "<init>_transactionalHashMap1"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.store.TransactionalMultiKeyHashMap"
+      genericValueType: "java.lang.Object, java.lang.Object, java.lang.Object"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.lang.Object"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.Object"
+      uuid: "get_object1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.store.TransactionalHashMap"
+      genericValueType: "java.lang.Object,java.lang.Object"
+      uuid: "<init>_transactionalHashMap1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<method_return_from_value>
+        target: "java.lang.Object"
+        localVariableValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.store.TransactionalHashMap"
+          genericValueType: "java.lang.Object,java.lang.Object"
+          uuid: "<init>_transactionalHashMap1"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        methodParameters:
+        - name: "value"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "java.lang.Object"
+              parameters: []
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "java.lang.Object"
+            uuid: "get_object1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        methodName: "get"
+      valueType: "java.lang.Object"
+      uuid: "get_object2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.lang.Object"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.Object"
+      uuid: "get_object1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<method_return_from_value>
+        target: "java.lang.Object"
+        localVariableValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.store.TransactionalHashMap"
+          genericValueType: "java.lang.Object,java.lang.Object"
+          uuid: "<init>_transactionalHashMap1"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        methodParameters:
+        - name: "value"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "java.lang.Object"
+              parameters: []
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "java.lang.Object"
+            uuid: "get_object1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        methodName: "get"
+      valueType: "java.lang.Object"
+      uuid: "get_object2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "put"
+    signature: "put(java.lang.Object,java.lang.Object,java.lang.Object) : void"
+    sourceCodeSignature: "void put(UniqueKeyType uniqueKey, MultiKeyType multiKey,\
+      \ ValueType value)"
+    instructionFingerprint: "7A0872AC6E021765E0B8653A37132884"
+  paths:
+  - pathId: "path1"
+    testPathName: "putWhenSetIsNull"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "618E62410CD041A3B6C7ECC7F4DF490E"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "uniqueKey"
+      modelFingerprint: "9D93E806BB67861C220968302D32E218"
+      index: 2
+      valueUuid: "put_object1"
+    - type: "INPUT"
+      name: "multiKey"
+      modelFingerprint: "5B31696B0C17512EE4312423EA103815"
+      index: 3
+      valueUuid: "put_object2"
+    - type: "INPUT"
+      name: "value"
+      modelFingerprint: "718139F4601F12A322C1CD74BE17B261"
+      index: 4
+      valueUuid: "put_object3"
+    - type: "FIELD"
+      name: "mapValues"
+      modelFingerprint: "5DE191456B9331105936895D5690B18B"
+      index: 5
+      valueUuid: "<init>_transactionalHashMap1"
+      methodExercised:
+        target: "this.mapValues"
+        name: "put"
+        parameters:
+        - name: "key"
+          valueUuid: "put_object1"
+        - name: "value"
+          valueUuid: "put_object3"
+        signature: "put(Object,Object): void"
+        returnValueUuid: "put_void1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 6
+      valueUuid: "uuid4"
+    uuid: "41653620-2a9b-3c46-8b79-25f8bbf36c23"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.store.TransactionalMultiKeyHashMap"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+        propertiesMap:
+          mapValues:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.store.TransactionalHashMap"
+            genericValueType: "java.lang.Object,java.lang.Object"
+            uuid: "<init>_transactionalHashMap1"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.store.TransactionalMultiKeyHashMap"
+      genericValueType: "java.lang.Object, java.lang.Object, java.lang.Object"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.lang.Object"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.Object"
+      uuid: "put_object1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.lang.Object"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.Object"
+      uuid: "put_object2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.lang.Object"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.Object"
+      uuid: "put_object3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.store.TransactionalHashMap"
+      genericValueType: "java.lang.Object,java.lang.Object"
+      uuid: "<init>_transactionalHashMap1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "put_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.lang.Object"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.Object"
+      uuid: "put_object1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.lang.Object"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.Object"
+      uuid: "put_object3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      uuid: "uuid4"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "removeByUniqueKey"
+    signature: "removeByUniqueKey(java.lang.Object) : java.lang.Object"
+    sourceCodeSignature: "ValueType removeByUniqueKey(UniqueKeyType key)"
+    instructionFingerprint: "C8318A0454C7161B968F1A883516A198"
+  paths:
+  - pathId: "path1"
+    testPathName: "removeByUniqueKeyTest"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "12CCA8E4E40260B35F1DF7BB2FB25132"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "key"
+      modelFingerprint: "BB10A065F1B4C22BDC52BA18FF97EC6E"
+      index: 2
+      valueUuid: "removeByUniqueKey_object1"
+    - type: "FIELD"
+      name: "mapValues"
+      modelFingerprint: "C72CFEDF6EF8213AE2F72FE05E795465"
+      index: 3
+      valueUuid: "<init>_transactionalHashMap1"
+      methodExercised:
+        target: "this.mapValues"
+        name: "remove"
+        parameters:
+        - name: "tempVal"
+          valueUuid: "removeByUniqueKey_object1"
+        signature: "remove(Object): Object"
+        returnValueUuid: "removeByUniqueKey_object2"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "16C82BFC3368FCFB457373156980B0A7"
+      index: 4
+      valueUuid: "removeByUniqueKey_object2"
+    uuid: "bb9c92a1-f34a-3b3a-9997-40367ebee9ef"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.store.TransactionalMultiKeyHashMap"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+        propertiesMap:
+          mapValues:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.store.TransactionalHashMap"
+            genericValueType: "java.lang.Object,java.lang.Object"
+            uuid: "<init>_transactionalHashMap1"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.store.TransactionalMultiKeyHashMap"
+      genericValueType: "java.lang.Object, java.lang.Object, java.lang.Object"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.lang.Object"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.Object"
+      uuid: "removeByUniqueKey_object1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.store.TransactionalHashMap"
+      genericValueType: "java.lang.Object,java.lang.Object"
+      uuid: "<init>_transactionalHashMap1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<method_return_from_value>
+        target: "java.lang.Object"
+        localVariableValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.store.TransactionalHashMap"
+          genericValueType: "java.lang.Object,java.lang.Object"
+          uuid: "<init>_transactionalHashMap1"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        methodParameters:
+        - name: "tempVal"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "java.lang.Object"
+              parameters: []
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "java.lang.Object"
+            uuid: "removeByUniqueKey_object1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        methodName: "remove"
+      valueType: "java.lang.Object"
+      uuid: "removeByUniqueKey_object2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.lang.Object"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.Object"
+      uuid: "removeByUniqueKey_object1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<method_return_from_value>
+        target: "java.lang.Object"
+        localVariableValue:
+          sapientType: "MOCK"
+          valueType: "org.bitcoinj.store.TransactionalHashMap"
+          genericValueType: "java.lang.Object,java.lang.Object"
+          uuid: "<init>_transactionalHashMap1"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        methodParameters:
+        - name: "tempVal"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "java.lang.Object"
+              parameters: []
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "java.lang.Object"
+            uuid: "removeByUniqueKey_object1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        methodName: "remove"
+      valueType: "java.lang.Object"
+      uuid: "removeByUniqueKey_object2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "removeByMultiKey"
+    signature: "removeByMultiKey(java.lang.Object) : void"
+    sourceCodeSignature: "void removeByMultiKey(MultiKeyType key)"
+    instructionFingerprint: "E70EA9E5C1EC43569A44A198CB28DA93"
+  paths:
+  - pathId: "path1"
+    testPathName: "removeByMultiKeyWhenSetIsNull"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "7881400B1C5C23AB0F0C024F4A395785"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "key"
+      modelFingerprint: "BB10A065F1B4C22BDC52BA18FF97EC6E"
+      index: 2
+      valueUuid: "removeByMultiKey_object1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 3
+      valueUuid: "uuid5"
+    uuid: "93a37ec3-b3bf-348f-9153-ae969a5fb211"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.store.TransactionalMultiKeyHashMap"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.store.TransactionalMultiKeyHashMap"
+      genericValueType: "java.lang.Object, java.lang.Object, java.lang.Object"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.lang.Object"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.Object"
+      uuid: "removeByMultiKey_object1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      uuid: "uuid5"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false

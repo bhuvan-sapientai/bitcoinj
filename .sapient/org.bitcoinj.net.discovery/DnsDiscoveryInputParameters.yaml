@@ -1,0 +1,184 @@
+---
+modelFingerprint: "8C17A0F465BE23CAC4DED192551D6EB5"
+methods:
+- method:
+    name: "createExecutor"
+    signature: "createExecutor() : java.util.concurrent.ExecutorService"
+    sourceCodeSignature: "ExecutorService createExecutor()"
+    instructionFingerprint: "70EEE58C4D404FF064859BA5229C6623"
+  paths:
+  - pathId: "path1"
+    testPathName: "createExecutorTest"
+    constructorSignature: "<init>(java.lang.String[],org.bitcoinj.base.Network) :\
+      \ void"
+    modelFingerprint: "57846797B926C200A11EF752D1956170"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "680850EF6A1A69C484360799FF61CE61"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "60A6CF81A4B62FC26CAD9062FF6E1448"
+      index: 2
+      valueUuid: "uuid2"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid1"
+        signature: "checkArgument(boolean): void"
+        returnValueUuid: "<init>_void1"
+        access: 9
+    - type: "STATIC"
+      name: "NetworkParameters"
+      modelFingerprint: "A7C0BDDF05E6EFE02EB4F8BA87B413C1"
+      index: 3
+      valueUuid: "uuid3"
+      methodExercised:
+        target: "org.bitcoinj.core.NetworkParameters"
+        name: "of"
+        parameters:
+        - name: "network"
+          valueUuid: "<init>_network1"
+        signature: "of(Network): NetworkParameters"
+        returnValueUuid: "<init>_networkParameters1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "1B4135473B111B5EA9277298B05A3885"
+      index: 4
+      valueUuid: "createExecutor_executorService1"
+    uuid: "57e52633-2497-3d26-a12d-63324ebc60fe"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_CALL_INSTRUCTION_CONSTRUCTION_FAILURE"
+      source: "discoveries.add(new DnsSeedDiscovery(network, seed));"
+      lineNumber: 91
+      details: "No constructor found to create an object without any exception for\
+        \ class org.bitcoinj.net.discovery.DnsDiscovery$DnsSeedDiscovery"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.net.discovery.DnsDiscovery"
+        parameters:
+        - name: "dnsSeeds"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: "dnsSeedsItem1"
+                  valueType: "java.lang.String"
+                  uuid: "buildDiscoveries_string1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "java.lang.String[]"
+            uuid: "<init>_string[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "network"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Network"
+            uuid: "<init>_network1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.net.discovery.DnsDiscovery"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "uuid3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.NetworkParameters"
+      uuid: "<init>_networkParameters1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Network"
+      uuid: "<init>_network1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.util.concurrent.Executors"
+        method: "newFixedThreadPool"
+        methodParameters:
+        - value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "int"
+            uuid: "createExecutor_int1"
+            fixed: false
+            collectionUuid: "buildDiscoveries_arrayList1"
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "org.bitcoinj.utils.DaemonThreadFactory"
+              parameters:
+              - name: "name"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: "DNS seed lookups"
+                  valueType: "java.lang.String"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: true
+            valueType: "org.bitcoinj.utils.DaemonThreadFactory"
+            uuid: "createExecutor_daemonThreadFactory1"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.util.concurrent.ExecutorService"
+      uuid: "createExecutor_executorService1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false

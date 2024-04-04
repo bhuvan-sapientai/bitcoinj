@@ -1,0 +1,62 @@
+---
+modelFingerprint: "2F6FF0F94321381269D415F44A63277A"
+methods:
+- method:
+    name: "toString"
+    signature: "toString() : java.lang.String"
+    sourceCodeSignature: "String toString()"
+    instructionFingerprint: "F1CAE3365FB4EC974401A46A76484A1D"
+  paths:
+  - pathId: "path1"
+    testPathName: "toStringTest"
+    constructorSignature: "<init>(java.lang.String) : void"
+    modelFingerprint: "24A40D1D6517E17BF3546AE5925CA3BB"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "B35F492ED6A50C55408626D900A6BD02"
+      index: 1
+      valueUuid: "target"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "0EDC8992A47270CB045E94DA4AEC2CC9"
+      index: 2
+      valueUuid: "toString_string1"
+    uuid: "363d3698-f34c-39ad-914f-376a19498023"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.UnknownMessage"
+        parameters:
+        - name: "name"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "A"
+            valueType: "java.lang.String"
+            uuid: "<init>_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.core.UnknownMessage"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "Unknown message [A]"
+      valueType: "java.lang.String"
+      uuid: "toString_string1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false

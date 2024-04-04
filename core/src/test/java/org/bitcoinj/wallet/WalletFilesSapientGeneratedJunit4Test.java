@@ -1,0 +1,188 @@
+package org.bitcoinj.wallet;
+
+import org.junit.rules.Timeout;
+import org.junit.Rule;
+import org.junit.Test;
+
+import java.io.IOException;
+
+import org.junit.Ignore;
+import org.junit.rules.ExpectedException;
+
+import java.io.FileNotFoundException;
+
+import org.bitcoinj.base.internal.TimeUtils;
+import org.bitcoinj.base.Sha256Hash;
+import org.bitcoinj.base.internal.Stopwatch;
+
+import java.util.concurrent.TimeUnit;
+
+import org.mockito.MockedStatic;
+
+import java.io.File;
+import java.util.Optional;
+import java.time.Instant;
+
+import static org.mockito.Mockito.doNothing;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.atLeast;
+import static org.mockito.Mockito.mock;
+import static org.hamcrest.core.IsInstanceOf.instanceOf;
+import static org.mockito.Mockito.mockStatic;
+import static org.mockito.Mockito.doReturn;
+import static org.hamcrest.Matchers.is;
+
+public class WalletFilesSapientGeneratedJunit4Test {
+
+    @Rule()
+    public Timeout timeoutRule = Timeout.seconds(5);
+
+    private final Wallet walletMock = mock(Wallet.class, "wallet");
+
+    private final Sha256Hash sha256HashMock = mock(Sha256Hash.class);
+
+    @Rule()
+    public ExpectedException thrown = ExpectedException.none();
+
+    //Sapient generated method id: ${33d93db6-b323-3f6d-961d-10c273404938}, hash: 7BC75A72A9303BD1EC5A515D32463806
+    @Test()
+    public void setListenerTest() {
+        //Arrange Statement(s)
+        File file = new File("pathname1");
+        WalletFiles target = new WalletFiles(walletMock, file, 0L, TimeUnit.NANOSECONDS);
+        WalletFiles.Listener walletFilesListenerMock = mock(WalletFiles.Listener.class);
+        //Act Statement(s)
+        target.setListener(walletFilesListenerMock);
+    }
+
+    //Sapient generated method id: ${64f96677-f12b-3bca-9163-3f25ee0bdc58}, hash: BB2C010CCB1B4D76C60394B83A906852
+    @Ignore()
+    @Test()
+    public void saveNowWhenDirectoryNotExistsThrowsFileNotFoundException() throws IOException {
+        /* Branches:
+         * (executor.isShutdown()) : false
+         * (!directory.exists()) : true  #  inside saveNowInternal method
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        try (MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class)) {
+            timeUtils.when(() -> TimeUtils.dateTimeFormat((Instant) any())).thenReturn("return_of_dateTimeFormat1");
+            File file = new File("pathname1");
+            WalletFiles target = new WalletFiles(walletMock, file, 0L, TimeUnit.NANOSECONDS);
+            doReturn(0).when(walletMock).getLastBlockSeenHeight();
+            Instant instant = Instant.ofEpochSecond(1700000000);
+            doReturn(Optional.of(instant)).when(walletMock).lastBlockSeenTime();
+            doReturn(sha256HashMock).when(walletMock).getLastBlockSeenHash();
+            FileNotFoundException fileNotFoundException = new FileNotFoundException(" (wallet directory not found)");
+            thrown.expect(FileNotFoundException.class);
+            thrown.expectMessage(fileNotFoundException.getMessage());
+            //Act Statement(s)
+            target.saveNow();
+            //Assert statement(s)
+            timeUtils.verify(() -> TimeUtils.dateTimeFormat((Instant) any()));
+            verify(walletMock).getLastBlockSeenHeight();
+            verify(walletMock).lastBlockSeenTime();
+            verify(walletMock).getLastBlockSeenHash();
+        }
+    }
+
+    //Sapient generated method id: ${ccb4660a-47a2-3fea-bd8e-57462e7fddb8}, hash: 19445C2802FB884B4F20CCCCFDF40DD1
+    @Ignore()
+    @Test()
+    public void saveNowWhenListenerIsNull() throws IOException {
+        /* Branches:
+         * (executor.isShutdown()) : false
+         * (!directory.exists()) : false  #  inside saveNowInternal method
+         * (listener != null) : false  #  inside saveNowInternal method
+         * (listener != null) : false  #  inside saveNowInternal method
+         *
+         * TODO: Help needed! Please adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        try (MockedStatic<TimeUtils> timeUtils = mockStatic(TimeUtils.class)) {
+            timeUtils.when(() -> TimeUtils.dateTimeFormat((Instant) any())).thenReturn("return_of_dateTimeFormat1");
+            File file = new File("pathname1");
+            WalletFiles target = new WalletFiles(walletMock, file, 0L, TimeUnit.NANOSECONDS);
+            doReturn(0).when(walletMock).getLastBlockSeenHeight();
+            Instant instant = Instant.ofEpochSecond(1700000000);
+            doReturn(Optional.of(instant)).when(walletMock).lastBlockSeenTime();
+            doReturn(sha256HashMock).when(walletMock).getLastBlockSeenHash();
+            File file2 = new File("pathname1");
+            doNothing().when(walletMock).saveToFile(file2, file);
+            //Act Statement(s)
+            target.saveNow();
+            //Assert statement(s)
+            timeUtils.verify(() -> TimeUtils.dateTimeFormat((Instant) any()));
+            verify(walletMock).getLastBlockSeenHeight();
+            verify(walletMock).lastBlockSeenTime();
+            verify(walletMock).getLastBlockSeenHash();
+            verify(walletMock).saveToFile(file2, file);
+        }
+    }
+
+    //Sapient generated method id: ${0524be10-41b8-3186-bf70-4ef597746e8d}, hash: D50C21F512C439274BF18230D0799180
+    @Ignore()
+    @Test()
+    public void saveLaterWhenSavePendingNotGetAndSetTrue() {
+        /* Branches:
+         * (executor.isShutdown()) : false
+         * (savePending.getAndSet(true)) : false
+         *
+         * TODO: Help needed! This method is not unit testable!
+         *  Following variables could not be isolated/mocked: executor
+         *  Suggestions:
+         *  You can pass them as constructor arguments or create a setter for them (avoid new operator)
+         *  or adjust the input/test parameter values manually to satisfy the requirements of the given test scenario.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        File file = new File("pathname1");
+        WalletFiles target = new WalletFiles(walletMock, file, 0L, TimeUnit.NANOSECONDS);
+        //Act Statement(s)
+        target.saveLater();
+    }
+
+    //Sapient generated method id: ${7b5fac9d-b61e-36a3-89f5-75f3af2d86ec}, hash: 723DA0857193CAEEA9EB93362D3881B1
+    @Ignore(value = "Potential harmful system call (ScheduledThreadPoolExecutor.shutdown, ScheduledThreadPoolExecutor.awaitTermination) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Test()
+    public void shutdownAndWaitTest() throws InterruptedException {
+        /*
+         * TODO: Help needed! This method is not unit testable!
+         *  Potential harmful system call (ScheduledThreadPoolExecutor.shutdown, ScheduledThreadPoolExecutor.awaitTermination) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests
+         *  Suggestions:
+         *  This method should be avoided from unit testing. This can be covered during integration testing.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        File file = new File("pathname1");
+        WalletFiles target = new WalletFiles(walletMock, file, 0L, TimeUnit.NANOSECONDS);
+        //Act Statement(s)
+        target.shutdownAndWait();
+    }
+
+    //Sapient generated method id: ${cf21a120-9078-3942-99d4-3742d3b48a91}, hash: BA4B75E3C253ED70D482E3A6D3BC7FAD
+    @Ignore(value = "Potential harmful system call (ScheduledThreadPoolExecutor.shutdown, ScheduledThreadPoolExecutor.awaitTermination) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests")
+    @Test()
+    public void shutdownAndWaitWhenCaughtInterruptedExceptionThrowsRuntimeException() throws InterruptedException {
+        /* Branches:
+         * (catch-exception (InterruptedException)) : true
+         *
+         * TODO: Help needed! This method is not unit testable!
+         *  Potential harmful system call (ScheduledThreadPoolExecutor.shutdown, ScheduledThreadPoolExecutor.awaitTermination) detected; Learn more: https://github.com/Sapient-AI/docs#disabled-generated-tests
+         *  Suggestions:
+         *  This method should be avoided from unit testing. This can be covered during integration testing.
+         *  The test code, including the assertion statements, has been successfully generated.
+         */
+        //Arrange Statement(s)
+        File file = new File("pathname1");
+        WalletFiles target = new WalletFiles(walletMock, file, 0L, TimeUnit.NANOSECONDS);
+        thrown.expect(RuntimeException.class);
+        thrown.expectCause(is(instanceOf(InterruptedException.class)));
+        //Act Statement(s)
+        target.shutdownAndWait();
+    }
+}

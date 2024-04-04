@@ -1,0 +1,1148 @@
+---
+modelFingerprint: "058FBD132C29C965ACFA6766A3E158FF"
+methods:
+- method:
+    name: "start"
+    signature: "start() : org.bitcoinj.base.internal.Stopwatch"
+    sourceCodeSignature: "Stopwatch start()"
+    instructionFingerprint: "04883BD32168E94A0DAC03DD060B7065"
+  paths:
+  - pathId: "path1"
+    testPathName: "startTest"
+    modelFingerprint: "B2C9F388DE405FBF6D82E3848F307451"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC"
+      name: "Instant"
+      modelFingerprint: "BE1699D9B85ACD4DB9DD4E09EA819365"
+      index: 1
+      valueUuid: "uuid1"
+      methodExercised:
+        target: "java.time.Instant"
+        name: "now"
+        parameters: []
+        signature: "now(): Instant"
+        returnValueUuid: "<init>_instant1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "5AACEB57D3FFB9AF0113DAE9D7BF62E1"
+      index: 2
+      valueUuid: "start_stopwatch1"
+    uuid: "a9331398-240e-36aa-9522-b3dc4bcf14ad"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "MOCK"
+      valueType: "java.time.Instant"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.time.Instant"
+        method: "ofEpochSecond"
+        methodParameters:
+        - name: "epochSecond"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1700000000
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.time.Instant"
+      uuid: "<init>_instant1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.base.internal.Stopwatch"
+        parameters: []
+        privateConstructor: true
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.base.internal.Stopwatch"
+      uuid: "start_stopwatch1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "stop"
+    signature: "stop() : org.bitcoinj.base.internal.Stopwatch"
+    sourceCodeSignature: "Stopwatch stop()"
+    instructionFingerprint: "AC10269D21A259F30D748DE8499C78AD"
+  paths:
+  - pathId: "path1"
+    testPathName: "stopWhenIsRunning"
+    constructorSignature: "start() : org.bitcoinj.base.internal.Stopwatch"
+    modelFingerprint: "04000DE5BE298B54905A327291C13021"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "Instant"
+      modelFingerprint: "BE1699D9B85ACD4DB9DD4E09EA819365"
+      index: 2
+      valueUuid: "uuid2"
+      methodExercised:
+        target: "java.time.Instant"
+        name: "now"
+        parameters: []
+        signature: "now(): Instant"
+        returnValueUuid: "<init>_instant1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "5AA553E98DA4C3D57ED30564C215F872"
+      index: 3
+      methodExercised:
+        target: "target"
+        name: "isRunning"
+        parameters: []
+        signature: "isRunning(): boolean"
+        returnValueUuid: "stop_boolean1"
+        access: 1
+    - type: "STATIC"
+      name: "Instant"
+      modelFingerprint: "C757E47002BEE2D67082C9E76CA4E2FB"
+      index: 4
+      valueUuid: "uuid3"
+      methodExercised:
+        target: "java.time.Instant"
+        name: "now"
+        parameters: []
+        signature: "now(): Instant"
+        returnValueUuid: "stop_instant1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "E154CAFA9866016AF2B01782EE65B21D"
+      index: 5
+      valueUuid: "targetClassObject"
+    uuid: "8b691c45-8849-3865-a710-9f1938dc8fe1"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.internal.Stopwatch"
+        method: "start"
+        methodParameters: []
+      valueType: "org.bitcoinj.base.internal.Stopwatch"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.time.Instant"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.time.Instant"
+        method: "ofEpochSecond"
+        methodParameters:
+        - name: "epochSecond"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1700000000
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.time.Instant"
+      uuid: "<init>_instant1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "stop_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.time.Instant"
+      uuid: "uuid3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.time.Instant"
+        method: "ofEpochSecond"
+        methodParameters:
+        - name: "epochSecond"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1700000000
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.time.Instant"
+      uuid: "stop_instant1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "THIS"
+      valueType: "org.bitcoinj.base.internal.Stopwatch"
+      uuid: "targetClassObject"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "stopWhenIsRunningNot"
+    constructorSignature: "start() : org.bitcoinj.base.internal.Stopwatch"
+    modelFingerprint: "C2828F9748C334628996026BAF4730DC"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "7a94fe9b-c517-3ffb-8ced-53e4ffaa53f9"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "isRunning"
+    signature: "isRunning() : boolean"
+    sourceCodeSignature: "boolean isRunning()"
+    instructionFingerprint: "8EBE46189ACFD700C7B2DAED1B9A53BE"
+  paths:
+  - pathId: "path1"
+    testPathName: "isRunningWhenStopTimeIsNull"
+    constructorSignature: "start() : org.bitcoinj.base.internal.Stopwatch"
+    modelFingerprint: "69EC003D97B88EB95203CAE137C8D962"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "Instant"
+      modelFingerprint: "BE1699D9B85ACD4DB9DD4E09EA819365"
+      index: 2
+      valueUuid: "uuid5"
+      methodExercised:
+        target: "java.time.Instant"
+        name: "now"
+        parameters: []
+        signature: "now(): Instant"
+        returnValueUuid: "<init>_instant1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "753659628F1B3F179A2EF0629F555437"
+      index: 3
+      valueUuid: "uuid6"
+    uuid: "0ad2b469-3c49-34f9-8a63-6bb6b74df584"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.internal.Stopwatch"
+        method: "start"
+        methodParameters: []
+      valueType: "org.bitcoinj.base.internal.Stopwatch"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.time.Instant"
+      uuid: "uuid5"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.time.Instant"
+        method: "ofEpochSecond"
+        methodParameters:
+        - name: "epochSecond"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1700000000
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.time.Instant"
+      uuid: "<init>_instant1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid6"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "elapsed"
+    signature: "elapsed() : java.time.Duration"
+    sourceCodeSignature: "Duration elapsed()"
+    instructionFingerprint: "3A594B7A0601EAF1E318F404AF264E3C"
+  paths:
+  - pathId: "path1"
+    testPathName: "elapsedWhenIsRunning"
+    constructorSignature: "start() : org.bitcoinj.base.internal.Stopwatch"
+    modelFingerprint: "027D15982060DE371C8B19BCAA88196F"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "Instant"
+      modelFingerprint: "91F3BAB5E83A0D912198B8BA1F19ED09"
+      index: 2
+      valueUuid: "uuid7"
+      methodExercised:
+        target: "java.time.Instant"
+        name: "now"
+        parameters: []
+        signature: "now(): Instant"
+        returnValueUuid: "<init>_instant1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "5AA553E98DA4C3D57ED30564C215F872"
+      index: 3
+      methodExercised:
+        target: "target"
+        name: "isRunning"
+        parameters: []
+        signature: "isRunning(): boolean"
+        returnValueUuid: "elapsed_boolean1"
+        access: 1
+    - type: "STATIC"
+      name: "Instant"
+      modelFingerprint: "91F3BAB5E83A0D912198B8BA1F19ED09"
+      index: 4
+      valueUuid: "uuid8"
+      methodExercised:
+        target: "java.time.Instant"
+        name: "now"
+        parameters: []
+        signature: "now(): Instant"
+        returnValueUuid: "elapsed_instant1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "9B85EDF153F11E4BDED1A26C6C5A02D4"
+      index: 5
+      valueUuid: "elapsed_duration1"
+    uuid: "e2f476bb-c28c-39a7-9a72-0b234e1920b6"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.time.Duration.between(java.time.Instant,java.time.Instant)\
+        \ : java.time.Duration"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.internal.Stopwatch"
+        method: "start"
+        methodParameters: []
+      valueType: "org.bitcoinj.base.internal.Stopwatch"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.time.Instant"
+      uuid: "uuid7"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.time.Instant"
+        method: "now"
+        methodParameters: []
+      valueType: "java.time.Instant"
+      uuid: "<init>_instant1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "elapsed_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.time.Instant"
+      uuid: "uuid8"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.time.Instant"
+        method: "now"
+        methodParameters: []
+      valueType: "java.time.Instant"
+      uuid: "elapsed_instant1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.time.Duration"
+        method: "ofDays"
+        methodParameters:
+        - name: "days"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "elapsed_duration1-days"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.time.Duration"
+      uuid: "elapsed_duration1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "elapsedWhenIsRunningNot"
+    constructorSignature: "start() : org.bitcoinj.base.internal.Stopwatch"
+    modelFingerprint: "A1938EB2D0EEF98B020B3D003A68F2FD"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "Instant"
+      modelFingerprint: "91F3BAB5E83A0D912198B8BA1F19ED09"
+      index: 2
+      valueUuid: "uuid9"
+      methodExercised:
+        target: "java.time.Instant"
+        name: "now"
+        parameters: []
+        signature: "now(): Instant"
+        returnValueUuid: "<init>_instant1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "EAE5DD9BE8BBFC7789A0E098A4C6B20A"
+      index: 3
+      methodExercised:
+        target: "target"
+        name: "isRunning"
+        parameters: []
+        signature: "isRunning(): boolean"
+        returnValueUuid: "elapsed_boolean1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "9B85EDF153F11E4BDED1A26C6C5A02D4"
+      index: 4
+      valueUuid: "elapsed_duration1"
+    uuid: "458ce76a-62e3-30e0-bfd8-695a48193e46"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.time.Duration.between(java.time.Instant,java.time.Instant)\
+        \ : java.time.Duration"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.internal.Stopwatch"
+        method: "start"
+        methodParameters: []
+      valueType: "org.bitcoinj.base.internal.Stopwatch"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.time.Instant"
+      uuid: "uuid9"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.time.Instant"
+        method: "now"
+        methodParameters: []
+      valueType: "java.time.Instant"
+      uuid: "<init>_instant1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "elapsed_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.time.Duration"
+        method: "ofDays"
+        methodParameters:
+        - name: "days"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "elapsed_duration1-days"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.time.Duration"
+      uuid: "elapsed_duration1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "get"
+    signature: "get(java.time.temporal.TemporalUnit) : long"
+    sourceCodeSignature: "long get(TemporalUnit temporalUnit)"
+    instructionFingerprint: "F047368B1F4BC5549FDC60F338655B68"
+  paths:
+  - pathId: "path1"
+    testPathName: "getTest"
+    constructorSignature: "start() : org.bitcoinj.base.internal.Stopwatch"
+    modelFingerprint: "0714A9586FD842C94A5DB955956DD6ED"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "temporalUnit"
+      modelFingerprint: "BB5BBEC15D30FF5EFDE26CDB23899445"
+      index: 2
+      valueUuid: "get_temporalUnit1"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "B615FD3336067FFAD5DFC8769E2A2209"
+      index: 3
+      valueUuid: "uuid3"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "get_boolean1"
+        - name: "messageSupplier"
+          valueUuid: "uuid1"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "uuid2"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "3E9C76AB51311DE97AE9C2294CD5E1D6"
+      index: 4
+      valueUuid: "uuid4"
+    uuid: "9c25887d-767d-38e9-b5ae-c2e4012c49be"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.internal.Stopwatch"
+        method: "start"
+        methodParameters: []
+      valueType: "org.bitcoinj.base.internal.Stopwatch"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.time.temporal.TemporalUnit"
+      uuid: "get_temporalUnit1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.IllegalArgumentException"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.IllegalArgumentException"
+      uuid: "uuid2"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "get_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.IllegalArgumentException"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.IllegalArgumentException"
+      uuid: "uuid4"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "getUnits"
+    signature: "getUnits() : java.util.List<java.time.temporal.TemporalUnit>"
+    sourceCodeSignature: "List<TemporalUnit> getUnits()"
+    instructionFingerprint: "AD2725BF733D4EDCF601517BB6A09F04"
+  paths:
+  - pathId: "path1"
+    testPathName: "getUnitsTest"
+    constructorSignature: "start() : org.bitcoinj.base.internal.Stopwatch"
+    modelFingerprint: "15D6099104B73D383971FE28150F8878"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "Instant"
+      modelFingerprint: "BE1699D9B85ACD4DB9DD4E09EA819365"
+      index: 2
+      valueUuid: "uuid13"
+      methodExercised:
+        target: "java.time.Instant"
+        name: "now"
+        parameters: []
+        signature: "now(): Instant"
+        returnValueUuid: "<init>_instant1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "9FAC6DACC0B7D1C87FA1C047715D66A1"
+      index: 3
+      valueUuid: "getUnits_list1"
+    uuid: "77dd7c1d-eacf-3f7b-8351-0eb312695635"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.internal.Stopwatch"
+        method: "start"
+        methodParameters: []
+      valueType: "org.bitcoinj.base.internal.Stopwatch"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.time.Instant"
+      uuid: "uuid13"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.time.Instant"
+        method: "ofEpochSecond"
+        methodParameters:
+        - name: "epochSecond"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1700000000
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.time.Instant"
+      uuid: "<init>_instant1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        parameters: []
+        values:
+        - sapientType: "ENUM"
+          content: !<regular>
+            value: "MILLIS"
+          valueType: "java.time.temporal.ChronoUnit"
+          uuid: "Enum-java.time.temporal.ChronoUnit-MILLIS"
+          fixed: true
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+      valueType: "java.util.List"
+      genericValueType: "java.time.temporal.TemporalUnit"
+      uuid: "getUnits_list1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "addTo"
+    signature: "addTo(java.time.temporal.Temporal) : java.time.temporal.Temporal"
+    sourceCodeSignature: "Temporal addTo(Temporal temporal)"
+    instructionFingerprint: "6D2FD6F100926269AB07C99F1D23FFDA"
+  paths:
+  - pathId: "path1"
+    testPathName: "addToTest"
+    constructorSignature: "start() : org.bitcoinj.base.internal.Stopwatch"
+    modelFingerprint: "049C98D991E5750C94D9E6C0091CEC81"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "temporal"
+      modelFingerprint: "E3AC124F08B2FE711FF43F6239B378EC"
+      index: 2
+      valueUuid: "addTo_temporal1"
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "71C07394705707681A7FDB2B2BB06D00"
+      index: 3
+      methodExercised:
+        target: "target"
+        name: "elapsed"
+        parameters: []
+        signature: "elapsed(): Duration"
+        returnValueUuid: "addTo_duration1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      name: "temporal"
+      modelFingerprint: "C3CD6DFEB6C08614785EB479BAF6D0F6"
+      index: 4
+      valueUuid: "addTo_temporal1"
+      methodExercised:
+        target: "temporal"
+        name: "plus"
+        parameters:
+        - name: "amount"
+          valueUuid: "addTo_duration1"
+        signature: "plus(Duration): Temporal"
+        returnValueUuid: "addTo_temporal2"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "011095B668EDE4B19345C7DD92D5D9FB"
+      index: 5
+      valueUuid: "addTo_temporal2"
+    uuid: "37fda9a0-27b1-39d9-844c-155c12172b76"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.internal.Stopwatch"
+        method: "start"
+        methodParameters: []
+      valueType: "org.bitcoinj.base.internal.Stopwatch"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.time.temporal.Temporal"
+      uuid: "addTo_temporal1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.time.Duration"
+        method: "ofDays"
+        methodParameters:
+        - name: "days"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "addTo_duration1-days"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.time.Duration"
+      uuid: "addTo_duration1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.time.temporal.Temporal"
+      uuid: "addTo_temporal1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.time.temporal.Temporal"
+      uuid: "addTo_temporal2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.time.Duration"
+        method: "ofDays"
+        methodParameters:
+        - name: "days"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "addTo_duration1-days"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.time.Duration"
+      uuid: "addTo_duration1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.time.temporal.Temporal"
+      uuid: "addTo_temporal2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "subtractFrom"
+    signature: "subtractFrom(java.time.temporal.Temporal) : java.time.temporal.Temporal"
+    sourceCodeSignature: "Temporal subtractFrom(Temporal temporal)"
+    instructionFingerprint: "03D9F6251A024E81CDC42CB5A73008A1"
+  paths:
+  - pathId: "path1"
+    testPathName: "subtractFromTest"
+    constructorSignature: "start() : org.bitcoinj.base.internal.Stopwatch"
+    modelFingerprint: "955D4777ABFD28672C1A409A614657CF"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "temporal"
+      modelFingerprint: "E3AC124F08B2FE711FF43F6239B378EC"
+      index: 2
+      valueUuid: "subtractFrom_temporal1"
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "71C07394705707681A7FDB2B2BB06D00"
+      index: 3
+      methodExercised:
+        target: "target"
+        name: "elapsed"
+        parameters: []
+        signature: "elapsed(): Duration"
+        returnValueUuid: "subtractFrom_duration1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      name: "temporal"
+      modelFingerprint: "2CB3E5C99705E555E839290927A36BFE"
+      index: 4
+      valueUuid: "subtractFrom_temporal1"
+      methodExercised:
+        target: "temporal"
+        name: "minus"
+        parameters:
+        - name: "amount"
+          valueUuid: "subtractFrom_duration1"
+        signature: "minus(Duration): Temporal"
+        returnValueUuid: "subtractFrom_temporal2"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "011095B668EDE4B19345C7DD92D5D9FB"
+      index: 5
+      valueUuid: "subtractFrom_temporal2"
+    uuid: "5b4caf68-30d0-34d6-8e4d-e081a7ee3fdb"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.internal.Stopwatch"
+        method: "start"
+        methodParameters: []
+      valueType: "org.bitcoinj.base.internal.Stopwatch"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.time.temporal.Temporal"
+      uuid: "subtractFrom_temporal1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.time.Duration"
+        method: "ofDays"
+        methodParameters:
+        - name: "days"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "subtractFrom_duration1-days"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.time.Duration"
+      uuid: "subtractFrom_duration1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.time.temporal.Temporal"
+      uuid: "subtractFrom_temporal1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.time.temporal.Temporal"
+      uuid: "subtractFrom_temporal2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.time.Duration"
+        method: "ofDays"
+        methodParameters:
+        - name: "days"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "subtractFrom_duration1-days"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.time.Duration"
+      uuid: "subtractFrom_duration1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.time.temporal.Temporal"
+      uuid: "subtractFrom_temporal2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "toString"
+    signature: "toString() : java.lang.String"
+    sourceCodeSignature: "String toString()"
+    instructionFingerprint: "E8760F85BB8C7270FD533548CB5BDF3D"
+  paths:
+  - pathId: "path1"
+    testPathName: "toStringTest"
+    constructorSignature: "start() : org.bitcoinj.base.internal.Stopwatch"
+    modelFingerprint: "CC300CFE2FBECB2F561119FFA694D5D7"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "Instant"
+      modelFingerprint: "BE1699D9B85ACD4DB9DD4E09EA819365"
+      index: 2
+      valueUuid: "uuid16"
+      methodExercised:
+        target: "java.time.Instant"
+        name: "now"
+        parameters: []
+        signature: "now(): Instant"
+        returnValueUuid: "<init>_instant1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "71C07394705707681A7FDB2B2BB06D00"
+      index: 3
+      methodExercised:
+        target: "target"
+        name: "elapsed"
+        parameters: []
+        signature: "elapsed(): Duration"
+        returnValueUuid: "toString_duration1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "38FF519E07352D40D1DC0D833D9A2318"
+      index: 4
+      valueUuid: "toString_string1"
+    uuid: "363d3698-f34c-39ad-914f-376a19498023"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.time.Duration.toMillis() : long"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.internal.Stopwatch"
+        method: "start"
+        methodParameters: []
+      valueType: "org.bitcoinj.base.internal.Stopwatch"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.time.Instant"
+      uuid: "uuid16"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.time.Instant"
+        method: "ofEpochSecond"
+        methodParameters:
+        - name: "epochSecond"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1700000000
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.time.Instant"
+      uuid: "<init>_instant1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.time.Duration"
+        method: "ofDays"
+        methodParameters:
+        - name: "days"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "toString_duration1-days"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.time.Duration"
+      uuid: "toString_duration1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "2 ms"
+      valueType: "java.lang.String"
+      uuid: "toString_string1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false

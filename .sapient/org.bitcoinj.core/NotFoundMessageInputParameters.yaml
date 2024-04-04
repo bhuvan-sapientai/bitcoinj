@@ -1,0 +1,127 @@
+---
+modelFingerprint: "AADD8CD078AD1D3C860616EDB3C98C9B"
+methods:
+- method:
+    name: "read"
+    signature: "read(java.nio.ByteBuffer) : org.bitcoinj.core.NotFoundMessage"
+    sourceCodeSignature: "NotFoundMessage read(ByteBuffer payload)"
+    instructionFingerprint: "A8C7BEFF2E3473328DD3B52B9DE8DE90"
+  paths:
+  - pathId: "path1"
+    testPathName: "read1Test"
+    modelFingerprint: "B071C86F91FB8E06AC6EFDC28BBAB255"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "payload"
+      modelFingerprint: "D30B43598E2900E2880BDD9712DAE751"
+      index: 1
+      valueUuid: "read_byteBuffer1"
+    - type: "STATIC"
+      name: "ListMessage"
+      modelFingerprint: "F996D15D2E9E8CD5B039FA7C0EF1875C"
+      index: 2
+      valueUuid: "uuid1"
+      methodExercised:
+        target: "org.bitcoinj.core.ListMessage"
+        name: "readItems"
+        parameters:
+        - name: "typeCode"
+          valueUuid: "read_byteBuffer1"
+        throwsExceptions:
+        - "java.nio.BufferUnderflowException"
+        - "org.bitcoinj.core.ProtocolException"
+        signature: "readItems(ByteBuffer): List throws java.nio.BufferUnderflowException,org.bitcoinj.core.ProtocolException"
+        returnValueUuid: "read_list1"
+        access: 12
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "B991DE249CC9D950C454C043AF2C3280"
+      index: 3
+      valueUuid: "read_notFoundMessage1"
+    uuid: "9a54749b-a2d6-3bfc-8884-2b564dca3b2f"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "read_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.ListMessage"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        parameters: []
+        values: []
+      valueType: "java.util.List"
+      genericValueType: "org.bitcoinj.core.InventoryItem"
+      uuid: "read_list1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "read_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.NotFoundMessage"
+        parameters:
+        - name: "items"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              parameters: []
+              values: []
+            valueType: "java.util.List"
+            genericValueType: "org.bitcoinj.core.InventoryItem"
+            uuid: "read_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.core.NotFoundMessage"
+      uuid: "read_notFoundMessage1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false

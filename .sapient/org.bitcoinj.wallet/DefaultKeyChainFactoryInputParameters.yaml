@@ -1,0 +1,474 @@
+---
+modelFingerprint: "8DE04CBDDE0FF018252254C89B1884D0"
+methods:
+- method:
+    name: "makeKeyChain"
+    signature: "makeKeyChain(org.bitcoinj.wallet.DeterministicSeed,org.bitcoinj.crypto.KeyCrypter,org.bitcoinj.base.ScriptType,java.util.List<org.bitcoinj.crypto.ChildNumber>)\
+      \ : org.bitcoinj.wallet.DeterministicKeyChain"
+    sourceCodeSignature: "DeterministicKeyChain makeKeyChain(DeterministicSeed seed,\
+      \ KeyCrypter crypter, ScriptType outputScriptType, List<ChildNumber> accountPath)"
+    instructionFingerprint: "CD46300CE7F084090F69A79B72622466"
+  paths:
+  - pathId: "path1"
+    testPathName: "makeKeyChainTest"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "3A64B1ED602794E127A278F184C7ABFF"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "seed"
+      modelFingerprint: "6D95675195317F741FDA63D3E0EFA2DA"
+      index: 2
+      valueUuid: "makeKeyChain_deterministicSeed1"
+    - type: "INPUT"
+      name: "crypter"
+      modelFingerprint: "54D82D350B26481CFBCE9AF2863B26DE"
+      index: 3
+      valueUuid: "makeKeyChain_keyCrypter1"
+    - type: "INPUT"
+      name: "outputScriptType"
+      modelFingerprint: "3262D3D7AA38C31827496D23D9B0F158"
+      index: 4
+      valueUuid: "makeKeyChain_scriptType1"
+    - type: "INPUT"
+      name: "accountPath"
+      modelFingerprint: "486CB8D8543C355065FCD7D8BF588197"
+      index: 5
+      valueUuid: "makeKeyChain_list1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "785B4B30C5E03A28CDE2465F6BD67BED"
+      index: 6
+      valueUuid: "makeKeyChain_deterministicKeyChain1"
+    uuid: "6b7e2ac9-05c9-36dd-96dd-7b84572202cd"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_CALL_INSTRUCTION_CONSTRUCTION_FAILURE"
+      source: "return new DeterministicKeyChain(seed, crypter, outputScriptType, accountPath);"
+      lineNumber: 34
+      details: "No constructor found to create an object without any exception for\
+        \ class org.bitcoinj.wallet.DeterministicKeyChain"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.wallet.DefaultKeyChainFactory"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.wallet.DefaultKeyChainFactory"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.wallet.DeterministicSeed"
+      uuid: "makeKeyChain_deterministicSeed1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.KeyCrypter"
+      uuid: "makeKeyChain_keyCrypter1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ENUM"
+      content: !<regular>
+        value: "P2PKH"
+      valueType: "org.bitcoinj.base.ScriptType"
+      uuid: "makeKeyChain_scriptType1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "COLLECTION"
+      content: !<collection>
+        parameters: []
+        values: []
+      valueType: "java.util.List"
+      genericValueType: "org.bitcoinj.crypto.ChildNumber"
+      uuid: "makeKeyChain_list1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.wallet.DeterministicKeyChain"
+        parameters:
+        - name: "path"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.wallet.DeterministicSeed"
+            uuid: "makeKeyChain_deterministicSeed1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "creationTime"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.crypto.KeyCrypter"
+            uuid: "makeKeyChain_keyCrypter1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "seed"
+          value:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "P2PKH"
+            valueType: "org.bitcoinj.base.ScriptType"
+            uuid: "makeKeyChain_scriptType1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "crypter"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              parameters: []
+              values: []
+            valueType: "java.util.List"
+            genericValueType: "org.bitcoinj.crypto.ChildNumber"
+            uuid: "makeKeyChain_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.wallet.DeterministicKeyChain"
+      uuid: "makeKeyChain_deterministicKeyChain1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "makeWatchingKeyChain"
+    signature: "makeWatchingKeyChain(org.bitcoinj.crypto.DeterministicKey,org.bitcoinj.base.ScriptType)\
+      \ : org.bitcoinj.wallet.DeterministicKeyChain"
+    sourceCodeSignature: "DeterministicKeyChain makeWatchingKeyChain(DeterministicKey\
+      \ accountKey, ScriptType outputScriptType)"
+    instructionFingerprint: "C12BA18EA99872E9FB5A67596CC6DA4D"
+  paths:
+  - pathId: "path1"
+    testPathName: "makeWatchingKeyChainTest"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "CC385152BB547755DC8015DEE3E32A67"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "accountKey"
+      modelFingerprint: "D3AB171AD444E2F4D71C70E30124F97A"
+      index: 2
+      valueUuid: "makeWatchingKeyChain_deterministicKey1"
+    - type: "INPUT"
+      name: "outputScriptType"
+      modelFingerprint: "3262D3D7AA38C31827496D23D9B0F158"
+      index: 3
+      valueUuid: "makeWatchingKeyChain_scriptType1"
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "94BED1447F7DD191296225C6A2DBB3DD"
+      index: 4
+      valueUuid: "makeWatchingKeyChain_deterministicKeyChain.Builder1"
+      methodExercised:
+        target: "org.bitcoinj.wallet.DeterministicKeyChain$Builder"
+        name: "watch"
+        parameters:
+        - name: "accountKey"
+          valueUuid: "makeWatchingKeyChain_deterministicKey1"
+        signature: "watch(DeterministicKey): DeterministicKeyChain$Builder"
+        returnValueUuid: "makeWatchingKeyChain_deterministicKeyChain.Builder2"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "EEA2AD8B69AD6A309ACFD3A4A9488B10"
+      index: 5
+      valueUuid: "makeWatchingKeyChain_deterministicKeyChain.Builder2"
+      methodExercised:
+        target: "org.bitcoinj.wallet.DeterministicKeyChain$Builder"
+        name: "outputScriptType"
+        parameters:
+        - name: "outputScriptType"
+          valueUuid: "makeWatchingKeyChain_scriptType1"
+        signature: "outputScriptType(ScriptType): DeterministicKeyChain$Builder"
+        returnValueUuid: "makeWatchingKeyChain_deterministicKeyChain.Builder3"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "1B07795E15D83848C459A17C7C1B094D"
+      index: 6
+      valueUuid: "makeWatchingKeyChain_deterministicKeyChain.Builder3"
+      methodExercised:
+        target: "org.bitcoinj.wallet.DeterministicKeyChain$Builder"
+        name: "build"
+        parameters: []
+        signature: "build(): DeterministicKeyChain"
+        returnValueUuid: "makeWatchingKeyChain_deterministicKeyChain1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "03C05085A1F0864E10FCE15E8CF994CB"
+      index: 7
+      valueUuid: "makeWatchingKeyChain_deterministicKeyChain1"
+    uuid: "2f9277e5-88d1-3f0a-bd59-43bc0e17ceda"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_CALL_BUILDER_FUNCTION_NOT_ATTRIBUTE"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.wallet.DefaultKeyChainFactory"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.wallet.DefaultKeyChainFactory"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.DeterministicKey"
+      uuid: "makeWatchingKeyChain_deterministicKey1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ENUM"
+      content: !<regular>
+        value: "P2PKH"
+      valueType: "org.bitcoinj.base.ScriptType"
+      uuid: "makeWatchingKeyChain_scriptType1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.wallet.DeterministicKeyChain$Builder"
+      genericValueType: "?"
+      uuid: "makeWatchingKeyChain_deterministicKeyChain.Builder1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.wallet.DeterministicKeyChain$Builder"
+      uuid: "makeWatchingKeyChain_deterministicKeyChain.Builder2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.DeterministicKey"
+      uuid: "makeWatchingKeyChain_deterministicKey1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.wallet.DeterministicKeyChain$Builder"
+      uuid: "makeWatchingKeyChain_deterministicKeyChain.Builder2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.wallet.DeterministicKeyChain$Builder"
+      uuid: "makeWatchingKeyChain_deterministicKeyChain.Builder3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ENUM"
+      content: !<regular>
+        value: "P2PKH"
+      valueType: "org.bitcoinj.base.ScriptType"
+      uuid: "makeWatchingKeyChain_scriptType1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.wallet.DeterministicKeyChain$Builder"
+      uuid: "makeWatchingKeyChain_deterministicKeyChain.Builder3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.wallet.DeterministicKeyChain"
+      uuid: "makeWatchingKeyChain_deterministicKeyChain1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.wallet.DeterministicKeyChain"
+      uuid: "makeWatchingKeyChain_deterministicKeyChain1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "makeSpendingKeyChain"
+    signature: "makeSpendingKeyChain(org.bitcoinj.crypto.DeterministicKey,org.bitcoinj.base.ScriptType)\
+      \ : org.bitcoinj.wallet.DeterministicKeyChain"
+    sourceCodeSignature: "DeterministicKeyChain makeSpendingKeyChain(DeterministicKey\
+      \ accountKey, ScriptType outputScriptType)"
+    instructionFingerprint: "3B5DBA15D12FC0B81D40D5C0738B8680"
+  paths:
+  - pathId: "path1"
+    testPathName: "makeSpendingKeyChainTest"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "3B91A9A485BE9994B4A1277E04648418"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "accountKey"
+      modelFingerprint: "D3AB171AD444E2F4D71C70E30124F97A"
+      index: 2
+      valueUuid: "makeSpendingKeyChain_deterministicKey1"
+    - type: "INPUT"
+      name: "outputScriptType"
+      modelFingerprint: "3262D3D7AA38C31827496D23D9B0F158"
+      index: 3
+      valueUuid: "makeSpendingKeyChain_scriptType1"
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "866D9CDAADE9A4BCEB5481646151B268"
+      index: 4
+      valueUuid: "makeSpendingKeyChain_deterministicKeyChain.Builder1"
+      methodExercised:
+        target: "org.bitcoinj.wallet.DeterministicKeyChain$Builder"
+        name: "spend"
+        parameters:
+        - name: "accountKey"
+          valueUuid: "makeSpendingKeyChain_deterministicKey1"
+        signature: "spend(DeterministicKey): DeterministicKeyChain$Builder"
+        returnValueUuid: "makeSpendingKeyChain_deterministicKeyChain.Builder2"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "EEA2AD8B69AD6A309ACFD3A4A9488B10"
+      index: 5
+      valueUuid: "makeSpendingKeyChain_deterministicKeyChain.Builder2"
+      methodExercised:
+        target: "org.bitcoinj.wallet.DeterministicKeyChain$Builder"
+        name: "outputScriptType"
+        parameters:
+        - name: "outputScriptType"
+          valueUuid: "makeSpendingKeyChain_scriptType1"
+        signature: "outputScriptType(ScriptType): DeterministicKeyChain$Builder"
+        returnValueUuid: "makeSpendingKeyChain_deterministicKeyChain.Builder3"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "1B07795E15D83848C459A17C7C1B094D"
+      index: 6
+      valueUuid: "makeSpendingKeyChain_deterministicKeyChain.Builder3"
+      methodExercised:
+        target: "org.bitcoinj.wallet.DeterministicKeyChain$Builder"
+        name: "build"
+        parameters: []
+        signature: "build(): DeterministicKeyChain"
+        returnValueUuid: "makeSpendingKeyChain_deterministicKeyChain1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "03C05085A1F0864E10FCE15E8CF994CB"
+      index: 7
+      valueUuid: "makeSpendingKeyChain_deterministicKeyChain1"
+    uuid: "41593bf9-76fa-3d22-b0d1-ebe2f4bf9ac3"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_CALL_BUILDER_FUNCTION_NOT_ATTRIBUTE"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.wallet.DefaultKeyChainFactory"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.wallet.DefaultKeyChainFactory"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.DeterministicKey"
+      uuid: "makeSpendingKeyChain_deterministicKey1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ENUM"
+      content: !<regular>
+        value: "P2PKH"
+      valueType: "org.bitcoinj.base.ScriptType"
+      uuid: "makeSpendingKeyChain_scriptType1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.wallet.DeterministicKeyChain$Builder"
+      genericValueType: "?"
+      uuid: "makeSpendingKeyChain_deterministicKeyChain.Builder1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.wallet.DeterministicKeyChain$Builder"
+      uuid: "makeSpendingKeyChain_deterministicKeyChain.Builder2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.DeterministicKey"
+      uuid: "makeSpendingKeyChain_deterministicKey1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.wallet.DeterministicKeyChain$Builder"
+      uuid: "makeSpendingKeyChain_deterministicKeyChain.Builder2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.wallet.DeterministicKeyChain$Builder"
+      uuid: "makeSpendingKeyChain_deterministicKeyChain.Builder3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ENUM"
+      content: !<regular>
+        value: "P2PKH"
+      valueType: "org.bitcoinj.base.ScriptType"
+      uuid: "makeSpendingKeyChain_scriptType1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.wallet.DeterministicKeyChain$Builder"
+      uuid: "makeSpendingKeyChain_deterministicKeyChain.Builder3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.wallet.DeterministicKeyChain"
+      uuid: "makeSpendingKeyChain_deterministicKeyChain1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.wallet.DeterministicKeyChain"
+      uuid: "makeSpendingKeyChain_deterministicKeyChain1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false

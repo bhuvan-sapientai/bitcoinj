@@ -1,0 +1,158 @@
+---
+modelFingerprint: "E152CD16D9BBF0AE02AECA914384A2AE"
+methods:
+- method:
+    name: "toString"
+    signature: "toString() : java.lang.String"
+    sourceCodeSignature: "String toString()"
+    instructionFingerprint: "C1D90154C927C424446460DE244D0543"
+  paths:
+  - pathId: "path1"
+    testPathName: "toStringTest"
+    constructorSignature: "<init>(org.bitcoinj.core.InventoryItem$Type,org.bitcoinj.base.Sha256Hash)\
+      \ : void"
+    modelFingerprint: "34718F31DEC393F5D1D308BD6DACF8E5"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "69930CD4D8FCB730B42D329C70033C44"
+      index: 1
+      valueUuid: "target"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "B1E9C0D3A543548F12F84E6BDA943F56"
+      index: 2
+      valueUuid: "toString_string1"
+    uuid: "363d3698-f34c-39ad-914f-376a19498023"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.InventoryItem"
+        parameters:
+        - name: "type"
+          value:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "WITNESS_FILTERED_BLOCK"
+            valueType: "org.bitcoinj.core.InventoryItem$Type"
+            uuid: "<init>_inventoryItem.Type1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "hash"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.base.Sha256Hash"
+            uuid: "<init>_sha256Hash1"
+            fixed: false
+            nameForMock: "<init>_sha256Hash1"
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.core.InventoryItem"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "WITNESS_FILTERED_BLOCK: <init>_sha256Hash1"
+      valueType: "java.lang.String"
+      uuid: "toString_string1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "equals"
+    signature: "equals(java.lang.Object) : boolean"
+    sourceCodeSignature: "boolean equals(Object o)"
+    instructionFingerprint: "BD2A5F052EDD8C14C7B7ACB8DFA40FB5"
+  paths:
+  - pathId: "path1"
+    testPathName: "equalsWhenThisEqualsO"
+    constructorSignature: "<init>(org.bitcoinj.core.InventoryItem$Type,org.bitcoinj.base.Sha256Hash)\
+      \ : void"
+    modelFingerprint: "C0B0A790A1A637AA79D98B659ABF1AA5"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "5b7cf5ba-f3cc-35d0-9b4a-3392d3a68eed"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path5"
+    testPathName: "equalsWhenOIsNull"
+    constructorSignature: "<init>(org.bitcoinj.core.InventoryItem$Type,org.bitcoinj.base.Sha256Hash)\
+      \ : void"
+    modelFingerprint: "C199252787CD46251B0B5B66DC1EFC82"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "a2108c4d-bcbc-39b5-8254-0588b654f131"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path2"
+    testPathName: "equalsWhenGetClassNotEqualsOGetClass"
+    constructorSignature: "<init>(org.bitcoinj.core.InventoryItem$Type,org.bitcoinj.base.Sha256Hash)\
+      \ : void"
+    modelFingerprint: "3163BFBF21FF7938BE78C832FFD04AAF"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "6e6a0f87-c9aa-3e31-af0a-46c9467f5ce0"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path3"
+    testPathName: "equalsWhenHashEqualsOtherHash"
+    constructorSignature: "<init>(org.bitcoinj.core.InventoryItem$Type,org.bitcoinj.base.Sha256Hash)\
+      \ : void"
+    modelFingerprint: "E953858D74263D386205798764271EEE"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "e8b9dab1-bb08-39e6-87f3-eacba109359f"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path4"
+    testPathName: "equalsWhenHashNotEqualsOtherHash"
+    constructorSignature: "<init>(org.bitcoinj.core.InventoryItem$Type,org.bitcoinj.base.Sha256Hash)\
+      \ : void"
+    modelFingerprint: "7CF5FA580F2D9DE2C3457A4981760D08"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "85d82988-ee4f-3a8a-9c82-3a2ed0f4ee11"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []

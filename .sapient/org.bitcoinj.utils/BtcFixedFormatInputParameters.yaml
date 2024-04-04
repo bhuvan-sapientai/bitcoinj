@@ -1,0 +1,3846 @@
+---
+modelFingerprint: "1ABAA9C64145FE0FF09E22A88124F1C3"
+methods:
+- method:
+    name: "scale"
+    signature: "scale(java.math.BigInteger,int) : int"
+    sourceCodeSignature: "int scale(BigInteger satoshis, int fractionPlaces)"
+    instructionFingerprint: "A3B56F377D102C4A1227686649A6C783"
+  paths:
+  - pathId: "path1"
+    testPathName: "scaleTest"
+    constructorSignature: "<init>(java.util.Locale,int,int,java.util.List<java.lang.Integer>)\
+      \ : void"
+    modelFingerprint: "575067231C550375E65799C24926E0FF"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "AD2F4D93D40642BB97D02245512794AF"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "satoshis"
+      modelFingerprint: "EFA8EAF1A5097DA5CA522DE9D134F552"
+      index: 2
+      valueUuid: "scale_bigInteger1"
+    - type: "INPUT"
+      name: "fractionPlaces"
+      modelFingerprint: "37C68EBF922C0CE075C1D22EBF586F30"
+      index: 3
+      valueUuid: "scale_int1"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EE07D40EFD4ADC96C83D317FAE9481C2"
+      index: 4
+      valueUuid: "uuid3"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid1"
+        - name: "messageSupplier"
+          valueUuid: "uuid2"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "<init>_void1"
+        access: 9
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "8E65D47E3C0602D60B2F22B827CB011E"
+      index: 5
+      valueUuid: "uuid5"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkState"
+        parameters:
+        - name: "expression"
+          valueUuid: "setSymbolAndCode_boolean1"
+        signature: "checkState(boolean): void"
+        returnValueUuid: "uuid4"
+        access: 9
+    - type: "STATIC"
+      name: "BtcFormat"
+      modelFingerprint: "9E62F8EC1EE5F25113EC2B4222587D1D"
+      index: 6
+      valueUuid: "uuid6"
+      methodExercised:
+        target: "org.bitcoinj.utils.BtcFormat"
+        name: "prefixUnitsIndicator"
+        parameters:
+        - name: "numberFormat"
+          valueUuid: "<init>_numberFormat1"
+        - name: "scale"
+          valueUuid: "int1"
+        signature: "prefixUnitsIndicator(DecimalFormat,int): void"
+        returnValueUuid: "scale_void1"
+        access: 12
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "8E4E4A3F04320A5F313F9B77CB2C7276"
+      index: 7
+      valueUuid: "int1"
+    uuid: "717c1c94-99e8-3815-82de-f28f531421af"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.utils.BtcFixedFormat"
+        parameters:
+        - name: "locale"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "java.util.Locale"
+              parameters:
+              - name: "language"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: "language1"
+                  valueType: "java.lang.String"
+                  uuid: "<init>_locale1-language"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "java.util.Locale"
+            uuid: "<init>_locale1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "scale"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 8
+            valueType: "int"
+            uuid: "<init>_int1"
+            fixed: false
+            equalsMethodPresent: true
+            explicitCastNeeded: false
+        - name: "minDecimals"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 2
+            valueType: "int"
+            uuid: "<init>_int2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "groups"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              collectionClass: "java.util.ArrayList"
+              parameters: []
+              values:
+              - sapientType: "BASIC"
+                content: !<regular>
+                  value: 3
+                valueType: "java.lang.Integer"
+                uuid: "<init>_list1-0"
+                fixed: false
+                collectionUuid: "<init>_list1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              - sapientType: "BASIC"
+                content: !<regular>
+                  value: 3
+                valueType: "java.lang.Integer"
+                uuid: "<init>_list1-1"
+                fixed: false
+                collectionUuid: "<init>_list1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            valueType: "java.util.List"
+            genericValueType: "java.lang.Integer"
+            uuid: "<init>_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.utils.BtcFixedFormat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 123456789
+      valueType: "java.math.BigInteger"
+      uuid: "scale_bigInteger1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 2
+      valueType: "int"
+      uuid: "scale_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid5"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.IllegalStateException"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.IllegalStateException"
+      uuid: "uuid4"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "setSymbolAndCode_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.utils.BtcFormat"
+      uuid: "uuid6"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "scale_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.text.NumberFormat"
+        method: "getInstance"
+        methodParameters:
+        - value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "java.util.Locale"
+              parameters:
+              - name: "language"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: "language1"
+                  valueType: "java.lang.String"
+                  uuid: "<init>_locale1-language"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "java.util.Locale"
+            uuid: "<init>_locale1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.text.DecimalFormat"
+      uuid: "<init>_numberFormat1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: true
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "int1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "int1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "scale"
+    signature: "scale() : int"
+    sourceCodeSignature: "int scale()"
+    instructionFingerprint: "12825E3D58BE43FB6F4ED1E7D072B9CE"
+  paths:
+  - pathId: "path1"
+    testPathName: "scale1Test"
+    constructorSignature: "<init>(java.util.Locale,int,int,java.util.List<java.lang.Integer>)\
+      \ : void"
+    modelFingerprint: "F24678025CC6746D5F9373E9610089CD"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "802B99A9A93BF4DC154EA91AA17104FB"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EE07D40EFD4ADC96C83D317FAE9481C2"
+      index: 2
+      valueUuid: "uuid3"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid1"
+        - name: "messageSupplier"
+          valueUuid: "uuid2"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "<init>_void1"
+        access: 9
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "8E65D47E3C0602D60B2F22B827CB011E"
+      index: 3
+      valueUuid: "uuid5"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkState"
+        parameters:
+        - name: "expression"
+          valueUuid: "setSymbolAndCode_boolean1"
+        signature: "checkState(boolean): void"
+        returnValueUuid: "uuid4"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "8E4E4A3F04320A5F313F9B77CB2C7276"
+      index: 4
+      valueUuid: "int1"
+    uuid: "034db038-3d0f-3f3e-91ee-291ef4cf2b7b"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.utils.BtcFixedFormat"
+        parameters:
+        - name: "locale"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "java.util.Locale"
+              parameters:
+              - name: "language"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: "language1"
+                  valueType: "java.lang.String"
+                  uuid: "<init>_locale1-language"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "java.util.Locale"
+            uuid: "<init>_locale1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "scale"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 5
+            valueType: "int"
+            uuid: "<init>_int1"
+            fixed: false
+            equalsMethodPresent: true
+            explicitCastNeeded: false
+        - name: "minDecimals"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 2
+            valueType: "int"
+            uuid: "<init>_int2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "groups"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              collectionClass: "java.util.ArrayList"
+              parameters: []
+              values:
+              - sapientType: "BASIC"
+                content: !<regular>
+                  value: 1
+                valueType: "java.lang.Integer"
+                uuid: "<init>_list1-0"
+                fixed: false
+                collectionUuid: "<init>_list1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              - sapientType: "BASIC"
+                content: !<regular>
+                  value: 2
+                valueType: "java.lang.Integer"
+                uuid: "<init>_list1-1"
+                fixed: false
+                collectionUuid: "<init>_list1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              - sapientType: "BASIC"
+                content: !<regular>
+                  value: 3
+                valueType: "java.lang.Integer"
+                uuid: "<init>_list1-2"
+                fixed: false
+                collectionUuid: "<init>_list1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            valueType: "java.util.List"
+            genericValueType: "java.lang.Integer"
+            uuid: "<init>_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.utils.BtcFixedFormat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid5"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.IllegalStateException"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.IllegalStateException"
+      uuid: "uuid4"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "setSymbolAndCode_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "int1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "code"
+    signature: "code() : java.lang.String"
+    sourceCodeSignature: "String code()"
+    instructionFingerprint: "0219A460DA0E545E9AD3205DB7B9B023"
+  paths:
+  - pathId: "path1"
+    testPathName: "codeTest"
+    constructorSignature: "<init>(java.util.Locale,int,int,java.util.List<java.lang.Integer>)\
+      \ : void"
+    modelFingerprint: "4BDF1197716D934BC38BD4FC2A5C7D26"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "4119E8E3C3F7BF5CEA0746D28DBDA906"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EE07D40EFD4ADC96C83D317FAE9481C2"
+      index: 2
+      valueUuid: "uuid3"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid1"
+        - name: "messageSupplier"
+          valueUuid: "uuid2"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "<init>_void1"
+        access: 9
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "8E65D47E3C0602D60B2F22B827CB011E"
+      index: 3
+      valueUuid: "uuid5"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkState"
+        parameters:
+        - name: "expression"
+          valueUuid: "setSymbolAndCode_boolean1"
+        signature: "checkState(boolean): void"
+        returnValueUuid: "uuid4"
+        access: 9
+    - type: "STATIC"
+      name: "BtcFormat"
+      modelFingerprint: "1EAF45D3D086D9422893DBC70BBA862C"
+      index: 4
+      valueUuid: "uuid6"
+      methodExercised:
+        target: "org.bitcoinj.utils.BtcFormat"
+        name: "prefixCode"
+        parameters:
+        - name: "code"
+          valueUuid: "coinCode_string1"
+        - name: "scale"
+          valueUuid: "int1"
+        signature: "prefixCode(String,int): String"
+        returnValueUuid: "code_string1"
+        access: 12
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "32B8036524E38DD04E1088156F03FE29"
+      index: 5
+      valueUuid: "code_string1"
+    uuid: "d056b304-7a03-36ec-808e-bfed4857464d"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.utils.BtcFixedFormat"
+        parameters:
+        - name: "locale"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "java.util.Locale"
+              parameters:
+              - name: "language"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: "language1"
+                  valueType: "java.lang.String"
+                  uuid: "<init>_locale1-language"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "java.util.Locale"
+            uuid: "<init>_locale1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "scale"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 5
+            valueType: "int"
+            uuid: "<init>_int1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "minDecimals"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 2
+            valueType: "int"
+            uuid: "<init>_int2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "groups"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              collectionClass: "java.util.ArrayList"
+              parameters: []
+              values:
+              - sapientType: "BASIC"
+                content: !<regular>
+                  value: 1
+                valueType: "java.lang.Integer"
+                uuid: "<init>_list1-0"
+                fixed: false
+                collectionUuid: "<init>_list1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              - sapientType: "BASIC"
+                content: !<regular>
+                  value: 2
+                valueType: "java.lang.Integer"
+                uuid: "<init>_list1-1"
+                fixed: false
+                collectionUuid: "<init>_list1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              - sapientType: "BASIC"
+                content: !<regular>
+                  value: 3
+                valueType: "java.lang.Integer"
+                uuid: "<init>_list1-2"
+                fixed: false
+                collectionUuid: "<init>_list1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            valueType: "java.util.List"
+            genericValueType: "java.lang.Integer"
+            uuid: "<init>_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.utils.BtcFixedFormat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid5"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.IllegalStateException"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.IllegalStateException"
+      uuid: "uuid4"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "setSymbolAndCode_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.utils.BtcFormat"
+      uuid: "uuid6"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "return_of_prefixCode1"
+      valueType: "java.lang.String"
+      uuid: "code_string1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "XXX"
+      valueType: "java.lang.String"
+      uuid: "coinCode_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "return_of_prefixCode1"
+      valueType: "java.lang.String"
+      uuid: "code_string1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "symbol"
+    signature: "symbol() : java.lang.String"
+    sourceCodeSignature: "String symbol()"
+    instructionFingerprint: "B34CFC0322933345BBF58EFB483E93DD"
+  paths:
+  - pathId: "path1"
+    testPathName: "symbolTest"
+    constructorSignature: "<init>(java.util.Locale,int,int,java.util.List<java.lang.Integer>)\
+      \ : void"
+    modelFingerprint: "1C26AAF078618BBBE98FBD5E3E4FE6A1"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "5F70D80BD6CB953755521EE5F8C3AFCD"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EE07D40EFD4ADC96C83D317FAE9481C2"
+      index: 2
+      valueUuid: "uuid3"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid1"
+        - name: "messageSupplier"
+          valueUuid: "uuid2"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "<init>_void1"
+        access: 9
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "8E65D47E3C0602D60B2F22B827CB011E"
+      index: 3
+      valueUuid: "uuid5"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkState"
+        parameters:
+        - name: "expression"
+          valueUuid: "setSymbolAndCode_boolean1"
+        signature: "checkState(boolean): void"
+        returnValueUuid: "uuid4"
+        access: 9
+    - type: "STATIC"
+      name: "BtcFormat"
+      modelFingerprint: "4EEBD7A17BFFFFA3C94F580DD939B0CD"
+      index: 4
+      valueUuid: "uuid6"
+      methodExercised:
+        target: "org.bitcoinj.utils.BtcFormat"
+        name: "prefixSymbol"
+        parameters:
+        - name: "symbol"
+          valueUuid: "coinSymbol_string1"
+        - name: "scale"
+          valueUuid: "int1"
+        signature: "prefixSymbol(String,int): String"
+        returnValueUuid: "symbol_string1"
+        access: 12
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "0807C13C0977819C7BFF4921B31C94DA"
+      index: 5
+      valueUuid: "symbol_string1"
+    uuid: "d63a41ac-97d2-3f49-8af7-d8404a9a837c"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.utils.BtcFixedFormat"
+        parameters:
+        - name: "locale"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "java.util.Locale"
+              parameters:
+              - name: "language"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: "language1"
+                  valueType: "java.lang.String"
+                  uuid: "<init>_locale1-language"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "java.util.Locale"
+            uuid: "<init>_locale1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "scale"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 2
+            valueType: "int"
+            uuid: "<init>_int1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "minDecimals"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "int"
+            uuid: "<init>_int2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "groups"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              collectionClass: "java.util.ArrayList"
+              parameters: []
+              values:
+              - sapientType: "BASIC"
+                content: !<regular>
+                  value: 1
+                valueType: "java.lang.Integer"
+                uuid: "<init>_list1-0"
+                fixed: false
+                collectionUuid: "<init>_list1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              - sapientType: "BASIC"
+                content: !<regular>
+                  value: 2
+                valueType: "java.lang.Integer"
+                uuid: "<init>_list1-1"
+                fixed: false
+                collectionUuid: "<init>_list1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              - sapientType: "BASIC"
+                content: !<regular>
+                  value: 3
+                valueType: "java.lang.Integer"
+                uuid: "<init>_list1-2"
+                fixed: false
+                collectionUuid: "<init>_list1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            valueType: "java.util.List"
+            genericValueType: "java.lang.Integer"
+            uuid: "<init>_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.utils.BtcFixedFormat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid5"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.IllegalStateException"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.IllegalStateException"
+      uuid: "uuid4"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "setSymbolAndCode_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.utils.BtcFormat"
+      uuid: "uuid6"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "return_of_prefixSymbol1"
+      valueType: "java.lang.String"
+      uuid: "symbol_string1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "\\u00A4"
+      valueType: "java.lang.String"
+      uuid: "coinSymbol_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "return_of_prefixSymbol1"
+      valueType: "java.lang.String"
+      uuid: "symbol_string1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "fractionPlaceGroups"
+    signature: "fractionPlaceGroups() : int[]"
+    sourceCodeSignature: "int[] fractionPlaceGroups()"
+    instructionFingerprint: "C9403CF927F30994B2290DB76A6A6274"
+  paths:
+  - pathId: "path1"
+    testPathName: "fractionPlaceGroupsWhenILessThanLen"
+    constructorSignature: "<init>(java.util.Locale,int,int,java.util.List<java.lang.Integer>)\
+      \ : void"
+    modelFingerprint: "9F7EB428CA823C10BDB0F58F04159F0A"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "1DF458E934C96F23B273E2BAD9F5DCF1"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EE07D40EFD4ADC96C83D317FAE9481C2"
+      index: 2
+      valueUuid: "uuid3"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid1"
+        - name: "messageSupplier"
+          valueUuid: "uuid2"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "<init>_void1"
+        access: 9
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "8E65D47E3C0602D60B2F22B827CB011E"
+      index: 3
+      valueUuid: "uuid5"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkState"
+        parameters:
+        - name: "expression"
+          valueUuid: "setSymbolAndCode_boolean1"
+        signature: "checkState(boolean): void"
+        returnValueUuid: "uuid4"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "7FE88FD8E0EBDCF857B9AD4E4F2963D6"
+      index: 4
+      valueUuid: "fractionPlaceGroups_int[]1"
+    uuid: "e323ac7c-cef1-36ab-8044-3ebd0ba2bb46"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.utils.BtcFixedFormat"
+        parameters:
+        - name: "locale"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "java.util.Locale"
+              parameters:
+              - name: "language"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: "language1"
+                  valueType: "java.lang.String"
+                  uuid: "<init>_locale1-language"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "java.util.Locale"
+            uuid: "<init>_locale1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "scale"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 2
+            valueType: "int"
+            uuid: "<init>_int1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "minDecimals"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "int"
+            uuid: "<init>_int2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "groups"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              collectionClass: "java.util.ArrayList"
+              parameters: []
+              values:
+              - sapientType: "BASIC"
+                content: !<regular>
+                  value: 1
+                valueType: "java.lang.Integer"
+                uuid: "<init>_list1-0"
+                fixed: false
+                collectionUuid: "<init>_list1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              - sapientType: "BASIC"
+                content: !<regular>
+                  value: 2
+                valueType: "java.lang.Integer"
+                uuid: "<init>_list1-1"
+                fixed: false
+                collectionUuid: "<init>_list1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              - sapientType: "BASIC"
+                content: !<regular>
+                  value: 3
+                valueType: "java.lang.Integer"
+                uuid: "<init>_list1-2"
+                fixed: false
+                collectionUuid: "<init>_list1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            valueType: "java.util.List"
+            genericValueType: "java.lang.Integer"
+            uuid: "<init>_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.utils.BtcFixedFormat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid5"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.IllegalStateException"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.IllegalStateException"
+      uuid: "uuid4"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "setSymbolAndCode_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "int"
+            uuid: "<init>_int2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          1:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "int"
+            uuid: "fractionPlaceGroups_int5"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "int[]"
+      uuid: "fractionPlaceGroups_int[]1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "equals"
+    signature: "equals(java.lang.Object) : boolean"
+    sourceCodeSignature: "boolean equals(Object o)"
+    instructionFingerprint: "9E93DDDA185A04588012E69BE95C5D1F"
+  paths:
+  - pathId: "path1"
+    testPathName: "equalsWhenOEqualsThis"
+    constructorSignature: "<init>(java.util.Locale,int,int,java.util.List<java.lang.Integer>)\
+      \ : void"
+    modelFingerprint: "55BE80190410D961B15817DD270D0633"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "d65113e0-6787-3a54-9186-95c0d0aa361d"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.text.NumberFormat.getInstance(java.util.Locale)\
+        \ : java.text.NumberFormat"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path2"
+    testPathName: "equalsWhenONotInstanceOfBtcFixedFormat"
+    constructorSignature: "<init>(java.util.Locale,int,int,java.util.List<java.lang.Integer>)\
+      \ : void"
+    modelFingerprint: "E6BC0C8C363BF3A461C7C0183B49C636"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "0b14f403-53da-3092-a442-17a385730eca"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.text.NumberFormat.getInstance(java.util.Locale)\
+        \ : java.text.NumberFormat"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path3"
+    testPathName: "equalsWhenOtherDecimalGroupsEqualsDecimalGroups"
+    constructorSignature: "<init>(java.util.Locale,int,int,java.util.List<java.lang.Integer>)\
+      \ : void"
+    modelFingerprint: "FE50533C777EBBAED4B78CDF0889910B"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "f04ffba1-98b9-3b1e-9f4f-206c1d05579b"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.text.NumberFormat.getInstance(java.util.Locale)\
+        \ : java.text.NumberFormat"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path4"
+    testPathName: "equalsWhenOtherDecimalGroupsNotEqualsDecimalGroups"
+    constructorSignature: "<init>(java.util.Locale,int,int,java.util.List<java.lang.Integer>)\
+      \ : void"
+    modelFingerprint: "0FFB8CFCEA8FF8197A0E9A93CEC0D082"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "1000eafa-0039-3094-b39c-dd64cae600fb"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.text.NumberFormat.getInstance(java.util.Locale)\
+        \ : java.text.NumberFormat"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path8"
+    testPathName: "equalsWhenSuperNotEqualsOther"
+    constructorSignature: "<init>(java.util.Locale,int,int,java.util.List<java.lang.Integer>)\
+      \ : void"
+    modelFingerprint: "9B57BC8E4BCBF15D7FCBDE121C608E6F"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "1a35a365-6885-3f31-9767-fec71ffdae55"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.text.NumberFormat.getInstance(java.util.Locale)\
+        \ : java.text.NumberFormat"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path6"
+    testPathName: "equalsWhenOtherSymbolsEqualsSymbolsAndSuperNotEqualsOther"
+    constructorSignature: "<init>(java.util.Locale,int,int,java.util.List<java.lang.Integer>)\
+      \ : void"
+    modelFingerprint: "CC58F043DF1D099E7C551CA906EAC212"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "93b69360-8b7a-3af3-946d-e69e09c2b859"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.text.NumberFormat.getInstance(java.util.Locale)\
+        \ : java.text.NumberFormat"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path7"
+    testPathName: "equalsWhenOtherSymbolsNotEqualsSymbolsAndSuperNotEqualsOther"
+    constructorSignature: "<init>(java.util.Locale,int,int,java.util.List<java.lang.Integer>)\
+      \ : void"
+    modelFingerprint: "19DF52D59D5FBF32F12051949A7ED8C3"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "ef8cc0d7-78b6-387c-9650-7060ad6a2ce3"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.text.NumberFormat.getInstance(java.util.Locale)\
+        \ : java.text.NumberFormat"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path5"
+    testPathName: "equalsWhenOtherScaleNotEqualsScale"
+    constructorSignature: "<init>(java.util.Locale,int,int,java.util.List<java.lang.Integer>)\
+      \ : void"
+    modelFingerprint: "5CB466DF1FAE1BAA6427F6E3883FB336"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "15aac1d2-2510-32ff-87d3-68ebc6cb3e22"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.text.NumberFormat.getInstance(java.util.Locale)\
+        \ : java.text.NumberFormat"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "toString"
+    signature: "toString() : java.lang.String"
+    sourceCodeSignature: "String toString()"
+    instructionFingerprint: "0D018AA629F28BD66DF69A8DEFCE5894"
+  paths:
+  - pathId: "path6"
+    testPathName: "toStringWhenSwitchScaleCaseMinus1"
+    constructorSignature: "<init>(java.util.Locale,int,int,java.util.List<java.lang.Integer>)\
+      \ : void"
+    modelFingerprint: "35000464ECFADDDD0D866869579D5357"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "BFB08F984D0CF4E423055465CD98619A"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EE07D40EFD4ADC96C83D317FAE9481C2"
+      index: 2
+      valueUuid: "uuid105"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid103"
+        - name: "messageSupplier"
+          valueUuid: "uuid104"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "<init>_void1"
+        access: 9
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "C0FF1F0AD0F6373CDC30F794AE131EFB"
+      index: 3
+      valueUuid: "uuid106"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkState"
+        parameters:
+        - name: "expression"
+          valueUuid: "setSymbolAndCode_boolean1"
+        signature: "checkState(boolean): void"
+        returnValueUuid: "setSymbolAndCode_void1"
+        access: 9
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EE07D40EFD4ADC96C83D317FAE9481C2"
+      index: 4
+      valueUuid: "uuid109"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid107"
+        - name: "messageSupplier"
+          valueUuid: "uuid108"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "<init>_void6"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "5CFEB0D1BDD815B38AE2439BA6989D4B"
+      index: 5
+      methodExercised:
+        target: "target"
+        name: "pattern"
+        parameters: []
+        signature: "pattern(): String"
+        returnValueUuid: "toString_string1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D1F433D4EB9F8805FF391E82DAB508AB"
+      index: 6
+      valueUuid: "toString_string2"
+    uuid: "bce69e1e-6a07-38e9-acfb-2444b980e249"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.text.NumberFormat.getInstance(java.util.Locale)\
+        \ : java.text.NumberFormat"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.utils.BtcFixedFormat"
+        parameters:
+        - name: "locale"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "java.util.Locale"
+              parameters:
+              - name: "language"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: "language1"
+                  valueType: "java.lang.String"
+                  uuid: "<init>_locale1-language"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "java.util.Locale"
+            uuid: "<init>_locale1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "scale"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            uuid: "<init>_int1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "minDecimals"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            uuid: "<init>_int2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "groups"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              parameters: []
+              values: []
+            valueType: "java.util.List"
+            genericValueType: "java.lang.Integer"
+            uuid: "<init>_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.utils.BtcFixedFormat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid105"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid103"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid104"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid106"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "setSymbolAndCode_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "setSymbolAndCode_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid109"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void6"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid107"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid108"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "return_of_pattern1"
+      valueType: "java.lang.String"
+      uuid: "toString_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "result1"
+      valueType: "java.lang.String"
+      uuid: "toString_string2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path7"
+    testPathName: "toStringWhenSwitchScaleCaseMinus2"
+    constructorSignature: "<init>(java.util.Locale,int,int,java.util.List<java.lang.Integer>)\
+      \ : void"
+    modelFingerprint: "C0A26DEF961DEBF92D905CC80AFF9B10"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "BFB08F984D0CF4E423055465CD98619A"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EE07D40EFD4ADC96C83D317FAE9481C2"
+      index: 2
+      valueUuid: "uuid112"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid110"
+        - name: "messageSupplier"
+          valueUuid: "uuid111"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "<init>_void1"
+        access: 9
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "C0FF1F0AD0F6373CDC30F794AE131EFB"
+      index: 3
+      valueUuid: "uuid113"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkState"
+        parameters:
+        - name: "expression"
+          valueUuid: "setSymbolAndCode_boolean1"
+        signature: "checkState(boolean): void"
+        returnValueUuid: "setSymbolAndCode_void1"
+        access: 9
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EE07D40EFD4ADC96C83D317FAE9481C2"
+      index: 4
+      valueUuid: "uuid116"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid114"
+        - name: "messageSupplier"
+          valueUuid: "uuid115"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "<init>_void6"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "5CFEB0D1BDD815B38AE2439BA6989D4B"
+      index: 5
+      methodExercised:
+        target: "target"
+        name: "pattern"
+        parameters: []
+        signature: "pattern(): String"
+        returnValueUuid: "toString_string1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D1F433D4EB9F8805FF391E82DAB508AB"
+      index: 6
+      valueUuid: "toString_string2"
+    uuid: "7f0d120c-f56d-30af-87e1-cc491bd9a017"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.text.NumberFormat.getInstance(java.util.Locale)\
+        \ : java.text.NumberFormat"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.utils.BtcFixedFormat"
+        parameters:
+        - name: "locale"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "java.util.Locale"
+              parameters:
+              - name: "language"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: "language1"
+                  valueType: "java.lang.String"
+                  uuid: "<init>_locale1-language"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "java.util.Locale"
+            uuid: "<init>_locale1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "scale"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            uuid: "<init>_int1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "minDecimals"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            uuid: "<init>_int2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "groups"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              parameters: []
+              values: []
+            valueType: "java.util.List"
+            genericValueType: "java.lang.Integer"
+            uuid: "<init>_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.utils.BtcFixedFormat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid112"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid110"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid111"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid113"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "setSymbolAndCode_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "setSymbolAndCode_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid116"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void6"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid114"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid115"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "return_of_pattern1"
+      valueType: "java.lang.String"
+      uuid: "toString_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "result1"
+      valueType: "java.lang.String"
+      uuid: "toString_string2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path8"
+    testPathName: "toStringWhenSwitchScaleCaseMinus3"
+    constructorSignature: "<init>(java.util.Locale,int,int,java.util.List<java.lang.Integer>)\
+      \ : void"
+    modelFingerprint: "023394D1BCE48E0282C939F2B7B20286"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "BFB08F984D0CF4E423055465CD98619A"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EE07D40EFD4ADC96C83D317FAE9481C2"
+      index: 2
+      valueUuid: "uuid119"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid117"
+        - name: "messageSupplier"
+          valueUuid: "uuid118"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "<init>_void1"
+        access: 9
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "C0FF1F0AD0F6373CDC30F794AE131EFB"
+      index: 3
+      valueUuid: "uuid120"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkState"
+        parameters:
+        - name: "expression"
+          valueUuid: "setSymbolAndCode_boolean1"
+        signature: "checkState(boolean): void"
+        returnValueUuid: "setSymbolAndCode_void1"
+        access: 9
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EE07D40EFD4ADC96C83D317FAE9481C2"
+      index: 4
+      valueUuid: "uuid123"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid121"
+        - name: "messageSupplier"
+          valueUuid: "uuid122"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "<init>_void6"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "5CFEB0D1BDD815B38AE2439BA6989D4B"
+      index: 5
+      methodExercised:
+        target: "target"
+        name: "pattern"
+        parameters: []
+        signature: "pattern(): String"
+        returnValueUuid: "toString_string1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D1F433D4EB9F8805FF391E82DAB508AB"
+      index: 6
+      valueUuid: "toString_string2"
+    uuid: "fad52055-9caa-354d-b263-109b8af80617"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.text.NumberFormat.getInstance(java.util.Locale)\
+        \ : java.text.NumberFormat"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.utils.BtcFixedFormat"
+        parameters:
+        - name: "locale"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "java.util.Locale"
+              parameters:
+              - name: "language"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: "language1"
+                  valueType: "java.lang.String"
+                  uuid: "<init>_locale1-language"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "java.util.Locale"
+            uuid: "<init>_locale1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "scale"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            uuid: "<init>_int1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "minDecimals"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            uuid: "<init>_int2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "groups"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              parameters: []
+              values: []
+            valueType: "java.util.List"
+            genericValueType: "java.lang.Integer"
+            uuid: "<init>_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.utils.BtcFixedFormat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid119"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid117"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid118"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid120"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "setSymbolAndCode_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "setSymbolAndCode_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid123"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void6"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid121"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid122"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "return_of_pattern1"
+      valueType: "java.lang.String"
+      uuid: "toString_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "result1"
+      valueType: "java.lang.String"
+      uuid: "toString_string2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path9"
+    testPathName: "toStringWhenSwitchScaleCaseMinus6"
+    constructorSignature: "<init>(java.util.Locale,int,int,java.util.List<java.lang.Integer>)\
+      \ : void"
+    modelFingerprint: "7585652E36B6CF55B1160DB54B6FC3AF"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "BFB08F984D0CF4E423055465CD98619A"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EE07D40EFD4ADC96C83D317FAE9481C2"
+      index: 2
+      valueUuid: "uuid126"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid124"
+        - name: "messageSupplier"
+          valueUuid: "uuid125"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "<init>_void1"
+        access: 9
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "C0FF1F0AD0F6373CDC30F794AE131EFB"
+      index: 3
+      valueUuid: "uuid127"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkState"
+        parameters:
+        - name: "expression"
+          valueUuid: "setSymbolAndCode_boolean1"
+        signature: "checkState(boolean): void"
+        returnValueUuid: "setSymbolAndCode_void1"
+        access: 9
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EE07D40EFD4ADC96C83D317FAE9481C2"
+      index: 4
+      valueUuid: "uuid130"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid128"
+        - name: "messageSupplier"
+          valueUuid: "uuid129"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "<init>_void6"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "5CFEB0D1BDD815B38AE2439BA6989D4B"
+      index: 5
+      methodExercised:
+        target: "target"
+        name: "pattern"
+        parameters: []
+        signature: "pattern(): String"
+        returnValueUuid: "toString_string1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D1F433D4EB9F8805FF391E82DAB508AB"
+      index: 6
+      valueUuid: "toString_string2"
+    uuid: "915fb82a-ce39-3b58-a6fc-ce52cadad169"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.text.NumberFormat.getInstance(java.util.Locale)\
+        \ : java.text.NumberFormat"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.utils.BtcFixedFormat"
+        parameters:
+        - name: "locale"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "java.util.Locale"
+              parameters:
+              - name: "language"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: "language1"
+                  valueType: "java.lang.String"
+                  uuid: "<init>_locale1-language"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "java.util.Locale"
+            uuid: "<init>_locale1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "scale"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            uuid: "<init>_int1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "minDecimals"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            uuid: "<init>_int2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "groups"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              parameters: []
+              values: []
+            valueType: "java.util.List"
+            genericValueType: "java.lang.Integer"
+            uuid: "<init>_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.utils.BtcFixedFormat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid126"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid124"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid125"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid127"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "setSymbolAndCode_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "setSymbolAndCode_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid130"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void6"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid128"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid129"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "return_of_pattern1"
+      valueType: "java.lang.String"
+      uuid: "toString_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "result1"
+      valueType: "java.lang.String"
+      uuid: "toString_string2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "toStringWhenSwitchScaleCase1"
+    constructorSignature: "<init>(java.util.Locale,int,int,java.util.List<java.lang.Integer>)\
+      \ : void"
+    modelFingerprint: "B1BB5A3D9C95DCF40848604E0AE8199C"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "BFB08F984D0CF4E423055465CD98619A"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EE07D40EFD4ADC96C83D317FAE9481C2"
+      index: 2
+      valueUuid: "uuid133"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid131"
+        - name: "messageSupplier"
+          valueUuid: "uuid132"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "<init>_void1"
+        access: 9
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "C0FF1F0AD0F6373CDC30F794AE131EFB"
+      index: 3
+      valueUuid: "uuid134"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkState"
+        parameters:
+        - name: "expression"
+          valueUuid: "setSymbolAndCode_boolean1"
+        signature: "checkState(boolean): void"
+        returnValueUuid: "setSymbolAndCode_void1"
+        access: 9
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EE07D40EFD4ADC96C83D317FAE9481C2"
+      index: 4
+      valueUuid: "uuid137"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid135"
+        - name: "messageSupplier"
+          valueUuid: "uuid136"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "<init>_void6"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "5CFEB0D1BDD815B38AE2439BA6989D4B"
+      index: 5
+      methodExercised:
+        target: "target"
+        name: "pattern"
+        parameters: []
+        signature: "pattern(): String"
+        returnValueUuid: "toString_string1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D1F433D4EB9F8805FF391E82DAB508AB"
+      index: 6
+      valueUuid: "toString_string2"
+    uuid: "dc91410a-5348-3109-9863-e1c491abb865"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.text.NumberFormat.getInstance(java.util.Locale)\
+        \ : java.text.NumberFormat"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.utils.BtcFixedFormat"
+        parameters:
+        - name: "locale"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "java.util.Locale"
+              parameters:
+              - name: "language"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: "language1"
+                  valueType: "java.lang.String"
+                  uuid: "<init>_locale1-language"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "java.util.Locale"
+            uuid: "<init>_locale1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "scale"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            uuid: "<init>_int1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "minDecimals"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            uuid: "<init>_int2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "groups"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              parameters: []
+              values: []
+            valueType: "java.util.List"
+            genericValueType: "java.lang.Integer"
+            uuid: "<init>_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.utils.BtcFixedFormat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid133"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid131"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid132"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid134"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "setSymbolAndCode_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "setSymbolAndCode_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid137"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void6"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid135"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid136"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "return_of_pattern1"
+      valueType: "java.lang.String"
+      uuid: "toString_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "result1"
+      valueType: "java.lang.String"
+      uuid: "toString_string2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path3"
+    testPathName: "toStringWhenSwitchScaleCase2"
+    constructorSignature: "<init>(java.util.Locale,int,int,java.util.List<java.lang.Integer>)\
+      \ : void"
+    modelFingerprint: "5AB8794EF3B849846FF9BF2CBC6E8FC0"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "BFB08F984D0CF4E423055465CD98619A"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EE07D40EFD4ADC96C83D317FAE9481C2"
+      index: 2
+      valueUuid: "uuid140"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid138"
+        - name: "messageSupplier"
+          valueUuid: "uuid139"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "<init>_void1"
+        access: 9
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "C0FF1F0AD0F6373CDC30F794AE131EFB"
+      index: 3
+      valueUuid: "uuid141"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkState"
+        parameters:
+        - name: "expression"
+          valueUuid: "setSymbolAndCode_boolean1"
+        signature: "checkState(boolean): void"
+        returnValueUuid: "setSymbolAndCode_void1"
+        access: 9
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EE07D40EFD4ADC96C83D317FAE9481C2"
+      index: 4
+      valueUuid: "uuid144"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid142"
+        - name: "messageSupplier"
+          valueUuid: "uuid143"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "<init>_void6"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "5CFEB0D1BDD815B38AE2439BA6989D4B"
+      index: 5
+      methodExercised:
+        target: "target"
+        name: "pattern"
+        parameters: []
+        signature: "pattern(): String"
+        returnValueUuid: "toString_string1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D1F433D4EB9F8805FF391E82DAB508AB"
+      index: 6
+      valueUuid: "toString_string2"
+    uuid: "7ae1ab14-a06b-3a0f-8e38-e353c69a38ff"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.text.NumberFormat.getInstance(java.util.Locale)\
+        \ : java.text.NumberFormat"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.utils.BtcFixedFormat"
+        parameters:
+        - name: "locale"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "java.util.Locale"
+              parameters:
+              - name: "language"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: "language1"
+                  valueType: "java.lang.String"
+                  uuid: "<init>_locale1-language"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "java.util.Locale"
+            uuid: "<init>_locale1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "scale"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            uuid: "<init>_int1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "minDecimals"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            uuid: "<init>_int2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "groups"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              parameters: []
+              values: []
+            valueType: "java.util.List"
+            genericValueType: "java.lang.Integer"
+            uuid: "<init>_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.utils.BtcFixedFormat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid140"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid138"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid139"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid141"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "setSymbolAndCode_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "setSymbolAndCode_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid144"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void6"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid142"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid143"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "return_of_pattern1"
+      valueType: "java.lang.String"
+      uuid: "toString_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "result1"
+      valueType: "java.lang.String"
+      uuid: "toString_string2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path1"
+    testPathName: "toStringWhenSwitchScaleCaseCOIN_SCALE"
+    constructorSignature: "<init>(java.util.Locale,int,int,java.util.List<java.lang.Integer>)\
+      \ : void"
+    modelFingerprint: "E848945E2AC6CFF89775C2FAA6CB2572"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "BFB08F984D0CF4E423055465CD98619A"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EE07D40EFD4ADC96C83D317FAE9481C2"
+      index: 2
+      valueUuid: "uuid147"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid145"
+        - name: "messageSupplier"
+          valueUuid: "uuid146"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "<init>_void1"
+        access: 9
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "C0FF1F0AD0F6373CDC30F794AE131EFB"
+      index: 3
+      valueUuid: "uuid148"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkState"
+        parameters:
+        - name: "expression"
+          valueUuid: "setSymbolAndCode_boolean1"
+        signature: "checkState(boolean): void"
+        returnValueUuid: "setSymbolAndCode_void1"
+        access: 9
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EE07D40EFD4ADC96C83D317FAE9481C2"
+      index: 4
+      valueUuid: "uuid151"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid149"
+        - name: "messageSupplier"
+          valueUuid: "uuid150"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "<init>_void6"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "5CFEB0D1BDD815B38AE2439BA6989D4B"
+      index: 5
+      methodExercised:
+        target: "target"
+        name: "pattern"
+        parameters: []
+        signature: "pattern(): String"
+        returnValueUuid: "toString_string1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D1F433D4EB9F8805FF391E82DAB508AB"
+      index: 6
+      valueUuid: "toString_string2"
+    uuid: "b59cf20c-5b54-3288-a5f6-be6bffdc1c12"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.text.NumberFormat.getInstance(java.util.Locale)\
+        \ : java.text.NumberFormat"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.utils.BtcFixedFormat"
+        parameters:
+        - name: "locale"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "java.util.Locale"
+              parameters:
+              - name: "language"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: "language1"
+                  valueType: "java.lang.String"
+                  uuid: "<init>_locale1-language"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "java.util.Locale"
+            uuid: "<init>_locale1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "scale"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            uuid: "<init>_int1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "minDecimals"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            uuid: "<init>_int2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "groups"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              parameters: []
+              values: []
+            valueType: "java.util.List"
+            genericValueType: "java.lang.Integer"
+            uuid: "<init>_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.utils.BtcFixedFormat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid147"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid145"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid146"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid148"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "setSymbolAndCode_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "setSymbolAndCode_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid151"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void6"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid149"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid150"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "return_of_pattern1"
+      valueType: "java.lang.String"
+      uuid: "toString_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "result1"
+      valueType: "java.lang.String"
+      uuid: "toString_string2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path5"
+    testPathName: "toStringWhenSwitchScaleCaseMICROCOIN_SCALE"
+    constructorSignature: "<init>(java.util.Locale,int,int,java.util.List<java.lang.Integer>)\
+      \ : void"
+    modelFingerprint: "03595F1B929DDEAD783E271AE8A11161"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "1447C67037CB4EFB8621DD2B9E87EC19"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EE07D40EFD4ADC96C83D317FAE9481C2"
+      index: 2
+      valueUuid: "uuid3"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid1"
+        - name: "messageSupplier"
+          valueUuid: "uuid2"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "<init>_void1"
+        access: 9
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "8E65D47E3C0602D60B2F22B827CB011E"
+      index: 3
+      valueUuid: "uuid5"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkState"
+        parameters:
+        - name: "expression"
+          valueUuid: "setSymbolAndCode_boolean1"
+        signature: "checkState(boolean): void"
+        returnValueUuid: "uuid4"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "AA20AA76211C2FD5EDBFD872253E165B"
+      index: 4
+      methodExercised:
+        target: "target"
+        name: "pattern"
+        parameters: []
+        signature: "pattern(): String"
+        returnValueUuid: "toString_string1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "5A7FF67A646FC8E989CDF47D8E07C734"
+      index: 5
+      valueUuid: "toString_string2"
+    uuid: "c3e4e312-8c11-3027-b829-d73423000503"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "NO_CONSTRUCTOR_PATH_WITHOUT_EXCEPTION"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.utils.BtcFixedFormat"
+        parameters:
+        - name: "locale"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "java.util.Locale"
+              parameters:
+              - name: "language"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: "language1"
+                  valueType: "java.lang.String"
+                  uuid: "<init>_locale1-language"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "java.util.Locale"
+            uuid: "<init>_locale1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "scale"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            uuid: "<init>_int1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "minDecimals"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 2
+            valueType: "int"
+            uuid: "<init>_int2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "groups"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              collectionClass: "java.util.ArrayList"
+              parameters: []
+              values:
+              - sapientType: "BASIC"
+                content: !<regular>
+                  value: 3
+                valueType: "java.lang.Integer"
+                uuid: "<init>_list1-0"
+                fixed: false
+                collectionUuid: "<init>_list1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              - sapientType: "BASIC"
+                content: !<regular>
+                  value: 3
+                valueType: "java.lang.Integer"
+                uuid: "<init>_list1-1"
+                fixed: false
+                collectionUuid: "<init>_list1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+              - sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "java.lang.Integer"
+                uuid: "<init>_list1-2"
+                fixed: false
+                collectionUuid: "<init>_list1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            valueType: "java.util.List"
+            genericValueType: "java.lang.Integer"
+            uuid: "<init>_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.utils.BtcFixedFormat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid5"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.IllegalStateException"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.IllegalStateException"
+      uuid: "uuid4"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "setSymbolAndCode_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "A"
+      valueType: "java.lang.String"
+      uuid: "toString_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "Coin-format A"
+      valueType: "java.lang.String"
+      uuid: "toString_string2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path4"
+    testPathName: "toStringWhenSwitchScaleCaseMILLICOIN_SCALE"
+    constructorSignature: "<init>(java.util.Locale,int,int,java.util.List<java.lang.Integer>)\
+      \ : void"
+    modelFingerprint: "F09C4AD125AA353AE594413C811AB3F9"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "BFB08F984D0CF4E423055465CD98619A"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EE07D40EFD4ADC96C83D317FAE9481C2"
+      index: 2
+      valueUuid: "uuid161"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid159"
+        - name: "messageSupplier"
+          valueUuid: "uuid160"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "<init>_void1"
+        access: 9
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "C0FF1F0AD0F6373CDC30F794AE131EFB"
+      index: 3
+      valueUuid: "uuid162"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkState"
+        parameters:
+        - name: "expression"
+          valueUuid: "setSymbolAndCode_boolean1"
+        signature: "checkState(boolean): void"
+        returnValueUuid: "setSymbolAndCode_void1"
+        access: 9
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EE07D40EFD4ADC96C83D317FAE9481C2"
+      index: 4
+      valueUuid: "uuid165"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid163"
+        - name: "messageSupplier"
+          valueUuid: "uuid164"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "<init>_void6"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "5CFEB0D1BDD815B38AE2439BA6989D4B"
+      index: 5
+      methodExercised:
+        target: "target"
+        name: "pattern"
+        parameters: []
+        signature: "pattern(): String"
+        returnValueUuid: "toString_string1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D1F433D4EB9F8805FF391E82DAB508AB"
+      index: 6
+      valueUuid: "toString_string2"
+    uuid: "abf0ec22-c9da-3a83-bdd9-ac3deb3ca7bf"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.text.NumberFormat.getInstance(java.util.Locale)\
+        \ : java.text.NumberFormat"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.utils.BtcFixedFormat"
+        parameters:
+        - name: "locale"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "java.util.Locale"
+              parameters:
+              - name: "language"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: "language1"
+                  valueType: "java.lang.String"
+                  uuid: "<init>_locale1-language"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "java.util.Locale"
+            uuid: "<init>_locale1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "scale"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            uuid: "<init>_int1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "minDecimals"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            uuid: "<init>_int2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "groups"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              parameters: []
+              values: []
+            valueType: "java.util.List"
+            genericValueType: "java.lang.Integer"
+            uuid: "<init>_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.utils.BtcFixedFormat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid161"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid159"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid160"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid162"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "setSymbolAndCode_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "setSymbolAndCode_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid165"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void6"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid163"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid164"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "return_of_pattern1"
+      valueType: "java.lang.String"
+      uuid: "toString_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "result1"
+      valueType: "java.lang.String"
+      uuid: "toString_string2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path10"
+    testPathName: "toStringWhenSwitchScaleCaseDefault"
+    constructorSignature: "<init>(java.util.Locale,int,int,java.util.List<java.lang.Integer>)\
+      \ : void"
+    modelFingerprint: "CE9BD742D7940CD5E236AFFF093E49DB"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "BFB08F984D0CF4E423055465CD98619A"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EE07D40EFD4ADC96C83D317FAE9481C2"
+      index: 2
+      valueUuid: "uuid168"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid166"
+        - name: "messageSupplier"
+          valueUuid: "uuid167"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "<init>_void1"
+        access: 9
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "C0FF1F0AD0F6373CDC30F794AE131EFB"
+      index: 3
+      valueUuid: "uuid169"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkState"
+        parameters:
+        - name: "expression"
+          valueUuid: "setSymbolAndCode_boolean1"
+        signature: "checkState(boolean): void"
+        returnValueUuid: "setSymbolAndCode_void1"
+        access: 9
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "EE07D40EFD4ADC96C83D317FAE9481C2"
+      index: 4
+      valueUuid: "uuid172"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "uuid170"
+        - name: "messageSupplier"
+          valueUuid: "uuid171"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "<init>_void6"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "5CFEB0D1BDD815B38AE2439BA6989D4B"
+      index: 5
+      methodExercised:
+        target: "target"
+        name: "pattern"
+        parameters: []
+        signature: "pattern(): String"
+        returnValueUuid: "toString_string1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D1F433D4EB9F8805FF391E82DAB508AB"
+      index: 6
+      valueUuid: "toString_string2"
+    uuid: "5ebf920b-84ff-3bd6-a39f-a1c11d0db3c9"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.text.NumberFormat.getInstance(java.util.Locale)\
+        \ : java.text.NumberFormat"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.utils.BtcFixedFormat"
+        parameters:
+        - name: "locale"
+          value:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "java.util.Locale"
+              parameters:
+              - name: "language"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: "language1"
+                  valueType: "java.lang.String"
+                  uuid: "<init>_locale1-language"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "java.util.Locale"
+            uuid: "<init>_locale1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "scale"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            uuid: "<init>_int1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "minDecimals"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            uuid: "<init>_int2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "groups"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              parameters: []
+              values: []
+            valueType: "java.util.List"
+            genericValueType: "java.lang.Integer"
+            uuid: "<init>_list1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.utils.BtcFixedFormat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid168"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid166"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid167"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid169"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "setSymbolAndCode_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "setSymbolAndCode_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid172"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "<init>_void6"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid170"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid171"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "return_of_pattern1"
+      valueType: "java.lang.String"
+      uuid: "toString_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "result1"
+      valueType: "java.lang.String"
+      uuid: "toString_string2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false

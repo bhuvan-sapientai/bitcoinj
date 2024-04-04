@@ -1,0 +1,877 @@
+---
+modelFingerprint: "1B511E21556E689EDE51D87F3FB51731"
+methods:
+- method:
+    name: "put"
+    signature: "put(org.bitcoinj.core.StoredBlock) : void"
+    sourceCodeSignature: "void put(StoredBlock block)"
+    instructionFingerprint: "354259E46ADAF34B8E62B3A68E659094"
+  paths:
+  - pathId: "path1"
+    testPathName: "putWhenBlockMapIsNotNull"
+    constructorSignature: "<init>(org.bitcoinj.core.Block) : void"
+    modelFingerprint: "231090E309D52C6581625651AB2108C2"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "8FC92DD23909800C95986D6136EB69EB"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "block"
+      modelFingerprint: "42F3245ED9D0E1E75EB3D187821211F8"
+      index: 2
+      valueUuid: "<init>_storedBlock1"
+    - type: "LOCAL_VARIABLE"
+      name: "genesisBlock"
+      modelFingerprint: "EDDE8501C6F0423ED4DACE0D21184967"
+      index: 3
+      idsTryCatchBlockSurrounding:
+      - 1
+      valueUuid: "<init>_block1"
+      methodExercised:
+        target: "genesisBlock"
+        name: "cloneAsHeader"
+        parameters: []
+        signature: "cloneAsHeader(): Block"
+        returnValueUuid: "<init>_block2"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      name: "genesisHeader"
+      modelFingerprint: "27941F72C534C66A27C66995CFEECEE6"
+      index: 4
+      idsTryCatchBlockSurrounding:
+      - 1
+      valueUuid: "<init>_block2"
+      methodExercised:
+        target: "genesisHeader"
+        name: "getWork"
+        parameters: []
+        throwsExceptions:
+        - "org.bitcoinj.core.VerificationException"
+        signature: "getWork(): BigInteger throws org.bitcoinj.core.VerificationException"
+        returnValueUuid: "<init>_bigInteger1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "093923621BD05377325D6E7FCBB5633F"
+      index: 5
+      idsTryCatchBlockSurrounding:
+      - 1
+      valueUuid: "<init>_block2"
+      methodExercised:
+        target: "org.bitcoinj.core.Block"
+        name: "getHash"
+        parameters: []
+        signature: "getHash(): Sha256Hash"
+        returnValueUuid: "put_sha256Hash1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "093923621BD05377325D6E7FCBB5633F"
+      index: 6
+      valueUuid: "<init>_block2"
+      methodExercised:
+        target: "org.bitcoinj.core.Block"
+        name: "getHash"
+        parameters: []
+        signature: "getHash(): Sha256Hash"
+        returnValueUuid: "put_sha256Hash2"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 7
+      valueUuid: "uuid1"
+    uuid: "93d4fa60-3e07-39db-9a2c-52b04a00e8b8"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
+      source: "blockMap.put(hash, block);"
+      lineNumber: 54
+      details: "A variable could not be isolated or mocked when calling a method -\
+        \ Variable name: blockMap - Method: put"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.store.MemoryBlockStore"
+        parameters:
+        - name: "genesisBlock"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.core.Block"
+            uuid: "<init>_block1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+        propertiesMap:
+          blockMap:
+            sapientType: "COLLECTION"
+            content: !<unknown_object>
+              onlyPojoFunctions: false
+              builderPattern: false
+            genericValueType: "org.bitcoinj.base.Sha256Hash,org.bitcoinj.core.StoredBlock"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.store.MemoryBlockStore"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.StoredBlock"
+        parameters:
+        - name: "header"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.core.Block"
+            uuid: "<init>_block2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "chainWork"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "java.math.BigInteger"
+            uuid: "<init>_bigInteger1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "height"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.core.StoredBlock"
+      uuid: "<init>_storedBlock1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "<init>_block1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "<init>_block2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "<init>_block2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "java.math.BigInteger"
+      uuid: "<init>_bigInteger1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "<init>_block2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "put_sha256Hash1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "<init>_block2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "put_sha256Hash2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "get"
+    signature: "get(org.bitcoinj.base.Sha256Hash) : org.bitcoinj.core.StoredBlock"
+    sourceCodeSignature: "StoredBlock get(Sha256Hash hash)"
+    instructionFingerprint: "5325726CE9F916E069A6319DFF6FBBEE"
+  paths:
+  - pathId: "path1"
+    testPathName: "getWhenBlockMapIsNotNull"
+    constructorSignature: "<init>(org.bitcoinj.core.Block) : void"
+    modelFingerprint: "61A9718A2F7097B4F077049A22CE6C10"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "8FC92DD23909800C95986D6136EB69EB"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "hash"
+      modelFingerprint: "5013FA43D41C42D0C9BB2BBEE9A02D24"
+      index: 2
+      valueUuid: "get_sha256Hash1"
+    - type: "LOCAL_VARIABLE"
+      name: "genesisBlock"
+      modelFingerprint: "EDDE8501C6F0423ED4DACE0D21184967"
+      index: 3
+      idsTryCatchBlockSurrounding:
+      - 1
+      valueUuid: "<init>_block1"
+      methodExercised:
+        target: "genesisBlock"
+        name: "cloneAsHeader"
+        parameters: []
+        signature: "cloneAsHeader(): Block"
+        returnValueUuid: "<init>_block2"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      name: "genesisHeader"
+      modelFingerprint: "27941F72C534C66A27C66995CFEECEE6"
+      index: 4
+      idsTryCatchBlockSurrounding:
+      - 1
+      valueUuid: "<init>_block2"
+      methodExercised:
+        target: "genesisHeader"
+        name: "getWork"
+        parameters: []
+        throwsExceptions:
+        - "org.bitcoinj.core.VerificationException"
+        signature: "getWork(): BigInteger throws org.bitcoinj.core.VerificationException"
+        returnValueUuid: "<init>_bigInteger1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "093923621BD05377325D6E7FCBB5633F"
+      index: 5
+      idsTryCatchBlockSurrounding:
+      - 1
+      valueUuid: "<init>_block2"
+      methodExercised:
+        target: "org.bitcoinj.core.Block"
+        name: "getHash"
+        parameters: []
+        signature: "getHash(): Sha256Hash"
+        returnValueUuid: "put_sha256Hash1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "597A789F7D89971D84BF177CF5482CC7"
+      index: 6
+      valueUuid: "get_object1"
+    uuid: "bdad3ce5-9bf5-3345-b74d-b0512e0208b6"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
+      source: "blockMap.put(hash, block);"
+      lineNumber: 54
+      details: "A variable could not be isolated or mocked when calling a method -\
+        \ Variable name: blockMap - Method: put"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.store.MemoryBlockStore"
+        parameters:
+        - name: "genesisBlock"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.core.Block"
+            uuid: "<init>_block1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+        propertiesMap:
+          blockMap:
+            sapientType: "COLLECTION"
+            content: !<unknown_object>
+              onlyPojoFunctions: false
+              builderPattern: false
+            genericValueType: "org.bitcoinj.base.Sha256Hash,org.bitcoinj.core.StoredBlock"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.store.MemoryBlockStore"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "get_sha256Hash1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "<init>_block1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "<init>_block2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "<init>_block2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "java.math.BigInteger"
+      uuid: "<init>_bigInteger1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "<init>_block2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "put_sha256Hash1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.StoredBlock"
+      uuid: "get_object1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: true
+- method:
+    name: "getChainHead"
+    signature: "getChainHead() : org.bitcoinj.core.StoredBlock"
+    sourceCodeSignature: "StoredBlock getChainHead()"
+    instructionFingerprint: "B7E2B1FA38A1A51D24F77E344BB392B2"
+  paths:
+  - pathId: "path1"
+    testPathName: "getChainHeadWhenBlockMapIsNotNull"
+    constructorSignature: "<init>(org.bitcoinj.core.Block) : void"
+    modelFingerprint: "41BDD9595C69FDAB615AB9B80AD64796"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "8FC92DD23909800C95986D6136EB69EB"
+      index: 1
+      valueUuid: "target"
+    - type: "LOCAL_VARIABLE"
+      name: "genesisBlock"
+      modelFingerprint: "EDDE8501C6F0423ED4DACE0D21184967"
+      index: 2
+      idsTryCatchBlockSurrounding:
+      - 1
+      valueUuid: "<init>_block1"
+      methodExercised:
+        target: "genesisBlock"
+        name: "cloneAsHeader"
+        parameters: []
+        signature: "cloneAsHeader(): Block"
+        returnValueUuid: "<init>_block2"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      name: "genesisHeader"
+      modelFingerprint: "27941F72C534C66A27C66995CFEECEE6"
+      index: 3
+      idsTryCatchBlockSurrounding:
+      - 1
+      valueUuid: "<init>_block2"
+      methodExercised:
+        target: "genesisHeader"
+        name: "getWork"
+        parameters: []
+        throwsExceptions:
+        - "org.bitcoinj.core.VerificationException"
+        signature: "getWork(): BigInteger throws org.bitcoinj.core.VerificationException"
+        returnValueUuid: "<init>_bigInteger1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "093923621BD05377325D6E7FCBB5633F"
+      index: 4
+      idsTryCatchBlockSurrounding:
+      - 1
+      valueUuid: "<init>_block2"
+      methodExercised:
+        target: "org.bitcoinj.core.Block"
+        name: "getHash"
+        parameters: []
+        signature: "getHash(): Sha256Hash"
+        returnValueUuid: "put_sha256Hash1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "6D18F6C85038D84A4CD52BB76896737C"
+      index: 5
+      valueUuid: "<init>_storedBlock1"
+    uuid: "21ed6da0-f82f-3eac-84ef-f7da4d646f7c"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
+      source: "blockMap.put(hash, block);"
+      lineNumber: 54
+      details: "A variable could not be isolated or mocked when calling a method -\
+        \ Variable name: blockMap - Method: put"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.store.MemoryBlockStore"
+        parameters:
+        - name: "genesisBlock"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.core.Block"
+            uuid: "<init>_block1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.store.MemoryBlockStore"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "<init>_block1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "<init>_block2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "<init>_block2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "java.math.BigInteger"
+      uuid: "<init>_bigInteger1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "<init>_block2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "put_sha256Hash1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.StoredBlock"
+        parameters:
+        - name: "header"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.core.Block"
+            uuid: "<init>_block2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "chainWork"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "java.math.BigInteger"
+            uuid: "<init>_bigInteger1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "height"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.core.StoredBlock"
+      uuid: "<init>_storedBlock1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "setChainHead"
+    signature: "setChainHead(org.bitcoinj.core.StoredBlock) : void"
+    sourceCodeSignature: "void setChainHead(StoredBlock chainHead)"
+    instructionFingerprint: "8CBA6A04B3B880B772A3E8ED10833A7A"
+  paths:
+  - pathId: "path1"
+    testPathName: "setChainHeadWhenBlockMapIsNotNull"
+    constructorSignature: "<init>(org.bitcoinj.core.Block) : void"
+    modelFingerprint: "1A2673460DF66AA8A2E97FA573341660"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "8FC92DD23909800C95986D6136EB69EB"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "chainHead"
+      modelFingerprint: "60E3BD77756A5C2CC934DB1D05B014BF"
+      index: 2
+      valueUuid: "<init>_storedBlock1"
+    - type: "LOCAL_VARIABLE"
+      name: "genesisBlock"
+      modelFingerprint: "EDDE8501C6F0423ED4DACE0D21184967"
+      index: 3
+      idsTryCatchBlockSurrounding:
+      - 1
+      valueUuid: "<init>_block1"
+      methodExercised:
+        target: "genesisBlock"
+        name: "cloneAsHeader"
+        parameters: []
+        signature: "cloneAsHeader(): Block"
+        returnValueUuid: "<init>_block2"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      name: "genesisHeader"
+      modelFingerprint: "27941F72C534C66A27C66995CFEECEE6"
+      index: 4
+      idsTryCatchBlockSurrounding:
+      - 1
+      valueUuid: "<init>_block2"
+      methodExercised:
+        target: "genesisHeader"
+        name: "getWork"
+        parameters: []
+        throwsExceptions:
+        - "org.bitcoinj.core.VerificationException"
+        signature: "getWork(): BigInteger throws org.bitcoinj.core.VerificationException"
+        returnValueUuid: "<init>_bigInteger1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "093923621BD05377325D6E7FCBB5633F"
+      index: 5
+      idsTryCatchBlockSurrounding:
+      - 1
+      valueUuid: "<init>_block2"
+      methodExercised:
+        target: "org.bitcoinj.core.Block"
+        name: "getHash"
+        parameters: []
+        signature: "getHash(): Sha256Hash"
+        returnValueUuid: "put_sha256Hash1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 6
+      valueUuid: "uuid2"
+    uuid: "7f46c20f-91a7-37c9-a337-f1d1de82a194"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
+      source: "blockMap.put(hash, block);"
+      lineNumber: 54
+      details: "A variable could not be isolated or mocked when calling a method -\
+        \ Variable name: blockMap - Method: put"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.store.MemoryBlockStore"
+        parameters:
+        - name: "genesisBlock"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.core.Block"
+            uuid: "<init>_block1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.store.MemoryBlockStore"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.StoredBlock"
+        parameters:
+        - name: "header"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.core.Block"
+            uuid: "<init>_block2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "chainWork"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "java.math.BigInteger"
+            uuid: "<init>_bigInteger1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "height"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.core.StoredBlock"
+      uuid: "<init>_storedBlock1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "<init>_block1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "<init>_block2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "<init>_block2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "java.math.BigInteger"
+      uuid: "<init>_bigInteger1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "<init>_block2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "put_sha256Hash1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      uuid: "uuid2"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "close"
+    signature: "close() : void"
+    sourceCodeSignature: "void close()"
+    instructionFingerprint: "E32BE7E792206913C7E102167603AD99"
+  paths:
+  - pathId: "path1"
+    testPathName: "closeTest"
+    constructorSignature: "<init>(org.bitcoinj.core.Block) : void"
+    modelFingerprint: "F69D7BE37CC00EBD6E440F9E362CBC77"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "8FC92DD23909800C95986D6136EB69EB"
+      index: 1
+      valueUuid: "target"
+    - type: "LOCAL_VARIABLE"
+      name: "genesisBlock"
+      modelFingerprint: "EDDE8501C6F0423ED4DACE0D21184967"
+      index: 2
+      idsTryCatchBlockSurrounding:
+      - 1
+      valueUuid: "<init>_block1"
+      methodExercised:
+        target: "genesisBlock"
+        name: "cloneAsHeader"
+        parameters: []
+        signature: "cloneAsHeader(): Block"
+        returnValueUuid: "<init>_block2"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      name: "genesisHeader"
+      modelFingerprint: "27941F72C534C66A27C66995CFEECEE6"
+      index: 3
+      idsTryCatchBlockSurrounding:
+      - 1
+      valueUuid: "<init>_block2"
+      methodExercised:
+        target: "genesisHeader"
+        name: "getWork"
+        parameters: []
+        throwsExceptions:
+        - "org.bitcoinj.core.VerificationException"
+        signature: "getWork(): BigInteger throws org.bitcoinj.core.VerificationException"
+        returnValueUuid: "<init>_bigInteger1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "093923621BD05377325D6E7FCBB5633F"
+      index: 4
+      idsTryCatchBlockSurrounding:
+      - 1
+      valueUuid: "<init>_block2"
+      methodExercised:
+        target: "org.bitcoinj.core.Block"
+        name: "getHash"
+        parameters: []
+        signature: "getHash(): Sha256Hash"
+        returnValueUuid: "put_sha256Hash1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 5
+      valueUuid: "uuid3"
+    uuid: "4338ea80-df41-3c09-b3eb-b0476a460c1f"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
+      source: "blockMap.put(hash, block);"
+      lineNumber: 54
+      details: "A variable could not be isolated or mocked when calling a method -\
+        \ Variable name: blockMap - Method: put"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.store.MemoryBlockStore"
+        parameters:
+        - name: "genesisBlock"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bitcoinj.core.Block"
+            uuid: "<init>_block1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.store.MemoryBlockStore"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "<init>_block1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "<init>_block2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "<init>_block2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "java.math.BigInteger"
+      uuid: "<init>_bigInteger1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "<init>_block2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "put_sha256Hash1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      uuid: "uuid3"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false

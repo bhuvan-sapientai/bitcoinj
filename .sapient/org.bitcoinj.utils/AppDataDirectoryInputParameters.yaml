@@ -1,0 +1,396 @@
+---
+modelFingerprint: "F9993D954BEBE6797EDE4829295C9406"
+methods:
+- method:
+    name: "get"
+    signature: "get(java.lang.String) : java.nio.file.Path"
+    sourceCodeSignature: "Path get(String appName)"
+    tryCatchBlocks:
+    - idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.io.IOException"
+    instructionFingerprint: "EF18E482E3988E11BAE59F11E68E8EC4"
+  paths:
+  - pathId: "path1"
+    testPathName: "getTest"
+    modelFingerprint: "F375FAA1E27F574F7D74C03933E43FAA"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "appName"
+      modelFingerprint: "0587CB61993FA8536A0B86D4A7692F51"
+      index: 1
+      valueUuid: "get_string1"
+    - type: "STATIC"
+      name: "AppDataDirectory"
+      modelFingerprint: "092EE65131DC02885D0E268A271429A4"
+      index: 2
+      valueUuid: "uuid1"
+      methodExercised:
+        target: "org.bitcoinj.utils.AppDataDirectory"
+        name: "getPath"
+        parameters:
+        - name: "appName"
+          valueUuid: "get_string1"
+        signature: "getPath(String): Path"
+        returnValueUuid: "get_path1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D2FD627601161BC4985333F754AB94D6"
+      index: 3
+      valueUuid: "get_path1"
+    uuid: "9c25887d-767d-38e9-b5ae-c2e4012c49be"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "UNKNOWN_REASON"
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "appName1"
+      valueType: "java.lang.String"
+      uuid: "get_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.utils.AppDataDirectory"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.nio.file.Path"
+      uuid: "get_path1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "appName1"
+      valueType: "java.lang.String"
+      uuid: "get_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.nio.file.Path"
+      uuid: "get_path1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "getWhenCaughtIOExceptionThrowsRuntimeException"
+    modelFingerprint: "9EBD7829C4B462F306B5A7B581B084E1"
+    problemWasSolvedByProver: true
+    catchBlockExercised:
+      idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.io.IOException"
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "appName"
+      modelFingerprint: "0587CB61993FA8536A0B86D4A7692F51"
+      index: 1
+      valueUuid: "get_string1"
+    - type: "STATIC"
+      name: "AppDataDirectory"
+      modelFingerprint: "D09D96E553E27D3605C53C0A380927DC"
+      index: 2
+      valueUuid: "uuid1"
+      methodExercised:
+        target: "org.bitcoinj.utils.AppDataDirectory"
+        name: "getPath"
+        parameters:
+        - name: "appName"
+          valueUuid: "get_string1"
+        signature: "getPath(String): Path"
+        returnValueUuid: "get_path1"
+        access: 9
+    - type: "STATIC"
+      name: "Files"
+      modelFingerprint: "D2BA59BDBA564CBDB60659E8C9F6C3E0"
+      index: 3
+      idsTryCatchBlockSurrounding:
+      - 1
+      valueUuid: "uuid2"
+      methodExercised:
+        target: "java.nio.file.Files"
+        name: "createDirectories"
+        parameters:
+        - name: "x"
+          valueUuid: "get_path1"
+        - name: "x"
+          valueUuid: "get_fileAttribute[]1"
+        throwsExceptions:
+        - "java.io.IOException"
+        signature: "createDirectories(Path,FileAttribute[]): Path throws java.io.IOException"
+        returnValueUuid: "get_path2"
+        access: 137
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "768C8C6C33FF60965DD0ABA59B187E7A"
+      index: 4
+      valueUuid: "get_runtimeException1"
+    uuid: "20c68a61-efbf-31e7-b8b9-821fdb9fe6d2"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "appName1"
+      valueType: "java.lang.String"
+      uuid: "get_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.utils.AppDataDirectory"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.nio.file.Path"
+      uuid: "get_path1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "appName1"
+      valueType: "java.lang.String"
+      uuid: "get_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.nio.file.Files"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.io.IOException"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.io.IOException"
+      uuid: "get_path2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "java.nio.file.Path"
+      uuid: "get_path1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "java.nio.file.attribute.FileAttribute[]"
+      uuid: "get_fileAttribute[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.RuntimeException"
+        parameters:
+        - name: "message"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "Couldn't find/create AppDataDirectory"
+            valueType: "java.lang.String"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "cause"
+          value:
+            sapientType: "EXCEPTION"
+            content: !<new>
+              target: "java.io.IOException"
+              parameters: []
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "java.io.IOException"
+            uuid: "get_path2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "java.lang.RuntimeException"
+      uuid: "get_runtimeException1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "getPath"
+    signature: "getPath(java.lang.String) : java.nio.file.Path"
+    sourceCodeSignature: "Path getPath(String appName)"
+    instructionFingerprint: "EAB8EA0E916B9ACA66DD51ECC3E53FA2"
+  paths:
+  - pathId: "path1"
+    testPathName: "getPathWhenPlatformUtilsIsMac"
+    modelFingerprint: "991AD3845C0B7D1105ACBA87E517898F"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "appName"
+      modelFingerprint: "0587CB61993FA8536A0B86D4A7692F51"
+      index: 1
+      valueUuid: "getPath_string1"
+    - type: "STATIC"
+      name: "PlatformUtils"
+      modelFingerprint: "18B948023B49D81F729E50A5012849B5"
+      index: 2
+      valueUuid: "uuid4"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.PlatformUtils"
+        name: "isWindows"
+        parameters: []
+        signature: "isWindows(): boolean"
+        returnValueUuid: "getPath_boolean1"
+        access: 9
+    - type: "STATIC"
+      name: "PlatformUtils"
+      modelFingerprint: "F1989C104443E6D645D3808D9A68CE47"
+      index: 3
+      valueUuid: "uuid5"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.PlatformUtils"
+        name: "isMac"
+        parameters: []
+        signature: "isMac(): boolean"
+        returnValueUuid: "getPath_boolean2"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "7E02A33EA5446729A283CDACF3F64DDF"
+      index: 4
+      valueUuid: "pathOf_path1"
+    uuid: "8c0c0474-0b1d-3c5b-9745-135516824293"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_CALL_INSTRUCTION_UNSOLVABLE"
+      source: "applicationDataDirectory = pathOf(System.getProperty(\\\"user.home\\\
+        \"),\\\"Library/Application Support\\\", appName);"
+      lineNumber: 70
+      details: "Method java.lang.System::getProperty has a unrepeatable behavior"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "appName1"
+      valueType: "java.lang.String"
+      uuid: "getPath_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.PlatformUtils"
+      uuid: "uuid4"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "getPath_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.PlatformUtils"
+      uuid: "uuid5"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "getPath_boolean2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<method_return_from_value>
+        target: "java.nio.file.Path"
+        localVariableValue:
+          sapientType: "OBJECT"
+          content: !<static_method_return>
+            target: "java.nio.file.FileSystems"
+            method: "getDefault"
+            methodParameters: []
+          valueType: "java.nio.file.FileSystem"
+          uuid: "pathOf_fileSystem1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        methodParameters:
+        - name: "arg0"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "A"
+            valueType: "java.lang.String"
+            uuid: "getPath_string2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "arg1"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values:
+                0:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: "Library/Application Support"
+                  valueType: "java.lang.String"
+                  fixed: true
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                1:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: "appName1"
+                  valueType: "java.lang.String"
+                  uuid: "getPath_string1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "java.lang.String[]"
+            uuid: "getPath_string[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        methodName: "getPath"
+      valueType: "java.nio.file.Path"
+      uuid: "pathOf_path1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false

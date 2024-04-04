@@ -1,0 +1,2259 @@
+---
+modelFingerprint: "AC1AD62AC4CA2A1C9E534E76E53B4CF9"
+methods:
+- method:
+    name: "encode"
+    signature: "encode(byte[]) : java.lang.String"
+    sourceCodeSignature: "String encode(byte[] input)"
+    instructionFingerprint: "2E8FEAED726DE5925689E09827435FE0"
+  paths:
+  - pathId: "path1"
+    testPathName: "encodeWhenInputLengthEquals0"
+    modelFingerprint: "C4CAF92C6054AC888C58BCBF852AA153"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "input"
+      modelFingerprint: "68E3083EC24107B5F413E2319428B6C2"
+      index: 1
+      valueUuid: "encode_byte[]1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "B7512A5CE35824DCAFE78D54DDB7BFDE"
+      index: 2
+      valueUuid: "uuid1"
+    uuid: "35249b84-fbfc-3973-b41c-80dcbf08fff1"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "encode_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: ""
+      valueType: "java.lang.String"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path6"
+    testPathName: "encodeWhenZerosGreaterThanOrEqualsTo0"
+    modelFingerprint: "BD9FC9E87CAF3FEA07A84101EFCE2040"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "6207592d-7599-3ecc-9d44-71784e396da9"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "REFLECTION_CALL_FAILURE"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path10"
+    testPathName: "encodeWhenZerosLessThan0"
+    modelFingerprint: "0A99C125AACCADC7195250ABD57AB3BD"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "8fd11f76-7bd3-3700-a650-38daa90cddbf"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "REFLECTION_CALL_FAILURE"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path5"
+    testPathName: "encodeWhenOutputStartIndexOfEncodedNotEqualsENCODED_ZEROAndZerosGreaterThanOrEqualsTo0"
+    modelFingerprint: "7A922CF49629647C48F025FB307C1C0B"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "86d28e22-a2ec-3df9-943e-d4dbf25c0347"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path4"
+    testPathName: "encodeWhenOutputStartNotLessThanEncodedLengthAndZerosGreaterThanOrEqualsTo0"
+    modelFingerprint: "3D5F67A7BEDEF73D6C731F3128032B06"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "4b740162-1240-3454-b6c6-5a334b6fc1e7"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path9"
+    testPathName: "encodeWhenOutputStartNotLessThanEncodedLengthAndZerosLessThan0"
+    modelFingerprint: "3EC598480C454DDE21E96853BDC9D631"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "b686ea5d-8e6a-3ae9-8663-420e24a04d2e"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path11"
+    testPathName: "encodeWhenOutputStartIndexOfEncodedEqualsENCODED_ZEROAndZerosLessThan0"
+    modelFingerprint: "8679A3E605BDA2A9124F87FE4DADA8D9"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "6982ed4b-5d37-394a-a97b-cbaf1a3d4023"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path2"
+    testPathName: "encodeWhenOutputStartIndexOfEncodedEqualsENCODED_ZEROAndZerosGreaterThanOrEqualsTo0"
+    modelFingerprint: "58FBD82BDF3812D2938EE7C136F1CA82"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "input"
+      modelFingerprint: "EA08E786580C61FDE5C34462DDB7DAFF"
+      index: 1
+      valueUuid: "encode_byte[]1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D1F433D4EB9F8805FF391E82DAB508AB"
+      index: 2
+      valueUuid: "encode_string1"
+    uuid: "9ffe52a2-f6c8-31e4-a06f-316354bb76db"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            uuid: "encode_byte1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "encode_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "result1"
+      valueType: "java.lang.String"
+      uuid: "encode_string1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path3"
+    testPathName: "encodeWhenOutputStartLessThanEncodedLengthAndOutputStartIndexOfEncodedNotEqualsENCODED_ZEROAndZerosGreaterThanOrEqualsT"
+    modelFingerprint: "B91BB93DF309E6496BF170BEF2A281DE"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "f2240544-c594-347a-8bcc-2afe65c85907"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path7"
+    testPathName: "encodeWhenOutputStartLessThanEncodedLengthAndOutputStartIndexOfEncodedEqualsENCODED_ZEROAndZerosLessThan0"
+    modelFingerprint: "5CB0CFE2186FF0F6A7A5C0FDFAD7AB89"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "b3ebece5-5051-3a9b-bab4-4fe51bcd51a5"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path8"
+    testPathName: "encodeWhenOutputStartIndexOfEncodedNotEqualsENCODED_ZEROAndZerosLessThan0"
+    modelFingerprint: "BBC408A6E7241005A504BD52563A4600"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "77f221d8-746b-357d-9490-417903c249e8"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "encodeChecked"
+    signature: "encodeChecked(int,byte[]) : java.lang.String"
+    sourceCodeSignature: "String encodeChecked(int version, byte[] payload)"
+    instructionFingerprint: "58A8F29FC6216C23AE693848748AC262"
+  paths:
+  - pathId: "path3"
+    testPathName: "encodeCheckedWhenVersionLessThan0ThrowsIllegalArgumentException"
+    modelFingerprint: "5124EEFB4C19602AA44283CA59231538"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "ff4f08c7-d479-3b2f-9ad0-b4debb22560f"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path1"
+    testPathName: "encodeCheckedWhenVersionGreaterThan255ThrowsIllegalArgumentException"
+    modelFingerprint: "1AA90318A605C6AE2C01550A91FF39B3"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "version"
+      modelFingerprint: "4E6FBE3BE1DBE0CDA21BDBC7C1D3BAA9"
+      index: 1
+      valueUuid: "encodeChecked_int1"
+    - type: "INPUT"
+      name: "payload"
+      modelFingerprint: "7DE5E617F8D43A7E64AE355157EB43BE"
+      index: 2
+      valueUuid: "encodeChecked_byte[]1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "1FF53ED7896776DA83EFB2C9F2325620"
+      index: 3
+      valueUuid: "encodeChecked_illegalArgumentException1"
+    uuid: "d6c64f95-dfe3-361a-9629-53d0620784ff"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 256
+      valueType: "int"
+      uuid: "encodeChecked_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "encodeChecked_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.IllegalArgumentException"
+        parameters:
+        - name: "s"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "Version not in range."
+            valueType: "java.lang.String"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "java.lang.IllegalArgumentException"
+      uuid: "encodeChecked_illegalArgumentException1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "encodeCheckedWhenVersionNotGreaterThan255"
+    modelFingerprint: "D39EF11CF40A531ABAAEEEEADB9BBE77"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "version"
+      modelFingerprint: "22917D9CFA017FCB1DB42242A84C2D5F"
+      index: 1
+      valueUuid: "encodeChecked_int1"
+    - type: "INPUT"
+      name: "payload"
+      modelFingerprint: "753EE9B0124C20DD45C6D1BDBB7FFCD0"
+      index: 2
+      valueUuid: "encodeChecked_byte[]1"
+    - type: "STATIC"
+      name: "Sha256Hash"
+      modelFingerprint: "AD331AEB33709AAF9A06CF96606746FD"
+      index: 3
+      valueUuid: "uuid3"
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "hashTwice"
+        parameters:
+        - name: "input"
+          valueUuid: "encodeChecked_byte[]2"
+        - name: "offset"
+          valueUuid: "uuid1"
+        - name: "length"
+          valueUuid: "uuid2"
+        signature: "hashTwice(byte[],int,int): byte[]"
+        returnValueUuid: "encodeChecked_byte[]3"
+        access: 9
+    - type: "STATIC"
+      name: "Base58"
+      modelFingerprint: "A77CE36696B3E54D4F80197BDAF0F29A"
+      index: 4
+      valueUuid: "uuid4"
+      methodExercised:
+        target: "org.bitcoinj.base.Base58"
+        name: "encode"
+        parameters:
+        - name: "input"
+          valueUuid: "encodeChecked_byte[]2"
+        signature: "encode(byte[]): String"
+        returnValueUuid: "encodeChecked_string1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D1F433D4EB9F8805FF391E82DAB508AB"
+      index: 5
+      valueUuid: "encodeChecked_string1"
+    uuid: "d2931715-ecaa-3ff6-ba6d-b16bac9265ab"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "encodeChecked_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "encodeChecked_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "uuid3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 20
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]3-item0"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          1:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 6
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]3-item1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          2:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: -32
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]3-item2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          3:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 88
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]3-item3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          4:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: -127
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]3-item4"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          5:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: -30
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]3-item5"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          6:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: -103
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]3-item6"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          7:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 54
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]3-item7"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          8:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 119
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]3-item8"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          9:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 102
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]3-item9"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          10:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: -45
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]3-item10"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          11:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 19
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]3-item11"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          12:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: -30
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]3-item12"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          13:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 108
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]3-item13"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          14:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 5
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]3-item14"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          15:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 86
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]3-item15"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          16:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 78
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]3-item16"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          17:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: -55
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]3-item17"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          18:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 27
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]3-item18"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          19:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: -9
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]3-item19"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          20:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 33
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]3-item20"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          21:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: -45
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]3-item21"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          22:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 23
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]3-item22"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          23:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 38
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]3-item23"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          24:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: -67
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]3-item24"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          25:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 110
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]3-item25"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          26:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 70
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]3-item26"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          27:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: -26
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]3-item27"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          28:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 6
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]3-item28"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          29:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: -119
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]3-item29"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          30:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 83
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]3-item30"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          31:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: -102
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]3-item31"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "encodeChecked_byte[]3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]2-item0"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          1:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 20
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]2-item1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          2:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 6
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]2-item2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          3:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: -32
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]2-item3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          4:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 88
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]2-item4"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "encodeChecked_byte[]2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 1
+      valueType: "int"
+      uuid: "uuid2"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Base58"
+      uuid: "uuid4"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "return_of_encode1"
+      valueType: "java.lang.String"
+      uuid: "encodeChecked_string1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]2-item0"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          1:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 20
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]2-item1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          2:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 6
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]2-item2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          3:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: -32
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]2-item3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          4:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 88
+            valueType: "byte"
+            uuid: "encodeChecked_byte[]2-item4"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "encodeChecked_byte[]2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "return_of_encode1"
+      valueType: "java.lang.String"
+      uuid: "encodeChecked_string1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "decode"
+    signature: "decode(java.lang.String) : byte[]"
+    sourceCodeSignature: "byte[] decode(String input)"
+    instructionFingerprint: "C2F23D721E9100E71BFBB7216FFE3B02"
+  paths:
+  - pathId: "path1"
+    testPathName: "decodeWhenInputLengthEquals0"
+    modelFingerprint: "8B1A71A2E36FCEFFCC8EB14E815DF123"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "input"
+      modelFingerprint: "076F1FC7BD68AA24F9EE17B7687CB6EA"
+      index: 1
+      valueUuid: "decode_string1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "6F284CA220F919F7D0C6EB6C97E89FCE"
+      index: 2
+      valueUuid: "decode_byte[]1"
+    uuid: "3ff6cf1c-73aa-3557-b401-4d92b129657a"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: ""
+      valueType: "java.lang.String"
+      uuid: "decode_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "decode_byte[]1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "decodeWhenDigitLessThan0ThrowsAddressFormatExceptionInvalidCharacter"
+    modelFingerprint: "C50C97C536FC610612A08707DBA33B97"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "06f24bb3-0948-301f-b8af-a1dfb1abb0bf"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path11"
+    testPathName: "decodeWhenCNotLessThan128AndDigitLessThan0ThrowsAddressFormatExceptionInvalidCharacter"
+    modelFingerprint: "A390457061815E00D439D440B40C1656"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "input"
+      modelFingerprint: "9F7C953D624CA9B587DF3C543B0898F3"
+      index: 1
+      valueUuid: "decode_string1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "DFB5E7FE04AF663D19063DCBA0EA077E"
+      index: 2
+      valueUuid: "decode_addressFormatException.InvalidCharacter1"
+    uuid: "3b46bdbd-16c4-3445-9690-b660a76f1610"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "\\uFFFF"
+      valueType: "java.lang.String"
+      uuid: "decode_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidCharacter"
+        parameters:
+        - name: "character"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "\\uD83F"
+            valueType: "char"
+            uuid: "decode_char1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "position"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            uuid: "decode_int3"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidCharacter"
+      uuid: "decode_addressFormatException.InvalidCharacter1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+  - pathId: "path6"
+    testPathName: "decodeWhenOutputStartNotLessThanDecodedLength"
+    modelFingerprint: "D56B4B0F9A502855561A1D841023FEBA"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "c2c18369-6102-3303-a3ba-02fa4a31922d"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path5"
+    testPathName: "decodeWhenOutputStartIndexOfDecodedNotEquals0"
+    modelFingerprint: "8DB3F96DBDD4EA67F60554657003056C"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "c7dbcb25-9cdc-3607-bdd9-78d6c0b5be7e"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path12"
+    testPathName: "decodeWhenOutputStartLessThanDecodedLengthAndOutputStartIndexOfDecodedNotEquals0"
+    modelFingerprint: "D003AAFB4F1BA9F9BECEA85F57EFBD21"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "141815cd-dfad-3096-828c-9a050828da58"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path4"
+    testPathName: "decodeWhenInputStartIndexOfInput58NotEquals0AndOutputStartNotLessThanDecodedLength"
+    modelFingerprint: "B07AE3FE7B4491E5C76BC020A7AEC419"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "e7a38575-a1a5-3d0c-8a41-53baf0e30a00"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path9"
+    testPathName: "decodeWhenInputStartIndexOfInput58Equals0AndOutputStartNotLessThanDecodedLength"
+    modelFingerprint: "DE74EA208BBE25601FFC951BAC01153C"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "68469aa2-f8e2-31c8-a150-a0b49bcfdc7e"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path10"
+    testPathName: "decodeWhenInputStartIndexOfInput58Equals0AndOutputStartLessThanDecodedLengthAndOutputStartIndexOfDecodedNotEquals0"
+    modelFingerprint: "983EB3C778DE128B6AFD0787E75528DD"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "5a002987-a572-3bc1-ac92-a156b40aec23"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path3"
+    testPathName: "decodeWhenInputStartIndexOfInput58NotEquals0AndOutputStartLessThanDecodedLengthAndOutputStartIndexOfDecodedNotEquals0"
+    modelFingerprint: "8A531ECBB59E08D32BB9886525159954"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "input"
+      modelFingerprint: "E946A2A33718ECA476C44528BEA4B59E"
+      index: 1
+      valueUuid: "decode_string1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "2A3B2C783AE74B818AA0721F9193C86A"
+      index: 2
+      valueUuid: "decode_byte[]3"
+    uuid: "6132aca1-469e-3b26-86e7-fd52897896b4"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "ERROR_RECALCULATING_SUGGESTED_VALUES"
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "1A"
+      valueType: "java.lang.String"
+      uuid: "decode_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            uuid: "decode_byte[]3-item0"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          1:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            uuid: "decode_byte[]3-item1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "decode_byte[]3"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path7"
+    testPathName: "decodeWhenOutputStartIndexOfDecodedEquals0"
+    modelFingerprint: "9594457CA89079CF7E71287A3CF658D4"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "input"
+      modelFingerprint: "9A909F116EF2878BD44D7168F49B5A53"
+      index: 1
+      valueUuid: "decode_string1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "740324D8AEEA83F5639543B37CAABC19"
+      index: 2
+      valueUuid: "decode_byte[]3"
+    uuid: "7d7d8b16-f133-3e8e-8d2c-e1dc068400dc"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "P"
+      valueType: "java.lang.String"
+      uuid: "decode_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "decode_byte[]3"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path8"
+    testPathName: "decodeWhenILessThanNumberLengthAndInputStartIndexOfInput58Equals0AndOutputStartLessThanDecodedLengthAndOutputStartIndex"
+    modelFingerprint: "F1087022F2BFD7BC91533B1E1BD8CCD1"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "711d15ef-f9b5-3cc6-a8ba-1cd7b1de2ec7"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "BITWISE_NOT_SUPPORTED"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "decodeToBigInteger"
+    signature: "decodeToBigInteger(java.lang.String) : java.math.BigInteger"
+    sourceCodeSignature: "BigInteger decodeToBigInteger(String input)"
+    instructionFingerprint: "F2AE6C19245B1286FD4B845A7E13480A"
+  paths:
+  - pathId: "path1"
+    testPathName: "decodeToBigIntegerTest"
+    modelFingerprint: "A08262ED668E5D8EC514D756BB8A2190"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "input"
+      modelFingerprint: "076F1FC7BD68AA24F9EE17B7687CB6EA"
+      index: 1
+      valueUuid: "decodeToBigInteger_string1"
+    - type: "STATIC"
+      name: "Base58"
+      modelFingerprint: "91BE9373AB852B6A49E870232B06871A"
+      index: 2
+      valueUuid: "uuid5"
+      methodExercised:
+        target: "org.bitcoinj.base.Base58"
+        name: "decode"
+        parameters:
+        - name: "input"
+          valueUuid: "decodeToBigInteger_string1"
+        signature: "decode(String): byte[]"
+        returnValueUuid: "decodeToBigInteger_byte[]1"
+        access: 9
+    - type: "STATIC"
+      name: "ByteUtils"
+      modelFingerprint: "5266881C5970913775CF57C161EFAA67"
+      index: 3
+      valueUuid: "uuid6"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.ByteUtils"
+        name: "bytesToBigInteger"
+        parameters:
+        - name: "bytes"
+          valueUuid: "decodeToBigInteger_byte[]1"
+        signature: "bytesToBigInteger(byte[]): BigInteger"
+        returnValueUuid: "decodeToBigInteger_bigInteger1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "E5A64257DCE3EDB0D3F3CCB96E931B43"
+      index: 4
+      valueUuid: "decodeToBigInteger_bigInteger1"
+    uuid: "2c0ddf72-634c-3949-9500-9866e6936082"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "input1"
+      valueType: "java.lang.String"
+      uuid: "decodeToBigInteger_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Base58"
+      uuid: "uuid5"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "decodeToBigInteger_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "input1"
+      valueType: "java.lang.String"
+      uuid: "decodeToBigInteger_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.internal.ByteUtils"
+      uuid: "uuid6"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "java.math.BigInteger"
+      uuid: "decodeToBigInteger_bigInteger1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "decodeToBigInteger_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "java.math.BigInteger"
+      uuid: "decodeToBigInteger_bigInteger1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "decodeChecked"
+    signature: "decodeChecked(java.lang.String) : byte[]"
+    sourceCodeSignature: "byte[] decodeChecked(String input)"
+    instructionFingerprint: "40EF543332717194B853E8902C8F8BA4"
+  paths:
+  - pathId: "path1"
+    testPathName: "decodeCheckedWhenDecodedLengthLessThan4ThrowsAddressFormatExceptionInvalidDataLength"
+    modelFingerprint: "88854FA65F09E6849E122E33E42262B7"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "input"
+      modelFingerprint: "076F1FC7BD68AA24F9EE17B7687CB6EA"
+      index: 1
+      valueUuid: "decodeChecked_string1"
+    - type: "STATIC"
+      name: "Base58"
+      modelFingerprint: "91BE9373AB852B6A49E870232B06871A"
+      index: 2
+      valueUuid: "uuid7"
+      methodExercised:
+        target: "org.bitcoinj.base.Base58"
+        name: "decode"
+        parameters:
+        - name: "input"
+          valueUuid: "decodeChecked_string1"
+        signature: "decode(String): byte[]"
+        returnValueUuid: "decodeChecked_byte[]1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "B4FA0CB2DECA4D24A8DAAEB7277F81C8"
+      index: 3
+      valueUuid: "decodeChecked_addressFormatException.InvalidDataLength1"
+    uuid: "edc37915-e216-3595-a3da-43fddac80ec9"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "input1"
+      valueType: "java.lang.String"
+      uuid: "decodeChecked_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Base58"
+      uuid: "uuid7"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "decodeChecked_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "input1"
+      valueType: "java.lang.String"
+      uuid: "decodeChecked_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidDataLength"
+        parameters:
+        - name: "message"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "Input too short: 0"
+            valueType: "java.lang.String"
+            uuid: "decodeChecked_string2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidDataLength"
+      uuid: "decodeChecked_addressFormatException.InvalidDataLength1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "decodeCheckedWhenArraysNotEqualsChecksumActualChecksumThrowsAddressFormatExceptionInvalidChecksum"
+    modelFingerprint: "52B4C1BBD28C5172DF15C7B2B316A725"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "input"
+      modelFingerprint: "076F1FC7BD68AA24F9EE17B7687CB6EA"
+      index: 1
+      valueUuid: "decodeChecked_string1"
+    - type: "STATIC"
+      name: "Base58"
+      modelFingerprint: "0E2D253883E414F56EB302E7EE25CDDA"
+      index: 2
+      valueUuid: "uuid8"
+      methodExercised:
+        target: "org.bitcoinj.base.Base58"
+        name: "decode"
+        parameters:
+        - name: "input"
+          valueUuid: "decodeChecked_string1"
+        signature: "decode(String): byte[]"
+        returnValueUuid: "decodeChecked_byte[]1"
+        access: 9
+    - type: "STATIC"
+      name: "Sha256Hash"
+      modelFingerprint: "949D41E805216B1F92B7E3ADD240A99F"
+      index: 3
+      valueUuid: "uuid9"
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "hashTwice"
+        parameters:
+        - name: "input"
+          valueUuid: "decodeChecked_byte[]2"
+        signature: "hashTwice(byte[]): byte[]"
+        returnValueUuid: "decodeChecked_byte[]4"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "60FF8876C040BB021BE5A740BCAE4BB2"
+      index: 4
+      valueUuid: "decodeChecked_addressFormatException.InvalidChecksum1"
+    uuid: "7ba6406e-4337-3cdd-9a10-b5c27697367d"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "input1"
+      valueType: "java.lang.String"
+      uuid: "decodeChecked_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Base58"
+      uuid: "uuid8"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]1Item0"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          1:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]1Item1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          2:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 2
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]1Item2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          3:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 3
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]1Item3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "decodeChecked_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "input1"
+      valueType: "java.lang.String"
+      uuid: "decodeChecked_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "uuid9"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4Item0"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          1:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4Item1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          2:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 2
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4Item2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          3:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 3
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4Item3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          4:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 4
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4Item4"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          5:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 5
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4Item5"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          6:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 6
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4Item6"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          7:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 7
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4Item7"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          8:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 8
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4Item8"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          9:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 9
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4Item9"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          10:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 10
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4Item10"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          11:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 11
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4Item11"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          12:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 12
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4Item12"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          13:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 13
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4Item13"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          14:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 14
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4Item14"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          15:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 15
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4Item15"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          16:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 16
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4Item16"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          17:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 17
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4Item17"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          18:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 18
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4Item18"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          19:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 19
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4Item19"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          20:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 20
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4Item20"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          21:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 21
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4Item21"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          22:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 22
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4Item22"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          23:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 23
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4Item23"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          24:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 24
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4Item24"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          25:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 25
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4Item25"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          26:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 26
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4Item26"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          27:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 27
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4Item27"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          28:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 28
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4Item28"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          29:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 29
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4Item29"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          30:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 30
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4Item30"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          31:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 31
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4Item31"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "decodeChecked_byte[]4"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "decodeChecked_byte[]2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidChecksum"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.base.exceptions.AddressFormatException$InvalidChecksum"
+      uuid: "decodeChecked_addressFormatException.InvalidChecksum1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+  - pathId: "path3"
+    testPathName: "decodeCheckedWhenArraysEqualsChecksumActualChecksum"
+    modelFingerprint: "42C520EDC32885205BB0E1AD893E5ECA"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "input"
+      modelFingerprint: "076F1FC7BD68AA24F9EE17B7687CB6EA"
+      index: 1
+      valueUuid: "decodeChecked_string1"
+    - type: "STATIC"
+      name: "Base58"
+      modelFingerprint: "0E2D253883E414F56EB302E7EE25CDDA"
+      index: 2
+      valueUuid: "uuid10"
+      methodExercised:
+        target: "org.bitcoinj.base.Base58"
+        name: "decode"
+        parameters:
+        - name: "input"
+          valueUuid: "decodeChecked_string1"
+        signature: "decode(String): byte[]"
+        returnValueUuid: "decodeChecked_byte[]1"
+        access: 9
+    - type: "STATIC"
+      name: "Sha256Hash"
+      modelFingerprint: "3038E472CD12875D91E184DF06EAE579"
+      index: 3
+      valueUuid: "uuid11"
+      methodExercised:
+        target: "org.bitcoinj.base.Sha256Hash"
+        name: "hashTwice"
+        parameters:
+        - name: "input"
+          valueUuid: "decodeChecked_byte[]2"
+        signature: "hashTwice(byte[]): byte[]"
+        returnValueUuid: "decodeChecked_byte[]4"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "6F284CA220F919F7D0C6EB6C97E89FCE"
+      index: 4
+      valueUuid: "decodeChecked_byte[]2"
+    uuid: "ab7cc08b-23ae-3052-b5d1-7c4401f7ae8e"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "input1"
+      valueType: "java.lang.String"
+      uuid: "decodeChecked_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.Base58"
+      uuid: "uuid10"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]1Item0"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          1:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]1Item1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          2:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 2
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]1Item2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          3:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 3
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]1Item3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "decodeChecked_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "input1"
+      valueType: "java.lang.String"
+      uuid: "decodeChecked_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.Sha256Hash"
+      uuid: "uuid11"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 93
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4-item0"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          1:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: -10
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4-item1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          2:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: -32
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4-item2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          3:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: -30
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4-item3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          4:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 118
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4-item4"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          5:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 19
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4-item5"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          6:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 89
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4-item6"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          7:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: -45
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4-item7"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          8:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 10
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4-item8"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          9:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: -126
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4-item9"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          10:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 117
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4-item10"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          11:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 5
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4-item11"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          12:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: -114
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4-item12"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          13:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 41
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4-item13"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          14:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: -97
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4-item14"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          15:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: -52
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4-item15"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          16:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 3
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4-item16"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          17:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: -127
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4-item17"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          18:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 83
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4-item18"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          19:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 69
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4-item19"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          20:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 69
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4-item20"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          21:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: -11
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4-item21"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          22:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 92
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4-item22"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          23:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: -12
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4-item23"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          24:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 62
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4-item24"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          25:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 65
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4-item25"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          26:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: -104
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4-item26"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          27:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 63
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4-item27"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          28:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 93
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4-item28"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          29:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 76
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4-item29"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          30:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: -108
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4-item30"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          31:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 86
+            valueType: "byte"
+            uuid: "decodeChecked_byte[]4-item31"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "decodeChecked_byte[]4"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "decodeChecked_byte[]2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "decodeChecked_byte[]2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false

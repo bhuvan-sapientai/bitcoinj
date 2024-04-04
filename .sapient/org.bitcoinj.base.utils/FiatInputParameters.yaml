@@ -1,0 +1,3698 @@
+---
+modelFingerprint: "EDC48AB68BAE65176FAECD2F01CD6A3D"
+methods:
+- method:
+    name: "valueOf"
+    signature: "valueOf(java.lang.String,long) : org.bitcoinj.base.utils.Fiat"
+    sourceCodeSignature: "Fiat valueOf(final String currencyCode, final long value)"
+    instructionFingerprint: "B95A613797BE9A8B24A22553A1E8699B"
+  paths:
+  - pathId: "path1"
+    testPathName: "valueOfTest"
+    modelFingerprint: "C3BB4D2FE398AAB5619CCB83CE7631DC"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "currencyCode"
+      modelFingerprint: "C81BE410A0DEDCFD5F73783107214F8B"
+      index: 1
+      valueUuid: "valueOf_string1"
+    - type: "INPUT"
+      name: "value"
+      modelFingerprint: "33F2C8B4A5A4128107A4597EC08073F3"
+      index: 2
+      valueUuid: "valueOf_long1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "E643A0C337D8AAF8BA1FD9E870238E55"
+      index: 3
+      valueUuid: "valueOf_fiat1"
+    uuid: "3aeb0092-1c55-3557-8de4-613a23e110b0"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "currencyCode1"
+      valueType: "java.lang.String"
+      uuid: "valueOf_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "long"
+      uuid: "valueOf_long1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.base.utils.Fiat"
+        parameters:
+        - name: "currencyCode"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "currencyCode1"
+            valueType: "java.lang.String"
+            uuid: "valueOf_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "valueOf_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: true
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "valueOf_fiat1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "smallestUnitExponent"
+    signature: "smallestUnitExponent() : int"
+    sourceCodeSignature: "int smallestUnitExponent()"
+    instructionFingerprint: "D5E4DFE3964EE2E3930EDD0901E83FD8"
+  paths:
+  - pathId: "path1"
+    testPathName: "smallestUnitExponentTest"
+    constructorSignature: "valueOf(java.lang.String,long) : org.bitcoinj.base.utils.Fiat"
+    modelFingerprint: "850B25FD90A66DD17D7713FBF3370E07"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "85356920EE9210832436EAEC66BDF9F8"
+      index: 1
+      valueUuid: "target"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "DDCA825C9E231D577BC13EFBC0AB5946"
+      index: 2
+      valueUuid: "uuid1"
+    uuid: "289b9396-36ac-3ecc-a969-f108cfcc8920"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.utils.Fiat"
+        method: "valueOf"
+        methodParameters:
+        - name: "currencyCode"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "currencyCode1"
+            valueType: "java.lang.String"
+            uuid: "valueOf_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "valueOf_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 4
+      valueType: "int"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "getValue"
+    signature: "getValue() : long"
+    sourceCodeSignature: "long getValue()"
+    instructionFingerprint: "FBE095C4E7BC505E3116CF4FCB4E9AC3"
+  paths:
+  - pathId: "path1"
+    testPathName: "getValueTest"
+    constructorSignature: "valueOf(java.lang.String,long) : org.bitcoinj.base.utils.Fiat"
+    modelFingerprint: "2943839DD0F6FF24A8B62DD95431074D"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "b0d20fa9-e250-397e-b581-b3faccc5922b"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "getCurrencyCode"
+    signature: "getCurrencyCode() : java.lang.String"
+    sourceCodeSignature: "String getCurrencyCode()"
+    instructionFingerprint: "0BEB1094DB04EFB57DEB97693E072B13"
+  paths:
+  - pathId: "path1"
+    testPathName: "getCurrencyCodeTest"
+    constructorSignature: "valueOf(java.lang.String,long) : org.bitcoinj.base.utils.Fiat"
+    modelFingerprint: "9FB54BCC775D5C2236DD7786D9FC2170"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "cb22c3a9-535d-3bea-98b0-6129641bdda9"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "parseFiat"
+    signature: "parseFiat(java.lang.String,java.lang.String) : org.bitcoinj.base.utils.Fiat"
+    sourceCodeSignature: "Fiat parseFiat(final String currencyCode, final String str)"
+    tryCatchBlocks:
+    - idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.lang.ArithmeticException"
+    instructionFingerprint: "B788B71FFFF7F9490ABFF5E4190C2517"
+  paths:
+  - pathId: "path1"
+    testPathName: "parseFiatTest"
+    modelFingerprint: "1AF82E4BCDB590789F573325FDCD8CE9"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "currencyCode"
+      modelFingerprint: "C81BE410A0DEDCFD5F73783107214F8B"
+      index: 1
+      valueUuid: "parseFiat_string1"
+    - type: "INPUT"
+      name: "str"
+      modelFingerprint: "974147C7FBB6270F867FBBE0E8899C99"
+      index: 2
+      valueUuid: "parseFiat_string2"
+    - type: "STATIC"
+      name: "Fiat"
+      modelFingerprint: "2252A851B435078F0B2676E74B8344C1"
+      index: 3
+      idsTryCatchBlockSurrounding:
+      - 1
+      valueUuid: "uuid2"
+      methodExercised:
+        target: "org.bitcoinj.base.utils.Fiat"
+        name: "valueOf"
+        parameters:
+        - name: "currencyCode"
+          valueUuid: "parseFiat_string1"
+        - name: "value"
+          valueUuid: "parseFiat_long1"
+        signature: "valueOf(String,long): Fiat"
+        returnValueUuid: "parseFiat_fiat1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D1BD64D689FD46C0D0A45873738164B8"
+      index: 4
+      valueUuid: "parseFiat_fiat1"
+    uuid: "3a29f388-fbb5-361e-bb99-089b671da624"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "currencyCode1"
+      valueType: "java.lang.String"
+      uuid: "parseFiat_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "1.0"
+      valueType: "java.lang.String"
+      uuid: "parseFiat_string2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "parseFiat_fiat1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "currencyCode1"
+      valueType: "java.lang.String"
+      uuid: "parseFiat_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 10000
+      valueType: "long"
+      uuid: "parseFiat_long1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "parseFiat_fiat1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "parseFiatWhenCaughtArithmeticExceptionThrowsIllegalArgumentException"
+    modelFingerprint: "040BF514B2FDECB759763CB11B42F993"
+    problemWasSolvedByProver: true
+    catchBlockExercised:
+      idExternalInstruction: 0
+      id: 1
+      catchExceptions:
+      - "java.lang.ArithmeticException"
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "currencyCode"
+      modelFingerprint: "C81BE410A0DEDCFD5F73783107214F8B"
+      index: 1
+      valueUuid: "parseFiat_string1"
+    - type: "INPUT"
+      name: "str"
+      modelFingerprint: "974147C7FBB6270F867FBBE0E8899C99"
+      index: 2
+      valueUuid: "parseFiat_string2"
+    - type: "STATIC"
+      name: "Fiat"
+      modelFingerprint: "B4CF4AEC048EED17B84D5CDB019BB874"
+      index: 3
+      idsTryCatchBlockSurrounding:
+      - 1
+      valueUuid: "uuid1"
+      methodExercised:
+        target: "org.bitcoinj.base.utils.Fiat"
+        name: "valueOf"
+        parameters:
+        - name: "currencyCode"
+          valueUuid: "parseFiat_string1"
+        - name: "value"
+          valueUuid: "parseFiat_long1"
+        signature: "valueOf(String,long): Fiat"
+        returnValueUuid: "parseFiat_fiat1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "50D62EBA22F5C0387EA84E65672B8DB4"
+      index: 4
+      valueUuid: "parseFiat_illegalArgumentException1"
+    uuid: "7dec7cab-e382-33ae-b8a5-90e49107a5e0"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "currencyCode1"
+      valueType: "java.lang.String"
+      uuid: "parseFiat_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "1.0"
+      valueType: "java.lang.String"
+      uuid: "parseFiat_string2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.ArithmeticException"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.ArithmeticException"
+      uuid: "parseFiat_fiat1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "currencyCode1"
+      valueType: "java.lang.String"
+      uuid: "parseFiat_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 10000
+      valueType: "long"
+      uuid: "parseFiat_long1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.IllegalArgumentException"
+        parameters:
+        - name: "cause"
+          value:
+            sapientType: "EXCEPTION"
+            content: !<new>
+              target: "java.lang.ArithmeticException"
+              parameters: []
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "java.lang.ArithmeticException"
+            uuid: "parseFiat_fiat1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "java.lang.IllegalArgumentException"
+      uuid: "parseFiat_illegalArgumentException1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "parseFiatInexact"
+    signature: "parseFiatInexact(java.lang.String,java.lang.String) : org.bitcoinj.base.utils.Fiat"
+    sourceCodeSignature: "Fiat parseFiatInexact(final String currencyCode, final String\
+      \ str)"
+    tryCatchBlocks:
+    - idExternalInstruction: 0
+      id: 2
+      catchExceptions:
+      - "java.lang.ArithmeticException"
+    instructionFingerprint: "B3A9277B93CC0486A7D871DDB8F178E9"
+  paths:
+  - pathId: "path1"
+    testPathName: "parseFiatInexactTest"
+    modelFingerprint: "540A8E6C5F0A4BF815939E0787974119"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "currencyCode"
+      modelFingerprint: "C81BE410A0DEDCFD5F73783107214F8B"
+      index: 1
+      valueUuid: "parseFiatInexact_string1"
+    - type: "INPUT"
+      name: "str"
+      modelFingerprint: "2EAAE85ED9267C76AD94955AE7569F14"
+      index: 2
+      valueUuid: "parseFiatInexact_string2"
+    - type: "STATIC"
+      name: "Fiat"
+      modelFingerprint: "4A12350BA1D3B038AEBE368399D3CA08"
+      index: 3
+      idsTryCatchBlockSurrounding:
+      - 2
+      valueUuid: "uuid4"
+      methodExercised:
+        target: "org.bitcoinj.base.utils.Fiat"
+        name: "valueOf"
+        parameters:
+        - name: "currencyCode"
+          valueUuid: "parseFiatInexact_string1"
+        - name: "value"
+          valueUuid: "parseFiatInexact_long1"
+        signature: "valueOf(String,long): Fiat"
+        returnValueUuid: "parseFiatInexact_fiat1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D1BD64D689FD46C0D0A45873738164B8"
+      index: 4
+      valueUuid: "parseFiatInexact_fiat1"
+    uuid: "8d4cc770-1398-3f6f-bc16-f65e59403548"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "currencyCode1"
+      valueType: "java.lang.String"
+      uuid: "parseFiatInexact_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "0.0"
+      valueType: "java.lang.String"
+      uuid: "parseFiatInexact_string2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "uuid4"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "parseFiatInexact_fiat1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "currencyCode1"
+      valueType: "java.lang.String"
+      uuid: "parseFiatInexact_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "long"
+      uuid: "parseFiatInexact_long1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "parseFiatInexact_fiat1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "parseFiatInexactWhenCaughtArithmeticExceptionThrowsIllegalArgumentException"
+    modelFingerprint: "4C4178FA6DCC8E816F8236A6220C3746"
+    problemWasSolvedByProver: true
+    catchBlockExercised:
+      idExternalInstruction: 0
+      id: 2
+      catchExceptions:
+      - "java.lang.ArithmeticException"
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "currencyCode"
+      modelFingerprint: "C81BE410A0DEDCFD5F73783107214F8B"
+      index: 1
+      valueUuid: "parseFiatInexact_string1"
+    - type: "INPUT"
+      name: "str"
+      modelFingerprint: "2EAAE85ED9267C76AD94955AE7569F14"
+      index: 2
+      valueUuid: "parseFiatInexact_string2"
+    - type: "STATIC"
+      name: "Fiat"
+      modelFingerprint: "E6DD240CBEC44235F4B13B9E4E8F97F2"
+      index: 3
+      idsTryCatchBlockSurrounding:
+      - 2
+      valueUuid: "uuid1"
+      methodExercised:
+        target: "org.bitcoinj.base.utils.Fiat"
+        name: "valueOf"
+        parameters:
+        - name: "currencyCode"
+          valueUuid: "parseFiatInexact_string1"
+        - name: "value"
+          valueUuid: "parseFiatInexact_long1"
+        signature: "valueOf(String,long): Fiat"
+        returnValueUuid: "parseFiatInexact_fiat1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "50D62EBA22F5C0387EA84E65672B8DB4"
+      index: 4
+      valueUuid: "parseFiatInexact_illegalArgumentException1"
+    uuid: "7562d76a-bbdc-346d-8087-9b764344f1fc"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "currencyCode1"
+      valueType: "java.lang.String"
+      uuid: "parseFiatInexact_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "0.0"
+      valueType: "java.lang.String"
+      uuid: "parseFiatInexact_string2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.ArithmeticException"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.lang.ArithmeticException"
+      uuid: "parseFiatInexact_fiat1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "currencyCode1"
+      valueType: "java.lang.String"
+      uuid: "parseFiatInexact_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "long"
+      uuid: "parseFiatInexact_long1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.IllegalArgumentException"
+        parameters:
+        - name: "cause"
+          value:
+            sapientType: "EXCEPTION"
+            content: !<new>
+              target: "java.lang.ArithmeticException"
+              parameters: []
+              privateConstructor: false
+              createdByTargetCode: false
+            valueType: "java.lang.ArithmeticException"
+            uuid: "parseFiatInexact_fiat1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "java.lang.IllegalArgumentException"
+      uuid: "parseFiatInexact_illegalArgumentException1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "add"
+    signature: "add(org.bitcoinj.base.utils.Fiat) : org.bitcoinj.base.utils.Fiat"
+    sourceCodeSignature: "Fiat add(final Fiat value)"
+    instructionFingerprint: "017AAFCB33EA883A5AEA2E43221A8B9B"
+  paths:
+  - pathId: "path1"
+    testPathName: "addTest"
+    constructorSignature: "valueOf(java.lang.String,long) : org.bitcoinj.base.utils.Fiat"
+    modelFingerprint: "44B0D763560E40DD0EF423E16A4A5962"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "482A64789573F50BC993CE3F8E1113D8"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "value"
+      modelFingerprint: "7F80689434A9BA879FDDF35D2C9F459B"
+      index: 2
+      valueUuid: "add_fiat1"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "1D194CDD8B687691CC173D74261004C6"
+      index: 3
+      valueUuid: "uuid7"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "add_boolean1"
+        - name: "messageSupplier"
+          valueUuid: "uuid6"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "add_void1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "931D0A9B5234615199C12ADFB84C55E9"
+      index: 4
+      valueUuid: "add_fiat2"
+    uuid: "2f52d914-224e-3cf8-a2e5-c61089a0f6f4"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.utils.Fiat"
+        method: "valueOf"
+        methodParameters:
+        - name: "currencyCode"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "B"
+            valueType: "java.lang.String"
+            uuid: "valueOf_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "long"
+            uuid: "valueOf_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.utils.Fiat"
+        method: "valueOf"
+        methodParameters:
+        - name: "currencyCode"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "A"
+            valueType: "java.lang.String"
+            uuid: "add_string2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "long"
+            uuid: "add_long2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "add_fiat1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid7"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "add_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "add_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid6"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.base.utils.Fiat"
+        parameters:
+        - name: "currencyCode"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "B"
+            valueType: "java.lang.String"
+            uuid: "valueOf_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 2
+            valueType: "long"
+            uuid: "add_long3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: true
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "add_fiat2"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "subtract"
+    signature: "subtract(org.bitcoinj.base.utils.Fiat) : org.bitcoinj.base.utils.Fiat"
+    sourceCodeSignature: "Fiat subtract(final Fiat value)"
+    instructionFingerprint: "242ABEA1DFC620FD042970B646C3F279"
+  paths:
+  - pathId: "path1"
+    testPathName: "subtractTest"
+    constructorSignature: "valueOf(java.lang.String,long) : org.bitcoinj.base.utils.Fiat"
+    modelFingerprint: "2C3DC545049265E01E71AF6D7175A867"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "7B50D34D631863A5E7BCC776C0794AAC"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "value"
+      modelFingerprint: "211CDCA79E2216C2B3CD00E7BA7643D7"
+      index: 2
+      valueUuid: "subtract_fiat1"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "5C304A8C0EF7EC9C1BAC2D92EE2ED887"
+      index: 3
+      valueUuid: "uuid9"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "subtract_boolean1"
+        - name: "messageSupplier"
+          valueUuid: "uuid8"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "subtract_void1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "29C80F9DCE355C6BB7290D57A88DE231"
+      index: 4
+      valueUuid: "subtract_fiat2"
+    uuid: "97b5e3b9-042a-36e9-ba00-8365659a5608"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.utils.Fiat"
+        method: "valueOf"
+        methodParameters:
+        - name: "currencyCode"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: ""
+            valueType: "java.lang.String"
+            uuid: "valueOf_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "long"
+            uuid: "valueOf_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.utils.Fiat"
+        method: "valueOf"
+        methodParameters:
+        - name: "currencyCode"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: ""
+            valueType: "java.lang.String"
+            uuid: "subtract_string2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "long"
+            uuid: "subtract_long2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "subtract_fiat1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid9"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "subtract_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "subtract_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid8"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.base.utils.Fiat"
+        parameters:
+        - name: "currencyCode"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: ""
+            valueType: "java.lang.String"
+            uuid: "valueOf_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "subtract_long3"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: true
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "subtract_fiat2"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "multiply"
+    signature: "multiply(long) : org.bitcoinj.base.utils.Fiat"
+    sourceCodeSignature: "Fiat multiply(final long factor)"
+    instructionFingerprint: "53348BBB767D22E9DC67B2A5BA86F9A4"
+  paths:
+  - pathId: "path1"
+    testPathName: "multiplyTest"
+    constructorSignature: "valueOf(java.lang.String,long) : org.bitcoinj.base.utils.Fiat"
+    modelFingerprint: "F64381A9F38411C68D685CF5A7E83430"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "7B50D34D631863A5E7BCC776C0794AAC"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "factor"
+      modelFingerprint: "986928725164C9743960A1C7EDE87685"
+      index: 2
+      valueUuid: "multiply_long1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "A8D159F88DC61D19964E324179F82B2E"
+      index: 3
+      valueUuid: "multiply_fiat1"
+    uuid: "f2e2be9f-c5d7-3010-98aa-6831b8f18beb"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.utils.Fiat"
+        method: "valueOf"
+        methodParameters:
+        - name: "currencyCode"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "currencyCode1"
+            valueType: "java.lang.String"
+            uuid: "valueOf_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "long"
+            uuid: "valueOf_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 1
+      valueType: "long"
+      uuid: "multiply_long1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.base.utils.Fiat"
+        parameters:
+        - name: "currencyCode"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "currencyCode1"
+            valueType: "java.lang.String"
+            uuid: "valueOf_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "long"
+            uuid: "multiply_long2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: true
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "multiply_fiat1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "divide"
+    signature: "divide(long) : org.bitcoinj.base.utils.Fiat"
+    sourceCodeSignature: "Fiat divide(final long divisor)"
+    instructionFingerprint: "B02974C0CED4E0FC8EF6327D00C4B604"
+  paths:
+  - pathId: "path1"
+    testPathName: "divideTest"
+    constructorSignature: "valueOf(java.lang.String,long) : org.bitcoinj.base.utils.Fiat"
+    modelFingerprint: "EC53BACAB9A28026EA31B4A5BB5D80A8"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "7B50D34D631863A5E7BCC776C0794AAC"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "divisor"
+      modelFingerprint: "1914D7EFC0399868552503F15686C56C"
+      index: 2
+      valueUuid: "divide_long1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "A8D159F88DC61D19964E324179F82B2E"
+      index: 3
+      valueUuid: "divide_fiat1"
+    uuid: "2a79afae-dad2-39ac-b954-5ff63850d9d4"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.utils.Fiat"
+        method: "valueOf"
+        methodParameters:
+        - name: "currencyCode"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "currencyCode1"
+            valueType: "java.lang.String"
+            uuid: "valueOf_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "long"
+            uuid: "valueOf_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 1
+      valueType: "long"
+      uuid: "divide_long1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.base.utils.Fiat"
+        parameters:
+        - name: "currencyCode"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "currencyCode1"
+            valueType: "java.lang.String"
+            uuid: "valueOf_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "long"
+            uuid: "divide_long2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: true
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "divide_fiat1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "divideAndRemainder"
+    signature: "divideAndRemainder(long) : org.bitcoinj.base.utils.Fiat[]"
+    sourceCodeSignature: "Fiat[] divideAndRemainder(final long divisor)"
+    instructionFingerprint: "71752B847482DD4E76B410310482B279"
+  paths:
+  - pathId: "path1"
+    testPathName: "divideAndRemainderTest"
+    constructorSignature: "valueOf(java.lang.String,long) : org.bitcoinj.base.utils.Fiat"
+    modelFingerprint: "F0060FF1C4C24E9438CB63E5D156804C"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "7B50D34D631863A5E7BCC776C0794AAC"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "divisor"
+      modelFingerprint: "1914D7EFC0399868552503F15686C56C"
+      index: 2
+      valueUuid: "divideAndRemainder_long1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "64A19482167E8CDEC0EA5314A85E0D72"
+      index: 3
+      valueUuid: "divideAndRemainder_fiat[]1"
+    uuid: "0469b3a3-7fbb-3c2c-af69-4344a07bb011"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "PRIVATE_CONSTRUCTOR_TODO_COMMENT"
+      details: "PRIVATE_CONSTRUCTOR_TODO_COMMENT"
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.utils.Fiat"
+        method: "valueOf"
+        methodParameters:
+        - name: "currencyCode"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "currencyCode1"
+            valueType: "java.lang.String"
+            uuid: "valueOf_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "long"
+            uuid: "valueOf_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 1
+      valueType: "long"
+      uuid: "divideAndRemainder_long1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "org.bitcoinj.base.utils.Fiat"
+              parameters:
+              - name: "currencyCode"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: "currencyCode1"
+                  valueType: "java.lang.String"
+                  uuid: "valueOf_string1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "value"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 1
+                  valueType: "long"
+                  uuid: "divideAndRemainder_long2"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: true
+              createdByTargetCode: true
+            valueType: "org.bitcoinj.base.utils.Fiat"
+            uuid: "divideAndRemainder_fiat1"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          1:
+            sapientType: "OBJECT"
+            content: !<new>
+              target: "org.bitcoinj.base.utils.Fiat"
+              parameters:
+              - name: "currencyCode"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: "currencyCode1"
+                  valueType: "java.lang.String"
+                  uuid: "valueOf_string1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              - name: "value"
+                value:
+                  sapientType: "BASIC"
+                  content: !<regular>
+                    value: 0
+                  valueType: "long"
+                  uuid: "divideAndRemainder_long3"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+              privateConstructor: true
+              createdByTargetCode: true
+            valueType: "org.bitcoinj.base.utils.Fiat"
+            uuid: "divideAndRemainder_fiat2"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.utils.Fiat[]"
+      uuid: "divideAndRemainder_fiat[]1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "divide"
+    signature: "divide(org.bitcoinj.base.utils.Fiat) : long"
+    sourceCodeSignature: "long divide(final Fiat divisor)"
+    instructionFingerprint: "CD50D88B280A06386A250E03FC73F89C"
+  paths:
+  - pathId: "path1"
+    testPathName: "divide1Test"
+    constructorSignature: "valueOf(java.lang.String,long) : org.bitcoinj.base.utils.Fiat"
+    modelFingerprint: "6D6DAEB4A0DC74667501D062ED149F39"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "482A64789573F50BC993CE3F8E1113D8"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "divisor"
+      modelFingerprint: "26ACB9BC1F45E10E8022447451FA8290"
+      index: 2
+      valueUuid: "divide_fiat1"
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "1D194CDD8B687691CC173D74261004C6"
+      index: 3
+      valueUuid: "uuid11"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "checkArgument"
+        parameters:
+        - name: "expression"
+          valueUuid: "divide_boolean1"
+        - name: "messageSupplier"
+          valueUuid: "uuid10"
+        signature: "checkArgument(boolean,Supplier): void"
+        returnValueUuid: "divide_void1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "C5C2DC38C9E6BAF6D416216AB0606C32"
+      index: 4
+      valueUuid: "divide_long3"
+    uuid: "c70236b7-98f2-3ecd-942d-6cc0d5da7e85"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.utils.Fiat"
+        method: "valueOf"
+        methodParameters:
+        - name: "currencyCode"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "B"
+            valueType: "java.lang.String"
+            uuid: "valueOf_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "long"
+            uuid: "valueOf_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.utils.Fiat"
+        method: "valueOf"
+        methodParameters:
+        - name: "currencyCode"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "A"
+            valueType: "java.lang.String"
+            uuid: "divide_string2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "long"
+            uuid: "divide_long2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "divide_fiat1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid11"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "divide_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "divide_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      genericValueType: "java.lang.String"
+      uuid: "uuid10"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 1
+      valueType: "long"
+      uuid: "divide_long3"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "isPositive"
+    signature: "isPositive() : boolean"
+    sourceCodeSignature: "boolean isPositive()"
+    instructionFingerprint: "2F35D5EBDB91BB5DB701E8FBFA170423"
+  paths:
+  - pathId: "path1"
+    testPathName: "isPositiveWhenSignumEquals1"
+    constructorSignature: "valueOf(java.lang.String,long) : org.bitcoinj.base.utils.Fiat"
+    modelFingerprint: "0B7A42F989482EF7246F953DD8D0287D"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "85356920EE9210832436EAEC66BDF9F8"
+      index: 1
+      valueUuid: "target"
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "8BFC0C07B396319D220CCB5A25E29F5A"
+      index: 2
+      methodExercised:
+        target: "target"
+        name: "signum"
+        parameters: []
+        signature: "signum(): int"
+        returnValueUuid: "isPositive_int1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "753659628F1B3F179A2EF0629F555437"
+      index: 3
+      valueUuid: "uuid12"
+    uuid: "a5b85392-24c9-3398-b016-26328a323b02"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.utils.Fiat"
+        method: "valueOf"
+        methodParameters:
+        - name: "currencyCode"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "currencyCode1"
+            valueType: "java.lang.String"
+            uuid: "valueOf_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "valueOf_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 1
+      valueType: "int"
+      uuid: "isPositive_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid12"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "isPositiveWhenSignumNotEquals1"
+    constructorSignature: "valueOf(java.lang.String,long) : org.bitcoinj.base.utils.Fiat"
+    modelFingerprint: "77FAC9868B93E0AB5EF3AD6A303B97A2"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "85356920EE9210832436EAEC66BDF9F8"
+      index: 1
+      valueUuid: "target"
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "C6CA50F561CB8DD9C5AB2E16A34A56A4"
+      index: 2
+      methodExercised:
+        target: "target"
+        name: "signum"
+        parameters: []
+        signature: "signum(): int"
+        returnValueUuid: "isPositive_int1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "3A21543F56248AC92654D6E439128AED"
+      index: 3
+      valueUuid: "uuid13"
+    uuid: "7a79a994-c529-3c20-ac79-6c430e11e309"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.utils.Fiat"
+        method: "valueOf"
+        methodParameters:
+        - name: "currencyCode"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "currencyCode1"
+            valueType: "java.lang.String"
+            uuid: "valueOf_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "valueOf_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 2
+      valueType: "int"
+      uuid: "isPositive_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "uuid13"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "isNegative"
+    signature: "isNegative() : boolean"
+    sourceCodeSignature: "boolean isNegative()"
+    instructionFingerprint: "73D98E6519AEFF23A35F53C128DD3DA2"
+  paths:
+  - pathId: "path1"
+    testPathName: "isNegativeWhenSignumEqualsMinus1"
+    constructorSignature: "valueOf(java.lang.String,long) : org.bitcoinj.base.utils.Fiat"
+    modelFingerprint: "21567CBFE40277B31F4F404664C14146"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "85356920EE9210832436EAEC66BDF9F8"
+      index: 1
+      valueUuid: "target"
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "3BAF8DA2EB3DC8C3334EC7D92EC82003"
+      index: 2
+      methodExercised:
+        target: "target"
+        name: "signum"
+        parameters: []
+        signature: "signum(): int"
+        returnValueUuid: "isNegative_int1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "753659628F1B3F179A2EF0629F555437"
+      index: 3
+      valueUuid: "uuid14"
+    uuid: "2ddd0ea6-c6ef-3140-9d36-3be9902ec24e"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.utils.Fiat"
+        method: "valueOf"
+        methodParameters:
+        - name: "currencyCode"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "currencyCode1"
+            valueType: "java.lang.String"
+            uuid: "valueOf_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "valueOf_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: -1
+      valueType: "int"
+      uuid: "isNegative_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid14"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "isNegativeWhenSignumNotEqualsMinus1"
+    constructorSignature: "valueOf(java.lang.String,long) : org.bitcoinj.base.utils.Fiat"
+    modelFingerprint: "4384847E143B7C1061BBD97588E78052"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "85356920EE9210832436EAEC66BDF9F8"
+      index: 1
+      valueUuid: "target"
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "8BFC0C07B396319D220CCB5A25E29F5A"
+      index: 2
+      methodExercised:
+        target: "target"
+        name: "signum"
+        parameters: []
+        signature: "signum(): int"
+        returnValueUuid: "isNegative_int1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "3A21543F56248AC92654D6E439128AED"
+      index: 3
+      valueUuid: "uuid15"
+    uuid: "62743f7a-453a-38f7-896d-d35950a48d87"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.utils.Fiat"
+        method: "valueOf"
+        methodParameters:
+        - name: "currencyCode"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "currencyCode1"
+            valueType: "java.lang.String"
+            uuid: "valueOf_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "valueOf_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 1
+      valueType: "int"
+      uuid: "isNegative_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "uuid15"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "isZero"
+    signature: "isZero() : boolean"
+    sourceCodeSignature: "boolean isZero()"
+    instructionFingerprint: "C5D91F880FD9B4A3825187995EA28F08"
+  paths:
+  - pathId: "path1"
+    testPathName: "isZeroWhenSignumEquals0"
+    constructorSignature: "valueOf(java.lang.String,long) : org.bitcoinj.base.utils.Fiat"
+    modelFingerprint: "E18C80374E10926843EFCC509DA4CA01"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "85356920EE9210832436EAEC66BDF9F8"
+      index: 1
+      valueUuid: "target"
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "6F7E6FC3D318376DC1991554005677FC"
+      index: 2
+      methodExercised:
+        target: "target"
+        name: "signum"
+        parameters: []
+        signature: "signum(): int"
+        returnValueUuid: "isZero_int1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "753659628F1B3F179A2EF0629F555437"
+      index: 3
+      valueUuid: "uuid16"
+    uuid: "4b1595e5-98c7-36a0-861b-1053e7e18765"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.utils.Fiat"
+        method: "valueOf"
+        methodParameters:
+        - name: "currencyCode"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "currencyCode1"
+            valueType: "java.lang.String"
+            uuid: "valueOf_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "valueOf_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "isZero_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid16"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "isZeroWhenSignumNotEquals0"
+    constructorSignature: "valueOf(java.lang.String,long) : org.bitcoinj.base.utils.Fiat"
+    modelFingerprint: "51EA72550B678EEBCD16E2CCA9B6137D"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "85356920EE9210832436EAEC66BDF9F8"
+      index: 1
+      valueUuid: "target"
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "3BAF8DA2EB3DC8C3334EC7D92EC82003"
+      index: 2
+      methodExercised:
+        target: "target"
+        name: "signum"
+        parameters: []
+        signature: "signum(): int"
+        returnValueUuid: "isZero_int1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "3A21543F56248AC92654D6E439128AED"
+      index: 3
+      valueUuid: "uuid17"
+    uuid: "700203bf-6954-3416-be8d-2f53edd277f8"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.utils.Fiat"
+        method: "valueOf"
+        methodParameters:
+        - name: "currencyCode"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "currencyCode1"
+            valueType: "java.lang.String"
+            uuid: "valueOf_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "valueOf_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: -1
+      valueType: "int"
+      uuid: "isZero_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "uuid17"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "isGreaterThan"
+    signature: "isGreaterThan(org.bitcoinj.base.utils.Fiat) : boolean"
+    sourceCodeSignature: "boolean isGreaterThan(Fiat other)"
+    instructionFingerprint: "6AE95CACAF19C7BEB5446183917ECCE9"
+  paths:
+  - pathId: "path1"
+    testPathName: "isGreaterThanWhenCompareToOtherGreaterThan0"
+    constructorSignature: "valueOf(java.lang.String,long) : org.bitcoinj.base.utils.Fiat"
+    modelFingerprint: "DEAAC65A8912198AD7D088CF3AA1007E"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "85356920EE9210832436EAEC66BDF9F8"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "other"
+      modelFingerprint: "669F631FFA4E5139A012E395BCB144F4"
+      index: 2
+      valueUuid: "isGreaterThan_fiat1"
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "CB4FE4E70B148F73F4477EB5BB982419"
+      index: 3
+      methodExercised:
+        target: "target"
+        name: "compareTo"
+        parameters:
+        - name: "other"
+          valueUuid: "isGreaterThan_fiat1"
+        signature: "compareTo(Fiat): int"
+        returnValueUuid: "isGreaterThan_int1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "753659628F1B3F179A2EF0629F555437"
+      index: 4
+      valueUuid: "uuid18"
+    uuid: "c5a48165-aff9-3266-b899-29bba2dcf02f"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.utils.Fiat"
+        method: "valueOf"
+        methodParameters:
+        - name: "currencyCode"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "currencyCode1"
+            valueType: "java.lang.String"
+            uuid: "valueOf_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "valueOf_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "isGreaterThan_fiat1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 1
+      valueType: "int"
+      uuid: "isGreaterThan_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "isGreaterThan_fiat1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid18"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "isGreaterThanWhenCompareToOtherNotGreaterThan0"
+    constructorSignature: "valueOf(java.lang.String,long) : org.bitcoinj.base.utils.Fiat"
+    modelFingerprint: "4198386D080CD3395822CA53D7D8E60B"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "85356920EE9210832436EAEC66BDF9F8"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "other"
+      modelFingerprint: "669F631FFA4E5139A012E395BCB144F4"
+      index: 2
+      valueUuid: "isGreaterThan_fiat1"
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "10581415175457FACC11315F1F95FB73"
+      index: 3
+      methodExercised:
+        target: "target"
+        name: "compareTo"
+        parameters:
+        - name: "other"
+          valueUuid: "isGreaterThan_fiat1"
+        signature: "compareTo(Fiat): int"
+        returnValueUuid: "isGreaterThan_int1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "3A21543F56248AC92654D6E439128AED"
+      index: 4
+      valueUuid: "uuid19"
+    uuid: "67fdcbb3-5647-397b-99af-2c502bea1599"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.utils.Fiat"
+        method: "valueOf"
+        methodParameters:
+        - name: "currencyCode"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "currencyCode1"
+            valueType: "java.lang.String"
+            uuid: "valueOf_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "valueOf_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "isGreaterThan_fiat1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: -1
+      valueType: "int"
+      uuid: "isGreaterThan_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "isGreaterThan_fiat1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "uuid19"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "isLessThan"
+    signature: "isLessThan(org.bitcoinj.base.utils.Fiat) : boolean"
+    sourceCodeSignature: "boolean isLessThan(Fiat other)"
+    instructionFingerprint: "FD4F0B2617F6EDDF1380A27D5A30644D"
+  paths:
+  - pathId: "path1"
+    testPathName: "isLessThanWhenCompareToOtherLessThan0"
+    constructorSignature: "valueOf(java.lang.String,long) : org.bitcoinj.base.utils.Fiat"
+    modelFingerprint: "03C6EBCF814286D6282E806CC40901E6"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "85356920EE9210832436EAEC66BDF9F8"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "other"
+      modelFingerprint: "669F631FFA4E5139A012E395BCB144F4"
+      index: 2
+      valueUuid: "isLessThan_fiat1"
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "C177E406436A459F0B7735EB883C45B9"
+      index: 3
+      methodExercised:
+        target: "target"
+        name: "compareTo"
+        parameters:
+        - name: "other"
+          valueUuid: "isLessThan_fiat1"
+        signature: "compareTo(Fiat): int"
+        returnValueUuid: "isLessThan_int1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "753659628F1B3F179A2EF0629F555437"
+      index: 4
+      valueUuid: "uuid20"
+    uuid: "05d8619d-83ea-3101-bbc9-a1b8b0e4bc9c"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.utils.Fiat"
+        method: "valueOf"
+        methodParameters:
+        - name: "currencyCode"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "currencyCode1"
+            valueType: "java.lang.String"
+            uuid: "valueOf_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "valueOf_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "isLessThan_fiat1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: -2147483648
+      valueType: "int"
+      uuid: "isLessThan_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "isLessThan_fiat1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "uuid20"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "isLessThanWhenCompareToOtherNotLessThan0"
+    constructorSignature: "valueOf(java.lang.String,long) : org.bitcoinj.base.utils.Fiat"
+    modelFingerprint: "94C58CAAC7FA310F4AE25F9A3D645B91"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "85356920EE9210832436EAEC66BDF9F8"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "other"
+      modelFingerprint: "669F631FFA4E5139A012E395BCB144F4"
+      index: 2
+      valueUuid: "isLessThan_fiat1"
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "CB4FE4E70B148F73F4477EB5BB982419"
+      index: 3
+      methodExercised:
+        target: "target"
+        name: "compareTo"
+        parameters:
+        - name: "other"
+          valueUuid: "isLessThan_fiat1"
+        signature: "compareTo(Fiat): int"
+        returnValueUuid: "isLessThan_int1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "3A21543F56248AC92654D6E439128AED"
+      index: 4
+      valueUuid: "uuid21"
+    uuid: "a3974211-4cb8-31ae-8d6e-e9b4f50f1614"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.utils.Fiat"
+        method: "valueOf"
+        methodParameters:
+        - name: "currencyCode"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "currencyCode1"
+            valueType: "java.lang.String"
+            uuid: "valueOf_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "valueOf_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "isLessThan_fiat1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 1
+      valueType: "int"
+      uuid: "isLessThan_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "isLessThan_fiat1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "uuid21"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "signum"
+    signature: "signum() : int"
+    sourceCodeSignature: "int signum()"
+    instructionFingerprint: "9E4556C4790D174E0BF7039CF92F8601"
+  paths:
+  - pathId: "path1"
+    testPathName: "signumWhenThisValueEquals0"
+    constructorSignature: "valueOf(java.lang.String,long) : org.bitcoinj.base.utils.Fiat"
+    modelFingerprint: "E585930CFBA889C0A32526BD7852DEE7"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "C9FA877446F1D13FA8B92AAA5567C1A0"
+      index: 1
+      valueUuid: "target"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "158A76FAE4C1E5741587C22A6148B6F0"
+      index: 2
+      valueUuid: "uuid22"
+    uuid: "487b5517-c901-34c8-972a-ebb7ca0fcd0b"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.utils.Fiat"
+        method: "valueOf"
+        methodParameters:
+        - name: "currencyCode"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "currencyCode1"
+            valueType: "java.lang.String"
+            uuid: "valueOf_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "valueOf_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "uuid22"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "signumWhenThisValueLessThan0"
+    constructorSignature: "valueOf(java.lang.String,long) : org.bitcoinj.base.utils.Fiat"
+    modelFingerprint: "44BAF06A638E760EFABA02DAC1135B18"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "A2A8D0DE1F61B9D312F20262489E0AC0"
+      index: 1
+      valueUuid: "target"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "E7B3BE5AC36FECF744FC9BF7388A79A5"
+      index: 2
+      valueUuid: "uuid23"
+    uuid: "5086e45c-5b83-3bd7-a18e-76f231fc5456"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.utils.Fiat"
+        method: "valueOf"
+        methodParameters:
+        - name: "currencyCode"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "currencyCode1"
+            valueType: "java.lang.String"
+            uuid: "valueOf_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: -1
+            valueType: "long"
+            uuid: "valueOf_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: -1
+      valueType: "int"
+      uuid: "uuid23"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path3"
+    testPathName: "signumWhenThisValueNotLessThan0"
+    constructorSignature: "valueOf(java.lang.String,long) : org.bitcoinj.base.utils.Fiat"
+    modelFingerprint: "B0B65DDA6AEB3D3CEE26DB63FE82AA1E"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "7B50D34D631863A5E7BCC776C0794AAC"
+      index: 1
+      valueUuid: "target"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "07B9F5C7EDC82C98858A3592D8BDC804"
+      index: 2
+      valueUuid: "uuid24"
+    uuid: "62ad04f5-6d83-37e5-91d2-3a3293eae054"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.utils.Fiat"
+        method: "valueOf"
+        methodParameters:
+        - name: "currencyCode"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "currencyCode1"
+            valueType: "java.lang.String"
+            uuid: "valueOf_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "long"
+            uuid: "valueOf_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 1
+      valueType: "int"
+      uuid: "uuid24"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "negate"
+    signature: "negate() : org.bitcoinj.base.utils.Fiat"
+    sourceCodeSignature: "Fiat negate()"
+    instructionFingerprint: "FC0BC137F80C6E96F0557BDE53D20B65"
+  paths:
+  - pathId: "path1"
+    testPathName: "negateTest"
+    constructorSignature: "valueOf(java.lang.String,long) : org.bitcoinj.base.utils.Fiat"
+    modelFingerprint: "B0DFCFF29CE27EFFA2F6E3EDA5845C14"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "7B50D34D631863A5E7BCC776C0794AAC"
+      index: 1
+      valueUuid: "target"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "88FAE5BED8AF89227D2EC757BEC5EB5A"
+      index: 2
+      valueUuid: "negate_fiat1"
+    uuid: "00610e8a-308a-3060-9272-e6226990d3e8"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.utils.Fiat"
+        method: "valueOf"
+        methodParameters:
+        - name: "currencyCode"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "currencyCode1"
+            valueType: "java.lang.String"
+            uuid: "valueOf_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "long"
+            uuid: "valueOf_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.base.utils.Fiat"
+        parameters:
+        - name: "currencyCode"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "currencyCode1"
+            valueType: "java.lang.String"
+            uuid: "valueOf_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: -1
+            valueType: "long"
+            uuid: "negate_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: true
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "negate_fiat1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "longValue"
+    signature: "longValue() : long"
+    sourceCodeSignature: "long longValue()"
+    instructionFingerprint: "78040D81B9F361B75B27027F42325F5E"
+  paths:
+  - pathId: "path1"
+    testPathName: "longValueTest"
+    constructorSignature: "valueOf(java.lang.String,long) : org.bitcoinj.base.utils.Fiat"
+    modelFingerprint: "2943839DD0F6FF24A8B62DD95431074D"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "AF63FAA4328A90B2FBBAE8D2044E9593"
+      index: 1
+      valueUuid: "target"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "804632FC35F3D360B4AE3373F0AFA52B"
+      index: 2
+      valueUuid: "valueOf_long1"
+    uuid: "9023386b-0a58-3cc3-912f-1a61aadf88ac"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.utils.Fiat"
+        method: "valueOf"
+        methodParameters:
+        - name: "currencyCode"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "currencyCode1"
+            valueType: "java.lang.String"
+            uuid: "valueOf_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "valueOf_long1"
+            fixed: false
+            equalsMethodPresent: true
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "long"
+      uuid: "valueOf_long1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "toFriendlyString"
+    signature: "toFriendlyString() : java.lang.String"
+    sourceCodeSignature: "String toFriendlyString()"
+    instructionFingerprint: "462A83CC98B88B604AEE9A9DCFE3EF63"
+  paths:
+  - pathId: "path1"
+    testPathName: "toFriendlyStringTest"
+    constructorSignature: "valueOf(java.lang.String,long) : org.bitcoinj.base.utils.Fiat"
+    modelFingerprint: "C7A6D73AB745217F1FBFB5C079B81166"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "4C7B398F1166D2AD998F68EA99D17913"
+      index: 1
+      valueUuid: "target"
+    - type: "FIELD"
+      name: "FRIENDLY_FORMAT"
+      modelFingerprint: "A218084AA467E2266B302ACB2F2A12AB"
+      index: 2
+      valueUuid: "<clinit>_monetaryFormat2"
+      methodExercised:
+        target: "this.FRIENDLY_FORMAT"
+        name: "code"
+        parameters:
+        - name: "codeShift"
+          valueUuid: "uuid25"
+        - name: "code"
+          valueUuid: "valueOf_string1"
+        signature: "code(int,String): MonetaryFormat"
+        returnValueUuid: "toFriendlyString_monetaryFormat1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "68A16D376C4748E68B5654130568C73D"
+      index: 3
+      valueUuid: "toFriendlyString_monetaryFormat1"
+      methodExercised:
+        target: "org.bitcoinj.base.utils.MonetaryFormat"
+        name: "format"
+        parameters:
+        - name: "group"
+          valueUuid: "targetClassObject"
+        signature: "format(Fiat): CharSequence"
+        returnValueUuid: "toFriendlyString_charSequence1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D1F433D4EB9F8805FF391E82DAB508AB"
+      index: 4
+      valueUuid: "toFriendlyString_string1"
+    uuid: "f6218ce4-99b5-3766-9111-6c631ded6b5a"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    variablesCouldNotBeIsolated: "object of type MonetaryFormat, object of type CharSequence"
+    failureReason:
+      reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
+      source: "return FRIENDLY_FORMAT.code(0, currencyCode).format(this).toString();"
+      lineNumber: 200
+      details: "A variable could not be isolated or mocked when calling a method -\
+        \ Variable name: object of type MonetaryFormat - Method: format"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.utils.Fiat"
+        method: "valueOf"
+        methodParameters:
+        - name: "currencyCode"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "A"
+            valueType: "java.lang.String"
+            uuid: "valueOf_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "valueOf_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<method_return_from_value>
+        target: "org.bitcoinj.base.utils.MonetaryFormat"
+        localVariableValue:
+          sapientType: "OBJECT"
+          content: !<static_field_return>
+            target: "org.bitcoinj.base.utils.MonetaryFormat"
+            fieldName: "FIAT"
+          valueType: "org.bitcoinj.base.utils.MonetaryFormat"
+          uuid: "<clinit>_monetaryFormat1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        methodParameters: []
+        methodName: "postfixCode"
+      valueType: "org.bitcoinj.base.utils.MonetaryFormat"
+      uuid: "<clinit>_monetaryFormat2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<method_return_from_value>
+        target: "org.bitcoinj.base.utils.MonetaryFormat"
+        localVariableValue:
+          sapientType: "OBJECT"
+          content: !<method_return_from_value>
+            target: "org.bitcoinj.base.utils.MonetaryFormat"
+            localVariableValue:
+              sapientType: "OBJECT"
+              content: !<static_field_return>
+                target: "org.bitcoinj.base.utils.MonetaryFormat"
+                fieldName: "FIAT"
+              valueType: "org.bitcoinj.base.utils.MonetaryFormat"
+              uuid: "<clinit>_monetaryFormat1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters: []
+            methodName: "postfixCode"
+          valueType: "org.bitcoinj.base.utils.MonetaryFormat"
+          uuid: "<clinit>_monetaryFormat2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        methodParameters:
+        - name: "codeShift"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "code"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "A"
+            valueType: "java.lang.String"
+            uuid: "valueOf_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        methodName: "code"
+      valueType: "org.bitcoinj.base.utils.MonetaryFormat"
+      uuid: "toFriendlyString_monetaryFormat1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "uuid25"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "A"
+      valueType: "java.lang.String"
+      uuid: "valueOf_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<method_return_from_value>
+        target: "org.bitcoinj.base.utils.MonetaryFormat"
+        localVariableValue:
+          sapientType: "OBJECT"
+          content: !<method_return_from_value>
+            target: "org.bitcoinj.base.utils.MonetaryFormat"
+            localVariableValue:
+              sapientType: "OBJECT"
+              content: !<static_field_return>
+                target: "org.bitcoinj.base.utils.MonetaryFormat"
+                fieldName: "FIAT"
+              valueType: "org.bitcoinj.base.utils.MonetaryFormat"
+              uuid: "<clinit>_monetaryFormat1"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters: []
+            methodName: "postfixCode"
+          valueType: "org.bitcoinj.base.utils.MonetaryFormat"
+          uuid: "<clinit>_monetaryFormat2"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        methodParameters:
+        - name: "codeShift"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "code"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "A"
+            valueType: "java.lang.String"
+            uuid: "valueOf_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        methodName: "code"
+      valueType: "org.bitcoinj.base.utils.MonetaryFormat"
+      uuid: "toFriendlyString_monetaryFormat1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<method_return_from_value>
+        target: "java.lang.CharSequence"
+        localVariableValue:
+          sapientType: "OBJECT"
+          content: !<method_return_from_value>
+            target: "org.bitcoinj.base.utils.MonetaryFormat"
+            localVariableValue:
+              sapientType: "OBJECT"
+              content: !<method_return_from_value>
+                target: "org.bitcoinj.base.utils.MonetaryFormat"
+                localVariableValue:
+                  sapientType: "OBJECT"
+                  content: !<static_field_return>
+                    target: "org.bitcoinj.base.utils.MonetaryFormat"
+                    fieldName: "FIAT"
+                  valueType: "org.bitcoinj.base.utils.MonetaryFormat"
+                  uuid: "<clinit>_monetaryFormat1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                methodParameters: []
+                methodName: "postfixCode"
+              valueType: "org.bitcoinj.base.utils.MonetaryFormat"
+              uuid: "<clinit>_monetaryFormat2"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "codeShift"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 0
+                valueType: "int"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "code"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: "A"
+                valueType: "java.lang.String"
+                uuid: "valueOf_string1"
+                fixed: false
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "code"
+          valueType: "org.bitcoinj.base.utils.MonetaryFormat"
+          uuid: "toFriendlyString_monetaryFormat1"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        methodParameters:
+        - name: "group"
+          value:
+            sapientType: "THIS"
+            valueType: "org.bitcoinj.base.utils.Fiat"
+            uuid: "targetClassObject"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        methodName: "format"
+      valueType: "java.lang.CharSequence"
+      uuid: "toFriendlyString_charSequence1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "THIS"
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "targetClassObject"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "result1"
+      valueType: "java.lang.String"
+      uuid: "toFriendlyString_string1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "toPlainString"
+    signature: "toPlainString() : java.lang.String"
+    sourceCodeSignature: "String toPlainString()"
+    instructionFingerprint: "0A447F223605313F72DF5FBECB6A8995"
+  paths:
+  - pathId: "path1"
+    testPathName: "toPlainStringTest"
+    constructorSignature: "valueOf(java.lang.String,long) : org.bitcoinj.base.utils.Fiat"
+    modelFingerprint: "64C48F35652A698C6781C3045AC0C5E8"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "85356920EE9210832436EAEC66BDF9F8"
+      index: 1
+      valueUuid: "target"
+    - type: "FIELD"
+      name: "PLAIN_FORMAT"
+      modelFingerprint: "AD8C603D007FFE55FDB5DC8B5D7DCCF5"
+      index: 2
+      valueUuid: "<clinit>_monetaryFormat5"
+      methodExercised:
+        target: "this.PLAIN_FORMAT"
+        name: "format"
+        parameters:
+        - name: "group"
+          valueUuid: "targetClassObject"
+        signature: "format(Fiat): CharSequence"
+        returnValueUuid: "toPlainString_charSequence1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D1F433D4EB9F8805FF391E82DAB508AB"
+      index: 3
+      valueUuid: "toPlainString_string1"
+    uuid: "cfd14524-d2de-392f-ab18-9c1817ef92cc"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    variablesCouldNotBeIsolated: "object of type CharSequence"
+    failureReason:
+      reason: "VARIABLE_THAT_COULD_NOT_BE_ISOLATED_MOCKED"
+      source: "return PLAIN_FORMAT.format(this).toString();"
+      lineNumber: 212
+      details: "A variable could not be isolated or mocked when calling a method -\
+        \ Variable name: object of type CharSequence - Method: toString"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.utils.Fiat"
+        method: "valueOf"
+        methodParameters:
+        - name: "currencyCode"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "currencyCode1"
+            valueType: "java.lang.String"
+            uuid: "valueOf_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "valueOf_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<method_return_from_value>
+        target: "org.bitcoinj.base.utils.MonetaryFormat"
+        localVariableValue:
+          sapientType: "OBJECT"
+          content: !<method_return_from_value>
+            target: "org.bitcoinj.base.utils.MonetaryFormat"
+            localVariableValue:
+              sapientType: "OBJECT"
+              content: !<method_return_from_value>
+                target: "org.bitcoinj.base.utils.MonetaryFormat"
+                localVariableValue:
+                  sapientType: "OBJECT"
+                  content: !<static_field_return>
+                    target: "org.bitcoinj.base.utils.MonetaryFormat"
+                    fieldName: "FIAT"
+                  valueType: "org.bitcoinj.base.utils.MonetaryFormat"
+                  uuid: "<clinit>_monetaryFormat1"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                methodParameters:
+                - name: "minDecimals"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 0
+                    valueType: "int"
+                    fixed: true
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                methodName: "minDecimals"
+              valueType: "org.bitcoinj.base.utils.MonetaryFormat"
+              uuid: "<clinit>_monetaryFormat3"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters:
+            - name: "i"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 1
+                valueType: "int"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            - name: "decimals"
+              value:
+                sapientType: "BASIC"
+                content: !<regular>
+                  value: 4
+                valueType: "int"
+                fixed: true
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            methodName: "repeatOptionalDecimals"
+          valueType: "org.bitcoinj.base.utils.MonetaryFormat"
+          uuid: "<clinit>_monetaryFormat4"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        methodParameters: []
+        methodName: "noCode"
+      valueType: "org.bitcoinj.base.utils.MonetaryFormat"
+      uuid: "<clinit>_monetaryFormat5"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<method_return_from_value>
+        target: "java.lang.CharSequence"
+        localVariableValue:
+          sapientType: "OBJECT"
+          content: !<method_return_from_value>
+            target: "org.bitcoinj.base.utils.MonetaryFormat"
+            localVariableValue:
+              sapientType: "OBJECT"
+              content: !<method_return_from_value>
+                target: "org.bitcoinj.base.utils.MonetaryFormat"
+                localVariableValue:
+                  sapientType: "OBJECT"
+                  content: !<method_return_from_value>
+                    target: "org.bitcoinj.base.utils.MonetaryFormat"
+                    localVariableValue:
+                      sapientType: "OBJECT"
+                      content: !<static_field_return>
+                        target: "org.bitcoinj.base.utils.MonetaryFormat"
+                        fieldName: "FIAT"
+                      valueType: "org.bitcoinj.base.utils.MonetaryFormat"
+                      uuid: "<clinit>_monetaryFormat1"
+                      fixed: false
+                      equalsMethodPresent: false
+                      explicitCastNeeded: false
+                    methodParameters:
+                    - name: "minDecimals"
+                      value:
+                        sapientType: "BASIC"
+                        content: !<regular>
+                          value: 0
+                        valueType: "int"
+                        fixed: true
+                        equalsMethodPresent: false
+                        explicitCastNeeded: false
+                    methodName: "minDecimals"
+                  valueType: "org.bitcoinj.base.utils.MonetaryFormat"
+                  uuid: "<clinit>_monetaryFormat3"
+                  fixed: false
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+                methodParameters:
+                - name: "i"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 1
+                    valueType: "int"
+                    fixed: true
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                - name: "decimals"
+                  value:
+                    sapientType: "BASIC"
+                    content: !<regular>
+                      value: 4
+                    valueType: "int"
+                    fixed: true
+                    equalsMethodPresent: false
+                    explicitCastNeeded: false
+                methodName: "repeatOptionalDecimals"
+              valueType: "org.bitcoinj.base.utils.MonetaryFormat"
+              uuid: "<clinit>_monetaryFormat4"
+              fixed: false
+              equalsMethodPresent: false
+              explicitCastNeeded: false
+            methodParameters: []
+            methodName: "noCode"
+          valueType: "org.bitcoinj.base.utils.MonetaryFormat"
+          uuid: "<clinit>_monetaryFormat5"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        methodParameters:
+        - name: "group"
+          value:
+            sapientType: "THIS"
+            valueType: "org.bitcoinj.base.utils.Fiat"
+            uuid: "targetClassObject"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        methodName: "format"
+      valueType: "java.lang.CharSequence"
+      uuid: "toPlainString_charSequence1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "THIS"
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "targetClassObject"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "result1"
+      valueType: "java.lang.String"
+      uuid: "toPlainString_string1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "toString"
+    signature: "toString() : java.lang.String"
+    sourceCodeSignature: "String toString()"
+    instructionFingerprint: "A0BE15BF7C1457CB3D8F44F1996BFC74"
+  paths:
+  - pathId: "path1"
+    testPathName: "toStringTest"
+    constructorSignature: "valueOf(java.lang.String,long) : org.bitcoinj.base.utils.Fiat"
+    modelFingerprint: "8C5610A295D3A603C50EAEE438A52D1E"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "AF05ACCF03EFD4024B06E7F5CE40458F"
+      index: 1
+      valueUuid: "target"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "EC730116184F68C582123EBB15320733"
+      index: 2
+      valueUuid: "toString_string1"
+    uuid: "363d3698-f34c-39ad-914f-376a19498023"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.utils.Fiat"
+        method: "valueOf"
+        methodParameters:
+        - name: "currencyCode"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "currencyCode1"
+            valueType: "java.lang.String"
+            uuid: "valueOf_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 2
+            valueType: "long"
+            uuid: "valueOf_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "2"
+      valueType: "java.lang.String"
+      uuid: "toString_string1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "equals"
+    signature: "equals(java.lang.Object) : boolean"
+    sourceCodeSignature: "boolean equals(final Object o)"
+    instructionFingerprint: "C46B8C4EF6201D84AAEA53AF2137727F"
+  paths:
+  - pathId: "path1"
+    testPathName: "equalsWhenOEqualsThis"
+    constructorSignature: "valueOf(java.lang.String,long) : org.bitcoinj.base.utils.Fiat"
+    modelFingerprint: "29506A9C877891D230A5055F164D0211"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "d65113e0-6787-3a54-9186-95c0d0aa361d"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path6"
+    testPathName: "equalsWhenOIsNull"
+    constructorSignature: "valueOf(java.lang.String,long) : org.bitcoinj.base.utils.Fiat"
+    modelFingerprint: "1930226ACC55486344BF543985265CAB"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "a2108c4d-bcbc-39b5-8254-0588b654f131"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path2"
+    testPathName: "equalsWhenOGetClassNotEqualsGetClass"
+    constructorSignature: "valueOf(java.lang.String,long) : org.bitcoinj.base.utils.Fiat"
+    modelFingerprint: "4B9FF25286DD818BD448D483389843DF"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "8a01d7c3-3f4e-3e6a-a2a9-a725cd52717a"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path5"
+    testPathName: "equalsWhenThisValueNotEqualsOtherValue"
+    constructorSignature: "valueOf(java.lang.String,long) : org.bitcoinj.base.utils.Fiat"
+    modelFingerprint: "F1A7990AD2CBE56738434CFE05009172"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "d4d57aa6-abab-33ef-b5d4-1952f7a80aec"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path3"
+    testPathName: "equalsWhenThisCurrencyCodeEqualsOtherCurrencyCode"
+    constructorSignature: "valueOf(java.lang.String,long) : org.bitcoinj.base.utils.Fiat"
+    modelFingerprint: "DCFCC88FCA9E19467BD29113BF098371"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "f565e58b-ed21-3803-9f72-2470eb1b83d1"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path4"
+    testPathName: "equalsWhenThisCurrencyCodeNotEqualsOtherCurrencyCode"
+    constructorSignature: "valueOf(java.lang.String,long) : org.bitcoinj.base.utils.Fiat"
+    modelFingerprint: "DF921A93F675805A51BF2385E34DA6B1"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "06f0baaf-5b97-394d-b5c4-4c57b94043bc"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "compareTo"
+    signature: "compareTo(org.bitcoinj.base.utils.Fiat) : int"
+    sourceCodeSignature: "int compareTo(final Fiat other)"
+    instructionFingerprint: "9E265F03C8C8A9812B968310E4C302AE"
+  paths:
+  - pathId: "path1"
+    testPathName: "compareToWhenThisCurrencyCodeNotEqualsOtherCurrencyCode"
+    constructorSignature: "valueOf(java.lang.String,long) : org.bitcoinj.base.utils.Fiat"
+    modelFingerprint: "35B656F64684B542E35EBAB2EDD69D23"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "4C7B398F1166D2AD998F68EA99D17913"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "other"
+      modelFingerprint: "22751E2E23C32AE02390CD6CE2129C75"
+      index: 2
+      valueUuid: "compareTo_fiat1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "66C8C574E013DE9763C41D3766B99D82"
+      index: 3
+      valueUuid: "compareTo_int1"
+    uuid: "103eceb2-7695-3e7a-89fd-310a3f8e25f4"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.utils.Fiat"
+        method: "valueOf"
+        methodParameters:
+        - name: "currencyCode"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "A"
+            valueType: "java.lang.String"
+            uuid: "valueOf_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "valueOf_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.utils.Fiat"
+        method: "valueOf"
+        methodParameters:
+        - name: "currencyCode"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "B"
+            valueType: "java.lang.String"
+            uuid: "compareTo_string2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "compareTo_fiat1-value"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "compareTo_fiat1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: -1
+      valueType: "int"
+      uuid: "compareTo_int1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "compareToWhenThisCurrencyCodeEqualsOtherCurrencyCode"
+    constructorSignature: "valueOf(java.lang.String,long) : org.bitcoinj.base.utils.Fiat"
+    modelFingerprint: "336723E5D3D5F4969506B93AF3778280"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "878781FFA8BF1CF19E60821904DD9B88"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "other"
+      modelFingerprint: "21069CDEDF4158E93F86C31DF91F9423"
+      index: 2
+      valueUuid: "compareTo_fiat1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "231276223B3DD65935C1F8594364B51A"
+      index: 3
+      valueUuid: "compareTo_int1"
+    uuid: "0a89820b-44b9-376b-b893-a0b3267b42f2"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.utils.Fiat"
+        method: "valueOf"
+        methodParameters:
+        - name: "currencyCode"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "A"
+            valueType: "java.lang.String"
+            uuid: "valueOf_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "long"
+            uuid: "valueOf_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.utils.Fiat"
+        method: "valueOf"
+        methodParameters:
+        - name: "currencyCode"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "A"
+            valueType: "java.lang.String"
+            uuid: "compareTo_string2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "value"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "long"
+            uuid: "compareTo_long2"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.utils.Fiat"
+      uuid: "compareTo_fiat1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "compareTo_int1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false

@@ -1,0 +1,384 @@
+---
+modelFingerprint: "E54B06DDE96EB27E52E6731E5ECE62A0"
+methods:
+- method:
+    name: "formatHex"
+    signature: "formatHex(byte[]) : java.lang.String"
+    sourceCodeSignature: "String formatHex(byte[] bytes)"
+    instructionFingerprint: "78F17B48EAA2E1A143FEFA330AD304C6"
+  paths:
+  - pathId: "path1"
+    testPathName: "formatHexWhenBytesIsNotEmpty"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "75796763209D6BD700FA0A34E1FC72C8"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "bytes"
+      modelFingerprint: "2F1EAF8FF70A2512E1D6FE1905E2B8EB"
+      index: 2
+      valueUuid: "formatHex_byte[]1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "BCAF1333B8FD89D2E42C34124911ED44"
+      index: 3
+      valueUuid: "formatHex_string1"
+    uuid: "9f0bd176-2947-3835-8354-48a50fe9e80e"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "UNKNOWN_REASON"
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.base.internal.HexFormat"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.base.internal.HexFormat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "byte"
+            uuid: "formatHex_byte1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "formatHex_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "A"
+      valueType: "java.lang.String"
+      uuid: "formatHex_string1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "formatHexWhenBytesIsEmpty"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "08B4599B476D162587BCD062AD81D4D8"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "bcb9c964-44aa-3937-9386-4fa8e21a6c94"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "parseHex"
+    signature: "parseHex(java.lang.String) : byte[]"
+    sourceCodeSignature: "byte[] parseHex(String hexString)"
+    instructionFingerprint: "071F7D95C02DE07CDAF421224FEBCECA"
+  paths:
+  - pathId: "path1"
+    testPathName: "parseHexWhenHexStringLengthModulus2Equals1ThrowsIllegalArgumentException"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "58BA99846408665390FA528CD6FB9125"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "hexString"
+      modelFingerprint: "20C50CF44E6FD1E3D9A0A6858FC3DAF5"
+      index: 2
+      valueUuid: "parseHex_string1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D0E8EDD3CF6873926270D47CA9BDFB05"
+      index: 3
+      valueUuid: "parseHex_illegalArgumentException1"
+    uuid: "278d16a5-ccc4-393f-b870-848d7156f734"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.base.internal.HexFormat"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.base.internal.HexFormat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "A"
+      valueType: "java.lang.String"
+      uuid: "parseHex_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.IllegalArgumentException"
+        parameters:
+        - name: "s"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "Invalid hexadecimal String supplied."
+            valueType: "java.lang.String"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "java.lang.IllegalArgumentException"
+      uuid: "parseHex_illegalArgumentException1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+  - pathId: "path5"
+    testPathName: "parseHexWhenINotLessThanHexStringLength"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "AB9C2E20868E84D70F7BA9EF86F5A39E"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "3e2dee75-48e9-3d97-bf59-0a1e085bd5cb"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path2"
+    testPathName: "parseHexWhenDigitEqualsMinus1ThrowsIllegalArgumentException"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "7411FD655E53B3AB20AAF505006CC6E7"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "hexString"
+      modelFingerprint: "4EF3142189EBF33C97A49229B6C3AB4A"
+      index: 2
+      valueUuid: "parseHex_string1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "B48523417770E85C4714D7E85ABA53C3"
+      index: 3
+      valueUuid: "toDigit_illegalArgumentException1"
+    uuid: "54602f71-0d40-36da-b499-ce62ba6f2488"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.base.internal.HexFormat"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.base.internal.HexFormat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "hexString1"
+      valueType: "java.lang.String"
+      uuid: "parseHex_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.IllegalArgumentException"
+        parameters:
+        - name: "s"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "Invalid Hexadecimal Character: h"
+            valueType: "java.lang.String"
+            uuid: "toDigit_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "java.lang.IllegalArgumentException"
+      uuid: "toDigit_illegalArgumentException1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+  - pathId: "path4"
+    testPathName: "parseHexWhenDigitNotEqualsMinus1"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "B7C50D372154E4566F591776328EB5D6"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "hexString"
+      modelFingerprint: "80F569B801B076F2894A2275F050F743"
+      index: 2
+      valueUuid: "parseHex_string1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "BBF64A0981BBC539926A8B38E5D36406"
+      index: 3
+      valueUuid: "parseHex_byte[]1"
+    uuid: "571b79cf-cc03-3c23-beb4-1c0eefab5867"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.base.internal.HexFormat"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.base.internal.HexFormat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "BA"
+      valueType: "java.lang.String"
+      uuid: "parseHex_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: -70
+            valueType: "byte"
+            originalValueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "parseHex_byte[]1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path3"
+    testPathName: "parseHexWhenDigitNotEqualsMinus1ThrowsIllegalArgumentException"
+    constructorSignature: "<init>() : void"
+    modelFingerprint: "23DCC46C8D8AA8BDB207306B0C932D9F"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "4DB0F57EEFC6BBF1691C61D6F11B96D4"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "hexString"
+      modelFingerprint: "3639838A810522EA34916D28DD51ACA1"
+      index: 2
+      valueUuid: "parseHex_string1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "B6F4E421083EF3778FEA1644A8BA9751"
+      index: 3
+      valueUuid: "toDigit_illegalArgumentException1"
+    uuid: "9964fa33-e815-336b-82d2-f30602c027a5"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.base.internal.HexFormat"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.base.internal.HexFormat"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "hexString1"
+      valueType: "java.lang.String"
+      uuid: "parseHex_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "java.lang.IllegalArgumentException"
+        parameters:
+        - name: "s"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "s1"
+            valueType: "java.lang.String"
+            uuid: "toDigit_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "java.lang.IllegalArgumentException"
+      uuid: "toDigit_illegalArgumentException1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false

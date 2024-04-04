@@ -1,0 +1,5364 @@
+---
+modelFingerprint: "B1E24E146B7A1975B0186000B5175394"
+methods:
+- method:
+    name: "compress"
+    signature: "compress() : org.bitcoinj.crypto.LazyECPoint"
+    sourceCodeSignature: "LazyECPoint compress()"
+    instructionFingerprint: "658758548B1C73AE366E30DA780BA331"
+  paths:
+  - pathId: "path1"
+    testPathName: "compressWhenCompressed"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "8EF232A835993694ACD73DDE4B0FCE06"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "E5E865888FE987AE31E09C0199EC68EC"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "ECKey"
+      modelFingerprint: "5BF70BEE6076DB06D045B59B079EEFF6"
+      index: 2
+      valueUuid: "uuid1"
+      methodExercised:
+        target: "org.bitcoinj.crypto.ECKey"
+        name: "isPubKeyCompressed"
+        parameters:
+        - name: "encoded"
+          valueUuid: "<init>_byte[]1"
+        signature: "isPubKeyCompressed(byte[]): boolean"
+        returnValueUuid: "<init>_boolean1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "53C2E4605BB257B67D0BA31F6767BECD"
+      index: 3
+      valueUuid: "targetClassObject"
+    uuid: "4e9c8ce1-7355-3002-8426-1f382a161439"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.LazyECPoint"
+        parameters:
+        - name: "curve"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bouncycastle.math.ec.ECCurve"
+            uuid: "<init>_eCCurve1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "bits"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.LazyECPoint"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "<init>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "THIS"
+      valueType: "org.bitcoinj.crypto.LazyECPoint"
+      uuid: "targetClassObject"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "compressWhenNotCompressed"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "E6F48BAD09A4561674FD292BEBE9378E"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "E5E865888FE987AE31E09C0199EC68EC"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "ECKey"
+      modelFingerprint: "F2351A2CC7516BB50A4A39AD1756D267"
+      index: 2
+      valueUuid: "uuid2"
+      methodExercised:
+        target: "org.bitcoinj.crypto.ECKey"
+        name: "isPubKeyCompressed"
+        parameters:
+        - name: "encoded"
+          valueUuid: "<init>_byte[]1"
+        signature: "isPubKeyCompressed(byte[]): boolean"
+        returnValueUuid: "<init>_boolean1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "60892C2626A3D84255AD3241F3EB6633"
+      index: 3
+      methodExercised:
+        target: "target"
+        name: "get"
+        parameters: []
+        signature: "get(): ECPoint"
+        returnValueUuid: "compress_eCPoint1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "086C8B05B30C5B54FD9AE7325AC158FF"
+      index: 4
+      valueUuid: "compress_eCPoint1"
+      methodExercised:
+        target: "org.bouncycastle.math.ec.ECPoint"
+        name: "normalize"
+        parameters: []
+        signature: "normalize(): ECPoint"
+        returnValueUuid: "<init>_eCPoint2"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "5D9CBF2997BF381C404A24CFC5895B46"
+      index: 5
+      valueUuid: "compress_lazyECPoint1"
+    uuid: "9c0a3954-18ec-314e-ab25-0494ae3cc18e"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.LazyECPoint"
+        parameters:
+        - name: "curve"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bouncycastle.math.ec.ECCurve"
+            uuid: "<init>_eCCurve1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "bits"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.LazyECPoint"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "<init>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "compress_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "compress_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "<init>_eCPoint2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.LazyECPoint"
+        parameters:
+        - name: "point"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bouncycastle.math.ec.ECPoint"
+            uuid: "compress_eCPoint1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "compressed"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: true
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.crypto.LazyECPoint"
+      uuid: "compress_lazyECPoint1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "decompress"
+    signature: "decompress() : org.bitcoinj.crypto.LazyECPoint"
+    sourceCodeSignature: "LazyECPoint decompress()"
+    instructionFingerprint: "B47AE86C6BEB68EE230766342CAB67C8"
+  paths:
+  - pathId: "path1"
+    testPathName: "decompressWhenNotCompressed"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "A45433C2A7F05F73B8A9132786B9950F"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "E5E865888FE987AE31E09C0199EC68EC"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "ECKey"
+      modelFingerprint: "F2351A2CC7516BB50A4A39AD1756D267"
+      index: 2
+      valueUuid: "uuid3"
+      methodExercised:
+        target: "org.bitcoinj.crypto.ECKey"
+        name: "isPubKeyCompressed"
+        parameters:
+        - name: "encoded"
+          valueUuid: "<init>_byte[]1"
+        signature: "isPubKeyCompressed(byte[]): boolean"
+        returnValueUuid: "<init>_boolean1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "53C2E4605BB257B67D0BA31F6767BECD"
+      index: 3
+      valueUuid: "targetClassObject"
+    uuid: "dce0e767-b387-3291-9e89-521afeda9393"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.LazyECPoint"
+        parameters:
+        - name: "curve"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bouncycastle.math.ec.ECCurve"
+            uuid: "<init>_eCCurve1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "bits"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.LazyECPoint"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "uuid3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "<init>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "THIS"
+      valueType: "org.bitcoinj.crypto.LazyECPoint"
+      uuid: "targetClassObject"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "decompressWhenCompressed"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "F436E843D072649CF335DA46B6D078A5"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "E5E865888FE987AE31E09C0199EC68EC"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "ECKey"
+      modelFingerprint: "5BF70BEE6076DB06D045B59B079EEFF6"
+      index: 2
+      valueUuid: "uuid4"
+      methodExercised:
+        target: "org.bitcoinj.crypto.ECKey"
+        name: "isPubKeyCompressed"
+        parameters:
+        - name: "encoded"
+          valueUuid: "<init>_byte[]1"
+        signature: "isPubKeyCompressed(byte[]): boolean"
+        returnValueUuid: "<init>_boolean1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "60892C2626A3D84255AD3241F3EB6633"
+      index: 3
+      methodExercised:
+        target: "target"
+        name: "get"
+        parameters: []
+        signature: "get(): ECPoint"
+        returnValueUuid: "decompress_eCPoint1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "086C8B05B30C5B54FD9AE7325AC158FF"
+      index: 4
+      valueUuid: "decompress_eCPoint1"
+      methodExercised:
+        target: "org.bouncycastle.math.ec.ECPoint"
+        name: "normalize"
+        parameters: []
+        signature: "normalize(): ECPoint"
+        returnValueUuid: "<init>_eCPoint2"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "B369F20A9DD5988B7E3FA445E6E2DA68"
+      index: 5
+      valueUuid: "decompress_lazyECPoint1"
+    uuid: "a20c80a8-c85d-3813-b4f0-0c6ff7cbf090"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.LazyECPoint"
+        parameters:
+        - name: "curve"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bouncycastle.math.ec.ECCurve"
+            uuid: "<init>_eCCurve1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "bits"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.LazyECPoint"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "uuid4"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "<init>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "decompress_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "decompress_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "<init>_eCPoint2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.LazyECPoint"
+        parameters:
+        - name: "point"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bouncycastle.math.ec.ECPoint"
+            uuid: "decompress_eCPoint1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "compressed"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: false
+            valueType: "boolean"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.crypto.LazyECPoint"
+      uuid: "decompress_lazyECPoint1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "get"
+    signature: "get() : org.bouncycastle.math.ec.ECPoint"
+    sourceCodeSignature: "ECPoint get()"
+    instructionFingerprint: "582C13E240CFB79DEA33CD004DCDF352"
+  paths:
+  - pathId: "path1"
+    testPathName: "getWhenPointIsNull"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "22EDE714E7CE8F64C232DC3BB8CCFB23"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "E84291601C7F7AF4E05F78A29BA4D846"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "ECKey"
+      modelFingerprint: "88EE0937DA4E5AEB17B30E212086DC50"
+      index: 2
+      valueUuid: "uuid5"
+      methodExercised:
+        target: "org.bitcoinj.crypto.ECKey"
+        name: "isPubKeyCompressed"
+        parameters:
+        - name: "encoded"
+          valueUuid: "<init>_byte[]1"
+        signature: "isPubKeyCompressed(byte[]): boolean"
+        returnValueUuid: "<init>_boolean1"
+        access: 9
+    - type: "FIELD"
+      name: "curve"
+      modelFingerprint: "0BB966DCAC5EBC19FF319C99564759CE"
+      index: 3
+      valueUuid: "<init>_eCCurve1"
+      methodExercised:
+        target: "this.curve"
+        name: "decodePoint"
+        parameters:
+        - name: "arg0"
+          valueUuid: "<init>_byte[]1"
+        signature: "decodePoint(byte[]): ECPoint"
+        returnValueUuid: "get_eCPoint1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "EFB5660EC84EF25C077B1F54E70190B5"
+      index: 4
+      valueUuid: "get_eCPoint1"
+    uuid: "0b3e2cb2-b90a-35e3-ad3b-d5fa478b50a9"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.LazyECPoint"
+        parameters:
+        - name: "curve"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bouncycastle.math.ec.ECCurve"
+            uuid: "<init>_eCCurve1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "bits"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.LazyECPoint"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "uuid5"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "<init>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECCurve"
+      uuid: "<init>_eCCurve1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "get_eCPoint1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "<init>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "get_eCPoint1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "getEncoded"
+    signature: "getEncoded() : byte[]"
+    sourceCodeSignature: "byte[] getEncoded()"
+    instructionFingerprint: "19656BBD78AAB587BB9BD51C0BAD5229"
+  paths:
+  - pathId: "path1"
+    testPathName: "getEncodedWhenBitsIsNotNull"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "80A93E5C0FFA5DBB3F916DC3DF0A068F"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "E5E865888FE987AE31E09C0199EC68EC"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "ECKey"
+      modelFingerprint: "88EE0937DA4E5AEB17B30E212086DC50"
+      index: 2
+      valueUuid: "uuid6"
+      methodExercised:
+        target: "org.bitcoinj.crypto.ECKey"
+        name: "isPubKeyCompressed"
+        parameters:
+        - name: "encoded"
+          valueUuid: "<init>_byte[]1"
+        signature: "isPubKeyCompressed(byte[]): boolean"
+        returnValueUuid: "<init>_boolean1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "6F284CA220F919F7D0C6EB6C97E89FCE"
+      index: 3
+      valueUuid: "getEncoded_byte[]1"
+    uuid: "cf6fe54d-feda-3f5c-85e0-08a4ab2786ff"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.LazyECPoint"
+        parameters:
+        - name: "curve"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bouncycastle.math.ec.ECCurve"
+            uuid: "<init>_eCCurve1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "bits"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.LazyECPoint"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "uuid6"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "<init>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "getEncoded_byte[]1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "getEncodedWhenBitsIsNull"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "544ACDE4FC441F3102489E8AA72B5ECC"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "40A3F407881609752C8DBF46106AD95A"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "ECKey"
+      modelFingerprint: "47585FE340EB3D2E043C4DB901004AA5"
+      index: 2
+      valueUuid: "uuid7"
+      methodExercised:
+        target: "org.bitcoinj.crypto.ECKey"
+        name: "isPubKeyCompressed"
+        parameters:
+        - name: "encoded"
+          valueUuid: "<init>_byte[]1"
+        signature: "isPubKeyCompressed(byte[]): boolean"
+        returnValueUuid: "<init>_boolean1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "60892C2626A3D84255AD3241F3EB6633"
+      index: 3
+      methodExercised:
+        target: "target"
+        name: "get"
+        parameters: []
+        signature: "get(): ECPoint"
+        returnValueUuid: "getEncoded_eCPoint1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "91EF16E81B9FEA63E4A7B344F9FFA259"
+      index: 4
+      valueUuid: "getEncoded_eCPoint1"
+      methodExercised:
+        target: "org.bouncycastle.math.ec.ECPoint"
+        name: "getEncoded"
+        parameters:
+        - name: "arg0"
+          valueUuid: "<init>_boolean1"
+        signature: "getEncoded(boolean): byte[]"
+        returnValueUuid: "getEncoded_byte[]1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "740324D8AEEA83F5639543B37CAABC19"
+      index: 5
+      valueUuid: "getEncoded_byte[]1"
+    uuid: "243ea24e-c685-3c28-8d5d-82036e32e36f"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.LazyECPoint"
+        parameters:
+        - name: "curve"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bouncycastle.math.ec.ECCurve"
+            uuid: "<init>_eCCurve1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "bits"
+          value:
+            sapientType: "NULL"
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.LazyECPoint"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "uuid7"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "NULL"
+      valueType: "byte[]"
+      uuid: "<init>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "getEncoded_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "getEncoded_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "getEncoded_byte[]1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "getEncoded_byte[]1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "getDetachedPoint"
+    signature: "getDetachedPoint() : org.bouncycastle.math.ec.ECPoint"
+    sourceCodeSignature: "ECPoint getDetachedPoint()"
+    instructionFingerprint: "4AFBB470072897BD06C31FD1FE49F40C"
+  paths:
+  - pathId: "path1"
+    testPathName: "getDetachedPointTest"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "3F351DF15B9FC3227C2BFFD326BBA7D1"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "E5E865888FE987AE31E09C0199EC68EC"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "ECKey"
+      modelFingerprint: "88EE0937DA4E5AEB17B30E212086DC50"
+      index: 2
+      valueUuid: "uuid8"
+      methodExercised:
+        target: "org.bitcoinj.crypto.ECKey"
+        name: "isPubKeyCompressed"
+        parameters:
+        - name: "encoded"
+          valueUuid: "<init>_byte[]1"
+        signature: "isPubKeyCompressed(byte[]): boolean"
+        returnValueUuid: "<init>_boolean1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "60892C2626A3D84255AD3241F3EB6633"
+      index: 3
+      methodExercised:
+        target: "target"
+        name: "get"
+        parameters: []
+        signature: "get(): ECPoint"
+        returnValueUuid: "getDetachedPoint_eCPoint1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "33D2E2CFCB180E7F480729695C181683"
+      index: 4
+      valueUuid: "getDetachedPoint_eCPoint1"
+      methodExercised:
+        target: "org.bouncycastle.math.ec.ECPoint"
+        name: "getDetachedPoint"
+        parameters: []
+        signature: "getDetachedPoint(): ECPoint"
+        returnValueUuid: "getDetachedPoint_eCPoint2"
+        access: 17
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "EFB5660EC84EF25C077B1F54E70190B5"
+      index: 5
+      valueUuid: "getDetachedPoint_eCPoint2"
+    uuid: "ec093c29-77ad-310d-9eb2-a17f82051d55"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.LazyECPoint"
+        parameters:
+        - name: "curve"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bouncycastle.math.ec.ECCurve"
+            uuid: "<init>_eCCurve1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "bits"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.LazyECPoint"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "uuid8"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "<init>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "getDetachedPoint_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "getDetachedPoint_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "getDetachedPoint_eCPoint2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "getDetachedPoint_eCPoint2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "isInfinity"
+    signature: "isInfinity() : boolean"
+    sourceCodeSignature: "boolean isInfinity()"
+    instructionFingerprint: "4EBE674CFE1ACCB0FAB9FA32E531977E"
+  paths:
+  - pathId: "path1"
+    testPathName: "isInfinityWhenGetIsInfinity"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "B81C85456B58912F37D7A653A4E0D847"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "E5E865888FE987AE31E09C0199EC68EC"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "ECKey"
+      modelFingerprint: "88EE0937DA4E5AEB17B30E212086DC50"
+      index: 2
+      valueUuid: "uuid9"
+      methodExercised:
+        target: "org.bitcoinj.crypto.ECKey"
+        name: "isPubKeyCompressed"
+        parameters:
+        - name: "encoded"
+          valueUuid: "<init>_byte[]1"
+        signature: "isPubKeyCompressed(byte[]): boolean"
+        returnValueUuid: "<init>_boolean1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "60892C2626A3D84255AD3241F3EB6633"
+      index: 3
+      methodExercised:
+        target: "target"
+        name: "get"
+        parameters: []
+        signature: "get(): ECPoint"
+        returnValueUuid: "isInfinity_eCPoint1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "74B4911408A737A5214C115CF9A09E42"
+      index: 4
+      valueUuid: "isInfinity_eCPoint1"
+      methodExercised:
+        target: "org.bouncycastle.math.ec.ECPoint"
+        name: "isInfinity"
+        parameters: []
+        signature: "isInfinity(): boolean"
+        returnValueUuid: "isInfinity_boolean1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "753659628F1B3F179A2EF0629F555437"
+      index: 5
+      valueUuid: "isInfinity_boolean1"
+    uuid: "869e5444-dcbf-37b2-948f-976c22592f57"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.LazyECPoint"
+        parameters:
+        - name: "curve"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bouncycastle.math.ec.ECCurve"
+            uuid: "<init>_eCCurve1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "bits"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.LazyECPoint"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "uuid9"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "<init>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "isInfinity_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "isInfinity_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "isInfinity_boolean1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "isInfinity_boolean1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "isInfinityWhenGetNotIsInfinity"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "CA5A6334FB4F52BC47A860FD0113A5EA"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "E5E865888FE987AE31E09C0199EC68EC"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "ECKey"
+      modelFingerprint: "88EE0937DA4E5AEB17B30E212086DC50"
+      index: 2
+      valueUuid: "uuid10"
+      methodExercised:
+        target: "org.bitcoinj.crypto.ECKey"
+        name: "isPubKeyCompressed"
+        parameters:
+        - name: "encoded"
+          valueUuid: "<init>_byte[]1"
+        signature: "isPubKeyCompressed(byte[]): boolean"
+        returnValueUuid: "<init>_boolean1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "60892C2626A3D84255AD3241F3EB6633"
+      index: 3
+      methodExercised:
+        target: "target"
+        name: "get"
+        parameters: []
+        signature: "get(): ECPoint"
+        returnValueUuid: "isInfinity_eCPoint1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "48E26121C3FF664A5C102FABA701E4A6"
+      index: 4
+      valueUuid: "isInfinity_eCPoint1"
+      methodExercised:
+        target: "org.bouncycastle.math.ec.ECPoint"
+        name: "isInfinity"
+        parameters: []
+        signature: "isInfinity(): boolean"
+        returnValueUuid: "isInfinity_boolean1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "3A21543F56248AC92654D6E439128AED"
+      index: 5
+      valueUuid: "isInfinity_boolean1"
+    uuid: "8021a96c-6ae1-35ac-9356-46b6091cbcda"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.LazyECPoint"
+        parameters:
+        - name: "curve"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bouncycastle.math.ec.ECCurve"
+            uuid: "<init>_eCCurve1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "bits"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.LazyECPoint"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "uuid10"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "<init>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "isInfinity_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "isInfinity_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "isInfinity_boolean1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "isInfinity_boolean1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "timesPow2"
+    signature: "timesPow2(int) : org.bouncycastle.math.ec.ECPoint"
+    sourceCodeSignature: "ECPoint timesPow2(int e)"
+    instructionFingerprint: "743EB60B2A8EA1D3E242F8A27B1E6FE6"
+  paths:
+  - pathId: "path1"
+    testPathName: "timesPow2Test"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "3C68E30D3831C6E336965EBEA3B9CF0F"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "E5E865888FE987AE31E09C0199EC68EC"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "e"
+      modelFingerprint: "67C66561B50FBF13F3103BACE8DA2983"
+      index: 2
+      valueUuid: "timesPow2_int1"
+    - type: "STATIC"
+      name: "ECKey"
+      modelFingerprint: "88EE0937DA4E5AEB17B30E212086DC50"
+      index: 3
+      valueUuid: "uuid11"
+      methodExercised:
+        target: "org.bitcoinj.crypto.ECKey"
+        name: "isPubKeyCompressed"
+        parameters:
+        - name: "encoded"
+          valueUuid: "<init>_byte[]1"
+        signature: "isPubKeyCompressed(byte[]): boolean"
+        returnValueUuid: "<init>_boolean1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "60892C2626A3D84255AD3241F3EB6633"
+      index: 4
+      methodExercised:
+        target: "target"
+        name: "get"
+        parameters: []
+        signature: "get(): ECPoint"
+        returnValueUuid: "timesPow2_eCPoint1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "D1203EADBBF12FB6904F83DB7A05DF3D"
+      index: 5
+      valueUuid: "timesPow2_eCPoint1"
+      methodExercised:
+        target: "org.bouncycastle.math.ec.ECPoint"
+        name: "timesPow2"
+        parameters:
+        - name: "arg0"
+          valueUuid: "timesPow2_int1"
+        signature: "timesPow2(int): ECPoint"
+        returnValueUuid: "timesPow2_eCPoint2"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "EFB5660EC84EF25C077B1F54E70190B5"
+      index: 6
+      valueUuid: "timesPow2_eCPoint2"
+    uuid: "fb6b4d1c-d7ef-38fa-9b44-19302eb6320b"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.LazyECPoint"
+        parameters:
+        - name: "curve"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bouncycastle.math.ec.ECCurve"
+            uuid: "<init>_eCCurve1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "bits"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.LazyECPoint"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "timesPow2_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "uuid11"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "<init>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "timesPow2_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "timesPow2_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "timesPow2_eCPoint2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "timesPow2_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "timesPow2_eCPoint2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "getYCoord"
+    signature: "getYCoord() : org.bouncycastle.math.ec.ECFieldElement"
+    sourceCodeSignature: "ECFieldElement getYCoord()"
+    instructionFingerprint: "1256646630FCC6C8AFC86B30E4266D6D"
+  paths:
+  - pathId: "path1"
+    testPathName: "getYCoordTest"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "11F1249D16E67D42D97E0E03E16DCA75"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "E5E865888FE987AE31E09C0199EC68EC"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "ECKey"
+      modelFingerprint: "88EE0937DA4E5AEB17B30E212086DC50"
+      index: 2
+      valueUuid: "uuid12"
+      methodExercised:
+        target: "org.bitcoinj.crypto.ECKey"
+        name: "isPubKeyCompressed"
+        parameters:
+        - name: "encoded"
+          valueUuid: "<init>_byte[]1"
+        signature: "isPubKeyCompressed(byte[]): boolean"
+        returnValueUuid: "<init>_boolean1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "60892C2626A3D84255AD3241F3EB6633"
+      index: 3
+      methodExercised:
+        target: "target"
+        name: "get"
+        parameters: []
+        signature: "get(): ECPoint"
+        returnValueUuid: "getYCoord_eCPoint1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "9F270E726299ECACE96B9B467A12C076"
+      index: 4
+      valueUuid: "getYCoord_eCPoint1"
+      methodExercised:
+        target: "org.bouncycastle.math.ec.ECPoint"
+        name: "getYCoord"
+        parameters: []
+        signature: "getYCoord(): ECFieldElement"
+        returnValueUuid: "getYCoord_eCFieldElement1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "5AB83E4EA96AED67CF01EDFB7E14E2F9"
+      index: 5
+      valueUuid: "getYCoord_eCFieldElement1"
+    uuid: "6558fc31-f297-3cd3-9a02-5b320f5c50be"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.LazyECPoint"
+        parameters:
+        - name: "curve"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bouncycastle.math.ec.ECCurve"
+            uuid: "<init>_eCCurve1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "bits"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.LazyECPoint"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "uuid12"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "<init>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "getYCoord_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "getYCoord_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECFieldElement"
+      uuid: "getYCoord_eCFieldElement1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECFieldElement"
+      uuid: "getYCoord_eCFieldElement1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "getZCoords"
+    signature: "getZCoords() : org.bouncycastle.math.ec.ECFieldElement[]"
+    sourceCodeSignature: "ECFieldElement[] getZCoords()"
+    instructionFingerprint: "7695381B7B3164A455BA39A217306479"
+  paths:
+  - pathId: "path1"
+    testPathName: "getZCoordsTest"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "D32D8980C133122547C7130834DA937D"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "E5E865888FE987AE31E09C0199EC68EC"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "ECKey"
+      modelFingerprint: "88EE0937DA4E5AEB17B30E212086DC50"
+      index: 2
+      valueUuid: "uuid13"
+      methodExercised:
+        target: "org.bitcoinj.crypto.ECKey"
+        name: "isPubKeyCompressed"
+        parameters:
+        - name: "encoded"
+          valueUuid: "<init>_byte[]1"
+        signature: "isPubKeyCompressed(byte[]): boolean"
+        returnValueUuid: "<init>_boolean1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "60892C2626A3D84255AD3241F3EB6633"
+      index: 3
+      methodExercised:
+        target: "target"
+        name: "get"
+        parameters: []
+        signature: "get(): ECPoint"
+        returnValueUuid: "getZCoords_eCPoint1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "EF003382A138DBF71D7A2487613F721B"
+      index: 4
+      valueUuid: "getZCoords_eCPoint1"
+      methodExercised:
+        target: "org.bouncycastle.math.ec.ECPoint"
+        name: "getZCoords"
+        parameters: []
+        signature: "getZCoords(): ECFieldElement[]"
+        returnValueUuid: "getZCoords_eCFieldElement[]1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "EE97660E072E96C378568D7497AA267F"
+      index: 5
+      valueUuid: "getZCoords_eCFieldElement[]1"
+    uuid: "49afa737-d2d7-328e-a908-89094c52b7c2"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.LazyECPoint"
+        parameters:
+        - name: "curve"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bouncycastle.math.ec.ECCurve"
+            uuid: "<init>_eCCurve1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "bits"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.LazyECPoint"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "uuid13"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "<init>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "getZCoords_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "getZCoords_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "org.bouncycastle.math.ec.ECFieldElement[]"
+      uuid: "getZCoords_eCFieldElement[]1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "org.bouncycastle.math.ec.ECFieldElement[]"
+      uuid: "getZCoords_eCFieldElement[]1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "isNormalized"
+    signature: "isNormalized() : boolean"
+    sourceCodeSignature: "boolean isNormalized()"
+    instructionFingerprint: "79C7AEA38CA3F5E342042BD3452421DB"
+  paths:
+  - pathId: "path1"
+    testPathName: "isNormalizedWhenGetIsNormalized"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "636E70201ABC1161EB0A6ECBA4851AA9"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "E5E865888FE987AE31E09C0199EC68EC"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "ECKey"
+      modelFingerprint: "88EE0937DA4E5AEB17B30E212086DC50"
+      index: 2
+      valueUuid: "uuid14"
+      methodExercised:
+        target: "org.bitcoinj.crypto.ECKey"
+        name: "isPubKeyCompressed"
+        parameters:
+        - name: "encoded"
+          valueUuid: "<init>_byte[]1"
+        signature: "isPubKeyCompressed(byte[]): boolean"
+        returnValueUuid: "<init>_boolean1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "60892C2626A3D84255AD3241F3EB6633"
+      index: 3
+      methodExercised:
+        target: "target"
+        name: "get"
+        parameters: []
+        signature: "get(): ECPoint"
+        returnValueUuid: "isNormalized_eCPoint1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "120E04BC44579EEEC8085A459B2AD63D"
+      index: 4
+      valueUuid: "isNormalized_eCPoint1"
+      methodExercised:
+        target: "org.bouncycastle.math.ec.ECPoint"
+        name: "isNormalized"
+        parameters: []
+        signature: "isNormalized(): boolean"
+        returnValueUuid: "isNormalized_boolean1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "753659628F1B3F179A2EF0629F555437"
+      index: 5
+      valueUuid: "isNormalized_boolean1"
+    uuid: "f655aeca-2a08-3b24-b7cc-2a929568754b"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.LazyECPoint"
+        parameters:
+        - name: "curve"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bouncycastle.math.ec.ECCurve"
+            uuid: "<init>_eCCurve1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "bits"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.LazyECPoint"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "uuid14"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "<init>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "isNormalized_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "isNormalized_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "isNormalized_boolean1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "isNormalized_boolean1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "isNormalizedWhenGetNotIsNormalized"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "6BCFED97A0F1D0D3B3391C50F47CF503"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "E5E865888FE987AE31E09C0199EC68EC"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "ECKey"
+      modelFingerprint: "88EE0937DA4E5AEB17B30E212086DC50"
+      index: 2
+      valueUuid: "uuid15"
+      methodExercised:
+        target: "org.bitcoinj.crypto.ECKey"
+        name: "isPubKeyCompressed"
+        parameters:
+        - name: "encoded"
+          valueUuid: "<init>_byte[]1"
+        signature: "isPubKeyCompressed(byte[]): boolean"
+        returnValueUuid: "<init>_boolean1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "60892C2626A3D84255AD3241F3EB6633"
+      index: 3
+      methodExercised:
+        target: "target"
+        name: "get"
+        parameters: []
+        signature: "get(): ECPoint"
+        returnValueUuid: "isNormalized_eCPoint1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "AAD961444DFAD3CCE73E5CD4816E9F3D"
+      index: 4
+      valueUuid: "isNormalized_eCPoint1"
+      methodExercised:
+        target: "org.bouncycastle.math.ec.ECPoint"
+        name: "isNormalized"
+        parameters: []
+        signature: "isNormalized(): boolean"
+        returnValueUuid: "isNormalized_boolean1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "3A21543F56248AC92654D6E439128AED"
+      index: 5
+      valueUuid: "isNormalized_boolean1"
+    uuid: "399c726a-5663-3f08-b3e8-d806f401c21b"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.LazyECPoint"
+        parameters:
+        - name: "curve"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bouncycastle.math.ec.ECCurve"
+            uuid: "<init>_eCCurve1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "bits"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.LazyECPoint"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "uuid15"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "<init>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "isNormalized_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "isNormalized_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "isNormalized_boolean1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "isNormalized_boolean1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "isCompressed"
+    signature: "isCompressed() : boolean"
+    sourceCodeSignature: "boolean isCompressed()"
+    instructionFingerprint: "C2A5DA4BED1059ED5366FB45DCC504EB"
+  paths:
+  - pathId: "path1"
+    testPathName: "isCompressedWhenCompressed"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "200594F294899189CDB34FBE09DE2FD1"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "567bf8d8-dd6c-34e7-9a26-368e47152055"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path2"
+    testPathName: "isCompressedWhenNotCompressed"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "6C6D739C6CB7627578C334886E34B3B9"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "8ed080ea-95b0-3457-afaa-1b7a3764cd6b"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "multiply"
+    signature: "multiply(java.math.BigInteger) : org.bouncycastle.math.ec.ECPoint"
+    sourceCodeSignature: "ECPoint multiply(BigInteger k)"
+    instructionFingerprint: "536EDBE1069B7801651E22A8A75A8750"
+  paths:
+  - pathId: "path1"
+    testPathName: "multiplyTest"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "FE9F8ABF6AC9F5473F6AF1A161CBC734"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "E5E865888FE987AE31E09C0199EC68EC"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "k"
+      modelFingerprint: "88AB7AD0F60E4B1F55F7C754B73F0949"
+      index: 2
+      valueUuid: "multiply_bigInteger1"
+    - type: "STATIC"
+      name: "ECKey"
+      modelFingerprint: "88EE0937DA4E5AEB17B30E212086DC50"
+      index: 3
+      valueUuid: "uuid18"
+      methodExercised:
+        target: "org.bitcoinj.crypto.ECKey"
+        name: "isPubKeyCompressed"
+        parameters:
+        - name: "encoded"
+          valueUuid: "<init>_byte[]1"
+        signature: "isPubKeyCompressed(byte[]): boolean"
+        returnValueUuid: "<init>_boolean1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "60892C2626A3D84255AD3241F3EB6633"
+      index: 4
+      methodExercised:
+        target: "target"
+        name: "get"
+        parameters: []
+        signature: "get(): ECPoint"
+        returnValueUuid: "multiply_eCPoint1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "BFD373BC9A8A7982263C08FB72B51A17"
+      index: 5
+      valueUuid: "multiply_eCPoint1"
+      methodExercised:
+        target: "org.bouncycastle.math.ec.ECPoint"
+        name: "multiply"
+        parameters:
+        - name: "arg0"
+          valueUuid: "multiply_bigInteger1"
+        signature: "multiply(BigInteger): ECPoint"
+        returnValueUuid: "multiply_eCPoint2"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "EFB5660EC84EF25C077B1F54E70190B5"
+      index: 6
+      valueUuid: "multiply_eCPoint2"
+    uuid: "f2e2be9f-c5d7-3010-98aa-6831b8f18beb"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.LazyECPoint"
+        parameters:
+        - name: "curve"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bouncycastle.math.ec.ECCurve"
+            uuid: "<init>_eCCurve1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "bits"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.LazyECPoint"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "java.math.BigInteger"
+      uuid: "multiply_bigInteger1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "uuid18"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "<init>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "multiply_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "multiply_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "multiply_eCPoint2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "java.math.BigInteger"
+      uuid: "multiply_bigInteger1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "multiply_eCPoint2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "subtract"
+    signature: "subtract(org.bouncycastle.math.ec.ECPoint) : org.bouncycastle.math.ec.ECPoint"
+    sourceCodeSignature: "ECPoint subtract(ECPoint b)"
+    instructionFingerprint: "B72FD0D78B67CE254F8654BF3F011DD1"
+  paths:
+  - pathId: "path1"
+    testPathName: "subtractTest"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "00757890D1B341E2FA2EE542347756CB"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "E5E865888FE987AE31E09C0199EC68EC"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "b"
+      modelFingerprint: "2F8E49D26827FC7D5C56EA97B972AAEA"
+      index: 2
+      valueUuid: "subtract_eCPoint1"
+    - type: "STATIC"
+      name: "ECKey"
+      modelFingerprint: "88EE0937DA4E5AEB17B30E212086DC50"
+      index: 3
+      valueUuid: "uuid19"
+      methodExercised:
+        target: "org.bitcoinj.crypto.ECKey"
+        name: "isPubKeyCompressed"
+        parameters:
+        - name: "encoded"
+          valueUuid: "<init>_byte[]1"
+        signature: "isPubKeyCompressed(byte[]): boolean"
+        returnValueUuid: "<init>_boolean1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "60892C2626A3D84255AD3241F3EB6633"
+      index: 4
+      methodExercised:
+        target: "target"
+        name: "get"
+        parameters: []
+        signature: "get(): ECPoint"
+        returnValueUuid: "subtract_eCPoint2"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "516A6F79A7806507423C3D8A3C85B1AD"
+      index: 5
+      valueUuid: "subtract_eCPoint2"
+      methodExercised:
+        target: "org.bouncycastle.math.ec.ECPoint"
+        name: "subtract"
+        parameters:
+        - name: "arg0"
+          valueUuid: "subtract_eCPoint1"
+        signature: "subtract(ECPoint): ECPoint"
+        returnValueUuid: "subtract_eCPoint3"
+        access: 1025
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "EFB5660EC84EF25C077B1F54E70190B5"
+      index: 6
+      valueUuid: "subtract_eCPoint3"
+    uuid: "97b5e3b9-042a-36e9-ba00-8365659a5608"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.LazyECPoint"
+        parameters:
+        - name: "curve"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bouncycastle.math.ec.ECCurve"
+            uuid: "<init>_eCCurve1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "bits"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.LazyECPoint"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "subtract_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "uuid19"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "<init>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "subtract_eCPoint2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "subtract_eCPoint2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "subtract_eCPoint3"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "subtract_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "subtract_eCPoint3"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "isValid"
+    signature: "isValid() : boolean"
+    sourceCodeSignature: "boolean isValid()"
+    instructionFingerprint: "D64C5920299845602F779B9D30547011"
+  paths:
+  - pathId: "path1"
+    testPathName: "isValidWhenGetIsValid"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "450994BB600BAA5D5E9F4CCC182D2FD3"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "E5E865888FE987AE31E09C0199EC68EC"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "ECKey"
+      modelFingerprint: "88EE0937DA4E5AEB17B30E212086DC50"
+      index: 2
+      valueUuid: "uuid20"
+      methodExercised:
+        target: "org.bitcoinj.crypto.ECKey"
+        name: "isPubKeyCompressed"
+        parameters:
+        - name: "encoded"
+          valueUuid: "<init>_byte[]1"
+        signature: "isPubKeyCompressed(byte[]): boolean"
+        returnValueUuid: "<init>_boolean1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "60892C2626A3D84255AD3241F3EB6633"
+      index: 3
+      methodExercised:
+        target: "target"
+        name: "get"
+        parameters: []
+        signature: "get(): ECPoint"
+        returnValueUuid: "isValid_eCPoint1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "E4015241F926DE65B0CCAD9F364CC900"
+      index: 4
+      valueUuid: "isValid_eCPoint1"
+      methodExercised:
+        target: "org.bouncycastle.math.ec.ECPoint"
+        name: "isValid"
+        parameters: []
+        signature: "isValid(): boolean"
+        returnValueUuid: "isValid_boolean1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "753659628F1B3F179A2EF0629F555437"
+      index: 5
+      valueUuid: "isValid_boolean1"
+    uuid: "0d94c6c3-3da3-39d9-a702-e44ed362e6fe"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.LazyECPoint"
+        parameters:
+        - name: "curve"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bouncycastle.math.ec.ECCurve"
+            uuid: "<init>_eCCurve1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "bits"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.LazyECPoint"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "uuid20"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "<init>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "isValid_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "isValid_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "isValid_boolean1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "isValid_boolean1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "isValidWhenGetNotIsValid"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "5EC98A83839D34155BA43A4E25231C48"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "E5E865888FE987AE31E09C0199EC68EC"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "ECKey"
+      modelFingerprint: "88EE0937DA4E5AEB17B30E212086DC50"
+      index: 2
+      valueUuid: "uuid21"
+      methodExercised:
+        target: "org.bitcoinj.crypto.ECKey"
+        name: "isPubKeyCompressed"
+        parameters:
+        - name: "encoded"
+          valueUuid: "<init>_byte[]1"
+        signature: "isPubKeyCompressed(byte[]): boolean"
+        returnValueUuid: "<init>_boolean1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "60892C2626A3D84255AD3241F3EB6633"
+      index: 3
+      methodExercised:
+        target: "target"
+        name: "get"
+        parameters: []
+        signature: "get(): ECPoint"
+        returnValueUuid: "isValid_eCPoint1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "034DF2337B6FC899FC36EAA2AF48D283"
+      index: 4
+      valueUuid: "isValid_eCPoint1"
+      methodExercised:
+        target: "org.bouncycastle.math.ec.ECPoint"
+        name: "isValid"
+        parameters: []
+        signature: "isValid(): boolean"
+        returnValueUuid: "isValid_boolean1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "3A21543F56248AC92654D6E439128AED"
+      index: 5
+      valueUuid: "isValid_boolean1"
+    uuid: "75cfa43f-4b3d-3c28-8ae3-16f3fb07c04d"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.LazyECPoint"
+        parameters:
+        - name: "curve"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bouncycastle.math.ec.ECCurve"
+            uuid: "<init>_eCCurve1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "bits"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.LazyECPoint"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "uuid21"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "<init>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "isValid_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "isValid_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "isValid_boolean1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "isValid_boolean1"
+      fixed: true
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "scaleY"
+    signature: "scaleY(org.bouncycastle.math.ec.ECFieldElement) : org.bouncycastle.math.ec.ECPoint"
+    sourceCodeSignature: "ECPoint scaleY(ECFieldElement scale)"
+    instructionFingerprint: "E7BEC058D83D3C943C9F8A2C2BC20EB8"
+  paths:
+  - pathId: "path1"
+    testPathName: "scaleYTest"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "2D94902F728439D13F4D06F50D2DEF5D"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "E5E865888FE987AE31E09C0199EC68EC"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "scale"
+      modelFingerprint: "D51639524D5A0C1E0990D444BEB36B2C"
+      index: 2
+      valueUuid: "scaleY_eCFieldElement1"
+    - type: "STATIC"
+      name: "ECKey"
+      modelFingerprint: "88EE0937DA4E5AEB17B30E212086DC50"
+      index: 3
+      valueUuid: "uuid22"
+      methodExercised:
+        target: "org.bitcoinj.crypto.ECKey"
+        name: "isPubKeyCompressed"
+        parameters:
+        - name: "encoded"
+          valueUuid: "<init>_byte[]1"
+        signature: "isPubKeyCompressed(byte[]): boolean"
+        returnValueUuid: "<init>_boolean1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "60892C2626A3D84255AD3241F3EB6633"
+      index: 4
+      methodExercised:
+        target: "target"
+        name: "get"
+        parameters: []
+        signature: "get(): ECPoint"
+        returnValueUuid: "scaleY_eCPoint1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "9DB2AFF753DB31928154616B34C6DECF"
+      index: 5
+      valueUuid: "scaleY_eCPoint1"
+      methodExercised:
+        target: "org.bouncycastle.math.ec.ECPoint"
+        name: "scaleY"
+        parameters:
+        - name: "arg0"
+          valueUuid: "scaleY_eCFieldElement1"
+        signature: "scaleY(ECFieldElement): ECPoint"
+        returnValueUuid: "scaleY_eCPoint2"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "EFB5660EC84EF25C077B1F54E70190B5"
+      index: 6
+      valueUuid: "scaleY_eCPoint2"
+    uuid: "3aa5318d-e14e-3d16-9a85-852b47f5735d"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.LazyECPoint"
+        parameters:
+        - name: "curve"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bouncycastle.math.ec.ECCurve"
+            uuid: "<init>_eCCurve1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "bits"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.LazyECPoint"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECFieldElement"
+      uuid: "scaleY_eCFieldElement1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "uuid22"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "<init>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "scaleY_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "scaleY_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "scaleY_eCPoint2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECFieldElement"
+      uuid: "scaleY_eCFieldElement1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "scaleY_eCPoint2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "getXCoord"
+    signature: "getXCoord() : org.bouncycastle.math.ec.ECFieldElement"
+    sourceCodeSignature: "ECFieldElement getXCoord()"
+    instructionFingerprint: "9ED530A2F1B71834652526A27E935D69"
+  paths:
+  - pathId: "path1"
+    testPathName: "getXCoordTest"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "E917919D41CE68DD59A6131028D4502E"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "E5E865888FE987AE31E09C0199EC68EC"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "ECKey"
+      modelFingerprint: "88EE0937DA4E5AEB17B30E212086DC50"
+      index: 2
+      valueUuid: "uuid23"
+      methodExercised:
+        target: "org.bitcoinj.crypto.ECKey"
+        name: "isPubKeyCompressed"
+        parameters:
+        - name: "encoded"
+          valueUuid: "<init>_byte[]1"
+        signature: "isPubKeyCompressed(byte[]): boolean"
+        returnValueUuid: "<init>_boolean1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "60892C2626A3D84255AD3241F3EB6633"
+      index: 3
+      methodExercised:
+        target: "target"
+        name: "get"
+        parameters: []
+        signature: "get(): ECPoint"
+        returnValueUuid: "getXCoord_eCPoint1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "44F6934730F2833F7B0F24A9D2A5EB26"
+      index: 4
+      valueUuid: "getXCoord_eCPoint1"
+      methodExercised:
+        target: "org.bouncycastle.math.ec.ECPoint"
+        name: "getXCoord"
+        parameters: []
+        signature: "getXCoord(): ECFieldElement"
+        returnValueUuid: "getXCoord_eCFieldElement1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "5AB83E4EA96AED67CF01EDFB7E14E2F9"
+      index: 5
+      valueUuid: "getXCoord_eCFieldElement1"
+    uuid: "dc0cbf17-5fe6-39b4-9cf3-8ca42085be8d"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.LazyECPoint"
+        parameters:
+        - name: "curve"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bouncycastle.math.ec.ECCurve"
+            uuid: "<init>_eCCurve1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "bits"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.LazyECPoint"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "uuid23"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "<init>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "getXCoord_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "getXCoord_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECFieldElement"
+      uuid: "getXCoord_eCFieldElement1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECFieldElement"
+      uuid: "getXCoord_eCFieldElement1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "scaleX"
+    signature: "scaleX(org.bouncycastle.math.ec.ECFieldElement) : org.bouncycastle.math.ec.ECPoint"
+    sourceCodeSignature: "ECPoint scaleX(ECFieldElement scale)"
+    instructionFingerprint: "63955B9D58AC60E45ECC62D092093A99"
+  paths:
+  - pathId: "path1"
+    testPathName: "scaleXTest"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "B78F44732625A5956BE87DAB952D55B2"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "E5E865888FE987AE31E09C0199EC68EC"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "scale"
+      modelFingerprint: "D51639524D5A0C1E0990D444BEB36B2C"
+      index: 2
+      valueUuid: "scaleX_eCFieldElement1"
+    - type: "STATIC"
+      name: "ECKey"
+      modelFingerprint: "88EE0937DA4E5AEB17B30E212086DC50"
+      index: 3
+      valueUuid: "uuid24"
+      methodExercised:
+        target: "org.bitcoinj.crypto.ECKey"
+        name: "isPubKeyCompressed"
+        parameters:
+        - name: "encoded"
+          valueUuid: "<init>_byte[]1"
+        signature: "isPubKeyCompressed(byte[]): boolean"
+        returnValueUuid: "<init>_boolean1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "60892C2626A3D84255AD3241F3EB6633"
+      index: 4
+      methodExercised:
+        target: "target"
+        name: "get"
+        parameters: []
+        signature: "get(): ECPoint"
+        returnValueUuid: "scaleX_eCPoint1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "EA3C79F70E4E9E6D558E2A8D7221573D"
+      index: 5
+      valueUuid: "scaleX_eCPoint1"
+      methodExercised:
+        target: "org.bouncycastle.math.ec.ECPoint"
+        name: "scaleX"
+        parameters:
+        - name: "arg0"
+          valueUuid: "scaleX_eCFieldElement1"
+        signature: "scaleX(ECFieldElement): ECPoint"
+        returnValueUuid: "scaleX_eCPoint2"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "EFB5660EC84EF25C077B1F54E70190B5"
+      index: 6
+      valueUuid: "scaleX_eCPoint2"
+    uuid: "a79665bf-1481-398a-9071-7417e564009f"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.LazyECPoint"
+        parameters:
+        - name: "curve"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bouncycastle.math.ec.ECCurve"
+            uuid: "<init>_eCCurve1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "bits"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.LazyECPoint"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECFieldElement"
+      uuid: "scaleX_eCFieldElement1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "uuid24"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "<init>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "scaleX_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "scaleX_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "scaleX_eCPoint2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECFieldElement"
+      uuid: "scaleX_eCFieldElement1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "scaleX_eCPoint2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "equals"
+    signature: "equals(org.bouncycastle.math.ec.ECPoint) : boolean"
+    sourceCodeSignature: "boolean equals(ECPoint other)"
+    instructionFingerprint: "1770CA2AA4E8D27E57790C8FBCA79A8B"
+  paths:
+  - pathId: "path1"
+    testPathName: "equalsWhenGetEqualsOther"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "83AA44A0943F7FC3080D05A971728F82"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "c818255f-7530-355a-bc36-d70537c405ed"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path2"
+    testPathName: "equalsWhenGetNotEqualsOther"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "07BAAFFE2157A55BEB8FA12CC31CBF5A"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "d19664d8-bce7-3ae2-90f3-4a720a8d853b"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "negate"
+    signature: "negate() : org.bouncycastle.math.ec.ECPoint"
+    sourceCodeSignature: "ECPoint negate()"
+    instructionFingerprint: "E6D1A85A5BE4A3F0D464F4F9D7425DA5"
+  paths:
+  - pathId: "path1"
+    testPathName: "negateTest"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "A4D2605EC5AD75C4C53506AE8F261E72"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "E5E865888FE987AE31E09C0199EC68EC"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "ECKey"
+      modelFingerprint: "88EE0937DA4E5AEB17B30E212086DC50"
+      index: 2
+      valueUuid: "uuid27"
+      methodExercised:
+        target: "org.bitcoinj.crypto.ECKey"
+        name: "isPubKeyCompressed"
+        parameters:
+        - name: "encoded"
+          valueUuid: "<init>_byte[]1"
+        signature: "isPubKeyCompressed(byte[]): boolean"
+        returnValueUuid: "<init>_boolean1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "60892C2626A3D84255AD3241F3EB6633"
+      index: 3
+      methodExercised:
+        target: "target"
+        name: "get"
+        parameters: []
+        signature: "get(): ECPoint"
+        returnValueUuid: "negate_eCPoint1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "629EC83D025ED11F4A60A343EB7CBC61"
+      index: 4
+      valueUuid: "negate_eCPoint1"
+      methodExercised:
+        target: "org.bouncycastle.math.ec.ECPoint"
+        name: "negate"
+        parameters: []
+        signature: "negate(): ECPoint"
+        returnValueUuid: "negate_eCPoint2"
+        access: 1025
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "EFB5660EC84EF25C077B1F54E70190B5"
+      index: 5
+      valueUuid: "negate_eCPoint2"
+    uuid: "00610e8a-308a-3060-9272-e6226990d3e8"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.LazyECPoint"
+        parameters:
+        - name: "curve"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bouncycastle.math.ec.ECCurve"
+            uuid: "<init>_eCCurve1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "bits"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.LazyECPoint"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "uuid27"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "<init>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "negate_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "negate_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "negate_eCPoint2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "negate_eCPoint2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "threeTimes"
+    signature: "threeTimes() : org.bouncycastle.math.ec.ECPoint"
+    sourceCodeSignature: "ECPoint threeTimes()"
+    instructionFingerprint: "46BE6A3CE80BBE9B1F367CC6E55D64DA"
+  paths:
+  - pathId: "path1"
+    testPathName: "threeTimesTest"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "680486DAFDE797A85CACBEE0A921D164"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "E5E865888FE987AE31E09C0199EC68EC"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "ECKey"
+      modelFingerprint: "88EE0937DA4E5AEB17B30E212086DC50"
+      index: 2
+      valueUuid: "uuid28"
+      methodExercised:
+        target: "org.bitcoinj.crypto.ECKey"
+        name: "isPubKeyCompressed"
+        parameters:
+        - name: "encoded"
+          valueUuid: "<init>_byte[]1"
+        signature: "isPubKeyCompressed(byte[]): boolean"
+        returnValueUuid: "<init>_boolean1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "60892C2626A3D84255AD3241F3EB6633"
+      index: 3
+      methodExercised:
+        target: "target"
+        name: "get"
+        parameters: []
+        signature: "get(): ECPoint"
+        returnValueUuid: "threeTimes_eCPoint1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "0A1F391B3FCC78B4FEDC59286E29C097"
+      index: 4
+      valueUuid: "threeTimes_eCPoint1"
+      methodExercised:
+        target: "org.bouncycastle.math.ec.ECPoint"
+        name: "threeTimes"
+        parameters: []
+        signature: "threeTimes(): ECPoint"
+        returnValueUuid: "threeTimes_eCPoint2"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "EFB5660EC84EF25C077B1F54E70190B5"
+      index: 5
+      valueUuid: "threeTimes_eCPoint2"
+    uuid: "af01baf5-859c-378e-8dd0-d42173ef03ee"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.LazyECPoint"
+        parameters:
+        - name: "curve"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bouncycastle.math.ec.ECCurve"
+            uuid: "<init>_eCCurve1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "bits"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.LazyECPoint"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "uuid28"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "<init>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "threeTimes_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "threeTimes_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "threeTimes_eCPoint2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "threeTimes_eCPoint2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "getZCoord"
+    signature: "getZCoord(int) : org.bouncycastle.math.ec.ECFieldElement"
+    sourceCodeSignature: "ECFieldElement getZCoord(int index)"
+    instructionFingerprint: "20ED08E59E0B846DF3798D7241A0A23D"
+  paths:
+  - pathId: "path1"
+    testPathName: "getZCoordTest"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "E0DB8CA7ED3B5F03312066C102CB70B2"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "E5E865888FE987AE31E09C0199EC68EC"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "index"
+      modelFingerprint: "BF19D054F28E26F8F709D34B84F889B0"
+      index: 2
+      valueUuid: "getZCoord_int1"
+    - type: "STATIC"
+      name: "ECKey"
+      modelFingerprint: "88EE0937DA4E5AEB17B30E212086DC50"
+      index: 3
+      valueUuid: "uuid29"
+      methodExercised:
+        target: "org.bitcoinj.crypto.ECKey"
+        name: "isPubKeyCompressed"
+        parameters:
+        - name: "encoded"
+          valueUuid: "<init>_byte[]1"
+        signature: "isPubKeyCompressed(byte[]): boolean"
+        returnValueUuid: "<init>_boolean1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "60892C2626A3D84255AD3241F3EB6633"
+      index: 4
+      methodExercised:
+        target: "target"
+        name: "get"
+        parameters: []
+        signature: "get(): ECPoint"
+        returnValueUuid: "getZCoord_eCPoint1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "03571E3798F512DC83C9A45BDE8BFBD6"
+      index: 5
+      valueUuid: "getZCoord_eCPoint1"
+      methodExercised:
+        target: "org.bouncycastle.math.ec.ECPoint"
+        name: "getZCoord"
+        parameters:
+        - name: "arg0"
+          valueUuid: "getZCoord_int1"
+        signature: "getZCoord(int): ECFieldElement"
+        returnValueUuid: "getZCoord_eCFieldElement1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "5AB83E4EA96AED67CF01EDFB7E14E2F9"
+      index: 6
+      valueUuid: "getZCoord_eCFieldElement1"
+    uuid: "abf61a24-83ad-3b61-9e1a-dc99b06e207f"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.LazyECPoint"
+        parameters:
+        - name: "curve"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bouncycastle.math.ec.ECCurve"
+            uuid: "<init>_eCCurve1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "bits"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.LazyECPoint"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "getZCoord_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "uuid29"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "<init>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "getZCoord_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "getZCoord_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECFieldElement"
+      uuid: "getZCoord_eCFieldElement1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "int"
+      uuid: "getZCoord_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECFieldElement"
+      uuid: "getZCoord_eCFieldElement1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "getEncoded"
+    signature: "getEncoded(boolean) : byte[]"
+    sourceCodeSignature: "byte[] getEncoded(boolean compressed)"
+    instructionFingerprint: "C760A52C8DCBA3BBF68D721363F09232"
+  paths:
+  - pathId: "path3"
+    testPathName: "getEncoded1WhenCompressedNotEqualsIsCompressed"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "D5A09D1C19DEB005593D4FC55EDB99F4"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "381735f1-1a86-3222-bfcb-651ccf830f38"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path1"
+    testPathName: "getEncoded1WhenBitsIsNotNull"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "1A6177EFD9170BB81ED098E373A7104C"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "E5E865888FE987AE31E09C0199EC68EC"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "compressed"
+      modelFingerprint: "95E4FADDC090750DFB51C9F715818C6C"
+      index: 2
+      valueUuid: "getEncoded_boolean1"
+    - type: "STATIC"
+      name: "ECKey"
+      modelFingerprint: "88EE0937DA4E5AEB17B30E212086DC50"
+      index: 3
+      valueUuid: "uuid31"
+      methodExercised:
+        target: "org.bitcoinj.crypto.ECKey"
+        name: "isPubKeyCompressed"
+        parameters:
+        - name: "encoded"
+          valueUuid: "<init>_byte[]1"
+        signature: "isPubKeyCompressed(byte[]): boolean"
+        returnValueUuid: "<init>_boolean1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "CCF5C84EA2C0079C318CA497554EE9CC"
+      index: 4
+      methodExercised:
+        target: "target"
+        name: "isCompressed"
+        parameters: []
+        signature: "isCompressed(): boolean"
+        returnValueUuid: "getEncoded_boolean2"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "6F284CA220F919F7D0C6EB6C97E89FCE"
+      index: 5
+      valueUuid: "getEncoded_byte[]1"
+    uuid: "77f038b5-1865-3e33-a88c-2c57803f4614"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.LazyECPoint"
+        parameters:
+        - name: "curve"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bouncycastle.math.ec.ECCurve"
+            uuid: "<init>_eCCurve1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "bits"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.LazyECPoint"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "getEncoded_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "uuid31"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "<init>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "getEncoded_boolean2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "getEncoded_byte[]1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "getEncoded1WhenBitsIsNull"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "B7F7152ADFC23866CE219B5817D9A768"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "40A3F407881609752C8DBF46106AD95A"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "compressed"
+      modelFingerprint: "95E4FADDC090750DFB51C9F715818C6C"
+      index: 2
+      valueUuid: "getEncoded_boolean1"
+    - type: "STATIC"
+      name: "ECKey"
+      modelFingerprint: "47585FE340EB3D2E043C4DB901004AA5"
+      index: 3
+      valueUuid: "uuid32"
+      methodExercised:
+        target: "org.bitcoinj.crypto.ECKey"
+        name: "isPubKeyCompressed"
+        parameters:
+        - name: "encoded"
+          valueUuid: "<init>_byte[]1"
+        signature: "isPubKeyCompressed(byte[]): boolean"
+        returnValueUuid: "<init>_boolean1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "CCF5C84EA2C0079C318CA497554EE9CC"
+      index: 4
+      methodExercised:
+        target: "target"
+        name: "isCompressed"
+        parameters: []
+        signature: "isCompressed(): boolean"
+        returnValueUuid: "getEncoded_boolean2"
+        access: 1
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "60892C2626A3D84255AD3241F3EB6633"
+      index: 5
+      methodExercised:
+        target: "target"
+        name: "get"
+        parameters: []
+        signature: "get(): ECPoint"
+        returnValueUuid: "getEncoded_eCPoint1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "FA41C365B999F9C792E535A538C6A73C"
+      index: 6
+      valueUuid: "getEncoded_eCPoint1"
+      methodExercised:
+        target: "org.bouncycastle.math.ec.ECPoint"
+        name: "getEncoded"
+        parameters:
+        - name: "arg0"
+          valueUuid: "getEncoded_boolean1"
+        signature: "getEncoded(boolean): byte[]"
+        returnValueUuid: "getEncoded_byte[]1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "740324D8AEEA83F5639543B37CAABC19"
+      index: 7
+      valueUuid: "getEncoded_byte[]1"
+    uuid: "f3d0addc-49af-3531-8d64-aafbf9ec182b"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.LazyECPoint"
+        parameters:
+        - name: "curve"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bouncycastle.math.ec.ECCurve"
+            uuid: "<init>_eCCurve1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "bits"
+          value:
+            sapientType: "NULL"
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.LazyECPoint"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "getEncoded_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "uuid32"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "NULL"
+      valueType: "byte[]"
+      uuid: "<init>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "getEncoded_boolean2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "getEncoded_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "getEncoded_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "getEncoded_byte[]1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "getEncoded_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "getEncoded_byte[]1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "add"
+    signature: "add(org.bouncycastle.math.ec.ECPoint) : org.bouncycastle.math.ec.ECPoint"
+    sourceCodeSignature: "ECPoint add(ECPoint b)"
+    instructionFingerprint: "969A9BC94F924DF150E566BA1E9B4010"
+  paths:
+  - pathId: "path1"
+    testPathName: "addTest"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "D36FA1AEAD2F8E41E2B392EA845A6760"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "E5E865888FE987AE31E09C0199EC68EC"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "b"
+      modelFingerprint: "2F8E49D26827FC7D5C56EA97B972AAEA"
+      index: 2
+      valueUuid: "add_eCPoint1"
+    - type: "STATIC"
+      name: "ECKey"
+      modelFingerprint: "88EE0937DA4E5AEB17B30E212086DC50"
+      index: 3
+      valueUuid: "uuid33"
+      methodExercised:
+        target: "org.bitcoinj.crypto.ECKey"
+        name: "isPubKeyCompressed"
+        parameters:
+        - name: "encoded"
+          valueUuid: "<init>_byte[]1"
+        signature: "isPubKeyCompressed(byte[]): boolean"
+        returnValueUuid: "<init>_boolean1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "60892C2626A3D84255AD3241F3EB6633"
+      index: 4
+      methodExercised:
+        target: "target"
+        name: "get"
+        parameters: []
+        signature: "get(): ECPoint"
+        returnValueUuid: "add_eCPoint2"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "392FEDF68FB8028706C9F02FD0E886F5"
+      index: 5
+      valueUuid: "add_eCPoint2"
+      methodExercised:
+        target: "org.bouncycastle.math.ec.ECPoint"
+        name: "add"
+        parameters:
+        - name: "arg0"
+          valueUuid: "add_eCPoint1"
+        signature: "add(ECPoint): ECPoint"
+        returnValueUuid: "add_eCPoint3"
+        access: 1025
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "EFB5660EC84EF25C077B1F54E70190B5"
+      index: 6
+      valueUuid: "add_eCPoint3"
+    uuid: "2f52d914-224e-3cf8-a2e5-c61089a0f6f4"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.LazyECPoint"
+        parameters:
+        - name: "curve"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bouncycastle.math.ec.ECCurve"
+            uuid: "<init>_eCCurve1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "bits"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.LazyECPoint"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "add_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "uuid33"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "<init>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "add_eCPoint2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "add_eCPoint2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "add_eCPoint3"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "add_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "add_eCPoint3"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "twicePlus"
+    signature: "twicePlus(org.bouncycastle.math.ec.ECPoint) : org.bouncycastle.math.ec.ECPoint"
+    sourceCodeSignature: "ECPoint twicePlus(ECPoint b)"
+    instructionFingerprint: "E43057A75A6608D9DECE808B7D929DFA"
+  paths:
+  - pathId: "path1"
+    testPathName: "twicePlusTest"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "19E648832430C3AFBED23611841E59D9"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "E5E865888FE987AE31E09C0199EC68EC"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "b"
+      modelFingerprint: "2F8E49D26827FC7D5C56EA97B972AAEA"
+      index: 2
+      valueUuid: "twicePlus_eCPoint1"
+    - type: "STATIC"
+      name: "ECKey"
+      modelFingerprint: "88EE0937DA4E5AEB17B30E212086DC50"
+      index: 3
+      valueUuid: "uuid34"
+      methodExercised:
+        target: "org.bitcoinj.crypto.ECKey"
+        name: "isPubKeyCompressed"
+        parameters:
+        - name: "encoded"
+          valueUuid: "<init>_byte[]1"
+        signature: "isPubKeyCompressed(byte[]): boolean"
+        returnValueUuid: "<init>_boolean1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "60892C2626A3D84255AD3241F3EB6633"
+      index: 4
+      methodExercised:
+        target: "target"
+        name: "get"
+        parameters: []
+        signature: "get(): ECPoint"
+        returnValueUuid: "twicePlus_eCPoint2"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "69946801C7735A9E6DE593D0CDEC651C"
+      index: 5
+      valueUuid: "twicePlus_eCPoint2"
+      methodExercised:
+        target: "org.bouncycastle.math.ec.ECPoint"
+        name: "twicePlus"
+        parameters:
+        - name: "arg0"
+          valueUuid: "twicePlus_eCPoint1"
+        signature: "twicePlus(ECPoint): ECPoint"
+        returnValueUuid: "twicePlus_eCPoint3"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "EFB5660EC84EF25C077B1F54E70190B5"
+      index: 6
+      valueUuid: "twicePlus_eCPoint3"
+    uuid: "215b2d25-1bd5-3ed3-a110-763528295d03"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.LazyECPoint"
+        parameters:
+        - name: "curve"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bouncycastle.math.ec.ECCurve"
+            uuid: "<init>_eCCurve1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "bits"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.LazyECPoint"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "twicePlus_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "uuid34"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "<init>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "twicePlus_eCPoint2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "twicePlus_eCPoint2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "twicePlus_eCPoint3"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "twicePlus_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "twicePlus_eCPoint3"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "getCurve"
+    signature: "getCurve() : org.bouncycastle.math.ec.ECCurve"
+    sourceCodeSignature: "ECCurve getCurve()"
+    instructionFingerprint: "6473582DC1FC380BAB4A4E3E32F0909E"
+  paths:
+  - pathId: "path1"
+    testPathName: "getCurveTest"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "6F96CABF3E94C725F21348F54CBBAFED"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "E5E865888FE987AE31E09C0199EC68EC"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "ECKey"
+      modelFingerprint: "88EE0937DA4E5AEB17B30E212086DC50"
+      index: 2
+      valueUuid: "uuid35"
+      methodExercised:
+        target: "org.bitcoinj.crypto.ECKey"
+        name: "isPubKeyCompressed"
+        parameters:
+        - name: "encoded"
+          valueUuid: "<init>_byte[]1"
+        signature: "isPubKeyCompressed(byte[]): boolean"
+        returnValueUuid: "<init>_boolean1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "60892C2626A3D84255AD3241F3EB6633"
+      index: 3
+      methodExercised:
+        target: "target"
+        name: "get"
+        parameters: []
+        signature: "get(): ECPoint"
+        returnValueUuid: "getCurve_eCPoint1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "183D1A6D1665D65AE4FCCB367BDD66B9"
+      index: 4
+      valueUuid: "getCurve_eCPoint1"
+      methodExercised:
+        target: "org.bouncycastle.math.ec.ECPoint"
+        name: "getCurve"
+        parameters: []
+        signature: "getCurve(): ECCurve"
+        returnValueUuid: "getCurve_eCCurve1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "17509D524D55CD6AEF21C0514B2F759C"
+      index: 5
+      valueUuid: "getCurve_eCCurve1"
+    uuid: "eb47973f-4d50-34cd-adc9-d630876f3801"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.LazyECPoint"
+        parameters:
+        - name: "curve"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bouncycastle.math.ec.ECCurve"
+            uuid: "<init>_eCCurve1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "bits"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.LazyECPoint"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "uuid35"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "<init>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "getCurve_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "getCurve_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECCurve"
+      uuid: "getCurve_eCCurve1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECCurve"
+      uuid: "getCurve_eCCurve1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "normalize"
+    signature: "normalize() : org.bouncycastle.math.ec.ECPoint"
+    sourceCodeSignature: "ECPoint normalize()"
+    instructionFingerprint: "C6E092EC141E0E7C67D13D885732058A"
+  paths:
+  - pathId: "path1"
+    testPathName: "normalizeTest"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "24D61B142403BCD9C63F59D4330D3191"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "E5E865888FE987AE31E09C0199EC68EC"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "ECKey"
+      modelFingerprint: "88EE0937DA4E5AEB17B30E212086DC50"
+      index: 2
+      valueUuid: "uuid36"
+      methodExercised:
+        target: "org.bitcoinj.crypto.ECKey"
+        name: "isPubKeyCompressed"
+        parameters:
+        - name: "encoded"
+          valueUuid: "<init>_byte[]1"
+        signature: "isPubKeyCompressed(byte[]): boolean"
+        returnValueUuid: "<init>_boolean1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "60892C2626A3D84255AD3241F3EB6633"
+      index: 3
+      methodExercised:
+        target: "target"
+        name: "get"
+        parameters: []
+        signature: "get(): ECPoint"
+        returnValueUuid: "normalize_eCPoint1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "B0EC0EF6DE33EC4E9CDD10F86E985AD0"
+      index: 4
+      valueUuid: "normalize_eCPoint1"
+      methodExercised:
+        target: "org.bouncycastle.math.ec.ECPoint"
+        name: "normalize"
+        parameters: []
+        signature: "normalize(): ECPoint"
+        returnValueUuid: "normalize_eCPoint2"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "EFB5660EC84EF25C077B1F54E70190B5"
+      index: 5
+      valueUuid: "normalize_eCPoint2"
+    uuid: "fd84fbe7-beb0-315d-afd1-860bd41a9b7f"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.LazyECPoint"
+        parameters:
+        - name: "curve"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bouncycastle.math.ec.ECCurve"
+            uuid: "<init>_eCCurve1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "bits"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.LazyECPoint"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "uuid36"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "<init>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "normalize_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "normalize_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "normalize_eCPoint2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "normalize_eCPoint2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "getY"
+    signature: "getY() : org.bouncycastle.math.ec.ECFieldElement"
+    sourceCodeSignature: "ECFieldElement getY()"
+    instructionFingerprint: "51AC2B67DDEC9FB2702A0C5E0EB84957"
+  paths:
+  - pathId: "path1"
+    testPathName: "getYTest"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "35C8535C348CA24E91A9A6AAE6AF1D8B"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "E5E865888FE987AE31E09C0199EC68EC"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "ECKey"
+      modelFingerprint: "88EE0937DA4E5AEB17B30E212086DC50"
+      index: 2
+      valueUuid: "uuid37"
+      methodExercised:
+        target: "org.bitcoinj.crypto.ECKey"
+        name: "isPubKeyCompressed"
+        parameters:
+        - name: "encoded"
+          valueUuid: "<init>_byte[]1"
+        signature: "isPubKeyCompressed(byte[]): boolean"
+        returnValueUuid: "<init>_boolean1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "2787EF7A1D0938F27162AA2D6A0F00CE"
+      index: 3
+      methodExercised:
+        target: "target"
+        name: "normalize"
+        parameters: []
+        signature: "normalize(): ECPoint"
+        returnValueUuid: "getY_eCPoint1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "9F270E726299ECACE96B9B467A12C076"
+      index: 4
+      valueUuid: "getY_eCPoint1"
+      methodExercised:
+        target: "org.bouncycastle.math.ec.ECPoint"
+        name: "getYCoord"
+        parameters: []
+        signature: "getYCoord(): ECFieldElement"
+        returnValueUuid: "getY_eCFieldElement1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "5AB83E4EA96AED67CF01EDFB7E14E2F9"
+      index: 5
+      valueUuid: "getY_eCFieldElement1"
+    uuid: "01740f11-0dda-3760-b445-66631166b4ec"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.LazyECPoint"
+        parameters:
+        - name: "curve"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bouncycastle.math.ec.ECCurve"
+            uuid: "<init>_eCCurve1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "bits"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.LazyECPoint"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "uuid37"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "<init>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "getY_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "getY_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECFieldElement"
+      uuid: "getY_eCFieldElement1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECFieldElement"
+      uuid: "getY_eCFieldElement1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "twice"
+    signature: "twice() : org.bouncycastle.math.ec.ECPoint"
+    sourceCodeSignature: "ECPoint twice()"
+    instructionFingerprint: "D27A04E33E20794ED42046FE57BC874A"
+  paths:
+  - pathId: "path1"
+    testPathName: "twiceTest"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "017586CE07BF715D6CF36B86660BA506"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "E5E865888FE987AE31E09C0199EC68EC"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "ECKey"
+      modelFingerprint: "88EE0937DA4E5AEB17B30E212086DC50"
+      index: 2
+      valueUuid: "uuid38"
+      methodExercised:
+        target: "org.bitcoinj.crypto.ECKey"
+        name: "isPubKeyCompressed"
+        parameters:
+        - name: "encoded"
+          valueUuid: "<init>_byte[]1"
+        signature: "isPubKeyCompressed(byte[]): boolean"
+        returnValueUuid: "<init>_boolean1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "60892C2626A3D84255AD3241F3EB6633"
+      index: 3
+      methodExercised:
+        target: "target"
+        name: "get"
+        parameters: []
+        signature: "get(): ECPoint"
+        returnValueUuid: "twice_eCPoint1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "5EE61AF0D1974A6DFD2A313A47D8A901"
+      index: 4
+      valueUuid: "twice_eCPoint1"
+      methodExercised:
+        target: "org.bouncycastle.math.ec.ECPoint"
+        name: "twice"
+        parameters: []
+        signature: "twice(): ECPoint"
+        returnValueUuid: "twice_eCPoint2"
+        access: 1025
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "EFB5660EC84EF25C077B1F54E70190B5"
+      index: 5
+      valueUuid: "twice_eCPoint2"
+    uuid: "0d659186-8bb5-3c66-ab9d-e341cdcd9ed6"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.LazyECPoint"
+        parameters:
+        - name: "curve"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bouncycastle.math.ec.ECCurve"
+            uuid: "<init>_eCCurve1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "bits"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.LazyECPoint"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "uuid38"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "<init>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "twice_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "twice_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "twice_eCPoint2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "twice_eCPoint2"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "getAffineYCoord"
+    signature: "getAffineYCoord() : org.bouncycastle.math.ec.ECFieldElement"
+    sourceCodeSignature: "ECFieldElement getAffineYCoord()"
+    instructionFingerprint: "3108A3A3CE8BA91DE6067E1D6FD09E00"
+  paths:
+  - pathId: "path1"
+    testPathName: "getAffineYCoordTest"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "9F08F8317567E598A3F961669D8C16BF"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "E5E865888FE987AE31E09C0199EC68EC"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "ECKey"
+      modelFingerprint: "88EE0937DA4E5AEB17B30E212086DC50"
+      index: 2
+      valueUuid: "uuid39"
+      methodExercised:
+        target: "org.bitcoinj.crypto.ECKey"
+        name: "isPubKeyCompressed"
+        parameters:
+        - name: "encoded"
+          valueUuid: "<init>_byte[]1"
+        signature: "isPubKeyCompressed(byte[]): boolean"
+        returnValueUuid: "<init>_boolean1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "60892C2626A3D84255AD3241F3EB6633"
+      index: 3
+      methodExercised:
+        target: "target"
+        name: "get"
+        parameters: []
+        signature: "get(): ECPoint"
+        returnValueUuid: "getAffineYCoord_eCPoint1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "66CB1BD657CD907790072F34DD0EE2A2"
+      index: 4
+      valueUuid: "getAffineYCoord_eCPoint1"
+      methodExercised:
+        target: "org.bouncycastle.math.ec.ECPoint"
+        name: "getAffineYCoord"
+        parameters: []
+        signature: "getAffineYCoord(): ECFieldElement"
+        returnValueUuid: "getAffineYCoord_eCFieldElement1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "5AB83E4EA96AED67CF01EDFB7E14E2F9"
+      index: 5
+      valueUuid: "getAffineYCoord_eCFieldElement1"
+    uuid: "3a7af79d-7d76-3ec2-94af-f9dab0a05761"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.LazyECPoint"
+        parameters:
+        - name: "curve"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bouncycastle.math.ec.ECCurve"
+            uuid: "<init>_eCCurve1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "bits"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.LazyECPoint"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "uuid39"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "<init>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "getAffineYCoord_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "getAffineYCoord_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECFieldElement"
+      uuid: "getAffineYCoord_eCFieldElement1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECFieldElement"
+      uuid: "getAffineYCoord_eCFieldElement1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "getAffineXCoord"
+    signature: "getAffineXCoord() : org.bouncycastle.math.ec.ECFieldElement"
+    sourceCodeSignature: "ECFieldElement getAffineXCoord()"
+    instructionFingerprint: "99A6CC4C0E2C913F4B4F902FA5C3064F"
+  paths:
+  - pathId: "path1"
+    testPathName: "getAffineXCoordTest"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "F71FBE52DB621457AA07AD146C618FDE"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "E5E865888FE987AE31E09C0199EC68EC"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "ECKey"
+      modelFingerprint: "88EE0937DA4E5AEB17B30E212086DC50"
+      index: 2
+      valueUuid: "uuid40"
+      methodExercised:
+        target: "org.bitcoinj.crypto.ECKey"
+        name: "isPubKeyCompressed"
+        parameters:
+        - name: "encoded"
+          valueUuid: "<init>_byte[]1"
+        signature: "isPubKeyCompressed(byte[]): boolean"
+        returnValueUuid: "<init>_boolean1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "60892C2626A3D84255AD3241F3EB6633"
+      index: 3
+      methodExercised:
+        target: "target"
+        name: "get"
+        parameters: []
+        signature: "get(): ECPoint"
+        returnValueUuid: "getAffineXCoord_eCPoint1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "4B5683ABB05C85BDA45AAFBB7E605630"
+      index: 4
+      valueUuid: "getAffineXCoord_eCPoint1"
+      methodExercised:
+        target: "org.bouncycastle.math.ec.ECPoint"
+        name: "getAffineXCoord"
+        parameters: []
+        signature: "getAffineXCoord(): ECFieldElement"
+        returnValueUuid: "getAffineXCoord_eCFieldElement1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "5AB83E4EA96AED67CF01EDFB7E14E2F9"
+      index: 5
+      valueUuid: "getAffineXCoord_eCFieldElement1"
+    uuid: "829eece6-438d-3fc4-9c7f-a40678792865"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.LazyECPoint"
+        parameters:
+        - name: "curve"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bouncycastle.math.ec.ECCurve"
+            uuid: "<init>_eCCurve1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "bits"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.LazyECPoint"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "uuid40"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "<init>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "getAffineXCoord_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "getAffineXCoord_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECFieldElement"
+      uuid: "getAffineXCoord_eCFieldElement1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECFieldElement"
+      uuid: "getAffineXCoord_eCFieldElement1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "getX"
+    signature: "getX() : org.bouncycastle.math.ec.ECFieldElement"
+    sourceCodeSignature: "ECFieldElement getX()"
+    instructionFingerprint: "F1B7B04B0E5383D254DDE17515D2B7CB"
+  paths:
+  - pathId: "path1"
+    testPathName: "getXTest"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "D73D2A72370A03C3445E2B8B4D1B596A"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "E5E865888FE987AE31E09C0199EC68EC"
+      index: 1
+      valueUuid: "target"
+    - type: "STATIC"
+      name: "ECKey"
+      modelFingerprint: "88EE0937DA4E5AEB17B30E212086DC50"
+      index: 2
+      valueUuid: "uuid41"
+      methodExercised:
+        target: "org.bitcoinj.crypto.ECKey"
+        name: "isPubKeyCompressed"
+        parameters:
+        - name: "encoded"
+          valueUuid: "<init>_byte[]1"
+        signature: "isPubKeyCompressed(byte[]): boolean"
+        returnValueUuid: "<init>_boolean1"
+        access: 9
+    - type: "INTERNAL"
+      name: "internalMethod"
+      modelFingerprint: "2787EF7A1D0938F27162AA2D6A0F00CE"
+      index: 3
+      methodExercised:
+        target: "target"
+        name: "normalize"
+        parameters: []
+        signature: "normalize(): ECPoint"
+        returnValueUuid: "getX_eCPoint1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "44F6934730F2833F7B0F24A9D2A5EB26"
+      index: 4
+      valueUuid: "getX_eCPoint1"
+      methodExercised:
+        target: "org.bouncycastle.math.ec.ECPoint"
+        name: "getXCoord"
+        parameters: []
+        signature: "getXCoord(): ECFieldElement"
+        returnValueUuid: "getX_eCFieldElement1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "5AB83E4EA96AED67CF01EDFB7E14E2F9"
+      index: 5
+      valueUuid: "getX_eCFieldElement1"
+    uuid: "2a257878-d67c-3b6b-a704-9e218a839d00"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.crypto.LazyECPoint"
+        parameters:
+        - name: "curve"
+          value:
+            sapientType: "MOCK"
+            valueType: "org.bouncycastle.math.ec.ECCurve"
+            uuid: "<init>_eCCurve1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        - name: "bits"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values: {}
+            valueType: "byte[]"
+            uuid: "<init>_byte[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.crypto.LazyECPoint"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.crypto.ECKey"
+      uuid: "uuid41"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "<init>_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values: {}
+      valueType: "byte[]"
+      uuid: "<init>_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "getX_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECPoint"
+      uuid: "getX_eCPoint1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECFieldElement"
+      uuid: "getX_eCFieldElement1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bouncycastle.math.ec.ECFieldElement"
+      uuid: "getX_eCFieldElement1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "equals"
+    signature: "equals(java.lang.Object) : boolean"
+    sourceCodeSignature: "boolean equals(Object o)"
+    instructionFingerprint: "E55FFD0CE22155E83F7BFA12E5CAF329"
+  paths:
+  - pathId: "path1"
+    testPathName: "equals1WhenThisEqualsO"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "870BC22E6B20CF90E28E5B2A74AFCE9A"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "b3f2a43b-6cfd-3dbd-823a-b22d7511050f"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path5"
+    testPathName: "equals1WhenOIsNull"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "5597CFD13B355A3696595D2BE43DF679"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "9c6df538-d915-3e44-8238-266c8662b7a3"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path2"
+    testPathName: "equals1WhenGetClassNotEqualsOGetClass"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "4ABCA92BCC28FB6AFEAC7ADF14623F81"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "8acd563e-84f8-34f4-97da-be28c7d999af"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path3"
+    testPathName: "equals1WhenArraysEqualsGetCanonicalEncodingOGetCanonicalEncoding"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "D42A3FD336B0F1E0D8F2458CEE52B157"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "560029a1-15c8-3e72-87d7-fb8c1aeb7d9f"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path4"
+    testPathName: "equals1WhenArraysNotEqualsGetCanonicalEncodingOGetCanonicalEncoding"
+    constructorSignature: "<init>(org.bouncycastle.math.ec.ECCurve,byte[]) : void"
+    modelFingerprint: "C3CF41F7257995A25D4D6A84F93F401A"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "b5dacb93-fcfe-355d-b0df-09ed774e04e9"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []

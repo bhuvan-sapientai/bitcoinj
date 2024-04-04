@@ -1,0 +1,1103 @@
+---
+modelFingerprint: "E97255CCC4333BCCA9B30E89099882C9"
+methods:
+- method:
+    name: "read"
+    signature: "read(java.nio.ByteBuffer) : org.bitcoinj.core.HeadersMessage"
+    sourceCodeSignature: "HeadersMessage read(ByteBuffer payload)"
+    instructionFingerprint: "423D7A6216D8348BFE77239DD3050408"
+  paths:
+  - pathId: "path1"
+    testPathName: "readWhenNumHeadersGreaterThanMAX_HEADERSThrowsProtocolException"
+    modelFingerprint: "840B4DB2F280228B15BC1355EB0FE707"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "payload"
+      modelFingerprint: "D30B43598E2900E2880BDD9712DAE751"
+      index: 1
+      valueUuid: "read_byteBuffer1"
+    - type: "STATIC"
+      name: "VarInt"
+      modelFingerprint: "5E92D544C5565BF042F406F470017DD5"
+      index: 2
+      valueUuid: "uuid1"
+      methodExercised:
+        target: "org.bitcoinj.base.VarInt"
+        name: "read"
+        parameters:
+        - name: "value"
+          valueUuid: "read_byteBuffer1"
+        throwsExceptions:
+        - "java.nio.BufferUnderflowException"
+        signature: "read(ByteBuffer): VarInt throws java.nio.BufferUnderflowException"
+        returnValueUuid: "read_varInt1"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      name: "numHeadersVarInt"
+      modelFingerprint: "B43C3ADB283FA5163913ABBABB5EC75C"
+      index: 3
+      valueUuid: "read_varInt1"
+      methodExercised:
+        target: "numHeadersVarInt"
+        name: "fitsInt"
+        parameters: []
+        signature: "fitsInt(): boolean"
+        returnValueUuid: "read_boolean1"
+        access: 1
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "3D0E364D028507E0FB885F547F95618C"
+      index: 4
+      valueUuid: "uuid3"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "check"
+        parameters:
+        - name: "expression"
+          valueUuid: "read_boolean1"
+        - name: "exceptionSupplier"
+          valueUuid: "uuid2"
+        throwsExceptions:
+        - "java.lang.Throwable"
+        signature: "check(boolean,Supplier): void throws java.lang.Throwable"
+        returnValueUuid: "read_void1"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      name: "numHeadersVarInt"
+      modelFingerprint: "39DA806AA67EF515436F2AACBB69DD83"
+      index: 5
+      valueUuid: "read_varInt1"
+      methodExercised:
+        target: "numHeadersVarInt"
+        name: "intValue"
+        parameters: []
+        throwsExceptions:
+        - "java.lang.ArithmeticException"
+        signature: "intValue(): int throws java.lang.ArithmeticException"
+        returnValueUuid: "read_int1"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D83C862F06C0BAD73DB47EA4B0826DE3"
+      index: 6
+      valueUuid: "read_protocolException1"
+    uuid: "67840b8a-0d55-3035-9949-836b47503de0"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "read_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.VarInt"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.VarInt"
+      uuid: "read_varInt1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "read_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.VarInt"
+      uuid: "read_varInt1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "read_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid3"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "read_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "read_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.VarInt"
+      uuid: "read_varInt1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 2824
+      valueType: "int"
+      uuid: "read_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "org.bitcoinj.core.ProtocolException"
+        parameters:
+        - name: "msg"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "Too many headers: got 2824 which is larger than 2000"
+            valueType: "java.lang.String"
+            uuid: "read_string1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.core.ProtocolException"
+      uuid: "read_protocolException1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "readWhenNewBlockHeaderHasTransactionsThrowsProtocolException"
+    modelFingerprint: "5058FA28F963ACB1C35989E6D41F0ED4"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "payload"
+      modelFingerprint: "D30B43598E2900E2880BDD9712DAE751"
+      index: 1
+      valueUuid: "read_byteBuffer1"
+    - type: "STATIC"
+      name: "VarInt"
+      modelFingerprint: "5E92D544C5565BF042F406F470017DD5"
+      index: 2
+      valueUuid: "uuid4"
+      methodExercised:
+        target: "org.bitcoinj.base.VarInt"
+        name: "read"
+        parameters:
+        - name: "value"
+          valueUuid: "read_byteBuffer1"
+        throwsExceptions:
+        - "java.nio.BufferUnderflowException"
+        signature: "read(ByteBuffer): VarInt throws java.nio.BufferUnderflowException"
+        returnValueUuid: "read_varInt1"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      name: "numHeadersVarInt"
+      modelFingerprint: "B43C3ADB283FA5163913ABBABB5EC75C"
+      index: 3
+      valueUuid: "read_varInt1"
+      methodExercised:
+        target: "numHeadersVarInt"
+        name: "fitsInt"
+        parameters: []
+        signature: "fitsInt(): boolean"
+        returnValueUuid: "read_boolean1"
+        access: 1
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "3D0E364D028507E0FB885F547F95618C"
+      index: 4
+      valueUuid: "uuid6"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "check"
+        parameters:
+        - name: "expression"
+          valueUuid: "read_boolean1"
+        - name: "exceptionSupplier"
+          valueUuid: "uuid5"
+        throwsExceptions:
+        - "java.lang.Throwable"
+        signature: "check(boolean,Supplier): void throws java.lang.Throwable"
+        returnValueUuid: "read_void1"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      name: "numHeadersVarInt"
+      modelFingerprint: "E18E8389FB67DC1989D76FFF7E8C92E6"
+      index: 5
+      valueUuid: "read_varInt1"
+      methodExercised:
+        target: "numHeadersVarInt"
+        name: "intValue"
+        parameters: []
+        throwsExceptions:
+        - "java.lang.ArithmeticException"
+        signature: "intValue(): int throws java.lang.ArithmeticException"
+        returnValueUuid: "read_int1"
+        access: 1
+    - type: "STATIC"
+      name: "Block"
+      modelFingerprint: "28CBCB5158AE9F72D979D4C1EC693877"
+      index: 6
+      valueUuid: "uuid7"
+      methodExercised:
+        target: "org.bitcoinj.core.Block"
+        name: "read"
+        parameters:
+        - name: "payload"
+          valueUuid: "read_byteBuffer1"
+        throwsExceptions:
+        - "java.nio.BufferUnderflowException"
+        - "org.bitcoinj.core.ProtocolException"
+        signature: "read(ByteBuffer): Block throws java.nio.BufferUnderflowException,org.bitcoinj.core.ProtocolException"
+        returnValueUuid: "read_block1"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      name: "newBlockHeader"
+      modelFingerprint: "69B3CDE91005957D9E5003F81612962A"
+      index: 7
+      valueUuid: "read_block1"
+      methodExercised:
+        target: "newBlockHeader"
+        name: "hasTransactions"
+        parameters: []
+        signature: "hasTransactions(): boolean"
+        returnValueUuid: "read_boolean2"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "237534DCE09C37558C840E34E746F04D"
+      index: 8
+      valueUuid: "read_protocolException1"
+    uuid: "66cb7834-e819-3578-a687-361c00367b5d"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "read_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.VarInt"
+      uuid: "uuid4"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.VarInt"
+      uuid: "read_varInt1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "read_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.VarInt"
+      uuid: "read_varInt1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "read_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid6"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "read_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "read_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      uuid: "uuid5"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.VarInt"
+      uuid: "read_varInt1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 1
+      valueType: "int"
+      uuid: "read_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "uuid7"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "read_block1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "read_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "read_block1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: true
+      valueType: "boolean"
+      uuid: "read_boolean2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "EXCEPTION"
+      content: !<new>
+        target: "org.bitcoinj.core.ProtocolException"
+        parameters:
+        - name: "msg"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: "Block header does not end with a null byte"
+            valueType: "java.lang.String"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.core.ProtocolException"
+      uuid: "read_protocolException1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+  - pathId: "path4"
+    testPathName: "readWhenLogNotIsDebugEnabled"
+    modelFingerprint: "C57273DE6300434EE746808BE4543226"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "86586746-a403-3a2e-85c8-e2e2972dff74"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path5"
+    testPathName: "readWhenINotLessThanNumHeaders"
+    modelFingerprint: "52E820445C390590E360D7E76FBFCB4A"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "dd107b3d-e5ab-3145-bcd5-f1bdd7a1c669"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path3"
+    testPathName: "readWhenILessThanNumHeaders"
+    modelFingerprint: "51FAFBAEE0AA0DCE25ECC4E08E381FD5"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "payload"
+      modelFingerprint: "D30B43598E2900E2880BDD9712DAE751"
+      index: 1
+      valueUuid: "read_byteBuffer1"
+    - type: "STATIC"
+      name: "VarInt"
+      modelFingerprint: "5E92D544C5565BF042F406F470017DD5"
+      index: 2
+      valueUuid: "uuid15"
+      methodExercised:
+        target: "org.bitcoinj.base.VarInt"
+        name: "read"
+        parameters:
+        - name: "value"
+          valueUuid: "read_byteBuffer1"
+        throwsExceptions:
+        - "java.nio.BufferUnderflowException"
+        signature: "read(ByteBuffer): VarInt throws java.nio.BufferUnderflowException"
+        returnValueUuid: "read_varInt1"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      name: "numHeadersVarInt"
+      modelFingerprint: "B43C3ADB283FA5163913ABBABB5EC75C"
+      index: 3
+      valueUuid: "read_varInt1"
+      methodExercised:
+        target: "numHeadersVarInt"
+        name: "fitsInt"
+        parameters: []
+        signature: "fitsInt(): boolean"
+        returnValueUuid: "read_boolean1"
+        access: 1
+    - type: "STATIC"
+      name: "Preconditions"
+      modelFingerprint: "3D0E364D028507E0FB885F547F95618C"
+      index: 4
+      valueUuid: "uuid17"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.Preconditions"
+        name: "check"
+        parameters:
+        - name: "expression"
+          valueUuid: "read_boolean1"
+        - name: "exceptionSupplier"
+          valueUuid: "uuid16"
+        throwsExceptions:
+        - "java.lang.Throwable"
+        signature: "check(boolean,Supplier): void throws java.lang.Throwable"
+        returnValueUuid: "read_void1"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      name: "numHeadersVarInt"
+      modelFingerprint: "E18E8389FB67DC1989D76FFF7E8C92E6"
+      index: 5
+      valueUuid: "read_varInt1"
+      methodExercised:
+        target: "numHeadersVarInt"
+        name: "intValue"
+        parameters: []
+        throwsExceptions:
+        - "java.lang.ArithmeticException"
+        signature: "intValue(): int throws java.lang.ArithmeticException"
+        returnValueUuid: "read_int1"
+        access: 1
+    - type: "STATIC"
+      name: "Block"
+      modelFingerprint: "28CBCB5158AE9F72D979D4C1EC693877"
+      index: 6
+      valueUuid: "uuid18"
+      methodExercised:
+        target: "org.bitcoinj.core.Block"
+        name: "read"
+        parameters:
+        - name: "payload"
+          valueUuid: "read_byteBuffer1"
+        throwsExceptions:
+        - "java.nio.BufferUnderflowException"
+        - "org.bitcoinj.core.ProtocolException"
+        signature: "read(ByteBuffer): Block throws java.nio.BufferUnderflowException,org.bitcoinj.core.ProtocolException"
+        returnValueUuid: "read_block1"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      name: "newBlockHeader"
+      modelFingerprint: "7128240C9852543F02F7E09A7397F01D"
+      index: 7
+      valueUuid: "read_block1"
+      methodExercised:
+        target: "newBlockHeader"
+        name: "hasTransactions"
+        parameters: []
+        signature: "hasTransactions(): boolean"
+        returnValueUuid: "read_boolean2"
+        access: 1
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "E6C920DD737866FE1CF5ABEEBF7FEDC7"
+      index: 8
+      valueUuid: "read_headersMessage1"
+    uuid: "5b34c013-fbae-3454-bc40-86c57d85b47d"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "ERROR_RECALCULATING_SUGGESTED_VALUES"
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "read_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.VarInt"
+      uuid: "uuid15"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.VarInt"
+      uuid: "read_varInt1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "read_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.VarInt"
+      uuid: "read_varInt1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "read_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.Preconditions"
+      uuid: "uuid17"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "read_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "read_boolean1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "PRIVATE_INNER_CLASS_OR_LAMBDA"
+      valueType: "java.util.function.Supplier"
+      uuid: "uuid16"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.VarInt"
+      uuid: "read_varInt1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 1
+      valueType: "int"
+      uuid: "read_int1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "uuid18"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "read_block1"
+      fixed: false
+      nameForMock: "read_block1"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "read_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "read_block1"
+      fixed: false
+      nameForMock: "read_block1"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: false
+      valueType: "boolean"
+      uuid: "read_boolean2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.HeadersMessage"
+        parameters:
+        - name: "headers"
+          value:
+            sapientType: "COLLECTION"
+            content: !<collection>
+              collectionClass: "java.util.ArrayList"
+              parameters: []
+              values:
+              - sapientType: "MOCK"
+                valueType: "org.bitcoinj.core.Block"
+                uuid: "read_block1"
+                fixed: false
+                nameForMock: "read_block1"
+                equalsMethodPresent: false
+                explicitCastNeeded: false
+            valueType: "java.util.List"
+            genericValueType: "org.bitcoinj.core.Block"
+            uuid: "read_arrayList1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        thrownExceptions:
+        - "org.bitcoinj.core.ProtocolException"
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.core.HeadersMessage"
+      uuid: "read_headersMessage1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "bitcoinSerializeToStream"
+    signature: "bitcoinSerializeToStream(java.io.OutputStream) : void"
+    sourceCodeSignature: "void bitcoinSerializeToStream(OutputStream stream)"
+    instructionFingerprint: "153C9A0898A1CF920975CFE9189CAB9C"
+  paths:
+  - pathId: "path1"
+    testPathName: "bitcoinSerializeToStreamWhenBlockHeadersIsNotEmpty"
+    constructorSignature: "<init>(org.bitcoinj.core.Block[]) : void"
+    modelFingerprint: "0C3DA1FF3C3706C96413626DEC496F9E"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "CONSTRUCTOR"
+      modelFingerprint: "B48B900CED092EC410DEB1345E1C0050"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "stream"
+      modelFingerprint: "29A897032AF431B5497C8E1DF49E25FC"
+      index: 2
+      valueUuid: "bitcoinSerializeToStream_outputStream1"
+    - type: "STATIC"
+      name: "VarInt"
+      modelFingerprint: "0F336ED682077D23BDCCF46317F96655"
+      index: 3
+      valueUuid: "uuid2"
+      methodExercised:
+        target: "org.bitcoinj.base.VarInt"
+        name: "of"
+        parameters:
+        - name: "value"
+          valueUuid: "uuid1"
+        signature: "of(long): VarInt"
+        returnValueUuid: "bitcoinSerializeToStream_varInt1"
+        access: 9
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "76A84AE8E4E612CF03D45E011510A49A"
+      index: 4
+      valueUuid: "bitcoinSerializeToStream_varInt1"
+      methodExercised:
+        target: "org.bitcoinj.base.VarInt"
+        name: "serialize"
+        parameters: []
+        signature: "serialize(): byte[]"
+        returnValueUuid: "bitcoinSerializeToStream_byte[]1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      name: "header"
+      modelFingerprint: "EDDE8501C6F0423ED4DACE0D21184967"
+      index: 5
+      valueUuid: "bitcoinSerializeToStream_object1"
+      methodExercised:
+        target: "header"
+        name: "cloneAsHeader"
+        parameters: []
+        signature: "cloneAsHeader(): Block"
+        returnValueUuid: "bitcoinSerializeToStream_block1"
+        access: 1
+    - type: "LOCAL_VARIABLE"
+      modelFingerprint: "CA73C1AB6197AF6FFF0D8A3D6C8A91C6"
+      index: 6
+      valueUuid: "bitcoinSerializeToStream_block1"
+      methodExercised:
+        target: "org.bitcoinj.core.Block"
+        name: "bitcoinSerializeToStream"
+        parameters:
+        - name: "stream"
+          valueUuid: "bitcoinSerializeToStream_outputStream1"
+        throwsExceptions:
+        - "java.io.IOException"
+        signature: "bitcoinSerializeToStream(OutputStream): void throws java.io.IOException"
+        returnValueUuid: "bitcoinSerializeToStream_void2"
+        access: 4
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 7
+      valueUuid: "uuid3"
+    uuid: "3bb8dd7c-6f47-30ac-a65d-e06077da8f51"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.HeadersMessage"
+        parameters:
+        - name: "headers"
+          value:
+            sapientType: "ARRAY"
+            content: !<array>
+              values:
+                0:
+                  sapientType: "MOCK"
+                  valueType: "org.bitcoinj.core.Block"
+                  uuid: "bitcoinSerializeToStream_object1"
+                  fixed: false
+                  collectionUuid: "<init>_list1"
+                  equalsMethodPresent: false
+                  explicitCastNeeded: false
+            valueType: "org.bitcoinj.core.Block[]"
+            uuid: "<init>_block[]1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "org.bitcoinj.core.HeadersMessage"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.io.ByteArrayOutputStream"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.io.OutputStream"
+      uuid: "bitcoinSerializeToStream_outputStream1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "REAL"
+      valueType: "org.bitcoinj.base.VarInt"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.VarInt"
+        method: "of"
+        methodParameters:
+        - value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "long"
+            originalValueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.VarInt"
+      uuid: "bitcoinSerializeToStream_varInt1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 1
+      valueType: "long"
+      originalValueType: "int"
+      uuid: "uuid1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.base.VarInt"
+        method: "of"
+        methodParameters:
+        - value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "long"
+            originalValueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.VarInt"
+      uuid: "bitcoinSerializeToStream_varInt1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 1
+            valueType: "byte"
+            uuid: "bitcoinSerializeToStream_byte[]1-item0"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "byte[]"
+      uuid: "bitcoinSerializeToStream_byte[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "bitcoinSerializeToStream_object1"
+      fixed: false
+      collectionUuid: "<init>_list1"
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "bitcoinSerializeToStream_block1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.core.Block"
+      uuid: "bitcoinSerializeToStream_block1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "bitcoinSerializeToStream_void2"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.io.ByteArrayOutputStream"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.io.OutputStream"
+      uuid: "bitcoinSerializeToStream_outputStream1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      uuid: "uuid3"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+  - pathId: "path2"
+    testPathName: "bitcoinSerializeToStreamWhenBlockHeadersIsEmpty"
+    constructorSignature: "<init>(org.bitcoinj.core.Block[]) : void"
+    modelFingerprint: "01744C1F3F40103E2597BF3651380597"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "d59fdde8-5bd6-351c-b3dd-e0a1055cce67"
+    deleted: true
+    disabled: false
+    ignoredBySystem: true
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: java.io.OutputStream.write(byte[]) : void"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "getBlockHeaders"
+    signature: "getBlockHeaders() : java.util.List<org.bitcoinj.core.Block>"
+    sourceCodeSignature: "List<Block> getBlockHeaders()"
+    instructionFingerprint: "8E123BA3EEF1EBC04D676989B69FBC2F"
+  paths:
+  - pathId: "path1"
+    testPathName: "getBlockHeadersTest"
+    constructorSignature: "<init>(org.bitcoinj.core.Block[]) : void"
+    modelFingerprint: "920FDE9C848CF9466ED84854165A23D5"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "dd7de603-4817-3165-824e-16f5e43eec79"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []

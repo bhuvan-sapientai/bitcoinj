@@ -1,0 +1,359 @@
+---
+modelFingerprint: "1F5460CED8F2B0125293B3667A7EE2D8"
+methods:
+- method:
+    name: "read"
+    signature: "read(java.nio.ByteBuffer) : org.bitcoinj.core.Pong"
+    sourceCodeSignature: "Pong read(ByteBuffer payload)"
+    instructionFingerprint: "5A0859562EB229A70FE177B5F26F539B"
+  paths:
+  - pathId: "path1"
+    testPathName: "readTest"
+    modelFingerprint: "DC99EAF901746DBF5BD2DF8DC8F9C4A7"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "payload"
+      modelFingerprint: "D30B43598E2900E2880BDD9712DAE751"
+      index: 1
+      valueUuid: "read_byteBuffer1"
+    - type: "STATIC"
+      name: "ByteUtils"
+      modelFingerprint: "D5B1C4762B527D66B6AFE108E5E8F41B"
+      index: 2
+      valueUuid: "uuid1"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.ByteUtils"
+        name: "readInt64"
+        parameters:
+        - name: "buf"
+          valueUuid: "read_byteBuffer1"
+        throwsExceptions:
+        - "java.nio.BufferUnderflowException"
+        signature: "readInt64(ByteBuffer): long throws java.nio.BufferUnderflowException"
+        returnValueUuid: "read_long1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "5E3F724FF26741BC4A7433DA19011DDB"
+      index: 3
+      valueUuid: "read_pong1"
+    uuid: "db344e3b-696d-3b02-8e35-1aaa5300bde6"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "read_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.ByteUtils"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "long"
+      uuid: "read_long1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "java.nio.ByteBuffer"
+        method: "allocateDirect"
+        methodParameters:
+        - name: "capacity"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 64
+            valueType: "int"
+            fixed: true
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "java.nio.ByteBuffer"
+      uuid: "read_byteBuffer1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.Pong"
+        parameters:
+        - name: "nonce"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "read_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: true
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.core.Pong"
+      uuid: "read_pong1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "of"
+    signature: "of(long) : org.bitcoinj.core.Pong"
+    sourceCodeSignature: "Pong of(long nonce)"
+    instructionFingerprint: "A07B506A753EAD6BC7B5353C50B5383E"
+  paths:
+  - pathId: "path1"
+    testPathName: "ofTest"
+    modelFingerprint: "842194C8DE91AFD6BC2BF5C12E384FB0"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "nonce"
+      modelFingerprint: "E3C52F2435FBB7D94FFFD7F77387E073"
+      index: 1
+      valueUuid: "of_long1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "5E3F724FF26741BC4A7433DA19011DDB"
+      index: 2
+      valueUuid: "of_pong1"
+    uuid: "3155f475-158f-3510-8516-db6562387204"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "long"
+      uuid: "of_long1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "org.bitcoinj.core.Pong"
+        parameters:
+        - name: "nonce"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "of_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+        privateConstructor: true
+        createdByTargetCode: true
+      valueType: "org.bitcoinj.core.Pong"
+      uuid: "of_pong1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "bitcoinSerializeToStream"
+    signature: "bitcoinSerializeToStream(java.io.OutputStream) : void"
+    sourceCodeSignature: "void bitcoinSerializeToStream(OutputStream stream)"
+    instructionFingerprint: "22919453BBA7385A30EA32D073AFFCD0"
+  paths:
+  - pathId: "path1"
+    testPathName: "bitcoinSerializeToStreamTest"
+    constructorSignature: "of(long) : org.bitcoinj.core.Pong"
+    modelFingerprint: "E7601DCA2922C29A3940C9891DA8F33B"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "F3CE0F357BB1E3152B0256818A766F5F"
+      index: 1
+      valueUuid: "target"
+    - type: "INPUT"
+      name: "stream"
+      modelFingerprint: "62A0F6327B9BDABF5EA7E91E5D90569E"
+      index: 2
+      valueUuid: "bitcoinSerializeToStream_outputStream1"
+    - type: "STATIC"
+      name: "ByteUtils"
+      modelFingerprint: "D17F62623CDADFDD538CD9594F6D484A"
+      index: 3
+      valueUuid: "uuid2"
+      methodExercised:
+        target: "org.bitcoinj.base.internal.ByteUtils"
+        name: "writeInt64LE"
+        parameters:
+        - name: "val"
+          valueUuid: "of_long1"
+        - name: "stream"
+          valueUuid: "bitcoinSerializeToStream_outputStream1"
+        throwsExceptions:
+        - "java.io.IOException"
+        signature: "writeInt64LE(long,OutputStream): void throws java.io.IOException"
+        returnValueUuid: "bitcoinSerializeToStream_void1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "68041019986276EDF5D420282D883A57"
+      index: 4
+      valueUuid: "uuid3"
+    uuid: "db734794-4476-3b9d-94dd-477a1a1aec91"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.core.Pong"
+        method: "of"
+        methodParameters:
+        - name: "nonce"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "of_long1"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.core.Pong"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.io.ByteArrayOutputStream"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.io.OutputStream"
+      uuid: "bitcoinSerializeToStream_outputStream1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.internal.ByteUtils"
+      uuid: "uuid2"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      valueType: "void"
+      uuid: "bitcoinSerializeToStream_void1"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "long"
+      uuid: "of_long1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OBJECT"
+      content: !<new>
+        target: "java.io.ByteArrayOutputStream"
+        parameters: []
+        privateConstructor: false
+        createdByTargetCode: false
+      valueType: "java.io.OutputStream"
+      uuid: "bitcoinSerializeToStream_outputStream1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "VOID"
+      uuid: "uuid3"
+      fixed: true
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+- method:
+    name: "nonce"
+    signature: "nonce() : long"
+    sourceCodeSignature: "long nonce()"
+    instructionFingerprint: "618696F7F1D2637335621B5BD0155D1E"
+  paths:
+  - pathId: "path1"
+    testPathName: "nonceTest"
+    constructorSignature: "of(long) : org.bitcoinj.core.Pong"
+    modelFingerprint: "5035D9877F768B1855B09FE682F7D93E"
+    problemWasSolvedByProver: true
+    truncated: false
+    inputParameters:
+    - type: "STATIC_FACTORY_METHOD"
+      modelFingerprint: "11BB56605CC443FEAE8249C80A249DF1"
+      index: 1
+      valueUuid: "target"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "804632FC35F3D360B4AE3373F0AFA52B"
+      index: 2
+      valueUuid: "of_long1"
+    uuid: "0f60a999-74fa-33eb-a2b0-924b88cae48d"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues:
+    - sapientType: "OBJECT"
+      content: !<static_method_return>
+        target: "org.bitcoinj.core.Pong"
+        method: "of"
+        methodParameters:
+        - name: "nonce"
+          value:
+            sapientType: "BASIC"
+            content: !<regular>
+              value: 0
+            valueType: "long"
+            uuid: "of_long1"
+            fixed: false
+            equalsMethodPresent: true
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.core.Pong"
+      uuid: "target"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: 0
+      valueType: "long"
+      uuid: "of_long1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false

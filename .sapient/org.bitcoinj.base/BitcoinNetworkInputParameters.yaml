@@ -1,0 +1,568 @@
+---
+modelFingerprint: "8AC5518FF1F40D5D7396B124ED8D0686"
+methods:
+- method:
+    name: "toString"
+    signature: "toString() : java.lang.String"
+    sourceCodeSignature: "String toString()"
+    instructionFingerprint: "B4F01CDEDABD3116916301093B2063BB"
+  paths:
+  - pathId: "path1"
+    testPathName: "toStringTest"
+    constructorSignature: "valueOf(java.lang.String) : org.bitcoinj.base.BitcoinNetwork"
+    modelFingerprint: "4CF59FBC11115E1A7A3795D48EB968FE"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "363d3698-f34c-39ad-914f-376a19498023"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_CALL_INSTRUCTION_INTERNAL_METHOD_FAILURE"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "id"
+    signature: "id() : java.lang.String"
+    sourceCodeSignature: "String id()"
+    instructionFingerprint: "309E61E529FD4221AD0DDFB05F071D5E"
+  paths:
+  - pathId: "path1"
+    testPathName: "idTest"
+    constructorSignature: "valueOf(java.lang.String) : org.bitcoinj.base.BitcoinNetwork"
+    modelFingerprint: "5C6EB616CBFCF0E2C80E6A97502EE254"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "d8f9d8d4-318b-3adc-81df-199235eeefbb"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "ENUM_SELF_FIELD_ACCESS"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "legacyAddressHeader"
+    signature: "legacyAddressHeader() : int"
+    sourceCodeSignature: "int legacyAddressHeader()"
+    instructionFingerprint: "C72E55D48BD4EC3E91FD71B86EACEABD"
+  paths:
+  - pathId: "path1"
+    testPathName: "legacyAddressHeaderTest"
+    constructorSignature: "valueOf(java.lang.String) : org.bitcoinj.base.BitcoinNetwork"
+    modelFingerprint: "522AF4AFCA9B9C19DE60FFD22EBC3798"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "bed29fb3-d28f-3aba-af01-87d8234b2f32"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: org.bitcoinj.base.LegacyAddress$AddressHeader.ofNetwork(org.bitcoinj.base.BitcoinNetwork)\
+        \ : org.bitcoinj.base.LegacyAddress$AddressHeader"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "legacyP2SHHeader"
+    signature: "legacyP2SHHeader() : int"
+    sourceCodeSignature: "int legacyP2SHHeader()"
+    instructionFingerprint: "868133A52B02A1D714E7239F6814E5DB"
+  paths:
+  - pathId: "path1"
+    testPathName: "legacyP2SHHeaderTest"
+    constructorSignature: "valueOf(java.lang.String) : org.bitcoinj.base.BitcoinNetwork"
+    modelFingerprint: "EAF1057C0525B2884673B69711DADF6D"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "920daa2d-06d4-30bd-99f3-d6c5d6db14d5"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: org.bitcoinj.base.LegacyAddress$P2SHHeader.ofNetwork(org.bitcoinj.base.BitcoinNetwork)\
+        \ : org.bitcoinj.base.LegacyAddress$P2SHHeader"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "segwitAddressHrp"
+    signature: "segwitAddressHrp() : java.lang.String"
+    sourceCodeSignature: "String segwitAddressHrp()"
+    instructionFingerprint: "918E70900927932E8C0362D80D666143"
+  paths:
+  - pathId: "path1"
+    testPathName: "segwitAddressHrpTest"
+    constructorSignature: "valueOf(java.lang.String) : org.bitcoinj.base.BitcoinNetwork"
+    modelFingerprint: "EEB3C8B5E9608EA7E6305806E3968058"
+    problemWasSolvedByProver: false
+    truncated: true
+    inputParameters: []
+    uuid: "8a6a2dc3-de80-3259-ab06-cbf475965b36"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    failureReason:
+      reason: "METHOD_WITHOUT_EXPRESSION_SUPPORT"
+      details: "Expression missing: org.bitcoinj.base.SegwitAddress$SegwitHrp.ofNetwork(org.bitcoinj.base.BitcoinNetwork)\
+        \ : org.bitcoinj.base.SegwitAddress$SegwitHrp"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "uriScheme"
+    signature: "uriScheme() : java.lang.String"
+    sourceCodeSignature: "String uriScheme()"
+    instructionFingerprint: "EA3005D8F33A7F33B76CA6AEF7CF962B"
+  paths:
+  - pathId: "path1"
+    testPathName: "uriSchemeTest"
+    constructorSignature: "valueOf(java.lang.String) : org.bitcoinj.base.BitcoinNetwork"
+    modelFingerprint: "A448A0235E8B2FE11780659D970C4AA0"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "00d238fa-3641-312b-81df-c13edf52dd9b"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "hasMaxMoney"
+    signature: "hasMaxMoney() : boolean"
+    sourceCodeSignature: "boolean hasMaxMoney()"
+    instructionFingerprint: "6799262F7D12BA0231D9C68DDADFB0ED"
+  paths:
+  - pathId: "path1"
+    testPathName: "hasMaxMoneyTest"
+    constructorSignature: "valueOf(java.lang.String) : org.bitcoinj.base.BitcoinNetwork"
+    modelFingerprint: "ECF658541CA3016247BD6ED3EF0F29FE"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "acf77967-ab44-395e-9113-4ce8808d0613"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "maxMoney"
+    signature: "maxMoney() : org.bitcoinj.base.Coin"
+    sourceCodeSignature: "Coin maxMoney()"
+    instructionFingerprint: "671B884CBFB71906F872B4AAFFD66822"
+  paths:
+  - pathId: "path1"
+    testPathName: "maxMoneyTest"
+    constructorSignature: "valueOf(java.lang.String) : org.bitcoinj.base.BitcoinNetwork"
+    modelFingerprint: "9764A41DE0245037990084C7DB3F8889"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "d3428af3-0897-3925-8661-7b0f38766a24"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "exceedsMaxMoney"
+    signature: "exceedsMaxMoney(org.bitcoinj.base.Monetary) : boolean"
+    sourceCodeSignature: "boolean exceedsMaxMoney(Monetary amount)"
+    instructionFingerprint: "613723454D579C8FE2F059BEE99164AC"
+  paths:
+  - pathId: "path3"
+    testPathName: "exceedsMaxMoneyWhenAmountNotInstanceOfCoinThrowsIllegalArgumentException"
+    constructorSignature: "valueOf(java.lang.String) : org.bitcoinj.base.BitcoinNetwork"
+    modelFingerprint: "6928C7F569B0832ED0871F3145FACEE6"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "eea39352-1eb1-321d-a5e8-e9ce140c409a"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path1"
+    testPathName: "exceedsMaxMoneyWhenAmountCompareToMAX_MONEYGreaterThan0"
+    constructorSignature: "valueOf(java.lang.String) : org.bitcoinj.base.BitcoinNetwork"
+    modelFingerprint: "AF125FD64A13A7531252CBFA906C2B31"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "10667e3d-e981-3a66-8eeb-3126d0766a7a"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+  - pathId: "path2"
+    testPathName: "exceedsMaxMoneyWhenAmountCompareToMAX_MONEYNotGreaterThan0"
+    constructorSignature: "valueOf(java.lang.String) : org.bitcoinj.base.BitcoinNetwork"
+    modelFingerprint: "884B4496B313BF7487405D676FA7548C"
+    problemWasSolvedByProver: true
+    truncated: true
+    inputParameters: []
+    uuid: "11a554e0-eece-3220-918c-e5d39ad40bcf"
+    deleted: false
+    disabled: false
+    ignoredBySystem: false
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: false
+    allValues: []
+- method:
+    name: "fromString"
+    signature: "fromString(java.lang.String) : java.util.Optional<org.bitcoinj.base.BitcoinNetwork>"
+    sourceCodeSignature: "Optional<BitcoinNetwork> fromString(String nameString)"
+    instructionFingerprint: "533A3114771823ABD73AEE403C646217"
+  paths:
+  - pathId: "path1"
+    testPathName: "fromStringTest"
+    modelFingerprint: "702D54CB3309D1896C3D349A86587716"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "nameString"
+      modelFingerprint: "BA3F3750E18B394CFF536116BDAF239E"
+      index: 1
+      valueUuid: "fromString_string1"
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D8125FD0DD1BED56601FD0D538B4E41F"
+      index: 2
+      valueUuid: "fromString_optional1"
+    uuid: "0f6367f9-7e25-30f0-bb4c-ae86787a4506"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "UNKNOWN_REASON"
+    prover: "DEFAULT"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: "nameString1"
+      valueType: "java.lang.String"
+      uuid: "fromString_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OPTIONAL"
+      content: !<optional>
+        value:
+          sapientType: "ENUM"
+          content: !<regular>
+            value: "MAINNET"
+          valueType: "org.bitcoinj.base.BitcoinNetwork"
+          uuid: "fromString_object1"
+          fixed: false
+          collectionUuid: "mergedNameMap_object1"
+          equalsMethodPresent: false
+          explicitCastNeeded: true
+        target: "java.util.Optional"
+      valueType: "java.util.Optional"
+      genericValueType: "org.bitcoinj.base.BitcoinNetwork"
+      uuid: "fromString_optional1"
+      fixed: false
+      equalsMethodPresent: true
+      explicitCastNeeded: false
+- method:
+    name: "fromIdString"
+    signature: "fromIdString(java.lang.String) : java.util.Optional<org.bitcoinj.base.BitcoinNetwork>"
+    sourceCodeSignature: "Optional<BitcoinNetwork> fromIdString(String idString)"
+    instructionFingerprint: "D62F6D8EFE539AC315693BBC69F423BE"
+  paths:
+  - pathId: "path1"
+    testPathName: "fromIdStringWhenDefaultBranch"
+    modelFingerprint: "0733D19400D5B26EC828FA161E58B2FB"
+    problemWasSolvedByProver: false
+    truncated: false
+    inputParameters:
+    - type: "INPUT"
+      name: "idString"
+      modelFingerprint: "D474F4BCBB7550D9924BBC548B0EBC72"
+      index: 1
+      valueUuid: "fromIdString_string1"
+    - type: "STATIC"
+      name: "BitcoinNetwork"
+      modelFingerprint: "616766E745591CC03CF19B6EA101C6B8"
+      index: 2
+      valueUuid: "uuid1"
+      methodExercised:
+        target: "org.bitcoinj.base.BitcoinNetwork"
+        name: "values"
+        parameters: []
+        signature: "values(): BitcoinNetwork[]"
+        returnValueUuid: "fromIdString_bitcoinNetwork[]1"
+        access: 9
+    - type: "RESULT"
+      name: "result"
+      modelFingerprint: "D8125FD0DD1BED56601FD0D538B4E41F"
+      index: 3
+      valueUuid: "fromIdString_optional1"
+    uuid: "8157ae39-31ae-3777-b5d7-838999087430"
+    deleted: false
+    disabled: true
+    ignoredBySystem: false
+    failureReason:
+      reason: "PROVER_COULD_NOT_SOLVE_THE_PROBLEM"
+    prover: "LLM"
+    disabledStatusUpdatedByUser: false
+    disabledStatusUpdatedBySystem: true
+    allValues:
+    - sapientType: "BASIC"
+      content: !<regular>
+        value: ""
+      valueType: "java.lang.String"
+      uuid: "fromIdString_string1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "MOCK"
+      valueType: "org.bitcoinj.base.BitcoinNetwork"
+      uuid: "uuid1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "ARRAY"
+      content: !<array>
+        values:
+          0:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "MAINNET"
+            valueType: "org.bitcoinj.base.BitcoinNetwork"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          1:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "MAINNET"
+            valueType: "org.bitcoinj.base.BitcoinNetwork"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          2:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "MAINNET"
+            valueType: "org.bitcoinj.base.BitcoinNetwork"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          3:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "MAINNET"
+            valueType: "org.bitcoinj.base.BitcoinNetwork"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          4:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "MAINNET"
+            valueType: "org.bitcoinj.base.BitcoinNetwork"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          5:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "MAINNET"
+            valueType: "org.bitcoinj.base.BitcoinNetwork"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          6:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "MAINNET"
+            valueType: "org.bitcoinj.base.BitcoinNetwork"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          7:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "MAINNET"
+            valueType: "org.bitcoinj.base.BitcoinNetwork"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          8:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "MAINNET"
+            valueType: "org.bitcoinj.base.BitcoinNetwork"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          9:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "MAINNET"
+            valueType: "org.bitcoinj.base.BitcoinNetwork"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          10:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "MAINNET"
+            valueType: "org.bitcoinj.base.BitcoinNetwork"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          11:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "MAINNET"
+            valueType: "org.bitcoinj.base.BitcoinNetwork"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          12:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "MAINNET"
+            valueType: "org.bitcoinj.base.BitcoinNetwork"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          13:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "MAINNET"
+            valueType: "org.bitcoinj.base.BitcoinNetwork"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          14:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "MAINNET"
+            valueType: "org.bitcoinj.base.BitcoinNetwork"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          15:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "MAINNET"
+            valueType: "org.bitcoinj.base.BitcoinNetwork"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          16:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "MAINNET"
+            valueType: "org.bitcoinj.base.BitcoinNetwork"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          17:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "MAINNET"
+            valueType: "org.bitcoinj.base.BitcoinNetwork"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          18:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "MAINNET"
+            valueType: "org.bitcoinj.base.BitcoinNetwork"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          19:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "MAINNET"
+            valueType: "org.bitcoinj.base.BitcoinNetwork"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          20:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "MAINNET"
+            valueType: "org.bitcoinj.base.BitcoinNetwork"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          21:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "MAINNET"
+            valueType: "org.bitcoinj.base.BitcoinNetwork"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          22:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "MAINNET"
+            valueType: "org.bitcoinj.base.BitcoinNetwork"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+          23:
+            sapientType: "ENUM"
+            content: !<regular>
+              value: "MAINNET"
+            valueType: "org.bitcoinj.base.BitcoinNetwork"
+            fixed: false
+            equalsMethodPresent: false
+            explicitCastNeeded: false
+      valueType: "org.bitcoinj.base.BitcoinNetwork[]"
+      uuid: "fromIdString_bitcoinNetwork[]1"
+      fixed: false
+      equalsMethodPresent: false
+      explicitCastNeeded: false
+    - sapientType: "OPTIONAL"
+      content: !<optional>
+        value:
+          sapientType: "ENUM"
+          content: !<regular>
+            value: "MAINNET"
+          valueType: "org.bitcoinj.base.BitcoinNetwork"
+          fixed: false
+          equalsMethodPresent: false
+          explicitCastNeeded: false
+        target: "java.util.Optional"
+      valueType: "java.util.Optional"
+      genericValueType: "org.bitcoinj.base.BitcoinNetwork"
+      uuid: "fromIdString_optional1"
+      fixed: false
+      collectionUuid: "fromIdString_list1"
+      equalsMethodPresent: true
+      explicitCastNeeded: false
