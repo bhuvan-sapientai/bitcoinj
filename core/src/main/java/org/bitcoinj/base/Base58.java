@@ -66,6 +66,7 @@ public class Base58 {
      */
     public static String encode(byte[] input) {
         if (input.length == 0) {
+            System.out.println("test");
             return "";
         }       
         // Count leading zeros.
