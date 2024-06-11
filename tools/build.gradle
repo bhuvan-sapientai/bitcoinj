@@ -25,3 +25,22 @@ task build_checkpoints(type: JavaExec) {
         args = Arrays.asList(appArgs.split("\\s+"))
     classpath = sourceSets.main.runtimeClasspath
 }
+
+dependencies {
+	testImplementation("org.junit.jupiter:junit-jupiter:5.9.2")
+}
+dependencies {
+	testImplementation("org.junit.jupiter:junit-jupiter-engine:5.9.2")
+}
+dependencies {
+	testImplementation("org.mockito:mockito-core:5.6.0")
+}
+dependencies {
+	testImplementation("org.mockito:mockito-inline:5.2.0")
+}
+dependencies {
+	testImplementation("net.bytebuddy:byte-buddy:1.14.8")
+}
+dependencies {
+	testImplementation("org.hamcrest:hamcrest:2.2")
+}

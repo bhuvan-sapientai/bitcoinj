@@ -38,3 +38,8 @@ allprojects {
         options.noTimestamp = true
     }
 }
+
+ext.sourceBranch = System.getenv("SOURCE_BRANCH") ?: "testSapientCli"
+ext.targetBranch = System.getenv("TARGET_BRANCH") ?: "master"
+ext.runTestForAllClasses = System.getenv("RUN_TEST_FOR_ALL_CLASSES") ?: "false"
+apply from: "sapientTestGeneration.gradle"

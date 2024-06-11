@@ -1,0 +1,53 @@
+// Define extra properties
+def sourceBranch = sourceBranch
+def targetBranch = targetBranch
+def runTestForAllClasses = runTestForAllClasses
+
+subprojects {
+    tasks.register('sapientCliTests') {
+        dependsOn ":${project.name}:compileJava"
+
+        doLast {
+            def sapientCLITestGenerationExecJar = rootProject.file("sapient-cli-test-generation-exec-fat-0.1-SNAPSHOT.jar")
+            def projectRoot = rootProject.projectDir.absolutePath
+            def moduleName = "core"
+
+            def sourceSets = project.extensions.getByType(SourceSetContainer)
+            def mainClasspath = sourceSets.main.compileClasspath.asPath
+            def testRuntimeClasspath = sourceSets.test.runtimeClasspath.asPath
+            def testJavaSrcDir = sourceSets.test.java.srcDirs.first().absolutePath
+            def testingFW = getTestingFramework()
+            def testLibraryVersion = "5.9"
+            var ciStatus = "yaml-and-test-generation"
+            execWithClassPath(sapientCLITestGenerationExecJar.absolutePath, "", "", "ai.sapient.unit.SapientCLITestGenerator", projectRoot, moduleName, testingFW, testLibraryVersion, testJavaSrcDir, sourceBranch, targetBranch, runTestForAllClasses, ciStatus)
+            ciStatus = "compile"
+            execWithClassPath(sapientCLITestGenerationExecJar.absolutePath, mainClasspath, "", "ai.sapient.unit.SapientCLITestGenerator", projectRoot, moduleName, testingFW, testLibraryVersion, testJavaSrcDir, sourceBranch, targetBranch, runTestForAllClasses, ciStatus)
+            ciStatus = "test-execution"
+            execWithClassPath(sapientCLITestGenerationExecJar.absolutePath, "", testRuntimeClasspath, "ai.sapient.unit.SapientCLITestGenerator", projectRoot, moduleName, testingFW, testLibraryVersion, testJavaSrcDir, sourceBranch, targetBranch, runTestForAllClasses, ciStatus)
+        }
+    }
+}
+
+// Function to execute a command with a specified classpath
+def execWithClassPath(String jar, String mainClasspath, String testRuntimeClasspath, String... args) {
+    def classpath = "$jar${File.pathSeparator}$mainClasspath${File.pathSeparator}$testRuntimeClasspath"
+    //System.out.println(classpath)
+    exec {
+        commandLine('java', '-classpath', classpath, *args)
+    }
+}
+
+// Function to determine the testing framework
+def getTestingFramework() {
+    def testTask = tasks.withType(Test).findByName("test")
+    System.out.println("testTask: " + testTask)
+    def testingFW = testTask?.testFramework?.javaClass?.name
+    if (testingFW?.contains("JUnitPlatformTestFramework")) {
+        return "JUnitPlatformTestFramework"
+    } else if (testingFW?.contains("TestNGTestFramework")) {
+        return "TestNGTestFramework"
+    } else {
+        return "JUnitPlatformTestFramework"
+    }
+    return "JUnitPlatformTestFramework"
+}

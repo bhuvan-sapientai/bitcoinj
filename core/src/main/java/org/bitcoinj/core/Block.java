@@ -1026,6 +1026,7 @@ public class Block extends BaseMessage {
      */
     public static void verify(NetworkParameters params, Block block, int height, EnumSet<VerifyFlag> flags) throws VerificationException {
         verifyHeader(block);
+        System.out.println("test");
         verifyTransactions(params, block, height, flags);
     }
 
@@ -1075,4 +1076,15 @@ public class Block extends BaseMessage {
         for (Transaction tx : block.transactions)
             Transaction.verify(params.network(), tx);
     }
+
+    public void testSample() {
+        String a = "";
+        if (a.equals("")) {
+            System.out.println("test");
+        }
+        else {
+            System.out.println("test 2");
+        }
+    }
+
 }
